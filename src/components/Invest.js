@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Icon,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Button, Flex, Heading, Icon, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { ImLocation } from "react-icons/im";
 
@@ -18,7 +10,7 @@ const Invest = () => {
         <Flex w="100%">
           <Image src="/images/invest.png" />
         </Flex>
-        <Flex>line</Flex>
+        <Flex h="220px"></Flex>
         <Flex w="100%" py="6" px="6" direction="column" justify="center">
           <Heading>8% RETURN ON INVESTMENT</Heading>
           <Heading>ARETE HOMES</Heading>

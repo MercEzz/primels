@@ -3,6 +3,7 @@ import React from "react";
 import AboutUs from "./AboutUs";
 import Invest from "./Invest";
 import MainSec from "./MainSec";
+import OurProjects from "./OurProjects";
 
 const HomeSc = () => {
   return (
@@ -10,6 +11,7 @@ const HomeSc = () => {
       <MainSec />
       <AboutUs />
       <Invest />
+      <OurProjects />
     </Box>
   );
 };
