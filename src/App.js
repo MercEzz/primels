@@ -1,9 +1,23 @@
 import { Flex, Text } from "@chakra-ui/react";
-import theme from "./theme/theme";
-import Fonts from "./theme/Fonts";
+import Header from "./components/Header";
+import HomeSc from "./components/HomeSc";
 
 function App() {
-  return <Flex>app</Flex>;
+  return (
+    <>
+      <Header />
+      <Flex
+        as="main"
+        direction="column"
+        w="100%"
+        minH="xl"
+        bgColor="white"
+        color="black"
+      >
+        <HomeSc />
+      </Flex>
+    </>
+  );
 }
 
 export default App;
