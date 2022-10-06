@@ -1,4 +1,12 @@
-import { Button, Divider, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import {
+  Button,
+  Divider,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Box,
+} from "@chakra-ui/react";
 import React from "react";
 
 const OurProjects = () => {

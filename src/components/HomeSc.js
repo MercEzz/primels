@@ -4,6 +4,7 @@ import AboutUs from "./AboutUs";
 import Invest from "./Invest";
 import MainSec from "./MainSec";
 import OurProjects from "./OurProjects";
+import SmartLiving from "./SmartLiving";
 
 const HomeSc = () => {
   return (
@@ -12,6 +13,7 @@ const HomeSc = () => {
       <AboutUs />
       <Invest />
       <OurProjects />
+      <SmartLiving />
     </Box>
   );
 };
