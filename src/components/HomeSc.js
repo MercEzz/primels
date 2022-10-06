@@ -4,6 +4,7 @@ import AboutUs from "./AboutUs";
 import Invest from "./Invest";
 import MainSec from "./MainSec";
 import OurProjects from "./OurProjects";
+import Ponneri from "./Ponneri";
 import SmartLiving from "./SmartLiving";
 
 const HomeSc = () => {
@@ -14,6 +15,7 @@ const HomeSc = () => {
       <Invest />
       <OurProjects />
       <SmartLiving />
+      <Ponneri />
     </Box>
   );
 };

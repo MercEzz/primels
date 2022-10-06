@@ -13,7 +13,7 @@ const OurProjects = () => {
   return (
     <Flex w="100%" direction="column" align="center" justify="center" py="10">
       <Flex w="100%" align="center" py="6" px="22.5rem">
-        <Divider border="3px solid" borderColor="#DFBD69" />
+        <Divider border="3px solid" borderColor="#DFBD69" bgColor="#DFBD69" />
         <Flex w="100%">
           <Heading px="4">OUR PROJECTS</Heading>
         </Flex>
