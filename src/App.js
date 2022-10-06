@@ -1,4 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HomeSc from "./components/HomeSc";
 
@@ -16,6 +17,7 @@ function App() {
       >
         <HomeSc />
       </Flex>
+      <Footer />
     </>
   );
 }

@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Flex, Heading, Image, Link } from "@chakra-ui/react";
 import { HiMenuAlt1 } from "react-icons/hi";
 
 const Header = () => {
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBg = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBg);
+
   return (
     <Flex
       pos="fixed"
       top="0"
       zIndex="3"
       w="100%"
-      bgColor="transparent"
+      bgColor={navbar ? "#fff" : "transparent"}
+      transition="all .5s"
+      boxShadow={navbar ? "lg" : "none"}
       align="center"
       justify="center"
     >
