@@ -43,7 +43,7 @@ const MainSec = () => {
           </Button>
         </Flex>
       </Flex>
-      <Flex w="100%" h="100%" align="flex-end">
+      <Flex w="100%" h="100%" align="flex-end" justify="flex-end">
         <Carousel />
       </Flex>
     </Flex>

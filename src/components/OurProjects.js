@@ -1,12 +1,22 @@
-import { Button, Divider, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import {
+  Button,
+  Divider,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Box,
+} from "@chakra-ui/react";
 import React from "react";
 
 const OurProjects = () => {
   return (
     <Flex w="100%" direction="column" align="center" justify="center" py="10">
-      <Flex align="center" py="6">
-        <Divider w="110px" border="3px solid" borderColor="#DFBD69" />
-        <Heading px="4">OUR PROJECTS</Heading>
+      <Flex w="100%" align="center" py="6" px="22.5rem">
+        <Divider border="3px solid" borderColor="#DFBD69" />
+        <Flex w="100%">
+          <Heading px="4">OUR PROJECTS</Heading>
+        </Flex>
       </Flex>
       <Flex>
         <Flex direction="column" justify="center" w="35%" mx="10">
@@ -30,12 +40,20 @@ const OurProjects = () => {
             View Project
           </Button>
         </Flex>
-        <Flex h="242x">
+        <Flex h="23rem" direction="column" align="center" pt="5rem">
           <Divider
             orientation="vertical"
-            w="242x"
             border="3px solid"
             borderColor="#DFBD69"
+          />{" "}
+          <Box
+            height="30px"
+            width="25px"
+            backgroundColor="#DFBD69"
+            border="3px solid white"
+            boxShadow="0px 0px 0px 3px #B88746"
+            borderRadius="50%"
+            my="1"
           />
         </Flex>
         <Flex direction="column" p="10">
