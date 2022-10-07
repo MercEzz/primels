@@ -6,7 +6,13 @@ const LastSection = () => {
     <Flex direction="column" py="10">
       <Flex>
         <Flex p="10" bgGradient="linear(to-r, #B88746 ,#DFBD69)">
-          <Text py="2" fontSize="50px" fontWeight="400" color="#fff">
+          <Text
+            py="2"
+            fontSize="50px"
+            fontFamily="goudy"
+            fontWeight="400"
+            color="#fff"
+          >
             Hear What People Has To Say About Us.
           </Text>
         </Flex>
@@ -23,16 +29,27 @@ const LastSection = () => {
               py="2"
               direction={"column"}
             >
-              <Text p="6" fontSize="24px">
+              <Text p="6" fontSize="24px" fontFamily="veralaRound">
                 {tes.text}
               </Text>
-              <Flex>
-                <Avatar src={tes.avtr} alt={tes.name} mb={2} />
+              <Flex align="center">
+                <Avatar src={tes.avtr} alt={tes.name} />
                 <Stack spacing={-1}>
-                  <Text px="2" fontWeight={600}>
+                  <Text
+                    px="2"
+                    fontSize="30px"
+                    fontFamily="veralaRound"
+                    fontWeight={400}
+                  >
                     {tes.name}
                   </Text>
-                  <Text px="2" fontSize={"sm"} color="black">
+                  <Text
+                    px="2"
+                    fontFamily="veralaRound"
+                    fontWeight={400}
+                    fontSize={"sm"}
+                    color="black"
+                  >
                     {tes.title}
                   </Text>
                 </Stack>
