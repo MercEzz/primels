@@ -6,7 +6,7 @@ const Allia = () => {
     <Flex direction="column" align="center" py="10">
       <Flex w="100%" py="6" px="6">
         <Flex w="30%" direction="column">
-          <Heading fontSize="50px" fontWeight="400">
+          <Heading fontSize="50px" fontFamily="goudy" fontWeight="400">
             India’s Best Realty Brand
           </Heading>
           <Flex justify="center" align="center">
@@ -30,7 +30,7 @@ const Allia = () => {
         <Flex w="100%">img</Flex>
       </Flex>
       <Flex direction="column" align="center" justify="center" py="10">
-        <Heading fontSize="50px" fontWeight="400" py="6">
+        <Heading fontSize="50px" fontFamily="goudy" fontWeight="400" py="6">
           OUR ALLIANCES
         </Heading>
         <Flex w="100%" py="10">
