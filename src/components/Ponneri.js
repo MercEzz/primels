@@ -6,11 +6,11 @@ const Ponneri = () => {
     <Flex w="100%" py="10">
       <Flex direction="column" w="100%">
         <Flex w="100%" align="center" pl="8" py="6" justify="flex-end">
-          <Heading fontSize="50px" w="100%" fontWeight="400">
+          <Heading fontSize="50px" w="100%" fontWeight="400" fontFamily="goudy">
             PONNERI GYMKHANA CLUB
           </Heading>
           <Divider
-            w="40%"
+            w="30%"
             orientation="horizontal"
             border="3px solid"
             bgColor="#DFBD69"
@@ -37,7 +37,7 @@ const Ponneri = () => {
             my="1"
           />
         </Flex>
-        <Heading fontSize="50px" my="10">
+        <Heading fontSize="40px" fontFamily="avenir" my="10">
           ONE CLUB -MANY FACETS
         </Heading>
         <Button
@@ -45,12 +45,13 @@ const Ponneri = () => {
           py="8"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
           color="white"
-          fontSize="30px"
+          fontSize="24px"
+          fontFamily="avenir"
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",
           }}
         >
-          Become a Member
+          BECOME A MEMBER
         </Button>
       </Flex>
     </Flex>
