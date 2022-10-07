@@ -14,12 +14,14 @@ import { ImLocation } from "react-icons/im";
 const Invest = () => {
   return (
     <Flex w="100%" direction="column" align="center" justify="center" py="12">
-      <Heading>INVEST WITH US</Heading>
+      <Heading fontFamily="goudy" fontWeight="400" fontSize="50px">
+        INVEST IN RENT GENERATING ASSETS
+      </Heading>
       <Flex w="100%" py="10">
         <Flex w="100%">
           <Image src="/images/invest.png" />
         </Flex>
-        <Flex h="12.5rem" direction="column" align="center" px="6">
+        <Flex h="16.5rem" direction="column" align="center" px="6">
           <Divider
             orientation="vertical"
             border="3px solid"
@@ -36,40 +38,70 @@ const Invest = () => {
           />
         </Flex>
         <Flex w="100%" py="6" direction="column" justify="center">
-          <Heading>8% RETURN ON INVESTMENT</Heading>
-          <Heading>ARETE HOMES</Heading>
-          <Text as="span">
-            <Icon as={ImLocation} />
-            North Chennai
-          </Text>
+          <Heading fontFamily="avenir">8% ROI ON HOMES</Heading>
+
           <Flex my="10" w="100%">
             <Flex w="100%" direction="column" p="2">
-              <Text pb="4">Smart Home</Text>
-              <Text fontWeight="bold">3 BHK</Text>
-              <Text>1787 sqft.</Text>
+              <Text
+                pb="4"
+                fontFamily="veralaRound"
+                fontWeight="400"
+                fontSize="24px"
+              >
+                Smart Home
+              </Text>
+              <Text fontWeight="700" fontFamily="avenir" fontSize="30px">
+                2 BHK
+              </Text>
+              <Text fontFamily="veralaRound" fontSize="24px" fontWeight="400">
+                1085 sqft.
+              </Text>
             </Flex>
             <Flex w="100%" direction="column" p="2">
-              <Text pb="4">Price</Text>
-              <Text fontWeight="bold">Rs. 85 Lakhs</Text>
-              <Text>Furnished with White Goods</Text>
+              <Text
+                pb="4"
+                fontFamily="veralaRound"
+                fontWeight="400"
+                fontSize="24px"
+              >
+                Price
+              </Text>
+              <Text fontWeight="700" fontFamily="avenir" fontSize="30px">
+                Rs. 85 Lakhs
+              </Text>
+              <Text fontFamily="veralaRound" fontSize="24px" fontWeight="400">
+                Fully Furnished With White Goods
+              </Text>
             </Flex>
             <Flex w="100%" direction="column" p="2">
-              <Text pb="4">Rental Income</Text>
-              <Text fontWeight="bold">Rs. 48,000*</Text>
-              <Text>Per Month</Text>
+              <Text
+                pb="4"
+                fontFamily="veralaRound"
+                fontWeight="400"
+                fontSize="24px"
+              >
+                Rental Income
+              </Text>
+              <Text fontWeight="700" fontFamily="avenir" fontSize="30px">
+                Rs. 32,000*
+              </Text>
+              <Text fontFamily="veralaRound" fontSize="24px" fontWeight="400">
+                Per Month
+              </Text>
             </Flex>
           </Flex>
           <Button
             w="250px"
             h="75px"
             fontSize="24px"
+            fontFamily="avenir"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             color="white"
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
             }}
           >
-            View Details
+            VIEW DETAILS
           </Button>
         </Flex>
       </Flex>

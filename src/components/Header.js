@@ -29,25 +29,25 @@ const Header = () => {
     >
       <Flex w="100%"></Flex>
       <Flex alignItems={"center"} w="100%" justifyContent={"center"}>
-        <Heading as="span" fontSize="20px" px="3">
+        <Heading as="span" fontSize="20px" fontFamily="avenir" px="3">
           <Link>EXPERTISE</Link>
         </Heading>
-        <Heading as="span" fontSize="20px" px="3">
+        <Heading as="span" fontSize="20px" fontFamily="avenir" px="3">
           <Link>PROJECTS</Link>
         </Heading>
         <Flex h="90px" px="3" align="center">
           {/* <Image src="/images/logo.png" /> */}
           logo
         </Flex>
-        <Heading as="span" fontSize="20px" px="3">
+        <Heading as="span" fontSize="20px" fontFamily="avenir" px="3">
           <Link>INVEST</Link>
         </Heading>
-        <Heading as="span" fontSize="20px" px="3">
+        <Heading as="span" fontSize="20px" fontFamily="avenir" px="3">
           <Link>HOUSING</Link>
         </Heading>
       </Flex>
       <Flex w="100%" fontWeight="700" pr="10" align="center" justify="flex-end">
-        <Heading as="span">
+        <Heading as="span" fontFamily="avenir">
           <Button
             my="4"
             w="160px"

@@ -21,12 +21,14 @@ const AboutUs = () => {
       direction="column"
     >
       <Flex w="100%" direction="column" pt="14" px="10" align="center">
-        <Heading>ABOUT US</Heading>
+        <Heading fontFamily="goudy" fontSize="50px">
+          ABOUT US
+        </Heading>
         <Flex w="100%" align="center" direction="column">
-          <Heading pt="10" pb="2" fontSize="40px">
+          <Heading pt="10" pb="2" fontSize="40px" fontFamily="avenir">
             BRIGHT IDEAS-SMART SOLUTIONS
           </Heading>
-          <Text py="8" fontSize="24px">
+          <Text py="8" fontSize="24px" fontFamily="veralaRound">
             Prime LifeSpace is a brand built on trust, transparency & quality in
             real estate industry. It has established its credentials in
             development of residential integrated townships & consulting
@@ -35,7 +37,7 @@ const AboutUs = () => {
             Chennai for its fusion of luxuries & affordability in the projects
             of exceptional quality with a passion for delivering finest homes.
           </Text>
-          <Text py="8" fontSize="24px">
+          <Text py="8" fontSize="24px" fontFamily="veralaRound">
             Prime LifeSpace consultancy firm offers an end-to-end solution in
             the Real Estate Space. The team has excelled in providing deep
             expertise to biggest corporates like Blackstone for Chandigarh
@@ -43,7 +45,7 @@ const AboutUs = () => {
             etc. Also, structured various eminent Joint Ventures, Mergers like
             L&T GeoTech with Sharaf Foundation.
           </Text>
-          <Text py="8" fontSize="24px">
+          <Text py="8" fontSize="24px" fontFamily="veralaRound">
             Prime LifeSpace developers are renowned creators of smart integrated
             townships that provide more than just spaces to live in. The
             townships resemble improvement in quality of living, empowerment of
@@ -84,8 +86,12 @@ const AboutUs = () => {
               />
             </Flex>
             <Flex direction="column" py="6">
-              <Heading fontSize="50px">30+ years</Heading>
-              <Text fontSize="30px">Of Building Trust</Text>
+              <Heading fontSize="50px" fontFamily="avenir">
+                30+ years
+              </Heading>
+              <Text fontSize="30px" fontFamily="veralaRound">
+                Of Building Trust
+              </Text>
             </Flex>
           </Flex>
           <Flex direction="column" w="50%">
@@ -114,10 +120,10 @@ const AboutUs = () => {
             </Flex>
             <Flex direction="column" py="6" w="100%" align="center">
               <Flex direction="column" align="flex-start">
-                <Heading fontSize="40px" textAlign="left">
+                <Heading fontSize="40px" fontFamily="avenir" textAlign="left">
                   approx. 1 Million sqft.{" "}
                 </Heading>
-                <Text fontSize="30px" textAlign="left">
+                <Text fontSize="30px" textAlign="left" fontFamily="veralaRound">
                   Development
                 </Text>
               </Flex>
@@ -148,8 +154,12 @@ const AboutUs = () => {
               />
             </Flex>
             <Flex direction="column" py="6">
-              <Heading fontSize="50px">100+</Heading>
-              <Text fontSize="30px">Happy Consultancy Clients</Text>
+              <Heading fontSize="50px" fontFamily="avenir">
+                100+
+              </Heading>
+              <Text fontSize="30px" fontFamily="veralaRound">
+                Happy Consultancy Clients
+              </Text>
             </Flex>
           </Flex>
         </Flex>
@@ -157,6 +167,7 @@ const AboutUs = () => {
           my="6"
           w="240px"
           h="75px"
+          fontFamily="avenir"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
           color="white"
           fontSize="30px"

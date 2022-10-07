@@ -15,7 +15,12 @@ const MainSec = () => {
     >
       <Flex w="80%" h="100%" align="center">
         <Flex direction="column" pl="10">
-          <Heading py="4" fontSize="50px" letterSpacing="wide">
+          <Heading
+            py="4"
+            fontSize="50px"
+            fontFamily="avenir"
+            letterSpacing="wide"
+          >
             THE LARGEST SMART TOWNSHIP OF NORTH CHENNAI
           </Heading>
           <Text
@@ -23,6 +28,7 @@ const MainSec = () => {
             pb="4"
             pr="4"
             fontWeight="400"
+            fontFamily="veralaRound"
             lineHeight="36px"
             fontSize="30px"
           >
@@ -33,6 +39,7 @@ const MainSec = () => {
             w="270px"
             h="75px"
             fontSize="24px"
+            fontFamily="avenir"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             color="white"
             _hover={{
