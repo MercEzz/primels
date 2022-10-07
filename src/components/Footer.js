@@ -13,7 +13,9 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
-import { BsFacebook } from "react-icons/bs";
+import { BsFacebook, BsWhatsapp, BsFillTelephoneFill } from "react-icons/bs";
+import { ImLocation } from "react-icons/im";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -28,23 +30,48 @@ const Footer = () => {
       <Flex py="10">
         <Flex direction="column" px="10" w="100%">
           Logo
-          <Text py="6" fontSize="24px">
-            Prime Expat Infra No. 33, Mandapam Road, Kilpauk, Chennai - 600010.
-          </Text>
+          <Flex align="flex-start" py="6">
+            <Icon mt="1" w="8" h="6" color="#DFBD69" as={ImLocation} />
+            <Text fontSize="24px" fontFamily="veralaRound">
+              Prime Expat Infra No. 33, Mandapam Road, Kilpauk, Chennai -
+              600010.
+            </Text>
+          </Flex>
           <VStack align="flex-start">
-            <Heading fontSize="30px" fontWeight="600">
+            <Heading fontSize="30px" fontFamily="avenir" fontWeight="600">
               SALES INQUIRY :
             </Heading>
-            <Link fontSize="24px">sales@primelifespace.com</Link>
-            <Link fontSize="24px">+91 9003199000</Link>
-            <Link fontSize="24px">+91 7338808775</Link>
+
+            <Flex align="center">
+              <Icon as={MdEmail} w="8" h="6" color="#DFBD69" />
+              <Link fontSize="24px" fontFamily="veralaRound">
+                sales@primelifespace.com
+              </Link>
+            </Flex>
+            <Flex align="center">
+              <Icon as={BsWhatsapp} w="8" h="6" color="#DFBD69" />
+              <Link fontSize="24px" fontFamily="veralaRound">
+                +91 9003199000
+              </Link>
+            </Flex>
+            <Flex align="center">
+              <Icon as={BsFillTelephoneFill} w="8" h="6" color="#DFBD69" />
+              <Link fontSize="24px" fontFamily="veralaRound">
+                +91 7338808775
+              </Link>
+            </Flex>
           </VStack>
         </Flex>
         <Flex direction="column" px="10" w="100%">
-          <Heading fontSize="30px" fontWeight="600">
+          <Heading fontSize="30px" fontFamily="avenir" fontWeight="600">
             OUR WORK
           </Heading>
-          <VStack align="flex-start" pt="10">
+          <VStack
+            align="flex-start"
+            fontFamily="veralaRound"
+            fontWeight="400"
+            pt="10"
+          >
             <Link fontSize="24px">About US</Link>
             <Link fontSize="24px">How it works</Link>
             <Link fontSize="24px">Properties</Link>
@@ -52,40 +79,79 @@ const Footer = () => {
             <Link fontSize="24px">Contact US</Link>
           </VStack>
           <VStack align="flex-start" pt="10">
-            <Heading fontSize="30px" fontWeight="600">
+            <Heading fontSize="30px" fontFamily="avenir" fontWeight="600">
               PRIME LIFESPACE
             </Heading>
-            <Link fontSize="24px">Blogs</Link>
-            <Link fontSize="24px">News</Link>
-            <Link fontSize="24px">FAQs</Link>
+            <Link fontFamily="veralaRound" fontWeight="400" fontSize="24px">
+              Blogs
+            </Link>
+            <Link fontFamily="veralaRound" fontWeight="400" fontSize="24px">
+              News
+            </Link>
+            <Link fontFamily="veralaRound" fontWeight="400" fontSize="24px">
+              FAQs
+            </Link>
           </VStack>
         </Flex>
         <Flex direction="column" px="10">
-          <Heading fontSize="30px" fontWeight="600">
+          <Heading fontSize="30px" fontFamily="avenir" fontWeight="600">
             HEAR FROM US
           </Heading>
           <FormControl pt="6">
-            <Input my="1" placeholder="Name*" />
-            <Input my="1" placeholder="Email" />
-            <Input my="1" placeholder="Phone no.*" />
-            <Heading fontSize="24px" py="5" fontWeight="600">
+            <Input
+              my="1"
+              bgColor="white"
+              color="black"
+              borderRadius="none"
+              placeholder="Name*"
+            />
+            <Input
+              my="1"
+              placeholder="Email"
+              bgColor="white"
+              color="black"
+              borderRadius="none"
+            />
+            <Input
+              my="1"
+              placeholder="Phone no.*"
+              bgColor="white"
+              color="black"
+              borderRadius="none"
+            />
+            <Heading
+              fontSize="24px"
+              py="5"
+              fontFamily="veralaRound"
+              fontWeight="600"
+            >
               CONFIGURATION :
             </Heading>
             <Flex direction="column">
               <Flex justify="space-between" w="100%">
-                <VStack align="flex-start">
+                <VStack
+                  align="flex-start"
+                  fontFamily="veralaRound"
+                  fontSize="24px"
+                  fontWeight="400"
+                >
                   <Radio value="2 BHK">2 BHK</Radio>
                   <Radio value="2.5 BHK">2.5 BHK</Radio>
                   <Radio value="3 BHK">3 BHK</Radio>
                 </VStack>
-                <VStack align="flex-start">
+                <VStack
+                  align="flex-start"
+                  fontFamily="veralaRound"
+                  fontSize="24px"
+                  fontWeight="400"
+                >
                   <Radio value="Buy">Buy</Radio>
                   <Radio value="Rent">Rent</Radio>
                   <Radio value="Invest">Invest</Radio>
                 </VStack>
               </Flex>
               <Button
-                my="6"
+                my="10"
                 w="270px"
                 h="75px"
                 bgGradient="linear(to-b, #B88746 ,#DFBD69)"
