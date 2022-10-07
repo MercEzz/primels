@@ -47,7 +47,7 @@ const LastSection = () => {
                     px="2"
                     fontFamily="veralaRound"
                     fontWeight={400}
-                    fontSize={"sm"}
+                    fontSize="24px"
                     color="black"
                   >
                     {tes.title}
