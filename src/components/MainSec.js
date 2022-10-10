@@ -1,6 +1,14 @@
 import { Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 import Carousel from "./Carousel";
+
+const MotnHead = motion(Heading);
+
+const variants = {
+  hidden: { opacity: 0, x: 0, y: -150 },
+  enter: { opacity: 1, x: 0, y: 0 },
+};
 
 const MainSec = () => {
   return (
@@ -14,15 +22,54 @@ const MainSec = () => {
       justify="center"
     >
       <Flex w="80%" h="100%" align="center">
-        <Flex direction="column" pl="10">
-          <Heading
-            py="4"
+        <Flex direction="column" w="100%" pl="5">
+          <MotnHead
+            pt="4"
             fontSize="50px"
             fontFamily="avenir"
             letterSpacing="wide"
+            initial={{ x: 460, y: 350 }}
+            transition={{ delay: 3, duration: 5, type: "just" }}
+            animate={{
+              x: [460, 460, 460, 460, 0],
+              y: [350, 250, 250, 250, 0],
+            }}
+            zIndex="4"
           >
-            THE LARGEST SMART TOWNSHIP OF NORTH CHENNAI
-          </Heading>
+            THE LARGEST{" "}
+          </MotnHead>
+          <MotnHead
+            fontSize="50px"
+            fontFamily="avenir"
+            letterSpacing="wide"
+            initial={{ opacity: 0, x: [375, 375, 375], y: [350, 250, 250] }}
+            transition={{ delay: 3, duration: 5, type: "just" }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              y: 0,
+            }}
+            zIndex="4"
+          >
+            SMART TOWNSHIP
+          </MotnHead>
+          {/* <MotnHead
+            pb="4"
+            fontSize="50px"
+            fontFamily="avenir"
+            letterSpacing="wide"
+            initial={{ opacity: 0, x: [450, 400], y: [450, 250] }}
+            transition={{ delay: 3, duration: 5, type: "just" }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              y: 0,
+            }}
+            zIndex="4"
+          >
+            {" "}
+            OF NORTH CHENNAI
+          </MotnHead> */}
           <Text
             pt="2"
             pb="4"

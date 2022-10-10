@@ -13,12 +13,19 @@ import { ImLocation } from "react-icons/im";
 
 const Invest = () => {
   return (
-    <Flex w="100%" direction="column" align="center" justify="center" py="12">
+    <Flex
+      w="100%"
+      direction="column"
+      align="center"
+      h="100vh"
+      justify="center"
+      py="12"
+    >
       <Heading fontFamily="goudy" fontWeight="400" fontSize="50px">
         INVEST IN RENT GENERATING ASSETS
       </Heading>
       <Flex w="100%" py="10">
-        <Flex w="100%">
+        <Flex w="100%" h="600px">
           <Image src="/images/invest.png" />
         </Flex>
         <Flex h="16.5rem" direction="column" align="center" px="6">

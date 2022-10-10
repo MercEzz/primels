@@ -28,6 +28,7 @@ const LastSection = () => {
               mt={8}
               py="2"
               direction={"column"}
+              key={tes.name}
             >
               <Text p="6" fontSize="24px" fontFamily="veralaRound">
                 {tes.text}

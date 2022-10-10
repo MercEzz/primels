@@ -13,7 +13,14 @@ import React from "react";
 
 const OurProjects = () => {
   return (
-    <Flex w="100%" direction="column" align="center" justify="center" py="10">
+    <Flex
+      w="100%"
+      h="100vh"
+      direction="column"
+      align="center"
+      justify="center"
+      my="16"
+    >
       <Flex w="100%" h="60px" align="center" justify="center">
         <Flex w="73%" />
         <Flex w="100%" align="center">
