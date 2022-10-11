@@ -2,7 +2,7 @@ import { Flex, Heading, Image, Text } from "@chakra-ui/react";
 
 const FirstSec = () => {
   return (
-    <Flex w="100%" h="89vh">
+    <Flex w="100%" h="89vh" mb="10">
       <Flex w="65%">
         <Image h="100%" w="100%" src="/images/careers/career-stock.png" />
       </Flex>

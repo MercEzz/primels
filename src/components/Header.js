@@ -3,13 +3,13 @@ import { Button, Flex, Heading, Image, Link } from "@chakra-ui/react";
 import { HiMenuAlt1 } from "react-icons/hi";
 
 const Header = () => {
-  const [navbar, setNavbar] = useState(false);
+  const [navbar, setNavbar] = useState("flex");
 
   const changeBg = () => {
-    if (window.scrollY >= 80) {
-      setNavbar(true);
+    if (window.scrollY >= 120) {
+      setNavbar("none");
     } else {
-      setNavbar(false);
+      setNavbar("flex");
     }
   };
 
@@ -17,32 +17,33 @@ const Header = () => {
 
   return (
     <Flex
+      display={navbar}
       pos="fixed"
       top="0"
       zIndex="3"
       w="100%"
-      bgColor={navbar ? "transparent" : "#fff"}
+      bgColor="#fff"
       transition="all .5s"
-      boxShadow={navbar ? "lg" : "none"}
+      // boxShadow={navbar ? "lg" : "none"}
       align="center"
       justify="center"
     >
       <Flex w="100%"></Flex>
       <Flex alignItems={"center"} w="100%" justifyContent={"center"}>
-        <Heading as="span" fontSize="20px" fontFamily="avenir" px="3">
+        <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
           <Link>EXPERTISE</Link>
         </Heading>
-        <Heading as="span" fontSize="20px" fontFamily="avenir" px="3">
+        <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
           <Link>PROJECTS</Link>
         </Heading>
         <Flex h="90px" px="3" align="center">
           {/* <Image src="/images/logo.png" /> */}
           logo
         </Flex>
-        <Heading as="span" fontSize="20px" fontFamily="avenir" px="3">
+        <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
           <Link>INVEST</Link>
         </Heading>
-        <Heading as="span" fontSize="20px" fontFamily="avenir" px="3">
+        <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
           <Link>HOUSING</Link>
         </Heading>
       </Flex>
@@ -50,11 +51,10 @@ const Header = () => {
         <Heading as="span" fontFamily="avenir">
           <Button
             my="4"
-            w="160px"
-            h="60px"
+            p="6"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             color="white"
-            fontSize="24px"
+            fontSize="16px"
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
             }}
@@ -62,7 +62,7 @@ const Header = () => {
             ENQUIRE
           </Button>
         </Heading>
-        <Link fontSize="60px">
+        <Link fontSize="60px" px="4">
           <HiMenuAlt1 w="100%" h="100%" />
         </Link>
       </Flex>
