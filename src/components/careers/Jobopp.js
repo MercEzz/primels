@@ -14,11 +14,11 @@ import { FaBusinessTime } from "react-icons/fa";
 
 const Jobopp = () => {
   return (
-    <Flex direction="column" w="100%" h="100vh" mb="4rem" align="center">
-      <Heading fontFamily="goudy" fontSize="48px" fontWeight="400" py="6">
+    <Flex direction="column" w="100%" h="100vh" align="center" px="100px">
+      <Heading fontFamily="goudy" fontSize="48px" fontWeight="400" mb="50px">
         JOB OPPORTUNITIES
       </Heading>
-      <Flex w="100%" py="2" px="12">
+      <Flex w="100%">
         <Flex
           direction="column"
           w="100%"
@@ -27,12 +27,12 @@ const Jobopp = () => {
           justify="center"
           textAlign="center"
           bgImage="/images/careers/card-bg.png"
-          py="5rem"
+          py="50px"
         >
-          <Heading fontFamily="avenir" fontSize="34px" px="12rem">
+          <Heading fontFamily="avenir" fontSize="34px" py="25px" px="100px">
             FOLLOW US ON LINKEDIN
           </Heading>
-          <Text fontFamily="veralaRound" fontSize="20px" py="6" px="9rem">
+          <Text fontFamily="veralaRound" fontSize="20px" px="85px" pb="25px">
             The best way to stay updated on Job Opportunities at Prime Lifespace
             is to follow us on Linkedin.
           </Text>
@@ -44,8 +44,7 @@ const Jobopp = () => {
           h="100%"
           templateRows="repeat(2, 1fr)"
           templateColumns="repeat(2, 1fr)"
-          mx="6"
-          gap="4"
+          gap="25px"
         >
           {joblisting.map((job) => (
             <Flex
@@ -57,26 +56,26 @@ const Jobopp = () => {
               textAlign="center"
               color="white"
             >
-              <Heading fontSize="24px" px="16" fontFamily="avenir">
+              <Heading fontSize="24px" fontFamily="avenir" pt="25px">
                 {job.title}
               </Heading>
               <VStack
                 align="flex-start"
                 fontFamily="veralaRound"
                 fontSize="20px"
-                py="4"
+                py="25px"
               >
                 <Flex align="center" justify="flex-start">
-                  <Icon as={MdLocationOn} w="6" h="6" />
-                  <Text px="1">{job.loc}</Text>
+                  <Icon as={MdLocationOn} w="6" h="6" mx="7px" />
+                  <Text>{job.loc}</Text>
                 </Flex>
-                <Flex align="center" justify="center">
-                  <Icon as={FaBusinessTime} w="6" h="6" />
-                  <Text px="1">{job.exp}</Text>
+                <Flex align="center" justify="flex-start">
+                  <Icon as={FaBusinessTime} w="6" h="6" mx="7px" />
+                  <Text>{job.exp}</Text>
                 </Flex>
-                <Flex align="center" justify="center">
-                  <Icon as={MdBusinessCenter} w="6" h="6" />
-                  <Text px="1">{job.type}</Text>
+                <Flex align="center" justify="flex-start">
+                  <Icon as={MdBusinessCenter} w="6" h="6" mx="7px" />
+                  <Text>{job.type}</Text>
                 </Flex>
               </VStack>
             </Flex>

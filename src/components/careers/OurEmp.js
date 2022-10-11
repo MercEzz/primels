@@ -3,25 +3,31 @@ import React from "react";
 
 const OurEmp = () => {
   return (
-    <Flex direction="column" w="100%" h="100vh" align="center">
-      <Heading fontSize="48px" fontFamily="goudy" fontWeight="400" py="4">
+    <Flex
+      direction="column"
+      w="100%"
+      h="100%"
+      mt="130px"
+      px="80px"
+      mb="150px"
+      align="center"
+    >
+      <Heading fontSize="48px" fontFamily="goudy" fontWeight="400" pb="75px">
         OUR HAPPY EMPLOYEES
       </Heading>
-      <Flex px="2">
+      <Flex>
         {testimonial.map((tes) => (
           <Flex
             align={"flex-start"}
-            justify="space-between"
+            justify="center"
             w="100%"
-            mt={8}
-            py="2"
             direction={"column"}
             key={tes.name}
           >
             <Text p="6" fontSize="20px" fontFamily="veralaRound">
               {tes.text}
             </Text>
-            <Flex align="center" px="6">
+            <Flex align="center" pt="50px" pl="24px">
               <Avatar src={tes.avtr} alt={tes.name} />
               <Stack spacing={-1}>
                 <Text
