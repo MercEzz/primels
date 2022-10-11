@@ -3,8 +3,8 @@ import React from "react";
 
 const OurEmp = () => {
   return (
-    <Flex direction="column" w="100%" align="center" pb="12">
-      <Heading fontSize="50px" fontFamily="goudy" fontWeight="400" py="4">
+    <Flex direction="column" w="100%" h="100vh" align="center">
+      <Heading fontSize="48px" fontFamily="goudy" fontWeight="400" py="4">
         OUR HAPPY EMPLOYEES
       </Heading>
       <Flex px="2">
@@ -18,7 +18,7 @@ const OurEmp = () => {
             direction={"column"}
             key={tes.name}
           >
-            <Text p="6" fontSize="24px" fontFamily="veralaRound">
+            <Text p="6" fontSize="20px" fontFamily="veralaRound">
               {tes.text}
             </Text>
             <Flex align="center" px="6">
@@ -26,7 +26,7 @@ const OurEmp = () => {
               <Stack spacing={-1}>
                 <Text
                   px="2"
-                  fontSize="30px"
+                  fontSize="24px"
                   fontFamily="veralaRound"
                   fontWeight={400}
                 >
@@ -36,7 +36,7 @@ const OurEmp = () => {
                   px="2"
                   fontFamily="veralaRound"
                   fontWeight={400}
-                  fontSize="24px"
+                  fontSize="20px"
                   color="black"
                 >
                   {tes.title}

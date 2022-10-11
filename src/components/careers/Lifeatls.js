@@ -5,7 +5,7 @@ const Lifeatls = () => {
   return (
     <Flex
       w="100%"
-      h="89vh"
+      h="100vh"
       direction="column"
       my="10"
       textAlign="center"

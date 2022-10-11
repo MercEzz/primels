@@ -14,11 +14,13 @@ const Buildchng = () => {
     <Flex
       direction="column"
       w="100%"
+      h="100%"
       align="center"
       justify="flex-start"
-      py="12"
+      py="2"
+      my="10rem"
     >
-      <Heading fontSize="50px" fontWeight="400" fontFamily="goudy">
+      <Heading fontSize="48px" fontWeight="400" fontFamily="goudy">
         BUILDING CHANGE
       </Heading>
       <Flex align="flex-start" py="16" justify="space-between" w="100%">
@@ -30,6 +32,7 @@ const Buildchng = () => {
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
+            bgColor="#DFBD69"
             h="100px"
           />{" "}
           <Box
@@ -59,44 +62,44 @@ const Buildchng = () => {
           ))}
         </Flex>
         <Flex w="35%" pr="8" h="100%" align="center" justify="center">
-          <VStack align="flex-start" mt="150px">
-            <Flex direction="column">
-              <Heading fontSize="40px" fontFamily="avenir" pr="16" py="2">
+          <VStack align="flex-start" mt="11rem">
+            <Flex direction="column" pb="6">
+              <Heading fontSize="24px" fontFamily="avenir" pr="16" py="2">
                 PROBLEM SOLVING SKILLS
               </Heading>
-              <Text fontSize="24px" fontFamily="veralaRound">
+              <Text fontSize="20px" fontFamily="veralaRound">
                 We believe to nurture problem solvers, who lead better.
               </Text>
             </Flex>
-            <Flex direction="column">
-              <Heading fontSize="40px" fontFamily="avenir" pr="16" py="2">
+            <Flex direction="column" py="10">
+              <Heading fontSize="24px" fontFamily="avenir" pr="16" py="2">
                 RELIABILITY
               </Heading>
-              <Text fontSize="24px" fontFamily="veralaRound">
+              <Text fontSize="20px" fontFamily="veralaRound">
                 We believe transperancy is the first step to any beginning.
               </Text>
             </Flex>
-            <Flex direction="column">
-              <Heading fontSize="40px" fontFamily="avenir" pr="16" py="2">
+            <Flex direction="column" py="6">
+              <Heading fontSize="24px" fontFamily="avenir" pr="16" py="2">
                 INNOVATIVE THINKING
               </Heading>
-              <Text fontSize="24px" fontFamily="veralaRound">
+              <Text fontSize="20px" fontFamily="veralaRound">
                 We encourage innovative ideas and improvising new things.
               </Text>
             </Flex>
-            <Flex direction="column">
-              <Heading fontSize="40px" fontFamily="avenir" pr="16" py="2">
+            <Flex direction="column" py="10">
+              <Heading fontSize="24px" fontFamily="avenir" pr="16" py="2">
                 MANAGEMENT SKILLS
               </Heading>
-              <Text fontSize="24px" fontFamily="veralaRound">
+              <Text fontSize="20px" fontFamily="veralaRound">
                 We thrive on good communication and motivation.
               </Text>
             </Flex>
-            <Flex direction="column">
-              <Heading fontSize="40px" fontFamily="avenir" pr="16" py="2">
+            <Flex direction="column" py="6">
+              <Heading fontSize="24px" fontFamily="avenir" pr="16" py="2">
                 ENGAGEMENT
               </Heading>
-              <Text fontSize="24px" fontFamily="veralaRound">
+              <Text fontSize="20px" fontFamily="veralaRound">
                 Team work is the secret to achieve uncommon results.
               </Text>
             </Flex>
