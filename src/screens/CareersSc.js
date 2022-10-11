@@ -4,6 +4,7 @@ import FirstSec from "../components/careers/firstSec";
 import Jobopp from "../components/careers/Jobopp";
 import Lifeatls from "../components/careers/Lifeatls";
 import OurEmp from "../components/careers/OurEmp";
+import ResForm from "../components/careers/ResForm";
 
 const CareersSc = () => {
   return (
@@ -13,6 +14,7 @@ const CareersSc = () => {
       <Buildchng />
       <OurEmp />
       <Jobopp />
+      <ResForm />
     </>
   );
 };
