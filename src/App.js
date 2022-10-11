@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HomeSc from "./screens/HomeSc";
 import CareersSc from "./screens/CareersSc";
+import Contact from "./screens/Contact";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeSc />} />
           <Route path="careers" element={<CareersSc />} />
+          <Route path="contact-us" element={<Contact />} />
         </Routes>
       </Flex>
       <Footer />
