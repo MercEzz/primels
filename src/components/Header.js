@@ -3,13 +3,13 @@ import { Button, Flex, Heading, Image, Link } from "@chakra-ui/react";
 import { HiMenuAlt1 } from "react-icons/hi";
 
 const Header = () => {
-  const [navbar, setNavbar] = useState("flex");
+  const [navbar, setNavbar] = useState(false);
 
   const changeBg = () => {
     if (window.scrollY >= 120) {
-      setNavbar("none");
+      setNavbar(true);
     } else {
-      setNavbar("flex");
+      setNavbar(false);
     }
   };
 
@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <Flex
-      display={navbar}
+      display={navbar ? "none" : "flex"}
       pos="fixed"
       top="0"
       zIndex="3"
