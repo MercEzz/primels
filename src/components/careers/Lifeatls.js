@@ -3,21 +3,28 @@ import React from "react";
 
 const Lifeatls = () => {
   return (
-    <Flex w="100%" direction="column" py="12" textAlign="center" px="6">
-      <Heading fontSize="50px" fontFamily="goudy" fontWeight="400" py="4">
+    <Flex
+      w="100%"
+      h="89vh"
+      direction="column"
+      my="10"
+      textAlign="center"
+      px="5rem"
+    >
+      <Heading fontSize="48px" fontFamily="goudy" fontWeight="400" py="4">
         LIFE AT PRIME LIFESPACE
       </Heading>
-      <Text fontSize="24px" fontFamily="veralaRound" px="9rem" py="4">
+      <Text fontSize="20px" fontFamily="veralaRound" px="15rem" py="2">
         We believe when everyone is moving forward together then success takes
         care of itself. Here is a glimpse of what’s it’s like to be a member of
         the Prime Lifespace Team.
       </Text>
-      <Flex w="100%" py="6">
-        <Flex px="3">
-          <Image h="650px" src="/images/careers/career-life.png" />
+      <Flex w="100%" h="100%" py="2" align="flex-start">
+        <Flex w="65%" pr="3">
+          <Image src="/images/careers/career-life.png" />
         </Flex>
-        <Flex px="3">
-          <Image h="550px" src="/images/careers/career-life2.png" />
+        <Flex w="35%" pl="3">
+          <Image src="/images/careers/career-life2.png" />
         </Flex>
       </Flex>
     </Flex>
