@@ -26,7 +26,7 @@ const ResForm = () => {
   useEffect(() => {
     if (isInView) {
       animationHead.start({ opacity: 1, y: 0 });
-      animationFade.start(animationFade);
+      animationFade.start({ opacity: 1 });
     }
   }, [isInView, animationHead, animationFade]);
 
