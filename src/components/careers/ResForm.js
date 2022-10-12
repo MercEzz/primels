@@ -9,8 +9,13 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 import { BsUpload } from "react-icons/bs";
+
+const MtnHead = motion(Heading);
+const MtnText = motion(Text);
+const MtnStk = motion(VStack);
 
 const ResForm = () => {
   return (
@@ -22,19 +27,35 @@ const ResForm = () => {
       justify="center"
       px="416px"
     >
-      <Heading fontFamily="goudy" fontWeight="400" fontSize="48px">
+      <MtnHead
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2, type: "just" }}
+        fontFamily="goudy"
+        fontWeight="400"
+        fontSize="48px"
+      >
         SEND YOUR RESUME
-      </Heading>
-      <Text
+      </MtnHead>
+      <MtnText
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 2, type: "just" }}
         fontSize="20px"
         fontFamily="veralaRound"
         py="25px"
         textAlign="center"
       >
         Work with us, send your resume and our team will get back to you.
-      </Text>
+      </MtnText>
       <FormControl align="center" justify="center">
-        <VStack align="flex-start" pt="20px">
+        <MtnStk
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 2, type: "just" }}
+          align="flex-start"
+          pt="20px"
+        >
           <Flex w="100%" align="center" justify="space-between" pb="25px">
             <FormLabel fontFamily="avenir" fontWeight="700" fontSize="24px">
               NAME*
@@ -72,7 +93,7 @@ const ResForm = () => {
               borderRadius="none"
             />
           </Flex>
-        </VStack>
+        </MtnStk>
         <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
           <Icon as={BsUpload} mr="14px" />
           Upload File

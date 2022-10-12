@@ -18,7 +18,7 @@ const txtvariants = {
 const FirstSec = () => {
   return (
     <Flex w="100%" h="100%" align="center" justify="space-between">
-      <Flex w="100%" align="center" justify="flex-start" bgColor="red">
+      <Flex w="100%" align="center" justify="flex-start">
         <MotnImg
           h="668px"
           w="918px"

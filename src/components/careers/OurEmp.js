@@ -1,12 +1,23 @@
 import { Flex, Heading, Text, Avatar, Stack } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 
 const MtnHead = motion(Heading);
 
 const OurEmp = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animationHead = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animationHead.start({ opacity: 1, y: 0 });
+    }
+  }, [isInView, animationHead]);
+
   return (
     <Flex
+      ref={ref}
       direction="column"
       w="100%"
       h="100%"
@@ -17,7 +28,7 @@ const OurEmp = () => {
     >
       <MtnHead
         initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={animationHead}
         transition={{ duration: 2, type: "just" }}
         direction="column"
         fontSize="48px"

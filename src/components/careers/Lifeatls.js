@@ -9,12 +9,18 @@ const MtnFlx = motion(Flex);
 
 const Lifeatls = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { threshold: 0.2 });
-  const animation = useAnimation();
+  const isInView = useInView(ref, { once: true });
+  const animationHead = useAnimation();
+  const animationText = useAnimation();
+  const animationImg = useAnimation();
 
   useEffect(() => {
-    console.log("element is in view: ", isInView);
-  }, [isInView]);
+    if (isInView) {
+      animationHead.start({ opacity: 1, y: 0 });
+      animationText.start({ opacity: 1 });
+      animationImg.start({ opacity: 1, x: 0 });
+    }
+  }, [isInView, animationHead, animationText, animationImg]);
 
   return (
     <Flex
@@ -28,8 +34,8 @@ const Lifeatls = () => {
       px="100px"
     >
       <MtnHead
-        initial={{ opacity: 1, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={animationHead}
         transition={{ duration: 2, type: "just" }}
         fontSize="48px"
         fontFamily="goudy"
@@ -40,8 +46,8 @@ const Lifeatls = () => {
       </MtnHead>
       <MotnTxt
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2, type: "just" }}
+        animate={animationText}
+        transition={{ delay: 1, duration: 2, type: "just" }}
         fontSize="20px"
         fontFamily="veralaRound"
         px="150px"
@@ -53,18 +59,18 @@ const Lifeatls = () => {
       </MotnTxt>
       <Flex w="100%" h="100%" py="2" align="flex-start">
         <MtnFlx
-          initial={{ x: -500 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 2, type: "just" }}
+          initial={{ opacity: 0, x: -500 }}
+          animate={animationImg}
+          transition={{ delay: 1, duration: 2, type: "just" }}
           w="818px"
           h="612px"
         >
           <Image src="/images/careers/career-life.png" />
         </MtnFlx>
         <MtnFlx
-          initial={{ x: 500 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 2, type: "just" }}
+          initial={{ opacity: 0, x: 500 }}
+          animate={animationImg}
+          transition={{ delay: 1, duration: 2, type: "just" }}
           w="397px"
           h="514px"
           pl="25px"

@@ -7,14 +7,41 @@ import {
   Divider,
   Box,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 
 const MtnFlx = motion(Flex);
+const MtnImg = motion(Image);
+const MtnHead = motion(Heading);
 
 const Buildchng = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animationImg = useAnimation();
+  const animationHead = useAnimation();
+  const animationDvd = useAnimation();
+  const animationLtr = useAnimation();
+  const animationRightTxt = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animationHead.start({ opacity: 1, y: 0 });
+      animationImg.start({ scale: 1 });
+      animationDvd.start({ opacity: 1, y: 0 });
+      animationLtr.start({ opacity: 1, x: 0 });
+      animationRightTxt.start({ opacity: 1, x: 0 });
+    }
+  }, [
+    isInView,
+    animationHead,
+    animationImg,
+    animationDvd,
+    animationLtr,
+    animationRightTxt,
+  ]);
   return (
     <Flex
+      ref={ref}
       direction="column"
       w="100%"
       h="100%"
@@ -23,18 +50,32 @@ const Buildchng = () => {
       mt="100px"
       pr="100px"
     >
-      <Heading fontSize="48px" fontWeight="400" fontFamily="goudy">
+      <MtnHead
+        initial={{ opacity: 0, y: -50 }}
+        animate={animationHead}
+        transition={{ duration: 2, type: "just" }}
+        fontSize="48px"
+        fontWeight="400"
+        fontFamily="goudy"
+      >
         BUILDING CHANGE
-      </Heading>
+      </MtnHead>
       <Flex align="flex-start" mt="75px" justify="center" w="100%">
         <Flex w="60%">
-          <Image w="813px" h="610px" src="/images/careers/bldchng.png" />
+          <MtnImg
+            initial={{ scale: 0.5 }}
+            animate={animationImg}
+            transition={{ delay: 1, duration: 2, type: "just" }}
+            w="813px"
+            h="610px"
+            src="/images/careers/bldchng.png"
+          />
         </Flex>
         <Flex w="5%" mx="35px" direction="column" h="100%" align="center">
           <MtnFlx
             initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2, type: "just" }}
+            animate={animationDvd}
+            transition={{ delay: 1, duration: 2, type: "just" }}
             direction="column"
             align="center"
           >
@@ -56,8 +97,8 @@ const Buildchng = () => {
           </MtnFlx>
           <MtnFlx
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 2, type: "just" }}
+            animate={animationLtr}
+            transition={{ delay: 1, duration: 2, type: "just" }}
             direction="column"
           >
             {txt.map((letter) => (
@@ -80,8 +121,8 @@ const Buildchng = () => {
         </Flex>
         <MtnFlx
           initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2, type: "just" }}
+          animate={animationRightTxt}
+          transition={{ delay: 1, duration: 2, type: "just" }}
           direction="column"
           pr="8"
           w="35%"
