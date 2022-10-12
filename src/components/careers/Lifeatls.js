@@ -26,12 +26,11 @@ const Lifeatls = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="100%"
+      minh="100%"
       direction="column"
-      mt="150px"
-      mb="50px"
+      m="4rem auto"
       textAlign="center"
-      px="100px"
+      px="5rem"
     >
       <MtnHead
         initial={{ opacity: 0, y: -100 }}
@@ -62,8 +61,8 @@ const Lifeatls = () => {
           initial={{ opacity: 0, x: -500 }}
           animate={animationImg}
           transition={{ delay: 1, duration: 2, type: "just" }}
-          w="818px"
-          h="612px"
+          maxW="818px"
+          maxH="612px"
         >
           <Image src="/images/careers/career-life.png" />
         </MtnFlx>
@@ -71,8 +70,8 @@ const Lifeatls = () => {
           initial={{ opacity: 0, x: 500 }}
           animate={animationImg}
           transition={{ delay: 1, duration: 2, type: "just" }}
-          w="397px"
-          h="514px"
+          maxW="397px"
+          maxH="514px"
           pl="25px"
         >
           <Image src="/images/careers/career-life2.png" />

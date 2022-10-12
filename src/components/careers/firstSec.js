@@ -17,10 +17,10 @@ const txtvariants = {
 
 const FirstSec = () => {
   return (
-    <Flex w="100%" h="100%" align="center" justify="space-between">
-      <Flex w="100%" align="center" justify="flex-start">
+    <Flex w="100%" h="100%" align="center" justify="center" mb="3rem">
+      <Flex w="100%" h="100%" align="center" justify="flex-start">
         <MotnImg
-          h="668px"
+          h="auto"
           w="918px"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -34,8 +34,7 @@ const FirstSec = () => {
         justify="flex-end"
         direction="column"
         textAlign="center"
-        pl="27px"
-        pr="100px"
+        m="0 100px"
       >
         <MotnHead
           variants={variants}
@@ -44,8 +43,8 @@ const FirstSec = () => {
           transition={{ duration: 2, type: "just" }}
           fontSize="48px"
           fontFamily="avenir"
+          px="25px"
           pb="25px"
-          px="6"
         >
           JOIN OUR TRIBE
         </MotnHead>

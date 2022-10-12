@@ -28,9 +28,10 @@ const Jobopp = () => {
       ref={ref}
       direction="column"
       w="100%"
-      h="100vh"
+      h="100%"
       align="center"
-      px="100px"
+      m="4rem auto"
+      px="5rem"
     >
       <MtnHead
         initial={{ opacity: 0, y: -100 }}
@@ -43,7 +44,7 @@ const Jobopp = () => {
       >
         JOB OPPORTUNITIES
       </MtnHead>
-      <Flex w="100%">
+      <Flex w="100%" h="100%">
         <Flex
           direction="column"
           w="100%"
@@ -99,6 +100,7 @@ const Jobopp = () => {
             align="center"
             justify="center"
             w="100%"
+            h="100%"
             bgGradient="linear(to-b, #DFBD69, #B88746)"
             textAlign="center"
             color="white"
@@ -109,7 +111,8 @@ const Jobopp = () => {
               transition={{ delay: 1, duration: 2, type: "just" }}
               fontSize="24px"
               fontFamily="avenir"
-              pt="25px"
+              pt="1rem"
+              px="3rem"
             >
               SALES MANAGER
             </MtnHead>
@@ -120,7 +123,7 @@ const Jobopp = () => {
               align="flex-start"
               fontFamily="veralaRound"
               fontSize="20px"
-              py="25px"
+              py="0.9rem"
             >
               <Flex align="center" justify="flex-start">
                 <Icon as={MdLocationOn} w="6" h="6" mx="7px" />
@@ -145,6 +148,7 @@ const Jobopp = () => {
             bgGradient="linear(to-b, #DFBD69, #B88746)"
             textAlign="center"
             color="white"
+            py="0.45rem"
           >
             <MtnHead
               initial={{ opacity: 0 }}
@@ -152,7 +156,8 @@ const Jobopp = () => {
               transition={{ delay: 1, duration: 2, type: "just" }}
               fontSize="24px"
               fontFamily="avenir"
-              pt="25px"
+              pt="1rem"
+              px="3rem"
             >
               OPERATIONS MANAGER
             </MtnHead>
@@ -163,7 +168,7 @@ const Jobopp = () => {
               align="flex-start"
               fontFamily="veralaRound"
               fontSize="20px"
-              py="25px"
+              py="0.9rem"
             >
               <Flex align="center" justify="flex-start">
                 <Icon as={MdLocationOn} w="6" h="6" mx="7px" />
@@ -194,7 +199,8 @@ const Jobopp = () => {
               transition={{ delay: 1, duration: 2, type: "just" }}
               fontSize="24px"
               fontFamily="avenir"
-              pt="25px"
+              pt="1rem"
+              px="3rem"
             >
               GRAPHIC DESIGNER
             </MtnHead>
@@ -205,7 +211,7 @@ const Jobopp = () => {
               align="flex-start"
               fontFamily="veralaRound"
               fontSize="20px"
-              py="25px"
+              py="0.9rem"
             >
               <Flex align="center" justify="flex-start">
                 <Icon as={MdLocationOn} w="6" h="6" mx="7px" />
@@ -236,7 +242,8 @@ const Jobopp = () => {
               transition={{ delay: 1, duration: 2, type: "just" }}
               fontSize="24px"
               fontFamily="avenir"
-              pt="25px"
+              pt="1rem"
+              px="3rem"
             >
               HOSPITALITY MANAGEMENT
             </MtnHead>
@@ -247,7 +254,7 @@ const Jobopp = () => {
               align="flex-start"
               fontFamily="veralaRound"
               fontSize="20px"
-              py="25px"
+              py="0.9rem"
             >
               <Flex align="center" justify="flex-start">
                 <Icon as={MdLocationOn} w="6" h="6" mx="7px" />

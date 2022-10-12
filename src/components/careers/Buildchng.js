@@ -47,8 +47,7 @@ const Buildchng = () => {
       h="100%"
       align="center"
       justify="center"
-      mt="100px"
-      pr="100px"
+      m="4rem auto"
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
@@ -124,10 +123,10 @@ const Buildchng = () => {
           animate={animationRightTxt}
           transition={{ delay: 1, duration: 2, type: "just" }}
           direction="column"
-          pr="8"
+          pr="5rem"
           w="35%"
           h="100%"
-          mt="160px"
+          mt="10rem"
           align="center"
           justify="center"
         >

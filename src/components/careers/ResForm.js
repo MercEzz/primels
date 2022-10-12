@@ -35,10 +35,10 @@ const ResForm = () => {
       ref={ref}
       direction="column"
       w="100%"
-      my="100px"
+      m="5rem auto"
       align="center"
       justify="center"
-      px="416px"
+      px="20rem"
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
@@ -81,19 +81,19 @@ const ResForm = () => {
             </FormLabel>
             <Input w="397px" h="50px" bgColor="#E5E5E5" borderRadius="none" />
           </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="30px">
+          <Flex w="100%" align="center" justify="space-between" pb="25px">
             <FormLabel fontFamily="avenir" fontWeight="700" fontSize="24px">
               PHONE NO.*
             </FormLabel>
             <Input w="397px" h="50px" bgColor="#E5E5E5" borderRadius="none" />
           </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="23px">
+          <Flex w="100%" align="center" justify="space-between" pb="25px">
             <FormLabel fontFamily="avenir" fontWeight="700" fontSize="24px">
               AREA OF INTEREST
             </FormLabel>
             <Input w="397px" h="50px" bgColor="#E5E5E5" borderRadius="none" />
           </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="27px">
+          <Flex w="100%" align="center" justify="space-between" pb="25px">
             <FormLabel fontFamily="avenir" fontWeight="700" fontSize="24px">
               RESUME*
             </FormLabel>

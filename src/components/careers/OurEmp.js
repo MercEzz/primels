@@ -21,9 +21,8 @@ const OurEmp = () => {
       direction="column"
       w="100%"
       h="100%"
-      mt="130px"
       px="80px"
-      mb="150px"
+      m="4rem auto"
       align="center"
     >
       <MtnHead
