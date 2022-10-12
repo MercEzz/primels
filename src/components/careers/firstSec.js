@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const MotnHead = motion(Heading);
 const MotnTxt = motion(Text);
-const MotnFlx = motion(Flex);
+const MotnImg = motion(Image);
 
 const variants = {
   hidden: { opacity: 0, y: -100 },
@@ -17,22 +17,23 @@ const txtvariants = {
 
 const FirstSec = () => {
   return (
-    <Flex w="100%" h="100%">
-      <MotnFlx
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 2, type: "just" }}
-        w="60%"
-      >
-        <Image h="668px" w="918px" src="/images/careers/career-stock.png" />
-      </MotnFlx>
+    <Flex w="100%" h="100%" align="center" justify="space-between">
+      <Flex w="100%" align="center" justify="flex-start" bgColor="red">
+        <MotnImg
+          h="668px"
+          w="918px"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 2, type: "just" }}
+          src="/images/careers/career-stock.png"
+        />
+      </Flex>
 
       <Flex
         align="center"
-        justify="center"
+        justify="flex-end"
         direction="column"
         textAlign="center"
-        w="40%"
         pl="27px"
         pr="100px"
       >

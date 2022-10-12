@@ -19,6 +19,7 @@ function App() {
         minH="xl"
         bgColor="white"
         color="black"
+        overflowX="hidden"
       >
         <Routes>
           <Route path="/" element={<HomeSc />} />

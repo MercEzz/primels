@@ -1,14 +1,24 @@
 import { Flex, Heading, Text, Image } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { useInView } from "framer-motion";
 
 const MtnHead = motion(Heading);
 const MotnTxt = motion(Text);
 const MtnFlx = motion(Flex);
 
 const Lifeatls = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { threshold: 0.2 });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    console.log("element is in view: ", isInView);
+  }, [isInView]);
+
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       direction="column"

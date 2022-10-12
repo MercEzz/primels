@@ -7,7 +7,10 @@ import {
   Divider,
   Box,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
+
+const MtnFlx = motion(Flex);
 
 const Buildchng = () => {
   return (
@@ -28,39 +31,58 @@ const Buildchng = () => {
           <Image w="813px" h="610px" src="/images/careers/bldchng.png" />
         </Flex>
         <Flex w="5%" mx="35px" direction="column" h="100%" align="center">
-          <Divider
-            orientation="vertical"
-            border="3px solid"
-            borderColor="#DFBD69"
-            bgColor="#DFBD69"
-            h="84px"
-          />{" "}
-          <Box
-            height="25px"
-            width="25px"
-            backgroundColor="#DFBD69"
-            border="3px solid white"
-            boxShadow="0px 0px 0px 3px #B88746"
-            borderRadius="50%"
-          />
-          {txt.map((letter) => (
-            <Heading
-              fontSize="110px"
-              fontWeight="400"
-              fontFamily="goudy"
-              lineHeight="132px"
-              py="30px"
-              color="#D9D9D9"
-              css={{
-                writingMode: "vertical-lr",
-                textOrientation: "upright",
-              }}
-            >
-              {letter}
-            </Heading>
-          ))}
+          <MtnFlx
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, type: "just" }}
+            direction="column"
+            align="center"
+          >
+            <Divider
+              orientation="vertical"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+              h="84px"
+            />{" "}
+            <Box
+              height="25px"
+              width="25px"
+              backgroundColor="#DFBD69"
+              border="3px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+            />
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 2, type: "just" }}
+            direction="column"
+          >
+            {txt.map((letter) => (
+              <Heading
+                fontSize="110px"
+                fontWeight="400"
+                fontFamily="goudy"
+                lineHeight="132px"
+                py="30px"
+                color="#D9D9D9"
+                css={{
+                  writingMode: "vertical-lr",
+                  textOrientation: "upright",
+                }}
+              >
+                {letter}
+              </Heading>
+            ))}
+          </MtnFlx>
         </Flex>
-        <Flex
+        <MtnFlx
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 2, type: "just" }}
+          direction="column"
           pr="8"
           w="35%"
           h="100%"
@@ -110,7 +132,7 @@ const Buildchng = () => {
               </Text>
             </Flex>
           </VStack>
-        </Flex>
+        </MtnFlx>
       </Flex>
     </Flex>
   );

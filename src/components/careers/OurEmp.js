@@ -1,5 +1,8 @@
 import { Flex, Heading, Text, Avatar, Stack } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
+
+const MtnHead = motion(Heading);
 
 const OurEmp = () => {
   return (
@@ -12,9 +15,18 @@ const OurEmp = () => {
       mb="150px"
       align="center"
     >
-      <Heading fontSize="48px" fontFamily="goudy" fontWeight="400" pb="75px">
+      <MtnHead
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2, type: "just" }}
+        direction="column"
+        fontSize="48px"
+        fontFamily="goudy"
+        fontWeight="400"
+        pb="75px"
+      >
         OUR HAPPY EMPLOYEES
-      </Heading>
+      </MtnHead>
       <Flex>
         {testimonial.map((tes) => (
           <Flex
