@@ -3,17 +3,20 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
 const MtnHead = motion(Heading);
+const MtnFlx = motion(Flex);
 
 const OurEmp = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const animationHead = useAnimation();
+  const animationTest = useAnimation();
 
   useEffect(() => {
     if (isInView) {
       animationHead.start({ opacity: 1, y: 0 });
+      animationTest.start({ opacity: 1, y: 0 });
     }
-  }, [isInView, animationHead]);
+  }, [isInView, animationHead, animationTest]);
 
   return (
     <Flex
@@ -37,7 +40,11 @@ const OurEmp = () => {
       >
         OUR HAPPY EMPLOYEES
       </MtnHead>
-      <Flex>
+      <MtnFlx
+        initial={{ opacity: 0, y: 100 }}
+        animate={animationTest}
+        transition={{ delay: 1, duration: 2, type: "just" }}
+      >
         {testimonial.map((tes) => (
           <Flex
             align={"flex-start"}
@@ -46,10 +53,10 @@ const OurEmp = () => {
             direction={"column"}
             key={tes.name}
           >
-            <Text p="6" fontSize="20px" fontFamily="veralaRound">
+            <Text px="1rem" fontSize="20px" fontFamily="veralaRound">
               {tes.text}
             </Text>
-            <Flex align="center" pt="50px" pl="24px">
+            <Flex align="center" pt="2.5rem" pl="1.5rem">
               <Avatar src={tes.avtr} alt={tes.name} />
               <Stack spacing={-1}>
                 <Text
@@ -73,7 +80,7 @@ const OurEmp = () => {
             </Flex>
           </Flex>
         ))}
-      </Flex>
+      </MtnFlx>
     </Flex>
   );
 };
