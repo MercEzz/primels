@@ -1,9 +1,9 @@
 import { Flex, Grid, Heading, Icon, Text, VStack } from "@chakra-ui/react";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { AiFillLinkedin } from "react-icons/ai";
 import { MdLocationOn, MdBusinessCenter } from "react-icons/md";
 import { FaBusinessTime } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const MtnHead = motion(Heading);
 const MtnTxt = motion(Text);
@@ -11,11 +11,30 @@ const MtnFlx = motion(Flex);
 const MtnStk = motion(VStack);
 
 const Jobopp = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animationHead = useAnimation();
+  const animationLftHd = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animationHead.start({ opacity: 1, y: 0 });
+      animationLftHd.start({ opacity: 1 });
+    }
+  }, [isInView, animationHead, animationLftHd]);
+
   return (
-    <Flex direction="column" w="100%" h="100vh" align="center" px="100px">
+    <Flex
+      ref={ref}
+      direction="column"
+      w="100%"
+      h="100vh"
+      align="center"
+      px="100px"
+    >
       <MtnHead
         initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={animationHead}
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontSize="48px"
@@ -37,8 +56,8 @@ const Jobopp = () => {
         >
           <MtnHead
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 2, type: "just" }}
+            animate={animationLftHd}
+            transition={{ delay: 1, duration: 2, type: "just" }}
             fontFamily="avenir"
             fontSize="34px"
             py="25px"
@@ -48,8 +67,8 @@ const Jobopp = () => {
           </MtnHead>
           <MtnTxt
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 2, type: "just" }}
+            animate={animationLftHd}
+            transition={{ delay: 1, duration: 2, type: "just" }}
             fontFamily="veralaRound"
             fontSize="20px"
             px="85px"
@@ -60,8 +79,8 @@ const Jobopp = () => {
           </MtnTxt>
           <MtnFlx
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 2, type: "just" }}
+            animate={animationLftHd}
+            transition={{ delay: 1, duration: 2, type: "just" }}
             direction="column"
           >
             <Icon h="100px" w="100px" color="#0A66C2" as={AiFillLinkedin} />
@@ -86,8 +105,8 @@ const Jobopp = () => {
           >
             <MtnHead
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 2, type: "just" }}
+              animate={animationLftHd}
+              transition={{ delay: 1, duration: 2, type: "just" }}
               fontSize="24px"
               fontFamily="avenir"
               pt="25px"
@@ -96,8 +115,8 @@ const Jobopp = () => {
             </MtnHead>
             <MtnStk
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 2, type: "just" }}
+              animate={animationLftHd}
+              transition={{ delay: 1, duration: 2, type: "just" }}
               align="flex-start"
               fontFamily="veralaRound"
               fontSize="20px"
@@ -129,8 +148,8 @@ const Jobopp = () => {
           >
             <MtnHead
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 2, type: "just" }}
+              animate={animationLftHd}
+              transition={{ delay: 1, duration: 2, type: "just" }}
               fontSize="24px"
               fontFamily="avenir"
               pt="25px"
@@ -139,8 +158,8 @@ const Jobopp = () => {
             </MtnHead>
             <MtnStk
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 2, type: "just" }}
+              animate={animationLftHd}
+              transition={{ delay: 1, duration: 2, type: "just" }}
               align="flex-start"
               fontFamily="veralaRound"
               fontSize="20px"
@@ -171,8 +190,8 @@ const Jobopp = () => {
           >
             <MtnHead
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 2, type: "just" }}
+              animate={animationLftHd}
+              transition={{ delay: 1, duration: 2, type: "just" }}
               fontSize="24px"
               fontFamily="avenir"
               pt="25px"
@@ -181,8 +200,8 @@ const Jobopp = () => {
             </MtnHead>
             <MtnStk
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 2, type: "just" }}
+              animate={animationLftHd}
+              transition={{ delay: 1, duration: 2, type: "just" }}
               align="flex-start"
               fontFamily="veralaRound"
               fontSize="20px"
@@ -213,8 +232,8 @@ const Jobopp = () => {
           >
             <MtnHead
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 2, type: "just" }}
+              animate={animationLftHd}
+              transition={{ delay: 1, duration: 2, type: "just" }}
               fontSize="24px"
               fontFamily="avenir"
               pt="25px"
@@ -223,8 +242,8 @@ const Jobopp = () => {
             </MtnHead>
             <MtnStk
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 2, type: "just" }}
+              animate={animationLftHd}
+              transition={{ delay: 1, duration: 2, type: "just" }}
               align="flex-start"
               fontFamily="veralaRound"
               fontSize="20px"
