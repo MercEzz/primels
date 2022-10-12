@@ -98,7 +98,7 @@ const ResForm = () => {
               RESUME*
             </FormLabel>
             <Input
-              p="1"
+              p="2"
               type="file"
               w="397px"
               h="50px"
