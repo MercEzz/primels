@@ -9,8 +9,8 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 import { BsUpload } from "react-icons/bs";
 
 const MtnHead = motion(Heading);
@@ -18,8 +18,21 @@ const MtnText = motion(Text);
 const MtnStk = motion(VStack);
 
 const ResForm = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animationHead = useAnimation();
+  const animationFade = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animationHead.start({ opacity: 1, y: 0 });
+      animationFade.start(animationFade);
+    }
+  }, [isInView, animationHead, animationFade]);
+
   return (
     <Flex
+      ref={ref}
       direction="column"
       w="100%"
       my="100px"
@@ -29,7 +42,7 @@ const ResForm = () => {
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={animationHead}
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
@@ -39,8 +52,8 @@ const ResForm = () => {
       </MtnHead>
       <MtnText
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 2, type: "just" }}
+        animate={animationFade}
+        transition={{ delay: 1, duration: 2, type: "just" }}
         fontSize="20px"
         fontFamily="veralaRound"
         py="25px"
@@ -51,8 +64,8 @@ const ResForm = () => {
       <FormControl align="center" justify="center">
         <MtnStk
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 2, type: "just" }}
+          animate={animationFade}
+          transition={{ delay: 1, duration: 2, type: "just" }}
           align="flex-start"
           pt="20px"
         >
