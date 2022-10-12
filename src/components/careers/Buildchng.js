@@ -47,7 +47,7 @@ const Buildchng = () => {
       h="100%"
       align="center"
       justify="center"
-      m="4rem auto"
+      mt="4rem"
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
@@ -106,7 +106,7 @@ const Buildchng = () => {
                 fontWeight="400"
                 fontFamily="goudy"
                 lineHeight="132px"
-                py="30px"
+                py="25px"
                 color="#D9D9D9"
                 css={{
                   writingMode: "vertical-lr",
@@ -135,7 +135,7 @@ const Buildchng = () => {
               <Heading fontSize="24px" pb="15px" fontFamily="avenir">
                 PROBLEM SOLVING SKILLS
               </Heading>
-              <Text fontSize="20px" pb="70px" fontFamily="veralaRound">
+              <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
                 We believe to nurture problem solvers, who lead better.
               </Text>
             </Flex>
@@ -143,23 +143,23 @@ const Buildchng = () => {
               <Heading fontSize="24px" pb="15px" fontFamily="avenir">
                 RELIABILITY
               </Heading>
-              <Text fontSize="20px" pb="70px" fontFamily="veralaRound">
+              <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
                 We believe transperancy is the first step to any beginning.
               </Text>
             </Flex>
             <Flex direction="column">
-              <Heading fontSize="24px" pb="15px" fontFamily="avenir">
+              <Heading fontSize="24px" pb="20px" fontFamily="avenir">
                 INNOVATIVE THINKING
               </Heading>
-              <Text fontSize="20px" pb="70px" fontFamily="veralaRound">
+              <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
                 We encourage innovative ideas and improvising new things.
               </Text>
             </Flex>
             <Flex direction="column">
-              <Heading fontSize="24px" pb="15px" fontFamily="avenir">
+              <Heading fontSize="24px" pb="20px" fontFamily="avenir">
                 MANAGEMENT SKILLS
               </Heading>
-              <Text fontSize="20px" pb="70px" fontFamily="veralaRound">
+              <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
                 We thrive on good communication and motivation.
               </Text>
             </Flex>
@@ -167,7 +167,7 @@ const Buildchng = () => {
               <Heading fontSize="24px" pb="15px" fontFamily="avenir">
                 ENGAGEMENT
               </Heading>
-              <Text fontSize="20px" pb="70px" fontFamily="veralaRound">
+              <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
                 Team work is the secret to achieve uncommon results.
               </Text>
             </Flex>

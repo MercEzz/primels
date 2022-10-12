@@ -35,7 +35,7 @@ const ResForm = () => {
       ref={ref}
       direction="column"
       w="100%"
-      m="5rem auto"
+      mt="80px"
       align="center"
       justify="center"
       px="20rem"

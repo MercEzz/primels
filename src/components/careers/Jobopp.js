@@ -30,7 +30,7 @@ const Jobopp = () => {
       w="100%"
       h="100%"
       align="center"
-      m="4rem auto"
+      mt="4rem"
       px="5rem"
     >
       <MtnHead

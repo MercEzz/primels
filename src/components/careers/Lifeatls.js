@@ -28,7 +28,8 @@ const Lifeatls = () => {
       w="100%"
       minh="100%"
       direction="column"
-      m="4rem auto"
+      // m="4rem auto"
+      pt="50px"
       textAlign="center"
       px="5rem"
     >
@@ -39,7 +40,7 @@ const Lifeatls = () => {
         fontSize="48px"
         fontFamily="goudy"
         fontWeight="400"
-        p="2"
+        pb="25px"
       >
         LIFE AT PRIME LIFESPACE
       </MtnHead>
@@ -50,7 +51,7 @@ const Lifeatls = () => {
         fontSize="20px"
         fontFamily="veralaRound"
         px="150px"
-        my="25px"
+        pb="15px"
       >
         We believe when everyone is moving forward together then success takes
         care of itself. Here is a glimpse of what’s it’s like to be a member of

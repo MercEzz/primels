@@ -10,7 +10,7 @@ import Contact from "./screens/Contact";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
       <Flex
         pt="85px"
         as="main"
