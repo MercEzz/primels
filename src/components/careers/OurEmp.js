@@ -25,7 +25,7 @@ const OurEmp = () => {
       w="100%"
       h="100%"
       px="80px"
-      m="4rem auto"
+      mt="50px"
       align="center"
     >
       <MtnHead

@@ -47,7 +47,7 @@ const Buildchng = () => {
       h="100%"
       align="center"
       justify="center"
-      mt="4rem"
+      mt="50px"
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
@@ -70,13 +70,20 @@ const Buildchng = () => {
             src="/images/careers/bldchng.png"
           />
         </Flex>
-        <Flex w="5%" mx="35px" direction="column" h="100%" align="center">
+        <Flex
+          direction="column"
+          px="25px"
+          h="100%"
+          align="flex-start"
+          pr="100px"
+        >
           <MtnFlx
             initial={{ opacity: 0, y: -100 }}
             animate={animationDvd}
             transition={{ delay: 1, duration: 2, type: "just" }}
             direction="column"
             align="center"
+            pl=".8rem"
           >
             <Divider
               orientation="vertical"
@@ -86,98 +93,184 @@ const Buildchng = () => {
               h="84px"
             />{" "}
             <Box
-              height="25px"
-              width="25px"
+              height="50px"
+              width="50px"
               backgroundColor="#DFBD69"
-              border="3px solid white"
+              border="8px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
               borderRadius="50%"
             />
           </MtnFlx>
-          <MtnFlx
-            initial={{ opacity: 0, x: -50 }}
-            animate={animationLtr}
-            transition={{ delay: 1, duration: 2, type: "just" }}
-            direction="column"
+
+          <Flex
+            direction="row"
+            align="center"
+            justify="center"
+            px="2"
+            py="15px"
           >
-            {txt.map((letter) => (
-              <Heading
-                fontSize="110px"
-                fontWeight="400"
-                fontFamily="goudy"
-                lineHeight="132px"
-                py="25px"
-                color="#D9D9D9"
-                css={{
-                  writingMode: "vertical-lr",
-                  textOrientation: "upright",
-                }}
-              >
-                {letter}
-              </Heading>
-            ))}
-          </MtnFlx>
-        </Flex>
-        <MtnFlx
-          initial={{ opacity: 0, x: 100 }}
-          animate={animationRightTxt}
-          transition={{ delay: 1, duration: 2, type: "just" }}
-          direction="column"
-          pr="5rem"
-          w="35%"
-          h="100%"
-          mt="10rem"
-          align="center"
-          justify="center"
-        >
-          <VStack align="flex-start">
-            <Flex direction="column">
-              <Heading fontSize="24px" pb="15px" fontFamily="avenir">
+            <MtnHead
+              initial={{ opacity: 0, x: -50 }}
+              animate={animationLtr}
+              transition={{ delay: 1, duration: 2, type: "just" }}
+              fontSize="110px"
+              fontWeight="400"
+              fontFamily="goudy"
+              lineHeight="132px"
+              color="#D9D9D9"
+              pr="45px"
+            >
+              P
+            </MtnHead>
+            <MtnFlx
+              initial={{ opacity: 0, x: 50 }}
+              animate={animationRightTxt}
+              transition={{ delay: 1, duration: 2, type: "just" }}
+              direction="column"
+            >
+              <Heading fontSize="24px" fontFamily="avenir">
                 PROBLEM SOLVING SKILLS
               </Heading>
-              <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
+              <Text fontSize="20px" fontFamily="veralaRound">
                 We believe to nurture problem solvers, who lead better.
               </Text>
-            </Flex>
-            <Flex direction="column">
-              <Heading fontSize="24px" pb="15px" fontFamily="avenir">
+            </MtnFlx>
+          </Flex>
+          <Flex
+            direction="row"
+            align="center"
+            justify="center"
+            px="2"
+            py="15px"
+          >
+            <MtnHead
+              initial={{ opacity: 0, x: -50 }}
+              animate={animationLtr}
+              transition={{ delay: 1, duration: 2, type: "just" }}
+              fontSize="110px"
+              fontWeight="400"
+              fontFamily="goudy"
+              lineHeight="132px"
+              color="#D9D9D9"
+              pr="32px"
+            >
+              R
+            </MtnHead>
+            <MtnFlx
+              initial={{ opacity: 0, x: 50 }}
+              animate={animationRightTxt}
+              transition={{ delay: 1, duration: 2, type: "just" }}
+              direction="column"
+            >
+              <Heading fontSize="24px" fontFamily="avenir">
                 RELIABILITY
               </Heading>
-              <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
+              <Text fontSize="20px" fontFamily="veralaRound">
                 We believe transperancy is the first step to any beginning.
               </Text>
-            </Flex>
-            <Flex direction="column">
-              <Heading fontSize="24px" pb="20px" fontFamily="avenir">
+            </MtnFlx>
+          </Flex>
+          <Flex
+            direction="row"
+            align="center"
+            justify="center"
+            px="2"
+            py="15px"
+          >
+            <MtnHead
+              initial={{ opacity: 0, x: -50 }}
+              animate={animationLtr}
+              transition={{ delay: 1, duration: 2, type: "just" }}
+              fontSize="110px"
+              fontWeight="400"
+              fontFamily="goudy"
+              lineHeight="132px"
+              color="#D9D9D9"
+              pr="55px"
+              pl="15px"
+            >
+              I
+            </MtnHead>
+            <MtnFlx
+              initial={{ opacity: 0, x: 50 }}
+              animate={animationRightTxt}
+              transition={{ delay: 1, duration: 2, type: "just" }}
+              direction="column"
+            >
+              <Heading fontSize="24px" fontFamily="avenir">
                 INNOVATIVE THINKING
               </Heading>
-              <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
+              <Text fontSize="20px" fontFamily="veralaRound">
                 We encourage innovative ideas and improvising new things.
               </Text>
-            </Flex>
-            <Flex direction="column">
-              <Heading fontSize="24px" pb="20px" fontFamily="avenir">
+            </MtnFlx>
+          </Flex>
+          <Flex direction="row" align="center" justify="center" py="15px">
+            <MtnHead
+              initial={{ opacity: 0, x: -50 }}
+              animate={animationLtr}
+              transition={{ delay: 1, duration: 2, type: "just" }}
+              fontSize="110px"
+              fontWeight="400"
+              fontFamily="goudy"
+              lineHeight="132px"
+              color="#D9D9D9"
+              pr="20px"
+            >
+              M
+            </MtnHead>
+            <MtnFlx
+              initial={{ opacity: 0, x: 50 }}
+              animate={animationRightTxt}
+              transition={{ delay: 1, duration: 2, type: "just" }}
+              direction="column"
+            >
+              <Heading fontSize="24px" fontFamily="avenir">
                 MANAGEMENT SKILLS
               </Heading>
-              <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
-                We thrive on good communication and motivation.
+              <Text fontSize="20px" fontFamily="veralaRound">
+                We believe transperancy is the first step to any beginning.
               </Text>
-            </Flex>
-            <Flex direction="column">
-              <Heading fontSize="24px" pb="15px" fontFamily="avenir">
+            </MtnFlx>
+          </Flex>
+          <Flex
+            direction="row"
+            align="center"
+            justify="center"
+            px="2"
+            py="15px"
+          >
+            <MtnHead
+              initial={{ opacity: 0, x: -50 }}
+              animate={animationLtr}
+              transition={{ delay: 1, duration: 2, type: "just" }}
+              fontSize="110px"
+              fontWeight="400"
+              fontFamily="goudy"
+              lineHeight="132px"
+              color="#D9D9D9"
+              pr="45px"
+            >
+              E
+            </MtnHead>
+            <MtnFlx
+              initial={{ opacity: 0, x: 50 }}
+              animate={animationRightTxt}
+              transition={{ delay: 1, duration: 2, type: "just" }}
+              direction="column"
+            >
+              <Heading fontSize="24px" fontFamily="avenir">
                 ENGAGEMENT
               </Heading>
-              <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
+              <Text fontSize="20px" fontFamily="veralaRound">
                 Team work is the secret to achieve uncommon results.
               </Text>
-            </Flex>
-          </VStack>
-        </MtnFlx>
+            </MtnFlx>
+          </Flex>
+        </Flex>
       </Flex>
     </Flex>
   );
 };
 
 export default Buildchng;
-
-const txt = ["P", "R", "I", "M", "E"];

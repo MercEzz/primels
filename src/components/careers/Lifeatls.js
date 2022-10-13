@@ -29,7 +29,7 @@ const Lifeatls = () => {
       minh="100%"
       direction="column"
       // m="4rem auto"
-      pt="50px"
+      pt="40px"
       textAlign="center"
       px="5rem"
     >

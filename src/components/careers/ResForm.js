@@ -35,7 +35,7 @@ const ResForm = () => {
       ref={ref}
       direction="column"
       w="100%"
-      mt="80px"
+      mt="50px"
       align="center"
       justify="center"
       px="20rem"
@@ -107,7 +107,7 @@ const ResForm = () => {
             />
           </Flex>
         </MtnStk>
-        <Text fontSize="20px" pb="50px" fontFamily="veralaRound">
+        <Text fontSize="20px" fontFamily="veralaRound">
           <Icon as={BsUpload} mr="14px" />
           Upload File
         </Text>
