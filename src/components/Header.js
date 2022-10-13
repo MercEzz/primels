@@ -26,9 +26,8 @@ const Header = () => {
       bgColor="#fff"
       transition="all .5s"
       align="center"
-      justify="center"
+      justify="flex-end"
     >
-      <Flex w="100%"></Flex>
       <Flex alignItems={"center"} w="100%" justifyContent={"center"}>
         <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
           <Link>EXPERTISE</Link>
@@ -36,9 +35,8 @@ const Header = () => {
         <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
           <Link>PROJECTS</Link>
         </Heading>
-        <Flex h="90px" px="3" align="center">
-          {/* <Image src="/images/logo.png" /> */}
-          logo
+        <Flex w="100%" h="100%" px="3" align="center">
+          <Image w="100%" h="100%" src="/images/logo.png" />
         </Flex>
         <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
           <Link>INVEST</Link>

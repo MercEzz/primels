@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Flex
-        pt="85px"
+        mt="100px"
         as="main"
         direction="column"
         w="100%"
