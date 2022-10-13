@@ -3,7 +3,7 @@ import React from "react";
 
 const Ponneri = () => {
   return (
-    <Flex w="100%" py="10">
+    <Flex w="100%" h="100%" py="10">
       <Flex direction="column" w="100%">
         <Flex w="100%" align="center" pl="8" py="6" justify="flex-end">
           <Heading fontSize="50px" w="100%" fontWeight="400" fontFamily="goudy">

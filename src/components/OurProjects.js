@@ -15,7 +15,7 @@ const OurProjects = () => {
   return (
     <Flex
       w="100%"
-      h="100vh"
+      h="100%"
       direction="column"
       align="center"
       justify="center"

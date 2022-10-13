@@ -22,9 +22,9 @@ const Header = () => {
       top="0"
       zIndex="3"
       w="100%"
+      h="100px"
       bgColor="#fff"
       transition="all .5s"
-      // boxShadow={navbar ? "lg" : "none"}
       align="center"
       justify="center"
     >

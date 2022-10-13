@@ -13,7 +13,7 @@ const variants = {
 const MainSec = () => {
   return (
     <Flex
-      h="100vh"
+      h="100%"
       bgImage={"/images/bg.png"}
       bgPos="center"
       bgRepeat="no-repeat"
@@ -28,12 +28,8 @@ const MainSec = () => {
             fontSize="50px"
             fontFamily="avenir"
             letterSpacing="wide"
-            initial={{ x: 460, y: 350 }}
-            transition={{ delay: 3, duration: 5, type: "just" }}
-            animate={{
-              x: [460, 460, 460, 460, 0],
-              y: [350, 250, 250, 250, 0],
-            }}
+            // initial={{ x: 460, y: 350 }}
+            // transition={{ delay: 3, duration: 5, type: "just" }}
             zIndex="4"
           >
             THE LARGEST{" "}
@@ -42,34 +38,24 @@ const MainSec = () => {
             fontSize="50px"
             fontFamily="avenir"
             letterSpacing="wide"
-            initial={{ opacity: 0, x: [375, 375, 375], y: [350, 250, 250] }}
-            transition={{ delay: 3, duration: 5, type: "just" }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              y: 0,
-            }}
+            // initial={{ opacity: 0, x: [375, 375, 375], y: [350, 250, 250] }}
+            // transition={{ delay: 3, duration: 5, type: "just" }}
             zIndex="4"
           >
             SMART TOWNSHIP
           </MotnHead>
-          {/* <MotnHead
+          <MotnHead
             pb="4"
             fontSize="50px"
             fontFamily="avenir"
             letterSpacing="wide"
-            initial={{ opacity: 0, x: [450, 400], y: [450, 250] }}
-            transition={{ delay: 3, duration: 5, type: "just" }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              y: 0,
-            }}
+            // initial={{ opacity: 0, x: [450, 400], y: [450, 250] }}
+            // transition={{ delay: 3, duration: 5, type: "just" }}
             zIndex="4"
           >
             {" "}
             OF NORTH CHENNAI
-          </MotnHead> */}
+          </MotnHead>
           <Text
             pt="2"
             pb="4"
@@ -97,7 +83,7 @@ const MainSec = () => {
           </Button>
         </Flex>
       </Flex>
-      <Flex w="100%" h="100%" align="flex-end" justify="flex-end">
+      <Flex align="flex-end" justify="flex-end">
         <Carousel />
       </Flex>
     </Flex>

@@ -14,6 +14,7 @@ const AboutUs = () => {
     <Flex
       justify="center"
       w="100%"
+      h="100%"
       align="center"
       bgColor="gray.900"
       color="white"

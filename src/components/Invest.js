@@ -17,7 +17,7 @@ const Invest = () => {
       w="100%"
       direction="column"
       align="center"
-      h="100vh"
+      h="100%"
       justify="center"
       py="12"
     >

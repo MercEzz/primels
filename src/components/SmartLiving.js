@@ -13,7 +13,15 @@ import React from "react";
 
 const SmartLiving = () => {
   return (
-    <Flex direction="column" w="100%" py="6" mb="12" px="6" align="center">
+    <Flex
+      direction="column"
+      w="100%"
+      h="100%"
+      py="6"
+      mb="12"
+      px="6"
+      align="center"
+    >
       <Heading fontSize="50px" fontFamily="goudy" fontWeight="400">
         SMART LIVING
       </Heading>
