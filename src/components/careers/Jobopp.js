@@ -30,7 +30,7 @@ const Jobopp = () => {
       w="100%"
       h="100%"
       align="center"
-      mt="50px"
+      m="4rem auto"
       px="5rem"
     >
       <MtnHead
@@ -73,7 +73,7 @@ const Jobopp = () => {
             fontFamily="veralaRound"
             fontSize="20px"
             px="85px"
-            pb="25px"
+            pb="15px"
           >
             The best way to stay updated on Job Opportunities at Prime Lifespace
             is to follow us on Linkedin.
@@ -84,7 +84,7 @@ const Jobopp = () => {
             transition={{ delay: 1, duration: 2, type: "just" }}
             direction="column"
           >
-            <Icon h="100px" w="100px" color="#0A66C2" as={AiFillLinkedin} />
+            <Icon h="80px" w="80px" color="#0A66C2" as={AiFillLinkedin} />
             Logo
           </MtnFlx>
         </Flex>
@@ -109,10 +109,10 @@ const Jobopp = () => {
               initial={{ opacity: 0 }}
               animate={animationLftHd}
               transition={{ delay: 1, duration: 2, type: "just" }}
-              fontSize="24px"
+              fontSize="20px"
               fontFamily="avenir"
-              pt="1rem"
-              px="3rem"
+              pt="25px"
+              px="4rem"
             >
               SALES MANAGER
             </MtnHead>
@@ -154,9 +154,9 @@ const Jobopp = () => {
               initial={{ opacity: 0 }}
               animate={animationLftHd}
               transition={{ delay: 1, duration: 2, type: "just" }}
-              fontSize="24px"
+              fontSize="20px"
               fontFamily="avenir"
-              pt="1rem"
+              pt="25px"
               px="3rem"
             >
               OPERATIONS MANAGER
@@ -197,9 +197,9 @@ const Jobopp = () => {
               initial={{ opacity: 0 }}
               animate={animationLftHd}
               transition={{ delay: 1, duration: 2, type: "just" }}
-              fontSize="24px"
+              fontSize="20px"
               fontFamily="avenir"
-              pt="1rem"
+              pt="25px"
               px="3rem"
             >
               GRAPHIC DESIGNER
@@ -240,9 +240,9 @@ const Jobopp = () => {
               initial={{ opacity: 0 }}
               animate={animationLftHd}
               transition={{ delay: 1, duration: 2, type: "just" }}
-              fontSize="24px"
+              fontSize="20px"
               fontFamily="avenir"
-              pt="1rem"
+              pt="25px"
               px="3rem"
             >
               HOSPITALITY MANAGEMENT

@@ -35,10 +35,10 @@ const ResForm = () => {
       ref={ref}
       direction="column"
       w="100%"
-      mt="50px"
+      m="4rem auto"
       align="center"
       justify="center"
-      px="20rem"
+      px="24rem"
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
@@ -67,41 +67,45 @@ const ResForm = () => {
           animate={animationFade}
           transition={{ delay: 1, duration: 2, type: "just" }}
           align="flex-start"
-          pt="20px"
         >
-          <Flex w="100%" align="center" justify="space-between" pb="25px">
-            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="24px">
+          <Flex
+            w="100%"
+            align="flex-end"
+            justifyContent="space-between"
+            pb="15px"
+          >
+            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="20px">
               NAME*
             </FormLabel>
-            <Input w="397px" h="50px" bgColor="#E5E5E5" borderRadius="none" />
+            <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
           </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="25px">
-            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="24px">
+          <Flex w="100%" align="center" justify="space-between" pb="15px">
+            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="20px">
               EMAIL
             </FormLabel>
-            <Input w="397px" h="50px" bgColor="#E5E5E5" borderRadius="none" />
+            <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
           </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="25px">
-            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="24px">
+          <Flex w="100%" align="center" justify="space-between" pb="15px">
+            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="20px">
               PHONE NO.*
             </FormLabel>
-            <Input w="397px" h="50px" bgColor="#E5E5E5" borderRadius="none" />
+            <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
           </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="25px">
-            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="24px">
+          <Flex w="100%" align="center" justify="space-between" pb="15px">
+            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="20px">
               AREA OF INTEREST
             </FormLabel>
-            <Input w="397px" h="50px" bgColor="#E5E5E5" borderRadius="none" />
+            <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
           </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="25px">
-            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="24px">
+          <Flex w="100%" align="center" justify="space-between" pb="15px">
+            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="20px">
               RESUME*
             </FormLabel>
             <Input
-              p="2"
+              p="1"
               type="file"
-              w="397px"
-              h="50px"
+              w="350px"
+              h="40px"
               bgColor="#E5E5E5"
               borderRadius="none"
             />

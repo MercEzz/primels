@@ -25,7 +25,7 @@ const OurEmp = () => {
       w="100%"
       h="100%"
       px="80px"
-      mt="50px"
+      m="4rem auto"
       align="center"
     >
       <MtnHead
@@ -53,17 +53,18 @@ const OurEmp = () => {
             direction={"column"}
             key={tes.name}
           >
-            <Text px="1rem" fontSize="20px" fontFamily="veralaRound">
+            <Text px="25px" fontSize="20px" fontFamily="veralaRound">
               {tes.text}
             </Text>
-            <Flex align="center" pt="2.5rem" pl="1.5rem">
-              <Avatar src={tes.avtr} alt={tes.name} />
+            <Flex align="center" pt="25px" pl="1.5rem">
+              <Avatar h="80px" w="80px" src={tes.avtr} alt={tes.name} />
               <Stack spacing={-1}>
                 <Text
                   px="2"
-                  fontSize="24px"
+                  fontSize="20px"
                   fontFamily="veralaRound"
                   fontWeight={400}
+                  pb="10px"
                 >
                   {tes.name}
                 </Text>

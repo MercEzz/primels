@@ -47,7 +47,7 @@ const Buildchng = () => {
       h="100%"
       align="center"
       justify="center"
-      mt="50px"
+      m="4rem auto"
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
@@ -66,13 +66,13 @@ const Buildchng = () => {
             animate={animationImg}
             transition={{ delay: 1, duration: 2, type: "just" }}
             w="813px"
-            h="610px"
+            h="568px"
             src="/images/careers/bldchng.png"
           />
         </Flex>
         <Flex
           direction="column"
-          px="25px"
+          px="35px"
           h="100%"
           align="flex-start"
           pr="100px"
@@ -83,7 +83,7 @@ const Buildchng = () => {
             transition={{ delay: 1, duration: 2, type: "just" }}
             direction="column"
             align="center"
-            pl=".8rem"
+            pl="1.3rem"
           >
             <Divider
               orientation="vertical"
@@ -93,10 +93,10 @@ const Buildchng = () => {
               h="84px"
             />{" "}
             <Box
-              height="50px"
-              width="50px"
+              height="30px"
+              width="30px"
               backgroundColor="#DFBD69"
-              border="8px solid white"
+              border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
               borderRadius="50%"
             />
@@ -107,7 +107,7 @@ const Buildchng = () => {
             align="center"
             justify="center"
             px="2"
-            py="15px"
+            py="25px"
           >
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
@@ -128,7 +128,7 @@ const Buildchng = () => {
               transition={{ delay: 1, duration: 2, type: "just" }}
               direction="column"
             >
-              <Heading fontSize="24px" fontFamily="avenir">
+              <Heading fontSize="20px" pb="10px" fontFamily="avenir">
                 PROBLEM SOLVING SKILLS
               </Heading>
               <Text fontSize="20px" fontFamily="veralaRound">
@@ -141,7 +141,7 @@ const Buildchng = () => {
             align="center"
             justify="center"
             px="2"
-            py="15px"
+            pb="25px"
           >
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
@@ -162,7 +162,7 @@ const Buildchng = () => {
               transition={{ delay: 1, duration: 2, type: "just" }}
               direction="column"
             >
-              <Heading fontSize="24px" fontFamily="avenir">
+              <Heading fontSize="20px" pb="10px" fontFamily="avenir">
                 RELIABILITY
               </Heading>
               <Text fontSize="20px" fontFamily="veralaRound">
@@ -175,7 +175,7 @@ const Buildchng = () => {
             align="center"
             justify="center"
             px="2"
-            py="15px"
+            pb="25px"
           >
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
@@ -197,7 +197,7 @@ const Buildchng = () => {
               transition={{ delay: 1, duration: 2, type: "just" }}
               direction="column"
             >
-              <Heading fontSize="24px" fontFamily="avenir">
+              <Heading fontSize="20px" pb="10px" fontFamily="avenir">
                 INNOVATIVE THINKING
               </Heading>
               <Text fontSize="20px" fontFamily="veralaRound">
@@ -205,7 +205,7 @@ const Buildchng = () => {
               </Text>
             </MtnFlx>
           </Flex>
-          <Flex direction="row" align="center" justify="center" py="15px">
+          <Flex direction="row" align="center" justify="center" pb="25px">
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
               animate={animationLtr}
@@ -225,7 +225,7 @@ const Buildchng = () => {
               transition={{ delay: 1, duration: 2, type: "just" }}
               direction="column"
             >
-              <Heading fontSize="24px" fontFamily="avenir">
+              <Heading fontSize="20px" pb="10px" fontFamily="avenir">
                 MANAGEMENT SKILLS
               </Heading>
               <Text fontSize="20px" fontFamily="veralaRound">
@@ -233,13 +233,7 @@ const Buildchng = () => {
               </Text>
             </MtnFlx>
           </Flex>
-          <Flex
-            direction="row"
-            align="center"
-            justify="center"
-            px="2"
-            py="15px"
-          >
+          <Flex direction="row" align="center" justify="center" px="2">
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
               animate={animationLtr}
@@ -259,7 +253,7 @@ const Buildchng = () => {
               transition={{ delay: 1, duration: 2, type: "just" }}
               direction="column"
             >
-              <Heading fontSize="24px" fontFamily="avenir">
+              <Heading fontSize="20px" pb="10px" fontFamily="avenir">
                 ENGAGEMENT
               </Heading>
               <Text fontSize="20px" fontFamily="veralaRound">

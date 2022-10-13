@@ -28,7 +28,7 @@ const Lifeatls = () => {
       w="100%"
       minh="100%"
       direction="column"
-      // m="4rem auto"
+      m="4rem auto"
       pt="40px"
       textAlign="center"
       px="5rem"
@@ -51,19 +51,19 @@ const Lifeatls = () => {
         fontSize="20px"
         fontFamily="veralaRound"
         px="150px"
-        pb="15px"
+        pb="25px"
       >
         We believe when everyone is moving forward together then success takes
         care of itself. Here is a glimpse of what’s it’s like to be a member of
         the Prime Lifespace Team.
       </MotnTxt>
-      <Flex w="100%" h="100%" py="2" align="flex-start">
+      <Flex w="100%" h="100%" align="flex-start">
         <MtnFlx
           initial={{ opacity: 0, x: -500 }}
           animate={animationImg}
           transition={{ delay: 1, duration: 2, type: "just" }}
           maxW="818px"
-          maxH="612px"
+          maxH="514px"
         >
           <Image src="/images/careers/career-life.png" />
         </MtnFlx>
@@ -72,7 +72,7 @@ const Lifeatls = () => {
           animate={animationImg}
           transition={{ delay: 1, duration: 2, type: "just" }}
           maxW="397px"
-          maxH="514px"
+          maxH="306px"
           pl="25px"
         >
           <Image src="/images/careers/career-life2.png" />

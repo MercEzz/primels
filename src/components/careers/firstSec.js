@@ -17,10 +17,10 @@ const txtvariants = {
 
 const FirstSec = () => {
   return (
-    <Flex w="100%" h="100%" align="center" justify="center" mb="40px">
+    <Flex w="100%" h="100%" align="center" justify="center" mb="4rem">
       <Flex w="100%" h="100%" align="center" justify="flex-start">
         <MotnImg
-          h="auto"
+          h="668px"
           w="918px"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -44,7 +44,7 @@ const FirstSec = () => {
           fontSize="48px"
           fontFamily="avenir"
           px="25px"
-          pb="25px"
+          pb="27px"
         >
           JOIN OUR TRIBE
         </MotnHead>
