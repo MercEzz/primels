@@ -17,24 +17,25 @@ const txtvariants = {
 
 const FirstSec = () => {
   return (
-    <Flex w="100%" h="100%" align="center" justify="center" mb="4rem">
-      <Flex w="100%" h="100%" align="center" justify="flex-start">
+    <Flex w="100%" h="100%" mb="4rem" align="center" justify="center">
+      <Flex w="100%" h="100%" align="center" justify="center">
         <MotnImg
-          h="668px"
           w="918px"
+          h="668px"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2, type: "just" }}
-          src="/images/careers/career-stock.png"
+          src="/images/careers/first section.jpg"
         />
       </Flex>
 
       <Flex
+        w="40%"
         align="center"
         justify="flex-end"
         direction="column"
         textAlign="center"
-        m="0 100px"
+        m="0 30px"
       >
         <MotnHead
           variants={variants}

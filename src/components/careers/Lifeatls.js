@@ -1,15 +1,52 @@
-import { Flex, Heading, Text, Image } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Box,
+  IconButton,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
+import Slider from "react-slick";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+
+const settings = {
+  dots: true,
+  arrows: false,
+  fade: true,
+  infinite: true,
+  autoplay: true,
+  speed: 500,
+  autoplaySpeed: 3000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 const MtnHead = motion(Heading);
 const MotnTxt = motion(Text);
 const MtnFlx = motion(Flex);
 
+const images = [
+  "/images/careers/career1.jpeg",
+  "/images/careers/career2.JPG",
+  "/images/careers/career3.jpeg",
+  "/images/careers/career4.jpeg",
+  "/images/careers/career5.jpeg",
+  "/images/careers/career6.jpeg",
+];
+
 const Lifeatls = () => {
+  const [slider, setSlider] = useState(null);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
+  const top = useBreakpointValue({ base: "90%", md: "50%" });
+  const side = useBreakpointValue({ base: "30%", md: "40px" });
+
   const animationHead = useAnimation();
   const animationText = useAnimation();
   const animationImg = useAnimation();
@@ -57,25 +94,100 @@ const Lifeatls = () => {
         care of itself. Here is a glimpse of what’s it’s like to be a member of
         the Prime Lifespace Team.
       </MotnTxt>
-      <Flex w="100%" h="100%" align="flex-start">
-        <MtnFlx
-          initial={{ opacity: 0, x: -500 }}
-          animate={animationImg}
-          transition={{ delay: 1, duration: 2, type: "just" }}
-          maxW="818px"
-          maxH="514px"
-        >
-          <Image src="/images/careers/career-life.png" />
+      <Flex w="100%" justify="center">
+        <MtnFlx>
+          <Box
+            position={"relative"}
+            height={"600px"}
+            width={"800px"}
+            overflow={"hidden"}
+            mr="10px"
+          >
+            {/* CSS files for react-slick */}
+            <link
+              rel="stylesheet"
+              type="text/css"
+              charSet="UTF-8"
+              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+            />
+            <link
+              rel="stylesheet"
+              type="text/css"
+              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+            />
+            <Slider {...settings} ref={(slider) => setSlider(slider)}>
+              {images.map((card, index) => (
+                <Image height={"600px"} width={"800px"} src={card} />
+              ))}
+            </Slider>
+          </Box>
         </MtnFlx>
-        <MtnFlx
-          initial={{ opacity: 0, x: 500 }}
-          animate={animationImg}
-          transition={{ delay: 1, duration: 2, type: "just" }}
-          maxW="397px"
-          maxH="306px"
-          pl="25px"
-        >
-          <Image src="/images/careers/career-life2.png" />
+        <MtnFlx w="100%" h="100%" direction="column">
+          <Box
+            position={"relative"}
+            height={"400px"}
+            width={"500px"}
+            overflow={"hidden"}
+            ml="10px"
+          >
+            {/* CSS files for react-slick */}
+            <link
+              rel="stylesheet"
+              type="text/css"
+              charSet="UTF-8"
+              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+            />
+            <link
+              rel="stylesheet"
+              type="text/css"
+              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+            />
+
+            <Slider {...settings} ref={(slider) => setSlider(slider)}>
+              {images.map((card, index) => (
+                <Image height={"400px"} width={"500px"} src={card} />
+              ))}
+            </Slider>
+          </Box>
+          <Flex
+            w="100%"
+            h="100%"
+            align="center"
+            justify="space-between"
+            bgColor="red"
+            px="10"
+          >
+            {/* left Icon */}
+            <IconButton
+              aria-label="left-arrow"
+              variant="outline"
+              // position="absolute"
+              // left={side}
+              // top={top}
+              // transform={"translate(0%, -50%)"}
+              borderRadius="50%"
+              zIndex={2}
+              onClick={() => slider?.slickPrev()}
+            >
+              <AiOutlineLeft size="40px" />
+            </IconButton>
+            {/* Right Icon */}
+            <IconButton
+              aria-label="right-arrow"
+              variant="ghost"
+              w="50px"
+              h="50px"
+              p="5"
+              // position="absolute"
+              // right={side}
+              // top={top}
+              // transform={"translate(0%, -50%)"}
+              zIndex={2}
+              onClick={() => slider?.slickNext()}
+            >
+              <AiOutlineRight size="40px" />
+            </IconButton>
+          </Flex>
         </MtnFlx>
       </Flex>
     </Flex>

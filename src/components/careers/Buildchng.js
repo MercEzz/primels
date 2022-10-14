@@ -1,12 +1,4 @@
-import {
-  Flex,
-  Heading,
-  Image,
-  Text,
-  VStack,
-  Divider,
-  Box,
-} from "@chakra-ui/react";
+import { Flex, Heading, Image, Text, Divider, Box } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
