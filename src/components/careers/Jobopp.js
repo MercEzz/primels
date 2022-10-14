@@ -52,7 +52,7 @@ const Jobopp = () => {
           align="center"
           justify="center"
           textAlign="center"
-          bgImage="/images/careers/card-bg.png"
+          bgImage="/images/careers/problem solving.jpg"
           py="50px"
         >
           <MtnHead

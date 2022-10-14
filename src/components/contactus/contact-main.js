@@ -12,7 +12,7 @@ const ContactMain = () => {
     <Flex
       w="100%"
       h="100%"
-      bgImage="/images/contactus/contact-bg.png"
+      bgImage="/images/contactus/contact-us1.jpg"
       bgPos="center"
       bgRepeat="no-repeat"
       bgSize="cover"

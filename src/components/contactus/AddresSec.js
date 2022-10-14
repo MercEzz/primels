@@ -5,7 +5,7 @@ import { HiMail, HiPhone } from "react-icons/hi";
 
 const AddresSec = () => {
   return (
-    <Flex w="100%" h="100%">
+    <Flex w="100%" h="100%" mb="4rem">
       <Flex w="40%" h="100%" direction="column" align="center" justify="center">
         <Flex
           direction="column"

@@ -52,14 +52,14 @@ const Buildchng = () => {
         BUILDING CHANGE
       </MtnHead>
       <Flex align="flex-start" mt="75px" justify="center" w="100%">
-        <Flex w="60%">
+        <Flex w="100%">
           <MtnImg
             initial={{ scale: 0.5 }}
             animate={animationImg}
             transition={{ delay: 1, duration: 2, type: "just" }}
             w="813px"
             h="568px"
-            src="/images/careers/bldchng.png"
+            src="/images/careers/problem solving.jpg"
           />
         </Flex>
         <Flex

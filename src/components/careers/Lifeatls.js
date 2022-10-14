@@ -154,18 +154,17 @@ const Lifeatls = () => {
             h="100%"
             align="center"
             justify="space-between"
-            bgColor="red"
             px="10"
+            my="16"
           >
             {/* left Icon */}
             <IconButton
               aria-label="left-arrow"
               variant="outline"
-              // position="absolute"
-              // left={side}
-              // top={top}
-              // transform={"translate(0%, -50%)"}
               borderRadius="50%"
+              w="50px"
+              h="50px"
+              p="3"
               zIndex={2}
               onClick={() => slider?.slickPrev()}
             >
@@ -174,14 +173,11 @@ const Lifeatls = () => {
             {/* Right Icon */}
             <IconButton
               aria-label="right-arrow"
-              variant="ghost"
+              variant="outline"
+              borderRadius="50%"
               w="50px"
               h="50px"
-              p="5"
-              // position="absolute"
-              // right={side}
-              // top={top}
-              // transform={"translate(0%, -50%)"}
+              p="3"
               zIndex={2}
               onClick={() => slider?.slickNext()}
             >
