@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import HomeSc from "./screens/HomeSc";
 import CareersSc from "./screens/CareersSc";
 import Contact from "./screens/Contact";
+import EnergySc from "./screens/EnergySc";
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<HomeSc />} />
-          <Route path="careers" element={<CareersSc />} />
-          <Route path="contact-us" element={<Contact />} />
+          <Route path="/careers" element={<CareersSc />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/energy-get-in-touch-with-us" element={<EnergySc />} />
         </Routes>
       </Flex>
       <Footer />
