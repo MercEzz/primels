@@ -80,7 +80,6 @@ const GetInTouch = () => {
             <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
           </Flex>
         </VStack>
-
         <Button
           my="6"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"

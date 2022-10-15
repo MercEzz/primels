@@ -1,4 +1,12 @@
-import { Flex, Heading, HStack, Icon, Text, VStack } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  HStack,
+  Icon,
+  Text,
+  VStack,
+  Box,
+} from "@chakra-ui/react";
 import React from "react";
 import { ImLocation } from "react-icons/im";
 import { HiMail, HiPhone } from "react-icons/hi";
@@ -79,7 +87,18 @@ const AddresSec = () => {
         </Flex>
       </Flex>
       <Flex w="60%" h="100%">
-        right
+        <Box w="918px" h="768px">
+          <iframe
+            class="gmap_iframe"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=918&amp;height=768&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          ></iframe>
+        </Box>
       </Flex>
     </Flex>
   );
