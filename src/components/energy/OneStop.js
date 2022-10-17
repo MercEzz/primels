@@ -16,7 +16,7 @@ const OneStop = () => {
     <Flex
       w="100%"
       h="100%"
-      align="center"
+      align="flex-start"
       justify="center"
       px="100px"
       direction="column"

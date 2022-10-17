@@ -39,7 +39,7 @@ const AddresSec = () => {
               <Icon as={ImLocation} w="30px" h="40px" mr="1" />
               <Text
                 fontFamily="veralaRound"
-                fontSize="16px"
+                fontSize="20px"
                 pr="6rem"
                 lineHeight="24px"
               >

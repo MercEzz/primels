@@ -7,7 +7,7 @@ const EnergyMain = () => {
     <>
       <Flex
         w="100%"
-        h="100%"
+        h="568px"
         bgImage="/images/energy/SOLAR-PANNEL.gif"
         bgPos="center"
         bgRepeat="no-repeat"
@@ -27,7 +27,7 @@ const EnergyMain = () => {
           SUSTAINABILITY IS VALUABLE!
         </Heading>
       </Flex>
-      <Flex w="100%" h="100%" direction="column" px="100px" my="80px">
+      <Flex w="100%" h="100%" direction="column" px="100px" my="100px">
         <Heading
           pb="25px"
           fontFamily="goudy"

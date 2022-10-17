@@ -25,6 +25,7 @@ const ProSites = () => {
             fontFamily="avenir"
             fontSize="34px"
             lineHeight="41px"
+            px="10"
             pb="17px"
           >
             ARETE HOMES SKY HIGH TOWER
@@ -34,15 +35,16 @@ const ProSites = () => {
             North Chennai - 601204
           </Text>
         </VStack>
-        <VStack align="center" h="100%" textAlign="center" px="16">
+        <VStack align="center" h="100%" textAlign="center">
           <Heading
             fontFamily="avenir"
             fontSize="34px"
             lineHeight="41px"
             pb="17px"
-            px="5rem"
+            px="40px"
           >
-            ARETE HOMES
+            ARETE <br />
+            HOMES
           </Heading>
           <Text fontFamily="veralaRound" fontSize="20px">
             V. No. 76 , Thatchoor 1, Perucheri, Ponneri, Taluk, Thiruvallur
@@ -55,6 +57,7 @@ const ProSites = () => {
             fontSize="34px"
             lineHeight="41px"
             pb="17px"
+            px="20px"
           >
             PONNERI GYMKHANA CLUB
           </Heading>

@@ -16,7 +16,7 @@ const GetInTouch = () => {
       // ref={ref}
       direction="column"
       w="100%"
-      mt="100px"
+      mt="50px"
       align="center"
       justify="center"
       px="24rem"
@@ -73,7 +73,7 @@ const GetInTouch = () => {
             </FormLabel>
             <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
           </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="15px">
+          <Flex w="100%" align="center" justify="space-between">
             <FormLabel fontFamily="avenir" fontWeight="700" fontSize="20px">
               MESSAGE*
             </FormLabel>
@@ -81,7 +81,7 @@ const GetInTouch = () => {
           </Flex>
         </VStack>
         <Button
-          my="6"
+          my="50px"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
           color="white"
           fontSize="16px"
