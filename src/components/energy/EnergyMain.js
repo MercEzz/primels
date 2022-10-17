@@ -1,19 +1,20 @@
 import { Text, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
+import PLSGreen from "./PLSGreen";
 
 const EnergyMain = () => {
   return (
     <>
       <Flex
         w="100%"
-        h="100vh"
+        h="100%"
         bgImage="/images/energy/main-sec.png"
         bgPos="center"
         bgRepeat="no-repeat"
         bgSize="cover"
         alignItems="center"
         justifyContent="center"
-        p="10rem"
+        p="15rem"
       >
         <Heading
           fontFamily="avenir"
