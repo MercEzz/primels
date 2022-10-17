@@ -22,7 +22,7 @@ const AboutUs = () => {
       direction="column"
     >
       <Flex w="100%" direction="column" pt="14" px="10" align="center">
-        <Heading fontFamily="goudy" fontSize="50px">
+        <Heading fontFamily="goudy" fontWeight="400" fontSize="50px">
           ABOUT US
         </Heading>
         <Flex w="100%" align="center" direction="column">

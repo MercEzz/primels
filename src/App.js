@@ -7,6 +7,7 @@ import HomeSc from "./screens/HomeSc";
 import CareersSc from "./screens/CareersSc";
 import Contact from "./screens/Contact";
 import EnergySc from "./screens/EnergySc";
+import ChannelPartner from "./screens/ChannelPartner";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/careers" element={<CareersSc />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/energy-get-in-touch-with-us" element={<EnergySc />} />
+          <Route path="/channel-partner" element={<ChannelPartner />} />
         </Routes>
       </Flex>
       <Footer />
