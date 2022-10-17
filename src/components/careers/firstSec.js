@@ -17,11 +17,11 @@ const txtvariants = {
 
 const FirstSec = () => {
   return (
-    <Flex w="100%" h="100%" mb="4rem" align="center" justify="center">
+    <Flex w="100%" h="100%" mb="100px" align="center" justify="center">
       <Flex w="100%" h="100%" align="center" justify="center">
         <MotnImg
           w="918px"
-          h="668px"
+          h="568px"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2, type: "just" }}

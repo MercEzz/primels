@@ -35,7 +35,8 @@ const ResForm = () => {
       ref={ref}
       direction="column"
       w="100%"
-      m="4rem auto"
+      mt="100px"
+      mb="25px"
       align="center"
       justify="center"
       px="24rem"
@@ -112,11 +113,11 @@ const ResForm = () => {
           </Flex>
         </MtnStk>
         <Text fontSize="20px" fontFamily="veralaRound">
-          <Icon as={BsUpload} mr="14px" />
+          <Icon as={BsUpload} ml="6" mr="10px" />
           Upload File
         </Text>
         <Button
-          my="4"
+          my="25px"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
           color="white"
           fontSize="16px"

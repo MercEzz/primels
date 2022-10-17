@@ -25,7 +25,7 @@ const OurEmp = () => {
       w="100%"
       h="100%"
       px="80px"
-      m="4rem auto"
+      mt="100px"
       align="center"
     >
       <MtnHead
@@ -36,7 +36,7 @@ const OurEmp = () => {
         fontSize="48px"
         fontFamily="goudy"
         fontWeight="400"
-        pb="75px"
+        pb="50px"
       >
         OUR HAPPY EMPLOYEES
       </MtnHead>

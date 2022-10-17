@@ -11,9 +11,9 @@ const ContactMain = () => {
   return (
     <Flex
       w="100%"
-      h="100%"
+      h="568px"
       bgImage="/images/contactus/contact-us1.jpg"
-      bgPos="center"
+      bgPos="bottom"
       bgRepeat="no-repeat"
       bgSize="cover"
       align="Flex-start"
@@ -38,7 +38,7 @@ const ContactMain = () => {
       </Flex>
       <Flex h="100%" direction="column" align="center" justify="flex-start">
         <Divider
-          h="175px"
+          h="100px"
           orientation="vertical"
           border="3px solid"
           borderColor="#DFBD69"
@@ -52,9 +52,9 @@ const ContactMain = () => {
           borderRadius="50%"
           my="1"
         />
-        <Icon as={RiInstagramFill} h="50px" w="50px" mt="25px" />
-        <Icon as={RiLinkedinBoxFill} h="50px" w="50px" my="25px" />
-        <Icon as={RiFacebookCircleFill} h="50px" w="50px" mb="25px" />
+        <Icon as={RiInstagramFill} h="50px" w="50px" mt="15px" />
+        <Icon as={RiLinkedinBoxFill} h="50px" w="50px" my="15px" />
+        <Icon as={RiFacebookCircleFill} h="50px" w="50px" mb="15px" />
         <Icon as={RiYoutubeFill} h="50px" w="50px" />
       </Flex>
     </Flex>

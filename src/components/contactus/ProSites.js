@@ -7,7 +7,7 @@ const ProSites = () => {
       direction="column"
       w="100%"
       h="100%"
-      my="4rem"
+      mt="100px"
       align="center"
       justify="center"
     >
@@ -19,13 +19,13 @@ const ProSites = () => {
       >
         OUR PROJECT SITES
       </Heading>
-      <Flex w="100%" mt="50px" mb="100px" justify="center" px="100px">
+      <Flex w="100%" mt="50px" mb="50px" justify="center" px="80px">
         <VStack align="center" h="100%" textAlign="center">
           <Heading
             fontFamily="avenir"
             fontSize="34px"
             lineHeight="41px"
-            pb="25px"
+            pb="17px"
           >
             ARETE HOMES SKY HIGH TOWER
           </Heading>
@@ -39,7 +39,7 @@ const ProSites = () => {
             fontFamily="avenir"
             fontSize="34px"
             lineHeight="41px"
-            pb="25px"
+            pb="17px"
             px="5rem"
           >
             ARETE HOMES
@@ -54,7 +54,7 @@ const ProSites = () => {
             fontFamily="avenir"
             fontSize="34px"
             lineHeight="41px"
-            pb="25px"
+            pb="17px"
           >
             PONNERI GYMKHANA CLUB
           </Heading>
@@ -72,7 +72,7 @@ const ProSites = () => {
           info@primelifespace.com
         </Heading>
       </VStack>
-      <VStack mb="50px">
+      <VStack>
         <Text fontFamily="veralaRound" fontSize="20px" lineHeight="24px">
           For procurement related queries, email us at
         </Text>

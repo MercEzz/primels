@@ -65,8 +65,6 @@ const Lifeatls = () => {
       w="100%"
       minh="100%"
       direction="column"
-      m="4rem auto"
-      pt="40px"
       textAlign="center"
       px="5rem"
     >
@@ -98,8 +96,8 @@ const Lifeatls = () => {
         <MtnFlx>
           <Box
             position={"relative"}
-            height={"600px"}
-            width={"800px"}
+            height={"500px"}
+            width={"700px"}
             overflow={"hidden"}
             mr="10px"
           >
@@ -117,7 +115,7 @@ const Lifeatls = () => {
             />
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
               {images.map((card, index) => (
-                <Image height={"600px"} width={"800px"} src={card} />
+                <Image height={"500px"} width={"700px"} src={card} />
               ))}
             </Slider>
           </Box>
@@ -125,8 +123,8 @@ const Lifeatls = () => {
         <MtnFlx w="100%" h="100%" direction="column">
           <Box
             position={"relative"}
-            height={"400px"}
-            width={"500px"}
+            height={"300px"}
+            width={"400px"}
             overflow={"hidden"}
             ml="10px"
           >
@@ -145,7 +143,7 @@ const Lifeatls = () => {
 
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
               {images.map((card, index) => (
-                <Image height={"400px"} width={"500px"} src={card} />
+                <Image height={"300px"} width={"400px"} src={card} />
               ))}
             </Slider>
           </Box>

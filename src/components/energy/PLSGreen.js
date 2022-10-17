@@ -6,13 +6,13 @@ const PLSGreen = () => {
     <Flex w="100%" h="100%" mb="660px" pos="relative">
       <Flex w="100%" direction="column" pos="relative">
         <Image
-          src="/images/energy/ourPro1.png"
+          src="/images/energy/ourPro1.jpeg"
           h="514px"
           w="813px"
           pos="absolute"
         />
         <Image
-          src="/images/energy/ourPro2.png"
+          src="/images/energy/ourPro2.jpeg"
           h="514px"
           w="813px"
           pos="absolute"

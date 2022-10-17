@@ -8,7 +8,7 @@ const EnergyMain = () => {
       <Flex
         w="100%"
         h="100%"
-        bgImage="/images/energy/main-sec.png"
+        bgImage="/images/energy/SOLAR-PANNEL.gif"
         bgPos="center"
         bgRepeat="no-repeat"
         bgSize="cover"

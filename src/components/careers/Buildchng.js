@@ -39,7 +39,7 @@ const Buildchng = () => {
       h="100%"
       align="center"
       justify="center"
-      m="4rem auto"
+      pt="100px"
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
@@ -51,7 +51,7 @@ const Buildchng = () => {
       >
         BUILDING CHANGE
       </MtnHead>
-      <Flex align="flex-start" mt="75px" justify="center" w="100%">
+      <Flex align="flex-start" mt="50px" justify="center" w="100%">
         <Flex w="100%">
           <MtnImg
             initial={{ scale: 0.5 }}

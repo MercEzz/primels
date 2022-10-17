@@ -16,7 +16,7 @@ const GetInTouch = () => {
       // ref={ref}
       direction="column"
       w="100%"
-      m="4rem auto"
+      mt="100px"
       align="center"
       justify="center"
       px="24rem"
