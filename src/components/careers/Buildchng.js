@@ -39,13 +39,13 @@ const Buildchng = () => {
       h="100%"
       align="center"
       justify="center"
-      pt="100px"
+      pt="50px"
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
         animate={animationHead}
         transition={{ duration: 2, type: "just" }}
-        fontSize="48px"
+        fontSize="40px"
         fontWeight="400"
         fontFamily="goudy"
       >
@@ -62,13 +62,7 @@ const Buildchng = () => {
             src="/images/careers/problem solving.jpg"
           />
         </Flex>
-        <Flex
-          direction="column"
-          px="35px"
-          h="100%"
-          align="flex-start"
-          pr="100px"
-        >
+        <Flex direction="column" h="100%" align="flex-start" pr="100px">
           <MtnFlx
             initial={{ opacity: 0, y: -100 }}
             animate={animationDvd}
@@ -94,13 +88,7 @@ const Buildchng = () => {
             />
           </MtnFlx>
 
-          <Flex
-            direction="row"
-            align="center"
-            justify="center"
-            px="2"
-            py="25px"
-          >
+          <Flex direction="row" align="center" justify="center" py="25px">
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
               animate={animationLtr}
@@ -123,18 +111,12 @@ const Buildchng = () => {
               <Heading fontSize="20px" pb="10px" fontFamily="avenir">
                 PROBLEM SOLVING SKILLS
               </Heading>
-              <Text fontSize="20px" fontFamily="veralaRound">
+              <Text fontSize="16px" lineHeight="24px" fontFamily="veralaRound">
                 We believe to nurture problem solvers, who lead better.
               </Text>
             </MtnFlx>
           </Flex>
-          <Flex
-            direction="row"
-            align="center"
-            justify="center"
-            px="2"
-            pb="25px"
-          >
+          <Flex direction="row" align="center" justify="center" pb="25px">
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
               animate={animationLtr}
@@ -157,18 +139,12 @@ const Buildchng = () => {
               <Heading fontSize="20px" pb="10px" fontFamily="avenir">
                 RELIABILITY
               </Heading>
-              <Text fontSize="20px" fontFamily="veralaRound">
+              <Text fontSize="16px" fontFamily="veralaRound">
                 We believe transperancy is the first step to any beginning.
               </Text>
             </MtnFlx>
           </Flex>
-          <Flex
-            direction="row"
-            align="center"
-            justify="center"
-            px="2"
-            pb="25px"
-          >
+          <Flex direction="row" align="center" justify="center" pb="25px">
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
               animate={animationLtr}
@@ -192,7 +168,7 @@ const Buildchng = () => {
               <Heading fontSize="20px" pb="10px" fontFamily="avenir">
                 INNOVATIVE THINKING
               </Heading>
-              <Text fontSize="20px" fontFamily="veralaRound">
+              <Text fontSize="16px" fontFamily="veralaRound">
                 We encourage innovative ideas and improvising new things.
               </Text>
             </MtnFlx>
@@ -207,7 +183,8 @@ const Buildchng = () => {
               fontFamily="goudy"
               lineHeight="132px"
               color="#D9D9D9"
-              pr="20px"
+              pr="22px"
+              ml="-12px"
             >
               M
             </MtnHead>
@@ -220,12 +197,12 @@ const Buildchng = () => {
               <Heading fontSize="20px" pb="10px" fontFamily="avenir">
                 MANAGEMENT SKILLS
               </Heading>
-              <Text fontSize="20px" fontFamily="veralaRound">
+              <Text fontSize="16px" fontFamily="veralaRound">
                 We believe transperancy is the first step to any beginning.
               </Text>
             </MtnFlx>
           </Flex>
-          <Flex direction="row" align="center" justify="center" px="2">
+          <Flex direction="row" align="center" justify="center">
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
               animate={animationLtr}
@@ -235,7 +212,7 @@ const Buildchng = () => {
               fontFamily="goudy"
               lineHeight="132px"
               color="#D9D9D9"
-              pr="45px"
+              pr="42px"
             >
               E
             </MtnHead>
@@ -248,7 +225,7 @@ const Buildchng = () => {
               <Heading fontSize="20px" pb="10px" fontFamily="avenir">
                 ENGAGEMENT
               </Heading>
-              <Text fontSize="20px" fontFamily="veralaRound">
+              <Text fontSize="16px" fontFamily="veralaRound">
                 Team work is the secret to achieve uncommon results.
               </Text>
             </MtnFlx>

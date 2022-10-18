@@ -25,6 +25,7 @@ const OneStop = () => {
       h="100%"
       align="flex-start"
       justify="center"
+      pt="50px"
       px="100px"
       direction="column"
     >

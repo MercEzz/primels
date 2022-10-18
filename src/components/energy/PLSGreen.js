@@ -3,7 +3,13 @@ import React from "react";
 
 const PLSGreen = () => {
   return (
-    <Flex w="100%" h="100%" mb="660px" pos="relative">
+    <Flex
+      w="100%"
+      h="100%"
+      pb="550px"
+      // pos="relative"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+    >
       <Flex w="100%" direction="column" pos="relative">
         <Image
           src="/images/energy/ourPro1.jpeg"

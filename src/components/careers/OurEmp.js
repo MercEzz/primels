@@ -33,7 +33,7 @@ const OurEmp = () => {
         animate={animationHead}
         transition={{ duration: 2, type: "just" }}
         direction="column"
-        fontSize="48px"
+        fontSize="40px"
         fontFamily="goudy"
         fontWeight="400"
         pb="50px"
@@ -53,7 +53,7 @@ const OurEmp = () => {
             direction={"column"}
             key={tes.name}
           >
-            <Text px="25px" fontSize="20px" fontFamily="veralaRound">
+            <Text px="25px" fontSize="16px" fontFamily="veralaRound">
               {tes.text}
             </Text>
             <Flex align="center" pt="25px" pl="1.5rem">
@@ -61,7 +61,7 @@ const OurEmp = () => {
               <Stack spacing={-1}>
                 <Text
                   px="2"
-                  fontSize="20px"
+                  fontSize="18px"
                   fontFamily="veralaRound"
                   fontWeight={400}
                   pb="10px"
@@ -72,7 +72,7 @@ const OurEmp = () => {
                   px="2"
                   fontFamily="veralaRound"
                   fontWeight={400}
-                  fontSize="20px"
+                  fontSize="16px"
                   color="black"
                 >
                   {tes.title}

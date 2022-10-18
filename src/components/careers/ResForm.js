@@ -1,5 +1,6 @@
 import {
   Button,
+  Container,
   Flex,
   FormControl,
   FormLabel,
@@ -35,11 +36,11 @@ const ResForm = () => {
       ref={ref}
       direction="column"
       w="100%"
-      mt="100px"
+      pt="50px"
       mb="25px"
       align="center"
       justify="center"
-      px="24rem"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
@@ -47,7 +48,7 @@ const ResForm = () => {
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
-        fontSize="48px"
+        fontSize="40px"
       >
         SEND YOUR RESUME
       </MtnHead>
@@ -55,80 +56,84 @@ const ResForm = () => {
         initial={{ opacity: 0 }}
         animate={animationFade}
         transition={{ delay: 1, duration: 2, type: "just" }}
-        fontSize="20px"
+        fontSize="16px"
         fontFamily="veralaRound"
         py="25px"
         textAlign="center"
       >
         Work with us, send your resume and our team will get back to you.
       </MtnText>
-      <FormControl align="center" justify="center">
-        <MtnStk
-          initial={{ opacity: 0 }}
-          animate={animationFade}
-          transition={{ delay: 1, duration: 2, type: "just" }}
-          align="flex-start"
-        >
-          <Flex
-            w="100%"
-            align="flex-end"
-            justifyContent="space-between"
-            pb="15px"
+      <Container minW="container.sm">
+        <FormControl align="center" justify="center">
+          <MtnStk
+            w="90%"
+            initial={{ opacity: 0 }}
+            animate={animationFade}
+            transition={{ delay: 1, duration: 2, type: "just" }}
+            align="center"
           >
-            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="20px">
-              NAME*
-            </FormLabel>
-            <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
-          </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="15px">
-            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="20px">
-              EMAIL
-            </FormLabel>
-            <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
-          </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="15px">
-            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="20px">
-              PHONE NO.*
-            </FormLabel>
-            <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
-          </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="15px">
-            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="20px">
-              AREA OF INTEREST
-            </FormLabel>
-            <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
-          </Flex>
-          <Flex w="100%" align="center" justify="space-between" pb="15px">
-            <FormLabel fontFamily="avenir" fontWeight="700" fontSize="20px">
-              RESUME*
-            </FormLabel>
-            <Input
-              p="1"
-              type="file"
-              w="350px"
-              h="40px"
-              bgColor="#E5E5E5"
-              borderRadius="none"
-            />
-          </Flex>
-        </MtnStk>
-        <Text fontSize="20px" fontFamily="veralaRound">
-          <Icon as={BsUpload} ml="6" mr="10px" />
-          Upload File
-        </Text>
-        <Button
-          my="25px"
-          bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-          color="white"
-          fontSize="16px"
-          fontFamily="avenir"
-          _hover={{
-            bgGradient: "linear(to-b, #DFBD69, #B88746)",
-          }}
-        >
-          SUBMIT NOW
-        </Button>
-      </FormControl>
+            <Flex
+              w="100%"
+              align="center"
+              justifyContent="space-between"
+              pb="15px"
+            >
+              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
+                NAME*
+              </FormLabel>
+              <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
+            </Flex>
+            <Flex w="100%" align="center" justify="space-between" pb="7px">
+              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
+                EMAIL
+              </FormLabel>
+              <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
+            </Flex>
+            <Flex w="100%" align="center" justify="space-between" pb="7px">
+              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
+                PHONE NO.*
+              </FormLabel>
+              <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
+            </Flex>
+            <Flex w="100%" align="center" justify="space-between" pb="7px">
+              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
+                AREA OF INTEREST
+              </FormLabel>
+              <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
+            </Flex>
+            <Flex w="100%" align="center" justify="space-between" pb="7px">
+              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
+                RESUME*
+              </FormLabel>
+              <Input
+                p="1"
+                type="file"
+                w="350px"
+                h="40px"
+                bgColor="#E5E5E5"
+                borderRadius="none"
+              />
+            </Flex>
+          </MtnStk>
+          <Text ml="-10" fontSize="16px" fontFamily="veralaRound">
+            <Icon as={BsUpload} mr="10px" />
+            Upload File
+          </Text>
+          <Button
+            mt="25px"
+            mb="50px"
+            bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+            color="white"
+            fontSize="16px"
+            fontFamily="avenir"
+            _hover={{
+              bgGradient: "linear(to-b, #DFBD69, #B88746)",
+            }}
+          >
+            SUBMIT NOW
+          </Button>
+        </FormControl>
+      </Container>
     </Flex>
   );
 };

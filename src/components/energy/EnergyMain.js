@@ -18,7 +18,7 @@ const EnergyMain = () => {
       >
         <Heading
           fontFamily="avenir"
-          fontSize="48px"
+          fontSize="40px"
           lineHeight="58px"
           color="white"
           textAlign="center"

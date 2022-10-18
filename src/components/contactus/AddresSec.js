@@ -21,6 +21,7 @@ const AddresSec = () => {
           w="522px"
           h="350px"
           color="white"
+          mb="50px"
           // py="25px"
           // pl="100px"
           // pr="50px"

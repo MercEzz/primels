@@ -7,7 +7,7 @@ const ProSites = () => {
       direction="column"
       w="100%"
       h="100%"
-      mt="100px"
+      py="50px"
       align="center"
       justify="center"
     >

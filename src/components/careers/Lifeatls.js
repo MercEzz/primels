@@ -67,12 +67,17 @@ const Lifeatls = () => {
       direction="column"
       textAlign="center"
       px="5rem"
+      py="50px"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
     >
       <MtnHead
         initial={{ opacity: 0, y: -100 }}
         animate={animationHead}
         transition={{ duration: 2, type: "just" }}
-        fontSize="48px"
+        fontSize="40px"
         fontFamily="goudy"
         fontWeight="400"
         pb="25px"
@@ -83,7 +88,7 @@ const Lifeatls = () => {
         initial={{ opacity: 0 }}
         animate={animationText}
         transition={{ delay: 1, duration: 2, type: "just" }}
-        fontSize="20px"
+        fontSize="16px"
         fontFamily="veralaRound"
         px="150px"
         pb="25px"

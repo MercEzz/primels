@@ -22,7 +22,7 @@ const ContactMain = () => {
       px="100px"
     >
       <Flex w="100%" direction="column" align="center" pt="150px">
-        <Heading py="15px" fontSize="48px" fontFamily="avenir">
+        <Heading py="15px" fontSize="40px" fontFamily="avenir">
           CONTACT US
         </Heading>
         <Text fontSize="18px" fontFamily="veralaRound" textAlign="center">
@@ -43,7 +43,7 @@ const ContactMain = () => {
           height="30px"
           width="30px"
           backgroundColor="#DFBD69"
-          border="3px solid white"
+          border="4px solid white"
           boxShadow="0px 0px 0px 3px #B88746"
           borderRadius="50%"
           my="1"

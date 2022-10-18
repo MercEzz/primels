@@ -17,7 +17,15 @@ const txtvariants = {
 
 const FirstSec = () => {
   return (
-    <Flex w="100%" h="100%" mb="100px" align="center" justify="center">
+    <Flex
+      w="100%"
+      h="100%"
+      pb="50px"
+      align="center"
+      justify="center"
+      // bgImage="/images/bg-box.jpg"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+    >
       <Flex w="100%" h="100%" align="center" justify="center">
         <MotnImg
           w="918px"
@@ -42,10 +50,10 @@ const FirstSec = () => {
           initial="hidden"
           animate="enter"
           transition={{ duration: 2, type: "just" }}
-          fontSize="48px"
+          fontSize="40px"
           fontFamily="avenir"
           px="25px"
-          pb="27px"
+          pb="15px"
         >
           JOIN OUR TRIBE
         </MotnHead>
@@ -54,7 +62,7 @@ const FirstSec = () => {
           initial="hidden"
           animate="enter"
           transition={{ duration: 2, type: "just" }}
-          fontSize="20px"
+          fontSize="18px"
           fontFamily="veralaRound"
         >
           Let’s join our efforts towards building the unshakable foundation for

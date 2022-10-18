@@ -27,6 +27,7 @@ const ChannelForm = () => {
         align="center"
         justify="center"
         px="100px"
+        bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       >
         <FormControl align="center">
           <Flex w="100%">

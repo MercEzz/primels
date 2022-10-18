@@ -17,10 +17,11 @@ const GetInTouch = () => {
       // ref={ref}
       direction="column"
       w="100%"
-      mt="50px"
+      pt="50px"
       align="center"
       justify="center"
       px="100px"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
       <Heading
         // initial={{ opacity: 0, y: -50 }}
