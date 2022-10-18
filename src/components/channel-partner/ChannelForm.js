@@ -38,7 +38,9 @@ const ChannelForm = () => {
                   lineHeight="24px"
                   fontWeight="700"
                 >
-                  COMPANY/INDIVIDUAL NAME*
+                  COMPANY/
+                  <br />
+                  INDIVIDUAL NAME*
                 </FormLabel>
                 <Input
                   fontSize="16px"
@@ -50,7 +52,7 @@ const ChannelForm = () => {
                   borderRadius="none"
                 />
               </Flex>
-              <Flex justify="space-between" mb="25px">
+              <Flex justify="space-between" mb="15px">
                 <FormLabel
                   pt="2"
                   fontSize="16px"
@@ -95,7 +97,7 @@ const ChannelForm = () => {
                 </VStack>
               </Flex>
               <Flex w="100%" direction="column" mr="45px" mt="25px">
-                <Flex align="center" justify="space-between" mb="25px">
+                <Flex align="center" justify="space-between" mb="15px">
                   <FormLabel
                     pt="2"
                     fontSize="16px"
@@ -114,7 +116,7 @@ const ChannelForm = () => {
                     borderRadius="none"
                   />
                 </Flex>
-                <Flex align="center" justify="space-between" mb="25px">
+                <Flex align="center" justify="space-between" mb="15px">
                   <FormLabel
                     pt="2"
                     fontSize="16px"
@@ -133,7 +135,7 @@ const ChannelForm = () => {
                     borderRadius="none"
                   />
                 </Flex>
-                <Flex align="center" justify="space-between" mb="25px">
+                <Flex align="center" justify="space-between" mb="15px">
                   <FormLabel
                     pt="2"
                     fontSize="16px"
@@ -152,7 +154,7 @@ const ChannelForm = () => {
                     borderRadius="none"
                   />
                 </Flex>
-                <Flex align="center" justify="space-between" mb="25px">
+                <Flex align="center" justify="space-between" mb="15px">
                   <FormLabel
                     pt="2"
                     fontSize="16px"
@@ -175,7 +177,7 @@ const ChannelForm = () => {
             </Flex>
             {/* top-right */}
             <Flex w="100%" direction="column">
-              <Flex justify="space-between" mb="25px">
+              <Flex justify="space-between" mb="15px">
                 <FormLabel
                   fontSize="16px"
                   fontFamily="avenir"
@@ -230,7 +232,7 @@ const ChannelForm = () => {
                 borderRadius="none"
               />
               <Flex w="100%" direction="column" mt="25px">
-                <Flex align="center" justify="space-between" pb="25px">
+                <Flex align="center" justify="space-between" pb="15px">
                   <FormLabel
                     fontSize="16px"
                     fontFamily="avenir"
@@ -248,7 +250,7 @@ const ChannelForm = () => {
                     borderRadius="none"
                   />
                 </Flex>
-                <Flex align="center" justify="space-between" pb="25px">
+                <Flex align="center" justify="space-between" pb="15px">
                   <FormLabel
                     pt="2"
                     fontSize="16px"
@@ -272,7 +274,7 @@ const ChannelForm = () => {
                   fontFamily="avenir"
                   mt="10px"
                   textAlign="left"
-                  pb="25px"
+                  pb="15px"
                 >
                   AFFILIATION TO ANY BROKER ASSOCIATION*
                 </Heading>
@@ -293,8 +295,8 @@ const ChannelForm = () => {
 
           <Flex
             w="100%"
-            pb="25px"
-            mt="25px"
+            pb="15px"
+            mt="15px"
             align="flex-start"
             justify="center"
           >
@@ -321,7 +323,7 @@ const ChannelForm = () => {
                 fontSize="16px"
                 fontFamily="veralaRound"
                 pt="15px"
-                pb="25px"
+                pb="15px"
               >
                 <Icon as={BsUpload} mr="14px" />
                 Upload File
@@ -334,12 +336,12 @@ const ChannelForm = () => {
               fontSize="16px"
               fontFamily="avenir"
               lineHeight="24px"
-              pb="25px"
+              pb="15px"
             >
               AUTHORISED SIGNATORIES*
             </Heading>
             <Flex>
-              <Flex mr="50px" mb="25px" justify="space-between" align="center">
+              <Flex mr="50px" mb="15px" justify="space-between" align="center">
                 <FormLabel
                   pl="10px"
                   fontSize="16px"
@@ -358,7 +360,7 @@ const ChannelForm = () => {
                   borderRadius="none"
                 />
               </Flex>
-              <Flex mb="25px" justify="space-between" align="center">
+              <Flex mb="15px" justify="space-between" align="center">
                 <FormLabel
                   pl="10px"
                   fontSize="16px"
