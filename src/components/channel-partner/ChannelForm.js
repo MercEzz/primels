@@ -291,7 +291,13 @@ const ChannelForm = () => {
 
           {/* left-bottom */}
 
-          <HStack w="100%" pb="25px" mt="50px" align="center" justify="center">
+          <Flex
+            w="100%"
+            pb="25px"
+            mt="25px"
+            align="flex-start"
+            justify="center"
+          >
             <FormLabel
               pl="10px"
               fontSize="16px"
@@ -302,19 +308,27 @@ const ChannelForm = () => {
               IDENTITY <br />
               DOCUMENT*
             </FormLabel>
-            <Input
-              type="file"
-              w="353px"
-              h="50px"
-              p="2"
-              bgColor="#E5E5E5"
-              borderRadius="none"
-            />
-          </HStack>
-          <Text fontSize="16px" fontFamily="veralaRound" pb="25px" pl="4rem">
-            <Icon as={BsUpload} mr="14px" />
-            Upload File
-          </Text>
+            <Flex direction="column" align="flex-start">
+              <Input
+                type="file"
+                w="353px"
+                h="50px"
+                p="2"
+                bgColor="#E5E5E5"
+                borderRadius="none"
+              />
+              <Text
+                fontSize="16px"
+                fontFamily="veralaRound"
+                pt="15px"
+                pb="25px"
+              >
+                <Icon as={BsUpload} mr="14px" />
+                Upload File
+              </Text>
+            </Flex>
+          </Flex>
+
           <Flex direction="column" w="100%" align="center" px="202px">
             <Heading
               fontSize="16px"
@@ -429,23 +443,33 @@ const ChannelForm = () => {
         justify="center"
         bgColor="#B88746"
         color="white"
-        h="85px"
+        h="50px"
         fontSize="16px"
         fontFamily="avenir"
       >
-        <Flex w="100%" align="center" justify="flex-end" pr="50px">
+        <Flex
+          w="100%"
+          align="center"
+          justify="flex-end"
+          pr="50px"
+          fontFamily="avenir"
+          fontSize="16px"
+        >
           <Select
+            fontFamily="avenir"
+            fontSize="16px"
             w="300px"
             placeholder="SELECT PROJECT"
             textTransform="uppercase"
             variant="unstyled"
+            borderBottom="3px white"
           >
             <option></option>
             <option></option>
           </Select>
         </Flex>
         <Flex w="100%" align="center" justify="flex-start" pl="50px">
-          <Icon as={AiOutlineDownload} h="25px" w="25px" mr="5px" />
+          <Icon as={AiOutlineDownload} h="30px" w="30px" mr="10px" />
           DOWNLOAD CP-BROCHURE
         </Flex>
       </Flex>
