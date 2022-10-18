@@ -16,23 +16,19 @@ const ContactMain = () => {
       bgPos="bottom"
       bgRepeat="no-repeat"
       bgSize="cover"
-      align="Flex-start"
+      align="center"
       justify="center"
-      px="5rem"
       pb="150px"
+      px="100px"
     >
-      <Flex direction="column" align="center" pt="150px">
-        <Heading py="25px" fontSize="48px" fontFamily="avenir">
+      <Flex w="100%" direction="column" align="center" pt="150px">
+        <Heading py="15px" fontSize="48px" fontFamily="avenir">
           CONTACT US
         </Heading>
-        <Text
-          fontSize="20px"
-          fontFamily="veralaRound"
-          px="12rem"
-          textAlign="center"
-        >
+        <Text fontSize="18px" fontFamily="veralaRound" textAlign="center">
           We know there’s all sorts of reasons why you might want to chat to our
-          team. Use this page to find the right contact details, quickly and
+          team.
+          <br /> Use this page to find the right contact details, quickly and
           easily.
         </Text>
       </Flex>
@@ -44,17 +40,17 @@ const ContactMain = () => {
           borderColor="#DFBD69"
         />{" "}
         <Box
-          height="50px"
-          width="50px"
+          height="30px"
+          width="30px"
           backgroundColor="#DFBD69"
           border="3px solid white"
           boxShadow="0px 0px 0px 3px #B88746"
           borderRadius="50%"
           my="1"
         />
-        <Icon as={RiInstagramFill} h="50px" w="50px" mt="15px" />
-        <Icon as={RiLinkedinBoxFill} h="50px" w="50px" my="15px" />
-        <Icon as={RiFacebookCircleFill} h="50px" w="50px" mb="15px" />
+        <Icon as={RiInstagramFill} h="50px" w="50px" mt="10px" />
+        <Icon as={RiLinkedinBoxFill} h="50px" w="50px" my="10px" />
+        <Icon as={RiFacebookCircleFill} h="50px" w="50px" mb="10px" />
         <Icon as={RiYoutubeFill} h="50px" w="50px" />
       </Flex>
     </Flex>
