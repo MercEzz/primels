@@ -10,20 +10,21 @@ const MainSec = () => {
       <Image w="100%" h="100%" src="/images/channel-partner/HANDSHAKE.gif" />
       <MtnHead
         initial={{}}
-        fontSize="48px"
+        fontSize="40px"
         fontFamily="avenir"
         lineHeight="57px"
         textTransform="uppercase"
         textAlign="center"
-        mt="2rem"
-        mb="4rem"
+        mt="50px"
+        mb="25px"
       >
-        where opportunities pave the way for incredible rewards
+        where opportunities pave the way for <br />
+        incredible rewards
       </MtnHead>
       <Text
         px="100px"
         fontFamily="veralaRound"
-        fontSize="20px"
+        fontSize="16px"
         lineHeight="24px"
         mb="25px"
       >
@@ -32,7 +33,7 @@ const MainSec = () => {
         and scale to greater heights as we bring to you various reward wining
         sources from our projects. So come, to be introduced to an achiever's
         destination reserved for those who make success happen.
-        <Text pt="2rem">
+        <Text pt="15px">
           Please fill in the details below for all your marketing requirements.
         </Text>
       </Text>

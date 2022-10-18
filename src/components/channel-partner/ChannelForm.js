@@ -28,12 +28,12 @@ const ChannelForm = () => {
         px="100px"
       >
         <FormControl align="center">
-          <Flex w="100%" pb="25px">
+          <Flex w="100%">
             {/* top - left */}
             <Flex w="100%" direction="column" pr="45px">
               <Flex justify="space-between" mb="25px">
                 <FormLabel
-                  fontSize="20px"
+                  fontSize="16px"
                   fontFamily="avenir"
                   lineHeight="24px"
                   fontWeight="700"
@@ -41,6 +41,9 @@ const ChannelForm = () => {
                   COMPANY/INDIVIDUAL NAME*
                 </FormLabel>
                 <Input
+                  fontSize="16px"
+                  fontFamily="avenir"
+                  lineHeight="24px"
                   w="340px"
                   h="50px"
                   bgColor="#E5E5E5"
@@ -50,14 +53,16 @@ const ChannelForm = () => {
               <Flex justify="space-between" mb="25px">
                 <FormLabel
                   pt="2"
-                  fontSize="20px"
+                  fontSize="16px"
                   fontFamily="avenir"
-                  lineHeight="29px"
+                  lineHeight="24px"
                   fontWeight="700"
                 >
                   NAME OF OWNER*
                 </FormLabel>
                 <Input
+                  fontSize="16px"
+                  fontFamily="avenir"
                   w="340px"
                   h="50px"
                   bgColor="#E5E5E5"
@@ -66,17 +71,16 @@ const ChannelForm = () => {
               </Flex>
               {/* left-bottom */}
               <FormLabel
-                fontSize="20px"
+                fontSize="16px"
                 fontFamily="avenir"
-                lineHeight="29px"
+                lineHeight="24px"
                 fontWeight="700"
               >
                 ENTITY*
               </FormLabel>
               <Flex
-                fontSize="20px"
+                fontSize="16px"
                 fontFamily="veralaRound"
-                mt="15px"
                 justify="space-between"
               >
                 <VStack align="flex-start">
@@ -90,11 +94,11 @@ const ChannelForm = () => {
                   <Checkbox>LLP</Checkbox>
                 </VStack>
               </Flex>
-              <Flex w="100%" direction="column" bgColor="red" mr="45px">
+              <Flex w="100%" direction="column" mr="45px" mt="25px">
                 <Flex align="center" justify="space-between" mb="25px">
                   <FormLabel
                     pt="2"
-                    fontSize="20px"
+                    fontSize="16px"
                     fontFamily="avenir"
                     lineHeight="24px"
                     fontWeight="700"
@@ -102,6 +106,8 @@ const ChannelForm = () => {
                     OFFICE ADDRESS*
                   </FormLabel>
                   <Input
+                    fontSize="16px"
+                    fontFamily="avenir"
                     w="340px"
                     h="50px"
                     bgColor="#E5E5E5"
@@ -111,7 +117,7 @@ const ChannelForm = () => {
                 <Flex align="center" justify="space-between" mb="25px">
                   <FormLabel
                     pt="2"
-                    fontSize="20px"
+                    fontSize="16px"
                     fontFamily="avenir"
                     lineHeight="24px"
                     fontWeight="700"
@@ -119,6 +125,8 @@ const ChannelForm = () => {
                     MOBILE NO.*
                   </FormLabel>
                   <Input
+                    fontSize="16px"
+                    fontFamily="avenir"
                     w="340px"
                     h="50px"
                     bgColor="#E5E5E5"
@@ -128,7 +136,7 @@ const ChannelForm = () => {
                 <Flex align="center" justify="space-between" mb="25px">
                   <FormLabel
                     pt="2"
-                    fontSize="20px"
+                    fontSize="16px"
                     fontFamily="avenir"
                     lineHeight="24px"
                     fontWeight="700"
@@ -136,6 +144,8 @@ const ChannelForm = () => {
                     WEBSITE*
                   </FormLabel>
                   <Input
+                    fontSize="16px"
+                    fontFamily="avenir"
                     w="340px"
                     h="50px"
                     bgColor="#E5E5E5"
@@ -145,7 +155,7 @@ const ChannelForm = () => {
                 <Flex align="center" justify="space-between" mb="25px">
                   <FormLabel
                     pt="2"
-                    fontSize="20px"
+                    fontSize="16px"
                     fontFamily="avenir"
                     lineHeight="24px"
                     fontWeight="700"
@@ -153,6 +163,8 @@ const ChannelForm = () => {
                     EMAIL*
                   </FormLabel>
                   <Input
+                    fontSize="16px"
+                    fontFamily="avenir"
                     w="340px"
                     h="50px"
                     bgColor="#E5E5E5"
@@ -163,17 +175,19 @@ const ChannelForm = () => {
             </Flex>
             {/* top-right */}
             <Flex w="100%" direction="column">
-              <Flex align="center" justify="space-between" mb="25px">
+              <Flex justify="space-between" mb="25px">
                 <FormLabel
-                  mr="16"
-                  fontSize="20px"
+                  fontSize="16px"
                   fontFamily="avenir"
-                  lineHeight="29px"
+                  lineHeight="24px"
                   fontWeight="700"
                 >
-                  YOUR FOCUS LOCATION/ AREA*
+                  YOUR FOCUS <br />
+                  LOCATION/ AREA*
                 </FormLabel>
                 <Input
+                  fontSize="16px"
+                  fontFamily="avenir"
                   w="340px"
                   h="50px"
                   bgColor="#E5E5E5"
@@ -181,7 +195,7 @@ const ChannelForm = () => {
                 />
               </Flex>
               <Heading
-                fontSize="20px"
+                fontSize="16px"
                 fontFamily="avenir"
                 lineHeight="24px"
                 textAlign="left"
@@ -190,7 +204,7 @@ const ChannelForm = () => {
               </Heading>
               <Flex
                 w="100%"
-                fontSize="20px"
+                fontSize="16px"
                 fontFamily="veralaRound"
                 align="center"
                 justify="space-between"
@@ -207,11 +221,18 @@ const ChannelForm = () => {
                   <Checkbox>Industrial Land</Checkbox>
                 </VStack>
               </Flex>
-              <Input w="580px" h="50px" bgColor="#E5E5E5" borderRadius="none" />
-              <Flex w="100%" direction="column">
+              <Input
+                fontSize="16px"
+                fontFamily="avenir"
+                w="100%"
+                h="50px"
+                bgColor="#E5E5E5"
+                borderRadius="none"
+              />
+              <Flex w="100%" direction="column" mt="25px">
                 <Flex align="center" justify="space-between" pb="25px">
                   <FormLabel
-                    fontSize="20px"
+                    fontSize="16px"
                     fontFamily="avenir"
                     lineHeight="24px"
                     fontWeight="700"
@@ -219,6 +240,8 @@ const ChannelForm = () => {
                     GST No.*
                   </FormLabel>
                   <Input
+                    fontSize="16px"
+                    fontFamily="avenir"
                     w="340px"
                     h="50px"
                     bgColor="#E5E5E5"
@@ -228,14 +251,16 @@ const ChannelForm = () => {
                 <Flex align="center" justify="space-between" pb="25px">
                   <FormLabel
                     pt="2"
-                    fontSize="20px"
+                    fontSize="16px"
                     fontFamily="avenir"
-                    lineHeight="29px"
+                    lineHeight="24px"
                     fontWeight="700"
                   >
                     RERA No.*
                   </FormLabel>
                   <Input
+                    fontSize="16px"
+                    fontFamily="avenir"
                     w="340px"
                     h="50px"
                     bgColor="#E5E5E5"
@@ -243,9 +268,9 @@ const ChannelForm = () => {
                   />
                 </Flex>
                 <Heading
-                  fontSize="20px"
-                  mt="10px"
+                  fontSize="16px"
                   fontFamily="avenir"
+                  mt="10px"
                   textAlign="left"
                   pb="25px"
                 >
@@ -266,15 +291,16 @@ const ChannelForm = () => {
 
           {/* left-bottom */}
 
-          <HStack w="100%" pb="25px" mt="50px" px="349px" justify="center">
+          <HStack w="100%" pb="25px" mt="50px" align="center" justify="center">
             <FormLabel
               pl="10px"
-              fontSize="20px"
+              fontSize="16px"
               fontFamily="avenir"
-              lineHeight="29px"
+              lineHeight="24px"
               fontWeight="700"
             >
-              IDENTITY DOCUMENT*
+              IDENTITY <br />
+              DOCUMENT*
             </FormLabel>
             <Input
               type="file"
@@ -285,90 +311,98 @@ const ChannelForm = () => {
               borderRadius="none"
             />
           </HStack>
-          <Text fontSize="20px" fontFamily="veralaRound" pb="25px" pl="4rem">
+          <Text fontSize="16px" fontFamily="veralaRound" pb="25px" pl="4rem">
             <Icon as={BsUpload} mr="14px" />
             Upload File
           </Text>
           <Flex direction="column" w="100%" align="center" px="202px">
             <Heading
-              fontSize="20px"
+              fontSize="16px"
               fontFamily="avenir"
-              lineHeight="29px"
+              lineHeight="24px"
               pb="25px"
             >
               AUTHORISED SIGNATORIES*
             </Heading>
             <Flex>
-              <HStack mr="50px" mb="25px">
+              <Flex mr="50px" mb="25px" justify="space-between" align="center">
                 <FormLabel
                   pl="10px"
-                  fontSize="20px"
+                  fontSize="16px"
                   fontFamily="avenir"
-                  lineHeight="29px"
+                  lineHeight="24px"
                   fontWeight="700"
                 >
                   NAME*
                 </FormLabel>
                 <Input
+                  fontSize="16px"
+                  fontFamily="avenir"
                   w="240px"
                   h="50px"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
-              </HStack>
-              <HStack mb="25px">
+              </Flex>
+              <Flex mb="25px" justify="space-between" align="center">
                 <FormLabel
                   pl="10px"
-                  fontSize="20px"
+                  fontSize="16px"
                   fontFamily="avenir"
-                  lineHeight="29px"
+                  lineHeight="24px"
                   fontWeight="700"
                 >
                   DESIGNATION*
                 </FormLabel>
                 <Input
+                  fontSize="16px"
+                  fontFamily="avenir"
                   w="240px"
                   h="50px"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
-              </HStack>
+              </Flex>
             </Flex>
             <Flex>
-              <HStack mr="50px">
+              <Flex mr="50px" justify="space-between" align="center">
                 <FormLabel
                   pl="10px"
-                  fontSize="20px"
+                  fontSize="16px"
                   fontFamily="avenir"
-                  lineHeight="29px"
+                  lineHeight="24px"
                   fontWeight="700"
                 >
                   NAME*
                 </FormLabel>
                 <Input
+                  fontSize="16px"
+                  fontFamily="avenir"
                   w="240px"
                   h="50px"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
-              </HStack>
-              <HStack>
+              </Flex>
+              <Flex justify="space-between" align="center">
                 <FormLabel
                   pl="10px"
-                  fontSize="20px"
+                  fontSize="16px"
                   fontFamily="avenir"
-                  lineHeight="29px"
+                  lineHeight="24px"
                   fontWeight="700"
                 >
                   DESIGNATION*
                 </FormLabel>
                 <Input
+                  fontSize="16px"
+                  fontFamily="avenir"
                   w="240px"
                   h="50px"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
-              </HStack>
+              </Flex>
             </Flex>
           </Flex>
           <Button
@@ -390,28 +424,30 @@ const ChannelForm = () => {
         </FormControl>
       </Flex>
       <Flex
+        w="100%"
         align="center"
-        px="350px"
+        justify="center"
         bgColor="#B88746"
         color="white"
         h="85px"
-        fontSize="20px"
+        fontSize="16px"
         fontFamily="avenir"
       >
-        <Select
-          w="300px"
-          placeholder="SELECT PROJECT"
-          textTransform="uppercase"
-          variant="unstyled"
-          mr="100px"
-        >
-          <option></option>
-          <option></option>
-        </Select>
-        <Text w="100%" align="center" justify="center">
-          <Icon as={AiOutlineDownload} h="25px" w="25px" mr="10px" />
+        <Flex w="100%" align="center" justify="flex-end" pr="50px">
+          <Select
+            w="300px"
+            placeholder="SELECT PROJECT"
+            textTransform="uppercase"
+            variant="unstyled"
+          >
+            <option></option>
+            <option></option>
+          </Select>
+        </Flex>
+        <Flex w="100%" align="center" justify="flex-start" pl="50px">
+          <Icon as={AiOutlineDownload} h="25px" w="25px" mr="5px" />
           DOWNLOAD CP-BROCHURE
-        </Text>
+        </Flex>
       </Flex>
     </>
   );
