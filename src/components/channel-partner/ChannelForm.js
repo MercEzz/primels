@@ -31,7 +31,7 @@ const ChannelForm = () => {
           <Flex w="100%">
             {/* top - left */}
             <Flex w="100%" direction="column" pr="45px">
-              <Flex justify="space-between" mb="25px">
+              <Flex justify="space-between" mb="15px">
                 <FormLabel
                   fontSize="16px"
                   fontFamily="avenir"
