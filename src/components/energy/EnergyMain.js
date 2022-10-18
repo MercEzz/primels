@@ -20,11 +20,10 @@ const EnergyMain = () => {
           fontFamily="avenir"
           fontSize="48px"
           lineHeight="58px"
-          px="200px"
           color="white"
           textAlign="center"
         >
-          SUSTAINABILITY IS VALUABLE!
+          SUSTAINABILITY IS <br /> VALUABLE!
         </Heading>
       </Flex>
       <Flex w="100%" h="100%" direction="column" px="100px" my="100px">
@@ -32,16 +31,16 @@ const EnergyMain = () => {
           pb="25px"
           fontFamily="goudy"
           fontWeight="400"
-          fontSize="48px"
+          fontSize="40px"
           lineHeight="58px"
           textAlign="center"
         >
           PLS GREEN POWER PVT LTD
         </Heading>
         <Text
-          pb="25px"
+          pb="15px"
           fontFamily="veralaRound"
-          fontSize="20px"
+          fontSize="16px"
           lineHeight="24px"
         >
           We provide solutions in the power sector including conventional and
@@ -50,7 +49,7 @@ const EnergyMain = () => {
           our esteemed customers. We are enriched with the experience of
           configuring and devising plant preventive maintenance.
         </Text>
-        <Text fontFamily="veralaRound" fontSize="20px" lineHeight="24px">
+        <Text fontFamily="veralaRound" fontSize="16px" lineHeight="24px">
           Establishing IMS System for major power sector including ISO 9001,
           14001, 18001, ISO 17025 for laboratory Accreditation & safety norms.
           We also have our expertise in customization & development of ABT

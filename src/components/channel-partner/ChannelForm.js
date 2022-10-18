@@ -15,6 +15,7 @@ import {
 import React from "react";
 import { BsUpload } from "react-icons/bs";
 import { AiOutlineDownload } from "react-icons/ai";
+import { MdArrowDropDown } from "react-icons/md";
 
 const ChannelForm = () => {
   return (
@@ -463,8 +464,9 @@ const ChannelForm = () => {
             w="300px"
             placeholder="SELECT PROJECT"
             textTransform="uppercase"
-            variant="unstyled"
-            borderBottom="3px white"
+            variant="flushed"
+            borderBottom="2px solid white"
+            icon={<MdArrowDropDown />}
           >
             <option></option>
             <option></option>

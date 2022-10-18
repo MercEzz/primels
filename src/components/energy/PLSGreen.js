@@ -23,33 +23,38 @@ const PLSGreen = () => {
       <Flex direction="column" align="center" px="42px">
         <Divider
           orientation="vertical"
-          h="109px"
+          h="92px"
           border="3px solid"
           borderColor="#DFBD69"
         />
         <Box
-          height="50px"
-          width="50px"
+          height="30px"
+          width="30px"
           backgroundColor="#DFBD69"
           border="5px solid white"
           boxShadow="0px 0px 0px 3px #B88746"
           borderRadius="50%"
           my="1"
+          // _hover={{
+          //   width: "25px",
+          //   height: "25px",
+          // }}
+          // transition="all .5s"
         />
       </Flex>
       <Flex direction="column" mt="100px">
         <Heading
           fontFamily="goudy"
-          fontSize="48px"
+          fontSize="40px"
           lineHeight="58px"
           fontWeight="400"
-          pb="25px"
+          pb="15px"
         >
           OUR PROJECT
         </Heading>
         <Text
           fontFamily="veralaRound"
-          fontSize="20px"
+          fontSize="16px"
           lineHeight="24px"
           mr="100px"
         >
