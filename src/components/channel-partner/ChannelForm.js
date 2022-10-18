@@ -29,132 +29,247 @@ const ChannelForm = () => {
       >
         <FormControl align="center">
           <Flex w="100%" pb="25px">
+            {/* top - left */}
             <Flex w="100%" direction="column" pr="45px">
-              <HStack justify="space-between">
+              <Flex justify="space-between" mb="25px">
                 <FormLabel
-                  pl="10px"
-                  fontSize="24px"
+                  fontSize="20px"
                   fontFamily="avenir"
-                  lineHeight="29px"
+                  lineHeight="24px"
                   fontWeight="700"
                 >
                   COMPANY/INDIVIDUAL NAME*
                 </FormLabel>
-                <Input />
-              </HStack>
-              <HStack>
+                <Input
+                  w="340px"
+                  h="50px"
+                  bgColor="#E5E5E5"
+                  borderRadius="none"
+                />
+              </Flex>
+              <Flex justify="space-between" mb="25px">
                 <FormLabel
-                  pl="10px"
-                  fontSize="24px"
+                  pt="2"
+                  fontSize="20px"
                   fontFamily="avenir"
                   lineHeight="29px"
                   fontWeight="700"
                 >
                   NAME OF OWNER*
                 </FormLabel>
-                <Input />
-              </HStack>
+                <Input
+                  w="340px"
+                  h="50px"
+                  bgColor="#E5E5E5"
+                  borderRadius="none"
+                />
+              </Flex>
+              {/* left-bottom */}
               <FormLabel
-                pl="10px"
-                fontSize="24px"
+                fontSize="20px"
                 fontFamily="avenir"
                 lineHeight="29px"
                 fontWeight="700"
               >
                 ENTITY*
               </FormLabel>
-              <Flex>
+              <Flex
+                fontSize="20px"
+                fontFamily="veralaRound"
+                mt="15px"
+                justify="space-between"
+              >
                 <VStack align="flex-start">
                   <Checkbox>Individual</Checkbox>
                   <Checkbox>Proprietorship</Checkbox>
                   <Checkbox>Partnership</Checkbox>
                 </VStack>
-                <VStack align="flex-start">
+                <VStack align="flex-start" pr="10">
                   <Checkbox>Private Ltd. Co.</Checkbox>
                   <Checkbox>Public Ltd. Co.</Checkbox>
                   <Checkbox>LLP</Checkbox>
                 </VStack>
               </Flex>
+              <Flex w="100%" direction="column" bgColor="red" mr="45px">
+                <Flex align="center" justify="space-between" mb="25px">
+                  <FormLabel
+                    pt="2"
+                    fontSize="20px"
+                    fontFamily="avenir"
+                    lineHeight="24px"
+                    fontWeight="700"
+                  >
+                    OFFICE ADDRESS*
+                  </FormLabel>
+                  <Input
+                    w="340px"
+                    h="50px"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </Flex>
+                <Flex align="center" justify="space-between" mb="25px">
+                  <FormLabel
+                    pt="2"
+                    fontSize="20px"
+                    fontFamily="avenir"
+                    lineHeight="24px"
+                    fontWeight="700"
+                  >
+                    MOBILE NO.*
+                  </FormLabel>
+                  <Input
+                    w="340px"
+                    h="50px"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </Flex>
+                <Flex align="center" justify="space-between" mb="25px">
+                  <FormLabel
+                    pt="2"
+                    fontSize="20px"
+                    fontFamily="avenir"
+                    lineHeight="24px"
+                    fontWeight="700"
+                  >
+                    WEBSITE*
+                  </FormLabel>
+                  <Input
+                    w="340px"
+                    h="50px"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </Flex>
+                <Flex align="center" justify="space-between" mb="25px">
+                  <FormLabel
+                    pt="2"
+                    fontSize="20px"
+                    fontFamily="avenir"
+                    lineHeight="24px"
+                    fontWeight="700"
+                  >
+                    EMAIL*
+                  </FormLabel>
+                  <Input
+                    w="340px"
+                    h="50px"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </Flex>
+              </Flex>
             </Flex>
+            {/* top-right */}
             <Flex w="100%" direction="column">
-              <HStack>
+              <Flex align="center" justify="space-between" mb="25px">
                 <FormLabel
-                  pl="10px"
-                  fontSize="24px"
+                  mr="16"
+                  fontSize="20px"
                   fontFamily="avenir"
                   lineHeight="29px"
                   fontWeight="700"
                 >
                   YOUR FOCUS LOCATION/ AREA*
                 </FormLabel>
-                <Input />
-              </HStack>
-              <Heading>EXPERTISE*</Heading>
-              <Flex w="100%">
+                <Input
+                  w="340px"
+                  h="50px"
+                  bgColor="#E5E5E5"
+                  borderRadius="none"
+                />
+              </Flex>
+              <Heading
+                fontSize="20px"
+                fontFamily="avenir"
+                lineHeight="24px"
+                textAlign="left"
+              >
+                EXPERTISE*
+              </Heading>
+              <Flex
+                w="100%"
+                fontSize="20px"
+                fontFamily="veralaRound"
+                align="center"
+                justify="space-between"
+                mt="15px"
+                mb="15px"
+              >
                 <VStack align="flex-start">
                   <Checkbox>Residential</Checkbox>
                   <Checkbox>Retail</Checkbox>
                   <Checkbox>Others</Checkbox>
                 </VStack>
-                <VStack align="flex-start">
+                <VStack align="flex-start" pr="10">
                   <Checkbox>Commercial</Checkbox>
                   <Checkbox>Industrial Land</Checkbox>
                 </VStack>
               </Flex>
-              <Input />
-            </Flex>
-          </Flex>
-          <Flex w="100%">
-            <Flex w="100%" direction="column">
-              <HStack align="flex-start">
-                <FormLabel
-                  pl="10px"
-                  fontSize="24px"
+              <Input w="580px" h="50px" bgColor="#E5E5E5" borderRadius="none" />
+              <Flex w="100%" direction="column">
+                <Flex align="center" justify="space-between" pb="25px">
+                  <FormLabel
+                    fontSize="20px"
+                    fontFamily="avenir"
+                    lineHeight="24px"
+                    fontWeight="700"
+                  >
+                    GST No.*
+                  </FormLabel>
+                  <Input
+                    w="340px"
+                    h="50px"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </Flex>
+                <Flex align="center" justify="space-between" pb="25px">
+                  <FormLabel
+                    pt="2"
+                    fontSize="20px"
+                    fontFamily="avenir"
+                    lineHeight="29px"
+                    fontWeight="700"
+                  >
+                    RERA No.*
+                  </FormLabel>
+                  <Input
+                    w="340px"
+                    h="50px"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </Flex>
+                <Heading
+                  fontSize="20px"
+                  mt="10px"
                   fontFamily="avenir"
-                  lineHeight="29px"
-                  fontWeight="700"
+                  textAlign="left"
+                  pb="25px"
                 >
-                  OFFICE ADDRESS*
-                </FormLabel>
-                <Input />
-              </HStack>
-              <HStack align="flex-start">
-                <FormLabel>MOBILE NO.*</FormLabel>
-                <Input />
-              </HStack>
-              <HStack align="flex-start">
-                <FormLabel>WEBSITE*</FormLabel>
-                <Input />
-              </HStack>
-              <HStack align="flex-start">
-                <FormLabel>EMAIL*</FormLabel>
-                <Input />
-              </HStack>
-            </Flex>
-            <Flex w="100%" direction="column">
-              <HStack align="flex-start">
-                <FormLabel>GST No.*</FormLabel>
-                <Input />
-              </HStack>
-              <HStack align="flex-start">
-                <FormLabel>RERA No.*</FormLabel>
-                <Input />
-              </HStack>
-              <Heading fontSize="24px" fontFamily="avenir">
-                AFFILIATION TO ANY BROKER ASSOCIATION*
-              </Heading>
-              <HStack fontFamily="veralaRound" fontSize="24px">
-                <Checkbox h="40px" w="40px">
-                  Yes
-                </Checkbox>
-                <Checkbox>No</Checkbox>
-              </HStack>
+                  AFFILIATION TO ANY BROKER ASSOCIATION*
+                </Heading>
+                <Flex
+                  justify="space-between"
+                  fontFamily="veralaRound"
+                  fontSize="20px"
+                  pr="8rem"
+                >
+                  <Checkbox>Yes</Checkbox>
+                  <Checkbox>No</Checkbox>
+                </Flex>
+              </Flex>
             </Flex>
           </Flex>
+
+          {/* left-bottom */}
+
           <HStack w="100%" pb="25px" mt="50px" px="349px" justify="center">
             <FormLabel
               pl="10px"
-              fontSize="24px"
+              fontSize="20px"
               fontFamily="avenir"
               lineHeight="29px"
               fontWeight="700"
@@ -163,7 +278,6 @@ const ChannelForm = () => {
             </FormLabel>
             <Input
               type="file"
-              pb="25px"
               w="353px"
               h="50px"
               p="2"
@@ -171,13 +285,13 @@ const ChannelForm = () => {
               borderRadius="none"
             />
           </HStack>
-          <Text fontSize="20px" fontFamily="veralaRound" pb="50px">
+          <Text fontSize="20px" fontFamily="veralaRound" pb="25px" pl="4rem">
             <Icon as={BsUpload} mr="14px" />
             Upload File
           </Text>
           <Flex direction="column" w="100%" align="center" px="202px">
             <Heading
-              fontSize="24px"
+              fontSize="20px"
               fontFamily="avenir"
               lineHeight="29px"
               pb="25px"
@@ -188,7 +302,7 @@ const ChannelForm = () => {
               <HStack mr="50px" mb="25px">
                 <FormLabel
                   pl="10px"
-                  fontSize="24px"
+                  fontSize="20px"
                   fontFamily="avenir"
                   lineHeight="29px"
                   fontWeight="700"
@@ -197,7 +311,7 @@ const ChannelForm = () => {
                 </FormLabel>
                 <Input
                   w="240px"
-                  h="70px"
+                  h="50px"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
@@ -205,7 +319,7 @@ const ChannelForm = () => {
               <HStack mb="25px">
                 <FormLabel
                   pl="10px"
-                  fontSize="24px"
+                  fontSize="20px"
                   fontFamily="avenir"
                   lineHeight="29px"
                   fontWeight="700"
@@ -214,7 +328,7 @@ const ChannelForm = () => {
                 </FormLabel>
                 <Input
                   w="240px"
-                  h="70px"
+                  h="50px"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
@@ -224,7 +338,7 @@ const ChannelForm = () => {
               <HStack mr="50px">
                 <FormLabel
                   pl="10px"
-                  fontSize="24px"
+                  fontSize="20px"
                   fontFamily="avenir"
                   lineHeight="29px"
                   fontWeight="700"
@@ -233,7 +347,7 @@ const ChannelForm = () => {
                 </FormLabel>
                 <Input
                   w="240px"
-                  h="70px"
+                  h="50px"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
@@ -241,7 +355,7 @@ const ChannelForm = () => {
               <HStack>
                 <FormLabel
                   pl="10px"
-                  fontSize="24px"
+                  fontSize="20px"
                   fontFamily="avenir"
                   lineHeight="29px"
                   fontWeight="700"
@@ -250,7 +364,7 @@ const ChannelForm = () => {
                 </FormLabel>
                 <Input
                   w="240px"
-                  h="70px"
+                  h="50px"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
@@ -259,42 +373,43 @@ const ChannelForm = () => {
           </Flex>
           <Button
             my="50px"
-            h="65px"
-            w="245px"
+            h="51px"
+            w="168px"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             color="white"
-            fontSize="24px"
+            fontSize="16px"
             fontFamily="avenir"
-            px="36px"
-            py="18px"
+            px="16px"
+            py="15px"
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
             }}
           >
-            SUBMIT NOW
+            SEND MESSAGE
           </Button>
         </FormControl>
       </Flex>
       <Flex
         align="center"
-        px="316px"
+        px="350px"
         bgColor="#B88746"
         color="white"
-        py="25px"
-        fontSize="24px"
+        h="85px"
+        fontSize="20px"
         fontFamily="avenir"
       >
         <Select
-          w="100%"
+          w="300px"
           placeholder="SELECT PROJECT"
           textTransform="uppercase"
           variant="unstyled"
+          mr="100px"
         >
           <option></option>
           <option></option>
         </Select>
         <Text w="100%" align="center" justify="center">
-          <Icon as={AiOutlineDownload} />
+          <Icon as={AiOutlineDownload} h="25px" w="25px" mr="10px" />
           DOWNLOAD CP-BROCHURE
         </Text>
       </Flex>

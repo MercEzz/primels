@@ -6,19 +6,13 @@ const MtnHead = motion(Heading);
 
 const MainSec = () => {
   return (
-    <Flex
-      w="100%"
-      h="100%"
-      direction="column"
-      overflowY="hidden"
-      align="center"
-    >
-      <Image w="100%" h="100%" src="/images/channel-partner/main-sec.png" />
+    <Flex w="100%" h="100%" direction="column" align="center">
+      <Image w="100%" h="100%" src="/images/channel-partner/HANDSHAKE.gif" />
       <MtnHead
         initial={{}}
-        fontSize="50px"
+        fontSize="48px"
         fontFamily="avenir"
-        lineHeight="60px"
+        lineHeight="57px"
         textTransform="uppercase"
         textAlign="center"
         mt="2rem"
@@ -29,9 +23,9 @@ const MainSec = () => {
       <Text
         px="100px"
         fontFamily="veralaRound"
-        fontSize="24px"
-        lineHeight="29px"
-        mb="50px"
+        fontSize="20px"
+        lineHeight="24px"
+        mb="25px"
       >
         Your association with us is extremely valuable to us. We support our
         Channel Partners to catalyst their growth with ours. Join our network
