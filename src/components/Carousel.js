@@ -13,7 +13,7 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -49,7 +49,7 @@ const Carousel = () => {
     <Box
       position={"relative"}
       height={"568px"}
-      width={"1024px"}
+      width={"948px"}
       overflow={"hidden"}
     >
       {/* CSS files for react-slick */}
@@ -65,7 +65,7 @@ const Carousel = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       />
       {/* Left Icon */}
-      <IconButton
+      {/* <IconButton
         aria-label="left-arrow"
         variant="ghost"
         position="absolute"
@@ -76,9 +76,9 @@ const Carousel = () => {
         onClick={() => slider?.slickPrev()}
       >
         <BiLeftArrowAlt size="40px" />
-      </IconButton>
+      </IconButton> */}
       {/* Right Icon */}
-      <IconButton
+      {/* <IconButton
         aria-label="right-arrow"
         variant="ghost"
         position="absolute"
@@ -89,7 +89,7 @@ const Carousel = () => {
         onClick={() => slider?.slickNext()}
       >
         <BiRightArrowAlt size="40px" />
-      </IconButton>
+      </IconButton> */}
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((card, index) => (

@@ -6,7 +6,7 @@ const Header = () => {
   const [navbar, setNavbar] = useState(false);
 
   const changeBg = () => {
-    if (window.scrollY >= 120) {
+    if (window.scrollY >= 1) {
       setNavbar(true);
     } else {
       setNavbar(false);

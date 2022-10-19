@@ -20,8 +20,9 @@ const MainSec = () => {
       bgSize="cover"
       align="center"
       justify="center"
+      pos="relative"
     >
-      <Flex w="80%" h="100%" align="center" pos="relative">
+      <Flex w="80%" h="100%" align="center">
         <Flex direction="column" w="100%" pl="100px" pos="absolute">
           <MotnHead
             pt="15px"
@@ -64,8 +65,7 @@ const MainSec = () => {
             lineHeight="36px"
             fontSize="18px"
           >
-            Arete Homes your wish for a smart living, <br />
-            NOW GRANTED
+            Arete Homes your wish for a <br /> smart living, NOW GRANTED
           </Text>
           <Button
             my="2"

@@ -3,11 +3,11 @@ import React from "react";
 
 const Allia = () => {
   return (
-    <Flex direction="column" align="center" py="10">
-      <Flex w="100%" py="6" px="6">
+    <Flex direction="column" align="center" pt="100px">
+      <Flex w="100%" pl="100px">
         <Flex w="30%" direction="column">
-          <Heading fontSize="50px" fontFamily="goudy" fontWeight="400">
-            India’s Best Realty Brand
+          <Heading fontSize="40px" fontFamily="goudy" fontWeight="400">
+            India’s Best <br /> Realty Brand
           </Heading>
           <Flex justify="center" align="center">
             <Divider
@@ -18,7 +18,7 @@ const Allia = () => {
             />
             <Box
               height="30px"
-              width="30px"
+              width="35px"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -27,13 +27,17 @@ const Allia = () => {
             />
           </Flex>
         </Flex>
-        <Flex w="100%">img</Flex>
+        <Flex w="100%">
+          <Image w="" h="" src="/images/pngegg.png" />
+          <Image w="" h="" src="" />
+          <Image w="" h="" src="" />
+        </Flex>
       </Flex>
-      <Flex direction="column" align="center" justify="center" py="10">
-        <Heading fontSize="50px" fontFamily="goudy" fontWeight="400" py="6">
+      <Flex direction="column" align="center" justify="center">
+        <Heading fontSize="40px" fontFamily="goudy" fontWeight="400">
           OUR ALLIANCES
         </Heading>
-        <Flex w="100%" py="10">
+        <Flex w="100%" pt="75px" px="100px">
           <Flex>
             <Image src="/images/alliances.png" />
           </Flex>
