@@ -1,4 +1,4 @@
-import { Text, Flex, Heading } from "@chakra-ui/react";
+import { Text, Flex, Heading, Box } from "@chakra-ui/react";
 import React from "react";
 import PLSGreen from "./PLSGreen";
 
@@ -8,15 +8,28 @@ const EnergyMain = () => {
       <Flex
         w="100%"
         h="568px"
-        bgImage="/images/energy/SOLAR-PANNEL.gif"
-        bgPos="center"
-        bgRepeat="no-repeat"
-        bgSize="cover"
         alignItems="center"
         justifyContent="center"
-        p="15rem"
+        pos="relative"
+        overflow="hidden"
       >
+        <video
+          autoPlay
+          muted
+          loop
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            minHeight: "100%",
+            minWidth: "100%",
+            // zIndex: -1,
+          }}
+        >
+          <source src="/images/energy-page/SOLAR.mp4" type="video/mp4" />
+        </video>
         <Heading
+          pos="absolute"
           fontFamily="avenir"
           fontSize="40px"
           lineHeight="58px"

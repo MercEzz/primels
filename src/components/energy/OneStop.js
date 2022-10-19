@@ -1,7 +1,7 @@
 import {
   Flex,
   Heading,
-  Icon,
+  Image,
   ListItem,
   UnorderedList,
   Text,
@@ -10,13 +10,6 @@ import {
   Box,
 } from "@chakra-ui/react";
 import React from "react";
-
-import FinPPA from "../../icons/Group-149.svg";
-import EngDes from "../../icons/Group-153.svg";
-import OM from "../../icons/Group-150.svg";
-import LiaApp from "../../icons/Group-148.svg";
-import FeaStu from "../../icons/Group-151.svg";
-import ProCon from "../../icons/Group-152.svg";
 
 const OneStop = () => {
   return (
@@ -50,8 +43,10 @@ const OneStop = () => {
           align="flex-start"
         >
           {leftSec.map((item) => (
-            <VStack align="flex-start" pb="50px">
-              {/* <Icon as={item.icon} /> */}
+            <VStack w="100%" align="flex-start" pb="50px">
+              <Flex w="100%" align="center" justify="center">
+                <Image w="80px" h="80px" src={item.icon} />
+              </Flex>
               <Heading
                 fontFamily="avenir"
                 fontSize="24px"
@@ -141,8 +136,10 @@ const OneStop = () => {
           align="flex-start"
         >
           {rightSec.map((item) => (
-            <VStack align="flex-start" pb="50px">
-              {/* <Icon as={item.icon} /> */}
+            <VStack w="100%" align="flex-start" pb="50px">
+              <Flex w="100%" align="center" justify="center">
+                <Image w="80px" h="80px" src={item.icon} />
+              </Flex>
               <Heading
                 fontFamily="avenir"
                 fontSize="24px"
@@ -177,12 +174,12 @@ export default OneStop;
 
 const leftSec = [
   {
-    icon: { FinPPA },
+    icon: "/images/energy-page/financial-and-ppa.svg",
     title: "FINANCIAL & PPA SUPPORT",
     list: ["Project Financing", "Power Purchase Agreements"],
   },
   {
-    icon: { EngDes },
+    icon: "/images/energy-page/engineering-design.svg",
     title: "Engineering, Design & due diligence",
     list: [
       "Material Procurement and Negotiation on behalf of client",
@@ -194,7 +191,7 @@ const leftSec = [
     ],
   },
   {
-    icon: { OM },
+    icon: "/images/energy-page/o-m-consultancy.svg",
     title: "O & M+ CONSULTANCY",
     list: [
       "Plant AMC for Operation & Maintenance",
@@ -205,12 +202,12 @@ const leftSec = [
 
 const rightSec = [
   {
-    icon: { LiaApp },
+    icon: "/images/energy-page/liaisoning.svg",
     title: "LIAISONING & APPROVALS",
     list: ["Liaisoning for all Govt. Approvals for Project Sanctions"],
   },
   {
-    icon: { FeaStu },
+    icon: "/images/energy-page/feasibility.svg",
     title: "FEASIBILITY STUDY",
     list: [
       " Site Selection",
@@ -223,7 +220,7 @@ const rightSec = [
     ],
   },
   {
-    icon: { ProCon },
+    icon: "/images/energy-page/procurement.svg",
     title: "PROCUREMENT & CONSTRUCTION",
     list: [
       " Project Design and Optimization",
