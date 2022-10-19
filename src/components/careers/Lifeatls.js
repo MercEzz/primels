@@ -66,7 +66,7 @@ const Lifeatls = () => {
       minh="100%"
       direction="column"
       textAlign="center"
-      px="5rem"
+      px="100px"
       py="50px"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
@@ -132,11 +132,11 @@ const Lifeatls = () => {
           align="space-between"
           justify="center"
         >
-          <Flex w="100%" align="center" justify="center">
+          <Flex w="100%" align="flex-end" justify="center">
             <Box
               position={"relative"}
               height={"300px"}
-              width={"400px"}
+              width={"425px"}
               overflow={"hidden"}
               align="center"
             >
@@ -155,7 +155,7 @@ const Lifeatls = () => {
 
               <Slider {...settings} ref={(slider) => setSlider(slider)}>
                 {images.map((card, index) => (
-                  <Image height={"300px"} width={"400px"} src={card} />
+                  <Image height={"300px"} width={"425px"} src={card} />
                 ))}
               </Slider>
             </Box>

@@ -76,6 +76,7 @@ const OneStop = () => {
         {/* center */}
         <Flex
           w="10%"
+          pt="25px"
           px="100px"
           h="100%"
           align="center"
@@ -84,7 +85,7 @@ const OneStop = () => {
         >
           <Divider
             orientation="vertical"
-            h="60px"
+            h="40px"
             border="3px solid"
             borderColor="#DFBD69"
           />
@@ -99,7 +100,7 @@ const OneStop = () => {
           />
           <Divider
             orientation="vertical"
-            h="190px"
+            h="180px"
             border="3px solid"
             borderColor="#DFBD69"
           />
@@ -114,7 +115,7 @@ const OneStop = () => {
           />{" "}
           <Divider
             orientation="vertical"
-            h="355px"
+            h="360px"
             border="3px solid"
             borderColor="#DFBD69"
           />

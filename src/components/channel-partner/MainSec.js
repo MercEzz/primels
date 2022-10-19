@@ -2,8 +2,6 @@ import { Image, Flex, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 
-const MtnHead = motion(Heading);
-
 const MainSec = () => {
   return (
     <Flex
@@ -17,7 +15,7 @@ const MainSec = () => {
       <video
         autoPlay
         muted
-        loop
+        // loop
         style={{
           position: "absolute",
           top: 0,
@@ -27,7 +25,10 @@ const MainSec = () => {
           // zIndex: -1,
         }}
       >
-        <source src="/images/channel-partner/HANDSHAKE2.mp4" type="video/mp4" />
+        <source
+          src="/images/channel-partner/handshake-done.mp4"
+          type="video/mp4"
+        />
       </video>
     </Flex>
   );

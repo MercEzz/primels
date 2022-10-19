@@ -1,11 +1,11 @@
-import { Flex, Heading, Image, Divider, Box } from "@chakra-ui/react";
+import { Flex, Heading, Image, Divider, Box, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Allia = () => {
   return (
     <Flex direction="column" align="center" pt="100px">
-      <Flex w="100%" pl="100px">
-        <Flex w="30%" direction="column">
+      <Flex w="100%" px="100px">
+        <Flex w="30%" h="100%" direction="column" pt="20px">
           <Heading fontSize="40px" fontFamily="goudy" fontWeight="400">
             India’s Best <br /> Realty Brand
           </Heading>
@@ -27,10 +27,47 @@ const Allia = () => {
             />
           </Flex>
         </Flex>
-        <Flex w="100%">
-          <Image w="" h="" src="/images/pngegg.png" />
-          <Image w="" h="" src="" />
-          <Image w="" h="" src="" />
+        <Flex w="100%" h="100%" align="center" pb="100px">
+          <Flex h="100%" direction="column" align="center">
+            <Image
+              w="100%"
+              h="200px"
+              pl="15px"
+              pb="15px"
+              src="/images/award1.png"
+            />
+            <Text fontFamily="veralaRound" fontSize="16px" textAlign="center">
+              Times Realty Icon
+              <Text fontSize="18px" pt="10px">
+                "The Best <br /> Upcoming Township"
+              </Text>
+            </Text>
+          </Flex>
+          <Flex h="100%" direction="column" align="center">
+            <Image
+              w="100%"
+              h="300px"
+              px="15px"
+              pb="15px"
+              src="/images/award2.png"
+            />
+            <Text fontFamily="veralaRound" fontSize="18px" textAlign="center">
+              The Economic Times
+              <Text fontSize="20px" pt="10px">
+                "Best Realty Brand 2020-21"
+              </Text>
+            </Text>
+          </Flex>
+          <Flex h="100%" direction="column" align="center">
+            <Image w="100%" h="200px" pb="15px" src="/images/award3.png" />
+            <Text fontFamily="veralaRound" fontSize="16px" textAlign="center">
+              FICCI
+              <Text fontSize="18px" pt="10px">
+                "Best Gated Community
+                <br /> Of the Year 2021"
+              </Text>
+            </Text>
+          </Flex>
         </Flex>
       </Flex>
       <Flex direction="column" align="center" justify="center">
