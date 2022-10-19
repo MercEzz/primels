@@ -104,7 +104,7 @@ const Lifeatls = () => {
             height={"500px"}
             width={"700px"}
             overflow={"hidden"}
-            mr="10px"
+            mr="25px"
           >
             {/* CSS files for react-slick */}
             <link
@@ -125,40 +125,48 @@ const Lifeatls = () => {
             </Slider>
           </Box>
         </MtnFlx>
-        <MtnFlx w="100%" h="100%" direction="column">
-          <Box
-            position={"relative"}
-            height={"300px"}
-            width={"400px"}
-            overflow={"hidden"}
-            ml="10px"
-          >
-            {/* CSS files for react-slick */}
-            <link
-              rel="stylesheet"
-              type="text/css"
-              charSet="UTF-8"
-              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-            />
-            <link
-              rel="stylesheet"
-              type="text/css"
-              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-            />
+        <MtnFlx
+          w="100%"
+          h="100%"
+          direction="column"
+          align="space-between"
+          justify="center"
+        >
+          <Flex w="100%" align="center" justify="center">
+            <Box
+              position={"relative"}
+              height={"300px"}
+              width={"400px"}
+              overflow={"hidden"}
+              align="center"
+            >
+              {/* CSS files for react-slick */}
+              <link
+                rel="stylesheet"
+                type="text/css"
+                charSet="UTF-8"
+                href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+              />
+              <link
+                rel="stylesheet"
+                type="text/css"
+                href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+              />
 
-            <Slider {...settings} ref={(slider) => setSlider(slider)}>
-              {images.map((card, index) => (
-                <Image height={"300px"} width={"400px"} src={card} />
-              ))}
-            </Slider>
-          </Box>
+              <Slider {...settings} ref={(slider) => setSlider(slider)}>
+                {images.map((card, index) => (
+                  <Image height={"300px"} width={"400px"} src={card} />
+                ))}
+              </Slider>
+            </Box>
+          </Flex>
           <Flex
             w="100%"
             h="100%"
             align="center"
             justify="space-between"
-            px="10"
-            my="16"
+            px="50px"
+            py="100px"
           >
             {/* left Icon */}
             <IconButton
@@ -168,10 +176,11 @@ const Lifeatls = () => {
               w="50px"
               h="50px"
               p="3"
+              borderColor="#B88746"
               zIndex={2}
               onClick={() => slider?.slickPrev()}
             >
-              <AiOutlineLeft size="40px" />
+              <AiOutlineLeft color="#B88746" size="40px" />
             </IconButton>
             {/* Right Icon */}
             <IconButton
@@ -182,9 +191,10 @@ const Lifeatls = () => {
               h="50px"
               p="3"
               zIndex={2}
+              borderColor="#B88746"
               onClick={() => slider?.slickNext()}
             >
-              <AiOutlineRight size="40px" />
+              <AiOutlineRight color="#B88746" size="40px" />
             </IconButton>
           </Flex>
         </MtnFlx>
