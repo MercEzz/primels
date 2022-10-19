@@ -3,10 +3,16 @@ import React from "react";
 
 const Ponneri = () => {
   return (
-    <Flex w="100%" h="100%" py="10">
-      <Flex direction="column" w="100%">
-        <Flex w="100%" align="center" pl="8" py="6" justify="flex-end">
-          <Heading fontSize="50px" w="100%" fontWeight="400" fontFamily="goudy">
+    <Flex w="100%" h="100%" pt="100px">
+      <Flex direction="column">
+        <Flex w="100%" align="center" justify="flex-end" pb="50px">
+          {/* <Image src="/images/logo.png" /> */}
+          <Heading
+            fontSize="40px"
+            fontWeight="400"
+            fontFamily="goudy"
+            pr="10px"
+          >
             PONNERI GYMKHANA CLUB
           </Heading>
           <Divider
@@ -17,10 +23,10 @@ const Ponneri = () => {
             borderColor="#DFBD69"
           />
         </Flex>
-        <Image src="/images/gymkhana.png" />
+        <Image w="915px" h="515px" src="/images/gymkhana.png" />
       </Flex>
-      <Flex w="40%" direction="column" align="flex-start" px="12">
-        <Flex h="23rem" direction="column" align="center" pt="7.5rem">
+      <Flex w="30%" direction="column" align="flex-start" pl="40px">
+        <Flex h="16rem" direction="column" align="center" pt="5.9rem">
           <Divider
             orientation="vertical"
             border="3px solid"
@@ -37,15 +43,17 @@ const Ponneri = () => {
             my="1"
           />
         </Flex>
-        <Heading fontSize="40px" fontFamily="avenir" my="10">
-          ONE CLUB -MANY FACETS
+        <Heading fontSize="34px" fontFamily="avenir" my="25px">
+          ONE CLUB -<br />
+          MANY FACETS
         </Heading>
         <Button
-          px="6"
-          py="8"
+          w="206px"
+          h="51px"
+          p="16px"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
           color="white"
-          fontSize="24px"
+          fontSize="16px"
           fontFamily="avenir"
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",

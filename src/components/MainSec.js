@@ -13,7 +13,7 @@ const variants = {
 const MainSec = () => {
   return (
     <Flex
-      h="100%"
+      h="568px"
       bgImage={"/images/bg.png"}
       bgPos="center"
       bgRepeat="no-repeat"
@@ -21,11 +21,11 @@ const MainSec = () => {
       align="center"
       justify="center"
     >
-      <Flex w="80%" h="100%" align="center">
-        <Flex direction="column" w="100%" pl="5">
+      <Flex w="80%" h="100%" align="center" pos="relative">
+        <Flex direction="column" w="100%" pl="100px" pos="absolute">
           <MotnHead
-            pt="4"
-            fontSize="50px"
+            pt="15px"
+            fontSize="40px"
             fontFamily="avenir"
             letterSpacing="wide"
             // initial={{ x: 460, y: 350 }}
@@ -35,7 +35,7 @@ const MainSec = () => {
             THE LARGEST{" "}
           </MotnHead>
           <MotnHead
-            fontSize="50px"
+            fontSize="40px"
             fontFamily="avenir"
             letterSpacing="wide"
             // initial={{ opacity: 0, x: [375, 375, 375], y: [350, 250, 250] }}
@@ -45,8 +45,7 @@ const MainSec = () => {
             SMART TOWNSHIP
           </MotnHead>
           <MotnHead
-            pb="4"
-            fontSize="50px"
+            fontSize="40px"
             fontFamily="avenir"
             letterSpacing="wide"
             // initial={{ opacity: 0, x: [450, 400], y: [450, 250] }}
@@ -57,21 +56,22 @@ const MainSec = () => {
             OF NORTH CHENNAI
           </MotnHead>
           <Text
-            pt="2"
-            pb="4"
+            pt="15px"
+            pb="17px"
             pr="4"
             fontWeight="400"
             fontFamily="veralaRound"
             lineHeight="36px"
-            fontSize="30px"
+            fontSize="18px"
           >
-            Carefully crafted Living of high Life and Aminities.
+            Arete Homes your wish for a smart living, <br />
+            NOW GRANTED
           </Text>
           <Button
             my="2"
-            w="270px"
-            h="75px"
-            fontSize="24px"
+            w="162px"
+            h="51px"
+            fontSize="16px"
             fontFamily="avenir"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             color="white"
@@ -83,7 +83,7 @@ const MainSec = () => {
           </Button>
         </Flex>
       </Flex>
-      <Flex align="flex-end" justify="flex-end">
+      <Flex h="100%">
         <Carousel />
       </Flex>
     </Flex>

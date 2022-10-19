@@ -19,16 +19,17 @@ const Invest = () => {
       align="center"
       h="100%"
       justify="center"
-      py="12"
+      pt="50px"
+      px="100px"
     >
-      <Heading fontFamily="goudy" fontWeight="400" fontSize="50px">
+      <Heading fontFamily="goudy" fontWeight="400" fontSize="40px">
         INVEST IN RENT GENERATING ASSETS
       </Heading>
-      <Flex w="100%" py="10">
-        <Flex w="100%" h="600px">
-          <Image src="/images/invest.png" />
+      <Flex w="100%" pt="50px">
+        <Flex w="47.5%">
+          <Image w="608px" h="500px" src="/images/invest.png" />
         </Flex>
-        <Flex h="16.5rem" direction="column" align="center" px="6">
+        <Flex h="145px" w="5%" direction="column" align="center" px="40px">
           <Divider
             orientation="vertical"
             border="3px solid"
@@ -44,63 +45,86 @@ const Invest = () => {
             my="1"
           />
         </Flex>
-        <Flex w="100%" py="6" direction="column" justify="center">
-          <Heading fontFamily="avenir">8% ROI ON HOMES</Heading>
+        <Flex w="47.5%" direction="column" justify="center" align="flex-start">
+          <Heading
+            w="100%"
+            fontFamily="avenir"
+            fontSize="34px"
+            textAlign="left"
+          >
+            8% ROI ON HOMES
+          </Heading>
 
-          <Flex my="10" w="100%">
-            <Flex w="100%" direction="column" p="2">
+          <Flex my="25px" w="100%" justify="space-between">
+            <Flex direction="column">
               <Text
-                pb="4"
+                pb="15px"
                 fontFamily="veralaRound"
                 fontWeight="400"
-                fontSize="24px"
+                fontSize="18px"
               >
                 Smart Home
               </Text>
-              <Text fontWeight="700" fontFamily="avenir" fontSize="30px">
+              <Text fontWeight="700" fontFamily="avenir" fontSize="24px">
                 2 BHK
               </Text>
-              <Text fontFamily="veralaRound" fontSize="24px" fontWeight="400">
+              <Text
+                pt="10px"
+                fontFamily="veralaRound"
+                fontSize="16px"
+                fontWeight="400"
+              >
                 1085 sqft.
               </Text>
             </Flex>
-            <Flex w="100%" direction="column" p="2">
+            <Flex direction="column" px="25px">
               <Text
-                pb="4"
+                pb="15px"
                 fontFamily="veralaRound"
                 fontWeight="400"
-                fontSize="24px"
+                fontSize="18px"
               >
                 Price
               </Text>
-              <Text fontWeight="700" fontFamily="avenir" fontSize="30px">
+              <Text fontWeight="700" fontFamily="avenir" fontSize="24px">
                 Rs. 85 Lakhs
               </Text>
-              <Text fontFamily="veralaRound" fontSize="24px" fontWeight="400">
-                Fully Furnished With White Goods
+              <Text
+                pt="10px"
+                fontFamily="veralaRound"
+                fontSize="16px"
+                fontWeight="400"
+              >
+                Fully Furnished With <br />
+                White Goods
               </Text>
             </Flex>
-            <Flex w="100%" direction="column" p="2">
+            <Flex direction="column">
               <Text
-                pb="4"
+                pb="15px"
                 fontFamily="veralaRound"
                 fontWeight="400"
-                fontSize="24px"
+                fontSize="18px"
               >
                 Rental Income
               </Text>
-              <Text fontWeight="700" fontFamily="avenir" fontSize="30px">
+              <Text fontWeight="700" fontFamily="avenir" fontSize="24px">
                 Rs. 32,000*
               </Text>
-              <Text fontFamily="veralaRound" fontSize="24px" fontWeight="400">
+              <Text
+                pt="10px"
+                fontFamily="veralaRound"
+                fontSize="16px"
+                fontWeight="400"
+              >
                 Per Month
               </Text>
             </Flex>
           </Flex>
           <Button
-            w="250px"
-            h="75px"
-            fontSize="24px"
+            w="152px"
+            h="51px"
+            fontSize="16px"
             fontFamily="avenir"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             color="white"

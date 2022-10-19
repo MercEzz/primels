@@ -5,7 +5,6 @@ import {
   Text,
   Divider,
   Box,
-  Icon,
   Button,
 } from "@chakra-ui/react";
 import React from "react";
@@ -17,29 +16,33 @@ const SmartLiving = () => {
       direction="column"
       w="100%"
       h="100%"
-      py="6"
-      mb="12"
-      px="6"
+      pt="50px"
+      px="100px"
       align="center"
     >
-      <Heading fontSize="50px" fontFamily="goudy" fontWeight="400">
+      <Heading fontSize="40px" fontFamily="goudy" fontWeight="400">
         SMART LIVING
       </Heading>
-      <Flex px="4" pt="10">
-        <Flex direction="column" w="100%" px="2" justify="flex-start">
+      <Flex pt="50px">
+        <Flex direction="column" w="100%" h="100%" px="2" justify="flex-start">
           <Flex>
-            <Image src="/images/smartliving.png" />
+            <Image w="570px" h="325px" src="/images/smartliving.png" />
           </Flex>
-          <Flex py="10" direction="column">
-            <Heading fontSize="30px" fontFamily="avenir">
+          <Flex py="140px" direction="column">
+            <Heading fontSize="24px" fontFamily="avenir">
               MANAGED LIVING
             </Heading>
-            <Text fontSize="24px" fontFamily="veralaRound">
+            <Text fontSize="18px" fontFamily="veralaRound">
               Premium serviced apartments in smart township living.
             </Text>
           </Flex>
-          <Flex>
-            <Image src="/images/smartliving3.png" />
+          <Flex w="100%" h="100%">
+            <Image
+              w="570px"
+              h="325px"
+              // mt="100px"
+              src="/images/smartliving3.png"
+            />
           </Flex>
         </Flex>
         <Flex px="4" direction="column" align="center">
@@ -108,23 +111,23 @@ const SmartLiving = () => {
           </Flex>
         </Flex>
 
-        <Flex direction="column" w="100%" px="2" justify="center">
+        <Flex direction="column" w="100%" px="2" pt="125px">
           <Flex direction="column" py="10">
-            <Heading fontSize="30px" fontFamily="avenir">
+            <Heading fontSize="24px" fontFamily="avenir">
               CO-LIVING FOR PROFESSIONALS
             </Heading>
-            <Text fontSize="24px" fontFamily="veralaRound">
+            <Text fontSize="18px" fontFamily="veralaRound">
               Your home away from home.
             </Text>
           </Flex>
-          <Flex py="10">
-            <Image src="/images/smartliving2.png" />
+          <Flex pt="70px">
+            <Image w="570px" h="325px" src="/images/smartliving2.png" />
           </Flex>
-          <Flex direction="column" py="10">
-            <Heading fontSize="30px" fontFamily="avenir">
+          <Flex direction="column" pt="135px">
+            <Heading fontSize="24px" fontFamily="avenir">
               STUDENT HOUSING
             </Heading>
-            <Text fontSize="24px" fontFamily="veralaRound">
+            <Text fontSize="18px" fontFamily="veralaRound">
               Modern student housing, co-living for professionals and serviced
               apartments.
             </Text>
@@ -133,23 +136,24 @@ const SmartLiving = () => {
       </Flex>
       <Flex direction="column" align="center">
         <Divider
-          h="30px"
+          h="25px"
           orientation="vertical"
           border="3px solid"
           borderColor="#DFBD69"
         />
         <Button
-          w="270px"
-          h="75px"
+          w="162px"
+          h="51px"
+          P="16px"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
           color="white"
-          fontSize="30px"
+          fontSize="16px"
           fontFamily="avenir"
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",
           }}
         >
-          Explore now
+          EXPLORE NOW
         </Button>
       </Flex>
     </Flex>

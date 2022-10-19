@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Flex, Heading, Image, Link } from "@chakra-ui/react";
-import { HiMenuAlt1 } from "react-icons/hi";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -61,7 +61,7 @@ const Header = () => {
           </Button>
         </Heading>
         <Link fontSize="60px" px="4">
-          <HiMenuAlt1 w="100%" h="100%" />
+          <HiOutlineMenuAlt1 w="100%" h="100%" />
         </Link>
       </Flex>
     </Flex>

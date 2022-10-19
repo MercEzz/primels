@@ -18,18 +18,18 @@ const AboutUs = () => {
       align="center"
       bgColor="gray.900"
       color="white"
-      p="6"
+      pt="100px"
       direction="column"
     >
-      <Flex w="100%" direction="column" pt="14" px="10" align="center">
-        <Heading fontFamily="goudy" fontWeight="400" fontSize="50px">
+      <Flex w="100%" direction="column" px="100px" align="center">
+        <Heading fontFamily="goudy" fontWeight="400" fontSize="40px">
           ABOUT US
         </Heading>
         <Flex w="100%" align="center" direction="column">
-          <Heading pt="10" pb="2" fontSize="40px" fontFamily="avenir">
+          <Heading pt="25px" pb="2" fontSize="34px" fontFamily="avenir">
             BRIGHT IDEAS-SMART SOLUTIONS
           </Heading>
-          <Text py="8" fontSize="24px" fontFamily="veralaRound">
+          <Text pt="15px" fontSize="16px" fontFamily="veralaRound">
             Prime LifeSpace is a brand built on trust, transparency & quality in
             real estate industry. It has established its credentials in
             development of residential integrated townships & consulting
@@ -38,7 +38,7 @@ const AboutUs = () => {
             Chennai for its fusion of luxuries & affordability in the projects
             of exceptional quality with a passion for delivering finest homes.
           </Text>
-          <Text py="8" fontSize="24px" fontFamily="veralaRound">
+          <Text pt="15px" fontSize="16px" fontFamily="veralaRound">
             Prime LifeSpace consultancy firm offers an end-to-end solution in
             the Real Estate Space. The team has excelled in providing deep
             expertise to biggest corporates like Blackstone for Chandigarh
@@ -46,7 +46,7 @@ const AboutUs = () => {
             etc. Also, structured various eminent Joint Ventures, Mergers like
             L&T GeoTech with Sharaf Foundation.
           </Text>
-          <Text py="8" fontSize="24px" fontFamily="veralaRound">
+          <Text pt="15px" fontSize="16px" fontFamily="veralaRound">
             Prime LifeSpace developers are renowned creators of smart integrated
             townships that provide more than just spaces to live in. The
             townships resemble improvement in quality of living, empowerment of
@@ -55,9 +55,9 @@ const AboutUs = () => {
             choice for right value of money for the investors.
           </Text>
         </Flex>
-        <Flex w="100%">
+        <Flex w="100%" pt="15px">
           <Flex direction="column" w="25%">
-            <Flex align="center" py="2">
+            <Flex align="center">
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -86,17 +86,17 @@ const AboutUs = () => {
                 bgColor="#DFBD69"
               />
             </Flex>
-            <Flex direction="column" py="6">
-              <Heading fontSize="50px" fontFamily="avenir">
+            <Flex direction="column" pt="15px">
+              <Heading fontSize="34px" fontFamily="avenir">
                 30+ years
               </Heading>
-              <Text fontSize="30px" fontFamily="veralaRound">
+              <Text fontSize="18px" fontFamily="veralaRound">
                 Of Building Trust
               </Text>
             </Flex>
           </Flex>
           <Flex direction="column" w="50%">
-            <Flex align="center" py="2">
+            <Flex align="center">
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -119,19 +119,19 @@ const AboutUs = () => {
                 bgColor="#DFBD69"
               />
             </Flex>
-            <Flex direction="column" py="6" w="100%" align="center">
+            <Flex direction="column" pt="15px" w="100%" align="center">
               <Flex direction="column" align="flex-start">
-                <Heading fontSize="40px" fontFamily="avenir" textAlign="left">
+                <Heading fontSize="34px" fontFamily="avenir" textAlign="left">
                   approx. 1 Million sqft.{" "}
                 </Heading>
-                <Text fontSize="30px" textAlign="left" fontFamily="veralaRound">
+                <Text fontSize="18px" textAlign="left" fontFamily="veralaRound">
                   Development
                 </Text>
               </Flex>
             </Flex>
           </Flex>
           <Flex direction="column" w="25%">
-            <Flex align="center" py="2">
+            <Flex align="center">
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -154,24 +154,27 @@ const AboutUs = () => {
                 bgColor="#DFBD69"
               />
             </Flex>
-            <Flex direction="column" py="6">
-              <Heading fontSize="50px" fontFamily="avenir">
+            <Flex direction="column" pt="15px">
+              <Heading fontSize="34px" fontFamily="avenir">
                 100+
               </Heading>
-              <Text fontSize="30px" fontFamily="veralaRound">
+              <Text fontSize="18px" fontFamily="veralaRound">
                 Happy Consultancy Clients
               </Text>
             </Flex>
           </Flex>
         </Flex>
         <Button
-          my="6"
-          w="240px"
-          h="75px"
+          mt="25px"
+          mb="50px"
+          w="146px"
+          p="16px"
+          h="51px"
           fontFamily="avenir"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
           color="white"
-          fontSize="30px"
+          fontSize="16px"
+          textTransform="uppercase"
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",
           }}

@@ -19,53 +19,68 @@ const OurProjects = () => {
       direction="column"
       align="center"
       justify="center"
-      my="16"
+      pt="100px"
+      pb="185px"
     >
       <Flex w="100%" h="60px" align="center" justify="center">
-        <Flex w="73%" />
+        <Flex w="94%" />
         <Flex w="100%" align="center">
           <Divider
-            w="150px"
+            w="175px"
             orientation="horizontal"
             border="3px solid"
             bgColor="#DFBD69"
             borderColor="#DFBD69"
+            mr="10px"
           />
-          <Text w="100%" px="2" fontFamily="goudy" fontSize="50px">
+          <Text w="290px" fontFamily="goudy" fontSize="40px" textAlign="left">
             OUR PROJECTS
           </Text>
         </Flex>
         <Flex w="100%" />
       </Flex>
-      <Flex>
-        <Flex direction="column" justify="center" w="35%" mx="10">
-          <Heading py="2" fontFamily="avenir" fontSize="40px">
+      <Flex w="100%" h="100%">
+        <Flex
+          direction="column"
+          justify="center"
+          w="35%"
+          h="100%"
+          ml="100px"
+          pt="200px"
+        >
+          <Heading
+            pb="15px"
+            fontFamily="avenir"
+            fontSize="34px"
+            w="100%"
+            textAlign="left"
+          >
             ARETE HOMES
           </Heading>
           <UnorderedList>
             <ListItem>
-              <Text py="2" fontFamily="veralaRound" fontSize="24px">
+              <Text pb="10px" fontFamily="veralaRound" fontSize="18px">
                 6 Towers
               </Text>
             </ListItem>
             <ListItem>
-              <Text py="2" fontFamily="veralaRound" fontSize="24px">
+              <Text pb="10px" fontFamily="veralaRound" fontSize="18px">
                 2, 2.5, 3 BHK Smart Residencies
               </Text>
             </ListItem>
             <ListItem>
-              <Text py="2" fontFamily="veralaRound" fontSize="24px">
+              <Text fontFamily="veralaRound" fontSize="18px">
                 70% Open Space
               </Text>
             </ListItem>
           </UnorderedList>
           <Button
-            my="4"
-            w="270px"
-            h="75px"
+            mt="25px"
+            w="160px"
+            h="51px"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             color="white"
-            fontSize="30px"
+            fontSize="16px"
             fontFamily="avenir"
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
@@ -74,7 +89,7 @@ const OurProjects = () => {
             VIEW PROJECT
           </Button>
         </Flex>
-        <Flex h="15rem" direction="column" align="center" pt="5rem">
+        <Flex h="14.6rem" direction="column" align="center" pt="25px">
           <Divider
             orientation="vertical"
             border="3px solid"
@@ -90,12 +105,11 @@ const OurProjects = () => {
             my="1"
           />
         </Flex>
-        <Flex direction="column" p="10">
+        <Flex w="100%" direction="column" pt="25px" pl="40px" pr="50px">
           <Flex>
             <Text
-              fontSize="24px"
-              px="2"
-              py="1"
+              fontSize="14px"
+              p="10px"
               color="white"
               fontFamily="avenir"
               bgGradient="linear(to-r, #B88746 ,#DFBD69)"
@@ -104,7 +118,24 @@ const OurProjects = () => {
               Ready to move in
             </Text>
           </Flex>
-          <Image src="/images/pro1.png" />
+          <Flex pos="relative" w="100%" h="100%">
+            <Image
+              zIndex="3"
+              pos="absolute"
+              w="868px"
+              h="500px"
+              src="/images/pro1.png"
+            />
+            <Image
+              pos="absolute"
+              w="868px"
+              h="450px"
+              left="100px"
+              top="25px"
+              opacity=".5"
+              src="/images/pro1.png"
+            />
+          </Flex>
         </Flex>
       </Flex>
     </Flex>
