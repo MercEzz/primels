@@ -19,6 +19,7 @@ const OneStop = () => {
       align="flex-start"
       justify="center"
       pt="50px"
+      pb="15px"
       px="100px"
       direction="column"
     >
@@ -37,13 +38,13 @@ const OneStop = () => {
         <Flex
           w="45%"
           h="100%"
-          mt="50px"
+          pt="50px"
           direction="column"
           justify="space-between"
           align="flex-start"
         >
           {leftSec.map((item) => (
-            <VStack w="100%" align="flex-start" pb="50px">
+            <VStack w="100%" align="flex-start" pb="25px">
               <Flex w="100%" align="center" justify="center">
                 <Image w="80px" h="80px" src={item.icon} />
               </Flex>
@@ -75,7 +76,7 @@ const OneStop = () => {
         {/* center */}
         <Flex
           w="10%"
-          px="45px"
+          px="100px"
           h="100%"
           align="center"
           justify="center"
@@ -83,7 +84,7 @@ const OneStop = () => {
         >
           <Divider
             orientation="vertical"
-            h="50px"
+            h="60px"
             border="3px solid"
             borderColor="#DFBD69"
           />
@@ -98,7 +99,7 @@ const OneStop = () => {
           />
           <Divider
             orientation="vertical"
-            h="200px"
+            h="190px"
             border="3px solid"
             borderColor="#DFBD69"
           />
@@ -113,7 +114,7 @@ const OneStop = () => {
           />{" "}
           <Divider
             orientation="vertical"
-            h="200px"
+            h="355px"
             border="3px solid"
             borderColor="#DFBD69"
           />
@@ -130,15 +131,15 @@ const OneStop = () => {
         <Flex
           w="45%"
           h="100%"
-          mt="50px"
+          pt="55px"
           direction="column"
           justify="space-between"
           align="flex-start"
         >
           {rightSec.map((item) => (
-            <VStack w="100%" align="flex-start" pb="50px">
+            <VStack w="100%" align="flex-start" pb="35px">
               <Flex w="100%" align="center" justify="center">
-                <Image w="80px" h="80px" src={item.icon} />
+                <Image w="80px" h="80px" my="1px" src={item.icon} />
               </Flex>
               <Heading
                 fontFamily="avenir"
