@@ -1,9 +1,32 @@
 import { Container, Flex, Heading, Text, VStack } from "@chakra-ui/react";
-import React from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+
+const MtnHd = motion(Heading);
+const MtnFlx = motion(Flex);
+const MtnStk = motion(VStack);
 
 const ProSites = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateHd = useAnimation();
+  const animateFade = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateHd.start({
+        opacity: 1,
+        y: 0,
+      });
+      animateFade.start({
+        opacity: 1,
+      });
+    }
+  }, [isInView, animateHd, animateFade]);
+
   return (
     <Flex
+      ref={ref}
       direction="column"
       w="100%"
       h="100%"
@@ -11,15 +34,27 @@ const ProSites = () => {
       align="center"
       justify="center"
     >
-      <Heading
+      <MtnHd
+        initial={{ opacity: 0, y: -50 }}
+        animate={animateHd}
+        transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
         fontSize="40px"
         lineHeight="58px"
       >
         OUR PROJECT SITES
-      </Heading>
-      <Flex w="100%" mt="50px" mb="50px" px="100px" justify="center">
+      </MtnHd>
+      <MtnFlx
+        initial={{ opacity: 0 }}
+        animate={animateFade}
+        transition={{ delay: 2, duration: 2, type: "just" }}
+        w="100%"
+        mt="50px"
+        mb="50px"
+        px="100px"
+        justify="center"
+      >
         <Flex
           direction="column"
           w="100%"
@@ -85,23 +120,32 @@ const ProSites = () => {
             North Chennai - 601204
           </Text>
         </Flex>
-      </Flex>
-      <VStack mb="50px">
+      </MtnFlx>
+      <MtnStk
+        initial={{ opacity: 0 }}
+        animate={animateFade}
+        transition={{ delay: 2, duration: 2, type: "just" }}
+        mb="50px"
+      >
         <Text fontFamily="veralaRound" fontSize="20px" lineHeight="24px">
           For consultancy related queries, email us at
         </Text>
         <Heading fontFamily="avenir" fontSize="24px" lineHeight="41px">
           info@primelifespace.com
         </Heading>
-      </VStack>
-      <VStack>
+      </MtnStk>
+      <MtnStk
+        initial={{ opacity: 0 }}
+        animate={animateFade}
+        transition={{ delay: 2, duration: 2, type: "just" }}
+      >
         <Text fontFamily="veralaRound" fontSize="20px" lineHeight="24px">
           For procurement related queries, email us at
         </Text>
         <Heading fontFamily="avenir" fontSize="24px" lineHeight="41px">
           purchase@primelifespace.com
         </Heading>
-      </VStack>
+      </MtnStk>
     </Flex>
   );
 };

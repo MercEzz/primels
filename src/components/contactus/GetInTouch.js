@@ -9,12 +9,34 @@ import {
   Flex,
   Container,
 } from "@chakra-ui/react";
-import React from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+
+const MtnHd = motion(Heading);
+const MtnTxt = motion(Text);
+const MtnContainer = motion(Container);
 
 const GetInTouch = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateHd = useAnimation();
+  const animateFade = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateHd.start({
+        opacity: 1,
+        y: 0,
+      });
+      animateFade.start({
+        opacity: 1,
+      });
+    }
+  }, [isInView, animateHd, animateFade]);
+
   return (
     <Flex
-      // ref={ref}
+      ref={ref}
       direction="column"
       w="100%"
       pt="50px"
@@ -23,36 +45,36 @@ const GetInTouch = () => {
       px="100px"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
-      <Heading
-        // initial={{ opacity: 0, y: -50 }}
-        // animate={animationHead}
-        // transition={{ duration: 2, type: "just" }}
+      <MtnHd
+        initial={{ opacity: 0, y: -50 }}
+        animate={animateHd}
+        transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
         fontSize="40px"
         lineHeight="60px"
       >
         GET IN TOUCH
-      </Heading>
-      <Text
-        // initial={{ opacity: 0 }}
-        // animate={animationFade}
-        // transition={{ delay: 1, duration: 2, type: "just" }}
+      </MtnHd>
+      <MtnTxt
+        initial={{ opacity: 0 }}
+        animate={animateFade}
+        transition={{ delay: 1.5, duration: 2, type: "just" }}
         fontSize="16px"
         fontFamily="veralaRound"
         py="25px"
         textAlign="center"
       >
         Leave us your information and our team will get back to you.
-      </Text>
-      <Container minw="container.sm">
+      </MtnTxt>
+      <MtnContainer
+        initial={{ opacity: 0 }}
+        animate={animateFade}
+        transition={{ delay: 3, duration: 2, type: "just" }}
+        minw="container.sm"
+      >
         <FormControl align="center" justify="center">
-          <VStack
-            // initial={{ opacity: 0 }}
-            // animate={animationFade}
-            // transition={{ delay: 1, duration: 2, type: "just" }}
-            align="flex-start"
-          >
+          <VStack align="flex-start">
             <Flex
               w="100%"
               align="flex-end"
@@ -118,7 +140,7 @@ const GetInTouch = () => {
             SUBMIT NOW
           </Button>
         </FormControl>
-      </Container>
+      </MtnContainer>
     </Flex>
   );
 };

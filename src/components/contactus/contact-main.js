@@ -1,6 +1,10 @@
 import { Flex, Heading, Text, Divider, Box, Icon } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 import SideVector from "./side-vector";
+
+const MtnHd = motion(Heading);
+const MtnTxt = motion(Text);
 
 const ContactMain = () => {
   return (
@@ -31,15 +35,30 @@ const ContactMain = () => {
           align="center"
           pt="150px"
           pl="225px"
+          color="black"
         >
-          <Heading py="15px" fontSize="40px" fontFamily="avenir">
+          <MtnHd
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, type: "just" }}
+            py="15px"
+            fontSize="40px"
+            fontFamily="avenir"
+          >
             CONTACT US
-          </Heading>
-          <Text fontSize="18px" fontFamily="veralaRound" textAlign="center">
+          </MtnHd>
+          <MtnTxt
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, type: "just" }}
+            fontSize="18px"
+            fontFamily="veralaRound"
+            textAlign="center"
+          >
             We know there’s all sorts of reasons why you <br /> might want to
             chat to our team. Use this page to <br /> find the right contact
             details, quickly and easily.
-          </Text>
+          </MtnTxt>
         </Flex>
       </Flex>
       <SideVector />

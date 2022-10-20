@@ -90,7 +90,6 @@ const OneStop = () => {
               fontSize="16px"
               lineHeight="24px"
               fontWeight="400"
-              pl="6"
             >
               <ListItem pb="10px">Project Financing</ListItem>
               <ListItem>Power Purchase Agreements</ListItem>
@@ -126,7 +125,6 @@ const OneStop = () => {
               fontSize="16px"
               lineHeight="24px"
               fontWeight="400"
-              pl="6"
             >
               <ListItem pb="10px">
                 Material Procurement and Negotiation on behalf of client
@@ -171,7 +169,6 @@ const OneStop = () => {
               fontSize="16px"
               lineHeight="24px"
               fontWeight="400"
-              pl="6"
             >
               <ListItem>Plant AMC for Operation & Maintenance</ListItem>
               <ListItem>Specification and Tender Assessment</ListItem>

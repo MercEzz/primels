@@ -8,15 +8,35 @@ import {
   VStack,
   Box,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { ImLocation } from "react-icons/im";
 import { HiMail, HiPhone } from "react-icons/hi";
+import { motion, useAnimation, useInView } from "framer-motion";
+
+const MtnFlx = motion(Flex);
+const MtnHead = motion(Heading);
+const MtnStk = motion(VStack);
 
 const AddresSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateFlx = useAnimation();
+  const animateFade = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateFlx.start({ opacity: 1, scale: 1 });
+      animateFade.start({ opacity: 1 });
+    }
+  }, [isInView, animateFlx, animateFade]);
+
   return (
-    <Flex w="100%" h="100%">
+    <Flex ref={ref} w="100%" h="100%">
       <Flex w="40%" h="100%" direction="column" align="center" justify="center">
-        <Flex
+        <MtnFlx
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={animateFlx}
+          transition={{ duration: 2, type: "just" }}
           direction="column"
           w="522px"
           h="350px"
@@ -31,7 +51,10 @@ const AddresSec = () => {
           pr="50px"
           bgGradient="linear(to-b, #B88746, #DFBD69)"
         >
-          <Heading
+          <MtnHead
+            initial={{ opacity: 0 }}
+            animate={animateFade}
+            transition={{ delay: 2, duration: 2, type: "just" }}
             w="100%"
             fontFamily="avenir"
             fontSize="34px"
@@ -40,8 +63,14 @@ const AddresSec = () => {
             textAlign="left"
           >
             CORPORATE OFFICE
-          </Heading>
-          <VStack w="100%" align="flex-start">
+          </MtnHead>
+          <MtnStk
+            initial={{ opacity: 0 }}
+            animate={animateFade}
+            transition={{ delay: 2, duration: 2, type: "just" }}
+            w="100%"
+            align="flex-start"
+          >
             <HStack align="flex-start" mb="7px">
               <Icon as={ImLocation} w="30px" h="40px" mt="-1" />
               <Text fontFamily="veralaRound" fontSize="16px" lineHeight="24px">
@@ -61,9 +90,12 @@ const AddresSec = () => {
                 7338808775
               </Text>
             </HStack>
-          </VStack>
-        </Flex>
-        <Flex
+          </MtnStk>
+        </MtnFlx>
+        <MtnFlx
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={animateFlx}
+          transition={{ duration: 2, type: "just" }}
           direction="column"
           w="522px"
           h="350px"
@@ -72,7 +104,10 @@ const AddresSec = () => {
           pl="100px"
           pr="50px"
         >
-          <Heading
+          <MtnHead
+            initial={{ opacity: 0 }}
+            animate={animateFade}
+            transition={{ delay: 2, duration: 2, type: "just" }}
             w="100%"
             fontFamily="avenir"
             fontSize="34px"
@@ -81,8 +116,14 @@ const AddresSec = () => {
             textAlign="left"
           >
             CHENNAI OFFICE
-          </Heading>
-          <VStack w="100%" align="flex-start">
+          </MtnHead>
+          <MtnStk
+            initial={{ opacity: 0 }}
+            animate={animateFade}
+            transition={{ delay: 2, duration: 2, type: "just" }}
+            w="100%"
+            align="flex-start"
+          >
             <HStack align="flex-start" mb="7px">
               <Icon as={ImLocation} w="30px" h="40px" mt="-1" />
               <Text fontFamily="veralaRound" fontSize="16px" lineHeight="24px">
@@ -102,10 +143,15 @@ const AddresSec = () => {
                 7338808775
               </Text>
             </HStack>
-          </VStack>
-        </Flex>
+          </MtnStk>
+        </MtnFlx>
       </Flex>
-      <Flex h="100%">
+      <MtnFlx
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={animateFlx}
+        transition={{ duration: 2, type: "just" }}
+        h="100%"
+      >
         <Box w="918px" h="700px">
           <iframe
             class="gmap_iframe"
@@ -118,7 +164,7 @@ const AddresSec = () => {
             src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           ></iframe>
         </Box>
-      </Flex>
+      </MtnFlx>
     </Flex>
   );
 };
