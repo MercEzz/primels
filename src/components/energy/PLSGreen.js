@@ -1,9 +1,26 @@
 import { Box, Flex, Image, Divider, Heading, Text } from "@chakra-ui/react";
-import React from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+
+const MtnImg = motion(Image);
+const MtnFlx = motion(Flex);
 
 const PLSGreen = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateImg = useAnimation();
+  const animateFlx = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateImg.start({ opacity: 1, x: 0 });
+      animateFlx.start({ opacity: 1, y: 0 });
+    }
+  }, [isInView, animateImg, animateFlx]);
+
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       pb="550px"
@@ -11,13 +28,19 @@ const PLSGreen = () => {
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
       <Flex w="100%" direction="column" pos="relative">
-        <Image
+        <MtnImg
+          initial={{ opacity: 0, x: 200 }}
+          animate={animateImg}
+          transition={{ duration: 2, type: "just" }}
           src="/images/energy/ourPro1.jpeg"
           h="500px"
           w="813px"
           pos="absolute"
         />
-        <Image
+        <MtnImg
+          initial={{ opacity: 0 }}
+          animate={animateImg}
+          transition={{ delay: 1.5, duration: 2, type: "just" }}
           src="/images/energy/ourPro2.jpeg"
           h="500px"
           w="813px"
@@ -26,7 +49,14 @@ const PLSGreen = () => {
           top="120%"
         />
       </Flex>
-      <Flex direction="column" align="center" px="42px">
+      <MtnFlx
+        initial={{ opacity: 0, y: -100 }}
+        animate={animateFlx}
+        transition={{ duration: 2, type: "just" }}
+        direction="column"
+        align="center"
+        px="42px"
+      >
         <Divider
           orientation="vertical"
           h="92px"
@@ -47,8 +77,14 @@ const PLSGreen = () => {
           // }}
           // transition="all .5s"
         />
-      </Flex>
-      <Flex direction="column" mt="100px">
+      </MtnFlx>
+      <MtnFlx
+        initial={{ opacity: 0, x: -200 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 2, type: "just" }}
+        direction="column"
+        mt="100px"
+      >
         <Heading
           fontFamily="goudy"
           fontSize="40px"
@@ -67,7 +103,7 @@ const PLSGreen = () => {
           Execution of a solar power plant of 5 MegaWatt at Telangana, Mothkur
           Village, Nalagonda.
         </Text>
-      </Flex>
+      </MtnFlx>
     </Flex>
   );
 };

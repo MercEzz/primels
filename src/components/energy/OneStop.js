@@ -4,26 +4,43 @@ import {
   Image,
   ListItem,
   UnorderedList,
-  Text,
-  VStack,
   Divider,
   Box,
 } from "@chakra-ui/react";
-import React from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+
+const MtnHd = motion(Heading);
+const MtnFlx = motion(Flex);
 
 const OneStop = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const animateHd = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateHd.start({ opacity: 1, y: 0 });
+    }
+  }, [isInView, animateHd]);
+
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       align="flex-start"
       justify="center"
-      pt="50px"
+      pt="100px"
       pb="15px"
       px="100px"
       direction="column"
     >
-      <Heading
+      <MtnHd
+        initial={{ opacity: 0, y: -50 }}
+        animate={animateHd}
+        transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         w="100%"
         fontSize="40px"
@@ -33,45 +50,129 @@ const OneStop = () => {
         textAlign="center"
       >
         ONE STOP SOLUTION FOR POWER SECTOR
-      </Heading>
+      </MtnHd>
       <Flex>
         <Flex
           w="45%"
           h="100%"
           pt="50px"
           direction="column"
-          justify="space-between"
           align="flex-start"
+          justify="center"
         >
-          {leftSec.map((item) => (
-            <VStack w="100%" align="flex-start" pb="25px">
-              <Flex w="100%" align="center" justify="center">
-                <Image w="80px" h="80px" src={item.icon} />
-              </Flex>
-              <Heading
-                fontFamily="avenir"
-                fontSize="24px"
-                lineHeight="41px"
-                textTransform="uppercase"
-                mb="7px"
-              >
-                {item.title}
-              </Heading>
-              <UnorderedList
-                fontFamily="veralaRound"
-                fontSize="16px"
-                lineHeight="24px"
-                fontWeight="400"
-                pl="6"
-              >
-                {item.list.map((el) => (
-                  <ListItem>
-                    <Text py="5px">{el}</Text>
-                  </ListItem>
-                ))}
-              </UnorderedList>
-            </VStack>
-          ))}
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateHd}
+            transition={{ delay: 1.5, duration: 2, type: "just" }}
+            w="100%"
+            direction="column"
+            align="flex-start"
+          >
+            <Flex w="100%" align="center" justify="center">
+              <Image
+                w="80px"
+                h="80px"
+                src="/images/energy-page/financial-and-ppa.svg"
+              />
+            </Flex>
+            <Heading
+              fontFamily="avenir"
+              fontSize="24px"
+              lineHeight="41px"
+              textTransform="uppercase"
+              mb="7px"
+            >
+              FINANCIAL & PPA SUPPORT
+            </Heading>
+            <UnorderedList
+              fontFamily="veralaRound"
+              fontSize="16px"
+              lineHeight="24px"
+              fontWeight="400"
+              pl="6"
+            >
+              <ListItem>Project Financing</ListItem>
+              <ListItem>Power Purchase Agreements</ListItem>
+            </UnorderedList>
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateHd}
+            transition={{ delay: 3, duration: 2, type: "just" }}
+            w="100%"
+            direction="column"
+            align="flex-start"
+          >
+            <Flex w="100%" align="center" justify="center">
+              <Image
+                w="80px"
+                h="80px"
+                src="/images/energy-page/engineering-design.svg"
+              />
+            </Flex>
+            <Heading
+              fontFamily="avenir"
+              fontSize="24px"
+              lineHeight="41px"
+              textTransform="uppercase"
+              mb="7px"
+            >
+              Engineering, Design & due diligence
+            </Heading>
+            <UnorderedList
+              fontFamily="veralaRound"
+              fontSize="16px"
+              lineHeight="24px"
+              fontWeight="400"
+              pl="6"
+            >
+              <ListItem>
+                Material Procurement and Negotiation on behalf of client
+              </ListItem>
+              <ListItem>Project & Site Management</ListItem>
+              <ListItem>Plant Commissioning & Synchronisation</ListItem>
+              <ListItem>Performance Test</ListItem>
+              <ListItem>nology Assessment</ListItem>
+              <ListItem>
+                Independent Technical & Commercial Due diligence
+              </ListItem>
+            </UnorderedList>
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateHd}
+            transition={{ delay: 4.5, duration: 2, type: "just" }}
+            w="100%"
+            direction="column"
+            align="flex-start"
+          >
+            <Flex w="100%" align="center" justify="center">
+              <Image
+                w="80px"
+                h="80px"
+                src="/images/energy-page/o-m-consultancy.svg"
+              />
+            </Flex>
+            <Heading
+              fontFamily="avenir"
+              fontSize="24px"
+              lineHeight="41px"
+              textTransform="uppercase"
+              mb="7px"
+            >
+              O & M+ CONSULTANCY
+            </Heading>
+            <UnorderedList
+              fontFamily="veralaRound"
+              fontSize="16px"
+              lineHeight="24px"
+              fontWeight="400"
+              pl="6"
+            >
+              <ListItem>Plant AMC for Operation & Maintenance</ListItem>
+              <ListItem>Specification and Tender Assessment</ListItem>
+            </UnorderedList>
+          </MtnFlx>
         </Flex>
         {/* center */}
         <Flex
@@ -83,89 +184,201 @@ const OneStop = () => {
           justify="center"
           direction="column"
         >
-          <Divider
-            orientation="vertical"
-            h="40px"
-            border="3px solid"
-            borderColor="#DFBD69"
-          />
-          <Box
-            height="30px"
-            width="30px"
-            backgroundColor="#DFBD69"
-            border="5px solid white"
-            boxShadow="0px 0px 0px 3px #B88746"
-            borderRadius="50%"
-            my="1"
-          />
-          <Divider
-            orientation="vertical"
-            h="180px"
-            border="3px solid"
-            borderColor="#DFBD69"
-          />
-          <Box
-            height="30px"
-            width="30px"
-            backgroundColor="#DFBD69"
-            border="5px solid white"
-            boxShadow="0px 0px 0px 3px #B88746"
-            borderRadius="50%"
-            my="1"
-          />{" "}
-          <Divider
-            orientation="vertical"
-            h="360px"
-            border="3px solid"
-            borderColor="#DFBD69"
-          />
-          <Box
-            height="30px"
-            width="30px"
-            backgroundColor="#DFBD69"
-            border="5px solid white"
-            boxShadow="0px 0px 0px 3px #B88746"
-            borderRadius="50%"
-            my="1"
-          />
+          <MtnFlx
+            initial={{ opacity: 0, y: -50 }}
+            animate={animateHd}
+            transition={{ delay: 1.5, duration: 2, type: "just" }}
+            direction="column"
+            align="center"
+          >
+            <Divider
+              orientation="vertical"
+              h="40px"
+              border="3px solid"
+              borderColor="#DFBD69"
+            />
+            <Box
+              height="30px"
+              width="30px"
+              backgroundColor="#DFBD69"
+              border="5px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0, y: -100 }}
+            animate={animateHd}
+            transition={{ delay: 3, duration: 2, type: "just" }}
+            direction="column"
+            align="center"
+          >
+            <Divider
+              orientation="vertical"
+              h="180px"
+              border="3px solid"
+              borderColor="#DFBD69"
+            />
+            <Box
+              height="30px"
+              width="30px"
+              backgroundColor="#DFBD69"
+              border="5px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0, y: -400 }}
+            animate={animateHd}
+            transition={{ delay: 4.5, duration: 2, type: "just" }}
+            direction="column"
+            align="center"
+          >
+            <Divider
+              orientation="vertical"
+              h="360px"
+              border="3px solid"
+              borderColor="#DFBD69"
+            />
+            <Box
+              height="30px"
+              width="30px"
+              backgroundColor="#DFBD69"
+              border="5px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />
+          </MtnFlx>
         </Flex>
         <Flex
           w="45%"
           h="100%"
-          pt="55px"
+          pt="50px"
           direction="column"
           justify="space-between"
           align="flex-start"
         >
-          {rightSec.map((item) => (
-            <VStack w="100%" align="flex-start" pb="35px">
-              <Flex w="100%" align="center" justify="center">
-                <Image w="80px" h="80px" my="1px" src={item.icon} />
-              </Flex>
-              <Heading
-                fontFamily="avenir"
-                fontSize="24px"
-                lineHeight="41px"
-                textTransform="uppercase"
-                pb="7px"
-              >
-                {item.title}
-              </Heading>
-              <UnorderedList
-                fontFamily="veralaRound"
-                fontSize="16px"
-                lineHeight="24px"
-                fontWeight="400"
-                pl="6"
-              >
-                {item.list.map((el) => (
-                  <ListItem>
-                    <Text py="5px">{el}</Text>
-                  </ListItem>
-                ))}
-              </UnorderedList>
-            </VStack>
-          ))}
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateHd}
+            transition={{ delay: 1.5, duration: 2, type: "just" }}
+            w="100%"
+            direction="column"
+            align="flex-start"
+          >
+            <Flex w="100%" align="center" justify="center">
+              <Image
+                w="80px"
+                h="80px"
+                src="/images/energy-page/liaisoning.svg"
+              />
+            </Flex>
+            <Heading
+              fontFamily="avenir"
+              fontSize="24px"
+              lineHeight="41px"
+              textTransform="uppercase"
+              mb="7px"
+            >
+              LIAISONING & APPROVALS
+            </Heading>
+            <UnorderedList
+              fontFamily="veralaRound"
+              fontSize="16px"
+              lineHeight="24px"
+              fontWeight="400"
+              pl="6"
+            >
+              <ListItem>
+                Liaisoning for all Govt. Approvals for Project Sanctions
+              </ListItem>
+            </UnorderedList>
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateHd}
+            transition={{ delay: 3, duration: 2, type: "just" }}
+            w="100%"
+            direction="column"
+            align="flex-start"
+          >
+            <Flex w="100%" align="center" justify="center">
+              <Image
+                w="80px"
+                h="80px"
+                src="/images/energy-page/feasibility.svg"
+              />
+            </Flex>
+            <Heading
+              fontFamily="avenir"
+              fontSize="24px"
+              lineHeight="41px"
+              textTransform="uppercase"
+              mb="7px"
+            >
+              FEASIBILITY STUDY
+            </Heading>
+            <UnorderedList
+              fontFamily="veralaRound"
+              fontSize="16px"
+              lineHeight="24px"
+              fontWeight="400"
+              pl="6"
+            >
+              <ListItem>Site Selection</ListItem>
+              <ListItem>Resource Analysis</ListItem>
+              <ListItem>Technical Review</ListItem>
+              <ListItem>Environment Impact Analysis</ListItem>
+              <ListItem>Identification & Selection of Technology</ListItem>
+              <ListItem>Site Visits</ListItem>
+              <ListItem>Detail Project Reports</ListItem>
+            </UnorderedList>
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateHd}
+            transition={{ delay: 4.5, duration: 2, type: "just" }}
+            w="100%"
+            direction="column"
+            align="flex-start"
+          >
+            <Flex w="100%" align="center" justify="center">
+              <Image
+                w="80px"
+                h="80px"
+                src="/images/energy-page/procurement.svg"
+              />
+            </Flex>
+            <Heading
+              fontFamily="avenir"
+              fontSize="24px"
+              lineHeight="41px"
+              textTransform="uppercase"
+              mb="7px"
+            >
+              PROCUREMENT & CONSTRUCTION
+            </Heading>
+            <UnorderedList
+              fontFamily="veralaRound"
+              fontSize="16px"
+              lineHeight="24px"
+              fontWeight="400"
+              pl="6"
+            >
+              <ListItem>Project Design and Optimization</ListItem>
+              <ListItem>
+                Detail Technology Assessment, Selection and Specification
+                Preparation
+              </ListItem>
+              <ListItem>
+                Preparation of Layout Drawings, Erection Documents etc
+              </ListItem>
+            </UnorderedList>
+          </MtnFlx>
         </Flex>
       </Flex>
     </Flex>
@@ -173,61 +386,3 @@ const OneStop = () => {
 };
 
 export default OneStop;
-
-const leftSec = [
-  {
-    icon: "/images/energy-page/financial-and-ppa.svg",
-    title: "FINANCIAL & PPA SUPPORT",
-    list: ["Project Financing", "Power Purchase Agreements"],
-  },
-  {
-    icon: "/images/energy-page/engineering-design.svg",
-    title: "Engineering, Design & due diligence",
-    list: [
-      "Material Procurement and Negotiation on behalf of client",
-      "Project & Site Management",
-      "Plant Commissioning & Synchronisation",
-      "Performance Test",
-      "Technology Assessment",
-      "Independent Technical & Commercial Due diligence",
-    ],
-  },
-  {
-    icon: "/images/energy-page/o-m-consultancy.svg",
-    title: "O & M+ CONSULTANCY",
-    list: [
-      "Plant AMC for Operation & Maintenance",
-      "Specification and Tender Assessment",
-    ],
-  },
-];
-
-const rightSec = [
-  {
-    icon: "/images/energy-page/liaisoning.svg",
-    title: "LIAISONING & APPROVALS",
-    list: ["Liaisoning for all Govt. Approvals for Project Sanctions"],
-  },
-  {
-    icon: "/images/energy-page/feasibility.svg",
-    title: "FEASIBILITY STUDY",
-    list: [
-      " Site Selection",
-      "Resource Analysis",
-      "Technical Review",
-      "Environment Impact Analysis",
-      "Identification & Selection of Technology",
-      "Site Visits",
-      "Detail Project Reports",
-    ],
-  },
-  {
-    icon: "/images/energy-page/procurement.svg",
-    title: "PROCUREMENT & CONSTRUCTION",
-    list: [
-      " Project Design and Optimization",
-      "Detail Technology Assessment, Selection and Specification Preparation",
-      "Preparation of Layout Drawings, Erection Documents etc",
-    ],
-  },
-];

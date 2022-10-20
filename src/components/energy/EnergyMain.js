@@ -1,11 +1,22 @@
 import { Text, Flex, Heading } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 
 const MtnHd = motion(Heading);
 const MtnTxt = motion(Text);
 
 const EnergyMain = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateHd = useAnimation();
+  // const animateTxt = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateHd.start({ opacity: 1 });
+    }
+  }, [isInView, animateHd]);
+
   return (
     <>
       <Flex
@@ -59,10 +70,17 @@ const EnergyMain = () => {
           IS VALUABLE!
         </MtnHd>
       </Flex>
-      <Flex w="100%" h="100%" direction="column" px="100px" my="100px">
+      <Flex
+        ref={ref}
+        w="100%"
+        h="100%"
+        direction="column"
+        px="100px"
+        my="100px"
+      >
         <MtnHd
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={animateHd}
           transition={{ duration: 2, type: "just" }}
           pb="25px"
           fontFamily="goudy"
@@ -75,7 +93,7 @@ const EnergyMain = () => {
         </MtnHd>
         <MtnTxt
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={animateHd}
           transition={{ duration: 2, type: "just" }}
           pb="15px"
           fontFamily="veralaRound"
@@ -90,7 +108,7 @@ const EnergyMain = () => {
         </MtnTxt>
         <MtnTxt
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={animateHd}
           transition={{ duration: 2, type: "just" }}
           fontFamily="veralaRound"
           fontSize="16px"
