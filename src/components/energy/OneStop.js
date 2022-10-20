@@ -33,7 +33,7 @@ const OneStop = () => {
       align="flex-start"
       justify="center"
       pt="100px"
-      pb="15px"
+      pb="50px"
       px="100px"
       direction="column"
     >
@@ -67,8 +67,9 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
+            pb="50px"
           >
-            <Flex w="100%" align="center" justify="center">
+            <Flex w="100%" pb="15px" align="center" justify="center">
               <Image
                 w="80px"
                 h="80px"
@@ -80,7 +81,7 @@ const OneStop = () => {
               fontSize="24px"
               lineHeight="41px"
               textTransform="uppercase"
-              mb="7px"
+              mb="15px"
             >
               FINANCIAL & PPA SUPPORT
             </Heading>
@@ -91,7 +92,7 @@ const OneStop = () => {
               fontWeight="400"
               pl="6"
             >
-              <ListItem>Project Financing</ListItem>
+              <ListItem pb="10px">Project Financing</ListItem>
               <ListItem>Power Purchase Agreements</ListItem>
             </UnorderedList>
           </MtnFlx>
@@ -102,8 +103,9 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
+            pb="50px"
           >
-            <Flex w="100%" align="center" justify="center">
+            <Flex w="100%" pb="15px" align="center" justify="center">
               <Image
                 w="80px"
                 h="80px"
@@ -115,7 +117,7 @@ const OneStop = () => {
               fontSize="24px"
               lineHeight="41px"
               textTransform="uppercase"
-              mb="7px"
+              mb="15px"
             >
               Engineering, Design & due diligence
             </Heading>
@@ -126,13 +128,15 @@ const OneStop = () => {
               fontWeight="400"
               pl="6"
             >
-              <ListItem>
+              <ListItem pb="10px">
                 Material Procurement and Negotiation on behalf of client
               </ListItem>
-              <ListItem>Project & Site Management</ListItem>
-              <ListItem>Plant Commissioning & Synchronisation</ListItem>
-              <ListItem>Performance Test</ListItem>
-              <ListItem>nology Assessment</ListItem>
+              <ListItem pb="10px">Project & Site Management</ListItem>
+              <ListItem pb="10px">
+                Plant Commissioning & Synchronisation
+              </ListItem>
+              <ListItem pb="10px">Performance Test</ListItem>
+              <ListItem pb="10px">Technology Assessment</ListItem>
               <ListItem>
                 Independent Technical & Commercial Due diligence
               </ListItem>
@@ -146,7 +150,7 @@ const OneStop = () => {
             direction="column"
             align="flex-start"
           >
-            <Flex w="100%" align="center" justify="center">
+            <Flex w="100%" pb="15px" align="center" justify="center">
               <Image
                 w="80px"
                 h="80px"
@@ -158,7 +162,7 @@ const OneStop = () => {
               fontSize="24px"
               lineHeight="41px"
               textTransform="uppercase"
-              mb="7px"
+              mb="15px"
             >
               O & M+ CONSULTANCY
             </Heading>
@@ -261,6 +265,7 @@ const OneStop = () => {
           direction="column"
           justify="space-between"
           align="flex-start"
+          pb="25px"
         >
           <MtnFlx
             initial={{ opacity: 0 }}
@@ -269,8 +274,9 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
+            pb="84px"
           >
-            <Flex w="100%" align="center" justify="center">
+            <Flex w="100%" pb="15px" align="center" justify="center">
               <Image
                 w="80px"
                 h="80px"
@@ -282,7 +288,7 @@ const OneStop = () => {
               fontSize="24px"
               lineHeight="41px"
               textTransform="uppercase"
-              mb="7px"
+              mb="15px"
             >
               LIAISONING & APPROVALS
             </Heading>
@@ -291,7 +297,6 @@ const OneStop = () => {
               fontSize="16px"
               lineHeight="24px"
               fontWeight="400"
-              pl="6"
             >
               <ListItem>
                 Liaisoning for all Govt. Approvals for Project Sanctions
@@ -305,8 +310,9 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
+            pb="67px"
           >
-            <Flex w="100%" align="center" justify="center">
+            <Flex w="100%" align="center" pb="15px" justify="center">
               <Image
                 w="80px"
                 h="80px"
@@ -318,7 +324,7 @@ const OneStop = () => {
               fontSize="24px"
               lineHeight="41px"
               textTransform="uppercase"
-              mb="7px"
+              mb="15px"
             >
               FEASIBILITY STUDY
             </Heading>
@@ -327,14 +333,15 @@ const OneStop = () => {
               fontSize="16px"
               lineHeight="24px"
               fontWeight="400"
-              pl="6"
             >
-              <ListItem>Site Selection</ListItem>
-              <ListItem>Resource Analysis</ListItem>
-              <ListItem>Technical Review</ListItem>
-              <ListItem>Environment Impact Analysis</ListItem>
-              <ListItem>Identification & Selection of Technology</ListItem>
-              <ListItem>Site Visits</ListItem>
+              <ListItem pb="10px">Site Selection</ListItem>
+              <ListItem pb="10px">Resource Analysis</ListItem>
+              <ListItem pb="10px">Technical Review</ListItem>
+              <ListItem pb="10px">Environment Impact Analysis</ListItem>
+              <ListItem pb="10px">
+                Identification & Selection of Technology
+              </ListItem>
+              <ListItem pb="10px">Site Visits</ListItem>
               <ListItem>Detail Project Reports</ListItem>
             </UnorderedList>
           </MtnFlx>
@@ -346,7 +353,7 @@ const OneStop = () => {
             direction="column"
             align="flex-start"
           >
-            <Flex w="100%" align="center" justify="center">
+            <Flex w="100%" pb="15px" align="center" justify="center">
               <Image
                 w="80px"
                 h="80px"
@@ -358,7 +365,7 @@ const OneStop = () => {
               fontSize="24px"
               lineHeight="41px"
               textTransform="uppercase"
-              mb="7px"
+              mb="15px"
             >
               PROCUREMENT & CONSTRUCTION
             </Heading>
@@ -369,8 +376,8 @@ const OneStop = () => {
               fontWeight="400"
               pl="6"
             >
-              <ListItem>Project Design and Optimization</ListItem>
-              <ListItem>
+              <ListItem pb="10px">Project Design and Optimization</ListItem>
+              <ListItem pb="10px">
                 Detail Technology Assessment, Selection and Specification
                 Preparation
               </ListItem>
