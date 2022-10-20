@@ -13,14 +13,28 @@ import { useInView } from "framer-motion";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
-const settings = {
-  dots: true,
+const leftsettings = {
+  dots: false,
   arrows: false,
-  fade: true,
+  fade: false,
   infinite: true,
   autoplay: true,
   speed: 500,
   autoplaySpeed: 3000,
+  initialSlide: 0,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
+
+const rightsettings = {
+  dots: false,
+  arrows: false,
+  fade: false,
+  infinite: true,
+  autoplay: true,
+  speed: 500,
+  autoplaySpeed: 3000,
+  initialSlide: 1,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -90,21 +104,20 @@ const Lifeatls = () => {
         transition={{ delay: 1, duration: 2, type: "just" }}
         fontSize="16px"
         fontFamily="veralaRound"
-        px="150px"
         pb="25px"
       >
         We believe when everyone is moving forward together then success takes
-        care of itself. Here is a glimpse of what’s it’s like to be a member of
-        the Prime Lifespace Team.
+        care of itself.
+        <br /> Here is a glimpse of what’s it’s like to be a member of the Prime
+        Lifespace Team.
       </MotnTxt>
       <Flex w="100%" justify="center">
-        <MtnFlx>
+        <MtnFlx w="100%" h="100%">
           <Box
             position={"relative"}
             height={"500px"}
             width={"700px"}
             overflow={"hidden"}
-            mr="25px"
           >
             {/* CSS files for react-slick */}
             <link
@@ -118,9 +131,14 @@ const Lifeatls = () => {
               type="text/css"
               href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
             />
-            <Slider {...settings} ref={(slider) => setSlider(slider)}>
+            <Slider {...leftsettings} ref={(slider) => setSlider(slider)}>
               {images.map((card, index) => (
-                <Image height={"500px"} width={"700px"} src={card} />
+                <Image
+                  key={index}
+                  height={"500px"}
+                  width={"700px"}
+                  src={card}
+                />
               ))}
             </Slider>
           </Box>
@@ -130,9 +148,9 @@ const Lifeatls = () => {
           h="100%"
           direction="column"
           align="space-between"
-          justify="center"
+          justify="space-between"
         >
-          <Flex w="100%" align="flex-end" justify="center">
+          <Flex w="100%" align="flex-end" justify="flex-end">
             <Box
               position={"relative"}
               height={"300px"}
@@ -153,9 +171,14 @@ const Lifeatls = () => {
                 href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
               />
 
-              <Slider {...settings} ref={(slider) => setSlider(slider)}>
+              <Slider {...rightsettings} ref={(slider) => setSlider(slider)}>
                 {images.map((card, index) => (
-                  <Image height={"300px"} width={"425px"} src={card} />
+                  <Image
+                    key={index}
+                    height={"300px"}
+                    width={"425px"}
+                    src={card}
+                  />
                 ))}
               </Slider>
             </Box>
@@ -165,8 +188,8 @@ const Lifeatls = () => {
             h="100%"
             align="center"
             justify="space-between"
-            px="50px"
-            py="100px"
+            // px="50px"
+            // py="100px"
           >
             {/* left Icon */}
             <IconButton
@@ -175,7 +198,7 @@ const Lifeatls = () => {
               borderRadius="50%"
               w="50px"
               h="50px"
-              p="3"
+              p="1"
               borderColor="#B88746"
               zIndex={2}
               onClick={() => slider?.slickPrev()}

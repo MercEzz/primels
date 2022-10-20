@@ -214,13 +214,13 @@ const OneStop = () => {
           <MtnFlx
             initial={{ opacity: 0, y: -100 }}
             animate={animateHd}
-            transition={{ delay: 3, duration: 2, type: "just" }}
+            transition={{ delay: 3.5, duration: 2, type: "just" }}
             direction="column"
             align="center"
           >
             <Divider
               orientation="vertical"
-              h="180px"
+              h="210px"
               border="3px solid"
               borderColor="#DFBD69"
             />
@@ -237,13 +237,13 @@ const OneStop = () => {
           <MtnFlx
             initial={{ opacity: 0, y: -400 }}
             animate={animateHd}
-            transition={{ delay: 4.5, duration: 2, type: "just" }}
+            transition={{ delay: 5, duration: 2, type: "just" }}
             direction="column"
             align="center"
           >
             <Divider
               orientation="vertical"
-              h="360px"
+              h="390px"
               border="3px solid"
               borderColor="#DFBD69"
             />

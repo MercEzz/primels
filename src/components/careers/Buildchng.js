@@ -18,7 +18,7 @@ const Buildchng = () => {
   useEffect(() => {
     if (isInView) {
       animationHead.start({ opacity: 1, y: 0 });
-      animationImg.start({ scale: 1 });
+      animationImg.start({ scale: 1, opacity: 1 });
       animationDvd.start({ opacity: 1, y: 0 });
       animationLtr.start({ opacity: 1, x: 0 });
       animationRightTxt.start({ opacity: 1, x: 0 });
@@ -52,14 +52,55 @@ const Buildchng = () => {
         BUILDING CHANGE
       </MtnHead>
       <Flex align="flex-start" mt="50px" justify="center" w="100%">
-        <Flex w="100%">
+        <Flex w="100%" direction="column" pos="relative">
           <MtnImg
             initial={{ scale: 0.5 }}
             animate={animationImg}
             transition={{ delay: 1, duration: 2, type: "just" }}
+            pos="absolute"
             w="813px"
             h="568px"
             src="/images/careers/problem solving.jpg"
+          />
+          <MtnImg
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={animationImg}
+            transition={{ delay: 3, duration: 2, type: "just" }}
+            pos="absolute"
+            w="813px"
+            h="568px"
+            src="/images/careers/reliability.jpg"
+            zIndex="2"
+          />
+          <MtnImg
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={animationImg}
+            transition={{ delay: 5, duration: 2, type: "just" }}
+            pos="absolute"
+            w="813px"
+            h="568px"
+            src="/images/careers/innovation.jpg"
+            zIndex="3"
+          />
+          <MtnImg
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={animationImg}
+            transition={{ delay: 8, duration: 2, type: "just" }}
+            pos="absolute"
+            w="813px"
+            h="568px"
+            src="/images/careers/management.jpg"
+            zIndex="4"
+          />
+          <MtnImg
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={animationImg}
+            transition={{ delay: 10, duration: 2, type: "just" }}
+            pos="absolute"
+            w="813px"
+            h="568px"
+            src="/images/careers/engagement.jpg"
+            zIndex="5"
           />
         </Flex>
         <Flex direction="column" h="100%" align="flex-start" pr="100px">
@@ -120,7 +161,7 @@ const Buildchng = () => {
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
               animate={animationLtr}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+              transition={{ delay: 2.5, duration: 2, type: "just" }}
               fontSize="110px"
               fontWeight="400"
               fontFamily="goudy"
@@ -133,7 +174,7 @@ const Buildchng = () => {
             <MtnFlx
               initial={{ opacity: 0, x: 50 }}
               animate={animationRightTxt}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+              transition={{ delay: 2.5, duration: 2, type: "just" }}
               direction="column"
             >
               <Heading fontSize="20px" pb="10px" fontFamily="avenir">
@@ -148,7 +189,7 @@ const Buildchng = () => {
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
               animate={animationLtr}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+              transition={{ delay: 5, duration: 2, type: "just" }}
               fontSize="110px"
               fontWeight="400"
               fontFamily="goudy"
@@ -162,7 +203,7 @@ const Buildchng = () => {
             <MtnFlx
               initial={{ opacity: 0, x: 50 }}
               animate={animationRightTxt}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+              transition={{ delay: 5, duration: 2, type: "just" }}
               direction="column"
             >
               <Heading fontSize="20px" pb="10px" fontFamily="avenir">
@@ -177,7 +218,7 @@ const Buildchng = () => {
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
               animate={animationLtr}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+              transition={{ delay: 7.5, duration: 2, type: "just" }}
               fontSize="110px"
               fontWeight="400"
               fontFamily="goudy"
@@ -191,7 +232,7 @@ const Buildchng = () => {
             <MtnFlx
               initial={{ opacity: 0, x: 50 }}
               animate={animationRightTxt}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+              transition={{ delay: 7.5, duration: 2, type: "just" }}
               direction="column"
             >
               <Heading fontSize="20px" pb="10px" fontFamily="avenir">
@@ -206,7 +247,7 @@ const Buildchng = () => {
             <MtnHead
               initial={{ opacity: 0, x: -50 }}
               animate={animationLtr}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+              transition={{ delay: 10, duration: 2, type: "just" }}
               fontSize="110px"
               fontWeight="400"
               fontFamily="goudy"
@@ -219,7 +260,7 @@ const Buildchng = () => {
             <MtnFlx
               initial={{ opacity: 0, x: 50 }}
               animate={animationRightTxt}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+              transition={{ delay: 10, duration: 2, type: "just" }}
               direction="column"
             >
               <Heading fontSize="20px" pb="10px" fontFamily="avenir">
