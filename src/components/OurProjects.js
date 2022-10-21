@@ -9,11 +9,28 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
-import React from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+
+const MtnDvdr = motion(Divider);
 
 const OurProjects = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateDvdr = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateDvdr.start({
+        x: 0,
+        opacity: 1,
+      });
+    }
+  }, [isInView, animateDvdr]);
+
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       direction="column"
@@ -25,7 +42,10 @@ const OurProjects = () => {
       <Flex w="100%" h="60px" align="center" justify="center">
         <Flex w="94%" />
         <Flex w="100%" align="center">
-          <Divider
+          <MtnDvdr
+            initial={{ opacity: 0, x: 100 }}
+            animate={animateDvdr}
+            transition={{ duration: 2, type: "just" }}
             w="175px"
             orientation="horizontal"
             border="3px solid"

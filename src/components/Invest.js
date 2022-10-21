@@ -2,18 +2,44 @@ import {
   Button,
   Flex,
   Heading,
-  Icon,
   Image,
   Text,
   Divider,
   Box,
 } from "@chakra-ui/react";
-import React from "react";
-import { ImLocation } from "react-icons/im";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+// import { ImLocation } from "react-icons/im";
+
+const MtnHead = motion(Heading);
+const MtnFlx = motion(Flex);
 
 const Invest = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateY = useAnimation();
+  const animateX = useAnimation();
+  const animateFade = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateY.start({
+        opacity: 1,
+        y: 0,
+      });
+      animateX.start({
+        opacity: 1,
+        x: 0,
+      });
+      animateFade.start({
+        opacity: 1,
+      });
+    }
+  }, [isInView, animateX, animateY, animateFade]);
+
   return (
     <Flex
+      ref={ref}
       w="100%"
       direction="column"
       align="center"
@@ -22,19 +48,40 @@ const Invest = () => {
       pt="50px"
       px="100px"
     >
-      <Heading fontFamily="goudy" fontWeight="400" fontSize="40px">
+      <MtnHead
+        initial={{ opacity: 0, y: -50 }}
+        animate={animateY}
+        transition={{ duration: 2, type: "just" }}
+        fontFamily="goudy"
+        fontWeight="400"
+        fontSize="40px"
+      >
         INVEST IN RENT GENERATING ASSETS
-      </Heading>
+      </MtnHead>
       <Flex w="100%" pt="50px">
-        <Flex w="47.5%">
+        <MtnFlx
+          initial={{ opacity: 0, x: 150 }}
+          animate={animateX}
+          transition={{ delay: 1.5, duration: 2, type: "just" }}
+          w="47.5%"
+        >
           <Image w="608px" h="500px" src="/images/invest.png" />
-        </Flex>
-        <Flex h="145px" w="5%" direction="column" align="center" px="40px">
+        </MtnFlx>
+        <MtnFlx
+          initial={{ opacity: 0, y: -150 }}
+          animate={animateY}
+          transition={{ delay: 1.5, duration: 2, type: "just" }}
+          h="145px"
+          w="5%"
+          direction="column"
+          align="center"
+          px="40px"
+        >
           <Divider
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
-          />{" "}
+          />
           <Box
             height="30px"
             width="25px"
@@ -44,16 +91,27 @@ const Invest = () => {
             borderRadius="50%"
             my="1"
           />
-        </Flex>
-        <Flex w="47.5%" direction="column" justify="center" align="flex-start">
-          <Heading
+        </MtnFlx>
+        <MtnFlx
+          initial={{ opacity: 0 }}
+          animate={animateFade}
+          transition={{ delay: 3, duration: 2, type: "just" }}
+          w="47.5%"
+          direction="column"
+          justify="center"
+          align="flex-start"
+        >
+          <MtnHead
+            initial={{ opacity: 0, x: -150 }}
+            animate={animateX}
+            transition={{ delay: 1.5, duration: 2, type: "just" }}
             w="100%"
             fontFamily="avenir"
             fontSize="34px"
             textAlign="left"
           >
             8% ROI ON HOMES
-          </Heading>
+          </MtnHead>
 
           <Flex my="25px" w="100%" justify="space-between">
             <Flex direction="column">
@@ -134,7 +192,7 @@ const Invest = () => {
           >
             VIEW DETAILS
           </Button>
-        </Flex>
+        </MtnFlx>
       </Flex>
     </Flex>
   );
