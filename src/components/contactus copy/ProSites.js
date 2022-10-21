@@ -30,7 +30,7 @@ const ProSites2 = () => {
       direction="column"
       w="100%"
       h="100vh"
-      py="100px"
+      // py="100px"
       align="center"
       justify="center"
     >

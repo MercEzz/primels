@@ -36,14 +36,13 @@ const GetInTouch2 = () => {
 
   return (
     <Flex
-      ref={ref}
       direction="column"
       w="100%"
       h="100vh"
-      pt="50px"
+      // pt="50px"
       align="center"
       justify="center"
-      px="100px"
+      // px="100px"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
       <Heading
@@ -55,9 +54,9 @@ const GetInTouch2 = () => {
         GET IN TOUCH
       </Heading>
       <Text
-        initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 1.5, duration: 2, type: "just" }}
+        // initial={{ opacity: 0 }}
+        // animate={animateFade}
+        // transition={{ delay: 1.5, duration: 2, type: "just" }}
         fontSize="16px"
         fontFamily="veralaRound"
         py="25px"
