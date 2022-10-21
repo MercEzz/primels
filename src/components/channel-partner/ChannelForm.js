@@ -77,7 +77,7 @@ const ChannelForm = () => {
           textAlign="center"
           zIndex="10"
           color={dis ? "black" : "white"}
-          transition="all .75s"
+          transition="ease-in-out 1.5s"
         >
           where opportunities pave the way for <br />
           incredible rewards
