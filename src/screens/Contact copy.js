@@ -2,6 +2,7 @@ import { Flex } from "@chakra-ui/react";
 import React from "react";
 import AddresSec2 from "../components/contactus copy/AddresSec";
 import ContactMain2 from "../components/contactus copy/contact-main";
+import GetInTouch2 from "../components/contactus copy/GetInTouch";
 import ProSites2 from "../components/contactus copy/ProSites";
 import AddresSec from "../components/contactus/AddresSec";
 
@@ -14,7 +15,7 @@ const Contact2 = () => {
       <ContactMain2 />
       <AddresSec2 />
       <ProSites2 />
-      <GetInTouch />
+      <GetInTouch2 />
     </Flex>
   );
 };

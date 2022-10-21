@@ -1,6 +1,7 @@
 import { Flex, Heading, Text, Divider, Box, Icon } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
+import SideVector2 from "./side-vector";
 import SideVector from "./side-vector";
 
 const MtnHd = motion(Heading);
@@ -18,6 +19,8 @@ const ContactMain2 = () => {
       align="center"
       justify="center"
     >
+      {" "}
+      <Flex w="10%" h="100%" bgColor="blackAlpha.300"></Flex>
       <Flex
         w="100%"
         h="100%"
@@ -29,7 +32,7 @@ const ContactMain2 = () => {
         color="white"
       >
         <Flex
-          w="100%"
+          w="80%"
           h="100%"
           direction="column"
           align="center"
@@ -46,7 +49,9 @@ const ContactMain2 = () => {
           </Text>
         </Flex>
       </Flex>
-      {/* <SideVector /> */}
+      <Flex w="10%" h="100%">
+        <SideVector2 />
+      </Flex>
     </Flex>
   );
 };

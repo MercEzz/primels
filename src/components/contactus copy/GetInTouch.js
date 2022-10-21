@@ -16,7 +16,7 @@ const MtnHd = motion(Heading);
 const MtnTxt = motion(Text);
 const MtnContainer = motion(Container);
 
-const GetInTouch = () => {
+const GetInTouch2 = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const animateHd = useAnimation();
@@ -39,24 +39,22 @@ const GetInTouch = () => {
       ref={ref}
       direction="column"
       w="100%"
+      h="100vh"
       pt="50px"
       align="center"
       justify="center"
       px="100px"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
-      <MtnHd
-        initial={{ opacity: 0, y: -50 }}
-        animate={animateHd}
-        transition={{ duration: 2, type: "just" }}
+      <Heading
         fontFamily="goudy"
         fontWeight="400"
         fontSize="40px"
         lineHeight="60px"
       >
         GET IN TOUCH
-      </MtnHd>
-      <MtnTxt
+      </Heading>
+      <Text
         initial={{ opacity: 0 }}
         animate={animateFade}
         transition={{ delay: 1.5, duration: 2, type: "just" }}
@@ -66,11 +64,11 @@ const GetInTouch = () => {
         textAlign="center"
       >
         Leave us your information and our team will get back to you.
-      </MtnTxt>
-      <MtnContainer
-        initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 3, duration: 2, type: "just" }}
+      </Text>
+      <Container
+        // initial={{ opacity: 0 }}
+        // animate={animateFade}
+        // transition={{ delay: 3, duration: 2, type: "just" }}
         minw="container.sm"
       >
         <FormControl align="center" justify="center">
@@ -140,9 +138,9 @@ const GetInTouch = () => {
             SUBMIT NOW
           </Button>
         </FormControl>
-      </MtnContainer>
+      </Container>
     </Flex>
   );
 };
 
-export default GetInTouch;
+export default GetInTouch2;

@@ -109,7 +109,7 @@ const ProSites2 = () => {
           </Text>
         </Flex>
       </Flex>
-      <MtnStk
+      <VStack
         initial={{ opacity: 0 }}
         animate={animateFade}
         transition={{ delay: 2, duration: 2, type: "just" }}
@@ -121,19 +121,15 @@ const ProSites2 = () => {
         <Heading fontFamily="avenir" fontSize="24px" lineHeight="41px">
           info@primelifespace.com
         </Heading>
-      </MtnStk>
-      <MtnStk
-        initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 2, duration: 2, type: "just" }}
-      >
+      </VStack>
+      <VStack>
         <Text fontFamily="veralaRound" fontSize="20px" lineHeight="24px">
           For procurement related queries, email us at
         </Text>
         <Heading fontFamily="avenir" fontSize="24px" lineHeight="41px">
           purchase@primelifespace.com
         </Heading>
-      </MtnStk>
+      </VStack>
     </Flex>
   );
 };

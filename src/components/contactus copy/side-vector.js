@@ -10,13 +10,10 @@ import { motion } from "framer-motion";
 
 const MtnFlx = motion(Flex);
 
-const SideVector = () => {
+const SideVector2 = () => {
   return (
-    <Flex h="100%" bgColor="blackAlpha.300">
-      <MtnFlx
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2, type: "just" }}
+    <Flex w="100%" h="100%" bgColor="blackAlpha.300">
+      <Flex
         h="100%"
         direction="column"
         align="center"
@@ -25,7 +22,7 @@ const SideVector = () => {
         // pos="fixed"
         // right="0"
         // top="0"
-        px="100px"
+        // px="100px"
       >
         <Divider
           h="100px"
@@ -42,7 +39,7 @@ const SideVector = () => {
           borderRadius="50%"
           my="1"
         />
-        <MtnFlx
+        <Flex
           initial={{ opacity: 0, y: -200 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 2, type: "just" }}
@@ -52,10 +49,10 @@ const SideVector = () => {
           <Icon as={RiLinkedinBoxFill} h="50px" w="50px" my="10px" />
           <Icon as={RiFacebookCircleFill} h="50px" w="50px" mb="10px" />
           <Icon as={RiYoutubeFill} h="50px" w="50px" />
-        </MtnFlx>
-      </MtnFlx>
+        </Flex>
+      </Flex>
     </Flex>
   );
 };
 
-export default SideVector;
+export default SideVector2;
