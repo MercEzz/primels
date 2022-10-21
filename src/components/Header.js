@@ -6,7 +6,7 @@ const Header = () => {
   const [navbar, setNavbar] = useState(false);
 
   const changeBg = () => {
-    if (window.scrollY >= 1) {
+    if (window.scrollY >= 200) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -24,18 +24,20 @@ const Header = () => {
       w="100%"
       h="100px"
       bgColor="#fff"
-      transition="all .5s"
+      transition="all 2s"
       align="center"
-      justify="flex-end"
+      justify="center"
     >
-      <Flex alignItems={"center"} w="100%" justifyContent={"center"}>
+      {" "}
+      <Flex w="25%"></Flex>
+      <Flex alignItems={"center"} w="50%" justifyContent={"center"}>
         <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
           <Link>EXPERTISE</Link>
         </Heading>
         <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
           <Link>PROJECTS</Link>
         </Heading>
-        <Flex w="100%" h="100%" px="3" align="center">
+        <Flex minW="350px" maxH="78px" px="3" align="center">
           <Image w="100%" h="100%" src="/images/logo.png" />
         </Flex>
         <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
@@ -45,7 +47,7 @@ const Header = () => {
           <Link>HOUSING</Link>
         </Heading>
       </Flex>
-      <Flex w="100%" fontWeight="700" pr="10" align="center" justify="flex-end">
+      <Flex w="25%" justify="flex-end" align="center">
         <Heading as="span" fontFamily="avenir">
           <Button
             my="4"

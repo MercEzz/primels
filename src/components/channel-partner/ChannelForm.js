@@ -551,9 +551,7 @@ const ChannelForm = () => {
             borderBottom="2px solid white"
             icon={<TriangleDownIcon width="18px" height="18px" />}
           >
-            <option style={{ color: "black", borderRadius: "none" }}>
-              ARETE HOMES
-            </option>
+            <option style={{ color: "black" }}>ARETE HOMES</option>
             <option style={{ color: "black" }}>SKY HIGH TOWER</option>
             <option style={{ color: "black" }}>PGC</option>
             <option style={{ color: "black" }}>ARETE PLAZA</option>
