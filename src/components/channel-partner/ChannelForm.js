@@ -9,18 +9,35 @@ import {
   Text,
   Icon,
   Button,
+  Menu,
+  MenuList,
+  MenuItem,
+  MenuButton,
   Select,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { BsUpload } from "react-icons/bs";
 import { AiOutlineDownload } from "react-icons/ai";
 import { MdArrowDropDown } from "react-icons/md";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { TriangleDownIcon } from "@chakra-ui/icons";
 
 const MtnHd = motion(Heading);
+const MtnTxt = motion(Text);
+const MtnFlx = motion(Flex);
 
 const ChannelForm = () => {
   const [dis, setDis] = useState(false);
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateFlx = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateFlx.start({ opacity: 1 });
+    }
+  }, [isInView, animateFlx]);
 
   const track = () => {
     console.log(window.scrollY);
@@ -47,10 +64,10 @@ const ChannelForm = () => {
         bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       >
         {" "}
-        <MtnHd
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, type: "just", ease: "easeIn" }}
+        <Heading
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // transition={{ duration: 2, type: "just", ease: "easeIn" }}
           bottom={dis ? "0" : "30vh"}
           pos={dis ? "static" : "fixed"}
           fontSize="40px"
@@ -60,12 +77,16 @@ const ChannelForm = () => {
           textAlign="center"
           zIndex="10"
           color={dis ? "black" : "white"}
-          // transition="all .25s"
+          transition="all .75s"
         >
           where opportunities pave the way for <br />
           incredible rewards
-        </MtnHd>
-        <Text
+        </Heading>
+        <MtnTxt
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={animateFlx}
+          transition={{ duration: 2, type: "just" }}
           px="100px"
           pt={dis ? "25px" : "150px"}
           fontFamily="veralaRound"
@@ -82,9 +103,14 @@ const ChannelForm = () => {
             Please fill in the details below for all your marketing
             requirements.
           </Text>
-        </Text>
-        <FormControl align="center">
-          <Flex w="100%">
+        </MtnTxt>
+        <FormControl ref={ref} align="center">
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateFlx}
+            transition={{ duration: 2, type: "just" }}
+            w="100%"
+          >
             {/* top - left */}
             <Flex w="100%" direction="column" pr="45px">
               <Flex justify="space-between" mb="15px">
@@ -345,7 +371,7 @@ const ChannelForm = () => {
                 </Flex>
               </Flex>
             </Flex>
-          </Flex>
+          </MtnFlx>
 
           {/* left-bottom */}
 
@@ -508,6 +534,7 @@ const ChannelForm = () => {
       >
         <Flex
           w="100%"
+          pos="relative"
           align="center"
           justify="flex-end"
           pr="50px"
@@ -518,15 +545,39 @@ const ChannelForm = () => {
             fontFamily="avenir"
             fontSize="16px"
             w="300px"
-            placeholder="SELECT PROJECT"
+            // placeholder="SELECT PROJECT"
             textTransform="uppercase"
             variant="flushed"
             borderBottom="2px solid white"
-            icon={<MdArrowDropDown />}
+            icon={<TriangleDownIcon width="18px" height="18px" />}
           >
-            <option></option>
-            <option></option>
+            <option style={{ color: "black", borderRadius: "none" }}>
+              ARETE HOMES
+            </option>
+            <option style={{ color: "black" }}>SKY HIGH TOWER</option>
+            <option style={{ color: "black" }}>PGC</option>
+            <option style={{ color: "black" }}>ARETE PLAZA</option>
+            <option style={{ color: "black" }}>ARETE MALL</option>
           </Select>
+          {/* <Menu>
+            <MenuButton
+              fontFamily="avenir"
+              fontSize="16px"
+              w="300px"
+              variant="flushed"
+              as={Button}
+              rightIcon={<TriangleDownIcon />}
+            >
+              Actions
+            </MenuButton>
+            <MenuList>
+              <MenuItem>Download</MenuItem>
+              <MenuItem>Create a Copy</MenuItem>
+              <MenuItem>Mark as Draft</MenuItem>
+              <MenuItem>Delete</MenuItem>
+              <MenuItem>Attend a Workshop</MenuItem>
+            </MenuList>
+          </Menu> */}
         </Flex>
         <Flex w="100%" align="center" justify="flex-start" pl="50px">
           <Icon as={AiOutlineDownload} h="30px" w="30px" mr="10px" />
