@@ -4,7 +4,6 @@ import {
   FormControl,
   FormLabel,
   Heading,
-  HStack,
   Input,
   VStack,
   Text,
@@ -12,38 +11,63 @@ import {
   Button,
   Select,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { BsUpload } from "react-icons/bs";
 import { AiOutlineDownload } from "react-icons/ai";
 import { MdArrowDropDown } from "react-icons/md";
+import { motion } from "framer-motion";
+
+const MtnHd = motion(Heading);
 
 const ChannelForm = () => {
+  const [dis, setDis] = useState(false);
+
+  const track = () => {
+    console.log(window.scrollY);
+    if (window.scrollY > 370) {
+      setDis(true);
+    } else {
+      setDis(false);
+    }
+  };
+
+  window.addEventListener("scroll", track);
+
   return (
     <>
       <Flex
         w="100%"
         h="100%"
+        pos="relative"
         direction="column"
         align="center"
         justify="center"
+        pt="50px"
         px="100px"
         bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       >
-        <Heading
-          initial={{}}
+        {" "}
+        <MtnHd
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2, type: "just", ease: "easeIn" }}
+          bottom={dis ? "0" : "30vh"}
+          pos={dis ? "static" : "fixed"}
           fontSize="40px"
           fontFamily="avenir"
           lineHeight="57px"
           textTransform="uppercase"
           textAlign="center"
-          mt="50px"
-          mb="25px"
+          zIndex="10"
+          color={dis ? "black" : "white"}
+          // transition="all .25s"
         >
           where opportunities pave the way for <br />
           incredible rewards
-        </Heading>
+        </MtnHd>
         <Text
           px="100px"
+          pt={dis ? "25px" : "150px"}
           fontFamily="veralaRound"
           fontSize="16px"
           lineHeight="24px"
@@ -472,6 +496,7 @@ const ChannelForm = () => {
         </FormControl>
       </Flex>
       <Flex
+        pos="relative"
         w="100%"
         align="center"
         justify="center"

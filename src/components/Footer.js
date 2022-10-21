@@ -20,6 +20,7 @@ import { MdEmail } from "react-icons/md";
 const Footer = () => {
   return (
     <Flex
+      pos="relative"
       direction="column"
       align="center"
       bgColor="black"

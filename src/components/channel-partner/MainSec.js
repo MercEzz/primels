@@ -9,6 +9,7 @@ const MainSec = () => {
       h="568px"
       direction="column"
       align="center"
+      justify="center"
       pos="relative"
       overflow="hidden"
     >
@@ -17,7 +18,7 @@ const MainSec = () => {
         muted
         // loop
         style={{
-          position: "absolute",
+          position: "fixed",
           top: 0,
           left: 0,
           minHeight: "100%",
