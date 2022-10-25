@@ -22,26 +22,24 @@ const SideVector = () => {
         align="center"
         justify="flex-start"
         color="black"
-        // pos="fixed"
+        pos="fixed"
         // right="0"
         // top="0"
         // px="100px"
       >
         <Divider
-          h="100px"
+          h="25vh"
           orientation="vertical"
           border="3px solid"
           borderColor="#DFBD69"
           bgColor="#DFBD69"
         />{" "}
         <Box
-          height="30px"
-          width="30px"
-          backgroundColor="#DFBD69"
-          border="4px solid rgba(0, 0, 0, .4)"
-          boxShadow="0px 0px 0px 3px #B88746"
+          backgroundColor="#CE1126"
+          width="50px"
+          height="50px"
           borderRadius="50%"
-          my="1"
+          boxShadow="inset 0 0 0 4px #00247D, inset 0 0 0 20px rgba(0,0,0, 0.1)"
         />
         <MtnFlx
           initial={{ opacity: 0, y: -200 }}

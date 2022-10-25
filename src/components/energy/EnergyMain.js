@@ -8,11 +8,11 @@ const EnergyMain = () => {
     <>
       <Flex
         w="100%"
-        h="100vh"
+        h="93.5vh"
         alignItems="center"
         justifyContent="center"
         pos="relative"
-        overflow="hidden"
+        // overflow="hidden"
       >
         <video
           autoPlay

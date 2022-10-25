@@ -18,7 +18,7 @@ const MtnContainer = motion(Container);
 
 const GetInTouch = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref);
   const animateHd = useAnimation();
 
   useEffect(() => {
