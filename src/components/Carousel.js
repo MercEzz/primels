@@ -48,8 +48,8 @@ const Carousel = () => {
   return (
     <Box
       position={"relative"}
-      height={"568px"}
-      width={"948px"}
+      height={"100vh"}
+      width={"100%"}
       overflow={"hidden"}
     >
       {/* CSS files for react-slick */}
@@ -95,8 +95,8 @@ const Carousel = () => {
         {cards.map((card, index) => (
           <Box
             key={index}
-            w="60%"
-            height={"6xl"}
+            w="100%"
+            height={"100vh"}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
