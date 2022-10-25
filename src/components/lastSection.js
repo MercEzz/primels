@@ -3,8 +3,16 @@ import React from "react";
 
 const LastSection = () => {
   return (
-    <Flex direction="column" px="100px" pb="100px" pt="150px">
-      <Flex pos="relative" pb="300px">
+    <Flex
+      w="100%"
+      minH="100vh"
+      direction="column"
+      align="center"
+      justify="center"
+      px="100px"
+      py="100px"
+    >
+      <Flex w="100%" pos="relative" pb="270px">
         <Flex
           bgGradient="linear(to-r, #B88746 ,#DFBD69)"
           pl="25px"
@@ -20,10 +28,10 @@ const LastSection = () => {
             Hear What <br /> People Has To <br /> Say About Us.
           </Text>
         </Flex>
-        <Flex pos="absolute" left="300px" top="50px">
+        <Flex w="80%" h="80%" pos="absolute" left="22%" top="10%">
           <iframe
-            width="853"
-            height="480"
+            width="100%"
+            height="100%"
             src="https://www.youtube.com/embed/I4W3vUKtobA?list=PLqrT0vNnEFLMvPT1N2NpvkxTOR1fENykN"
             title="See what our customer speaks about Arete Homes!"
             frameborder="0"

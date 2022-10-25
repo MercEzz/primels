@@ -45,7 +45,7 @@ const OurProjects = () => {
             initial={{ opacity: 0, x: 100 }}
             animate={animateDvdr}
             transition={{ duration: 2, type: "just" }}
-            w="18%"
+            w="23%"
             orientation="horizontal"
             border="3px solid"
             bgColor="#DFBD69"

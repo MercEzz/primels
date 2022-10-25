@@ -3,8 +3,8 @@ import React from "react";
 
 const Ponneri = () => {
   return (
-    <Flex w="100%" h="100%" pt="100px">
-      <Flex direction="column">
+    <Flex w="100%" h="100vh" py="50px" my="50px">
+      <Flex w="70%" h="100%" direction="column">
         <Flex w="100%" align="center" justify="flex-end" pb="50px">
           {/* <Image src="/images/logo.png" /> */}
           <Heading
@@ -23,7 +23,7 @@ const Ponneri = () => {
             borderColor="#DFBD69"
           />
         </Flex>
-        <Image w="915px" h="515px" src="/images/gymkhana.png" />
+        <Image w="100%" h="100%" src="/images/gymkhana.png" />
       </Flex>
       <Flex w="30%" direction="column" align="flex-start" pl="40px">
         <Flex h="16rem" direction="column" align="center" pt="5.9rem">
