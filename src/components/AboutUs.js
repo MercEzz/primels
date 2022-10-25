@@ -29,16 +29,17 @@ const AboutUs = () => {
   return (
     <Flex
       ref={ref}
-      justify="center"
       w="100%"
-      h="100%"
+      h="100vh"
       align="center"
+      justify="center"
       bgColor="gray.900"
       color="white"
-      pt="100px"
+      py="100px"
+      px="100px"
       direction="column"
     >
-      <Flex w="100%" direction="column" px="100px" align="center">
+      <Flex w="100%" h="100%" direction="column" align="center">
         <MtnHead
           initial={{ y: -50, opacity: 0 }}
           animate={animateHead}
@@ -49,7 +50,7 @@ const AboutUs = () => {
         >
           ABOUT US
         </MtnHead>
-        <Flex w="100%" align="center" direction="column">
+        <Flex w="100%" h="100%" align="center" direction="column">
           <MtnHead
             initial={{ opacity: 0 }}
             animate={animateHead}

@@ -41,11 +41,11 @@ const Invest = () => {
     <Flex
       ref={ref}
       w="100%"
+      h="100vh"
       direction="column"
       align="center"
-      h="100%"
       justify="center"
-      pt="50px"
+      py="50px"
       px="100px"
     >
       <MtnHead
@@ -64,6 +64,8 @@ const Invest = () => {
           animate={animateX}
           transition={{ delay: 1.5, duration: 2, type: "just" }}
           w="47.5%"
+          align="center"
+          justify="center"
         >
           <Image w="608px" h="500px" src="/images/invest.png" />
         </MtnFlx>

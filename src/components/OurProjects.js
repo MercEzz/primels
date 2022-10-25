@@ -32,21 +32,20 @@ const OurProjects = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="100%"
+      h="100vh"
       direction="column"
       align="center"
       justify="center"
-      pt="100px"
-      pb="185px"
+      py="50px"
+      px="50px"
     >
-      <Flex w="100%" h="60px" align="center" justify="center">
-        <Flex w="94%" />
-        <Flex w="100%" align="center">
+      <Flex w="100%" align="center" justify="center">
+        <Flex w="100%" align="center" justify="center">
           <MtnDvdr
             initial={{ opacity: 0, x: 100 }}
             animate={animateDvdr}
             transition={{ duration: 2, type: "just" }}
-            w="175px"
+            w="18%"
             orientation="horizontal"
             border="3px solid"
             bgColor="#DFBD69"
@@ -57,17 +56,9 @@ const OurProjects = () => {
             OUR PROJECTS
           </Text>
         </Flex>
-        <Flex w="100%" />
       </Flex>
       <Flex w="100%" h="100%">
-        <Flex
-          direction="column"
-          justify="center"
-          w="35%"
-          h="100%"
-          ml="100px"
-          pt="200px"
-        >
+        <Flex direction="column" justify="center" w="25%" h="100%" px="6">
           <Heading
             pb="15px"
             fontFamily="avenir"
@@ -75,7 +66,7 @@ const OurProjects = () => {
             w="100%"
             textAlign="left"
           >
-            ARETE HOMES
+            ARETE <br /> HOMES
           </Heading>
           <UnorderedList>
             <ListItem>
@@ -109,11 +100,12 @@ const OurProjects = () => {
             VIEW PROJECT
           </Button>
         </Flex>
-        <Flex h="14.6rem" direction="column" align="center" pt="25px">
+        <Flex w="5%" h="35%" direction="column" align="center" pt="25px">
           <Divider
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
+            bgColor="#DFBD69"
           />{" "}
           <Box
             height="30px"
@@ -125,7 +117,7 @@ const OurProjects = () => {
             my="1"
           />
         </Flex>
-        <Flex w="100%" direction="column" pt="25px" pl="40px" pr="50px">
+        <Flex w="70%" direction="column" pt="25px" pl="40px" pr="50px">
           <Flex>
             <Text
               fontSize="14px"
