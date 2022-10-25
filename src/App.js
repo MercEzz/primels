@@ -13,7 +13,7 @@ import SkyHighSc from "./screens/SkyHighSc";
 function App() {
   return (
     <BrowserRouter>
-      {/* <Header /> */}
+      <Header />
       <Flex
         // mt="100px"
         as="main"

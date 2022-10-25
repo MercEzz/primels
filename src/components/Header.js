@@ -6,7 +6,7 @@ const Header = () => {
   const [navbar, setNavbar] = useState(false);
 
   const changeBg = () => {
-    if (window.scrollY >= 200) {
+    if (window.scrollY >= 100) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -17,13 +17,12 @@ const Header = () => {
 
   return (
     <Flex
-      display={navbar ? "none" : "flex"}
       pos="fixed"
       top="0"
       zIndex="3"
       w="100%"
       h="100px"
-      bgColor="#fff"
+      bgColor={navbar ? "#fff" : "transparent"}
       transition="all 2s"
       align="center"
       justify="center"
