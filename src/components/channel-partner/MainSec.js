@@ -1,5 +1,5 @@
 import { Image, Flex, Heading, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+
 import React from "react";
 
 const MainSec = () => {

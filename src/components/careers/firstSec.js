@@ -19,17 +19,15 @@ const FirstSec = () => {
   return (
     <Flex
       w="100%"
-      h="100%"
-      pb="50px"
+      h="100vh"
       align="center"
       justify="center"
-      // bgImage="/images/bg-box.jpg"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
       <Flex w="100%" h="100%" align="center" justify="center">
         <MotnImg
-          w="918px"
-          h="568px"
+          w="100%"
+          h="100%"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2, type: "just" }}
