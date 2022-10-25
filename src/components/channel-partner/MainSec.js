@@ -6,7 +6,7 @@ const MainSec = () => {
   return (
     <Flex
       w="100%"
-      h="568px"
+      h="100vh"
       direction="column"
       align="center"
       justify="center"
