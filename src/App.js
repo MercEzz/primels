@@ -8,13 +8,14 @@ import CareersSc from "./screens/CareersSc";
 import Contact from "./screens/Contact";
 import EnergySc from "./screens/EnergySc";
 import ChannelPartner from "./screens/ChannelPartner";
+import SkyHighSc from "./screens/SkyHighSc";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
       <Flex
-        mt="100px"
+        // mt="100px"
         as="main"
         direction="column"
         w="100%"
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/energy-get-in-touch-with-us" element={<EnergySc />} />
           <Route path="/channel-partner" element={<ChannelPartner />} />
+          <Route path="/sky-high" element={<SkyHighSc />} />
         </Routes>
       </Flex>
       <Footer />
