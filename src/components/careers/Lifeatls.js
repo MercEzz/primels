@@ -17,13 +17,14 @@ const leftsettings = {
   dots: false,
   arrows: false,
   fade: false,
+  centerMode: true,
   infinite: true,
   autoplay: true,
   speed: 500,
   autoplaySpeed: 3000,
   initialSlide: 0,
-  slidesToShow: 1,
-  slidesToScroll: 1,
+  slidesToShow: 2,
+  // slidesToScroll: 1,
 };
 
 const rightsettings = {
@@ -77,11 +78,11 @@ const Lifeatls = () => {
     <Flex
       ref={ref}
       w="100%"
-      minh="100%"
+      h="100vh"
       direction="column"
       textAlign="center"
       px="100px"
-      py="50px"
+      py="100px"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgPos="center"
@@ -111,13 +112,14 @@ const Lifeatls = () => {
         <br /> Here is a glimpse of what’s it’s like to be a member of the Prime
         Lifespace Team.
       </MotnTxt>
-      <Flex w="100%" justify="center">
-        <MtnFlx w="100%" h="100%">
+      <Flex w="100%" h="100%" bgColor="red" justify="center">
+        <MtnFlx w="60%" h="100%">
           <Box
             position={"relative"}
-            height={"500px"}
-            width={"700px"}
+            w="100%"
+            h="100%"
             overflow={"hidden"}
+            bgColor="blue"
           >
             {/* CSS files for react-slick */}
             <link
@@ -135,8 +137,9 @@ const Lifeatls = () => {
               {images.map((card, index) => (
                 <Image
                   key={index}
-                  height={"500px"}
-                  width={"700px"}
+                  w="100%"
+                  h="100%"
+                  objectFit="cover"
                   src={card}
                 />
               ))}

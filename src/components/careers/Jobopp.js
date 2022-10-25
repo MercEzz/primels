@@ -36,7 +36,7 @@ const Jobopp = () => {
       ref={ref}
       direction="column"
       w="100%"
-      h="100%"
+      h="100vh"
       align="center"
       mt="100px"
       px="100px"

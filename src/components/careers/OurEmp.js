@@ -1,6 +1,7 @@
-import { Flex, Heading, Text, Avatar, Stack } from "@chakra-ui/react";
+import { Flex, Heading, Text, Avatar, Stack, Icon } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 
 const MtnHead = motion(Heading);
 const MtnFlx = motion(Flex);
@@ -23,16 +24,18 @@ const OurEmp = () => {
       ref={ref}
       direction="column"
       w="100%"
-      h="100%"
-      px="80px"
-      mt="100px"
-      align="center"
+      h="100vh"
+      px="6"
+      py="6"
+      align="flex-start"
+      justify="center"
     >
       <MtnHead
         initial={{ opacity: 0, y: -100 }}
         animate={animationHead}
         transition={{ duration: 2, type: "just" }}
-        direction="column"
+        w="100%"
+        textAlign="center"
         fontSize="40px"
         fontFamily="goudy"
         fontWeight="400"
@@ -40,11 +43,28 @@ const OurEmp = () => {
       >
         OUR HAPPY EMPLOYEES
       </MtnHead>
+
       <MtnFlx
+        h="100%"
+        w="100%"
         initial={{ opacity: 0, y: 100 }}
         animate={animationTest}
         transition={{ delay: 1, duration: 2, type: "just" }}
+        pos="relative"
+        align="center"
+        justify="center"
       >
+        {" "}
+        <Icon
+          pos="absolute"
+          left="0"
+          top="15%"
+          ml="4"
+          w="70px"
+          h="50px"
+          as={ImQuotesLeft}
+          color="#DFBD69"
+        />
         {testimonial.map((tes) => (
           <Flex
             align={"flex-start"}
@@ -53,7 +73,7 @@ const OurEmp = () => {
             direction={"column"}
             key={tes.name}
           >
-            <Text px="25px" fontSize="16px" fontFamily="veralaRound">
+            <Text px="25px" fontSize="16px" pb="12" fontFamily="veralaRound">
               {tes.text}
             </Text>
             <Flex align="center" pt="25px" pl="1.5rem">
@@ -80,7 +100,18 @@ const OurEmp = () => {
               </Stack>
             </Flex>
           </Flex>
-        ))}
+        ))}{" "}
+        <Icon
+          mr="4"
+          color="#DFBD69"
+          pos="absolute"
+          right="0"
+          bottom="35%"
+          zIndex="10"
+          w="70px"
+          h="50px"
+          as={ImQuotesRight}
+        />
       </MtnFlx>
     </Flex>
   );

@@ -36,7 +36,7 @@ const Buildchng = () => {
       ref={ref}
       direction="column"
       w="100%"
-      h="100%"
+      minH="100vh"
       align="center"
       justify="center"
       pt="50px"
@@ -51,24 +51,37 @@ const Buildchng = () => {
       >
         BUILDING CHANGE
       </MtnHead>
-      <Flex align="flex-start" mt="50px" justify="center" w="100%">
-        <Flex w="100%" direction="column" pos="relative">
+      <Flex
+        align="center"
+        mt="50px"
+        justify="center"
+        w="100%"
+        h="100%"
+        pos="relative"
+      >
+        <Flex w="60%" h="100%" direction="column" align="center">
           <MtnImg
             initial={{ scale: 0.5 }}
             animate={animationImg}
             transition={{ delay: 1, duration: 2, type: "just" }}
+            w="55%"
+            h="70%"
             pos="absolute"
-            w="813px"
-            h="568px"
+            top="0"
+            left="0"
             src="/images/careers/problem solving.jpg"
+            objectFit="cover"
           />
           <MtnImg
             initial={{ scale: 0.5, opacity: 0 }}
             animate={animationImg}
             transition={{ delay: 3, duration: 2, type: "just" }}
             pos="absolute"
-            w="813px"
-            h="568px"
+            w="55%"
+            h="70%"
+            top="0"
+            left="0"
+            objectFit="cover"
             src="/images/careers/reliability.jpg"
             zIndex="2"
           />
@@ -77,8 +90,11 @@ const Buildchng = () => {
             animate={animationImg}
             transition={{ delay: 5, duration: 2, type: "just" }}
             pos="absolute"
-            w="813px"
-            h="568px"
+            w="55%"
+            h="70%"
+            top="0"
+            left="0"
+            objectFit="cover"
             src="/images/careers/innovation.jpg"
             zIndex="3"
           />
@@ -87,8 +103,11 @@ const Buildchng = () => {
             animate={animationImg}
             transition={{ delay: 8, duration: 2, type: "just" }}
             pos="absolute"
-            w="813px"
-            h="568px"
+            w="55%"
+            h="70%"
+            top="0"
+            left="0"
+            objectFit="cover"
             src="/images/careers/management.jpg"
             zIndex="4"
           />
@@ -97,13 +116,16 @@ const Buildchng = () => {
             animate={animationImg}
             transition={{ delay: 10, duration: 2, type: "just" }}
             pos="absolute"
-            w="813px"
-            h="568px"
+            w="55%"
+            h="70%"
+            top="0"
+            left="0"
+            objectFit="cover"
             src="/images/careers/engagement.jpg"
             zIndex="5"
           />
         </Flex>
-        <Flex direction="column" h="100%" align="flex-start" pr="100px">
+        <Flex direction="column" w="40%" h="100%" align="flex-start" pr="100px">
           <MtnFlx
             initial={{ opacity: 0, y: -100 }}
             animate={animationDvd}
