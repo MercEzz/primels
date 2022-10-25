@@ -1,13 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import {
-  Flex,
-  Heading,
-  HStack,
-  Icon,
-  Text,
-  VStack,
-  Box,
-} from "@chakra-ui/react";
+import { Flex, Heading, HStack, Icon, Text, VStack } from "@chakra-ui/react";
 import React, { useEffect, useRef } from "react";
 import { ImLocation } from "react-icons/im";
 import { HiMail, HiPhone } from "react-icons/hi";

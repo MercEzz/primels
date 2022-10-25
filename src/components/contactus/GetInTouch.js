@@ -39,10 +39,12 @@ const GetInTouch = () => {
       ref={ref}
       direction="column"
       w="100%"
-      pt="50px"
+      h="100vh"
+      // pt="50px"
+      py="6"
+      px="6"
       align="center"
       justify="center"
-      px="100px"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
       <MtnHd

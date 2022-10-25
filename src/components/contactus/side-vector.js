@@ -12,7 +12,7 @@ const MtnFlx = motion(Flex);
 
 const SideVector = () => {
   return (
-    <Flex h="100%" bgColor="blackAlpha.300">
+    <Flex h="100%" w="100%" bgColor="blackAlpha.300">
       <MtnFlx
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -25,19 +25,20 @@ const SideVector = () => {
         // pos="fixed"
         // right="0"
         // top="0"
-        px="100px"
+        // px="100px"
       >
         <Divider
           h="100px"
           orientation="vertical"
           border="3px solid"
           borderColor="#DFBD69"
+          bgColor="#DFBD69"
         />{" "}
         <Box
           height="30px"
           width="30px"
           backgroundColor="#DFBD69"
-          border="4px solid white"
+          border="4px solid rgba(0, 0, 0, .4)"
           boxShadow="0px 0px 0px 3px #B88746"
           borderRadius="50%"
           my="1"

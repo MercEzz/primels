@@ -19,7 +19,6 @@ const ContactMain2 = () => {
       align="center"
       justify="center"
     >
-      {" "}
       <Flex w="10%" h="100%" bgColor="blackAlpha.300"></Flex>
       <Flex
         w="100%"

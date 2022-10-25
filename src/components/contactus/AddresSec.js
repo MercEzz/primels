@@ -31,20 +31,18 @@ const AddresSec = () => {
   }, [isInView, animateFlx, animateFade]);
 
   return (
-    <Flex ref={ref} w="100%" h="100%">
+    <Flex ref={ref} w="100%" h="100vh">
       <Flex w="40%" h="100%" direction="column" align="center" justify="center">
         <MtnFlx
           initial={{ opacity: 0, scale: 0.5 }}
           animate={animateFlx}
           transition={{ duration: 2, type: "just" }}
           direction="column"
-          w="522px"
-          h="350px"
-          color="white"
-          mb="50px"
-          // py="25px"
-          // pl="100px"
-          // pr="50px"
+          w="100%"
+          h="100%"
+          // color="red"
+          // mb="50px"
+          py="25px"
           align="center"
           justify="center"
           pl="100px"
@@ -97,8 +95,8 @@ const AddresSec = () => {
           animate={animateFlx}
           transition={{ duration: 2, type: "just" }}
           direction="column"
-          w="522px"
-          h="350px"
+          w="100%"
+          h="100%"
           align="center"
           justify="center"
           pl="100px"
@@ -151,19 +149,18 @@ const AddresSec = () => {
         animate={animateFlx}
         transition={{ duration: 2, type: "just" }}
         h="100%"
+        w="60%"
       >
-        <Box w="918px" h="700px">
-          <iframe
-            class="gmap_iframe"
-            width="100%"
-            height="100%"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          ></iframe>
-        </Box>
+        <iframe
+          class="gmap_iframe"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        ></iframe>
       </MtnFlx>
     </Flex>
   );

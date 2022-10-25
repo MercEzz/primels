@@ -29,8 +29,9 @@ const ProSites = () => {
       ref={ref}
       direction="column"
       w="100%"
-      h="100%"
-      py="50px"
+      h="100vh"
+      py="6"
+      px="6"
       align="center"
       justify="center"
     >
@@ -52,7 +53,7 @@ const ProSites = () => {
         w="100%"
         mt="50px"
         mb="50px"
-        px="100px"
+        // px="100px"
         justify="center"
       >
         <Flex
@@ -61,7 +62,6 @@ const ProSites = () => {
           align="center"
           h="100%"
           textAlign="center"
-          pr="25px"
         >
           <Heading
             fontFamily="avenir"
@@ -72,7 +72,9 @@ const ProSites = () => {
             ARETE HOMES <br /> SKY HIGH TOWER
           </Heading>
           <Text fontFamily="veralaRound" fontSize="16px">
-            V no.76, Peruncheri, Ponneri Opposite Velammal International School,
+            V no.76, Peruncheri, Ponneri <br /> Opposite Velammal International{" "}
+            <br />
+            School,
             <br />
             North Chennai - 601204
           </Text>
@@ -83,7 +85,6 @@ const ProSites = () => {
           align="center"
           h="100%"
           textAlign="center"
-          pr="25px"
         >
           <Heading
             fontFamily="avenir"
@@ -95,8 +96,9 @@ const ProSites = () => {
             HOMES
           </Heading>
           <Text fontFamily="veralaRound" fontSize="16px">
-            V. No. 76 , Thatchoor 1, Perucheri, Ponneri, Taluk, Thiruvallur
-            District, <br />
+            V. No. 76 , Thatchoor 1,
+            <br /> Perucheri, Ponneri,
+            <br /> Taluk, Thiruvallur District, <br />
             Chennai- 6001 204
           </Text>
         </Flex>

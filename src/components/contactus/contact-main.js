@@ -10,7 +10,7 @@ const ContactMain = () => {
   return (
     <Flex
       w="100%"
-      h="568px"
+      h="100vh"
       bgImage="/images/contactus/contact-us3.jpg"
       bgPos="bottom"
       bgRepeat="no-repeat"
@@ -18,6 +18,8 @@ const ContactMain = () => {
       align="center"
       justify="center"
     >
+      {" "}
+      <Flex w="10%" h="100%" bgColor="blackAlpha.300"></Flex>
       <Flex
         w="100%"
         h="100%"
@@ -28,13 +30,13 @@ const ContactMain = () => {
         px="100px"
         color="white"
       >
+        {" "}
         <Flex
-          w="100%"
+          w="80%"
           h="100%"
           direction="column"
           align="center"
-          pt="150px"
-          pl="225px"
+          justify="center"
           color="black"
         >
           <MtnHd
@@ -61,7 +63,9 @@ const ContactMain = () => {
           </MtnTxt>
         </Flex>
       </Flex>
-      <SideVector />
+      <Flex w="10%" h="100%">
+        <SideVector />
+      </Flex>
     </Flex>
   );
 };
