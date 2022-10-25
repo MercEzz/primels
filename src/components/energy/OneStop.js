@@ -29,8 +29,8 @@ const OneStop = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="100%"
-      align="flex-start"
+      minH="100vh"
+      align="center"
       justify="center"
       pt="100px"
       pb="50px"
@@ -51,14 +51,14 @@ const OneStop = () => {
       >
         ONE STOP SOLUTION FOR POWER SECTOR
       </MtnHd>
-      <Flex>
+      <Flex w="100%" h="100%">
         <Flex
           w="45%"
           h="100%"
           pt="50px"
           direction="column"
-          align="flex-start"
-          justify="center"
+          align="center"
+          justify="flex-start"
         >
           <MtnFlx
             initial={{ opacity: 0 }}
@@ -102,7 +102,7 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
-            pb="50px"
+            pb="17%"
           >
             <Flex w="100%" pb="15px" align="center" justify="center">
               <Image
@@ -191,12 +191,14 @@ const OneStop = () => {
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             direction="column"
             align="center"
+            w="100%"
           >
             <Divider
               orientation="vertical"
-              h="40px"
+              h="4vh"
               border="3px solid"
               borderColor="#DFBD69"
+              bgColor="#DFBD69"
             />
             <Box
               height="30px"
@@ -217,9 +219,10 @@ const OneStop = () => {
           >
             <Divider
               orientation="vertical"
-              h="210px"
+              h="28vh"
               border="3px solid"
               borderColor="#DFBD69"
+              bgColor="#DFBD69"
             />
             <Box
               height="30px"
@@ -240,9 +243,10 @@ const OneStop = () => {
           >
             <Divider
               orientation="vertical"
-              h="390px"
+              h="53vh"
               border="3px solid"
               borderColor="#DFBD69"
+              bgColor="#DFBD69"
             />
             <Box
               height="30px"
@@ -260,8 +264,8 @@ const OneStop = () => {
           h="100%"
           pt="50px"
           direction="column"
-          justify="space-between"
-          align="flex-start"
+          justify="flex-end"
+          align="center"
           pb="25px"
         >
           <MtnFlx
