@@ -34,13 +34,30 @@ const SideVector = () => {
           borderColor="#DFBD69"
           bgColor="#DFBD69"
         />{" "}
-        <Box
-          backgroundColor="#CE1126"
-          width="50px"
-          height="50px"
-          borderRadius="50%"
-          boxShadow="inset 0 0 0 4px #00247D, inset 0 0 0 20px rgba(0,0,0, 0.1)"
-        />
+        <Flex
+          h="30px"
+          pos="relative"
+          align="center"
+          justify="center"
+          direction="column"
+        >
+          <Box
+            pos="absolute"
+            height="30px"
+            width="30px"
+            boxShadow="0px 0px 0px 3px #B88746"
+            borderRadius="50%"
+            my="0.5"
+          />
+          <Box
+            pos="absolute"
+            height="23px"
+            width="23px"
+            backgroundColor="#DFBD69"
+            borderRadius="50%"
+            my="0.5"
+          />
+        </Flex>
         <MtnFlx
           initial={{ opacity: 0, y: -200 }}
           animate={{ opacity: 1, y: 0 }}

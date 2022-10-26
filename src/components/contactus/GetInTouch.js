@@ -39,7 +39,7 @@ const GetInTouch = () => {
       ref={ref}
       direction="column"
       w="100%"
-      h="100vh"
+      maxH="100vh"
       // pt="50px"
       py="6"
       px="6"

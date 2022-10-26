@@ -8,7 +8,7 @@ import {
   VStack,
   Box,
 } from "@chakra-ui/react";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ImLocation } from "react-icons/im";
 import { HiMail, HiPhone } from "react-icons/hi";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -22,6 +22,22 @@ const AddresSec = () => {
   const isInView = useInView(ref, { once: true });
   const animateFlx = useAnimation();
   const animateFade = useAnimation();
+  const CorporateAdd =
+    "https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed";
+
+  const ChennaiAdd =
+    "https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Prime Expat Infra, chennai&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed";
+  const [toggleAdd, setAdd] = useState(CorporateAdd);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setAdd(CorporateAdd);
+  };
+
+  const handleClickChen = (e) => {
+    e.preventDefault();
+    setAdd(ChennaiAdd);
+  };
 
   useEffect(() => {
     if (isInView) {
@@ -40,14 +56,13 @@ const AddresSec = () => {
           direction="column"
           w="100%"
           h="100%"
-          // color="red"
-          // mb="50px"
           py="25px"
           align="center"
           justify="center"
           pl="100px"
           pr="50px"
           bgGradient="linear(to-b, #B88746, #DFBD69)"
+          onClick={(e) => handleClick(e)}
         >
           <MtnHead
             initial={{ opacity: 0 }}
@@ -101,6 +116,7 @@ const AddresSec = () => {
           justify="center"
           pl="100px"
           pr="50px"
+          // onClick={setAdd(ChennaiAdd)}
         >
           <MtnHead
             initial={{ opacity: 0 }}
