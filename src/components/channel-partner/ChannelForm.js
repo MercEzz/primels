@@ -12,6 +12,7 @@ import {
   Select,
   RadioGroup,
   Radio,
+  FormErrorMessage,
 } from "@chakra-ui/react";
 import React, { useRef, useState, useEffect } from "react";
 import { BsUpload } from "react-icons/bs";
@@ -70,13 +71,37 @@ const ChannelForm = () => {
     othersTxt: "",
     gstNo: "",
     reraNo: "",
-    brokerAssoc: "",
     identityDoc: "",
     name1: "",
     designation1: "",
     name2: "",
     designation2: "",
   });
+
+  const [brokerAssoc, setBrokerAssoc] = useState("");
+  const [validForm, setValidForm] = useState(false);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (
+      companyName != "" ||
+      nameOfOwner != "" ||
+      officeAdd != "" ||
+      mobileNo != "" ||
+      website != "" ||
+      email != "" ||
+      yourFocusLocationArea != "" ||
+      gstNo != "" ||
+      reraNo != "" ||
+      identityDoc != "" ||
+      name1 != "" ||
+      designation1 != "" ||
+      name2 != "" ||
+      designation2 != ""
+    ) {
+      setValidForm(!validForm);
+    }
+  };
 
   const onChange = (e) =>
     setValues({ ...initialValues, [e.target.name]: e.target.value });
@@ -103,7 +128,6 @@ const ChannelForm = () => {
     othersTxt,
     gstNo,
     reraNo,
-    brokerAssoc,
     identityDoc,
     name1,
     designation1,
@@ -164,8 +188,7 @@ const ChannelForm = () => {
         </MtnTxt>
         <form
           onSubmit={(e) => {
-            e.preventDefault();
-            console.log(initialValues);
+            onSubmit(e);
           }}
         >
           <FormControl ref={ref} align="center">
@@ -373,11 +396,20 @@ const ChannelForm = () => {
                       MOBILE NO.*
                     </FormLabel>
                     <Input
+                      type="number"
                       id="mobileNo"
                       name="mobileNo"
                       value={mobileNo}
-                      onChange={(e) => onChange(e)}
-                      type="tel"
+                      onChange={(e) => {
+                        if (e.target.value.length > 10) {
+                          alert("Enter a valid phone number");
+                        } else {
+                          setValues({
+                            ...initialValues,
+                            mobileNo: e.target.value,
+                          });
+                        }
+                      }}
                       fontSize="16px"
                       fontFamily="avenir"
                       w="340px"
@@ -386,6 +418,7 @@ const ChannelForm = () => {
                       borderRadius="none"
                       isRequired
                     />
+                    <FormErrorMessage>Enter a valid number</FormErrorMessage>
                   </Flex>
                   <Flex align="center" justify="space-between" mb="15px">
                     <FormLabel
@@ -623,7 +656,7 @@ const ChannelForm = () => {
                       borderRadius="none"
                     />
                   </Flex>
-                  <RadioGroup onChange={(e) => onChange(e)} value={brokerAssoc}>
+                  <RadioGroup onChange={setBrokerAssoc} value={brokerAssoc}>
                     <FormLabel
                       htmlFor="brokerAssoc"
                       fontSize="16px"
@@ -651,9 +684,7 @@ const ChannelForm = () => {
                 </Flex>
               </Flex>
             </MtnFlx>
-
             {/* left-bottom */}
-
             <Flex
               w="100%"
               pb="15px"
@@ -667,12 +698,21 @@ const ChannelForm = () => {
                 fontFamily="avenir"
                 lineHeight="24px"
                 fontWeight="700"
+                htmlFor="identityDoc"
               >
                 IDENTITY <br />
                 DOCUMENT*
               </FormLabel>
               <Flex direction="column" align="flex-start">
                 <Input
+                  id="identityDoc"
+                  name="identityDoc"
+                  value={identityDoc}
+                  onChange={(e) => {
+                    setValues(...initialValues, {
+                      identityDoc: e.target.files,
+                    });
+                  }}
                   type="file"
                   w="353px"
                   h="50px"
@@ -714,10 +754,15 @@ const ChannelForm = () => {
                     fontFamily="avenir"
                     lineHeight="24px"
                     fontWeight="700"
+                    htmlFor="name1"
                   >
                     NAME*
                   </FormLabel>
                   <Input
+                    id="name1"
+                    name="name1"
+                    value={name1}
+                    onChange={(e) => onChange(e)}
                     type="text"
                     fontSize="16px"
                     fontFamily="avenir"
@@ -725,6 +770,7 @@ const ChannelForm = () => {
                     h="50px"
                     bgColor="#E5E5E5"
                     borderRadius="none"
+                    isRequired
                   />
                 </Flex>
                 <Flex mb="15px" justify="space-between" align="center">
@@ -734,10 +780,15 @@ const ChannelForm = () => {
                     fontFamily="avenir"
                     lineHeight="24px"
                     fontWeight="700"
+                    htmlFor="designation1"
                   >
                     DESIGNATION*
                   </FormLabel>
                   <Input
+                    id="designation1"
+                    name="designation1"
+                    value={designation1}
+                    onChange={(e) => onChange(e)}
                     type="text"
                     fontSize="16px"
                     fontFamily="avenir"
@@ -756,10 +807,15 @@ const ChannelForm = () => {
                     fontFamily="avenir"
                     lineHeight="24px"
                     fontWeight="700"
+                    htmlFor="name2"
                   >
                     NAME*
                   </FormLabel>
                   <Input
+                    id="name2"
+                    name="name2"
+                    value={name2}
+                    onChange={(e) => onChange(e)}
                     type="text"
                     fontSize="16px"
                     fontFamily="avenir"
@@ -776,10 +832,15 @@ const ChannelForm = () => {
                     fontFamily="avenir"
                     lineHeight="24px"
                     fontWeight="700"
+                    htmlFor="designation2"
                   >
                     DESIGNATION*
                   </FormLabel>
                   <Input
+                    id="designation2"
+                    name="designation2"
+                    value={designation2}
+                    onChange={(e) => onChange(e)}
                     type="text"
                     fontSize="16px"
                     fontFamily="avenir"
@@ -826,7 +887,7 @@ const ChannelForm = () => {
           w="100%"
           pos="relative"
           align="center"
-          justify="flex-end"
+          justify="center"
           pr="50px"
           fontFamily="avenir"
           fontSize="16px"
@@ -867,10 +928,20 @@ const ChannelForm = () => {
             </MenuList>
           </Menu> */}
         </Flex>
-        <Flex w="100%" align="center" justify="flex-start" pl="50px">
-          <Icon as={AiOutlineDownload} h="30px" w="30px" mr="10px" />
-          DOWNLOAD CP-BROCHURE
-        </Flex>
+        {validForm ? (
+          <Flex
+            w="100%"
+            align="center"
+            justify="flex-start"
+            pl="50px"
+            cursor="pointer"
+          >
+            <Icon as={AiOutlineDownload} h="30px" w="30px" mr="10px" />
+            DOWNLOAD CP-BROCHURE
+          </Flex>
+        ) : (
+          ""
+        )}
       </Flex>
     </>
   );
