@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import {
   Checkbox,
   Flex,
