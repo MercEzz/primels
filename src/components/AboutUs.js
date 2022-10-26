@@ -56,7 +56,6 @@ const AboutUs = () => {
             animate={animateHead}
             transition={{ duration: 2, type: "just" }}
             pt="25px"
-            pb="2"
             fontSize="34px"
             fontFamily="avenir"
           >
@@ -276,7 +275,7 @@ const AboutUs = () => {
           animate={animateHead}
           transition={{ delay: 14, duration: 2, type: "just" }}
           mt="25px"
-          mb="50px"
+          // mb="50px"
           w="146px"
           p="16px"
           h="51px"

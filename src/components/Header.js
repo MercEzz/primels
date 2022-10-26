@@ -19,13 +19,13 @@ const Header = () => {
     <Flex
       pos="fixed"
       top="0"
-      zIndex="3"
       w="100%"
       h="100px"
       bgColor={navbar ? "#fff" : "transparent"}
       transition="all 2s"
       align="center"
       justify="center"
+      zIndex="11"
     >
       {" "}
       <Flex w="25%"></Flex>
