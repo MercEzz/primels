@@ -22,22 +22,14 @@ const AddresSec = () => {
   const isInView = useInView(ref, { once: true });
   const animateFlx = useAnimation();
   const animateFade = useAnimation();
+
+  const [add, setAdd] = useState(true);
+
   const CorporateAdd =
     "https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed";
 
   const ChennaiAdd =
-    "https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Prime Expat Infra, chennai&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed";
-  const [toggleAdd, setAdd] = useState(CorporateAdd);
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setAdd(CorporateAdd);
-  };
-
-  const handleClickChen = (e) => {
-    e.preventDefault();
-    setAdd(ChennaiAdd);
-  };
+    "https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime Expat Infra, chennai&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed";
 
   useEffect(() => {
     if (isInView) {
@@ -62,7 +54,9 @@ const AddresSec = () => {
           pl="100px"
           pr="50px"
           bgGradient="linear(to-b, #B88746, #DFBD69)"
-          onClick={(e) => handleClick(e)}
+          onClick={(e) => {
+            setAdd(true);
+          }}
         >
           <MtnHead
             initial={{ opacity: 0 }}
@@ -116,7 +110,9 @@ const AddresSec = () => {
           justify="center"
           pl="100px"
           pr="50px"
-          // onClick={setAdd(ChennaiAdd)}
+          onClick={(e) => {
+            setAdd(false);
+          }}
         >
           <MtnHead
             initial={{ opacity: 0 }}
@@ -167,16 +163,29 @@ const AddresSec = () => {
         h="100%"
         w="60%"
       >
-        <iframe
-          class="gmap_iframe"
-          width="100%"
-          height="100%"
-          frameborder="0"
-          scrolling="no"
-          marginheight="0"
-          marginwidth="0"
-          src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-        ></iframe>
+        {add ? (
+          <iframe
+            class="gmap_iframe"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          ></iframe>
+        ) : (
+          <iframe
+            class="gmap_iframe"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime Expat Infra, chennai&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          ></iframe>
+        )}
       </MtnFlx>
     </Flex>
   );
