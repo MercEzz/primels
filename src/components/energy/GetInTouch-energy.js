@@ -32,8 +32,8 @@ const GetInTouch = () => {
       ref={ref}
       direction="column"
       w="100%"
-      h="100vh"
-      pt="50px"
+      maxH="100vh"
+      py="50px"
       align="center"
       justify="center"
       px="100px"

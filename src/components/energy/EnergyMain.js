@@ -8,7 +8,7 @@ const EnergyMain = () => {
     <>
       <Flex
         w="100%"
-        h="93.5vh"
+        h="100vh"
         alignItems="center"
         justifyContent="center"
         pos="relative"
@@ -22,7 +22,7 @@ const EnergyMain = () => {
             position: "absolute",
             top: 0,
             left: 0,
-            minHeight: "100%",
+            minHeight: "100vh",
             minWidth: "100%",
             // zIndex: -1,
           }}

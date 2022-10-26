@@ -9,7 +9,7 @@ const MtnHd = motion(Heading);
 
 const PLSGreen = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref);
   const animateImg = useAnimation();
   const animateFlx = useAnimation();
   const animateHd = useAnimation();
@@ -86,6 +86,7 @@ const PLSGreen = () => {
       >
         <Flex w="100%" h="100%" pos="absolute" direction="column" left="0">
           <MtnImg
+            boxShadow="dark-lg"
             initial={{ opacity: 0, x: 200 }}
             animate={animateImg}
             transition={{ duration: 2, type: "just" }}
@@ -95,11 +96,12 @@ const PLSGreen = () => {
             w="60%"
           />
           <MtnImg
+            boxShadow="dark-lg"
             initial={{ opacity: 0 }}
             animate={animateImg}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             src="/images/energy/ourPro2.jpeg"
-            h="70%"
+            h="66%"
             w="60%"
             pos="absolute"
             left="18%"
@@ -126,7 +128,7 @@ const PLSGreen = () => {
                 height="30px"
                 width="30px"
                 backgroundColor="#DFBD69"
-                border="4px solid rgba(255, 255, 255, .8)"
+                border="4px solid rgba(255, 255, 255, .7)"
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
                 my="0.5"

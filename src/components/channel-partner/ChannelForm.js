@@ -94,7 +94,6 @@ const ChannelForm = () => {
       yourFocusLocationArea != "" ||
       gstNo != "" ||
       reraNo != "" ||
-      identityDoc != "" ||
       name1 != "" ||
       designation1 != "" ||
       name2 != "" ||

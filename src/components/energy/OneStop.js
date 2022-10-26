@@ -195,7 +195,7 @@ const OneStop = () => {
           >
             <Divider
               orientation="vertical"
-              h="4vh"
+              h="4.5vh"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
@@ -219,7 +219,7 @@ const OneStop = () => {
           >
             <Divider
               orientation="vertical"
-              h="28vh"
+              h="30vh"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
@@ -243,7 +243,7 @@ const OneStop = () => {
           >
             <Divider
               orientation="vertical"
-              h="53vh"
+              h="55vh"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
