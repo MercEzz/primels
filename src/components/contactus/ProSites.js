@@ -1,4 +1,11 @@
-import { Container, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import {
+  Container,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
@@ -63,14 +70,7 @@ const ProSites = () => {
           h="100%"
           textAlign="center"
         >
-          <Heading
-            fontFamily="avenir"
-            fontSize="24px"
-            lineHeight="41px"
-            pb="7px"
-          >
-            ARETE HOMES <br /> SKY HIGH TOWER
-          </Heading>
+          <Image p="6" src="/images/contactus/Asset-1.png" />
           <Text fontFamily="veralaRound" fontSize="16px">
             V no.76, Peruncheri, Ponneri <br /> Opposite Velammal International{" "}
             <br />
@@ -86,15 +86,7 @@ const ProSites = () => {
           h="100%"
           textAlign="center"
         >
-          <Heading
-            fontFamily="avenir"
-            fontSize="24px"
-            lineHeight="41px"
-            pb="7px"
-          >
-            ARETE <br />
-            HOMES
-          </Heading>
+          <Image p="6" src="/images/contactus/Asset-2.png" />
           <Text fontFamily="veralaRound" fontSize="16px">
             V. No. 76 , Thatchoor 1,
             <br /> Perucheri, Ponneri,
@@ -109,14 +101,7 @@ const ProSites = () => {
           h="100%"
           textAlign="center"
         >
-          <Heading
-            fontFamily="avenir"
-            fontSize="24px"
-            lineHeight="41px"
-            pb="7px"
-          >
-            PONNERI <br /> GYMKHANA CLUB
-          </Heading>
+          <Image p="6" src="/images/contactus/Asset-3.png" />
           <Text fontFamily="veralaRound" fontSize="16px">
             Next To Arete Homes <br /> V no.76, Peruncheri, Ponneri <br />
             North Chennai - 601204

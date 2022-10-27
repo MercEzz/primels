@@ -20,6 +20,7 @@ const FirstSec = () => {
     <Flex
       w="100%"
       h="100vh"
+      mb="3"
       align="center"
       justify="center"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
