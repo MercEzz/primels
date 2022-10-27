@@ -30,7 +30,9 @@ const PLSGreen = () => {
         h="100%"
         direction="column"
         px="100px"
-        my="100px"
+        py="100px"
+        pos="relative"
+        bgColor="white"
       >
         <MtnHd
           initial={{ opacity: 0 }}

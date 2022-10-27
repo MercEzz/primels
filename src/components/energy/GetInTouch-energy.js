@@ -37,6 +37,8 @@ const GetInTouch = () => {
       align="center"
       justify="center"
       px="100px"
+      pos="relative"
+      bgColor="white"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
       <MtnHd

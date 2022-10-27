@@ -36,6 +36,8 @@ const OneStop = () => {
       pb="50px"
       px="100px"
       direction="column"
+      pos="relative"
+      bgColor="white"
     >
       <MtnHd
         initial={{ opacity: 0, y: -50 }}

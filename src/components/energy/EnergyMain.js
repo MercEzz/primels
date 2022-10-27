@@ -12,17 +12,18 @@ const EnergyMain = () => {
         alignItems="center"
         justifyContent="center"
         pos="relative"
-        // overflow="hidden"
+        bgColor="white"
+        overflow="hidden"
       >
         <video
           autoPlay
           muted
           loop
           style={{
-            position: "absolute",
+            position: "fixed",
             top: 0,
             left: 0,
-            minHeight: "100vh",
+            minHeight: "100%",
             minWidth: "100%",
             // zIndex: -1,
           }}

@@ -70,7 +70,12 @@ const ProSites = () => {
           h="100%"
           textAlign="center"
         >
-          <Image p="6" src="/images/contactus/Asset-1.png" />
+          <Image
+            h="100px"
+            mb="15px"
+            w="300px"
+            src="/images/contactus/Asset-1.png"
+          />
           <Text fontFamily="veralaRound" fontSize="16px">
             V no.76, Peruncheri, Ponneri <br /> Opposite Velammal International{" "}
             <br />
@@ -86,7 +91,12 @@ const ProSites = () => {
           h="100%"
           textAlign="center"
         >
-          <Image p="6" src="/images/contactus/Asset-2.png" />
+          <Image
+            h="100px"
+            mb="15px"
+            w="300px"
+            src="/images/contactus/Asset-2.png"
+          />
           <Text fontFamily="veralaRound" fontSize="16px">
             V. No. 76 , Thatchoor 1,
             <br /> Perucheri, Ponneri,
@@ -101,7 +111,12 @@ const ProSites = () => {
           h="100%"
           textAlign="center"
         >
-          <Image p="6" src="/images/contactus/Asset-3.png" />
+          <Image
+            h="100px"
+            mb="15px"
+            w="300px"
+            src="/images/contactus/Asset-3.png"
+          />
           <Text fontFamily="veralaRound" fontSize="16px">
             Next To Arete Homes <br /> V no.76, Peruncheri, Ponneri <br />
             North Chennai - 601204

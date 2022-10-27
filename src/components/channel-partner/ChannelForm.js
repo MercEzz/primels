@@ -41,7 +41,7 @@ const ChannelForm = () => {
   }, [isInView, animateFlx]);
 
   const track = () => {
-    if (window.scrollY > 370) {
+    if (window.scrollY > 500) {
       setDis(true);
     } else {
       setDis(false);
@@ -150,7 +150,7 @@ const ChannelForm = () => {
       >
         {" "}
         <Heading
-          bottom={dis ? "0" : "30vh"}
+          // bottom={dis ? "0" : "30vh"}
           pos={dis ? "static" : "fixed"}
           fontSize="40px"
           fontFamily="avenir"
