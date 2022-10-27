@@ -28,7 +28,7 @@ const EnergyMain = () => {
             // zIndex: -1,
           }}
         >
-          <source src="/images/energy/SOLAR27.1.mp4" type="video/mp4" />
+          <source src="/images/energy/SOLAR27.3.mp4" type="video/mp4" />
         </video>
         <Flex direction="column" pos="absolute">
           <MtnHd
