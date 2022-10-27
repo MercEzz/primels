@@ -32,13 +32,14 @@ const ContactMain = () => {
       >
         {" "}
         <Flex
-          w="80%"
+          w="100%"
           h="100%"
           direction="column"
           align="center"
           justify="center"
           color="black"
           textAlign="center"
+          mt="8rem"
         >
           <MtnHd
             w="100%"
