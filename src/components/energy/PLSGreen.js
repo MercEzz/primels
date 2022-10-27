@@ -33,6 +33,7 @@ const PLSGreen = () => {
         py="100px"
         pos="relative"
         bgColor="white"
+        zIndex="10"
       >
         <MtnHd
           initial={{ opacity: 0 }}
@@ -89,8 +90,8 @@ const PLSGreen = () => {
         <Flex w="100%" h="100%" pos="absolute" direction="column" left="0">
           <MtnImg
             boxShadow="dark-lg"
-            initial={{ opacity: 0, x: 200 }}
-            animate={animateImg}
+            initial={{ opacity: 1, x: 400 }}
+            // animate={animateImg}
             transition={{ duration: 2, type: "just" }}
             src="/images/energy/ourPro1.jpeg"
             objectSize="cover"
@@ -113,8 +114,8 @@ const PLSGreen = () => {
             <MtnFlx
               h="100%"
               px="12"
-              initial={{ opacity: 0, y: -100 }}
-              animate={animateFlx}
+              initial={{ opacity: 1, y: -100 }}
+              // animate={animateFlx}
               transition={{ duration: 2, type: "just" }}
               direction="column"
               align="center"
@@ -143,11 +144,12 @@ const PLSGreen = () => {
             </MtnFlx>
             <MtnFlx
               h="100%"
-              initial={{ opacity: 0, x: -200 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 1, x: -200 }}
+              // animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 2, type: "just" }}
               direction="column"
               pt="5%"
+              zIndex="10"
             >
               <Heading
                 fontFamily="goudy"

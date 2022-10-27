@@ -13,20 +13,31 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
 const MtnDvdr = motion(Divider);
+const MtnFlx = motion(Flex);
 
 const OurProjects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const animateDvdr = useAnimation();
+
+  const animateX = useAnimation();
+  const animateY = useAnimation();
+  const animateFade = useAnimation();
 
   useEffect(() => {
     if (isInView) {
-      animateDvdr.start({
+      animateX.start({
         x: 0,
         opacity: 1,
       });
+      animateY.start({
+        y: 0,
+        opacity: 1,
+      });
+      animateFade.start({
+        opacity: 1,
+      });
     }
-  }, [isInView, animateDvdr]);
+  }, [isInView, animateX, animateY, animateFade]);
 
   return (
     <Flex
@@ -43,7 +54,7 @@ const OurProjects = () => {
         <Flex w="100%" align="center" justify="center">
           <MtnDvdr
             initial={{ opacity: 0, x: 100 }}
-            animate={animateDvdr}
+            animate={animateX}
             transition={{ duration: 2, type: "just" }}
             w="23%"
             orientation="horizontal"
@@ -58,7 +69,16 @@ const OurProjects = () => {
         </Flex>
       </Flex>
       <Flex w="100%" h="100%">
-        <Flex direction="column" justify="center" w="25%" h="100%" px="6">
+        <MtnFlx
+          initial={{ x: -500 }}
+          animate={animateX}
+          transition={{ duration: 2, type: "just" }}
+          direction="column"
+          justify="center"
+          w="25%"
+          h="100%"
+          px="6"
+        >
           <Heading
             pb="15px"
             fontFamily="avenir"
@@ -99,8 +119,17 @@ const OurProjects = () => {
           >
             VIEW PROJECT
           </Button>
-        </Flex>
-        <Flex w="5%" h="35%" direction="column" align="center" pt="25px">
+        </MtnFlx>
+        <MtnFlx
+          initial={{ y: -100 }}
+          animate={animateY}
+          transition={{ duration: 2, type: "just" }}
+          w="5%"
+          h="35%"
+          direction="column"
+          align="center"
+          pt="25px"
+        >
           <Divider
             orientation="vertical"
             border="3px solid"
@@ -116,9 +145,13 @@ const OurProjects = () => {
             borderRadius="50%"
             my="1"
           />
-        </Flex>
+        </MtnFlx>
         <Flex w="70%" direction="column" pt="25px" pl="40px" pr="50px">
-          <Flex>
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateX}
+            transition={{ duration: 1, type: "just" }}
+          >
             <Text
               fontSize="14px"
               p="10px"
@@ -129,8 +162,15 @@ const OurProjects = () => {
             >
               Ready to move in
             </Text>
-          </Flex>
-          <Flex pos="relative" w="100%" h="100%">
+          </MtnFlx>
+          <MtnFlx
+            initial={{ x: 1000 }}
+            animate={animateX}
+            transition={{ duration: 2, type: "just" }}
+            pos="relative"
+            w="100%"
+            h="100%"
+          >
             <Image
               zIndex="3"
               pos="absolute"
@@ -147,7 +187,7 @@ const OurProjects = () => {
               opacity=".5"
               src="/images/pro1.png"
             />
-          </Flex>
+          </MtnFlx>
         </Flex>
       </Flex>
     </Flex>
