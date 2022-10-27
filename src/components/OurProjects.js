@@ -14,6 +14,9 @@ import React, { useEffect, useRef } from "react";
 
 const MtnDvdr = motion(Divider);
 const MtnFlx = motion(Flex);
+const MtnHd = motion(Heading);
+const MtnLI = motion(ListItem);
+const MtnBtn = motion(Button);
 
 const OurProjects = () => {
   const ref = useRef(null);
@@ -69,17 +72,11 @@ const OurProjects = () => {
         </Flex>
       </Flex>
       <Flex w="100%" h="100%">
-        <MtnFlx
-          initial={{ x: -500 }}
-          animate={animateX}
-          transition={{ duration: 2, type: "just" }}
-          direction="column"
-          justify="center"
-          w="25%"
-          h="100%"
-          px="6"
-        >
-          <Heading
+        <Flex direction="column" justify="center" w="25%" h="100%" px="6">
+          <MtnHd
+            initial={{ x: -500 }}
+            animate={animateX}
+            transition={{ duration: 2, type: "just" }}
             pb="15px"
             fontFamily="avenir"
             fontSize="34px"
@@ -87,25 +84,40 @@ const OurProjects = () => {
             textAlign="left"
           >
             ARETE <br /> HOMES
-          </Heading>
+          </MtnHd>
           <UnorderedList>
-            <ListItem>
+            <MtnLI
+              initial={{ opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 2, duration: 2, type: "just" }}
+            >
               <Text pb="10px" fontFamily="veralaRound" fontSize="18px">
                 6 Towers
               </Text>
-            </ListItem>
-            <ListItem>
+            </MtnLI>
+            <MtnLI
+              initial={{ opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 4, duration: 2, type: "just" }}
+            >
               <Text pb="10px" fontFamily="veralaRound" fontSize="18px">
                 2, 2.5, 3 BHK Smart Residencies
               </Text>
-            </ListItem>
-            <ListItem>
+            </MtnLI>
+            <MtnLI
+              initial={{ opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 6, duration: 2, type: "just" }}
+            >
               <Text fontFamily="veralaRound" fontSize="18px">
                 70% Open Space
               </Text>
-            </ListItem>
+            </MtnLI>
           </UnorderedList>
-          <Button
+          <MtnBtn
+            initial={{ opacity: 0 }}
+            animate={animateX}
+            transition={{ delay: 8, duration: 2, type: "just" }}
             mt="25px"
             w="160px"
             h="51px"
@@ -118,10 +130,10 @@ const OurProjects = () => {
             }}
           >
             VIEW PROJECT
-          </Button>
-        </MtnFlx>
+          </MtnBtn>
+        </Flex>
         <MtnFlx
-          initial={{ y: -100 }}
+          initial={{ opacity: 0, y: -100 }}
           animate={animateY}
           transition={{ duration: 2, type: "just" }}
           w="5%"

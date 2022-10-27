@@ -69,11 +69,12 @@ const Lifeatls = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="100vh"
+      h="100%"
       direction="column"
       textAlign="center"
       px="100px"
-      my="50px"
+      pt="100px"
+      mb="100px"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgPos="center"

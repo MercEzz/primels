@@ -7,10 +7,21 @@ import {
   Box,
   Button,
 } from "@chakra-ui/react";
-import React from "react";
-// import { HiOutlineBuildingOffice2 } from "react-icons/hi";
+import { useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 
 const SmartLiving = () => {
+  // const ref = useRef(null);
+  // const isInView = useInView();
+  // const animateX = useAnimation();
+  // const animateY = useAnimation();
+
+  // useEffect(() => {
+  //   if(isInView) {
+
+  //   }
+  // }, []);
+
   return (
     <Flex
       direction="column"
@@ -28,13 +39,16 @@ const SmartLiving = () => {
           <Flex>
             <Image w="570px" h="325px" src="/images/smartliving.png" />
           </Flex>
-          <Flex py="140px" direction="column">
-            <Heading fontSize="24px" fontFamily="avenir">
-              MANAGED LIVING
-            </Heading>
-            <Text fontSize="18px" fontFamily="veralaRound">
-              Premium serviced apartments in smart township living.
-            </Text>
+          <Flex py="25%" align="center">
+            <Image h="80px" w="80px" mr="2" src="/images/managed.svg" />
+            <Flex direction="column">
+              <Heading fontSize="24px" fontFamily="avenir">
+                MANAGED LIVING
+              </Heading>
+              <Text fontSize="18px" fontFamily="veralaRound">
+                Premium serviced apartments in smart township living.
+              </Text>
+            </Flex>
           </Flex>
           <Flex w="100%" h="100%">
             <Image
@@ -111,26 +125,32 @@ const SmartLiving = () => {
           </Flex>
         </Flex>
 
-        <Flex direction="column" w="100%" px="2" pt="125px">
-          <Flex direction="column" py="10">
-            <Heading fontSize="24px" fontFamily="avenir">
-              CO-LIVING FOR PROFESSIONALS
-            </Heading>
-            <Text fontSize="18px" fontFamily="veralaRound">
-              Your home away from home.
-            </Text>
+        <Flex direction="column" w="100%" px="2" pt="8%">
+          <Flex align="center">
+            <Image w="80px" h="80px" mr="2" src="/images/co-living.svg" />
+            <Flex direction="column" py="10">
+              <Heading fontSize="24px" fontFamily="avenir">
+                CO-LIVING FOR PROFESSIONALS
+              </Heading>
+              <Text fontSize="18px" fontFamily="veralaRound">
+                Your home away from home.
+              </Text>
+            </Flex>
           </Flex>
-          <Flex pt="70px">
+          <Flex pt="15%">
             <Image w="570px" h="325px" src="/images/smartliving2.png" />
           </Flex>
-          <Flex direction="column" pt="135px">
-            <Heading fontSize="24px" fontFamily="avenir">
-              STUDENT HOUSING
-            </Heading>
-            <Text fontSize="18px" fontFamily="veralaRound">
-              Modern student housing, co-living for professionals and serviced
-              apartments.
-            </Text>
+          <Flex align="center" pt="27%">
+            <Image w="80px" h="80px" mr="2" src="/images/student.svg" />
+            <Flex direction="column">
+              <Heading fontSize="24px" fontFamily="avenir">
+                STUDENT HOUSING
+              </Heading>
+              <Text fontSize="18px" fontFamily="veralaRound">
+                Modern student housing, co-living for professionals and serviced
+                apartments.
+              </Text>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

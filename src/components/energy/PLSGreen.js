@@ -91,7 +91,7 @@ const PLSGreen = () => {
           <MtnImg
             boxShadow="dark-lg"
             initial={{ opacity: 1, x: 400 }}
-            // animate={animateImg}
+            animate={animateImg}
             transition={{ duration: 2, type: "just" }}
             src="/images/energy/ourPro1.jpeg"
             objectSize="cover"
@@ -115,7 +115,7 @@ const PLSGreen = () => {
               h="100%"
               px="12"
               initial={{ opacity: 1, y: -100 }}
-              // animate={animateFlx}
+              animate={animateFlx}
               transition={{ duration: 2, type: "just" }}
               direction="column"
               align="center"
@@ -145,7 +145,7 @@ const PLSGreen = () => {
             <MtnFlx
               h="100%"
               initial={{ opacity: 1, x: -200 }}
-              // animate={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 2, type: "just" }}
               direction="column"
               pt="5%"

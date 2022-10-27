@@ -1,10 +1,13 @@
 import { Image, Flex, Heading, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
+
+const MtnHd = motion(Heading);
 
 const MainSec = () => {
   const [dis, setDis] = useState(false);
   const track = () => {
-    if (window.scrollY > 370) {
+    if (window.scrollY > 420) {
       setDis(true);
     } else {
       setDis(false);
@@ -41,8 +44,10 @@ const MainSec = () => {
         />
         {/* <source src="/images/energy/solar1.mp4" type="video/mp4" /> */}
       </video>
-      <Heading
-        // bottom={dis ? "0" : "30vh"}
+      <MtnHd
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, type: "just" }}
         pos={dis ? "static" : "fixed"}
         fontSize="40px"
         fontFamily="avenir"
@@ -51,11 +56,10 @@ const MainSec = () => {
         textAlign="center"
         zIndex="10"
         color={dis ? "black" : "white"}
-        transition="ease-in-out 200ms"
       >
         where opportunities pave the way for <br />
         incredible rewards
-      </Heading>
+      </MtnHd>
     </Flex>
   );
 };

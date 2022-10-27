@@ -104,6 +104,7 @@ const Jobopp = () => {
         <Flex w="100%">
           <Grid
             w="100%"
+            h="100%"
             templateRows="repeat(2, 1fr)"
             templateColumns="repeat(2, 1fr)"
             gap="15px"

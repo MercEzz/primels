@@ -23,10 +23,11 @@ const OurEmp = () => {
     <Flex
       ref={ref}
       direction="column"
+      mt="100px"
       w="100%"
-      h="100vh"
-      px="6"
-      py="6"
+      h="100%"
+      px="100px"
+      // py="6"
       align="flex-start"
       justify="center"
     >
@@ -39,7 +40,7 @@ const OurEmp = () => {
         fontSize="40px"
         fontFamily="goudy"
         fontWeight="400"
-        pb="50px"
+        // pb="25px"
       >
         OUR HAPPY EMPLOYEES
       </MtnHead>
@@ -58,7 +59,7 @@ const OurEmp = () => {
         <Icon
           pos="absolute"
           left="0"
-          top="15%"
+          top="0"
           ml="4"
           w="70px"
           h="50px"
@@ -67,16 +68,17 @@ const OurEmp = () => {
         />
         {testimonial.map((tes) => (
           <Flex
+            pt="50px"
             align={"flex-start"}
             justify="center"
             w="100%"
             direction={"column"}
             key={tes.name}
           >
-            <Text px="25px" fontSize="16px" pb="12" fontFamily="veralaRound">
+            <Text px="25px" fontSize="16px" pb="40px" fontFamily="veralaRound">
               {tes.text}
             </Text>
-            <Flex align="center" pt="25px" pl="1.5rem">
+            <Flex align="center" pl="1.5rem">
               <Avatar h="80px" w="80px" src={tes.avtr} alt={tes.name} />
               <Stack spacing={-1}>
                 <Text
@@ -106,7 +108,7 @@ const OurEmp = () => {
           color="#DFBD69"
           pos="absolute"
           right="0"
-          bottom="35%"
+          bottom="25%"
           zIndex="10"
           w="70px"
           h="50px"

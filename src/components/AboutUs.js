@@ -151,7 +151,11 @@ const AboutUs = () => {
               direction="column"
               pt="15px"
             >
-              <Heading fontSize="34px" fontFamily="avenir">
+              <Heading
+                fontSize="34px"
+                fontFamily="avenir"
+                textTransform="uppercase"
+              >
                 30+ years
               </Heading>
               <MtnFlx
@@ -203,8 +207,17 @@ const AboutUs = () => {
                   fontSize="34px"
                   fontFamily="avenir"
                   textAlign="left"
+                  textTransform="uppercase"
                 >
-                  approx. 1 Million sqft.{" "}
+                  1 Million sqft.{" "}
+                  <Text
+                    as="span"
+                    fontSize="24px"
+                    textTransform="lowercase"
+                    fontFamily="avenir"
+                  >
+                    approx.
+                  </Text>
                 </MtnHead>
                 <MtnTxt
                   initial={{ opacity: 0, x: -100 }}

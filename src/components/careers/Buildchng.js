@@ -39,7 +39,6 @@ const Buildchng = () => {
       minH="100vh"
       align="center"
       justify="center"
-      pt="50px"
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}

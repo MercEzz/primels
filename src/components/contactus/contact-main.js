@@ -38,8 +38,10 @@ const ContactMain = () => {
           align="center"
           justify="center"
           color="black"
+          textAlign="center"
         >
           <MtnHd
+            w="100%"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 2, type: "just" }}
