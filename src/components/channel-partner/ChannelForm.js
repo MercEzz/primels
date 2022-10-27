@@ -18,10 +18,8 @@ import {
 import React, { useRef, useState, useEffect } from "react";
 import { BsUpload } from "react-icons/bs";
 import { AiOutlineDownload } from "react-icons/ai";
-// import { MdArrowDropDown } from "react-icons/md";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { TriangleDownIcon } from "@chakra-ui/icons";
-import { Formik } from "formik";
 
 // const MtnHd = motion(Heading);
 const MtnTxt = motion(Text);
