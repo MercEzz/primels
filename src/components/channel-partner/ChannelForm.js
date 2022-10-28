@@ -148,7 +148,6 @@ const ChannelForm = () => {
       >
         {" "}
         <Heading
-          // bottom={dis ? "0" : "30vh"}
           pos={dis ? "static" : "fixed"}
           fontSize="40px"
           fontFamily="avenir"
@@ -167,7 +166,7 @@ const ChannelForm = () => {
           initial={{ opacity: 0 }}
           animate={animateFlx}
           transition={{ duration: 2, type: "just" }}
-          px="100px"
+          px="50px"
           pt={dis ? "25px" : "150px"}
           fontFamily="veralaRound"
           fontSize="16px"

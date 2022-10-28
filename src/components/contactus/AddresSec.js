@@ -39,7 +39,7 @@ const AddresSec = () => {
   }, [isInView, animateFlx, animateFade]);
 
   return (
-    <Flex ref={ref} w="100%" h="100vh">
+    <Flex ref={ref} w="100%" h="100vh" pos="relative">
       <Flex w="40%" h="100%" direction="column" align="center" justify="center">
         <MtnFlx
           initial={{ opacity: 0, scale: 0.5 }}

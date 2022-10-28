@@ -41,6 +41,7 @@ const ProSites = () => {
       px="6"
       align="center"
       justify="center"
+      pos="relative"
     >
       <MtnHd
         initial={{ opacity: 0, y: -50 }}
