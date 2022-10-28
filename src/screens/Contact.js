@@ -8,7 +8,7 @@ import SideVector from "../components/contactus/side-vector";
 const Contact = () => {
   return (
     <>
-      {/* <SideVector /> */}
+      <SideVector />
       <ContactMain />
       <AddresSec />
       <ProSites />

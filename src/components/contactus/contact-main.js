@@ -18,8 +18,6 @@ const ContactMain = () => {
       align="center"
       justify="center"
     >
-      {" "}
-      <Flex w="10%" h="100%" bgColor="blackAlpha.300"></Flex>
       <Flex
         w="100%"
         h="100%"
@@ -28,7 +26,6 @@ const ContactMain = () => {
         bgColor="blackAlpha.300"
         pb="150px"
         px="100px"
-        color="white"
       >
         {" "}
         <Flex
@@ -65,9 +62,6 @@ const ContactMain = () => {
             details, quickly and easily.
           </MtnTxt>
         </Flex>
-      </Flex>
-      <Flex w="10%" h="100%">
-        <SideVector />
       </Flex>
     </Flex>
   );

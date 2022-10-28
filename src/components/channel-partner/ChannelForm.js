@@ -876,7 +876,7 @@ const ChannelForm = () => {
         justify="center"
         bgColor="#B88746"
         color="white"
-        h="50px"
+        h="60px"
         fontSize="16px"
         fontFamily="avenir"
       >
@@ -884,7 +884,7 @@ const ChannelForm = () => {
           w="100%"
           pos="relative"
           align="center"
-          justify="center"
+          justify="flex-end"
           pr="50px"
           fontFamily="avenir"
           fontSize="16px"
@@ -892,7 +892,7 @@ const ChannelForm = () => {
           <Select
             fontFamily="avenir"
             fontSize="16px"
-            w="300px"
+            w="250px"
             fontWeight="bold"
             // placeholder="SELECT PROJECT"
             textTransform="uppercase"
@@ -926,20 +926,20 @@ const ChannelForm = () => {
             </MenuList>
           </Menu> */}
         </Flex>
-        {validForm ? (
-          <Flex
-            w="100%"
-            align="center"
-            justify="flex-start"
-            pl="50px"
-            cursor="pointer"
-          >
-            <Icon as={AiOutlineDownload} h="30px" w="30px" mr="10px" />
-            DOWNLOAD CP-BROCHURE
-          </Flex>
-        ) : (
+        {/* {validForm ? ( */}
+        <Flex
+          w="100%"
+          align="center"
+          justify="flex-start"
+          pl="50px"
+          cursor="pointer"
+        >
+          <Icon as={AiOutlineDownload} h="30px" w="30px" mr="10px" />
+          DOWNLOAD CP-BROCHURE
+        </Flex>
+        {/* ) : (
           ""
-        )}
+        )} */}
       </Flex>
     </>
   );

@@ -7,6 +7,7 @@ import {
   Text,
   VStack,
   Box,
+  Link,
 } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 import { ImLocation } from "react-icons/im";
@@ -39,9 +40,10 @@ const AddresSec = () => {
   }, [isInView, animateFlx, animateFade]);
 
   return (
-    <Flex ref={ref} w="100%" h="100vh" pos="relative">
+    <Flex ref={ref} w="100%" h="100vh">
       <Flex w="40%" h="100%" direction="column" align="center" justify="center">
         <MtnFlx
+          as={Link}
           initial={{ opacity: 0, scale: 0.5 }}
           animate={animateFlx}
           transition={{ duration: 2, type: "just" }}
@@ -53,7 +55,8 @@ const AddresSec = () => {
           justify="center"
           pl="100px"
           pr="50px"
-          bgGradient="linear(to-b, #B88746, #DFBD69)"
+          bgGradient={add ? "linear(to-b, #B88746, #DFBD69)" : "white"}
+          _hover={{ textDecoration: "none" }}
           onClick={(e) => {
             setAdd(true);
           }}
@@ -100,6 +103,7 @@ const AddresSec = () => {
           </MtnStk>
         </MtnFlx>
         <MtnFlx
+          as={Link}
           initial={{ opacity: 0, scale: 0.5 }}
           animate={animateFlx}
           transition={{ duration: 2, type: "just" }}
@@ -110,6 +114,8 @@ const AddresSec = () => {
           justify="center"
           pl="100px"
           pr="50px"
+          _hover={{ textDecoration: "none" }}
+          bgGradient={add ? "white" : "linear(to-b, #B88746, #DFBD69)"}
           onClick={(e) => {
             setAdd(false);
           }}

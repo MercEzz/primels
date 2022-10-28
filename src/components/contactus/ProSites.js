@@ -36,9 +36,10 @@ const ProSites = () => {
       ref={ref}
       direction="column"
       w="100%"
-      h="100vh"
-      py="6"
-      px="6"
+      h="100%"
+      pt="100px"
+      pb="50px"
+      px="100px"
       align="center"
       justify="center"
       pos="relative"

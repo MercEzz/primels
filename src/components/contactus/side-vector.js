@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Flex, Divider, Box, Icon } from "@chakra-ui/react";
+import { Flex, Divider, Box, Icon, Text } from "@chakra-ui/react";
 import {
   RiInstagramFill,
   RiLinkedinBoxFill,
@@ -15,7 +15,7 @@ const SideVector = () => {
   const [dis, setDis] = useState(true);
   const track = () => {
     console.log(window.scrollY);
-    if (window.scrollY > 2100) {
+    if (window.scrollY > 1900) {
       setDis(false);
     } else {
       setDis(true);
@@ -35,7 +35,7 @@ const SideVector = () => {
           transition="all 2s"
           h="100%"
           w="100%"
-          bgColor="blackAlpha.300"
+          // bgColor="blackAlpha.300"
           zIndex="99"
         >
           <MtnFlx
@@ -48,6 +48,8 @@ const SideVector = () => {
             justify="flex-start"
             color="black"
             pos="fixed"
+            right="0"
+            px="50px"
           >
             <Divider
               h="25vh"
@@ -80,50 +82,59 @@ const SideVector = () => {
                 my="0.5"
               />
             </Flex>
-            <Flex position="relative">
-              <MtnFlx
-                initial={{ opacity: 1, top: -200 }}
-                animate={{ opacity: 1, top: 0 }}
-                transition={{ ease: "linear", delay: 2, duration: 2 }}
-                pos="absolute"
-                direction="column"
-                overflow="hidden"
-                align="center"
+            <Flex
+              // initial={{ opacity: 1, top: -200 }}
+              // animate={{ opacity: 1, top: 0 }}
+              // transition={{ ease: "linear", delay: 2, duration: 2 }}
+              // pos="absolute"
+              direction="column"
+              overflow="hidden"
+              align="center"
+            >
+              <Box
+              // bgGradient="linear(to-l, #7928CA, #FF0080)"
+              // __css={{
+              //   backgroundClip: "text",
+              //   color: "transparent",
+              // }}
+              // bgClip="text"
+              // color="black"
+              // _hover={{
+              //   // color: "transparent",
+
+              //   bgGradient: "linear-gradient(to-r, #7928CA, #FF0080)",
+              // }}
               >
-                <Icon
-                  as={RiInstagramFill}
-                  h="50px"
-                  w="50px"
-                  mt="10px"
-                  _hover={{ color: "#DFBD69" }}
-                />
+                <Icon as={RiInstagramFill} h="50px" w="50px" mt="10px" />
+              </Box>
+              <Box bg="linear-gradient(to-b, #B88746, #DFBD69)">
                 <Icon
                   top="50px"
                   as={RiLinkedinBoxFill}
                   h="50px"
                   w="50px"
                   my="10px"
-                  _hover={{ color: "#DFBD69" }}
+                  _hover={{ color: "#B88746" }}
                   transition="linear 200ms"
                 />
-                <Icon
-                  top="110px"
-                  as={RiFacebookCircleFill}
-                  h="50px"
-                  w="50px"
-                  mb="10px"
-                  _hover={{ color: "#DFBD69" }}
-                  transition="linear 200ms"
-                />
-                <Icon
-                  top="160px"
-                  as={RiYoutubeFill}
-                  h="50px"
-                  w="50px"
-                  _hover={{ color: "#DFBD69" }}
-                  transition="linear 200ms"
-                />
-              </MtnFlx>
+              </Box>
+              <Icon
+                top="110px"
+                as={RiFacebookCircleFill}
+                h="50px"
+                w="50px"
+                mb="10px"
+                _hover={{ color: "linear(to-b, #B88746, #DFBD69)" }}
+                transition="linear 200ms"
+              />
+              <Icon
+                top="160px"
+                as={RiYoutubeFill}
+                h="50px"
+                w="50px"
+                _hover={{ color: "linear(to-b, #B88746, #DFBD69)" }}
+                transition="linear 200ms"
+              />
             </Flex>
           </MtnFlx>
         </MtnFlx>

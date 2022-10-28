@@ -8,6 +8,7 @@ import {
   Button,
   Flex,
   Container,
+  Textarea,
 } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
@@ -39,10 +40,10 @@ const GetInTouch = () => {
       ref={ref}
       direction="column"
       w="100%"
-      maxH="100vh"
+      h="100%"
       // pt="50px"
-      py="6"
-      px="6"
+      py="50px"
+      px="100px"
       align="center"
       justify="center"
       pos="relative"
@@ -88,50 +89,63 @@ const GetInTouch = () => {
                 NAME*
               </FormLabel>
               <Input
+                type="text"
                 w="350px"
                 h="40px"
                 bgColor="#E5E5E5"
                 borderRadius="none"
-                fontFamily="avenir"
+                fontFamily="veralaRound"
                 fontSize="16px"
+                isRequired
               />
             </Flex>
             <Flex w="100%" align="center" justify="space-between" pb="7px">
               <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
-                EMAIL
+                EMAIL*
               </FormLabel>
               <Input
+                type="email"
                 w="350px"
                 h="40px"
                 bgColor="#E5E5E5"
                 borderRadius="none"
-                fontFamily="avenir"
+                fontFamily="veralaRound"
                 fontSize="16px"
+                isRequired
               />
             </Flex>
             <Flex w="100%" align="center" justify="space-between" pb="7px">
               <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
                 PHONE NO.*
               </FormLabel>
-              <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
-            </Flex>
-            <Flex w="100%" align="center" justify="space-between">
-              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
-                MESSAGE*
-              </FormLabel>
               <Input
+                type="number"
                 w="350px"
                 h="40px"
                 bgColor="#E5E5E5"
                 borderRadius="none"
-                fontFamily="avenir"
+                fontFamily="veralaRound"
+                fontSize="16px"
+                isRequired
+              />
+            </Flex>
+            <Flex w="100%" align="flex-start" justify="space-between">
+              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
+                MESSAGE
+              </FormLabel>
+              <Textarea
+                maxLength="200"
+                w="350px"
+                h="120px"
+                bgColor="#E5E5E5"
+                borderRadius="none"
+                fontFamily="veralaRound"
                 fontSize="16px"
               />
             </Flex>
           </VStack>
           <Button
             mt="25px"
-            mb="50px"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             color="white"
             fontSize="16px"
@@ -139,6 +153,7 @@ const GetInTouch = () => {
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
             }}
+            _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
           >
             SUBMIT NOW
           </Button>
