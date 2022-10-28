@@ -172,7 +172,9 @@ const OneStop = () => {
               lineHeight="24px"
               fontWeight="400"
             >
-              <ListItem>Plant AMC for Operation & Maintenance</ListItem>
+              <ListItem pb="10px">
+                Plant AMC for Operation & Maintenance
+              </ListItem>
               <ListItem>Specification and Tender Assessment</ListItem>
             </UnorderedList>
           </MtnFlx>

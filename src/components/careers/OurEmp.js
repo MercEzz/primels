@@ -23,7 +23,7 @@ const OurEmp = () => {
     <Flex
       ref={ref}
       direction="column"
-      mt="100px"
+      mt="90px"
       w="100%"
       h="100%"
       px="100px"

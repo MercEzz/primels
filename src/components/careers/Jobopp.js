@@ -36,7 +36,7 @@ const Jobopp = () => {
       ref={ref}
       direction="column"
       w="100%"
-      h="100vh"
+      h="100%"
       align="center"
       mt="100px"
       px="100px"
@@ -115,7 +115,7 @@ const Jobopp = () => {
               justify="center"
               w="100%"
               h="100%"
-              py="15px"
+              py="25px"
               bgGradient="linear(to-b, #DFBD69, #B88746)"
               textAlign="center"
               color="white"
@@ -128,8 +128,7 @@ const Jobopp = () => {
                 fontFamily="avenir"
                 pb="15px"
               >
-                SALES <br />
-                MANAGER
+                SALES MANAGER
               </MtnHead>
               <MtnStk
                 initial={{ opacity: 0 }}
@@ -159,7 +158,7 @@ const Jobopp = () => {
               justify="center"
               w="100%"
               h="100%"
-              py="15px"
+              py="25px"
               bgGradient="linear(to-b, #DFBD69, #B88746)"
               textAlign="center"
               color="white"
@@ -202,7 +201,7 @@ const Jobopp = () => {
               align="center"
               justify="center"
               w="100%"
-              py="15px"
+              py="25px"
               bgGradient="linear(to-t, #DFBD69, #B88746)"
               textAlign="center"
               color="white"
@@ -215,8 +214,7 @@ const Jobopp = () => {
                 fontFamily="avenir"
                 pb="15px"
               >
-                GRAPHIC <br />
-                DESIGNER
+                GRAPHIC DESIGNER
               </MtnHead>
               <MtnStk
                 initial={{ opacity: 0 }}
@@ -248,7 +246,7 @@ const Jobopp = () => {
               // h="200px"
               w="100%"
               h="100%"
-              py="15px"
+              py="25px"
               bgGradient="linear(to-t, #DFBD69, #B88746)"
               textAlign="center"
               color="white"
