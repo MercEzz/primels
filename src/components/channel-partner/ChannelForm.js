@@ -166,7 +166,7 @@ const ChannelForm = () => {
           initial={{ opacity: 0 }}
           animate={animateFlx}
           transition={{ duration: 2, type: "just" }}
-          px="50px"
+          // px="50px"
           pt={dis ? "25px" : "150px"}
           fontFamily="veralaRound"
           fontSize="16px"
@@ -893,6 +893,7 @@ const ChannelForm = () => {
             fontFamily="avenir"
             fontSize="16px"
             w="300px"
+            fontWeight="bold"
             // placeholder="SELECT PROJECT"
             textTransform="uppercase"
             variant="flushed"
