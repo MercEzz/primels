@@ -104,7 +104,7 @@ const PLSGreen = () => {
             animate={animateImg}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             src="/images/energy/ourPro2.jpeg"
-            h="66%"
+            h="62%"
             w="60%"
             pos="absolute"
             left="18%"

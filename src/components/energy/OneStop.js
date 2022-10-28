@@ -29,7 +29,7 @@ const OneStop = () => {
     <Flex
       ref={ref}
       w="100%"
-      minH="100vh"
+      minH="100%"
       align="center"
       justify="center"
       pt="100px"
