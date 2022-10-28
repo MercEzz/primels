@@ -39,7 +39,7 @@ const ChannelForm = () => {
   }, [isInView, animateFlx]);
 
   const track = () => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 400) {
       setDis(true);
     } else {
       setDis(false);
@@ -82,21 +82,7 @@ const ChannelForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (
-      companyName != "" ||
-      nameOfOwner != "" ||
-      officeAdd != "" ||
-      mobileNo != "" ||
-      website != "" ||
-      email != "" ||
-      yourFocusLocationArea != "" ||
-      gstNo != "" ||
-      reraNo != "" ||
-      name1 != "" ||
-      designation1 != "" ||
-      name2 != "" ||
-      designation2 != ""
-    ) {
+    if (nameOfOwner != "" || officeAdd != "" || mobileNo != "" || email != "") {
       setValidForm(!validForm);
     }
   };
@@ -156,7 +142,7 @@ const ChannelForm = () => {
           textAlign="center"
           zIndex="10"
           color={dis ? "black" : "white"}
-          transition="ease-in-out 1.5s"
+          transition="ease-in-out .2s"
         >
           where opportunities pave the way for <br />
           incredible rewards
@@ -207,7 +193,7 @@ const ChannelForm = () => {
                   >
                     COMPANY/
                     <br />
-                    INDIVIDUAL NAME*
+                    INDIVIDUAL NAME
                   </FormLabel>
                   <Input
                     id="companyName"
@@ -222,155 +208,25 @@ const ChannelForm = () => {
                     h="50px"
                     bgColor="#E5E5E5"
                     borderRadius="none"
-                    isRequired
                   />
                 </Flex>
-                <Flex justify="space-between" mb="15px">
-                  <FormLabel
-                    pt="4"
-                    fontSize="16px"
-                    fontFamily="avenir"
-                    lineHeight="24px"
-                    fontWeight="700"
-                    htmlFor="nameOfOwner"
-                  >
-                    NAME OF OWNER*
-                  </FormLabel>
-                  <Input
-                    id="nameOfOwner"
-                    name="nameOfOwner"
-                    onChange={(e) => onChange(e)}
-                    value={nameOfOwner}
-                    type="text"
-                    fontSize="16px"
-                    fontFamily="avenir"
-                    w="340px"
-                    h="50px"
-                    bgColor="#E5E5E5"
-                    borderRadius="none"
-                    isRequired
-                  />
-                </Flex>
-                {/* left-bottom */}
-                <FormLabel
-                  fontSize="16px"
-                  fontFamily="avenir"
-                  lineHeight="24px"
-                  fontWeight="700"
-                >
-                  ENTITY*
-                </FormLabel>
-                <Flex
-                  fontSize="16px"
-                  fontFamily="veralaRound"
-                  justify="space-between"
-                >
-                  <VStack align="flex-start">
-                    <Checkbox
-                      size="lg"
-                      name="individual"
-                      value={individual}
-                      checked={individual}
-                      onChange={(e) => {
-                        setValues({
-                          ...initialValues,
-                          individual: !individual,
-                        });
-                      }}
-                    >
-                      Individual
-                    </Checkbox>
-                    <Checkbox
-                      size="lg"
-                      name="Proprietorship"
-                      value={proprietoship}
-                      checked={proprietoship}
-                      onChange={(e) => {
-                        setValues({
-                          ...initialValues,
-                          proprietoship: !proprietoship,
-                        });
-                      }}
-                    >
-                      Proprietorship
-                    </Checkbox>
-                    <Checkbox
-                      size="lg"
-                      name="Partnership"
-                      value={partnership}
-                      checked={partnership}
-                      onChange={(e) => {
-                        setValues({
-                          ...initialValues,
-                          partnership: !partnership,
-                        });
-                      }}
-                    >
-                      Partnership
-                    </Checkbox>
-                  </VStack>
-                  <VStack align="flex-start" pr="10">
-                    <Checkbox
-                      size="lg"
-                      name="Private Ltd. Co."
-                      value={privateLtdCo}
-                      checked={privateLtdCo}
-                      onChange={(e) => {
-                        setValues({
-                          ...initialValues,
-                          privateLtdCo: !privateLtdCo,
-                        });
-                      }}
-                    >
-                      Private Ltd. Co.
-                    </Checkbox>
-                    <Checkbox
-                      size="lg"
-                      name="Public Ltd. Co."
-                      value={publicLtdCo}
-                      checked={publicLtdCo}
-                      onChange={(e) => {
-                        setValues({
-                          ...initialValues,
-                          publicLtdCo: !publicLtdCo,
-                        });
-                      }}
-                    >
-                      Public Ltd. Co.
-                    </Checkbox>
-                    <Checkbox
-                      size="lg"
-                      name="LLP"
-                      value={llp}
-                      checked={llp}
-                      onChange={(e) => {
-                        setValues({
-                          ...initialValues,
-                          llp: !llp,
-                        });
-                      }}
-                    >
-                      LLP
-                    </Checkbox>
-                  </VStack>
-                </Flex>
-                <Flex w="100%" direction="column" mr="45px" mt="25px">
-                  <Flex align="center" justify="space-between" mb="15px">
+                <FormControl isRequired>
+                  <Flex justify="space-between" mb="15px">
                     <FormLabel
-                      pt="2"
+                      pt="4"
                       fontSize="16px"
                       fontFamily="avenir"
                       lineHeight="24px"
                       fontWeight="700"
-                      htmlFor="officeAdd"
+                      htmlFor="nameOfOwner"
                     >
-                      OFFICE ADDRESS*
+                      NAME OF OWNER
                     </FormLabel>
                     <Input
-                      id="officeAdd"
-                      name="officeAdd"
+                      id="nameOfOwner"
+                      name="nameOfOwner"
                       onChange={(e) => onChange(e)}
-                      value={officeAdd}
+                      value={nameOfOwner}
                       type="text"
                       fontSize="16px"
                       fontFamily="avenir"
@@ -381,42 +237,178 @@ const ChannelForm = () => {
                       isRequired
                     />
                   </Flex>
-                  <Flex align="center" justify="space-between" mb="15px">
-                    <FormLabel
-                      pt="2"
-                      fontSize="16px"
-                      fontFamily="avenir"
-                      lineHeight="24px"
-                      fontWeight="700"
-                      htmlFor="mobileNo"
-                    >
-                      MOBILE NO.*
-                    </FormLabel>
-                    <Input
-                      type="number"
-                      id="mobileNo"
-                      name="mobileNo"
-                      value={mobileNo}
-                      onChange={(e) => {
-                        if (e.target.value.length > 10) {
-                          alert("Enter a valid phone number");
-                        } else {
+                </FormControl>
+                {/* left-bottom */}
+                <FormControl isRequired>
+                  <FormLabel
+                    fontSize="16px"
+                    fontFamily="avenir"
+                    lineHeight="24px"
+                    fontWeight="700"
+                  >
+                    ENTITY
+                  </FormLabel>
+                  <Flex
+                    fontSize="16px"
+                    fontFamily="veralaRound"
+                    justify="space-between"
+                  >
+                    <VStack align="flex-start">
+                      <Checkbox
+                        size="lg"
+                        name="individual"
+                        value={individual}
+                        checked={individual}
+                        onChange={(e) => {
                           setValues({
                             ...initialValues,
-                            mobileNo: e.target.value,
+                            individual: !individual,
                           });
-                        }
-                      }}
-                      fontSize="16px"
-                      fontFamily="avenir"
-                      w="340px"
-                      h="50px"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                      isRequired
-                    />
-                    <FormErrorMessage>Enter a valid number</FormErrorMessage>
+                        }}
+                      >
+                        Individual
+                      </Checkbox>
+                      <Checkbox
+                        size="lg"
+                        name="Proprietorship"
+                        value={proprietoship}
+                        checked={proprietoship}
+                        onChange={(e) => {
+                          setValues({
+                            ...initialValues,
+                            proprietoship: !proprietoship,
+                          });
+                        }}
+                      >
+                        Proprietorship
+                      </Checkbox>
+                      <Checkbox
+                        size="lg"
+                        name="Partnership"
+                        value={partnership}
+                        checked={partnership}
+                        onChange={(e) => {
+                          setValues({
+                            ...initialValues,
+                            partnership: !partnership,
+                          });
+                        }}
+                      >
+                        Partnership
+                      </Checkbox>
+                    </VStack>
+                    <VStack align="flex-start" pr="10">
+                      <Checkbox
+                        size="lg"
+                        name="Private Ltd. Co."
+                        value={privateLtdCo}
+                        checked={privateLtdCo}
+                        onChange={(e) => {
+                          setValues({
+                            ...initialValues,
+                            privateLtdCo: !privateLtdCo,
+                          });
+                        }}
+                      >
+                        Private Ltd. Co.
+                      </Checkbox>
+                      <Checkbox
+                        size="lg"
+                        name="Public Ltd. Co."
+                        value={publicLtdCo}
+                        checked={publicLtdCo}
+                        onChange={(e) => {
+                          setValues({
+                            ...initialValues,
+                            publicLtdCo: !publicLtdCo,
+                          });
+                        }}
+                      >
+                        Public Ltd. Co.
+                      </Checkbox>
+                      <Checkbox
+                        size="lg"
+                        name="LLP"
+                        value={llp}
+                        checked={llp}
+                        onChange={(e) => {
+                          setValues({
+                            ...initialValues,
+                            llp: !llp,
+                          });
+                        }}
+                      >
+                        LLP
+                      </Checkbox>
+                    </VStack>
                   </Flex>
+                </FormControl>
+                <Flex w="100%" direction="column" mr="45px" mt="25px">
+                  <FormControl isRequired>
+                    <Flex align="center" justify="space-between" mb="15px">
+                      <FormLabel
+                        pt="2"
+                        fontSize="16px"
+                        fontFamily="avenir"
+                        lineHeight="24px"
+                        fontWeight="700"
+                        htmlFor="officeAdd"
+                      >
+                        OFFICE ADDRESS
+                      </FormLabel>
+                      <Input
+                        id="officeAdd"
+                        name="officeAdd"
+                        onChange={(e) => onChange(e)}
+                        value={officeAdd}
+                        type="text"
+                        fontSize="16px"
+                        fontFamily="avenir"
+                        w="340px"
+                        h="50px"
+                        bgColor="#E5E5E5"
+                        borderRadius="none"
+                        isRequired
+                      />
+                    </Flex>
+                  </FormControl>
+                  <FormControl isRequired>
+                    <Flex align="center" justify="space-between" mb="15px">
+                      <FormLabel
+                        pt="2"
+                        fontSize="16px"
+                        fontFamily="avenir"
+                        lineHeight="24px"
+                        fontWeight="700"
+                        htmlFor="mobileNo"
+                      >
+                        MOBILE NO.
+                      </FormLabel>
+                      <Input
+                        type="number"
+                        id="mobileNo"
+                        name="mobileNo"
+                        value={mobileNo}
+                        onChange={(e) => {
+                          if (e.target.value.length > 10) {
+                            alert("Enter a valid phone number");
+                          } else {
+                            setValues({
+                              ...initialValues,
+                              mobileNo: e.target.value,
+                            });
+                          }
+                        }}
+                        fontSize="16px"
+                        fontFamily="avenir"
+                        w="340px"
+                        h="50px"
+                        bgColor="#E5E5E5"
+                        borderRadius="none"
+                        isRequired
+                      />
+                    </Flex>
+                  </FormControl>
                   <Flex align="center" justify="space-between" mb="15px">
                     <FormLabel
                       pt="2"
@@ -426,7 +418,7 @@ const ChannelForm = () => {
                       fontWeight="700"
                       htmlFor="website"
                     >
-                      WEBSITE*
+                      WEBSITE
                     </FormLabel>
                     <Input
                       id="website"
@@ -440,35 +432,36 @@ const ChannelForm = () => {
                       h="50px"
                       bgColor="#E5E5E5"
                       borderRadius="none"
-                      isRequired
                     />
                   </Flex>
-                  <Flex align="center" justify="space-between" mb="15px">
-                    <FormLabel
-                      pt="2"
-                      fontSize="16px"
-                      fontFamily="avenir"
-                      lineHeight="24px"
-                      fontWeight="700"
-                      htmlFor="email"
-                    >
-                      EMAIL*
-                    </FormLabel>
-                    <Input
-                      id="email"
-                      name="email"
-                      value={email}
-                      onChange={(e) => onChange(e)}
-                      type="email"
-                      fontSize="16px"
-                      fontFamily="avenir"
-                      w="340px"
-                      h="50px"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                      isRequired
-                    />
-                  </Flex>
+                  <FormControl isRequired>
+                    <Flex align="center" justify="space-between" mb="15px">
+                      <FormLabel
+                        pt="2"
+                        fontSize="16px"
+                        fontFamily="avenir"
+                        lineHeight="24px"
+                        fontWeight="700"
+                        htmlFor="email"
+                      >
+                        EMAIL
+                      </FormLabel>
+                      <Input
+                        id="email"
+                        name="email"
+                        value={email}
+                        onChange={(e) => onChange(e)}
+                        type="email"
+                        fontSize="16px"
+                        fontFamily="avenir"
+                        w="340px"
+                        h="50px"
+                        bgColor="#E5E5E5"
+                        borderRadius="none"
+                        isRequired
+                      />
+                    </Flex>
+                  </FormControl>
                 </Flex>
               </Flex>
               {/* top-right */}
@@ -482,7 +475,7 @@ const ChannelForm = () => {
                     htmlFor="yourFocusLocationArea"
                   >
                     YOUR FOCUS <br />
-                    LOCATION/ AREA*
+                    LOCATION/ AREA
                   </FormLabel>
                   <Input
                     id="yourFocusLocationArea"
@@ -499,98 +492,101 @@ const ChannelForm = () => {
                     borderRadius="none"
                   />
                 </Flex>
-                <Heading
-                  fontSize="16px"
-                  fontFamily="avenir"
-                  lineHeight="24px"
-                  textAlign="left"
-                >
-                  EXPERTISE*
-                </Heading>
-                <Flex
-                  w="100%"
-                  fontSize="16px"
-                  fontFamily="veralaRound"
-                  align="center"
-                  justify="space-between"
-                  mt="15px"
-                  mb="15px"
-                >
-                  <VStack align="flex-start">
-                    <Checkbox
-                      size="lg"
-                      name="Residential"
-                      value={residential}
-                      checked={residential}
-                      onChange={(e) => {
-                        setValues({
-                          ...initialValues,
-                          residential: !residential,
-                        });
-                      }}
-                    >
-                      Residential
-                    </Checkbox>
-                    <Checkbox
-                      size="lg"
-                      name="Retail"
-                      value={retail}
-                      checked={retail}
-                      onChange={(e) => {
-                        setValues({
-                          ...initialValues,
-                          retail: !retail,
-                        });
-                      }}
-                    >
-                      Retail
-                    </Checkbox>
-                    <Checkbox
-                      size="lg"
-                      name="Others"
-                      value={others}
-                      checked={others}
-                      onChange={(e) => {
-                        setValues({
-                          ...initialValues,
-                          others: !others,
-                        });
-                      }}
-                    >
-                      Others
-                    </Checkbox>
-                  </VStack>
-                  <VStack align="flex-start" pr="10">
-                    <Checkbox
-                      size="lg"
-                      name="Commercial"
-                      value={commercial}
-                      checked={commercial}
-                      onChange={(e) => {
-                        setValues({
-                          ...initialValues,
-                          commercial: !commercial,
-                        });
-                      }}
-                    >
-                      Commercial
-                    </Checkbox>
-                    <Checkbox
-                      size="lg"
-                      name="Industrial Land"
-                      value={industrialLand}
-                      checked={industrialLand}
-                      onChange={(e) => {
-                        setValues({
-                          ...initialValues,
-                          industrialLand: !industrialLand,
-                        });
-                      }}
-                    >
-                      Industrial Land
-                    </Checkbox>
-                  </VStack>
-                </Flex>
+                <FormControl isRequired>
+                  <FormLabel
+                    fontSize="16px"
+                    fontWeight="bold"
+                    fontFamily="avenir"
+                    lineHeight="24px"
+                    textAlign="left"
+                  >
+                    EXPERTISE
+                  </FormLabel>
+                  <Flex
+                    w="100%"
+                    fontSize="16px"
+                    fontFamily="veralaRound"
+                    align="center"
+                    justify="space-between"
+                    mt="15px"
+                    mb="15px"
+                  >
+                    <VStack align="flex-start">
+                      <Checkbox
+                        size="lg"
+                        name="Residential"
+                        value={residential}
+                        checked={residential}
+                        onChange={(e) => {
+                          setValues({
+                            ...initialValues,
+                            residential: !residential,
+                          });
+                        }}
+                      >
+                        Residential
+                      </Checkbox>
+                      <Checkbox
+                        size="lg"
+                        name="Retail"
+                        value={retail}
+                        checked={retail}
+                        onChange={(e) => {
+                          setValues({
+                            ...initialValues,
+                            retail: !retail,
+                          });
+                        }}
+                      >
+                        Retail
+                      </Checkbox>
+                      <Checkbox
+                        size="lg"
+                        name="Others"
+                        value={others}
+                        checked={others}
+                        onChange={(e) => {
+                          setValues({
+                            ...initialValues,
+                            others: !others,
+                          });
+                        }}
+                      >
+                        Others
+                      </Checkbox>
+                    </VStack>
+                    <VStack align="flex-start" pr="10">
+                      <Checkbox
+                        size="lg"
+                        name="Commercial"
+                        value={commercial}
+                        checked={commercial}
+                        onChange={(e) => {
+                          setValues({
+                            ...initialValues,
+                            commercial: !commercial,
+                          });
+                        }}
+                      >
+                        Commercial
+                      </Checkbox>
+                      <Checkbox
+                        size="lg"
+                        name="Industrial Land"
+                        value={industrialLand}
+                        checked={industrialLand}
+                        onChange={(e) => {
+                          setValues({
+                            ...initialValues,
+                            industrialLand: !industrialLand,
+                          });
+                        }}
+                      >
+                        Industrial Land
+                      </Checkbox>
+                    </VStack>
+                  </Flex>
+                </FormControl>
                 <Input
                   type="text"
                   name="others"
@@ -612,7 +608,7 @@ const ChannelForm = () => {
                       fontWeight="700"
                       htmlFor="gstNo"
                     >
-                      GST No.*
+                      GST No.
                     </FormLabel>
                     <Input
                       id="gstNo"
@@ -637,7 +633,7 @@ const ChannelForm = () => {
                       fontWeight="700"
                       htmlFor="reraNo"
                     >
-                      RERA No.*
+                      RERA No.
                     </FormLabel>
                     <Input
                       id="reraNo"
@@ -655,6 +651,7 @@ const ChannelForm = () => {
                   </Flex>
                   <RadioGroup onChange={setBrokerAssoc} value={brokerAssoc}>
                     <FormLabel
+                      fontWeight="bold"
                       htmlFor="brokerAssoc"
                       fontSize="16px"
                       fontFamily="avenir"
@@ -662,7 +659,7 @@ const ChannelForm = () => {
                       textAlign="left"
                       pb="15px"
                     >
-                      AFFILIATION TO ANY BROKER ASSOCIATION*
+                      AFFILIATION TO ANY BROKER ASSOCIATION
                     </FormLabel>{" "}
                     <Flex
                       justify="space-between"
@@ -698,7 +695,7 @@ const ChannelForm = () => {
                 htmlFor="identityDoc"
               >
                 IDENTITY <br />
-                DOCUMENT*
+                DOCUMENT
               </FormLabel>
               <Flex direction="column" align="flex-start">
                 <Input
@@ -736,7 +733,7 @@ const ChannelForm = () => {
                 lineHeight="24px"
                 pb="15px"
               >
-                AUTHORISED SIGNATORIES*
+                AUTHORISED SIGNATORIES
               </Heading>
               <Flex>
                 <Flex
@@ -753,7 +750,7 @@ const ChannelForm = () => {
                     fontWeight="700"
                     htmlFor="name1"
                   >
-                    NAME*
+                    NAME
                   </FormLabel>
                   <Input
                     id="name1"
@@ -767,7 +764,6 @@ const ChannelForm = () => {
                     h="50px"
                     bgColor="#E5E5E5"
                     borderRadius="none"
-                    isRequired
                   />
                 </Flex>
                 <Flex mb="15px" justify="space-between" align="center">
@@ -779,7 +775,7 @@ const ChannelForm = () => {
                     fontWeight="700"
                     htmlFor="designation1"
                   >
-                    DESIGNATION*
+                    DESIGNATION
                   </FormLabel>
                   <Input
                     id="designation1"
@@ -806,7 +802,7 @@ const ChannelForm = () => {
                     fontWeight="700"
                     htmlFor="name2"
                   >
-                    NAME*
+                    NAME
                   </FormLabel>
                   <Input
                     id="name2"
@@ -831,7 +827,7 @@ const ChannelForm = () => {
                     fontWeight="700"
                     htmlFor="designation2"
                   >
-                    DESIGNATION*
+                    DESIGNATION
                   </FormLabel>
                   <Input
                     id="designation2"
@@ -863,6 +859,7 @@ const ChannelForm = () => {
               _hover={{
                 bgGradient: "linear(to-b, #DFBD69, #B88746)",
               }}
+              _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
             >
               SEND MESSAGE
             </Button>
@@ -933,6 +930,8 @@ const ChannelForm = () => {
           justify="flex-start"
           pl="50px"
           cursor="pointer"
+          fontFamily="avenir"
+          fontWeight="bold"
         >
           <Icon as={AiOutlineDownload} h="30px" w="30px" mr="10px" />
           DOWNLOAD CP-BROCHURE

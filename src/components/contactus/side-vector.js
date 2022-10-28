@@ -14,7 +14,6 @@ const MtnIcn = motion(Icon);
 const SideVector = () => {
   const [dis, setDis] = useState(true);
   const track = () => {
-    console.log(window.scrollY);
     if (window.scrollY > 1900) {
       setDis(false);
     } else {
