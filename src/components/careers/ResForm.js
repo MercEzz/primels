@@ -11,7 +11,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BsUpload } from "react-icons/bs";
 
 const MtnHead = motion(Heading);
@@ -30,6 +30,31 @@ const ResForm = () => {
       animationFade.start({ opacity: 1 });
     }
   }, [isInView, animationHead, animationFade]);
+
+  const [borderClr, setbordorClr] = useState(null);
+
+  const [formData, setFormData] = useState({
+    nmae: "",
+    email: "",
+    phoneNo: "",
+    areaOfInterest: "",
+    resume: "",
+  });
+
+  const { name, email, phoneNo, areaOfInterest, resume } = formData;
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(formData);
+    if (name === "" || email === "" || phoneNo === "") {
+      setbordorClr(true);
+    } else {
+      setbordorClr(false);
+    }
+  };
+
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
     <Flex
@@ -65,75 +90,149 @@ const ResForm = () => {
         Work with us, send your resume and our team will get back to you.
       </MtnText>
       <Container minW="container.sm">
-        <FormControl align="center" justify="center">
-          <MtnStk
-            w="90%"
-            initial={{ opacity: 0 }}
-            animate={animationFade}
-            transition={{ delay: 1, duration: 2, type: "just" }}
-            align="center"
-          >
-            <Flex
-              w="100%"
+        <form onSubmit={submitHandler}>
+          <FormControl align="center" justify="center">
+            <MtnStk
+              w="90%"
+              initial={{ opacity: 0 }}
+              animate={animationFade}
+              transition={{ delay: 1, duration: 2, type: "just" }}
               align="center"
-              justifyContent="space-between"
-              pb="15px"
             >
-              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
-                NAME*
-              </FormLabel>
-              <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
-            </Flex>
-            <Flex w="100%" align="center" justify="space-between" pb="7px">
-              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
-                EMAIL
-              </FormLabel>
-              <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
-            </Flex>
-            <Flex w="100%" align="center" justify="space-between" pb="7px">
-              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
-                PHONE NO.*
-              </FormLabel>
-              <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
-            </Flex>
-            <Flex w="100%" align="center" justify="space-between" pb="7px">
-              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
-                AREA OF INTEREST
-              </FormLabel>
-              <Input w="350px" h="40px" bgColor="#E5E5E5" borderRadius="none" />
-            </Flex>
-            <Flex w="100%" align="center" justify="space-between" pb="7px">
-              <FormLabel fontFamily="avenir" fontWeight="700" fontSize="16px">
-                RESUME*
-              </FormLabel>
-              <Input
-                p="1"
-                type="file"
-                w="350px"
-                h="40px"
-                bgColor="#E5E5E5"
-                borderRadius="none"
-              />
-            </Flex>
-          </MtnStk>
-          <Text ml="-10" fontSize="16px" fontFamily="veralaRound">
-            <Icon as={BsUpload} mr="10px" />
-            Upload File
-          </Text>
-          <Button
-            mt="25px"
-            mb="50px"
-            bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-            color="white"
-            fontSize="16px"
-            fontFamily="avenir"
-            _hover={{
-              bgGradient: "linear(to-b, #DFBD69, #B88746)",
-            }}
-          >
-            SUBMIT NOW
-          </Button>
-        </FormControl>
+              <FormControl isRequired>
+                <Flex
+                  w="100%"
+                  align="center"
+                  justifyContent="space-between"
+                  pb="15px"
+                >
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontWeight="700"
+                    fontSize="16px"
+                    htmlFor="name"
+                  >
+                    NAME
+                  </FormLabel>
+                  <Input
+                    type="text"
+                    id="name"
+                    value={name}
+                    onChange={onChange}
+                    w="350px"
+                    h="40px"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </Flex>
+              </FormControl>
+              <Flex w="100%" align="center" justify="space-between" pb="7px">
+                <FormLabel
+                  fontFamily="avenir"
+                  fontWeight="700"
+                  fontSize="16px"
+                  htmlFor="email"
+                >
+                  EMAIL
+                </FormLabel>
+                <Input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={onChange}
+                  w="350px"
+                  h="40px"
+                  bgColor="#E5E5E5"
+                  borderRadius="none"
+                />
+              </Flex>
+              <FormControl isRequired>
+                <Flex w="100%" align="center" justify="space-between" pb="7px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontWeight="700"
+                    fontSize="16px"
+                    htmlFor="phoneNo"
+                  >
+                    PHONE NO.
+                  </FormLabel>
+                  <Input
+                    type="number"
+                    id="phoneNo"
+                    value={phoneNo}
+                    onChange={onChange}
+                    w="350px"
+                    h="40px"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </Flex>
+              </FormControl>
+              <Flex w="100%" align="center" justify="space-between" pb="7px">
+                <FormLabel
+                  fontFamily="avenir"
+                  fontWeight="700"
+                  fontSize="16px"
+                  htmlFor="areaOfInterest"
+                >
+                  AREA OF INTEREST
+                </FormLabel>
+                <Input
+                  type="text"
+                  id="areaOfInterest"
+                  value={areaOfInterest}
+                  onChange={onChange}
+                  w="350px"
+                  h="40px"
+                  bgColor="#E5E5E5"
+                  borderRadius="none"
+                />
+              </Flex>
+              <FormControl isRequired>
+                <Flex w="100%" align="center" justify="space-between" pb="7px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontWeight="700"
+                    fontSize="16px"
+                    htmlFor="resume"
+                  >
+                    RESUME
+                  </FormLabel>
+                  <Input
+                    type="file"
+                    id="resume"
+                    value={resume}
+                    onChange={onChange}
+                    p="1"
+                    w="350px"
+                    h="40px"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </Flex>
+              </FormControl>
+            </MtnStk>
+            <Text ml="-10" fontSize="16px" fontFamily="veralaRound">
+              <Icon as={BsUpload} mr="10px" />
+              Upload File
+            </Text>
+            <Button
+              type="submit"
+              mt="25px"
+              mb="50px"
+              bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+              color="white"
+              fontSize="16px"
+              fontFamily="avenir"
+              _hover={{
+                bgGradient: "linear(to-b, #DFBD69, #B88746)",
+              }}
+              _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+            >
+              SUBMIT NOW
+            </Button>
+          </FormControl>
+        </form>
       </Container>
     </Flex>
   );

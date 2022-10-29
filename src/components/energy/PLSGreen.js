@@ -9,15 +9,15 @@ const MtnHd = motion(Heading);
 
 const PLSGreen = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
   const animateImg = useAnimation();
   const animateFlx = useAnimation();
   const animateHd = useAnimation();
 
   useEffect(() => {
     if (isInView) {
-      animateImg.start({ opacity: 1, x: 0 });
-      animateFlx.start({ opacity: 1, y: 0 });
+      animateImg.start({ opacity: [0, 0, 1], x: 0 });
+      animateFlx.start({ opacity: [0, 0, 1], y: 0 });
       animateHd.start({ opacity: 1 });
     }
   }, [isInView, animateImg, animateFlx, animateHd]);
@@ -90,7 +90,7 @@ const PLSGreen = () => {
         <Flex w="100%" h="100%" pos="absolute" direction="column" left="0">
           <MtnImg
             boxShadow="dark-lg"
-            initial={{ opacity: 1, x: 400 }}
+            initial={{ opacity: 0, x: 400 }}
             animate={animateImg}
             transition={{ duration: 2, type: "just" }}
             src="/images/energy/ourPro1.jpeg"
@@ -114,7 +114,7 @@ const PLSGreen = () => {
             <MtnFlx
               h="100%"
               px="12"
-              initial={{ opacity: 1, y: -100 }}
+              initial={{ opacity: 0, y: -100 }}
               animate={animateFlx}
               transition={{ duration: 2, type: "just" }}
               direction="column"
@@ -144,8 +144,8 @@ const PLSGreen = () => {
             </MtnFlx>
             <MtnFlx
               h="100%"
-              initial={{ opacity: 1, x: -200 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -200 }}
+              animate={{ opacity: [0, 0, 1], x: 0 }}
               transition={{ duration: 2, type: "just" }}
               direction="column"
               pt="5%"
