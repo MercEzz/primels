@@ -80,7 +80,7 @@ const Buildchng = () => {
             <MtnImg
               initial={{ scale: 0.5, opacity: 0 }}
               animate={animationImg}
-              transition={{ delay: 3, duration: 2, type: "just" }}
+              transition={{ delay: 3.5, duration: 2, type: "just" }}
               pos="absolute"
               w="55%"
               h="75%"
@@ -198,7 +198,7 @@ const Buildchng = () => {
               <MtnHead
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
-                transition={{ delay: 2.5, duration: 2, type: "just" }}
+                transition={{ delay: 3.5, duration: 2, type: "just" }}
                 fontSize="110px"
                 fontWeight="400"
                 fontFamily="goudy"
@@ -211,7 +211,7 @@ const Buildchng = () => {
               <MtnFlx
                 initial={{ opacity: 0, x: 50 }}
                 animate={animationRightTxt}
-                transition={{ delay: 2.5, duration: 2, type: "just" }}
+                transition={{ delay: 3.5, duration: 2, type: "just" }}
                 direction="column"
               >
                 <Heading fontSize="20px" pb="10px" fontFamily="avenir">

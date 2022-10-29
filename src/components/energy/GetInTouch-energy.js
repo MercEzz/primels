@@ -135,7 +135,7 @@ const GetInTouch = () => {
                   fontSize="16px"
                   htmlFor="email"
                 >
-                  EMAIL*
+                  EMAIL
                 </FormLabel>
                 <Input
                   id="email"

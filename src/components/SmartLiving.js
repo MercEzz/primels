@@ -172,6 +172,7 @@ const SmartLiving = () => {
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",
           }}
+          _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
         >
           EXPLORE NOW
         </Button>

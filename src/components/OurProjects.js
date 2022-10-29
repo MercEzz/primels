@@ -46,33 +46,36 @@ const OurProjects = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="100vh"
+      minh="100%"
       direction="column"
       align="center"
-      justify="center"
-      py="50px"
-      px="50px"
+      pb="50px"
+      pl="100px"
     >
-      <Flex w="100%" align="center" justify="center">
-        <Flex w="100%" align="center" justify="center">
+      <Flex w="100%" h="100%" align="center" justify="center">
+        <Flex w="10%">
           <MtnDvdr
+            left="28%"
             initial={{ opacity: 0, x: 100 }}
             animate={animateX}
             transition={{ duration: 2, type: "just" }}
-            w="23%"
+            w="100%"
             orientation="horizontal"
             border="3px solid"
             bgColor="#DFBD69"
             borderColor="#DFBD69"
             mr="10px"
           />
-          <Text w="290px" fontFamily="goudy" fontSize="40px" textAlign="left">
+        </Flex>
+        <Flex h="100%" align="center" justify="center">
+          <Text fontFamily="goudy" fontSize="40px" textAlign="center">
             OUR PROJECTS
           </Text>
         </Flex>
+        <Flex w="10%"></Flex>
       </Flex>
-      <Flex w="100%" h="100%">
-        <Flex direction="column" justify="center" w="25%" h="100%" px="6">
+      <Flex w="100%" h="full" align="flex-start" justify="space-between">
+        <Flex pt="25px" direction="column" justify="center" h="100%">
           <MtnHd
             initial={{ x: -500 }}
             animate={animateX}
@@ -128,6 +131,7 @@ const OurProjects = () => {
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
             }}
+            _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
           >
             VIEW PROJECT
           </MtnBtn>
@@ -136,13 +140,16 @@ const OurProjects = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={animateY}
           transition={{ duration: 2, type: "just" }}
-          w="5%"
-          h="35%"
+          h="100%"
           direction="column"
           align="center"
+          justify="flex-end"
           pt="25px"
+          px="40px"
+          bgColor="red"
         >
           <Divider
+            h="150px"
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
@@ -150,7 +157,7 @@ const OurProjects = () => {
           />{" "}
           <Box
             height="30px"
-            width="25px"
+            width="30px"
             backgroundColor="#DFBD69"
             border="3px solid white"
             boxShadow="0px 0px 0px 3px #B88746"
@@ -158,7 +165,13 @@ const OurProjects = () => {
             my="1"
           />
         </MtnFlx>
-        <Flex w="70%" direction="column" pt="25px" pl="40px" pr="50px">
+        <Flex
+          w="100%"
+          direction="column"
+          align="flex-start"
+          pt="25px"
+          pr="50px"
+        >
           <MtnFlx
             initial={{ opacity: 0 }}
             animate={animateX}
@@ -185,15 +198,15 @@ const OurProjects = () => {
           >
             <Image
               zIndex="3"
-              pos="absolute"
-              w="868px"
-              h="500px"
+              // pos="absolute"
+              w="100%"
+              h="100%"
               src="/images/pro1.png"
             />
             <Image
               pos="absolute"
-              w="868px"
-              h="450px"
+              w="100%"
+              h="90%"
               left="100px"
               top="25px"
               opacity=".5"

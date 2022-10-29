@@ -30,12 +30,14 @@ const AboutUs = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="100vh"
+      h="100%"
+      s
       align="center"
       justify="center"
       bgColor="gray.900"
       color="white"
-      py="100px"
+      pt="100px"
+      pb="50px"
       px="100px"
       direction="column"
     >
@@ -122,15 +124,30 @@ const AboutUs = () => {
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-              <Box
-                height="30px"
-                width="85px"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
+              <Flex
+                h="30px"
+                pos="relative"
+                align="center"
+                justify="center"
+                direction="column"
+              >
+                <Box
+                  pos="absolute"
+                  height="30px"
+                  width="30px"
+                  boxShadow="0px 0px 0px 3px #B88746"
+                  borderRadius="50%"
+                  my="0.5"
+                />
+                <Box
+                  pos="absolute"
+                  height="22px"
+                  width="22px"
+                  backgroundColor="#DFBD69"
+                  borderRadius="50%"
+                  my="0.5"
+                />
+              </Flex>
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -182,15 +199,30 @@ const AboutUs = () => {
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-              <Box
-                height="30px"
-                width="55px"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
+              <Flex
+                h="30px"
+                pos="relative"
+                align="center"
+                justify="center"
+                direction="column"
+              >
+                <Box
+                  pos="absolute"
+                  height="30px"
+                  width="30px"
+                  boxShadow="0px 0px 0px 3px #B88746"
+                  borderRadius="50%"
+                  my="0.5"
+                />
+                <Box
+                  pos="absolute"
+                  height="22px"
+                  width="22px"
+                  backgroundColor="#DFBD69"
+                  borderRadius="50%"
+                  my="0.5"
+                />
+              </Flex>
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -245,15 +277,30 @@ const AboutUs = () => {
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-              <Box
-                height="30px"
-                width="65px"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
+              <Flex
+                h="30px"
+                pos="relative"
+                align="center"
+                justify="center"
+                direction="column"
+              >
+                <Box
+                  pos="absolute"
+                  height="30px"
+                  width="30px"
+                  boxShadow="0px 0px 0px 3px #B88746"
+                  borderRadius="50%"
+                  my="0.5"
+                />
+                <Box
+                  pos="absolute"
+                  height="22px"
+                  width="22px"
+                  backgroundColor="#DFBD69"
+                  borderRadius="50%"
+                  my="0.5"
+                />
+              </Flex>
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -300,6 +347,7 @@ const AboutUs = () => {
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",
           }}
+          _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
         >
           Know More
         </MtnBtn>

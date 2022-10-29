@@ -41,11 +41,11 @@ const Invest = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="100vh"
+      h="100%"
       direction="column"
       align="center"
       justify="center"
-      py="50px"
+      py="100px"
       px="100px"
     >
       <MtnHead
@@ -191,6 +191,7 @@ const Invest = () => {
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
             }}
+            _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
           >
             VIEW DETAILS
           </Button>

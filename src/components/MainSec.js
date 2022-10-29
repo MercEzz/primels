@@ -40,7 +40,7 @@ const MainSec = () => {
           // transition={{ delay: 3, duration: 5, type: "just" }}
           zIndex="4"
         >
-          THE LARGEST{" "}
+          TRANSFORMING
         </MotnHead>
         <MotnHead
           fontSize="40px"
@@ -50,7 +50,7 @@ const MainSec = () => {
           // transition={{ delay: 3, duration: 5, type: "just" }}
           zIndex="4"
         >
-          SMART TOWNSHIP
+          NORTH CHENNAI
         </MotnHead>
         <MotnHead
           fontSize="40px"
@@ -60,8 +60,7 @@ const MainSec = () => {
           // transition={{ delay: 3, duration: 5, type: "just" }}
           zIndex="4"
         >
-          {" "}
-          OF NORTH CHENNAI
+          SKYLINE
         </MotnHead>
         <Text
           pt="15px"
@@ -75,7 +74,7 @@ const MainSec = () => {
           Arete Homes your wish for a <br /> smart living, NOW GRANTED
         </Text>
         <Button
-          my="2"
+          my="9px"
           w="162px"
           h="51px"
           fontSize="16px"
@@ -85,6 +84,7 @@ const MainSec = () => {
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",
           }}
+          _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
         >
           EXPLORE NOW
         </Button>

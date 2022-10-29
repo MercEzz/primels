@@ -123,7 +123,9 @@ const SideVector = () => {
                 h="50px"
                 w="50px"
                 mb="10px"
-                _hover={{ color: "linear(to-b, #B88746, #DFBD69)" }}
+                bgColor="white"
+                borderRadius="50%"
+                _hover={{ color: "#3b5998" }}
                 transition="linear 200ms"
               />
               <Icon
@@ -131,7 +133,7 @@ const SideVector = () => {
                 as={RiYoutubeFill}
                 h="50px"
                 w="50px"
-                _hover={{ color: "linear(to-b, #B88746, #DFBD69)" }}
+                _hover={{ color: "#ff0000" }}
                 transition="linear 200ms"
               />
             </Flex>

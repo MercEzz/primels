@@ -28,7 +28,7 @@ const LastSection = () => {
             Hear What <br /> People Has To <br /> Say About Us.
           </Text>
         </Flex>
-        <Flex w="80%" h="80%" pos="absolute" left="22%" top="10%">
+        <Flex w="78%" h="80%" pos="absolute" left="22%" top="10%">
           <iframe
             width="100%"
             height="100%"

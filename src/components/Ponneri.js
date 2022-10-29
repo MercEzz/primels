@@ -4,8 +4,8 @@ import React from "react";
 const Ponneri = () => {
   return (
     <Flex w="100%" h="100vh" py="50px" my="50px">
-      <Flex w="70%" h="100%" direction="column">
-        <Flex w="100%" align="center" justify="flex-end" pb="50px">
+      <Flex w="100%" h="100%" direction="column">
+        <Flex w="100%" align="center" justify="flex-start" pb="50px">
           {/* <Image src="/images/logo.png" /> */}
           <Heading
             fontSize="40px"
@@ -23,44 +23,58 @@ const Ponneri = () => {
             borderColor="#DFBD69"
           />
         </Flex>
-        <Image w="100%" h="100%" src="/images/gymkhana.png" />
-      </Flex>
-      <Flex w="30%" direction="column" align="flex-start" pl="40px">
-        <Flex h="16rem" direction="column" align="center" pt="5.9rem">
-          <Divider
-            orientation="vertical"
-            border="3px solid"
-            borderColor="#DFBD69"
-            bgColor="#DFBD69"
-          />
-          <Box
-            height="30px"
-            width="25px"
-            backgroundColor="#DFBD69"
-            border="3px solid white"
-            boxShadow="0px 0px 0px 3px #B88746"
-            borderRadius="50%"
-            my="1"
-          />
+        <Flex w="100%" h="100%">
+          <Flex w="100%" h="100%">
+            <Image w="100%" h="100%" src="/images/gymkhana.png" />{" "}
+          </Flex>
+          <Flex align="flex-start" pr="100px">
+            <Flex h="100%" direction="column" align="center" px="40px">
+              <Divider
+                h="170px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="30px"
+                width="30px"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
+            <Flex
+              w="100%"
+              h="100%"
+              direction="column"
+              align="flex-start"
+              justify="center"
+            >
+              <Heading fontSize="34px" fontFamily="avenir" mb="25px">
+                ONE CLUB -<br />
+                MANY FACETS
+              </Heading>
+              <Button
+                w="206px"
+                h="51px"
+                p="16px"
+                bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+                color="white"
+                fontSize="16px"
+                fontFamily="avenir"
+                _hover={{
+                  bgGradient: "linear(to-b, #DFBD69, #B88746)",
+                }}
+                _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+              >
+                BECOME A MEMBER
+              </Button>
+            </Flex>
+          </Flex>
         </Flex>
-        <Heading fontSize="34px" fontFamily="avenir" my="25px">
-          ONE CLUB -<br />
-          MANY FACETS
-        </Heading>
-        <Button
-          w="206px"
-          h="51px"
-          p="16px"
-          bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-          color="white"
-          fontSize="16px"
-          fontFamily="avenir"
-          _hover={{
-            bgGradient: "linear(to-b, #DFBD69, #B88746)",
-          }}
-        >
-          BECOME A MEMBER
-        </Button>
       </Flex>
     </Flex>
   );
