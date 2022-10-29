@@ -74,8 +74,8 @@ const SideVector = () => {
               />
               <Box
                 pos="absolute"
-                height="23px"
-                width="23px"
+                height="22px"
+                width="22px"
                 backgroundColor="#DFBD69"
                 borderRadius="50%"
                 my="0.5"
