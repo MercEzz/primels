@@ -55,7 +55,7 @@ const OurProjects = () => {
       <Flex w="100%" h="100%" align="center" justify="center">
         <Flex w="10%">
           <MtnDvdr
-            left="28%"
+            left="10%"
             initial={{ opacity: 0, x: 100 }}
             animate={animateX}
             transition={{ duration: 2, type: "just" }}
@@ -146,7 +146,6 @@ const OurProjects = () => {
           justify="flex-end"
           pt="25px"
           px="40px"
-          bgColor="red"
         >
           <Divider
             h="150px"
