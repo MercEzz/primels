@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Flex, Divider, Box, Icon, Text } from "@chakra-ui/react";
+import { Flex, Divider, Box, Icon, Text, Link } from "@chakra-ui/react";
 import {
   RiInstagramFill,
   RiLinkedinBoxFill,
@@ -90,46 +90,38 @@ const SideVector = () => {
               overflow="hidden"
               align="center"
             >
-              <Box
-              // bgGradient="linear(to-l, #7928CA, #FF0080)"
-              // __css={{
-              //   backgroundClip: "text",
-              //   color: "transparent",
-              // }}
-              // bgClip="text"
-              // color="black"
-              // _hover={{
-              //   // color: "transparent",
-
-              //   bgGradient: "linear-gradient(to-r, #7928CA, #FF0080)",
-              // }}
-              >
-                <Icon as={RiInstagramFill} h="50px" w="50px" mt="10px" />
-              </Box>
-              <Box bg="linear-gradient(to-b, #B88746, #DFBD69)">
-                <Icon
-                  top="50px"
-                  as={RiLinkedinBoxFill}
-                  h="50px"
-                  w="50px"
-                  my="10px"
-                  _hover={{ color: "#B88746" }}
-                  transition="linear 200ms"
-                />
-              </Box>
               <Icon
-                top="110px"
+                as={RiInstagramFill}
+                h="50px"
+                w="50px"
+                mt="10px"
+                _hover={
+                  {
+                    //  color: ''
+                  }
+                }
+                transition="linear 200ms"
+              />
+
+              <Icon
+                as={RiLinkedinBoxFill}
+                h="50px"
+                w="50px"
+                my="10px"
+                _hover={{ color: "#0A66C2" }}
+                transition="linear 200ms"
+              />
+
+              <Icon
                 as={RiFacebookCircleFill}
                 h="50px"
                 w="50px"
                 mb="10px"
-                bgColor="white"
                 borderRadius="50%"
                 _hover={{ color: "#3b5998" }}
                 transition="linear 200ms"
               />
               <Icon
-                top="160px"
                 as={RiYoutubeFill}
                 h="50px"
                 w="50px"

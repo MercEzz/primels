@@ -16,8 +16,8 @@ const PLSGreen = () => {
 
   useEffect(() => {
     if (isInView) {
-      animateImg.start({ opacity: [0, 0, 1], x: 0 });
-      animateFlx.start({ opacity: [0, 0, 1], y: 0 });
+      animateImg.start({ opacity: 1, x: 0 });
+      animateFlx.start({ opacity: 1, y: 0 });
       animateHd.start({ opacity: 1 });
     }
   }, [isInView, animateImg, animateFlx, animateHd]);
@@ -90,7 +90,7 @@ const PLSGreen = () => {
         <Flex w="100%" h="100%" pos="absolute" direction="column" left="0">
           <MtnImg
             boxShadow="dark-lg"
-            initial={{ opacity: 0, x: 400 }}
+            initial={{ opacity: 0, x: 100 }}
             animate={animateImg}
             transition={{ duration: 2, type: "just" }}
             src="/images/energy/ourPro1.jpeg"
@@ -144,8 +144,8 @@ const PLSGreen = () => {
             </MtnFlx>
             <MtnFlx
               h="100%"
-              initial={{ opacity: 0, x: -200 }}
-              animate={{ opacity: [0, 0, 1], x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 2, type: "just" }}
               direction="column"
               pt="5%"

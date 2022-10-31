@@ -1,6 +1,7 @@
-import { Flex, Text, Avatar, Stack, AspectRatio } from "@chakra-ui/react";
+import { Flex, Text, Icon } from "@chakra-ui/react";
 import React from "react";
 import ImgCarousel from "./layouts/Img-Carousel";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 
 const LastSection = () => {
   return (
@@ -41,9 +42,35 @@ const LastSection = () => {
           ></iframe>
         </Flex>
       </Flex>
-      <Flex w="100%">
-        <Flex w="100%">
+      <Flex w="100%" h="100%">
+        <Flex
+          w="100%"
+          h="100%"
+          pos="relative"
+          align="flex-start"
+          justify="space-between"
+        >
+          <Icon
+            pos="absolute"
+            left="-1%"
+            top="0"
+            w="70px"
+            h="50px"
+            as={ImQuotesLeft}
+            color="#DFBD69"
+          />
           <ImgCarousel testimonial={testimonial} />
+          <Icon
+            mr="4"
+            color="#DFBD69"
+            pos="absolute"
+            right="0"
+            bottom="25%"
+            zIndex="10"
+            w="70px"
+            h="50px"
+            as={ImQuotesRight}
+          />
         </Flex>
       </Flex>
     </Flex>

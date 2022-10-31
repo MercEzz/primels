@@ -112,30 +112,15 @@ const OneStop = () => {
               borderColor="#DFBD69"
               bgColor="#DFBD69"
             />
-            <Flex
-              h="30px"
-              pos="relative"
-              align="center"
-              justify="center"
-              direction="column"
-            >
-              <Box
-                pos="absolute"
-                height="30px"
-                width="30px"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="0.5"
-              />
-              <Box
-                pos="absolute"
-                height="22px"
-                width="22px"
-                backgroundColor="#DFBD69"
-                borderRadius="50%"
-                my="0.5"
-              />
-            </Flex>
+            <Box
+              height="30px"
+              width="30px"
+              backgroundColor="#DFBD69"
+              border="3px solid #fff"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />
             <MtnDvdr
               initial={{ opacity: 0, y: -100 }}
               animate={animateHd}
@@ -253,30 +238,15 @@ const OneStop = () => {
               borderColor="#DFBD69"
               bgColor="#DFBD69"
             />
-            <Flex
-              h="30px"
-              pos="relative"
-              align="center"
-              justify="center"
-              direction="column"
-            >
-              <Box
-                pos="absolute"
-                height="30px"
-                width="30px"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="0.5"
-              />
-              <Box
-                pos="absolute"
-                height="22px"
-                width="22px"
-                backgroundColor="#DFBD69"
-                borderRadius="50%"
-                my="0.5"
-              />
-            </Flex>
+            <Box
+              height="30px"
+              width="30px"
+              backgroundColor="#DFBD69"
+              border="3px solid #fff"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />
             <MtnDvdr
               initial={{ opacity: 0, y: -50 }}
               animate={animateHd}
@@ -392,30 +362,15 @@ const OneStop = () => {
               borderColor="#DFBD69"
               bgColor="#DFBD69"
             />
-            <Flex
-              h="30px"
-              pos="relative"
-              align="center"
-              justify="center"
-              direction="column"
-            >
-              <Box
-                pos="absolute"
-                height="30px"
-                width="30px"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="0.5"
-              />
-              <Box
-                pos="absolute"
-                height="22px"
-                width="22px"
-                backgroundColor="#DFBD69"
-                borderRadius="50%"
-                my="0.5"
-              />
-            </Flex>
+            <Box
+              height="30px"
+              width="30px"
+              backgroundColor="#DFBD69"
+              border="3px solid #fff"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />
           </MtnFlx>{" "}
           <MtnFlx
             initial={{ opacity: 0 }}

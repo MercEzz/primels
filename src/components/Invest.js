@@ -88,7 +88,7 @@ const Invest = () => {
             height="30px"
             width="25px"
             backgroundColor="#DFBD69"
-            border="3px solid white"
+            border="3px solid #fff"
             boxShadow="0px 0px 0px 3px #B88746"
             borderRadius="50%"
             my="1"
