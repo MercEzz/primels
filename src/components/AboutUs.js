@@ -9,7 +9,10 @@ const MtnBtn = motion(Button);
 
 const AboutUs = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
   const animateHead = useAnimation();
   const animateLeft = useAnimation();
 

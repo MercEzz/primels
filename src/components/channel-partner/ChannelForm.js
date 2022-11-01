@@ -14,6 +14,10 @@ import {
   RadioGroup,
   Radio,
   FormErrorMessage,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
 } from "@chakra-ui/react";
 import React, { useRef, useState, useEffect } from "react";
 import { BsUpload } from "react-icons/bs";
@@ -896,30 +900,48 @@ const ChannelForm = () => {
             variant="flushed"
             borderBottom="2px solid white"
             icon={<TriangleDownIcon width="18px" height="18px" />}
+            borderRadius="none"
           >
-            <option style={{ color: "black" }}>ARETE HOMES</option>
-            <option style={{ color: "black" }}>SKY HIGH TOWER</option>
-            <option style={{ color: "black" }}>PGC</option>
-            <option style={{ color: "black" }}>ARETE PLAZA</option>
-            <option style={{ color: "black" }}>ARETE MALL</option>
+            <option style={{ color: "black" }}>
+              <Text>ARETE HOMES</Text>
+            </option>
+            <option style={{ color: "black" }}>
+              <Text>SKY HIGH TOWER</Text>
+            </option>
+            <option style={{ color: "black" }}>
+              <Text>PGC</Text>
+            </option>
+            <option style={{ color: "black" }}>
+              <Text>ARETE PLAZA</Text>
+            </option>
+            <option style={{ color: "black" }}>
+              <Text>ARETE MALL</Text>
+            </option>
           </Select>
-          {/* <Menu>
+          {/* <Menu closeOnBlur>
             <MenuButton
-            fontFamily="avenir"
-            fontSize="16px"
-            w="300px"
-            variant="flushed"
-            as={Button}
-            rightIcon={<TriangleDownIcon />}
+              fontFamily="avenir"
+              fontSize="16px"
+              variant="flushed"
+              as={Button}
+              rightIcon={<TriangleDownIcon />}
+              textAlign="left"
             >
-            Actions
+              SELECT PROJECT
             </MenuButton>
-            <MenuList>
-            <MenuItem>Download</MenuItem>
-            <MenuItem>Create a Copy</MenuItem>
-            <MenuItem>Mark as Draft</MenuItem>
-            <MenuItem>Delete</MenuItem>
-            <MenuItem>Attend a Workshop</MenuItem>
+            <MenuList
+              color="black"
+              w="100%"
+              fontWeight="bold"
+              fontFamily="avenir"
+              fontSize="16px"
+              borderRadius="0"
+            >
+              <MenuItem>ARETE HOMES</MenuItem>
+              <MenuItem>SKY HIGH TOWER</MenuItem>
+              <MenuItem>PGC</MenuItem>
+              <MenuItem>ARETE PLAZA</MenuItem>
+              <MenuItem>ARETE MALL</MenuItem>
             </MenuList>
           </Menu> */}
         </Flex>

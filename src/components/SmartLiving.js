@@ -7,23 +7,42 @@ import {
   Box,
   Button,
 } from "@chakra-ui/react";
-import { useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
+const MtnHd = motion(Heading);
+const MtnFlx = motion(Flex);
+const MtnDvdr = motion(Divider);
+const MtnCrcl = motion(Box);
+const MtnTxt = motion(Text);
+const MtnBtn = motion(Button);
+
 const SmartLiving = () => {
-  // const ref = useRef(null);
-  // const isInView = useInView();
-  // const animateX = useAnimation();
-  // const animateY = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateX = useAnimation();
+  const animateY = useAnimation();
+  const animateFade = useAnimation();
 
-  // useEffect(() => {
-  //   if(isInView) {
-
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (isInView) {
+      animateY.start({
+        opacity: 1,
+        y: 0,
+      });
+      animateX.start({
+        opacity: 1,
+        x: 0,
+      });
+      animateFade.start({
+        opacity: 1,
+      });
+    }
+  }, [isInView, animateY, animateX, animateFade]);
 
   return (
     <Flex
+      ref={ref}
       direction="column"
       w="100%"
       h="100%"
@@ -31,42 +50,76 @@ const SmartLiving = () => {
       px="100px"
       align="center"
     >
-      <Heading fontSize="40px" fontFamily="goudy" fontWeight="400">
+      <MtnHd
+        initial={{ y: -50, opacity: 0 }}
+        animate={animateY}
+        transition={{ duration: 2, type: "just" }}
+        fontSize="40px"
+        fontFamily="goudy"
+        fontWeight="400"
+      >
         SMART LIVING
-      </Heading>
+      </MtnHd>
       <Flex pt="50px">
         <Flex direction="column" w="100%" h="100%" px="2" justify="flex-start">
-          <Flex>
+          <MtnFlx
+            initial={{ opacity: 0, x: 100 }}
+            animate={animateX}
+            transition={{ delay: 1.5, duration: 2, type: "just" }}
+          >
             <Image w="570px" h="325px" src="/images/smartliving.png" />
-          </Flex>
-          <Flex py="25%" align="center">
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0, x: 100 }}
+            animate={animateX}
+            transition={{ delay: 3.5, duration: 2, type: "just" }}
+            py="25%"
+            align="center"
+          >
             <Image h="80px" w="80px" mr="2" src="/images/managed.svg" />
             <Flex direction="column">
               <Heading fontSize="24px" fontFamily="avenir">
                 MANAGED LIVING
               </Heading>
-              <Text fontSize="18px" fontFamily="veralaRound">
+              <MtnTxt
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 5, duration: 2, type: "just" }}
+                fontSize="18px"
+                fontFamily="veralaRound"
+              >
                 Premium serviced apartments in smart township living.
-              </Text>
+              </MtnTxt>
             </Flex>
-          </Flex>
-          <Flex w="100%" h="100%">
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0, x: 100 }}
+            animate={animateX}
+            transition={{ delay: 6.5, duration: 2, type: "just" }}
+          >
+            {" "}
             <Image
               w="570px"
               h="325px"
               // mt="100px"
               src="/images/smartliving3.png"
             />
-          </Flex>
+          </MtnFlx>
         </Flex>
         <Flex px="4" direction="column" align="center">
           <Flex h="100%" direction="column" align="center">
-            <Divider
+            <MtnDvdr
+              initial={{ opacity: 0, y: -50 }}
+              animate={animateY}
+              transition={{ delay: 1.5, duration: 2, type: "just" }}
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
             />
-            <Box
+            <MtnCrcl
+              initial={{ opacity: 0, y: -50 }}
+              animate={animateY}
+              transition={{ delay: 1.5, duration: 2, type: "just" }}
               height="50px"
               width="25px"
               backgroundColor="#DFBD69"
@@ -75,19 +128,28 @@ const SmartLiving = () => {
               borderRadius="50%"
               my="1"
             />
-            <Divider
+            <MtnDvdr
+              initial={{ opacity: 0, y: -50 }}
+              animate={animateY}
+              transition={{ delay: 3.5, duration: 2, type: "just" }}
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
             />
           </Flex>
           <Flex h="100%" direction="column" align="center">
-            <Divider
+            <MtnDvdr
+              initial={{ opacity: 0, y: -50 }}
+              animate={animateY}
+              transition={{ delay: 3.5, duration: 2, type: "just" }}
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
             />
-            <Box
+            <MtnCrcl
+              initial={{ opacity: 0, y: -50 }}
+              animate={animateY}
+              transition={{ delay: 3.5, duration: 2, type: "just" }}
               height="50px"
               width="25px"
               backgroundColor="#DFBD69"
@@ -96,19 +158,28 @@ const SmartLiving = () => {
               borderRadius="50%"
               my="1"
             />
-            <Divider
+            <MtnDvdr
+              initial={{ opacity: 0, y: -50 }}
+              animate={animateY}
+              transition={{ delay: 6.5, duration: 2, type: "just" }}
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
             />
           </Flex>
           <Flex h="100%" direction="column" align="center">
-            <Divider
+            <MtnDvdr
+              initial={{ opacity: 0, y: -50 }}
+              animate={animateY}
+              transition={{ delay: 6.5, duration: 2, type: "just" }}
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
             />
-            <Box
+            <MtnCrcl
+              initial={{ opacity: 0, y: -50 }}
+              animate={animateY}
+              transition={{ delay: 6.5, duration: 2, type: "just" }}
               height="50px"
               width="25px"
               backgroundColor="#DFBD69"
@@ -117,7 +188,10 @@ const SmartLiving = () => {
               borderRadius="50%"
               my="1"
             />
-            <Divider
+            <MtnDvdr
+              initial={{ opacity: 0, y: -50 }}
+              animate={animateY}
+              transition={{ delay: 9.5, duration: 2, type: "just" }}
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -126,42 +200,76 @@ const SmartLiving = () => {
         </Flex>
 
         <Flex direction="column" w="100%" px="2" pt="8%">
-          <Flex align="center">
+          <MtnFlx
+            initial={{ x: -50, opacity: 0 }}
+            animate={animateX}
+            transition={{ delay: 1.5, duration: 2, type: "just" }}
+            align="center"
+          >
             <Image w="80px" h="80px" mr="2" src="/images/co-living.svg" />
             <Flex direction="column" py="10">
               <Heading fontSize="24px" fontFamily="avenir">
                 CO-LIVING FOR PROFESSIONALS
               </Heading>
-              <Text fontSize="18px" fontFamily="veralaRound">
+              <MtnTxt
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 3, duration: 2, type: "just" }}
+                fontSize="18px"
+                fontFamily="veralaRound"
+              >
                 Your home away from home.
-              </Text>
+              </MtnTxt>
             </Flex>
-          </Flex>
-          <Flex pt="15%">
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0, x: -50 }}
+            animate={animateX}
+            transition={{ delay: 3.5, duration: 2, type: "just" }}
+            pt="15%"
+          >
             <Image w="570px" h="325px" src="/images/smartliving2.png" />
-          </Flex>
-          <Flex align="center" pt="27%">
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0, x: -50 }}
+            animate={animateX}
+            transition={{ delay: 6.5, duration: 2, type: "just" }}
+            align="center"
+            pt="27%"
+          >
             <Image w="80px" h="80px" mr="2" src="/images/student.svg" />
             <Flex direction="column">
               <Heading fontSize="24px" fontFamily="avenir">
                 STUDENT HOUSING
               </Heading>
-              <Text fontSize="18px" fontFamily="veralaRound">
+              <MtnTxt
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 8, duration: 2, type: "just" }}
+                fontSize="18px"
+                fontFamily="veralaRound"
+              >
                 Modern student housing, co-living for professionals and serviced
                 apartments.
-              </Text>
+              </MtnTxt>
             </Flex>
-          </Flex>
+          </MtnFlx>
         </Flex>
       </Flex>
       <Flex direction="column" align="center">
-        <Divider
+        <MtnDvdr
+          initial={{ opacity: 0, y: -50 }}
+          animate={animateY}
+          transition={{ delay: 9.5, duration: 2, type: "just" }}
           h="25px"
           orientation="vertical"
           border="3px solid"
           borderColor="#DFBD69"
         />
-        <Button
+        <MtnBtn
+          initial={{ opacity: 0, y: 50 }}
+          animate={animateY}
+          transition={{ delay: 9.5, duration: 2, type: "just" }}
           w="162px"
           h="51px"
           P="16px"
@@ -175,7 +283,7 @@ const SmartLiving = () => {
           _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
         >
           EXPLORE NOW
-        </Button>
+        </MtnBtn>
       </Flex>
     </Flex>
   );

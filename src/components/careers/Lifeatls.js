@@ -42,6 +42,7 @@ const images = [
   "/images/careers/career4.jpeg",
   "/images/careers/career5.jpeg",
   "/images/careers/career6.jpeg",
+  "/images/careers/career7.jpeg",
 ];
 
 const Lifeatls = () => {

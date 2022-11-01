@@ -42,7 +42,7 @@ const GetInTouch = () => {
     message: "",
   });
 
-  const [borderClr, setbordorClr] = useState(null);
+  const [borderClr, setbordorClr] = useState(false);
 
   const { name, email, phoneNo, message } = formData;
 
@@ -56,6 +56,7 @@ const GetInTouch = () => {
     }
   };
 
+  console.log(borderClr);
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -132,8 +133,9 @@ const GetInTouch = () => {
                   fontFamily="veralaRound"
                   fontSize="16px"
                   isRequired
-                  focusBorderColor="none"
-                  // borderColor={borderClr ? "#eee" : "#fa2"}
+                  borderWidth="2px"
+                  isInvalid={borderClr}
+                  errorBorderColor="crimson"
                 />
               </Flex>
               <Flex w="100%" align="center" justify="space-between" pb="7px">

@@ -26,6 +26,7 @@ const Header = () => {
       align="center"
       justify="center"
       zIndex="11"
+      color="black"
     >
       {" "}
       <Flex w="25%"></Flex>
