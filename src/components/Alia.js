@@ -1,11 +1,42 @@
 import { Flex, Heading, Image, Divider, Box, Text } from "@chakra-ui/react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import React from "react";
+import { useEffect } from "react";
+import { useRef } from "react";
+
+const MtnFlx = motion(Flex);
 
 const Allia = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateX = useAnimation();
+  const animateY = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateX.start({
+        x: 0,
+        opacity: 1,
+      });
+      animateY.start({
+        y: 0,
+        opacity: 1,
+      });
+    }
+  }, [isInView, animateX, animateY]);
+
   return (
-    <Flex direction="column" align="center" pt="100px">
+    <Flex ref={ref} direction="column" align="center" pt="100px">
       <Flex w="100%" px="100px">
-        <Flex w="30%" h="100%" direction="column" pt="20px">
+        <MtnFlx
+          initial={{ opacity: 0, x: -50 }}
+          animate={animateX}
+          transition={{ duration: 2, type: "just" }}
+          w="30%"
+          h="100%"
+          direction="column"
+          pt="20px"
+        >
           <Heading fontSize="40px" fontFamily="goudy" fontWeight="400">
             India’s Best <br /> Realty Brand
           </Heading>
@@ -26,8 +57,16 @@ const Allia = () => {
               my="1"
             />
           </Flex>
-        </Flex>
-        <Flex w="100%" h="100%" align="center" pb="100px">
+        </MtnFlx>
+        <MtnFlx
+          initial={{ y: 50, opacity: 0 }}
+          animate={animateY}
+          transition={{ delay: 1.5, duration: 2, type: "just" }}
+          w="100%"
+          h="100%"
+          align="center"
+          pb="100px"
+        >
           <Flex h="100%" direction="column" align="center">
             <Image
               w="100%"
@@ -68,13 +107,20 @@ const Allia = () => {
               </Text>
             </Text>
           </Flex>
-        </Flex>
+        </MtnFlx>
       </Flex>
       <Flex direction="column" align="center" justify="center">
         <Heading fontSize="40px" fontFamily="goudy" fontWeight="400">
           OUR ALLIANCES
         </Heading>
-        <Flex w="100%" pt="75px" px="100px">
+        <MtnFlx
+          initial={{ x: "100vw", opacity: 0 }}
+          animate={animateX}
+          transition={{ delay: 3, duration: 2, type: "just" }}
+          w="100%"
+          pt="75px"
+          px="100px"
+        >
           <Flex>
             <Image src="/images/alliances.png" />
           </Flex>
@@ -87,7 +133,7 @@ const Allia = () => {
           <Flex>
             <Image src="/images/alliances4.png" />
           </Flex>
-        </Flex>
+        </MtnFlx>
       </Flex>
     </Flex>
   );
