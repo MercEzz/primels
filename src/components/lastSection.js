@@ -2,10 +2,29 @@ import { Flex, Text, Icon } from "@chakra-ui/react";
 import React from "react";
 import ImgCarousel from "./layouts/Img-Carousel";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import { useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect } from "react";
+
+const MtnTxt = motion(Text);
+const MtnFlx = motion(Flex);
 
 const LastSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateFade = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateFade.start({
+        opacity: 1,
+      });
+    }
+  }, [isInView, animateFade]);
+
   return (
     <Flex
+      ref={ref}
       w="100%"
       minH="100vh"
       direction="column"
@@ -21,16 +40,28 @@ const LastSection = () => {
           py="50px"
           pr="100px"
         >
-          <Text
+          <MtnTxt
+            initial={{ opacity: 0 }}
+            animate={animateFade}
+            transition={{ duration: 2, type: "just" }}
             fontSize="40px"
             fontFamily="goudy"
             fontWeight="400"
             color="#fff"
           >
             Hear What <br /> People Has To <br /> Say About Us.
-          </Text>
+          </MtnTxt>
         </Flex>
-        <Flex w="78%" h="80%" pos="absolute" left="22%" top="10%">
+        <MtnFlx
+          initial={{ opacity: 0 }}
+          animate={animateFade}
+          transition={{ duration: 2, type: "just" }}
+          w="75%"
+          h="80%"
+          pos="absolute"
+          left="24%"
+          top="10%"
+        >
           <iframe
             width="100%"
             height="100%"
@@ -40,10 +71,13 @@ const LastSection = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-        </Flex>
+        </MtnFlx>
       </Flex>
       <Flex w="100%" h="100%">
-        <Flex
+        <MtnFlx
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 2, type: "just" }}
           w="100%"
           h="100%"
           pos="relative"
@@ -71,7 +105,7 @@ const LastSection = () => {
             h="50px"
             as={ImQuotesRight}
           />
-        </Flex>
+        </MtnFlx>
       </Flex>
     </Flex>
   );
