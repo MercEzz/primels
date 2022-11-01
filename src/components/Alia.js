@@ -1,8 +1,18 @@
-import { Flex, Heading, Image, Divider, Box, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  Image,
+  Divider,
+  Box,
+  Text,
+  Avatar,
+  Stack,
+} from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
+import Slider from "react-slick";
 
 const MtnFlx = motion(Flex);
 
@@ -109,7 +119,7 @@ const Allia = () => {
           </Flex>
         </MtnFlx>
       </Flex>
-      <Flex direction="column" align="center" justify="center">
+      <Flex w="100%" direction="column" align="center" justify="center">
         <Heading fontSize="40px" fontFamily="goudy" fontWeight="400">
           OUR ALLIANCES
         </Heading>
@@ -121,18 +131,7 @@ const Allia = () => {
           pt="75px"
           px="100px"
         >
-          <Flex>
-            <Image src="/images/alliances.png" />
-          </Flex>
-          <Flex>
-            <Image src="/images/alliances2.png" />
-          </Flex>
-          <Flex>
-            <Image src="/images/alliances3.png" />
-          </Flex>
-          <Flex>
-            <Image src="/images/alliances4.png" />
-          </Flex>
+          <LogoSlider logos={logos} />
         </MtnFlx>
       </Flex>
     </Flex>
@@ -140,3 +139,59 @@ const Allia = () => {
 };
 
 export default Allia;
+
+const logos = [
+  "/images/alliances.png",
+  "/images/alliances2.png",
+  "/images/alliances3.png",
+  "/images/alliances4.png",
+];
+
+const LogoSlider = ({ logos }) => {
+  const settings = {
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 5000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+  };
+
+  return (
+    <Box
+      position={"relative"}
+      height={"full"}
+      width={"full"}
+      overflow={"hidden"}
+    >
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
+
+      <Slider {...settings}>
+        {logos.map((icon) => (
+          <Flex
+            align="flex-start"
+            justify="space-between"
+            flexDirection="column"
+            w="100%"
+            key={icon}
+            height={"100%"}
+            position="relative"
+          >
+            <Image src={icon} />
+          </Flex>
+        ))}
+      </Slider>
+    </Box>
+  );
+};
