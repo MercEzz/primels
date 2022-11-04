@@ -1,8 +1,8 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import ImageSlider from "./ImageSlider";
 
-const FourthSec = () => {
+const FifthSec = () => {
   return (
     <Flex
       w="100%"
@@ -13,13 +13,12 @@ const FourthSec = () => {
       align="center"
       justify="center"
     >
-      {" "}
       <Text fontFamily="goudy" fontSize="40px" lineHeight="48px">
-        PRIME TALKS
+        LATEST NEWS
       </Text>
       <ImageSlider />
     </Flex>
   );
 };
 
-export default FourthSec;
+export default FifthSec;
