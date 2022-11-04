@@ -9,6 +9,7 @@ import Contact from "./screens/Contact";
 import EnergySc from "./screens/EnergySc";
 import ChannelPartner from "./screens/ChannelPartner";
 import SkyHighSc from "./screens/SkyHighSc";
+import NewsMediaSc from "./screens/NewsMediaSc";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/energy-get-in-touch-with-us" element={<EnergySc />} />
           <Route path="/channel-partner" element={<ChannelPartner />} />
           <Route path="/sky-high" element={<SkyHighSc />} />
+          <Route path="/news-and-media" element={<NewsMediaSc />} />
         </Routes>
       </Flex>
       <Footer />
