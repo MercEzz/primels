@@ -5,11 +5,6 @@ import Carousel from "./Carousel";
 
 const MotnHead = motion(Heading);
 
-const variants = {
-  hidden: { opacity: 0, x: 0, y: -150 },
-  enter: { opacity: 1, x: 0, y: 0 },
-};
-
 const MainSec = () => {
   return (
     <Flex
@@ -37,7 +32,8 @@ const MainSec = () => {
           fontFamily="avenir"
           letterSpacing="wide"
           // initial={{ x: 460, y: 350 }}
-          // transition={{ delay: 3, duration: 5, type: "just" }}
+          // animate={{  }}
+          transition={{ delay: 3, duration: 5, type: "just" }}
           zIndex="4"
         >
           TRANSFORMING
