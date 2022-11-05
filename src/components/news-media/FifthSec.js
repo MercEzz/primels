@@ -57,7 +57,8 @@ const FifthSec = () => {
         width={"full"}
         overflow={"hidden"}
         my="50px"
-        px="75px"
+        pl="75px"
+        pr="50px"
       >
         {/* CSS files for react-slick */}
         <link
