@@ -1,4 +1,5 @@
 import React from "react";
+import FifthSec from "../components/news-media/FifthSec";
 import FirstSec from "../components/news-media/FirstSec";
 import FourthSec from "../components/news-media/FourthSec";
 import LastSec from "../components/news-media/LastSec";
@@ -12,6 +13,7 @@ const NewsMediaSc = () => {
       <SecondSec />
       <ThirdSec />
       <FourthSec />
+      <FifthSec />
       <LastSec />
     </>
   );
