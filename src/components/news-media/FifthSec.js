@@ -13,6 +13,7 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const FifthSec = () => {
   const settings = {
+    draggable: false,
     infinite: true,
     autoplay: true,
     speed: 500,

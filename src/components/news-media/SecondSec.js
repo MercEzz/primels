@@ -7,6 +7,7 @@ const SecondSec = () => {
   const [slider, setSlider] = useState(null);
   let [currentSlide, setCurrentSlide] = useState(1);
   const settings = {
+    draggable: false,
     infinite: false,
     autoplay: false,
     speed: 500,
