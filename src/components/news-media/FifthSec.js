@@ -164,7 +164,7 @@ export default FifthSec;
 
 const primeReport = [
   {
-    img: "/images/news-and-media/NEWSLETTER.png",
+    img: "/images/news-and-media/THE-HINDU.PNG",
     text: "INVESTING IN NORTH CHENNAI : WHAT YOU DIDN’T KNOW",
   },
   {
@@ -172,7 +172,7 @@ const primeReport = [
     text: "NORTH CHENNAI : YOUR BEST BET",
   },
   {
-    img: "/images/news-and-media/NEWSLETTER.png",
+    img: "/images/news-and-media/THE-HINDU.PNG",
     text: "CHENNAI PERIPHERAL RING ROAD WORK GETS A BOOST",
   },
   {
@@ -180,11 +180,11 @@ const primeReport = [
     text: "NORTH CHENNAI - TURNING TO WORLD CLASS ECONOMIC ZONE",
   },
   {
-    img: "/images/news-and-media/NEWSLETTER_.png",
+    img: "/images/news-and-media/BUSINESS-STANDARD.PNG",
     text: "Tata Projects wins Rs 2,100 cr Chennai Peripheral Ring Road Project phase-1",
   },
   {
-    img: "/images/news-and-media/NEWSLETTER.png",
+    img: "/images/news-and-media/THE-HINDU.PNG",
     text: "RS. 13,314 CRORE INFRASTRUCTURE UPGRADE FOR PONNERI",
   },
   {
