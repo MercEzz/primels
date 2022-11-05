@@ -36,6 +36,7 @@ const SecondSec = () => {
         height={"100%"}
         width={"full"}
         overflow={"hidden"}
+        mt="50px"
       >
         {/* CSS files for react-slick */}
         <link
@@ -52,22 +53,31 @@ const SecondSec = () => {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {pressRelease.map((prime) => (
-            <Image
-              key={prime.id}
-              w={prime.width}
-              height="468px"
-              pr="20px"
-              position="relative"
-              objectPosition="center"
-              backgroundRepeat="no-repeat"
-              objectFit="cover"
-              src={prime.img}
-            />
+            <Flex pr="20px">
+              <Image
+                key={prime}
+                w="100%"
+                h="300px"
+                position="relative"
+                objectPosition="center top"
+                backgroundRepeat="no-repeat"
+                objectFit="cover"
+                src={prime.img}
+              />
+              <Flex py="25px" w="100%" align="center" justify="space-between">
+                <Text fontFamily="avenir" fontWeight="bold" fontSize="24px">
+                  {prime.title}
+                </Text>
+                <Text fontFamily="veralaRound" fontSize="20px">
+                  {prime.date}
+                </Text>
+              </Flex>
+            </Flex>
           ))}
         </Slider>
       </Box>
       {/* Left Icon */}
-      <Flex pt="25px" w="100%" h="100%" align="center" justify="center">
+      <Flex w="100%" h="100%" align="center" justify="center">
         <IconButton
           aria-label="left-arrow"
           variant="outline"
@@ -89,7 +99,7 @@ const SecondSec = () => {
         {/* fill box */}
         01
         <ImgBar slide={currentSlide} />
-        10
+        06
         {/* Right Icon */}
         <IconButton
           aria-label="right-arrow"
@@ -120,9 +130,8 @@ export default SecondSec;
 
 const ImgBar = ({ slide }) => {
   let barFillWidth = "0%";
-  console.log(slide);
   if (slide > 0) {
-    barFillWidth = slide * 10 + "%";
+    barFillWidth = slide * 16.666 + "%";
   }
   console.log(barFillWidth);
   return (
@@ -148,14 +157,34 @@ const ImgBar = ({ slide }) => {
 };
 
 const pressRelease = [
-  "/images/news-and-media/PRESS-RELEASE1.PNG",
-  "/images/news-and-media/EVENTS2.jpeg",
-  "/images/news-and-media/EVENTS3.jpeg",
-  "/images/news-and-media/EVENTS4.jpeg",
-  "/images/news-and-media/EVENTS5.jpeg",
-  "/images/news-and-media/EVENTS6.jpeg",
-  "/images/news-and-media/EVENTS7.jpeg",
-  "/images/news-and-media/EVENTS8.jpeg",
-  "/images/news-and-media/EVENTS9.jpeg",
-  "/images/news-and-media/EVENTS10.jpeg",
+  {
+    title: "DECCAN CHRONICLE",
+    date: "29 AUG 2022",
+    img: "/images/news-and-media/PRESS-RELEASE1.PNG",
+  },
+  {
+    title: "DECCAN CHRONICLE",
+    date: "18 SEPT 2022",
+    img: "/images/news-and-media/PRESS-RELEASE2.PNG",
+  },
+  {
+    title: "THE ECONOMIC TIMES",
+    date: "26 JULY 2021",
+    img: "/images/news-and-media/PRESS-RELEASE3.PNG",
+  },
+  {
+    title: "THE ECONOMIC TIMES",
+    date: "26 MARCH 2021",
+    img: "/images/news-and-media/PRESS-RELEASE4.PNG",
+  },
+  {
+    title: "NARDECO",
+    date: "JULY 2021",
+    img: "/images/news-and-media/PRESS-RELEASE5.PNG",
+  },
+  {
+    title: "",
+    date: "",
+    img: "/images/news-and-media/PRESS-RELEASE6.PNG",
+  },
 ];
