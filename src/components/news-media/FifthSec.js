@@ -137,7 +137,7 @@ const FifthSec = () => {
                 h="150px"
                 position="absolute"
                 right="0"
-                bottom="15%"
+                bottom="2%"
                 mr="15px"
                 bgGradient="linear(to-b, #B88746, #DFBD69)"
                 transform="translate(0, -50%)"

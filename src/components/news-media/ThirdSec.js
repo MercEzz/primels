@@ -5,20 +5,26 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const ThirdSec = () => {
   const [slider, setSlider] = useState(null);
+  let [currentSlide, setCurrentSlide] = useState(1);
   const settings = {
-    infinite: true,
-    autoplay: true,
+    infinite: false,
+    autoplay: false,
     speed: 500,
     autoplaySpeed: 5000,
     slidesToShow: 2,
     slidesToScroll: 1,
     pauseOnHover: false,
+    afterChange: () => {
+      setCurrentSlide(currentSlide++);
+    },
   };
+
   return (
     <Flex
       w="100%"
       h="100%"
-      px="100px"
+      pl="100px"
+      pr="75px"
       py="50px"
       direction="column"
       align="center"
@@ -48,38 +54,11 @@ const ThirdSec = () => {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-        {/* Left Icon */}
-        <IconButton
-          aria-label="left-arrow"
-          colorScheme="messenger"
-          borderRadius="full"
-          position="absolute"
-          // left={side}
-          // top={top}
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => slider?.slickPrev()}
-        >
-          <AiOutlineLeft />
-        </IconButton>
-        {/* Right Icon */}
-        <IconButton
-          aria-label="right-arrow"
-          colorScheme="messenger"
-          borderRadius="full"
-          position="absolute"
-          // right={side}
-          // top={top}
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => slider?.slickNext()}
-        >
-          <AiOutlineRight />
-        </IconButton>
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {primeEvents2.map((prime) => (
             <Image
+              key={prime.id}
               w={prime.width}
               height="468px"
               pr="20px"
@@ -92,6 +71,81 @@ const ThirdSec = () => {
           ))}
         </Slider>
       </Box>
+      {/* Left Icon */}
+      <Flex pt="25px" w="100%" h="100%" align="center" justify="center">
+        <IconButton
+          aria-label="left-arrow"
+          variant="outline"
+          borderColor="#B88746"
+          borderRadius="full"
+          // position="absolute"
+          // bottom="0"
+          // left="0"
+          // transform={"translate(0%, -50%)"}
+          mx="5px"
+          zIndex={2}
+          onClick={() => {
+            slider?.slickPrev();
+            setCurrentSlide(currentSlide--);
+          }}
+        >
+          <AiOutlineLeft color="#B88746" size="30px" />
+        </IconButton>
+        {/* fill box */}
+        01
+        <ImgBar slide={currentSlide} />
+        10
+        {/* Right Icon */}
+        <IconButton
+          aria-label="right-arrow"
+          borderRadius="full"
+          variant="outline"
+          borderColor="#B88746"
+          // position="absolute"
+          // right={side}
+          // top={top}
+          // bottom="0"
+          // right="0"
+          // transform={"translate(0%, -50%)"}
+          mx="5px"
+          zIndex={2}
+          onClick={() => {
+            slider?.slickNext();
+            setCurrentSlide(currentSlide++);
+          }}
+        >
+          <AiOutlineRight color="#B88746" size="30px" />
+        </IconButton>
+      </Flex>
+    </Flex>
+  );
+};
+
+const ImgBar = ({ slide }) => {
+  let barFillWidth = "0%";
+  console.log(slide);
+  if (slide > 0) {
+    barFillWidth = slide * 10 + "%";
+  }
+  console.log(barFillWidth);
+  return (
+    <Flex
+      ml="1"
+      mr="1"
+      w="100px"
+      h="5px"
+      borderRadius="15px"
+      align="center"
+      justify="flex-start"
+    >
+      <Flex
+        color="black"
+        bgColor="#B88746"
+        style={{ width: barFillWidth }}
+        p="1"
+        justifyContent="center"
+        transition="all .3s"
+      ></Flex>
     </Flex>
   );
 };
@@ -110,46 +164,16 @@ const primeEvents = [
 ];
 
 const primeEvents2 = [
-  {
-    width: "520px",
-    img: "/images/news-and-media/EVENTS1.jpeg",
-  },
-  {
-    width: "700px",
-    img: "/images/news-and-media/EVENTS2.jpeg",
-  },
-  {
-    width: "520px",
-    img: "/images/news-and-media/EVENTS3.jpeg",
-  },
-  {
-    width: "700px",
-    img: "/images/news-and-media/EVENTS4.jpeg",
-  },
-  {
-    width: "520px",
-    img: "/images/news-and-media/EVENTS5.jpeg",
-  },
-  {
-    width: "700px",
-    img: "/images/news-and-media/EVENTS6.jpeg",
-  },
-  {
-    width: "520px",
-    img: "/images/news-and-media/EVENTS7.jpeg",
-  },
-  {
-    width: "700px",
-    img: "/images/news-and-media/EVENTS8.jpeg",
-  },
-  {
-    width: "520px",
-    img: "/images/news-and-media/EVENTS9.jpeg",
-  },
-  {
-    width: "700px",
-    img: "/images/news-and-media/EVENTS10.jpeg",
-  },
+  { id: 1, width: "520px", img: "/images/news-and-media/EVENTS1.jpeg" },
+  { id: 2, width: "700px", img: "/images/news-and-media/EVENTS2.jpeg" },
+  { id: 3, width: "520px", img: "/images/news-and-media/EVENTS3.jpeg" },
+  { id: 4, width: "700px", img: "/images/news-and-media/EVENTS4.jpeg" },
+  { id: 5, width: "520px", img: "/images/news-and-media/EVENTS5.jpeg" },
+  { id: 6, width: "700px", img: "/images/news-and-media/EVENTS6.jpeg" },
+  { id: 7, width: "520px", img: "/images/news-and-media/EVENTS7.jpeg" },
+  { id: 8, width: "700px", img: "/images/news-and-media/EVENTS8.jpeg" },
+  { id: 9, width: "520px", img: "/images/news-and-media/EVENTS9.jpeg" },
+  { id: 10, width: "700px", img: "/images/news-and-media/EVENTS10.jpeg" },
 ];
 
 export default ThirdSec;
