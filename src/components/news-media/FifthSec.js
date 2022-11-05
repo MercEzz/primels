@@ -35,8 +35,8 @@ const FifthSec = () => {
 
   const [slider, setSlider] = useState(null);
 
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "40px" });
+  // const top = useBreakpointValue({ base: "90%", md: "50%" });
+  // const side = useBreakpointValue({ base: "30%", md: "40px" });
 
   return (
     <Flex
@@ -137,10 +137,10 @@ const FifthSec = () => {
                 h="150px"
                 position="absolute"
                 right="0"
-                bottom="5%"
+                bottom="15%"
                 mr="15px"
                 bgGradient="linear(to-b, #B88746, #DFBD69)"
-                // transform="translate(0, -50%)"
+                transform="translate(0, -50%)"
               >
                 <Text
                   fontSize={{ base: "md", lg: "20px" }}
