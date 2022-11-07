@@ -137,6 +137,7 @@ const Lifeatls = () => {
                   backgroundRepeat="no-repeat"
                   objectFit="cover"
                   src={prime}
+                  boxShadow="xl"
                 />
               </Flex>
             ))}

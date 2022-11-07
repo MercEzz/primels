@@ -67,7 +67,7 @@ const Jobopp = () => {
             direction="column"
             w="100%"
             h="100%"
-            py="50px"
+            py="75px"
             mr="15px"
             align="center"
             justify="center"
