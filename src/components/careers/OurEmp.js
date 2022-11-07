@@ -2,7 +2,7 @@ import { Flex, Heading, Text, Avatar, Stack, Icon } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import ImgCarousel from "../layouts/Img-Carousel";
 
 const MtnHead = motion(Heading);

@@ -6,7 +6,7 @@ const ImgCarousel = (props) => {
   const { testimonial } = props;
   const settings = {
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     speed: 500,
     autoplaySpeed: 5000,
     slidesToShow: 3,
