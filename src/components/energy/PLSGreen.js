@@ -9,7 +9,10 @@ const MtnHd = motion(Heading);
 
 const PLSGreen = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
   const animateImg = useAnimation();
   const animateFlx = useAnimation();
   const animateHd = useAnimation();
