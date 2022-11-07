@@ -877,7 +877,7 @@ const ChannelForm = () => {
         justify="center"
         bgColor="#B88746"
         color="white"
-        h="60px"
+        h="70px"
         fontSize="16px"
         fontFamily="avenir"
       >
@@ -892,7 +892,7 @@ const ChannelForm = () => {
         >
           <Select
             fontFamily="avenir"
-            fontSize="16px"
+            fontSize="20px"
             w="250px"
             fontWeight="bold"
             // placeholder="SELECT PROJECT"
@@ -954,6 +954,7 @@ const ChannelForm = () => {
           cursor="pointer"
           fontFamily="avenir"
           fontWeight="bold"
+          fontSize="20px"
         >
           <Icon as={AiOutlineDownload} h="30px" w="30px" mr="10px" />
           DOWNLOAD CP-BROCHURE

@@ -1,7 +1,32 @@
 import { Flex, Image, Text, Box, Divider, Heading } from "@chakra-ui/react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import React from "react";
+import { useEffect } from "react";
+import { useRef } from "react";
+
+const MtnTxt = motion(Text);
 
 const FourthSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
+  const animateFade = useAnimation();
+  const animateY = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateFade.start({
+        opacity: 1,
+      });
+      animateY.start({
+        opacity: 1,
+        y: 0,
+      });
+    }
+  }, [isInView, animateFade, animateY]);
+
   return (
     <Flex
       w="100%"
@@ -11,9 +36,17 @@ const FourthSec = () => {
       align="center"
       justify="center"
     >
-      <Text fontFamily="goudy" fontSize="40px" textAlign="center" mb="50px">
+      <MtnTxt
+        initial={{ y: -50, opacity: 0 }}
+        animate={animateY}
+        transition={{ duration: 2, type: "just" }}
+        fontFamily="goudy"
+        fontSize="40px"
+        textAlign="center"
+        mb="50px"
+      >
         CRAFTED LIVING OF SKY HIGH LIFE AND AMENITIES
-      </Text>
+      </MtnTxt>
       <Flex w="100%" h="100%" direction="column">
         {/* first-left-sec */}
         <Flex w="100%" h="100%" align="flex-start" justify="center">
@@ -45,7 +78,13 @@ const FourthSec = () => {
                 borderRadius="50%"
               />
             </Flex>{" "}
-            <Flex h="100%" direction="column" alignSelf="center">
+            <Flex
+              w="1005"
+              h="100%"
+              direction="column"
+              // align="center"
+              justify="center"
+            >
               <Heading fontFamily="avenir" fontSize="34px" mb="15px">
                 3 SKY DECKS
               </Heading>
@@ -67,7 +106,7 @@ const FourthSec = () => {
         </Flex>
         {/* first-right-sec */}
         <Flex w="100%" h="100%" align="center" justify="center">
-          <Flex w="100%" h="100%" my="25px">
+          <Flex w="100%" h="100%" my="25px" pr="25px">
             <Image src="/images/sky-high/DECK2.jpg" boxShadow="dark-lg" />
           </Flex>
           <Flex w="100%" h="100%" my="25px">

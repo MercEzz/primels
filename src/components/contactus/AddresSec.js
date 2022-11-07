@@ -67,7 +67,7 @@ const AddresSec = () => {
           <MtnHead
             initial={{ opacity: 0 }}
             animate={animateFade}
-            transition={{ delay: 2, duration: 2, type: "just" }}
+            transition={{ delay: 1, duration: 2, type: "just" }}
             w="100%"
             fontFamily="avenir"
             fontSize="34px"
@@ -80,7 +80,7 @@ const AddresSec = () => {
           <MtnStk
             initial={{ opacity: 0 }}
             animate={animateFade}
-            transition={{ delay: 2, duration: 2, type: "just" }}
+            transition={{ delay: 1, duration: 2, type: "just" }}
             w="100%"
             align="flex-start"
           >

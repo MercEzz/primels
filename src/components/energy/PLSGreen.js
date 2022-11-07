@@ -98,7 +98,7 @@ const PLSGreen = () => {
             transition={{ duration: 2, type: "just" }}
             src="/images/energy/ourPro1.jpeg"
             objectSize="cover"
-            h="70%"
+            h="60%"
             w="60%"
           />
           <MtnImg
@@ -107,7 +107,7 @@ const PLSGreen = () => {
             animate={animateImg}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             src="/images/energy/ourPro2.jpeg"
-            h="62%"
+            h="60%"
             w="60%"
             pos="absolute"
             left="18%"
