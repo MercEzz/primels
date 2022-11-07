@@ -6,26 +6,26 @@ const ThirdSec = () => {
     <Flex
       w="100%"
       h="100vh"
-      direction="column"
+      bgImage="/images/sky-high/sec2.png"
+      bgPos="bottom"
+      bgRepeat="no-repeat"
+      bgSize="cover"
       align="center"
       justify="center"
-      p="100px"
+      pos="relative"
     >
       <Heading
-        fontFamily="goudy"
-        fontSize="40px"
-        fontWeight="400"
-        textTransform="uppercase"
+        pos="absolute"
+        color="white"
         textAlign="center"
+        left="10%"
+        top="30%"
+        fontSize="40px"
+        fontFamily="avenir"
+        lineHeight="48px"
       >
-        An iconic dwell of sky high residences and <br /> retail spaces
+        EXPERIENCE THE SKY <br /> HIGH LIFE
       </Heading>
-      <Flex w="100%" h="100%">
-        <Flex w="100%" h="100%">
-          <Image src="/images/sky-high/sec3.png" />
-        </Flex>
-        <Flex w="100%" h="100%"></Flex>
-      </Flex>
     </Flex>
   );
 };
