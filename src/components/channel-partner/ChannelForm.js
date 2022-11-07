@@ -851,7 +851,8 @@ const ChannelForm = () => {
             </Flex>
             <Button
               type="submit"
-              my="50px"
+              mt="25px"
+              mb="75px"
               h="51px"
               w="168px"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
