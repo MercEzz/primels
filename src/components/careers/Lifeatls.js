@@ -13,24 +13,6 @@ import { useInView } from "framer-motion";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
-const settingsL = {
-  center: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  initialSlide: 0,
-};
-
-const settingsR = {
-  center: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  initialSlide: 1,
-};
-
 const MtnHead = motion(Heading);
 const MotnTxt = motion(Text);
 const MtnBx = motion(Box);
@@ -47,6 +29,7 @@ const images = [
 
 const Lifeatls = () => {
   const [slider, setSlider] = useState(null);
+  let [currentSlide, setCurrentSlide] = useState(1);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -57,6 +40,20 @@ const Lifeatls = () => {
   const animationHead = useAnimation();
   const animationText = useAnimation();
   const animationImg = useAnimation();
+
+  const settings = {
+    draggable: true,
+    infinite: true,
+    autoplay: false,
+    speed: 500,
+    autoplaySpeed: 5000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+    afterChange: () => {
+      setCurrentSlide(currentSlide++);
+    },
+  };
 
   useEffect(() => {
     if (isInView) {
@@ -73,7 +70,7 @@ const Lifeatls = () => {
       h="100%"
       direction="column"
       textAlign="center"
-      px="100px"
+      px="25px"
       pt="100px"
       mb="100px"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
@@ -106,16 +103,16 @@ const Lifeatls = () => {
         Lifespace Team.
       </MotnTxt>
       <Flex w="100%" h="100%">
-        <MtnBx
-          initial={{ opacity: 0, x: -100 }}
-          animate={animationImg}
-          transition={{ duration: 2, type: "just" }}
+        {" "}
+        <Box
           position={"relative"}
-          w="65%"
-          h="100%"
-          px="2"
+          height={"100%"}
+          width={"full"}
           overflow={"hidden"}
+          pl="75px"
+          pr="55px"
         >
+          {/* CSS files for react-slick */}
           <link
             rel="stylesheet"
             type="text/css"
@@ -127,91 +124,98 @@ const Lifeatls = () => {
             type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
-          <Slider {...settingsL}>
-            {images.map((img, index) => (
-              <Box
-                key={index}
-                height={"2xl"}
-                position="relative"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="cover"
-                backgroundImage={`url(${img})`}
-              />
+          {/* Slider */}
+          <Slider {...settings} ref={(slider) => setSlider(slider)}>
+            {images.map((prime) => (
+              <Flex pr="20px">
+                <Image
+                  key={prime}
+                  w="100%"
+                  h="100%"
+                  position="relative"
+                  objectPosition="center top"
+                  backgroundRepeat="no-repeat"
+                  objectFit="cover"
+                  src={prime}
+                />
+              </Flex>
             ))}
           </Slider>
-        </MtnBx>
-        <MtnBx
-          initial={{ opacity: 0, x: 100 }}
-          animate={animationImg}
-          transition={{ duration: 2, type: "just" }}
-          position={"relative"}
-          w="35%"
-          h="100%"
-          overflow={"hidden"}
-          px="2"
-        >
-          <link
-            rel="stylesheet"
-            type="text/css"
-            charSet="UTF-8"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-          />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-          />
-          <Flex w="100%" h="100%" direction="column">
-            <Slider {...settingsR}>
-              {images.map((img, index) => (
-                <Box
-                  key={index}
-                  height={"lg"}
-                  position="relative"
-                  backgroundPosition="center"
-                  backgroundRepeat="no-repeat"
-                  backgroundSize="cover"
-                  backgroundImage={`url(${img})`}
-                />
-              ))}
-            </Slider>
-            <Flex w="100%" h="100%" align="flex-end" justify="space-between">
-              {/* left Icon */}
-              <IconButton
-                aria-label="left-arrow"
-                variant="outline"
-                borderRadius="50%"
-                w="50px"
-                h="50px"
-                p="3"
-                ml="10"
-                borderColor="#B88746"
-                zIndex={2}
-                onClick={() => slider?.slickPrev()}
-              >
-                <AiOutlineLeft color="#B88746" size="40px" />
-              </IconButton>
-              {/* Right Icon */}
-              <IconButton
-                aria-label="right-arrow"
-                variant="outline"
-                borderRadius="50%"
-                w="50px"
-                h="50px"
-                p="3"
-                zIndex={2}
-                borderColor="#B88746"
-                onClick={() => slider?.slickNext()}
-              >
-                <AiOutlineRight color="#B88746" size="40px" />
-              </IconButton>
-            </Flex>
-          </Flex>
-        </MtnBx>
+          <IconButton
+            aria-label="left-arrow"
+            variant="outline"
+            borderColor="#B88746"
+            borderRadius="full"
+            position="absolute"
+            top="50%"
+            left="0"
+            h="50px"
+            w="50px"
+            transform={"translate(0%, -50%)"}
+            zIndex={2}
+            onClick={() => {
+              slider?.slickPrev();
+              setCurrentSlide(currentSlide--);
+            }}
+          >
+            <AiOutlineLeft color="#B88746" size="40px" />
+          </IconButton>
+          {/* fill box */}
+          {/* 01
+          <ImgBar slide={currentSlide} />
+        06 */}
+          {/* Right Icon */}
+          <IconButton
+            aria-label="right-arrow"
+            borderRadius="full"
+            variant="outline"
+            borderColor="#B88746"
+            position="absolute"
+            transform={"translate(0%, -50%)"}
+            zIndex={2}
+            right="0"
+            top="50%"
+            h="50px"
+            w="50px"
+            onClick={() => {
+              slider?.slickNext();
+              // setCurrentSlide(currentSlide++);
+            }}
+          >
+            <AiOutlineRight color="#B88746" size="40px" />
+          </IconButton>
+        </Box>
       </Flex>
     </Flex>
   );
 };
 
 export default Lifeatls;
+
+const ImgBar = ({ slide }) => {
+  let barFillWidth = "0%";
+  if (slide > 0) {
+    barFillWidth = slide * 14.28 + "%";
+  }
+  console.log(barFillWidth);
+  return (
+    <Flex
+      ml="1"
+      mr="1"
+      w="100px"
+      h="5px"
+      borderRadius="15px"
+      align="center"
+      justify="flex-start"
+    >
+      <Flex
+        color="black"
+        bgColor="#B88746"
+        style={{ width: barFillWidth }}
+        p="1"
+        justifyContent="center"
+        transition="all .3s"
+      ></Flex>
+    </Flex>
+  );
+};

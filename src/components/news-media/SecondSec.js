@@ -1,4 +1,4 @@
-import { Flex, Heading, Text, Box, IconButton, Image } from "@chakra-ui/react";
+import { Flex, Text, Box, IconButton, Image } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";

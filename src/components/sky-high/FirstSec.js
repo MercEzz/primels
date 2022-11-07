@@ -66,7 +66,7 @@ const FirstSec = () => {
           borderRadius="full"
           bottom="0"
           right="50%"
-          transform={"translateX(-50%)"}
+          // transform={"translateX(-50%)"}
           mx="5px"
           mb="25px"
           zIndex={2}
@@ -89,7 +89,7 @@ const FirstSec = () => {
           borderWidth="2px"
           bottom="0"
           left="50%"
-          transform={"translate(-50%)"}
+          // transform={"translate(-50%)"}
           mx="5px"
           mb="25px"
           zIndex={2}

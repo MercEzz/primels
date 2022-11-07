@@ -12,14 +12,20 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import Slider from "react-slick";
 
-const MtnBx = motion(Box);
 const MtnFlx = motion(Flex);
+
+const MtnHead = motion(Heading);
+const MtnTxt = motion(Text);
 
 const SecondSec = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
   const animateX = useAnimation();
   const animateY = useAnimation();
+  const animateFade = useAnimation();
 
   useEffect(() => {
     if (isInView) {
@@ -31,8 +37,11 @@ const SecondSec = () => {
         opacity: 1,
         y: 0,
       });
+      animateFade.start({
+        opacity: 1,
+      });
     }
-  });
+  }, [isInView, animateX, animateY, animateFade]);
 
   const [slider, setSlider] = useState(null);
   const settings = {
@@ -54,9 +63,12 @@ const SecondSec = () => {
       direction="column"
       align="center"
       justify="center"
-      p="100px"
+      py="100px"
     >
-      <Heading
+      <MtnHead
+        initial={{ y: -100, opacity: 0 }}
+        animate={animateY}
+        transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontSize="40px"
         fontWeight="400"
@@ -66,14 +78,17 @@ const SecondSec = () => {
       >
         An iconic dwell of <br />
         sky high residences and retail spaces
-      </Heading>
-      <Flex w="100%" h="100%" align="center" justify="center">
-        <Flex w="100%" h="100%">
-          <MtnBx
-            initial={{ x: -100 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 2, type: "just" }}
-            // position={"relative"}
+      </MtnHead>
+      <Flex px="100px" w="100%" h="100%" align="center" justify="center">
+        <MtnFlx
+          initial={{ x: -100, opacity: 0 }}
+          animate={animateX}
+          transition={{ delay: 1.5, duration: 2, type: "just" }}
+          w="100%"
+          h="100%"
+        >
+          <Box
+            position={"relative"}
             height={"568px"}
             width={"600px"}
             overflow={"hidden"}
@@ -115,7 +130,7 @@ const SecondSec = () => {
               borderRadius="full"
               bottom="0"
               right="50%"
-              transform={"translateX(-50%)"}
+              // transform={"translateX(-50%)"}
               mx="5px"
               mb="25px"
               zIndex={2}
@@ -138,7 +153,7 @@ const SecondSec = () => {
               borderWidth="2px"
               bottom="0"
               left="50%"
-              transform={"translate(-50%)"}
+              // transform={"translate(-50%)"}
               mx="5px"
               mb="25px"
               zIndex={2}
@@ -150,14 +165,14 @@ const SecondSec = () => {
             >
               {/* <Text>02</Text> */}
             </IconButton>
-          </MtnBx>{" "}
-        </Flex>
+          </Box>{" "}
+        </MtnFlx>
 
         <Flex h="100%" alignSelf="flex-start">
           <MtnFlx
             initial={{ opacity: 0, y: -100 }}
             animate={animateY}
-            transition={{ duration: 2, type: "just" }}
+            transition={{ delay: 1.5, duration: 2, type: "just" }}
             direction="column"
             align="center"
             px="25px"
@@ -180,12 +195,22 @@ const SecondSec = () => {
           </MtnFlx>
         </Flex>
         <Flex w="100%" h="100%" direction="column" alignSelf="center">
-          <Text mb="15px" fontFamily="veralaRound" fontSize="16px">
+          <MtnTxt
+            initial={{ opacity: 0 }}
+            animate={animateFade}
+            transition={{ delay: 1.5, duration: 2, type: "just" }}
+            mb="15px"
+            fontFamily="veralaRound"
+            fontSize="16px"
+          >
             THE ULTIMATE ADDRESS: Experience the breathtaking views of Chennai's
             stunning skyline from Arete Homes SKY HIGH Tower the top 20th floor.
             A new world of luxury has taken shape in North Chennai, Ponneri.{" "}
-          </Text>
-          <Flex
+          </MtnTxt>
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateFade}
+            transition={{ delay: 3, duration: 2, type: "just" }}
             w="271px"
             borderRadius="10px"
             bgColor="#DFBD69"
@@ -195,8 +220,11 @@ const SecondSec = () => {
             <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
               18 STOREY’S TALL
             </Text>
-          </Flex>
-          <Flex
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateFade}
+            transition={{ delay: 4.5, duration: 2, type: "just" }}
             w="271px"
             borderRadius="10px"
             bgColor="#DFBD69"
@@ -206,8 +234,11 @@ const SecondSec = () => {
             <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
               2 TOWER LOBBIES
             </Text>
-          </Flex>
-          <Flex
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateFade}
+            transition={{ delay: 6, duration: 2, type: "just" }}
             w="271px"
             borderRadius="10px"
             bgColor="#DFBD69"
@@ -217,12 +248,20 @@ const SecondSec = () => {
             <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
               4 ELEVATORS
             </Text>
-          </Flex>
-          <Flex w="271px" borderRadius="10px" bgColor="#DFBD69" p="15px">
+          </MtnFlx>
+          <MtnFlx
+            initial={{ opacity: 0 }}
+            animate={animateFade}
+            transition={{ delay: 7.5, duration: 2, type: "just" }}
+            w="271px"
+            borderRadius="10px"
+            bgColor="#DFBD69"
+            p="15px"
+          >
             <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
               20 RETAIL SHOPS
             </Text>
-          </Flex>
+          </MtnFlx>
         </Flex>
       </Flex>
     </Flex>
