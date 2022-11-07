@@ -131,7 +131,7 @@ const Lifeatls = () => {
                 <Image
                   key={prime}
                   w="100%"
-                  h="100%"
+                  h="400px"
                   position="relative"
                   objectPosition="center top"
                   backgroundRepeat="no-repeat"
@@ -161,11 +161,7 @@ const Lifeatls = () => {
           >
             <AiOutlineLeft color="#B88746" size="40px" />
           </IconButton>
-          {/* fill box */}
-          {/* 01
-          <ImgBar slide={currentSlide} />
-        06 */}
-          {/* Right Icon */}
+
           <IconButton
             aria-label="right-arrow"
             borderRadius="full"

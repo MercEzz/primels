@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import { useRef } from "react";
 
 const MtnTxt = motion(Text);
+const MtnImg = motion(Image);
+const MtnFlx = motion(Flex);
 
 const FourthSec = () => {
   const ref = useRef(null);
@@ -29,6 +31,7 @@ const FourthSec = () => {
 
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       p="100px"
@@ -51,13 +54,19 @@ const FourthSec = () => {
         {/* first-left-sec */}
         <Flex w="100%" h="100%" align="flex-start" justify="center">
           <Flex w="100%" h="100%" pr="25px">
-            <Image src="/images/sky-high/DECK1.jpg" boxShadow="dark-lg" />
+            <MtnImg
+              initial={{ opacity: 0 }}
+              animate={animateFade}
+              transition={{ duration: 2, type: "just" }}
+              src="/images/sky-high/DECK1.jpg"
+              boxShadow="dark-lg"
+            />
           </Flex>
           <Flex w="100%" h="100%" align="flex-start" justify="center">
-            <Flex
-              // initial={{ opacity: 0, y: -100 }}
-              // animate={animateY}
-              // transition={{ delay: 1.5, duration: 2, type: "just" }}
+            <MtnFlx
+              initial={{ y: -50, opacity: 0 }}
+              animate={animateY}
+              transition={{ duration: 2, type: "just" }}
               direction="column"
               align="center"
               pr="25px"
@@ -77,9 +86,9 @@ const FourthSec = () => {
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
               />
-            </Flex>{" "}
+            </MtnFlx>{" "}
             <Flex
-              w="1005"
+              w="100%"
               h="100%"
               direction="column"
               // align="center"
