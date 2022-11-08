@@ -1,6 +1,15 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
-import { Flex, Heading, Text, Button } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  Text,
+  Button,
+  Divider,
+  Box,
+  UnorderedList,
+  ListItem,
+} from "@chakra-ui/react";
 import { ImLocation } from "react-icons/im";
 
 const NinethSec = () => {
@@ -32,7 +41,7 @@ const NinethSec = () => {
       >
         PONNERI - A SMART CITY BY JICA
       </Heading>
-      <Flex w="100%" h="100%" align="center" justify="center">
+      <Flex w="100%" h="100%" align="flex-start" justify="flex-start">
         <Flex
           direction="column"
           w="100%"
@@ -43,8 +52,8 @@ const NinethSec = () => {
           <Flex w="100%" h="100%" mb="15px">
             <iframe
               class="gmap_iframe"
-              width="100%"
-              height="100%"
+              width="662"
+              height="458"
               frameborder="0"
               scrolling="no"
               marginheight="0"
@@ -71,6 +80,327 @@ const NinethSec = () => {
             >
               <ImLocation size="30px" /> SHOW LOCATION ON GOOGLE MAPS
             </Button>
+          </Flex>
+        </Flex>
+        <Flex w="100%" h="100%" align="center" direction="column">
+          <Flex
+            w="100%"
+            h="100%"
+            alignSelf="flex-start"
+            justify="space-between"
+          >
+            <Flex
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="25px"
+            >
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="30px"
+                width="30px"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+
+            <Heading
+              alignSelf="center"
+              fontFamily="avenir"
+              fontSize="20px"
+              mr="25px"
+            >
+              5 Mins
+            </Heading>
+            <UnorderedList
+              alignSelf="center"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="16px"
+            >
+              <ListItem pb="10px">
+                Walk to Velammal International School{" "}
+              </ListItem>
+              <ListItem pb="10px">DRIVE TO Origin by Mahindra </ListItem>
+              <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
+            </UnorderedList>
+          </Flex>
+          <Flex
+            w="100%"
+            h="100%"
+            alignSelf="flex-start"
+            justify="space-between"
+          >
+            {" "}
+            <Flex
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="25px"
+            >
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="30px"
+                width="30px"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Heading
+              w="fit-content"
+              display="flex"
+              alignSelf="center"
+              fontFamily="avenir"
+              fontSize="20px"
+              mr="25px"
+            >
+              10 Mins
+            </Heading>
+            <UnorderedList
+              textTransform="uppercase"
+              alignSelf="center"
+              fontFamily="veralaRound"
+              fontSize="16px"
+            >
+              <ListItem pb="10px">CONNECT TO Outer Ring Road</ListItem>
+              <ListItem pb="10px">DRIVE TO Siruvapuri Murugan Temple </ListItem>
+              <ListItem pb="10px">VELS Medical Hospital</ListItem>
+            </UnorderedList>
+          </Flex>
+          <Flex h="100%" alignSelf="flex-start" justify="center">
+            {" "}
+            <Flex
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="25px"
+            >
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="30px"
+                width="30px"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Heading
+              alignSelf="center"
+              fontFamily="avenir"
+              fontSize="20px"
+              mr="25px"
+            >
+              20 Mins
+            </Heading>
+            <Flex alignSelf="center">
+              <UnorderedList
+                textTransform="uppercase"
+                fontFamily="veralaRound"
+                fontSize="16px"
+              >
+                <ListItem pb="10px">DRIVE TO REDHILLS</ListItem>
+                <ListItem pb="10px">PULICAT LAKE </ListItem>
+                <ListItem pb="10px">DRIVE TO GUMMIDIPOONDI SIPCOT</ListItem>
+              </UnorderedList>
+            </Flex>
+          </Flex>
+          <Flex h="100%" alignSelf="flex-start" justify="center">
+            {" "}
+            <Flex
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="25px"
+            >
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="30px"
+                width="30px"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Heading
+              alignSelf="center"
+              fontFamily="avenir"
+              fontSize="20px"
+              mr="25px"
+            >
+              30 Mins
+            </Heading>
+            <Flex alignSelf="center">
+              <UnorderedList
+                textTransform="uppercase"
+                fontFamily="veralaRound"
+                fontSize="16px"
+              >
+                <ListItem pb="10px">DRIVE TO SRI CITY</ListItem>
+                <ListItem pb="10px">DRIVE TO ADANI PORT</ListItem>
+                <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
+              </UnorderedList>
+            </Flex>
+          </Flex>
+          <Flex h="100%" alignSelf="flex-start" justify="center">
+            {" "}
+            <Flex
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="25px"
+            >
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="30px"
+                width="30px"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Heading
+              alignSelf="center"
+              fontFamily="avenir"
+              fontSize="20px"
+              mr="25px"
+            >
+              40 Mins
+            </Heading>
+            <Flex alignSelf="center">
+              <UnorderedList
+                textTransform="uppercase"
+                fontFamily="veralaRound"
+                fontSize="16px"
+              >
+                <ListItem pb="10px">DRIVE TO CHENNAI AIRPORT</ListItem>
+              </UnorderedList>
+            </Flex>
+          </Flex>
+          <Flex h="100%" alignSelf="flex-start" justify="center">
+            {" "}
+            <Flex
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="25px"
+            >
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="30px"
+                width="30px"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
+            <Heading
+              alignSelf="center"
+              fontFamily="avenir"
+              fontSize="20px"
+              mr="25px"
+            >
+              2 Hours
+            </Heading>
+            <Flex alignSelf="center">
+              <UnorderedList
+                textTransform="uppercase"
+                fontFamily="veralaRound"
+                fontSize="16px"
+              >
+                <ListItem pb="10px">DRIVE TO TIRUPATI</ListItem>
+              </UnorderedList>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>
