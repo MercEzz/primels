@@ -10,6 +10,7 @@ import EnergySc from "./screens/EnergySc";
 import ChannelPartner from "./screens/ChannelPartner";
 import SkyHighSc from "./screens/SkyHighSc";
 import NewsMediaSc from "./screens/NewsMediaSc";
+import AreteHomes from "./screens/AreteHomes";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/energy-get-in-touch-with-us" element={<EnergySc />} />
           <Route path="/channel-partner" element={<ChannelPartner />} />
           <Route path="/sky-high" element={<SkyHighSc />} />
+          <Route path="/arete-homes" element={<AreteHomes />} />
           <Route path="/news-and-media" element={<NewsMediaSc />} />
         </Routes>
       </Flex>
