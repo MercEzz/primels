@@ -7,9 +7,14 @@ const SixthSec = () => {
   const [slider, setSlider] = useState(null);
 
   const settings = {
-    draggable: true,
+    className: "center",
+    centerMode: true,
     infinite: true,
+    centerPadding: "60px",
+    draggable: true,
     // autoplay: true,
+    // centerMode: true,
+    // centerPadding: "50px",
     speed: 500,
     autoplaySpeed: 3000,
     pauseOnHover: false,
@@ -55,12 +60,12 @@ const SixthSec = () => {
             <Image
               key={prime}
               w="100%"
-              height="568px"
+              height="247px"
               pr="15px"
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"
-              objectFit="cover"
+              objectFit="fill"
               src={prime}
             />
           ))}

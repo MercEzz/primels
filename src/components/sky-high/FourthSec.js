@@ -158,7 +158,7 @@ const FourthSec = () => {
           />
         </Flex>
         <Flex w="100%">
-          <Image src="/images/sky-high/.jpg" boxShadow="dark-lg" />
+          <Image src="/images/sky-high/TERRACE.jpg" boxShadow="dark-lg" />
         </Flex>
       </Flex>
     </Flex>
