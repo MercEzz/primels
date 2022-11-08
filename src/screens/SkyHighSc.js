@@ -1,4 +1,5 @@
 import React from "react";
+import DropDown from "../components/sky-high/DropDown";
 import EightSec from "../components/sky-high/EightSec";
 import FifthSec from "../components/sky-high/FifthSec";
 import FirstSec from "../components/sky-high/FirstSec";
@@ -25,6 +26,7 @@ const SkyHighSc = () => {
       <NinethSec />
       <TenthSec />
       <LastSec />
+      <DropDown />
     </>
   );
 };

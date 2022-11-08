@@ -1,6 +1,7 @@
-import { Flex, Box, Text, Heading } from "@chakra-ui/react";
+import { Flex, Box, Text, Icon } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Slider from "react-slick";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 
 const LastSec = () => {
   const [slider, setSlider] = useState(null);
@@ -47,12 +48,37 @@ const LastSec = () => {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-        {/* Slider */}
+        {/* Slider */}{" "}
+        <Icon
+          pos="absolute"
+          left="-1%"
+          top="0"
+          w="70px"
+          h="50px"
+          as={ImQuotesLeft}
+          color="#DFBD69"
+        />
+        <Icon
+          mr="4"
+          color="#DFBD69"
+          pos="absolute"
+          right="0"
+          bottom="25%"
+          zIndex="10"
+          w="70px"
+          h="50px"
+          as={ImQuotesRight}
+        />
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {testimonial.map((prime) => (
             <Flex w="100%" direction="row">
               <Flex w="100%" pos="relative">
-                <Flex direction="column" w="100%" fontFamily="veralaRound">
+                <Flex
+                  direction="column"
+                  w="100%"
+                  fontFamily="veralaRound"
+                  mt="50px"
+                >
                   <Text fontSize="16px">{prime.text}</Text>
                   <Text fontSize="20px">{prime.title}</Text>
                   <Text fontSize="20px">{prime.subTitle}</Text>
