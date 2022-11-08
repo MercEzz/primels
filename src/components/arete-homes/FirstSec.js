@@ -110,5 +110,5 @@ export default FirstSec;
 
 const bannerImgs = [
   "/images/ARETE HOMES/BANNER2.jpg",
-  "/images/sky-high/BANNER2.jpg",
+  "/images/ARETE HOMES/BANNER2.jpg",
 ];
