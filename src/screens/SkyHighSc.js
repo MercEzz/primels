@@ -3,6 +3,7 @@ import EightSec from "../components/sky-high/EightSec";
 import FifthSec from "../components/sky-high/FifthSec";
 import FirstSec from "../components/sky-high/FirstSec";
 import FourthSec from "../components/sky-high/FourthSec";
+import LastSec from "../components/sky-high/LastSec";
 import NinethSec from "../components/sky-high/NinethSec";
 import SecondSec from "../components/sky-high/SecondSec";
 import SeventhSec from "../components/sky-high/SeventhSec";
@@ -23,6 +24,7 @@ const SkyHighSc = () => {
       <EightSec />
       <NinethSec />
       <TenthSec />
+      <LastSec />
     </>
   );
 };
