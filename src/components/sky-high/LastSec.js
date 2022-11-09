@@ -180,8 +180,7 @@ const testimonial = [
   },
   {
     text: "I have purchased a flat in Ponneri at Arete Homes. It is my first home and happy to join with Integrate Smart township. I feel it is an excellent investment opportunity and a well designed project with all best facilities. I trust arete homes team as they are ones who care about the customers first. I am very happy.",
-    title:
-      "I have purchased a flat in Ponneri at Arete Homes. It is my first home and happy to join with Integrate Smart township. I feel it is an excellent investment opportunity and a well designed project with all best facilities. I trust arete homes team as they are ones who care about the customers first. I am very happy.",
+    title: "MR. D NARESH",
     subTitle: "",
   },
 ];
