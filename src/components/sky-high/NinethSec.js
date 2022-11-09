@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Flex,
   Heading,
@@ -10,11 +10,43 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { ImLocation } from "react-icons/im";
 
+const MtnTxt = motion(Text);
+const MtnHd = motion(Heading);
+const MtnFlx = motion(Flex);
+const MtnBtn = motion(Button);
+
 const NinethSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateY = useAnimation();
+  const animateX = useAnimation();
+  const animateFade = useAnimation();
+  const animateScale = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateY.start({
+        y: 0,
+        opacity: 1,
+      });
+      animateX.start({
+        x: 0,
+        opacity: 1,
+      });
+      animateFade.start({
+        opacity: 1,
+      });
+      animateScale.start({
+        scale: 1,
+      });
+    }
+  }, [isInView, animateY, animateX, animateFade, animateScale]);
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       px="100px"
@@ -24,15 +56,21 @@ const NinethSec = () => {
       align="center"
       justify="center"
     >
-      <Text
+      <MtnTxt
+        initial={{ y: -50, opacity: 0 }}
+        animate={animateY}
+        transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontSize="40px"
         lineHeight="48px"
         textTransform="uppercase"
       >
         LOCATION ADVANTAGE
-      </Text>
-      <Heading
+      </MtnTxt>
+      <MtnHd
+        initial={{ y: 50, opacity: 0 }}
+        animate={animateY}
+        transition={{ delay: 1.5, duration: 2, type: "just" }}
         fontFamily="avenir"
         fontSize="34px"
         lineHeight="48px"
@@ -40,7 +78,7 @@ const NinethSec = () => {
         pb="50px"
       >
         PONNERI - A SMART CITY BY JICA
-      </Heading>
+      </MtnHd>
       <Flex w="100%" h="100%" align="flex-start" justify="flex-start">
         <Flex
           direction="column"
@@ -49,7 +87,14 @@ const NinethSec = () => {
           align="center"
           justify="center"
         >
-          <Flex w="100%" h="100%" mb="15px">
+          <MtnFlx
+            initial={{ scale: 0.6 }}
+            animate={animateScale}
+            transition={{ delay: 3, duration: 2, type: "just" }}
+            w="100%"
+            h="100%"
+            mb="15px"
+          >
             <iframe
               class="gmap_iframe"
               width="662"
@@ -60,12 +105,12 @@ const NinethSec = () => {
               marginwidth="0"
               src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             ></iframe>
-          </Flex>
+          </MtnFlx>
           <Flex w="100%" h="100%" mb="20px">
             icons
           </Flex>
           <Flex w="100%" h="100%">
-            <Button
+            <MtnBtn
               w="100%"
               h="51px"
               fontSize="16px"
@@ -79,7 +124,7 @@ const NinethSec = () => {
               _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
             >
               <ImLocation size="30px" /> SHOW LOCATION ON GOOGLE MAPS
-            </Button>
+            </MtnBtn>
           </Flex>
         </Flex>
         <Flex w="100%" h="100%" align="center" direction="column">
@@ -89,7 +134,10 @@ const NinethSec = () => {
             alignSelf="flex-start"
             justify="space-between"
           >
-            <Flex
+            <MtnFlx
+              initial={{ y: -50, opacity: 0 }}
+              animate={animateY}
+              transition={{ delay: 3, duration: 2, type: "just" }}
               h="100%"
               direction="column"
               justify="flex-start"
@@ -119,7 +167,7 @@ const NinethSec = () => {
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-            </Flex>
+            </MtnFlx>
 
             <Heading
               alignSelf="center"

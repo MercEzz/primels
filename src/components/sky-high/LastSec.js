@@ -1,10 +1,33 @@
 import { Flex, Box, Text, Icon } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Slider from "react-slick";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import { motion, useInView, useAnimation } from "framer-motion";
+
+const MtnTxt = motion(Text);
+const MtnBx = motion(Box);
 
 const LastSec = () => {
   const [slider, setSlider] = useState(null);
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateY = useAnimation();
+  const animateX = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateY.start({
+        y: 0,
+        opacity: 1,
+      });
+      animateX.start({
+        x: 0,
+        opacity: 1,
+      });
+    }
+  }, [isInView, animateY, animateX]);
+
   const settings = {
     infinite: true,
     autoplay: true,
@@ -17,6 +40,7 @@ const LastSec = () => {
   };
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       px="100px"
@@ -27,10 +51,21 @@ const LastSec = () => {
       justify="center"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
-      <Text fontFamily="goudy" fontSize="40px" textAlign="center" mb="50px">
+      <MtnTxt
+        initial={{ y: -50, opacity: 0 }}
+        animate={animateY}
+        transition={{ duration: 2, type: "just" }}
+        fontFamily="goudy"
+        fontSize="40px"
+        textAlign="center"
+        mb="50px"
+      >
         200+ HAPPY FAMILIES & COUNTING...
-      </Text>
-      <Box
+      </MtnTxt>
+      <MtnBx
+        initial={{ x: "100vw", opacity: 0 }}
+        animate={animateX}
+        transition={{ delay: 1.5, duration: 2, type: "just" }}
         position={"relative"}
         height={"100%"}
         width={"100%"}
@@ -90,7 +125,7 @@ const LastSec = () => {
             </Flex>
           ))}
         </Slider>
-      </Box>
+      </MtnBx>
     </Flex>
   );
 };
