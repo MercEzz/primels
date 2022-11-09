@@ -12,6 +12,11 @@ const MtnDvd = motion(Divider);
 
 const FourthSec = () => {
   const ref = useRef(null);
+  const childref = useRef(null);
+  const childinView = useInView(childref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
   const isInView = useInView(ref, {
     once: true,
     margin: "0px 100px -50px 0px",
@@ -29,7 +34,13 @@ const FourthSec = () => {
         y: 0,
       });
     }
-  }, [isInView, animateFade, animateY]);
+    if (childinView) {
+      animateY.start({
+        opacity: 1,
+        y: 0,
+      });
+    }
+  }, [isInView, childinView, animateFade, animateY]);
 
   return (
     <Flex
@@ -59,7 +70,7 @@ const FourthSec = () => {
             <MtnImg
               initial={{ opacity: 0 }}
               animate={animateFade}
-              transition={{ duration: 2, type: "just" }}
+              transition={{ delay: 3, duration: 2, type: "just" }}
               src="/images/sky-high/DECK1.jpg"
               boxShadow="dark-lg"
             />
@@ -103,7 +114,6 @@ const FourthSec = () => {
               py="50px"
               w="100%"
               h="100%"
-              bgColor="red"
               direction="column"
               justify="center"
             >
@@ -163,14 +173,26 @@ const FourthSec = () => {
         {/* first-right-sec */}
         <Flex w="100%" h="100%" align="center" justify="center">
           <Flex w="100%" h="100%" my="25px" pr="25px">
-            <Image src="/images/sky-high/DECK2.jpg" boxShadow="dark-lg" />
+            <MtnImg
+              initial={{ opacity: 0 }}
+              animate={animateFade}
+              transition={{ delay: 4.5, duration: 2, type: "just" }}
+              src="/images/sky-high/DECK2.jpg"
+              boxShadow="dark-lg"
+            />
           </Flex>
           <Flex w="100%" h="100%" my="25px">
-            <Image src="/images/sky-high/DECK3.jpg" boxShadow="dark-lg" />
+            <MtnImg
+              initial={{ opacity: 0 }}
+              animate={animateFade}
+              transition={{ delay: 6, duration: 2, type: "just" }}
+              src="/images/sky-high/DECK3.jpg"
+              boxShadow="dark-lg"
+            />
           </Flex>
         </Flex>
       </Flex>
-      <Flex w="100%" h="100%" align="flex-start" justify="center">
+      <Flex ref={ref} w="100%" h="100%" align="flex-start" justify="center">
         <Flex h="100%" direction="column" alignSelf="center">
           <Heading fontFamily="avenir" fontSize="34px" mb="15px">
             SKY TERRACE AVENUE
@@ -180,10 +202,10 @@ const FourthSec = () => {
             Sunrises.
           </Text>
         </Flex>
-        <Flex
-          // initial={{ opacity: 0, y: -100 }}
-          // animate={animateY}
-          // transition={{ delay: 1.5, duration: 2, type: "just" }}
+        <MtnFlx
+          initial={{ opacity: 0, y: -100 }}
+          animate={animateY}
+          transition={{ duration: 2, type: "just" }}
           direction="column"
           align="center"
           px="25px"
@@ -203,7 +225,7 @@ const FourthSec = () => {
             boxShadow="0px 0px 0px 3px #B88746"
             borderRadius="50%"
           />
-        </Flex>
+        </MtnFlx>
         <Flex w="100%">
           <Image src="/images/sky-high/TERRACE.jpg" boxShadow="dark-lg" />
         </Flex>
