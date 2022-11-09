@@ -7,6 +7,8 @@ import { useRef } from "react";
 const MtnTxt = motion(Text);
 const MtnImg = motion(Image);
 const MtnFlx = motion(Flex);
+const MtnHd = motion(Heading);
+const MtnDvd = motion(Divider);
 
 const FourthSec = () => {
   const ref = useRef(null);
@@ -66,12 +68,22 @@ const FourthSec = () => {
             <MtnFlx
               initial={{ y: -50, opacity: 0 }}
               animate={animateY}
-              transition={{ duration: 2, type: "just" }}
+              transition={{ delay: 1.5, duration: 2, type: "just" }}
               direction="column"
               align="center"
               pr="25px"
             >
-              <Divider
+              {/* <MtnDvd
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 3, duration: 2, type: "just" }}
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+                h="58px"
+              /> */}
+              <MtnDvd
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -88,28 +100,63 @@ const FourthSec = () => {
               />
             </MtnFlx>{" "}
             <Flex
+              py="50px"
               w="100%"
               h="100%"
+              bgColor="red"
               direction="column"
-              // align="center"
               justify="center"
             >
-              <Heading fontFamily="avenir" fontSize="34px" mb="15px">
+              <MtnHd
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 1.5, duration: 2, type: "just" }}
+                fontFamily="avenir"
+                fontSize="34px"
+                mb="15px"
+              >
                 3 SKY DECKS
-              </Heading>
-              <Text fontFamily="veralaRound" fontSize="16px" mb="25px">
+              </MtnHd>
+              <MtnTxt
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 1.5, duration: 2, type: "just" }}
+                fontFamily="veralaRound"
+                fontSize="16px"
+                mb="25px"
+              >
                 Enjoy the panoramic sky views from different levels of the
                 tower.
-              </Text>
-              <Heading fontFamily="avenir" fontSize="20px" mb="15px">
+              </MtnTxt>
+              <MtnHd
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 3, duration: 2, type: "just" }}
+                fontFamily="avenir"
+                fontSize="20px"
+                mb="15px"
+              >
                 CAFE DECK
-              </Heading>
-              <Heading fontFamily="avenir" fontSize="20px" mb="15px">
+              </MtnHd>
+              <MtnHd
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 4.5, duration: 2, type: "just" }}
+                fontFamily="avenir"
+                fontSize="20px"
+                mb="15px"
+              >
                 KIDS AREA DECK
-              </Heading>
-              <Heading fontFamily="avenir" fontSize="20px">
+              </MtnHd>
+              <MtnHd
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 6, duration: 2, type: "just" }}
+                fontFamily="avenir"
+                fontSize="20px"
+              >
                 LOUNGE DECK
-              </Heading>
+              </MtnHd>
             </Flex>{" "}
           </Flex>
         </Flex>

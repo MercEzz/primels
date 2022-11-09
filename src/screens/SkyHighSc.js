@@ -1,4 +1,5 @@
 import React from "react";
+import DownloadBtn from "../components/sky-high/DownloadBtn";
 import DropDown from "../components/sky-high/DropDown";
 import EightSec from "../components/sky-high/EightSec";
 import FifthSec from "../components/sky-high/FifthSec";
@@ -15,6 +16,8 @@ import ThirdSec from "../components/sky-high/ThirdSec";
 const SkyHighSc = () => {
   return (
     <>
+      {" "}
+      <DownloadBtn />
       <FirstSec />
       <SecondSec />
       <ThirdSec />
