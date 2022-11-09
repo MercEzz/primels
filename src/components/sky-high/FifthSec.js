@@ -7,11 +7,39 @@ import {
   Heading,
   Button,
 } from "@chakra-ui/react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useState } from "react";
+import { useEffect } from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
+
+const MtnTxt = motion(Text);
+const MtnImg = motion(Image);
+const MtnFlx = motion(Flex);
 
 const FifthSec = () => {
   const [slider, setSlider] = useState(null);
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
+  const animateY = useAnimation();
+  const animateX = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateX.start({
+        opacity: 1,
+        x: 0,
+      });
+      animateY.start({
+        opacity: 1,
+        y: 0,
+      });
+    }
+  }, [isInView, animateX, animateY]);
 
   const settings = {
     draggable: true,
@@ -24,10 +52,24 @@ const FifthSec = () => {
     slidesToScroll: 1,
   };
   return (
-    <Flex w="100%" h="100%" align="center" justify="center" direction="column">
-      <Text mb="50px" fontFamily="goudy" fontSize="40px">
+    <Flex
+      ref={ref}
+      w="100%"
+      h="100%"
+      align="center"
+      justify="center"
+      direction="column"
+    >
+      <MtnTxt
+        initial={{ opacity: 0, y: -50 }}
+        animate={animateY}
+        transition={{ duration: 2, type: "just" }}
+        mb="50px"
+        fontFamily="goudy"
+        fontSize="40px"
+      >
         LIVE LARGEST, SHOP LARGEST
-      </Text>
+      </MtnTxt>
       <Box
         position={"relative"}
         height={"100%"}
@@ -49,7 +91,10 @@ const FifthSec = () => {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {plazaImgs.map((prime) => (
-            <Image
+            <MtnImg
+              initial={{ x: 200, opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 1.5, duration: 2, type: "just" }}
               key={prime}
               w="100%"
               height="568px"
@@ -80,10 +125,10 @@ const FifthSec = () => {
             justify="center"
             pr="50px"
           >
-            <Flex
-              // initial={{ opacity: 0, y: -100 }}
-              // animate={animateY}
-              // transition={{ delay: 1.5, duration: 2, type: "just" }}
+            <MtnFlx
+              initial={{ y: -100, opacity: 0 }}
+              animate={animateY}
+              transition={{ delay: 1.5, duration: 2, type: "just" }}
               direction="column"
               align="center"
               px="25px"
@@ -103,8 +148,14 @@ const FifthSec = () => {
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
               />
-            </Flex>
-            <Flex direction="column" alignSelf="center">
+            </MtnFlx>
+            <MtnFlx
+              initial={{ x: -100, opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 1.5, duration: 2, type: "just" }}
+              direction="column"
+              alignSelf="center"
+            >
               <Heading fontFamily="avenir" fontSize="34px" mb="15px">
                 ARETE PLAZA
               </Heading>
@@ -128,7 +179,7 @@ const FifthSec = () => {
               >
                 EXPLORE MORE
               </Button>
-            </Flex>
+            </MtnFlx>
           </Flex>
         </Flex>
       </Box>

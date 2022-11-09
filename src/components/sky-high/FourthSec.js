@@ -12,11 +12,7 @@ const MtnDvd = motion(Divider);
 
 const FourthSec = () => {
   const ref = useRef(null);
-  const childref = useRef(null);
-  const childinView = useInView(childref, {
-    once: true,
-    margin: "0px 100px -50px 0px",
-  });
+
   const isInView = useInView(ref, {
     once: true,
     margin: "0px 100px -50px 0px",
@@ -34,13 +30,7 @@ const FourthSec = () => {
         y: 0,
       });
     }
-    if (childinView) {
-      animateY.start({
-        opacity: 1,
-        y: 0,
-      });
-    }
-  }, [isInView, childinView, animateFade, animateY]);
+  }, [isInView, animateFade, animateY]);
 
   return (
     <Flex
