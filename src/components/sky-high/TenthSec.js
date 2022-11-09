@@ -14,11 +14,39 @@ import {
   Tbody,
   Td,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useInView, useAnimation, motion } from "framer-motion";
+
+const MtnTxt = motion(Text);
+const MtnHd = motion(Heading);
+const MtnFlx = motion(Flex);
 
 const TenthSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animateY = useAnimation();
+  const animateX = useAnimation();
+  const animateFade = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateY.start({
+        y: 0,
+        opacity: 1,
+      });
+      animateX.start({
+        x: 0,
+        opacity: 1,
+      });
+      animateFade.start({
+        opacity: 1,
+      });
+    }
+  }, [isInView, animateY, animateX, animateFade]);
+
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       px="100px"
@@ -27,14 +55,36 @@ const TenthSec = () => {
       justify="center"
       direction="column"
     >
-      <Text fontFamily="goudy" fontSize="40px" mb="25px">
+      <MtnTxt
+        initial={{ y: -50, opacity: 0 }}
+        animate={animateY}
+        transition={{ duration: 2, type: "just" }}
+        fontFamily="goudy"
+        fontSize="40px"
+        mb="25px"
+      >
         SMART INVEST
-      </Text>
-      <Heading fontFamily="avenir" fontSize="34px" textAlign="center" mb="50px">
+      </MtnTxt>
+      <MtnHd
+        initial={{ opacity: 0 }}
+        animate={animateFade}
+        transition={{ delay: 1.5, duration: 2, type: "just" }}
+        fontFamily="avenir"
+        fontSize="34px"
+        textAlign="center"
+        mb="50px"
+      >
         AN EXCELLENT INVESTMENT OPPORTUNITY <br /> IN A LIFETIME GROWING ASSET
-      </Heading>
+      </MtnHd>
       <Flex w="100%" h="100%">
-        <Flex w="100%" h="100%" pos="relative">
+        <MtnFlx
+          initial={{ y: -50, opacity: 0 }}
+          animate={animateY}
+          transition={{ duration: 2, type: "just" }}
+          w="100%"
+          h="100%"
+          pos="relative"
+        >
           <Image
             // pos="absolute"
             h="568px"
@@ -50,7 +100,7 @@ const TenthSec = () => {
             right="15px"
             src="/images/sky-high/SMART INVEST ASSET.png"
           />
-        </Flex>
+        </MtnFlx>
         <Flex w="100%">
           <Flex
             h="100%"
