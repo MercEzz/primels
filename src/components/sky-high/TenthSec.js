@@ -78,9 +78,9 @@ const TenthSec = () => {
       </MtnHd>
       <Flex w="100%" h="100%">
         <MtnFlx
-          initial={{ y: -50, opacity: 0 }}
-          animate={animateY}
-          transition={{ duration: 2, type: "just" }}
+          initial={{ x: 50, opacity: 0 }}
+          animate={animateX}
+          transition={{ delay: 3, duration: 2, type: "just" }}
           w="100%"
           h="100%"
           pos="relative"
@@ -102,7 +102,10 @@ const TenthSec = () => {
           />
         </MtnFlx>
         <Flex w="100%">
-          <Flex
+          <MtnFlx
+            initial={{ y: -50, opacity: 0 }}
+            animate={animateY}
+            transition={{ delay: 3, duration: 2, type: "just" }}
             h="100%"
             direction="column"
             justify="flex-start"
@@ -125,9 +128,12 @@ const TenthSec = () => {
               borderRadius="50%"
               my="1"
             />
-          </Flex>
+          </MtnFlx>
           <Flex direction="column" align="center" justify="center">
-            <Heading
+            <MtnHd
+              initial={{ x: -50, opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 3, duration: 2, type: "just" }}
               w="100%"
               fontSize="24px"
               textAlign="left"
@@ -135,7 +141,7 @@ const TenthSec = () => {
               mb="25px"
             >
               EMI = RENT
-            </Heading>
+            </MtnHd>
             <Flex mb="25px" alignSelf="flex-start">
               <TableContainer>
                 <Table>
@@ -204,43 +210,52 @@ const TenthSec = () => {
                 </Table>
               </TableContainer>
             </Flex>
-            <Heading fontFamily="avenir" fontSize="24px" mb="15px">
-              2 YEAR DOWNPAYMENT PLAN
-            </Heading>
-            <Text
-              mb="10px"
-              textAlign="center"
-              textTransform="uppercase"
-              fontFamily="veralaRound"
-              fontSize="16px"
+            <MtnFlx
+              initial={{ opacity: 0 }}
+              animate={animateFade}
+              transition={{ delay: 4.5, duration: 2, type: "just" }}
+              w="100%"
+              align="center"
+              direction="column"
             >
-              Rental income + TAx savings + PMAY Benefits + Appreciation{" "}
-            </Text>
-            <Text
-              textAlign="center"
-              fontWeight="bold"
-              fontSize="30px"
-              mb="10px"
-            >
-              &#8595;
-            </Text>
-            <Text fontFamily="veralaRound" fontSize="24px" mb="25px">
-              Income growth journey
-            </Text>
-            <Button
-              w="146px"
-              h="51px"
-              fontSize="16px"
-              fontFamily="avenir"
-              bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-              color="white"
-              _hover={{
-                bgGradient: "linear(to-b, #DFBD69, #B88746)",
-              }}
-              _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
-            >
-              KNOW MORE
-            </Button>
+              <Heading fontFamily="avenir" fontSize="24px" mb="15px">
+                2 YEAR DOWNPAYMENT PLAN
+              </Heading>
+              <Text
+                mb="10px"
+                textAlign="center"
+                textTransform="uppercase"
+                fontFamily="veralaRound"
+                fontSize="16px"
+              >
+                Rental income + TAx savings + PMAY Benefits + Appreciation{" "}
+              </Text>
+              <Text
+                textAlign="center"
+                fontWeight="bold"
+                fontSize="30px"
+                mb="10px"
+              >
+                &#8595;
+              </Text>
+              <Text fontFamily="veralaRound" fontSize="24px" mb="25px">
+                Income growth journey
+              </Text>
+              <Button
+                w="146px"
+                h="51px"
+                fontSize="16px"
+                fontFamily="avenir"
+                bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+                color="white"
+                _hover={{
+                  bgGradient: "linear(to-b, #DFBD69, #B88746)",
+                }}
+                _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+              >
+                KNOW MORE
+              </Button>
+            </MtnFlx>
           </Flex>
         </Flex>
       </Flex>
