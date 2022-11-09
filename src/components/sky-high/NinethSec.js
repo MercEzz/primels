@@ -17,6 +17,7 @@ const MtnTxt = motion(Text);
 const MtnHd = motion(Heading);
 const MtnFlx = motion(Flex);
 const MtnBtn = motion(Button);
+const MtnDvd = motion(Divider);
 
 const NinethSec = () => {
   const ref = useRef(null);
@@ -111,6 +112,9 @@ const NinethSec = () => {
           </Flex>
           <Flex w="100%" h="100%">
             <MtnBtn
+              initial={{ opacity: 0 }}
+              animate={animateFade}
+              transition={{ delay: 10.5, duration: 2, type: "just" }}
               w="100%"
               h="51px"
               fontSize="16px"
@@ -160,7 +164,10 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-              <Divider
+              <MtnDvd
+                initial={{ y: -50, opacity: 0 }}
+                animate={animateY}
+                transition={{ delay: 4.5, duration: 2, type: "just" }}
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
@@ -168,27 +175,33 @@ const NinethSec = () => {
                 bgColor="#DFBD69"
               />
             </MtnFlx>
-
-            <Heading
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
+            <MtnFlx
+              initial={{ x: -50, opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 3, duration: 2, type: "just" }}
+              w="100%"
             >
-              5 Mins
-            </Heading>
-            <UnorderedList
-              alignSelf="center"
-              textTransform="uppercase"
-              fontFamily="veralaRound"
-              fontSize="16px"
-            >
-              <ListItem pb="10px">
-                Walk to Velammal International School{" "}
-              </ListItem>
-              <ListItem pb="10px">DRIVE TO Origin by Mahindra </ListItem>
-              <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
-            </UnorderedList>
+              <Heading
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
+              >
+                5 Mins
+              </Heading>
+              <UnorderedList
+                alignSelf="center"
+                textTransform="uppercase"
+                fontFamily="veralaRound"
+                fontSize="16px"
+              >
+                <ListItem pb="10px">
+                  Walk to Velammal International School{" "}
+                </ListItem>
+                <ListItem pb="10px">DRIVE TO Origin by Mahindra </ListItem>
+                <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
+              </UnorderedList>
+            </MtnFlx>
           </Flex>
           <Flex
             w="100%"
@@ -197,7 +210,10 @@ const NinethSec = () => {
             justify="space-between"
           >
             {" "}
-            <Flex
+            <MtnFlx
+              initial={{ y: -50, opacity: 0 }}
+              animate={animateY}
+              transition={{ delay: 4.5, duration: 2, type: "just" }}
               h="100%"
               direction="column"
               justify="flex-start"
@@ -220,91 +236,53 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-              <Divider
+              <MtnDvd
+                initial={{ y: -50, opacity: 0 }}
+                animate={animateY}
+                transition={{ delay: 6, duration: 2, type: "just" }}
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-            </Flex>
-            <Heading
-              w="fit-content"
-              display="flex"
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
+            </MtnFlx>
+            <MtnFlx
+              initial={{ x: -50, opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 4.5, duration: 2, type: "just" }}
+              w="100%"
             >
-              10 Mins
-            </Heading>
-            <UnorderedList
-              textTransform="uppercase"
-              alignSelf="center"
-              fontFamily="veralaRound"
-              fontSize="16px"
-            >
-              <ListItem pb="10px">CONNECT TO Outer Ring Road</ListItem>
-              <ListItem pb="10px">DRIVE TO Siruvapuri Murugan Temple </ListItem>
-              <ListItem pb="10px">VELS Medical Hospital</ListItem>
-            </UnorderedList>
-          </Flex>
-          <Flex h="100%" alignSelf="flex-start" justify="center">
-            {" "}
-            <Flex
-              h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="25px"
-            >
-              <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="30px"
-                width="30px"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
-              <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>
-            <Heading
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
-            >
-              20 Mins
-            </Heading>
-            <Flex alignSelf="center">
+              <Heading
+                w="fit-content"
+                display="flex"
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
+              >
+                10 Mins
+              </Heading>
               <UnorderedList
                 textTransform="uppercase"
+                alignSelf="center"
                 fontFamily="veralaRound"
                 fontSize="16px"
               >
-                <ListItem pb="10px">DRIVE TO REDHILLS</ListItem>
-                <ListItem pb="10px">PULICAT LAKE </ListItem>
-                <ListItem pb="10px">DRIVE TO GUMMIDIPOONDI SIPCOT</ListItem>
+                <ListItem pb="10px">CONNECT TO Outer Ring Road</ListItem>
+                <ListItem pb="10px">
+                  DRIVE TO Siruvapuri Murugan Temple{" "}
+                </ListItem>
+                <ListItem pb="10px">VELS Medical Hospital</ListItem>
               </UnorderedList>
-            </Flex>
+            </MtnFlx>
           </Flex>
           <Flex h="100%" alignSelf="flex-start" justify="center">
             {" "}
-            <Flex
+            <MtnFlx
+              initial={{ y: -50, opacity: 0 }}
+              animate={animateY}
+              transition={{ delay: 6, duration: 2, type: "just" }}
               h="100%"
               direction="column"
               justify="flex-start"
@@ -327,37 +305,50 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-              <Divider
+              <MtnDvd
+                initial={{ y: -50, opacity: 0 }}
+                animate={animateY}
+                transition={{ delay: 7.5, duration: 2, type: "just" }}
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-            </Flex>
-            <Heading
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
+            </MtnFlx>
+            <MtnFlx
+              initial={{ x: -50, opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 6, duration: 2, type: "just" }}
+              w="100%"
             >
-              30 Mins
-            </Heading>
-            <Flex alignSelf="center">
-              <UnorderedList
-                textTransform="uppercase"
-                fontFamily="veralaRound"
-                fontSize="16px"
+              <Heading
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
               >
-                <ListItem pb="10px">DRIVE TO SRI CITY</ListItem>
-                <ListItem pb="10px">DRIVE TO ADANI PORT</ListItem>
-                <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
-              </UnorderedList>
-            </Flex>
+                20 Mins
+              </Heading>
+              <Flex alignSelf="center">
+                <UnorderedList
+                  textTransform="uppercase"
+                  fontFamily="veralaRound"
+                  fontSize="16px"
+                >
+                  <ListItem pb="10px">DRIVE TO REDHILLS</ListItem>
+                  <ListItem pb="10px">PULICAT LAKE </ListItem>
+                  <ListItem pb="10px">DRIVE TO GUMMIDIPOONDI SIPCOT</ListItem>
+                </UnorderedList>
+              </Flex>
+            </MtnFlx>
           </Flex>
           <Flex h="100%" alignSelf="flex-start" justify="center">
             {" "}
-            <Flex
+            <MtnFlx
+              initial={{ y: -50, opacity: 0 }}
+              animate={animateY}
+              transition={{ delay: 7.5, duration: 2, type: "just" }}
               h="100%"
               direction="column"
               justify="flex-start"
@@ -380,43 +371,60 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-              <Divider
+              <MtnDvd
+                initial={{ y: -50, opacity: 0 }}
+                animate={animateY}
+                transition={{ delay: 9, duration: 2, type: "just" }}
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-            </Flex>
-            <Heading
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
+            </MtnFlx>
+            <MtnFlx
+              w="100%"
+              initial={{ x: -50, opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 7.5, duration: 2, type: "just" }}
             >
-              40 Mins
-            </Heading>
-            <Flex alignSelf="center">
-              <UnorderedList
-                textTransform="uppercase"
-                fontFamily="veralaRound"
-                fontSize="16px"
+              <Heading
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
               >
-                <ListItem pb="10px">DRIVE TO CHENNAI AIRPORT</ListItem>
-              </UnorderedList>
-            </Flex>
+                30 Mins
+              </Heading>
+              <Flex alignSelf="center">
+                <UnorderedList
+                  textTransform="uppercase"
+                  fontFamily="veralaRound"
+                  fontSize="16px"
+                >
+                  <ListItem pb="10px">DRIVE TO SRI CITY</ListItem>
+                  <ListItem pb="10px">DRIVE TO ADANI PORT</ListItem>
+                  <ListItem pb="10px">
+                    DRIVE TO Ponneri Railway Station
+                  </ListItem>
+                </UnorderedList>
+              </Flex>
+            </MtnFlx>
           </Flex>
           <Flex h="100%" alignSelf="flex-start" justify="center">
             {" "}
-            <Flex
+            <MtnFlx
               h="100%"
+              initial={{ y: -50, opacity: 0 }}
+              animate={animateY}
+              transition={{ delay: 9, duration: 2, type: "just" }}
               direction="column"
               justify="flex-start"
               align="center"
               px="25px"
             >
               <Divider
-                h="50px"
+                // h="20px"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -431,24 +439,95 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-            </Flex>
-            <Heading
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
+              <MtnDvd
+                initial={{ y: -50, opacity: 0 }}
+                animate={animateY}
+                transition={{ delay: 10.5, duration: 2, type: "just" }}
+                // h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </MtnFlx>
+            <MtnFlx
+              w="100%"
+              initial={{ x: -50, opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 9, duration: 2, type: "just" }}
             >
-              2 Hours
-            </Heading>
-            <Flex alignSelf="center">
-              <UnorderedList
-                textTransform="uppercase"
-                fontFamily="veralaRound"
-                fontSize="16px"
+              <Heading
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
               >
-                <ListItem pb="10px">DRIVE TO TIRUPATI</ListItem>
-              </UnorderedList>
-            </Flex>
+                40 Mins
+              </Heading>
+              <Flex alignSelf="center">
+                <UnorderedList
+                  textTransform="uppercase"
+                  fontFamily="veralaRound"
+                  fontSize="16px"
+                >
+                  <ListItem pb="10px">DRIVE TO CHENNAI AIRPORT</ListItem>
+                </UnorderedList>
+              </Flex>
+            </MtnFlx>
+          </Flex>
+          <Flex h="100%" alignSelf="flex-start" justify="center">
+            {" "}
+            <MtnFlx
+              initial={{ y: -50, opacity: 0 }}
+              animate={animateY}
+              transition={{ delay: 10.5, duration: 2, type: "just" }}
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="25px"
+            >
+              <Divider
+                h="10px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="30px"
+                width="30px"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </MtnFlx>
+            <MtnFlx
+              w="100%"
+              initial={{ x: -50, opacity: 0 }}
+              animate={animateX}
+              transition={{ delay: 10.5, duration: 2, type: "just" }}
+            >
+              <Heading
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
+              >
+                2 Hours
+              </Heading>
+              <Flex alignSelf="center">
+                <UnorderedList
+                  textTransform="uppercase"
+                  fontFamily="veralaRound"
+                  fontSize="16px"
+                >
+                  <ListItem pb="10px">DRIVE TO TIRUPATI</ListItem>
+                </UnorderedList>
+              </Flex>
+            </MtnFlx>
           </Flex>
         </Flex>
       </Flex>
