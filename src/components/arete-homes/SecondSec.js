@@ -6,6 +6,7 @@ import {
   Divider,
   Text,
   VStack,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useState } from "react";
@@ -14,6 +15,7 @@ import { useRef } from "react";
 import Slider from "react-slick";
 
 const MtnFlx = motion(Flex);
+const MtnBx = motion(Box);
 
 const MtnHead = motion(Heading);
 const MtnTxt = motion(Text);
@@ -67,7 +69,7 @@ const SecondSec = () => {
       py="100px"
     >
       <MtnHead
-        initial={{ y: -100, opacity: 0 }}
+        initial={{ y: -50, opacity: 0 }}
         animate={animateY}
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
@@ -81,8 +83,8 @@ const SecondSec = () => {
       </MtnHead>
       <Flex px="100px" w="100%" h="100%" align="center" justify="center">
         <MtnFlx
-          initial={{ x: -100, opacity: 0 }}
-          animate={animateX}
+          initial={{ opacity: 0 }}
+          animate={animateFade}
           transition={{ delay: 1.5, duration: 2, type: "just" }}
           w="100%"
           h="100%"
@@ -170,7 +172,7 @@ const SecondSec = () => {
 
         <Flex h="100%" alignSelf="flex-start">
           <MtnFlx
-            initial={{ opacity: 0, y: -100 }}
+            initial={{ opacity: 0, y: -50 }}
             animate={animateY}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             direction="column"
@@ -209,96 +211,116 @@ const SecondSec = () => {
             well planned gated community, comprising magnificent towers, rising
             with the elevated podium and many other unique amenities.
           </MtnTxt>
-          <Flex>
-            <Flex w="100%" h="100%" direction="column">
-              <VStack mb="25px" align="flex-start">
-                <Text
-                  fontFamily="avenir"
-                  fontSize="24px"
-                  bgGradient="linear(to-b, #B88746, #DFBD69)"
-                  bgClip="text"
-                  fontWeight="bold"
-                >
-                  20.25 ACRES
-                </Text>
-                <Text fontFamily="veralaRound" fontSize="16px">
-                  Largest Smart Township
-                </Text>
-              </VStack>
-              <VStack mb="25px" align="flex-start">
-                <Text
-                  fontFamily="avenir"
-                  fontSize="24px"
-                  bgGradient="linear(to-b, #B88746, #DFBD69)"
-                  bgClip="text"
-                  fontWeight="bold"
-                >
-                  74% OPEN SPACE
-                </Text>
-                <Text fontFamily="veralaRound" fontSize="16px">
-                  IGBC pre-certified Platinum Rated Township
-                </Text>
-              </VStack>
-              <VStack mb="25px" align="flex-start">
-                <Text
-                  fontFamily="avenir"
-                  fontSize="24px"
-                  bgGradient="linear(to-b, #B88746, #DFBD69)"
-                  bgClip="text"
-                  fontWeight="bold"
-                >
-                  2, 2.5, 3 BHK
-                </Text>
-                <Text fontFamily="veralaRound" fontSize="16px">
-                  Smart Residences
-                </Text>
-              </VStack>
-            </Flex>
-            <Flex w="100%" h="100%" direction="column">
-              <VStack mb="25px" align="flex-start">
-                <Text
-                  fontFamily="avenir"
-                  fontSize="24px"
-                  bgGradient="linear(to-b, #B88746, #DFBD69)"
-                  bgClip="text"
-                  fontWeight="bold"
-                >
-                  PRIVATE CLUB
-                </Text>
-                <Text fontFamily="veralaRound" fontSize="16px">
-                  PGC - 60,000 SQFT.
-                </Text>
-              </VStack>
-              <VStack mb="25px" align="flex-start">
-                <Text
-                  fontFamily="avenir"
-                  fontSize="24px"
-                  bgGradient="linear(to-b, #B88746, #DFBD69)"
-                  bgClip="text"
-                  fontWeight="bold"
-                >
-                  100+
-                </Text>
-                <Text fontFamily="veralaRound" fontSize="16px">
-                  Smart Amenities
-                </Text>
-              </VStack>
-              <VStack mb="25px" align="flex-start">
-                <Text
-                  fontFamily="avenir"
-                  fontSize="24px"
-                  bgGradient="linear(to-b, #B88746, #DFBD69)"
-                  bgClip="text"
-                  fontWeight="bold"
-                >
-                  A1 TO A6 TOWERS
-                </Text>
-                <Text fontFamily="veralaRound" fontSize="16px">
-                  10 Floors
-                </Text>
-              </VStack>
-            </Flex>
-          </Flex>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing="25px">
+            <MtnBx
+              initial={{ opacity: 0 }}
+              animate={animateFade}
+              transition={{ delay: 3, duration: 2, type: "just" }}
+            >
+              <Text
+                fontFamily="avenir"
+                fontSize="24px"
+                fontWeight="bold"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                bgClip="text"
+              >
+                20.25 ACRES
+              </Text>
+              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+                Largest Smart Township
+              </Text>
+            </MtnBx>
+            <MtnBx
+              initial={{ opacity: 0 }}
+              animate={animateFade}
+              transition={{ delay: 3, duration: 2, type: "just" }}
+            >
+              <Text
+                fontFamily="avenir"
+                fontSize="24px"
+                fontWeight="bold"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                bgClip="text"
+              >
+                PRIVATE CLUB
+              </Text>
+              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+                PGC - 60,000 SQFT.
+              </Text>
+            </MtnBx>
+            <MtnBx
+              initial={{ opacity: 0 }}
+              animate={animateFade}
+              transition={{ delay: 4.5, duration: 2, type: "just" }}
+            >
+              <Text
+                fontFamily="avenir"
+                fontSize="24px"
+                fontWeight="bold"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                bgClip="text"
+              >
+                74% OPEN SPACE
+              </Text>
+              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+                IGBC pre-certified Platinum Rated Township
+              </Text>
+            </MtnBx>
+            <MtnBx
+              initial={{ opacity: 0 }}
+              animate={animateFade}
+              transition={{ delay: 4.5, duration: 2, type: "just" }}
+            >
+              <Text
+                fontFamily="avenir"
+                fontSize="24px"
+                fontWeight="bold"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                bgClip="text"
+              >
+                100+
+              </Text>
+              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+                Smart Amenities
+              </Text>
+            </MtnBx>
+            <MtnBx
+              initial={{ opacity: 0 }}
+              animate={animateFade}
+              transition={{ delay: 6, duration: 2, type: "just" }}
+            >
+              <Text
+                fontFamily="avenir"
+                fontSize="24px"
+                fontWeight="bold"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                bgClip="text"
+              >
+                2, 2.5, 3 BHK
+              </Text>
+              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+                Smart Residences
+              </Text>
+            </MtnBx>
+            <MtnBx
+              initial={{ opacity: 0 }}
+              animate={animateFade}
+              transition={{ delay: 6, duration: 2, type: "just" }}
+            >
+              <Text
+                fontFamily="avenir"
+                fontSize="24px"
+                fontWeight="bold"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                bgClip="text"
+              >
+                A1 TO A6 TOWERS
+              </Text>
+              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+                10 Floors
+              </Text>
+            </MtnBx>
+          </SimpleGrid>
         </Flex>
       </Flex>
     </Flex>
@@ -310,4 +332,31 @@ export default SecondSec;
 const introImgs = [
   "/images/arete-homes/INTRO1.jpg",
   "/images/arete-homes/INTRO2.png",
+];
+
+const stats = [
+  {
+    title: "20.25 ACRES",
+    txt: "Largest Smart Township",
+  },
+  {
+    title: "PRIVATE CLUB",
+    txt: "PGC - 60,000 SQFT.",
+  },
+  {
+    title: "74% OPEN SPACE",
+    txt: "IGBC pre-certified Platinum Rated Township",
+  },
+  {
+    title: "100+",
+    txt: "Smart Amenities",
+  },
+  {
+    title: "2, 2.5, 3 BHK",
+    txt: "Smart Residences",
+  },
+  {
+    title: "A1 TO A6 TOWERS",
+    txt: "10 Floors",
+  },
 ];
