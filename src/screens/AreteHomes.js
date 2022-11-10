@@ -12,6 +12,7 @@ import TenthSec from "../components/arete-homes/TenthSec";
 import EleventhSec from "../components/arete-homes/EleventhSec";
 import TwelvethSec from "../components/arete-homes/TwelvethSec";
 import LastSec from "../components/arete-homes/LastSec";
+import DropDown from "../components/arete-homes/DropDown";
 
 const AreteHomes = () => {
   return (
@@ -29,6 +30,7 @@ const AreteHomes = () => {
       <EleventhSec />
       <TwelvethSec />
       <LastSec />
+      <DropDown />
     </>
   );
 };
