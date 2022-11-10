@@ -7,10 +7,10 @@ const SeventhSec = () => {
   const [slider, setSlider] = useState(null);
 
   const settings = {
-    className: "center",
+    // className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "60px",
+
     draggable: true,
 
     speed: 500,
