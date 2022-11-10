@@ -128,12 +128,12 @@ const SeventhSec = () => {
 export default SeventhSec;
 
 const gymclubimgs = [
-  "/images/sky-high/16 - Cafeteria High Res.jpg",
-  "/images/sky-high/18 - Restaurant High Res.jpg",
-  "/images/sky-high/20 - guest rooms.jpg",
-  "/images/sky-high/22 - sauna_s.jpg",
-  "/images/sky-high/PGC Banquet Hall.jpg",
-  "/images/sky-high/PGC Sports Bar.jpg",
-  "/images/sky-high/PGC Terrace.jpg",
-  "/images/sky-high/PGC Theatre.jpg",
+  "/images/arete-homes/PGC-ACTIVITY AREA.jpeg",
+  "/images/arete-homes/PGC-BANQUET HALL.jpg",
+  "/images/arete-homes/PGC-CAFETERIA.jpg",
+  "/images/arete-homes/PGC-GRAND ENTRANCE.jpg",
+  "/images/arete-homes/PGC-GYM.jpg",
+  "/images/arete-homes/PGC-multi sports arena.jpg",
+  "/images/arete-homes/PGC-SQUASH COURT.jpg",
+  "/images/arete-homes/PGC-SWIMMING POOL.jpg",
 ];
