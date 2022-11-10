@@ -46,7 +46,7 @@ const SecondSec = () => {
   const [slider, setSlider] = useState(null);
   const settings = {
     draggable: false,
-    infinite: true,
+    infinite: false,
     autoplay: true,
     speed: 500,
     fade: true,

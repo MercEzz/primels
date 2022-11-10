@@ -47,7 +47,7 @@ const SecondSec = () => {
   const [slider, setSlider] = useState(null);
   const settings = {
     draggable: false,
-    infinite: true,
+    infinite: false,
     autoplay: true,
     speed: 500,
     fade: true,
@@ -308,6 +308,6 @@ const SecondSec = () => {
 export default SecondSec;
 
 const introImgs = [
-  "/images/ARETE HOMES/INTRO1.jpg",
-  "/images/ARETE HOMES/INTRO2.png",
+  "/images/arete-homes/INTRO1.jpg",
+  "/images/arete-homes/INTRO2.png",
 ];
