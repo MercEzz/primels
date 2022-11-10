@@ -27,7 +27,14 @@ const ThirdSec = () => {
   }, [isInView, animateY, animateScale]);
 
   return (
-    <Flex w="100%" h="100%" direction="column" align="center" justify="center">
+    <Flex
+      ref={ref}
+      w="100%"
+      h="100%"
+      direction="column"
+      align="center"
+      justify="center"
+    >
       <MtnTxt
         initial={{ y: -50, opacity: 0 }}
         animate={animateY}

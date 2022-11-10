@@ -40,7 +40,7 @@ const FourthSec = () => {
         transition={{ duration: 2, type: "just" }}
         w="100%"
         h="100%"
-        src="/images/ARETE HOMES/3RD SECTION.jpg"
+        src="/images/arete-homes/3RD SECTION.jpg"
         objectPosition="30% 30%"
         bgRepeat="no-repeat"
         objectFit="cover"
@@ -50,7 +50,7 @@ const FourthSec = () => {
         animate={animateX}
         transition={{ duration: 2, type: "just" }}
         h="100px"
-        src="/images/ARETE HOMES/Asset.png"
+        src="/images/arete-homes/Asset.png"
         pos="absolute"
         bottom="80px"
         right="39%"
