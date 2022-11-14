@@ -248,7 +248,6 @@ const NinethSec = () => {
               <Flex
                 transform={isInView ? "translateY(0)" : "translateY(-50px)"}
                 opacity={isInView ? "1" : "0"}
-                transitionDelay="2s"
                 transition="all 2s"
                 h="100%"
                 direction="column"
@@ -275,8 +274,7 @@ const NinethSec = () => {
               <Divider
                 transform={isInView ? "translateY(0)" : "translateY(-50px)"}
                 opacity={isInView ? "1" : "0"}
-                transitionDelay="2s"
-                transition="all 2s"
+                transition="all 2s 2s"
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
@@ -328,29 +326,35 @@ const NinethSec = () => {
             >
               {" "}
               <Flex
-                w="100%"
-                transform={isInView ? "none" : "translateX(-50px)"}
+                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
                 opacity={isInView ? "1" : "0"}
-                transitionDelay="2s"
-                transition="all 2s"
-              ></Flex>
+                transition="all 2s 2s"
+                h="100%"
+                direction="column"
+                justify="flex-start"
+                align="center"
+              >
+                <Divider
+                  h="35px"
+                  orientation="vertical"
+                  border="3px solid"
+                  borderColor="#DFBD69"
+                  bgColor="#DFBD69"
+                />
+                <Box
+                  height="30px"
+                  width="30px"
+                  backgroundColor="#DFBD69"
+                  border="3px solid white"
+                  boxShadow="0px 0px 0px 3px #B88746"
+                  borderRadius="50%"
+                  my="1"
+                />
+              </Flex>
               <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="30px"
-                width="30px"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
-              <Divider
+                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 4s"
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
@@ -358,77 +362,34 @@ const NinethSec = () => {
                 bgColor="#DFBD69"
               />
             </Flex>
-            <Heading
-              w="fit-content"
-              display="flex"
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
-            >
-              10 Mins
-            </Heading>
-            <UnorderedList
-              textTransform="uppercase"
-              alignSelf="center"
-              fontFamily="veralaRound"
-              fontSize="16px"
-            >
-              <ListItem pb="10px">CONNECT TO Outer Ring Road</ListItem>
-              <ListItem pb="10px">DRIVE TO Siruvapuri Murugan Temple </ListItem>
-              <ListItem pb="10px">VELS Medical Hospital</ListItem>
-            </UnorderedList>
-          </Flex>
-          <Flex h="100%" alignSelf="flex-start" justify="center">
-            {" "}
             <Flex
+              w="100%"
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
               h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="25px"
             >
-              <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="30px"
-                width="30px"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
-              <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>
-            <Heading
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
-            >
-              20 Mins
-            </Heading>
-            <Flex alignSelf="center">
+              <Heading
+                w="fit-content"
+                display="flex"
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
+              >
+                10 Mins
+              </Heading>
               <UnorderedList
                 textTransform="uppercase"
+                alignSelf="center"
                 fontFamily="veralaRound"
                 fontSize="16px"
               >
-                <ListItem pb="10px">DRIVE TO REDHILLS</ListItem>
-                <ListItem pb="10px">PULICAT LAKE </ListItem>
-                <ListItem pb="10px">DRIVE TO GUMMIDIPOONDI SIPCOT</ListItem>
+                <ListItem pb="10px">CONNECT TO Outer Ring Road</ListItem>
+                <ListItem pb="10px">
+                  DRIVE TO Siruvapuri Murugan Temple{" "}
+                </ListItem>
+                <ListItem pb="10px">VELS Medical Hospital</ListItem>
               </UnorderedList>
             </Flex>
           </Flex>
@@ -441,48 +402,71 @@ const NinethSec = () => {
               align="center"
               px="25px"
             >
-              <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="30px"
-                width="30px"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
-              <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>
-            <Heading
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
-            >
-              30 Mins
-            </Heading>
-            <Flex alignSelf="center">
-              <UnorderedList
-                textTransform="uppercase"
-                fontFamily="veralaRound"
-                fontSize="16px"
+              {" "}
+              <Flex
+                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 4s"
+                h="100%"
+                direction="column"
+                justify="flex-start"
+                align="center"
               >
-                <ListItem pb="10px">DRIVE TO SRI CITY</ListItem>
-                <ListItem pb="10px">DRIVE TO ADANI PORT</ListItem>
-                <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
-              </UnorderedList>
+                <Divider
+                  h="25px"
+                  orientation="vertical"
+                  border="3px solid"
+                  borderColor="#DFBD69"
+                  bgColor="#DFBD69"
+                />
+                <Box
+                  height="30px"
+                  width="30px"
+                  backgroundColor="#DFBD69"
+                  border="3px solid white"
+                  boxShadow="0px 0px 0px 3px #B88746"
+                  borderRadius="50%"
+                  my="1"
+                />
+              </Flex>
+              <Divider
+                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 6s"
+                h="30px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>{" "}
+            <Flex
+              w="100%"
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 4s"
+              h="100%"
+            >
+              {" "}
+              <Heading
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
+              >
+                20 Mins
+              </Heading>
+              <Flex alignSelf="center">
+                <UnorderedList
+                  textTransform="uppercase"
+                  fontFamily="veralaRound"
+                  fontSize="16px"
+                >
+                  <ListItem pb="10px">DRIVE TO REDHILLS</ListItem>
+                  <ListItem pb="10px">PULICAT LAKE </ListItem>
+                  <ListItem pb="10px">DRIVE TO GUMMIDIPOONDI SIPCOT</ListItem>
+                </UnorderedList>
+              </Flex>
             </Flex>
           </Flex>
           <Flex h="100%" alignSelf="flex-start" justify="center">
@@ -494,49 +478,74 @@ const NinethSec = () => {
               align="center"
               px="25px"
             >
-              <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="30px"
-                width="30px"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
-              <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>
-            <Heading
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
-            >
-              40 Mins
-            </Heading>
-            <Flex alignSelf="center">
-              <UnorderedList
-                textTransform="uppercase"
-                fontFamily="veralaRound"
-                fontSize="16px"
+              <Flex
+                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 6s"
+                h="100%"
+                direction="column"
+                justify="flex-start"
+                align="center"
               >
-                <ListItem pb="10px">DRIVE TO CHENNAI AIRPORT</ListItem>
-              </UnorderedList>
+                <Divider
+                  h="40px"
+                  orientation="vertical"
+                  border="3px solid"
+                  borderColor="#DFBD69"
+                  bgColor="#DFBD69"
+                />
+                <Box
+                  height="30px"
+                  width="30px"
+                  backgroundColor="#DFBD69"
+                  border="3px solid white"
+                  boxShadow="0px 0px 0px 3px #B88746"
+                  borderRadius="50%"
+                  my="1"
+                />
+              </Flex>
+              <Divider
+                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 8s"
+                h="40px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>{" "}
+            <Flex
+              w="100%"
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 6s"
+              h="100%"
+            >
+              <Heading
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
+              >
+                30 Mins
+              </Heading>
+              <Flex alignSelf="center">
+                <UnorderedList
+                  textTransform="uppercase"
+                  fontFamily="veralaRound"
+                  fontSize="16px"
+                >
+                  <ListItem pb="10px">DRIVE TO SRI CITY</ListItem>
+                  <ListItem pb="10px">DRIVE TO ADANI PORT</ListItem>
+                  <ListItem pb="10px">
+                    DRIVE TO Ponneri Railway Station
+                  </ListItem>
+                </UnorderedList>
+              </Flex>
             </Flex>
           </Flex>
-          <Flex h="100%" alignSelf="flex-start" justify="center">
+          <Flex w="100%" h="100%" align="center" justify="space-between">
             {" "}
             <Flex
               h="100%"
@@ -545,8 +554,86 @@ const NinethSec = () => {
               align="center"
               px="25px"
             >
+              <Flex
+                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 8s"
+                h="100%"
+                direction="column"
+                justify="flex-start"
+                align="center"
+              >
+                <Divider
+                  h="10px"
+                  orientation="vertical"
+                  border="3px solid"
+                  borderColor="#DFBD69"
+                  bgColor="#DFBD69"
+                />
+                <Box
+                  height="30px"
+                  width="30px"
+                  backgroundColor="#DFBD69"
+                  border="3px solid white"
+                  boxShadow="0px 0px 0px 3px #B88746"
+                  borderRadius="50%"
+                  my="1"
+                />
+              </Flex>
               <Divider
-                h="50px"
+                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 10s"
+                h="10px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>{" "}
+            <Flex
+              w="100%"
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 8s"
+              h="100%"
+              align="center"
+              justify="flex-start"
+            >
+              <Heading
+                h="100%"
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
+              >
+                40 Mins
+              </Heading>
+              <Flex w="100%" h="100%" alignSelf="center">
+                <UnorderedList
+                  textTransform="uppercase"
+                  fontFamily="veralaRound"
+                  fontSize="16px"
+                >
+                  <ListItem pb="10px">DRIVE TO CHENNAI AIRPORT</ListItem>
+                </UnorderedList>
+              </Flex>
+            </Flex>
+          </Flex>
+          <Flex w="100%" h="100%" align="center" justify="space-between">
+            {" "}
+            <Flex
+              transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 10s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="25px"
+            >
+              <Divider
+                h="10px"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -561,23 +648,31 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-            </Flex>
-            <Heading
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
+            </Flex>{" "}
+            <Flex
+              w="100%"
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 10s"
+              h="100%"
             >
-              2 Hours
-            </Heading>
-            <Flex alignSelf="center">
-              <UnorderedList
-                textTransform="uppercase"
-                fontFamily="veralaRound"
-                fontSize="16px"
+              <Heading
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
               >
-                <ListItem pb="10px">DRIVE TO TIRUPATI</ListItem>
-              </UnorderedList>
+                2 Hours
+              </Heading>
+              <Flex alignSelf="center">
+                <UnorderedList
+                  textTransform="uppercase"
+                  fontFamily="veralaRound"
+                  fontSize="16px"
+                >
+                  <ListItem pb="10px">DRIVE TO TIRUPATI</ListItem>
+                </UnorderedList>
+              </Flex>
             </Flex>
           </Flex>
         </Flex>
