@@ -9,6 +9,8 @@ import {
   Box,
   UnorderedList,
   ListItem,
+  Image,
+  VStack,
 } from "@chakra-ui/react";
 import { ImLocation } from "react-icons/im";
 import { useInView } from "framer-motion";
@@ -77,8 +79,138 @@ const NinethSec = () => {
               src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             ></iframe>
           </Flex>
-          <Flex w="100%" h="100%" mb="20px">
-            icons
+          <Flex
+            w="100%"
+            h="100%"
+            mb="20px"
+            align="flex-start"
+            justify="space-between"
+          >
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/TEMPLES.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                TEMPLES
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/HOSPITAL.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                HOSPITALS
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/INSTITUTES.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px" textAlign="center">
+                EDUCATIONAL <br />
+                INSTITUTES
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/SOCIAL FABRIC.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                SOCIAL
+                <br /> FABRIC
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/INDUSTRY.svg"
+                />
+              </Box>
+              <Heading textAlign="center" fontFamily="avenir" fontSize="14px">
+                INDUSTRIAL <br />
+                PARKS
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image w="30px" h="30px" src="/images/arete-homes/PORT.svg" />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                PORTS
+              </Heading>
+            </VStack>
           </Flex>
           <Flex w="100%" h="100%">
             <Button
