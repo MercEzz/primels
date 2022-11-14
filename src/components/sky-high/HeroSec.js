@@ -1,5 +1,4 @@
 import { Box, Flex, Image, IconButton, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Slider from "react-slick";
 
