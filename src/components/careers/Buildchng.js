@@ -5,37 +5,103 @@ import {
   useAnimation,
   useInView,
 } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const MtnFlx = motion(Flex);
 const MtnImg = motion(Image);
 const MtnHead = motion(Heading);
 
 const Buildchng = () => {
+  const [currImg,setCurrImg] = useState(null);
+  const [currSrc,setCurrSrc] = useState(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const pRef = useRef(null);
+  const pIsInView = useInView(pRef, { once: true });
+  const rRef = useRef(null);
+  const rIsInView = useInView(rRef, { once: true });
+  const iRef = useRef(null);
+  const iIsInView = useInView(iRef, { once: true });
+  const mRef = useRef(null);
+  const mIsInView = useInView(mRef, { once: true });
+  const eRef = useRef(null);
+  const eIsInView = useInView(eRef, { once: true });
   const animationImg = useAnimation();
+  const imgData=[
+    {src:"/images/careers/problem solving.jpg"},
+    {src:"/images/careers/reliability.jpg"},
+    {src:"/images/careers/innovation.jpg"},
+    {src:"/images/careers/management.jpg"},
+    {src:"/images/careers/engagement.jpg"},
+    ]
   const animationHead = useAnimation();
   const animationDvd = useAnimation();
   const animationLtr = useAnimation();
   const animationRightTxt = useAnimation();
-
   useEffect(() => {
+    console.log(isInView);
     if (isInView) {
       animationHead.start({ opacity: 1, y: 0 });
-      animationImg.start({ scale: 1, opacity: 1 });
       animationDvd.start({ opacity: 1, y: 0 });
       animationLtr.start({ opacity: 1, x: 0 });
       animationRightTxt.start({ opacity: 1, x: 0 });
     }
+
   }, [
     isInView,
-    animationHead,
-    animationImg,
-    animationDvd,
-    animationLtr,
-    animationRightTxt,
   ]);
+  useEffect(() => {
+    animationImg.start({ scale: 1, opacity: 1 });
+  }, [
+    currImg,
+  ]);
+  useEffect(() => {
+    if (pIsInView) {
+      console.log('p is visible')
+      setCurrImg(0);
+      setCurrSrc(imgData[0].src);
+    }
+  }, [
+    pIsInView,
+  ]);
+  useEffect(() => {
+    if (rIsInView) {
+      console.log('r is visible')
+      setCurrImg(1);
+      setCurrSrc(imgData[1].src);
+    }
+  }, [
+    rIsInView,
+  ]);
+  useEffect(() => {
+    if (iIsInView) {
+      console.log('i is visible')
+      setCurrImg(2);
+      setCurrSrc(imgData[2].src);
+    }
+  }, [
+    iIsInView,
+  ]);
+  useEffect(() => {
+    if (mIsInView) {
+      console.log('m is visible')
+      setCurrImg(3);
+      setCurrSrc(imgData[3].src);
+    }
+  }, [
+    mIsInView,
+  ]);
+  useEffect(() => {
+    if (eIsInView) {
+      console.log('e is visible')
+      
+      setCurrImg(4);
+      setCurrSrc(imgData[4].src);
+    }
+  }, [
+    eIsInView,
+  ]);
+
   return (
     <AnimatePresence>
       <Flex
@@ -45,7 +111,7 @@ const Buildchng = () => {
         h="100%"
         align="center"
         justify="center"
-      >
+        overflow="hidden">
         <MtnHead
           initial={{ opacity: 0, y: -50 }}
           animate={animationHead}
@@ -65,70 +131,18 @@ const Buildchng = () => {
           pos="relative"
         >
           <Flex w="60%" h="100%" direction="column" align="center">
-            <MtnImg
-              initial={{ scale: 0.5 }}
+            {currImg?<MtnImg
+              initial={{scale: 0.5, opacity: 0}}
               animate={animationImg}
-              transition={{ delay: 1, duration: 2, type: "just" }}
-              w="55%"
-              h="75%"
-              pos="absolute"
-              top="0"
-              left="0"
-              src="/images/careers/problem solving.jpg"
+              transition={{duration: 2, type: "just" }}
+              w="500px"
+              h="500px"
+              top="30rem"
+              left="1rem"
+              right="1rem"
+              src={currSrc}
               objectFit="cover"
-            />
-            <MtnImg
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={animationImg}
-              transition={{ delay: 3.5, duration: 2, type: "just" }}
-              pos="absolute"
-              w="55%"
-              h="75%"
-              top="0"
-              left="0"
-              objectFit="cover"
-              src="/images/careers/reliability.jpg"
-              zIndex="2"
-            />
-            <MtnImg
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={animationImg}
-              transition={{ delay: 5, duration: 2, type: "just" }}
-              pos="absolute"
-              w="55%"
-              h="75%"
-              top="0"
-              left="0"
-              objectFit="cover"
-              src="/images/careers/innovation.jpg"
-              zIndex="3"
-            />
-            <MtnImg
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={animationImg}
-              transition={{ delay: 8, duration: 2, type: "just" }}
-              pos="absolute"
-              w="55%"
-              h="75%"
-              top="0"
-              left="0"
-              objectFit="cover"
-              src="/images/careers/management.jpg"
-              zIndex="4"
-            />
-            <MtnImg
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={animationImg}
-              transition={{ delay: 10, duration: 2, type: "just" }}
-              pos="absolute"
-              w="55%"
-              h="75%"
-              top="0"
-              left="0"
-              objectFit="cover"
-              src="/images/careers/engagement.jpg"
-              zIndex="5"
-            />
+            />:<img />}
           </Flex>
           <Flex
             direction="column"
@@ -164,6 +178,7 @@ const Buildchng = () => {
 
             <Flex direction="row" align="center" justify="center" py="25px">
               <MtnHead
+                ref={pRef}
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
                 transition={{ delay: 1, duration: 2, type: "just" }}
@@ -196,6 +211,7 @@ const Buildchng = () => {
             </Flex>
             <Flex direction="row" align="center" justify="center" pb="25px">
               <MtnHead
+                ref={rRef}
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
                 transition={{ delay: 3.5, duration: 2, type: "just" }}
@@ -224,6 +240,7 @@ const Buildchng = () => {
             </Flex>
             <Flex direction="row" align="center" justify="center" pb="25px">
               <MtnHead
+                ref={iRef}
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
                 transition={{ delay: 5, duration: 2, type: "just" }}
@@ -253,6 +270,7 @@ const Buildchng = () => {
             </Flex>
             <Flex direction="row" align="center" justify="center" pb="25px">
               <MtnHead
+                ref={mRef}
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
                 transition={{ delay: 7.5, duration: 2, type: "just" }}
@@ -282,6 +300,7 @@ const Buildchng = () => {
             </Flex>
             <Flex direction="row" align="center" justify="center">
               <MtnHead
+                ref={eRef}
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
                 transition={{ delay: 10, duration: 2, type: "just" }}
