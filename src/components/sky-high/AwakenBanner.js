@@ -1,26 +1,15 @@
 import { Box, Flex, Image, IconButton, Text } from "@chakra-ui/react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import React, { useState } from "react";
-import { useEffect } from "react";
+
 import { useRef } from "react";
 import Slider from "react-slick";
-
-const MtnBx = motion(Box);
 
 const SeventhSec = () => {
   const [slider, setSlider] = useState(null);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const animateScale = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      animateScale.start({
-        scale: 1,
-      });
-    }
-  }, [isInView, animateScale]);
 
   const settings = {
     draggable: false,
@@ -36,10 +25,10 @@ const SeventhSec = () => {
 
   return (
     <Flex ref={ref} w="100%" h="100vh">
-      <MtnBx
-        initial={{ scale: 0.6 }}
-        animate={animateScale}
-        transition={{ duration: 2, type: "just" }}
+      <Box
+        transform={isInView ? "scale(1)" : "scale(0.6)"}
+        transition="all 2s"
+        opacity={isInView ? "1" : "0"}
         position={"relative"}
         height={"100%"}
         width={"100%"}
@@ -116,7 +105,7 @@ const SeventhSec = () => {
         >
           <Text>02</Text>
         </IconButton>
-      </MtnBx>{" "}
+      </Box>{" "}
     </Flex>
   );
 };

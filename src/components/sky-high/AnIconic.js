@@ -6,42 +6,15 @@ import {
   Divider,
   Text,
 } from "@chakra-ui/react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import React, { useState } from "react";
-import { useEffect } from "react";
+
 import { useRef } from "react";
 import Slider from "react-slick";
 
-const MtnFlx = motion(Flex);
-
-const MtnHead = motion(Heading);
-const MtnTxt = motion(Text);
-
 const SecondSec = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {
-    once: true,
-    margin: "0px 100px -50px 0px",
-  });
-  const animateX = useAnimation();
-  const animateY = useAnimation();
-  const animateFade = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      animateX.start({
-        opacity: 1,
-        x: 0,
-      });
-      animateY.start({
-        opacity: 1,
-        y: 0,
-      });
-      animateFade.start({
-        opacity: 1,
-      });
-    }
-  }, [isInView, animateX, animateY, animateFade]);
+  const isInView = useInView(ref, { once: true });
 
   const [slider, setSlider] = useState(null);
   const settings = {
@@ -65,10 +38,10 @@ const SecondSec = () => {
       justify="center"
       py="100px"
     >
-      <MtnHead
-        initial={{ y: -100, opacity: 0 }}
-        animate={animateY}
-        transition={{ duration: 2, type: "just" }}
+      <Heading
+        transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         fontFamily="goudy"
         fontSize="40px"
         fontWeight="400"
@@ -78,16 +51,19 @@ const SecondSec = () => {
       >
         An iconic dwell of <br />
         sky high residences and retail spaces
-      </MtnHead>
+      </Heading>
       <Flex px="100px" w="100%" h="100%" align="center" justify="center">
-        <MtnFlx
-          initial={{ x: -100, opacity: 0 }}
-          animate={animateX}
-          transition={{ delay: 1.5, duration: 2, type: "just" }}
+        <Flex
+          transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+          opacity={isInView ? "1" : "0"}
+          transition="all 2s"
           w="100%"
           h="100%"
         >
           <Box
+            transform={isInView ? "translateX(0)" : "translateX(-100px)"}
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 2s"
             position={"relative"}
             height={"568px"}
             width={"600px"}
@@ -165,14 +141,14 @@ const SecondSec = () => {
             >
               {/* <Text>02</Text> */}
             </IconButton>
-          </Box>{" "}
-        </MtnFlx>
+          </Box>
+        </Flex>
 
         <Flex h="100%" alignSelf="flex-start">
-          <MtnFlx
-            initial={{ opacity: 0, y: -100 }}
-            animate={animateY}
-            transition={{ delay: 1.5, duration: 2, type: "just" }}
+          <Flex
+            transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 2s"
             direction="column"
             align="center"
             px="25px"
@@ -183,7 +159,7 @@ const SecondSec = () => {
               borderColor="#DFBD69"
               bgColor="#DFBD69"
               h="84px"
-            />{" "}
+            />
             <Box
               height="30px"
               width="30px"
@@ -192,13 +168,12 @@ const SecondSec = () => {
               boxShadow="0px 0px 0px 3px #B88746"
               borderRadius="50%"
             />
-          </MtnFlx>
+          </Flex>
         </Flex>
         <Flex w="100%" h="100%" direction="column" alignSelf="center">
-          <MtnTxt
-            initial={{ opacity: 0 }}
-            animate={animateFade}
-            transition={{ delay: 1.5, duration: 2, type: "just" }}
+          <Text
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 2s"
             mb="15px"
             fontFamily="veralaRound"
             fontSize="16px"
@@ -206,11 +181,10 @@ const SecondSec = () => {
             THE ULTIMATE ADDRESS: Experience the breathtaking views of Chennai's
             stunning skyline from Arete Homes SKY HIGH Tower the top 20th floor.
             A new world of luxury has taken shape in North Chennai, Ponneri.{" "}
-          </MtnTxt>
-          <MtnFlx
-            initial={{ opacity: 0 }}
-            animate={animateFade}
-            transition={{ delay: 3, duration: 2, type: "just" }}
+          </Text>
+          <Flex
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 4s"
             w="271px"
             borderRadius="10px"
             bgColor="#DFBD69"
@@ -220,11 +194,10 @@ const SecondSec = () => {
             <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
               18 STOREY’S TALL
             </Text>
-          </MtnFlx>
-          <MtnFlx
-            initial={{ opacity: 0 }}
-            animate={animateFade}
-            transition={{ delay: 4.5, duration: 2, type: "just" }}
+          </Flex>
+          <Flex
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 6s"
             w="271px"
             borderRadius="10px"
             bgColor="#DFBD69"
@@ -234,11 +207,10 @@ const SecondSec = () => {
             <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
               2 TOWER LOBBIES
             </Text>
-          </MtnFlx>
-          <MtnFlx
-            initial={{ opacity: 0 }}
-            animate={animateFade}
-            transition={{ delay: 6, duration: 2, type: "just" }}
+          </Flex>
+          <Flex
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 8s"
             w="271px"
             borderRadius="10px"
             bgColor="#DFBD69"
@@ -248,11 +220,10 @@ const SecondSec = () => {
             <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
               4 ELEVATORS
             </Text>
-          </MtnFlx>
-          <MtnFlx
-            initial={{ opacity: 0 }}
-            animate={animateFade}
-            transition={{ delay: 7.5, duration: 2, type: "just" }}
+          </Flex>
+          <Flex
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 10s"
             w="271px"
             borderRadius="10px"
             bgColor="#DFBD69"
@@ -261,7 +232,7 @@ const SecondSec = () => {
             <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
               20 RETAIL SHOPS
             </Text>
-          </MtnFlx>
+          </Flex>
         </Flex>
       </Flex>
     </Flex>

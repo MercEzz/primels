@@ -3,28 +3,12 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect } from "react";
 import { useRef } from "react";
 
-const MtnImg = motion(Image);
-
 const ThirdSec = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
-    margin: "0px 100px -50px 0px",
   });
-  const animateX = useAnimation();
-  const animateScale = useAnimation();
 
-  useEffect(() => {
-    if (isInView) {
-      animateX.start({
-        x: 0,
-        opacity: 1,
-      });
-      animateScale.start({
-        scale: 1,
-      });
-    }
-  });
   return (
     <Flex
       ref={ref}
@@ -34,10 +18,10 @@ const ThirdSec = () => {
       justify="center"
       pos="relative"
     >
-      <MtnImg
-        initial={{ scale: 0.6 }}
-        animate={animateScale}
-        transition={{ duration: 2, type: "just" }}
+      <Image
+        transform={isInView ? "scale(1)" : "scale(0.6)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         w="100%"
         h="100%"
         src="/images/sky-high/3RD SECTION.jpg"
@@ -45,10 +29,10 @@ const ThirdSec = () => {
         bgRepeat="no-repeat"
         objectFit="cover"
       />
-      <MtnImg
-        initial={{ x: 100, opacity: 0 }}
-        animate={animateX}
-        transition={{ duration: 2, type: "just" }}
+      <Image
+        transform={isInView ? "none" : "translateX(-100px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         h="200px"
         src="/images/sky-high/3RD SECTION ASSET.png"
         pos="absolute"
