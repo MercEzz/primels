@@ -17,7 +17,10 @@ import { ImLocation } from "react-icons/im";
 
 const NinethSec = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
 
   return (
     <Flex
@@ -65,7 +68,7 @@ const NinethSec = () => {
           <Flex
             transform={isInView ? "scale(1)" : "scale(0.6)"}
             opacity={isInView ? "1" : "0"}
-            transition="all 2s 2s"
+            transition="all 2s 1s"
             w="100%"
             h="100%"
             mb="15px"
@@ -83,7 +86,7 @@ const NinethSec = () => {
           </Flex>
           <Flex
             opacity={isInView ? "1" : "0"}
-            transition="all 2s 4s"
+            transition="all 2s 2s"
             w="100%"
             h="100%"
             mb="20px"
@@ -220,7 +223,7 @@ const NinethSec = () => {
             <Button
               transform={isInView ? "none" : "translateY(-50px)"}
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 2s"
+              transition="all 2s 1s"
               w="100%"
               h="51px"
               fontSize="16px"
@@ -247,7 +250,148 @@ const NinethSec = () => {
             <Flex
               transform={isInView ? "none" : "translateY(-50px)"}
               opacity={isInView ? "1" : "0"}
+              transition="all 2s 1s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="25px"
+            >
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="30px"
+                width="30px"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+              <Divider
+                transform={isInView ? "none" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 2s"
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Flex
+              transform={isInView ? "none" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 1s"
+              w="100%"
+            >
+              <Heading
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
+              >
+                5 Mins
+              </Heading>
+              <UnorderedList
+                alignSelf="center"
+                textTransform="uppercase"
+                fontFamily="veralaRound"
+                fontSize="16px"
+              >
+                <ListItem pb="10px">
+                  Walk to Velammal International School{" "}
+                </ListItem>
+                <ListItem pb="10px">DRIVE TO Origin by Mahindra </ListItem>
+                <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
+              </UnorderedList>
+            </Flex>
+          </Flex>
+          <Flex
+            w="100%"
+            h="100%"
+            alignSelf="flex-start"
+            justify="space-between"
+          >
+            {" "}
+            <Flex
+              transform={isInView ? "none" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
               transition="all 2s 2s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="25px"
+            >
+              <Divider
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="30px"
+                width="30px"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+              <Divider
+                transform={isInView ? "none" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 3s"
+                h="50px"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Flex
+              transform={isInView ? "none" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
+              w="100%"
+            >
+              <Heading
+                w="fit-content"
+                display="flex"
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
+              >
+                10 Mins
+              </Heading>
+              <UnorderedList
+                textTransform="uppercase"
+                alignSelf="center"
+                fontFamily="veralaRound"
+                fontSize="16px"
+              >
+                <ListItem pb="10px">CONNECT TO Outer Ring Road</ListItem>
+                <ListItem pb="10px">
+                  DRIVE TO Siruvapuri Murugan Temple{" "}
+                </ListItem>
+                <ListItem pb="10px">VELS Medical Hospital</ListItem>
+              </UnorderedList>
+            </Flex>
+          </Flex>
+          <Flex h="100%" alignSelf="flex-start" justify="center">
+            {" "}
+            <Flex
+              transform={isInView ? "none" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 3s"
               h="100%"
               direction="column"
               justify="flex-start"
@@ -284,148 +428,7 @@ const NinethSec = () => {
             <Flex
               transform={isInView ? "none" : "translateX(-50px)"}
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 2s"
-              w="100%"
-            >
-              <Heading
-                alignSelf="center"
-                fontFamily="avenir"
-                fontSize="20px"
-                mr="25px"
-              >
-                5 Mins
-              </Heading>
-              <UnorderedList
-                alignSelf="center"
-                textTransform="uppercase"
-                fontFamily="veralaRound"
-                fontSize="16px"
-              >
-                <ListItem pb="10px">
-                  Walk to Velammal International School{" "}
-                </ListItem>
-                <ListItem pb="10px">DRIVE TO Origin by Mahindra </ListItem>
-                <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
-              </UnorderedList>
-            </Flex>
-          </Flex>
-          <Flex
-            w="100%"
-            h="100%"
-            alignSelf="flex-start"
-            justify="space-between"
-          >
-            {" "}
-            <Flex
-              transform={isInView ? "none" : "translateY(-50px)"}
-              opacity={isInView ? "1" : "0"}
-              transition="all 2s 4s"
-              h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="25px"
-            >
-              <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="30px"
-                width="30px"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
-              <Divider
-                transform={isInView ? "none" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s 6s"
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>
-            <Flex
-              transform={isInView ? "none" : "translateX(-50px)"}
-              opacity={isInView ? "1" : "0"}
-              transition="all 2s 4s"
-              w="100%"
-            >
-              <Heading
-                w="fit-content"
-                display="flex"
-                alignSelf="center"
-                fontFamily="avenir"
-                fontSize="20px"
-                mr="25px"
-              >
-                10 Mins
-              </Heading>
-              <UnorderedList
-                textTransform="uppercase"
-                alignSelf="center"
-                fontFamily="veralaRound"
-                fontSize="16px"
-              >
-                <ListItem pb="10px">CONNECT TO Outer Ring Road</ListItem>
-                <ListItem pb="10px">
-                  DRIVE TO Siruvapuri Murugan Temple{" "}
-                </ListItem>
-                <ListItem pb="10px">VELS Medical Hospital</ListItem>
-              </UnorderedList>
-            </Flex>
-          </Flex>
-          <Flex h="100%" alignSelf="flex-start" justify="center">
-            {" "}
-            <Flex
-              transform={isInView ? "none" : "translateY(-50px)"}
-              opacity={isInView ? "1" : "0"}
-              transition="all 2s 6s"
-              h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="25px"
-            >
-              <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="30px"
-                width="30px"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
-              <Divider
-                transform={isInView ? "none" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s 8s"
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>
-            <Flex
-              transform={isInView ? "none" : "translateX(-50px)"}
-              opacity={isInView ? "1" : "0"}
-              transition="all 2s 6s"
+              transition="all 2s 3s"
               w="100%"
             >
               <Heading
@@ -454,7 +457,7 @@ const NinethSec = () => {
             <Flex
               transform={isInView ? "none" : "translateY(-50px)"}
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 8s"
+              transition="all 2s 4s"
               h="100%"
               direction="column"
               justify="flex-start"
@@ -480,7 +483,7 @@ const NinethSec = () => {
               <Divider
                 transform={isInView ? "none" : "translateY(-50px)"}
                 opacity={isInView ? "1" : "0"}
-                transition="all 2s 10s"
+                transition="all 2s 5s"
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
@@ -491,7 +494,7 @@ const NinethSec = () => {
             <Flex
               transform={isInView ? "none" : "translateX(-50px)"}
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 8s"
+              transition="all 2s 4s"
               w="100%"
             >
               <Heading
@@ -523,7 +526,7 @@ const NinethSec = () => {
               h="100%"
               transform={isInView ? "none" : "translateY(-50px)"}
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 10s"
+              transition="all 2s 5s"
               direction="column"
               justify="flex-start"
               align="center"
@@ -548,7 +551,7 @@ const NinethSec = () => {
               <Divider
                 transform={isInView ? "none" : "translateY(-50px)"}
                 opacity={isInView ? "1" : "0"}
-                transition="all 2s 12s"
+                transition="all 2s 6s"
                 // h="50px"
                 orientation="vertical"
                 border="3px solid"
@@ -560,7 +563,7 @@ const NinethSec = () => {
               w="100%"
               transform={isInView ? "none" : "translateX(-50px)"}
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 10s"
+              transition="all 2s 5s"
             >
               <Heading
                 alignSelf="center"
@@ -586,7 +589,7 @@ const NinethSec = () => {
             <Flex
               transform={isInView ? "none" : "translateY(-50px)"}
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 12s"
+              transition="all 2s 6s"
               h="100%"
               direction="column"
               justify="flex-start"
@@ -614,7 +617,7 @@ const NinethSec = () => {
               w="100%"
               transform={isInView ? "none" : "translateX(-50px)"}
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 12s"
+              transition="all 2s 6s"
             >
               <Heading
                 alignSelf="center"

@@ -45,7 +45,7 @@ const EightSec = () => {
       </Text>
       <Heading
         opacity={isInView ? "1" : "0"}
-        transition="all 2s 2s"
+        transition="all 2s 1s"
         fontFamily="avenir"
         fontSize="34px"
         lineHeight="48px"
@@ -55,7 +55,7 @@ const EightSec = () => {
       </Heading>
       <Text
         opacity={isInView ? "1" : "0"}
-        transition="all 2s 2s"
+        transition="all 2s 1s"
         fontFamily="veralaRound"
         fontSize="16px"
         pb="25px"
@@ -71,7 +71,7 @@ const EightSec = () => {
           <Image
             transform={isInView ? "none" : "translateX(-100px)"}
             opacity={isInView ? "1" : "0"}
-            transition="all 2s 4s"
+            transition="all 2s 2s"
             w="100%"
             src="/images/sky-high/FLOOR PLAN1.jpg"
           />
@@ -80,7 +80,7 @@ const EightSec = () => {
           <Image
             transform={isInView ? "none" : "translateX(100px)"}
             opacity={isInView ? "1" : "0"}
-            transition="all 2s 4s"
+            transition="all 2s 2s"
             w="100%"
             src="/images/sky-high/FLOOR PLAN2.jpg"
           />
@@ -88,7 +88,7 @@ const EightSec = () => {
       </Flex>
       <Flex
         opacity={isInView ? "1" : "0"}
-        transition="all 2s 6s"
+        transition="all 2s 3s"
         w="100%"
         h="100%"
         align="center"
@@ -198,7 +198,7 @@ const EightSec = () => {
         </Flex>
         <Button
           opacity={isInView ? "1" : "0"}
-          transition="all 2s 6s"
+          transition="all 2s 3s"
           w="151px"
           h="51px"
           fontSize="16px"
