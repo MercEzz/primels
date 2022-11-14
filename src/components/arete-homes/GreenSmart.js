@@ -29,6 +29,7 @@ const SixthSec = () => {
       <Text
         ref={ref}
         transform={isInView ? "none" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
         fontSize="40px"
