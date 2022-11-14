@@ -14,7 +14,10 @@ import Slider from "react-slick";
 
 const SecondSec = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
 
   const [slider, setSlider] = useState(null);
   const settings = {

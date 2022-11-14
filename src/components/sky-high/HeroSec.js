@@ -19,7 +19,7 @@ const FirstSec = () => {
   };
   setTimeout(() => {
     setIsinView(true);
-  }, 2000);
+  }, 1000);
   return (
     <Flex ref={ref} w="100%" h="100vh">
       <Box
