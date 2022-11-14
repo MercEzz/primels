@@ -19,7 +19,10 @@ import { useInView } from "framer-motion";
 
 const TenthSec = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
 
   return (
     <Flex
@@ -44,7 +47,7 @@ const TenthSec = () => {
       </Text>
       <Heading
         opacity={isInView ? "1" : "0"}
-        transition="all 2s 2s"
+        transition="all 2s 1s"
         fontFamily="avenir"
         fontSize="34px"
         textAlign="center"
@@ -56,7 +59,7 @@ const TenthSec = () => {
         <Flex
           transform={isInView ? "none" : "translateX(50px)"}
           opacity={isInView ? "1" : "0"}
-          transition="all 2s 4s"
+          transition="all 2s 2s"
           w="100%"
           h="100%"
           pos="relative"
@@ -81,7 +84,7 @@ const TenthSec = () => {
           <Flex
             transform={isInView ? "none" : "translateY(-50px)"}
             opacity={isInView ? "1" : "0"}
-            transition="all 2s 4s"
+            transition="all 2s 2s"
             h="100%"
             direction="column"
             justify="flex-start"
@@ -109,7 +112,7 @@ const TenthSec = () => {
             <Heading
               transform={isInView ? "none" : "translateX(-50px)"}
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 4s"
+              transition="all 2s 2s"
               w="100%"
               fontSize="24px"
               textAlign="left"
@@ -120,7 +123,7 @@ const TenthSec = () => {
             </Heading>
             <Flex
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 4s"
+              transition="all 2s 2s"
               mb="25px"
               alignSelf="flex-start"
             >
@@ -193,7 +196,7 @@ const TenthSec = () => {
             </Flex>
             <Flex
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 6s"
+              transition="all 2s 3s"
               w="100%"
               align="center"
               direction="column"
