@@ -10,8 +10,12 @@ import {
 } from "@chakra-ui/react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const NinethSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const [slider, setSlider] = useState(null);
 
   const settings = {
@@ -26,6 +30,7 @@ const NinethSec = () => {
 
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       px="25px"
@@ -37,10 +42,25 @@ const NinethSec = () => {
       justify="center"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
-      <Text fontFamily="goudy" fontSize="40px" lineHeight="48px">
+      <Text
+        transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
+        fontFamily="goudy"
+        fontSize="40px"
+        lineHeight="48px"
+      >
         SMART HOMES
       </Text>
-      <Heading fontFamily="avenir" fontSize="34px" lineHeight="48px" py="25px">
+      <Heading
+        transform={isInView ? "translateY(0)" : "translateY(50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
+        fontFamily="avenir"
+        fontSize="34px"
+        lineHeight="48px"
+        py="25px"
+      >
         BUY . RENT . INVEST .
       </Heading>
       <Text fontFamily="veralaRound" fontSize="18px" pb="25px">
@@ -126,6 +146,8 @@ const NinethSec = () => {
         </IconButton>
       </Box>
       <Button
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         w="146px"
         h="51px"
         mt="25px"
@@ -153,7 +175,7 @@ const primeEvents = [
   "/images/arete-homes/SMART HOME6.jpg",
   "/images/arete-homes/SMART HOME7.jpg",
   "/images/arete-homes/SMART HOME8.jpg",
-  "/images/arete-homes/SMART HOME9.jpg",
+  "/images/arete-homes/SMART HOME9.jpeg",
 ];
 
 export default NinethSec;

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React from "react";
+import React, { useRef } from "react";
 import {
   Flex,
   Heading,
@@ -11,10 +11,14 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 import { ImLocation } from "react-icons/im";
+import { useInView } from "framer-motion";
 
 const NinethSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       px="100px"
@@ -25,6 +29,9 @@ const NinethSec = () => {
       justify="center"
     >
       <Text
+        transform={isInView ? "translate(0)" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         fontFamily="goudy"
         fontSize="40px"
         lineHeight="48px"
@@ -33,6 +40,9 @@ const NinethSec = () => {
         LOCATION ADVANTAGE
       </Text>
       <Heading
+        transform={isInView ? "translate(0)" : "translateY(50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         fontFamily="avenir"
         fontSize="34px"
         lineHeight="48px"
@@ -49,7 +59,13 @@ const NinethSec = () => {
           align="center"
           justify="center"
         >
-          <Flex w="100%" h="100%" mb="15px">
+          <Flex
+            transform={isInView ? "scale(1)" : "scale(0.6)"}
+            transition="all 2s"
+            w="100%"
+            h="100%"
+            mb="15px"
+          >
             <iframe
               class="gmap_iframe"
               width="662"
@@ -96,22 +112,32 @@ const NinethSec = () => {
               align="center"
               px="25px"
             >
-              <Divider
-                h="50px"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="30px"
-                width="30px"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
+              {" "}
+              <Flex
+                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+                transition="all 2s"
+                h="100%"
+                direction="column"
+                justify="flex-start"
+                align="center"
+              >
+                <Divider
+                  h="50px"
+                  orientation="vertical"
+                  border="3px solid"
+                  borderColor="#DFBD69"
+                  bgColor="#DFBD69"
+                />
+                <Box
+                  height="30px"
+                  width="30px"
+                  backgroundColor="#DFBD69"
+                  border="3px solid white"
+                  boxShadow="0px 0px 0px 3px #B88746"
+                  borderRadius="50%"
+                  my="1"
+                />
+              </Flex>
               <Divider
                 h="50px"
                 orientation="vertical"
