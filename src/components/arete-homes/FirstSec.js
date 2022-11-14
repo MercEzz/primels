@@ -24,7 +24,7 @@ const FirstSec = () => {
       <MtnBx
         initial={{ scale: 0.6 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 2, type: "just" }}
+        transition="all 2s"
         position={"relative"}
         height={"100%"}
         width={"100%"}

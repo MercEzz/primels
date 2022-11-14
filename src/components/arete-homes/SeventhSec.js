@@ -10,9 +10,7 @@ const SeventhSec = () => {
     // className: "center",
     centerMode: true,
     infinite: true,
-
     draggable: true,
-
     speed: 500,
     autoplaySpeed: 3000,
     pauseOnHover: false,

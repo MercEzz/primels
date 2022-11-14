@@ -145,15 +145,15 @@ const NinethSec = () => {
 };
 
 const primeEvents = [
-  "/images/ARETE HOMES/SMART HOME1.jpg",
-  "/images/ARETE HOMES/SMART HOME2.jpg",
-  "/images/ARETE HOMES/SMART HOME3.jpg",
-  "/images/ARETE HOMES/SMART HOME4.jpg",
-  "/images/ARETE HOMES/SMART HOME5.jpg",
-  "/images/ARETE HOMES/SMART HOME6.jpg",
-  "/images/ARETE HOMES/SMART HOME7.jpg",
-  "/images/ARETE HOMES/SMART HOME8.jpg",
-  "/images/ARETE HOMES/SMART HOME9.jpg",
+  "/images/arete-homes/SMART HOME1.jpg",
+  "/images/arete-homes/SMART HOME2.jpg",
+  "/images/arete-homes/SMART HOME3.jpg",
+  "/images/arete-homes/SMART HOME4.jpg",
+  "/images/arete-homes/SMART HOME5.jpg",
+  "/images/arete-homes/SMART HOME6.jpg",
+  "/images/arete-homes/SMART HOME7.jpg",
+  "/images/arete-homes/SMART HOME8.jpg",
+  "/images/arete-homes/SMART HOME9.jpg",
 ];
 
 export default NinethSec;

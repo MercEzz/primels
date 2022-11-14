@@ -22,7 +22,6 @@ const TenthSec = () => {
       w="100%"
       h="100%"
       my="50px"
-      px="100px"
       align="center"
       justify="center"
       direction="column"
@@ -34,16 +33,17 @@ const TenthSec = () => {
         RETURNS HIGHERN THAN YOUR IMAGINATION
       </Heading>
       <Flex w="100%" h="100%">
-        <Flex w="100%" h="100%">
+        <Flex w="100%">
           <Image
             // pos="absolute"
             h="568px"
-            w="707px"
+            w="100%"
             objectPosition="center top"
             objectFit="cover"
-            src="/images/ARETE HOMES/SMART INVEST.jpg"
+            src="/images/arete-homes/SMART INVEST.jpg"
           />
         </Flex>
+
         <Flex w="100%" h="100%">
           <Flex
             h="100%"
@@ -69,7 +69,13 @@ const TenthSec = () => {
               my="1"
             />
           </Flex>
-          <Flex w="100%" direction="column" align="center" justify="center">
+          <Flex
+            w="100%"
+            pr="100px"
+            direction="column"
+            align="center"
+            justify="center"
+          >
             <Heading
               w="100%"
               fontSize="24px"
@@ -79,7 +85,7 @@ const TenthSec = () => {
             >
               EARN HIGHEST RENTAL INCOME (ROI)
             </Heading>
-            <Flex mb="25px" alignSelf="flex-start">
+            <Flex w="100%" mb="25px" alignSelf="flex-start">
               <TableContainer>
                 <Table>
                   <Thead
