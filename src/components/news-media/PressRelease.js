@@ -155,7 +155,7 @@ const ImgBar = ({ slide }) => {
   if (slide > 0) {
     barFillWidth = slide * 16.666 + "%";
   }
-  console.log(barFillWidth);
+
   return (
     <Flex
       ml="1"

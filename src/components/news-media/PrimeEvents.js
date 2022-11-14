@@ -151,11 +151,9 @@ const ThirdSec = () => {
 
 const ImgBar = ({ slide }) => {
   let barFillWidth = "0%";
-  console.log(slide);
   if (slide > 0) {
     barFillWidth = slide * 10 + "%";
   }
-  console.log(barFillWidth);
   return (
     <Flex
       ml="1"
