@@ -19,6 +19,7 @@ const SixthSec = () => {
   const isInView = useInView(ref, { once: true });
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       direction="column"
@@ -27,7 +28,6 @@ const SixthSec = () => {
       px="100px"
     >
       <Text
-        ref={ref}
         transform={isInView ? "none" : "translateY(-50px)"}
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
@@ -39,9 +39,8 @@ const SixthSec = () => {
         GREEN SMART TOWNSHIP
       </Text>
       <Text
-        ref={ref}
         opacity={isInView ? "1" : "0"}
-        transition="all 2s"
+        transition="all 2s 1s"
         fontFamily="veralaRound"
         fontSize="16px"
       >
@@ -56,10 +55,8 @@ const SixthSec = () => {
       <Flex w="100%" h="100%">
         <Flex w="100%" h="100%">
           <Image
-            ref={ref}
             opacity={isInView ? "1" : "0"}
-            transition="all 2s"
-            transitionDelay="1.5s"
+            transition="all 2s 1s"
             fontFamily="veralaRound"
             w="100%"
             h="100%"
@@ -68,11 +65,9 @@ const SixthSec = () => {
         </Flex>
         <Flex w="100%" h="100%">
           <Flex
-            ref={ref}
             transform={isInView ? "none" : "translateY(-50px)"}
             opacity={isInView ? "1" : "0"}
-            transition="all 2s"
-            transitionDelay="1.5s"
+            transition="all 2s 1s"
             direction="column"
             align="center"
             px="25px"
@@ -97,10 +92,8 @@ const SixthSec = () => {
             <SimpleGrid w="100%" columns={{ base: 1, md: 2 }} spacing="15px">
               <Box pos="relative">
                 <Image
-                  ref={ref}
                   opacity={isInView ? "1" : "0"}
-                  transition="all 2s"
-                  transitionDelay="1.5s"
+                  transition="all 2s 1s"
                   h="150px"
                   w="100%"
                   objectFit="cover"
@@ -142,10 +135,8 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  ref={ref}
                   opacity={isInView ? "1" : "0"}
-                  transition="all 2s"
-                  transitionDelay="1.5s"
+                  transition="all 2s 1s"
                   h="150px"
                   w="100%"
                   objectFit="cover"
@@ -187,10 +178,8 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  ref={ref}
                   opacity={isInView ? "1" : "0"}
-                  transition="all 2s"
-                  transitionDelay="3s"
+                  transition="all 2s 2s"
                   h="150px"
                   w="100%"
                   objectFit="cover"
@@ -232,10 +221,8 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  ref={ref}
                   opacity={isInView ? "1" : "0"}
-                  transition="all 2s"
-                  transitionDelay="3s"
+                  transition="all 2s 2s"
                   h="150px"
                   w="100%"
                   objectFit="cover"
@@ -280,10 +267,8 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  ref={ref}
                   opacity={isInView ? "1" : "0"}
-                  transition="all 2s"
-                  transitionDelay="4.5s"
+                  transition="all 2s 3s"
                   h="150px"
                   w="100%"
                   objectFit="cover"
@@ -328,10 +313,8 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  ref={ref}
                   opacity={isInView ? "1" : "0"}
-                  transition="all 2s"
-                  transitionDelay="4.5s"
+                  transition="all 2s 3s"
                   h="150px"
                   w="100%"
                   objectFit="cover"
