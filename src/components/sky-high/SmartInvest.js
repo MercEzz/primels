@@ -14,35 +14,12 @@ import {
   Tbody,
   Td,
 } from "@chakra-ui/react";
-import React, { useEffect, useRef } from "react";
-import { useInView, useAnimation, motion } from "framer-motion";
-
-const MtnTxt = motion(Text);
-const MtnHd = motion(Heading);
-const MtnFlx = motion(Flex);
+import React, { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const TenthSec = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const animateY = useAnimation();
-  const animateX = useAnimation();
-  const animateFade = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      animateY.start({
-        y: 0,
-        opacity: 1,
-      });
-      animateX.start({
-        x: 0,
-        opacity: 1,
-      });
-      animateFade.start({
-        opacity: 1,
-      });
-    }
-  }, [isInView, animateY, animateX, animateFade]);
 
   return (
     <Flex
@@ -55,32 +32,31 @@ const TenthSec = () => {
       justify="center"
       direction="column"
     >
-      <MtnTxt
-        initial={{ y: -50, opacity: 0 }}
-        animate={animateY}
-        transition={{ duration: 2, type: "just" }}
+      <Text
+        transform={isInView ? "none" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         fontFamily="goudy"
         fontSize="40px"
         mb="25px"
       >
         SMART INVEST
-      </MtnTxt>
-      <MtnHd
-        initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 1.5, duration: 2, type: "just" }}
+      </Text>
+      <Heading
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 2s"
         fontFamily="avenir"
         fontSize="34px"
         textAlign="center"
         mb="50px"
       >
         AN EXCELLENT INVESTMENT OPPORTUNITY <br /> IN A LIFETIME GROWING ASSET
-      </MtnHd>
+      </Heading>
       <Flex w="100%" h="100%">
-        <MtnFlx
-          initial={{ x: 50, opacity: 0 }}
-          animate={animateX}
-          transition={{ delay: 3, duration: 2, type: "just" }}
+        <Flex
+          transform={isInView ? "none" : "translateX(50px)"}
+          opacity={isInView ? "1" : "0"}
+          transition="all 2s 4s"
           w="100%"
           h="100%"
           pos="relative"
@@ -100,12 +76,12 @@ const TenthSec = () => {
             right="15px"
             src="/images/sky-high/SMART INVEST ASSET.png"
           />
-        </MtnFlx>
+        </Flex>
         <Flex w="100%">
-          <MtnFlx
-            initial={{ y: -50, opacity: 0 }}
-            animate={animateY}
-            transition={{ delay: 3, duration: 2, type: "just" }}
+          <Flex
+            transform={isInView ? "none" : "translateY(-50px)"}
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 4s"
             h="100%"
             direction="column"
             justify="flex-start"
@@ -128,12 +104,12 @@ const TenthSec = () => {
               borderRadius="50%"
               my="1"
             />
-          </MtnFlx>
+          </Flex>
           <Flex direction="column" align="center" justify="center">
-            <MtnHd
-              initial={{ x: -50, opacity: 0 }}
-              animate={animateX}
-              transition={{ delay: 3, duration: 2, type: "just" }}
+            <Heading
+              transform={isInView ? "none" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 4s"
               w="100%"
               fontSize="24px"
               textAlign="left"
@@ -141,8 +117,13 @@ const TenthSec = () => {
               mb="25px"
             >
               EMI = RENT
-            </MtnHd>
-            <Flex mb="25px" alignSelf="flex-start">
+            </Heading>
+            <Flex
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 4s"
+              mb="25px"
+              alignSelf="flex-start"
+            >
               <TableContainer>
                 <Table>
                   <Thead
@@ -210,10 +191,9 @@ const TenthSec = () => {
                 </Table>
               </TableContainer>
             </Flex>
-            <MtnFlx
-              initial={{ opacity: 0 }}
-              animate={animateFade}
-              transition={{ delay: 4.5, duration: 2, type: "just" }}
+            <Flex
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 6s"
               w="100%"
               align="center"
               direction="column"
@@ -255,7 +235,7 @@ const TenthSec = () => {
               >
                 KNOW MORE
               </Button>
-            </MtnFlx>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

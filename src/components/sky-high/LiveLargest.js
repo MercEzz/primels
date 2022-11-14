@@ -50,6 +50,9 @@ const FifthSec = () => {
         LIVE LARGEST, SHOP LARGEST
       </Text>
       <Box
+        transform={isInView ? "none" : "translateX(100px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 2s"
         position={"relative"}
         height={"100%"}
         width={"full"}
@@ -71,9 +74,6 @@ const FifthSec = () => {
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {plazaImgs.map((prime) => (
             <Image
-              transform={isInView ? "none" : "translateX(100px)"}
-              opacity={isInView ? "1" : "0"}
-              transition="all 2s 2s"
               key={prime}
               w="100%"
               height="568px"

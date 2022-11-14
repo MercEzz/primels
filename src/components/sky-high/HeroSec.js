@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Slider from "react-slick";
 
-const MtnBx = motion(Box);
-
 const FirstSec = () => {
   const [slider, setSlider] = useState(null);
   const settings = {
@@ -21,10 +19,7 @@ const FirstSec = () => {
 
   return (
     <Flex w="100%" h="100vh">
-      <MtnBx
-        initial={{ scale: 0.6 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 2, type: "just" }}
+      <Box
         position={"relative"}
         height={"100%"}
         width={"100%"}
@@ -101,7 +96,7 @@ const FirstSec = () => {
         >
           <Text>02</Text>
         </IconButton>
-      </MtnBx>{" "}
+      </Box>{" "}
     </Flex>
   );
 };
