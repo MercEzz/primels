@@ -1,9 +1,11 @@
 import { Box, Flex, Image, IconButton, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Slider from "react-slick";
 
 const FirstSec = () => {
+  const ref = useRef(null);
   const [slider, setSlider] = useState(null);
+  const [isInView, setIsinView] = useState(false);
   const settings = {
     draggable: false,
     infinite: false,
@@ -15,10 +17,14 @@ const FirstSec = () => {
     slidesToScroll: 1,
     pauseOnHover: false,
   };
-
+  setTimeout(() => {
+    setIsinView(true);
+  }, 2000);
   return (
-    <Flex w="100%" h="100vh">
+    <Flex ref={ref} w="100%" h="100vh">
       <Box
+        transform={isInView ? "scale(1)" : "scale(0.6)"}
+        transition="all 2s"
         position={"relative"}
         height={"100%"}
         width={"100%"}
