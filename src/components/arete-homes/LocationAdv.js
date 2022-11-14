@@ -115,6 +115,8 @@ const NinethSec = () => {
               {" "}
               <Flex
                 transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transitionDelay="2s"
                 transition="all 2s"
                 h="100%"
                 direction="column"
@@ -139,6 +141,10 @@ const NinethSec = () => {
                 />
               </Flex>
               <Divider
+                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transitionDelay="2s"
+                transition="all 2s"
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
@@ -146,27 +152,33 @@ const NinethSec = () => {
                 bgColor="#DFBD69"
               />
             </Flex>
-
-            <Heading
-              alignSelf="center"
-              fontFamily="avenir"
-              fontSize="20px"
-              mr="25px"
+            <Flex
+              w="100%"
+              transform={isInView ? "none" : "translateX(-100px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s"
             >
-              5 Mins
-            </Heading>
-            <UnorderedList
-              alignSelf="center"
-              textTransform="uppercase"
-              fontFamily="veralaRound"
-              fontSize="16px"
-            >
-              <ListItem pb="10px">
-                Walk to Velammal International School{" "}
-              </ListItem>
-              <ListItem pb="10px">DRIVE TO Origin by Mahindra </ListItem>
-              <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
-            </UnorderedList>
+              <Heading
+                alignSelf="center"
+                fontFamily="avenir"
+                fontSize="20px"
+                mr="25px"
+              >
+                5 Mins
+              </Heading>
+              <UnorderedList
+                alignSelf="center"
+                textTransform="uppercase"
+                fontFamily="veralaRound"
+                fontSize="16px"
+              >
+                <ListItem pb="10px">
+                  Walk to Velammal International School{" "}
+                </ListItem>
+                <ListItem pb="10px">DRIVE TO Origin by Mahindra </ListItem>
+                <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
+              </UnorderedList>
+            </Flex>
           </Flex>
           <Flex
             w="100%"
@@ -182,6 +194,14 @@ const NinethSec = () => {
               align="center"
               px="25px"
             >
+              {" "}
+              <Flex
+                w="100%"
+                transform={isInView ? "none" : "translateX(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transitionDelay="2s"
+                transition="all 2s"
+              ></Flex>
               <Divider
                 h="50px"
                 orientation="vertical"

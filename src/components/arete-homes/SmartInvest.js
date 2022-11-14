@@ -14,11 +14,16 @@ import {
   Tbody,
   Td,
 } from "@chakra-ui/react";
+import { useInView } from "framer-motion";
 import React from "react";
+import { useRef } from "react";
 
 const TenthSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       my="50px"
@@ -26,14 +31,33 @@ const TenthSec = () => {
       justify="center"
       direction="column"
     >
-      <Text fontFamily="goudy" fontSize="40px" mb="25px">
+      <Text
+        transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
+        fontFamily="goudy"
+        fontSize="40px"
+        mb="25px"
+      >
         SMART INVEST
       </Text>
-      <Heading fontFamily="avenir" fontSize="34px" textAlign="center" mb="50px">
+      <Heading
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 2s"
+        fontFamily="avenir"
+        fontSize="34px"
+        textAlign="center"
+        mb="50px"
+      >
         RETURNS HIGHERN THAN YOUR IMAGINATION
       </Heading>
       <Flex w="100%" h="100%">
-        <Flex w="100%">
+        <Flex
+          w="100%"
+          transform={isInView ? "translateX(0)" : "translateX(100px)"}
+          opacity={isInView ? "1" : "0"}
+          transition="all 2s 4s"
+        >
           <Image
             // pos="absolute"
             h="568px"
@@ -51,6 +75,9 @@ const TenthSec = () => {
             justify="flex-start"
             align="center"
             px="25px"
+            transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 4s"
           >
             <Divider
               h="80px"
@@ -77,6 +104,9 @@ const TenthSec = () => {
             justify="center"
           >
             <Heading
+              transform={isInView ? "translateX(0)" : "translateX(-100px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 4s"
               w="100%"
               fontSize="24px"
               textAlign="left"
@@ -86,7 +116,10 @@ const TenthSec = () => {
               EARN HIGHEST RENTAL INCOME (ROI)
             </Heading>
             <Flex w="100%" mb="25px" alignSelf="flex-start">
-              <TableContainer>
+              <TableContainer
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 4s"
+              >
                 <Table>
                   <Thead
                     textTransform="uppercase"
@@ -253,10 +286,18 @@ const TenthSec = () => {
                 </Table>
               </TableContainer>
             </Flex>
-            <Heading fontFamily="avenir" fontSize="20px" mb="25px">
+            <Heading
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 6s"
+              fontFamily="avenir"
+              fontSize="20px"
+              mb="25px"
+            >
               ASSURED RENTAL INCOME FOR 3 YEARS!
             </Heading>
             <Button
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 6s"
               w="146px"
               h="51px"
               fontSize="16px"
