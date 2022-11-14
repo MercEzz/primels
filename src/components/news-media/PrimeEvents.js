@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Flex, Heading, Text, Box, IconButton, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { useInView } from "framer-motion";
 
 const ThirdSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const [slider, setSlider] = useState(null);
   let [currentSlide, setCurrentSlide] = useState(1);
   const settings = {
@@ -21,6 +24,7 @@ const ThirdSec = () => {
 
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       pl="100px"
@@ -30,13 +34,29 @@ const ThirdSec = () => {
       align="center"
       justify="center"
     >
-      <Text fontFamily="goudy" fontSize="40px" lineHeight="48px">
+      <Text
+        transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
+        fontFamily="goudy"
+        fontSize="40px"
+        lineHeight="48px"
+      >
         PRIME EVENTS
       </Text>
-      <Heading fontFamily="avenir" fontSize="34px" lineHeight="48px" py="25px">
+      <Heading
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
+        fontFamily="avenir"
+        fontSize="34px"
+        lineHeight="48px"
+        py="25px"
+      >
         SKY HIGH TOWER LAUNCH AT HYATT REGENCY, CHENNAI{" "}
       </Heading>
       <Box
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 2s"
         position={"relative"}
         height={"100%"}
         width={"full"}
@@ -72,7 +92,15 @@ const ThirdSec = () => {
         </Slider>
       </Box>
       {/* Left Icon */}
-      <Flex pt="25px" w="100%" h="100%" align="center" justify="center">
+      <Flex
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 3s"
+        pt="25px"
+        w="100%"
+        h="100%"
+        align="center"
+        justify="center"
+      >
         <IconButton
           aria-label="left-arrow"
           variant="outline"

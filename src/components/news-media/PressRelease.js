@@ -2,8 +2,12 @@ import { Flex, Text, Box, IconButton, Image } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const SecondSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const [slider, setSlider] = useState(null);
   let [currentSlide, setCurrentSlide] = useState(1);
   const settings = {
@@ -21,6 +25,7 @@ const SecondSec = () => {
   };
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       px="100px"
@@ -29,10 +34,19 @@ const SecondSec = () => {
       align="center"
       justify="center"
     >
-      <Text fontFamily="goudy" fontSize="40px" lineHeight="48px">
+      <Text
+        transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
+        fontFamily="goudy"
+        fontSize="40px"
+        lineHeight="48px"
+      >
         PRESS RELEASE
       </Text>
       <Box
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         position={"relative"}
         height={"100%"}
         width={"full"}
@@ -78,7 +92,14 @@ const SecondSec = () => {
         </Slider>
       </Box>
       {/* Left Icon */}
-      <Flex w="100%" h="100%" align="center" justify="center">
+      <Flex
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 2s"
+        w="100%"
+        h="100%"
+        align="center"
+        justify="center"
+      >
         <IconButton
           aria-label="left-arrow"
           variant="outline"

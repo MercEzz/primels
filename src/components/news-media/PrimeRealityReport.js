@@ -10,8 +10,12 @@ import {
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const LastSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const [slider, setSlider] = useState(null);
   const settings = {
     draggable: false,
@@ -26,6 +30,7 @@ const LastSec = () => {
   };
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       direction="column"
@@ -36,12 +41,22 @@ const LastSec = () => {
       justify="center"
       pos="relative"
     >
-      <Text fontFamily="goudy" fontSize="40px" lineHeight="48px" pb="50px">
+      <Text
+        transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
+        fontFamily="goudy"
+        fontSize="40px"
+        lineHeight="48px"
+        pb="50px"
+      >
         PRIME REALTY REPORT
       </Text>
       <Flex w="100%" h="100%" align="center" pos="relative">
         <Flex w="50%" h="100%">
           <Box
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 2s"
             position={"relative"}
             height={"100%"}
             width={"100%"}
@@ -76,6 +91,9 @@ const LastSec = () => {
             </Slider>
           </Box>{" "}
           <Flex
+            transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 2s"
             h="100%"
             direction="column"
             justify="flex-start"
@@ -101,7 +119,13 @@ const LastSec = () => {
           </Flex>
         </Flex>
         <Flex w="50%" h="100%" direction="column" justify="flex-end">
-          <Flex w="100%" h="100%" justify="space-between">
+          <Flex
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 2s"
+            w="100%"
+            h="100%"
+            justify="space-between"
+          >
             <Flex direction="column" w="100%" h="100%">
               <Heading fontFamily="avenir" fontSize="34px">
                 OCTOBER 2022
@@ -127,6 +151,8 @@ const LastSec = () => {
           </Flex>
         </Flex>
         <IconButton
+          opacity={isInView ? "1" : "0"}
+          transition="all 2s 2s"
           pos="absolute"
           aria-label="left-arrow"
           variant="outline"
@@ -147,6 +173,8 @@ const LastSec = () => {
 
         {/* Right Icon */}
         <IconButton
+          opacity={isInView ? "1" : "0"}
+          transition="all 2s 2s"
           pos="absolute"
           aria-label="right-arrow"
           borderRadius="full"

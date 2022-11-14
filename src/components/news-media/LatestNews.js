@@ -10,8 +10,12 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const FifthSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const settings = {
     draggable: false,
     infinite: true,
@@ -41,6 +45,7 @@ const FifthSec = () => {
 
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       px="25px"
@@ -49,10 +54,20 @@ const FifthSec = () => {
       align="center"
       justify="center"
     >
-      <Text fontFamily="goudy" fontSize="40px" lineHeight="48px">
+      <Text
+        transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
+        fontFamily="goudy"
+        fontSize="40px"
+        lineHeight="48px"
+      >
         LATEST NEWS
       </Text>
       <Box
+        transform={isInView ? "translateY(0)" : "translateY(100px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         position={"relative"}
         height={"400px"}
         width={"full"}
