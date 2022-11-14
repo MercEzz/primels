@@ -37,7 +37,7 @@ const FourthSec = () => {
           flex="3"
           pr="25px"
         >
-          <iframe
+          <embed
             width="770"
             height="568"
             src="https://www.youtube.com/embed/Psmw1t_S6-c"
@@ -45,7 +45,7 @@ const FourthSec = () => {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
+          ></embed>
         </Flex>
         <Flex
           transform={isInView ? "translateY(0)" : "translateY(-50px)"}
