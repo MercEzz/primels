@@ -1,11 +1,14 @@
 import { Box, Flex, Image, IconButton, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import React, { useState } from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
 
 const MtnBx = motion(Box);
 
 const FirstSec = () => {
+  // const ref = useRef(null);
+  // const isInView = useInView(ref, { once: true });
   const [slider, setSlider] = useState(null);
   const settings = {
     draggable: false,
@@ -24,7 +27,8 @@ const FirstSec = () => {
       <MtnBx
         initial={{ scale: 0.6 }}
         animate={{ scale: 1 }}
-        transition="all 2s"
+        // transform={isInView ? "scale(1)" : "scale(0.6)"}
+        transition={{ duration: 2, type: "just" }}
         position={"relative"}
         height={"100%"}
         width={"100%"}
