@@ -42,18 +42,18 @@ const SecondSec = () => {
       direction="column"
       align="center"
       justify="center"
-      py="100px"
+      py="6.25rem"
     >
       <Heading
         transform={inView ? "translateY(0)" : "translateY(-50px)"}
         opacity={inView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
+        fontSize="2.5rem"
         fontWeight="400"
         textTransform="uppercase"
         textAlign="center"
-        pb="50px"
+        pb="1.5rem"
       >
         An iconic dwell of <br />
         sky high residences and retail spaces
@@ -157,7 +157,7 @@ const SecondSec = () => {
             transition="all 2s 2s"
             direction="column"
             align="center"
-            px="25px"
+            px="1.5rem"
           >
             <Divider
               orientation="vertical"
@@ -180,9 +180,9 @@ const SecondSec = () => {
           <Text
             opacity={inView ? "1" : "0"}
             transition="all 2s 2s"
-            mb="15px"
+            mb="0.9rem"
             fontFamily="veralaRound"
-            fontSize="16px"
+            fontSize="1.5rem"
           >
             THE ULTIMATE ADDRESS: Experience the breathtaking views of Chennai's
             stunning skyline from Arete Homes SKY HIGH Tower the top 20th floor.
@@ -194,10 +194,10 @@ const SecondSec = () => {
             w="271px"
             borderRadius="10px"
             bgColor="#DFBD69"
-            p="15px"
-            mb="20px"
+            p="0.9rem"
+            mb="1.2rem"
           >
-            <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
+            <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
               18 STOREY’S TALL
             </Text>
           </Flex>
@@ -207,10 +207,10 @@ const SecondSec = () => {
             w="271px"
             borderRadius="10px"
             bgColor="#DFBD69"
-            p="15px"
-            mb="20px"
+            p="0.9rem"
+            mb="1.2rem"
           >
-            <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
+            <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
               2 TOWER LOBBIES
             </Text>
           </Flex>
@@ -220,10 +220,10 @@ const SecondSec = () => {
             w="271px"
             borderRadius="10px"
             bgColor="#DFBD69"
-            p="15px"
-            mb="20px"
+            p="0.9rem"
+            mb="1.2rem"
           >
-            <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
+            <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
               4 ELEVATORS
             </Text>
           </Flex>
@@ -233,9 +233,9 @@ const SecondSec = () => {
             w="271px"
             borderRadius="10px"
             bgColor="#DFBD69"
-            p="15px"
+            p="0.9rem"
           >
-            <Text fontFamily="avenir" fontSize="20px" fontWeight="bold">
+            <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
               20 RETAIL SHOPS
             </Text>
           </Flex>

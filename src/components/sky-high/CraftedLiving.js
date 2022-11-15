@@ -1,43 +1,48 @@
 import { Flex, Image, Text, Box, Divider, Heading } from "@chakra-ui/react";
-import { motion, useAnimation, useInView } from "framer-motion";
+//import { motion, useAnimation, useInView } from "framer-motion";
 import React from "react";
 import { useEffect } from "react";
-import { useRef } from "react";
+//import { useRef } from "react";
+import { useInView } from "react-intersection-observer";
 
 const FourthSec = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "50px",
+  });
+  //const ref = useRef(null);
+  /*const isInView = useInView(ref, {
     once: true,
     margin: "0px 100px -50px 0px",
-  });
+  });*/
 
   return (
     <Flex
       ref={ref}
       w="100%"
-      h="100%"
-      p="100px"
+      h="70%"
+      p="6.25"
       direction="column"
       align="center"
       justify="center"
     >
       <Text
-        transform={isInView ? "none" : "translateY(-50px)"}
-        opacity={isInView ? "1" : "0"}
+        transform={inView ? "none" : "translateY(-50px)"}
+        opacity={inView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
+        fontSize="2.5rem"
         textAlign="center"
-        mb="50px"
+        mb="3.2rem"
       >
         CRAFTED LIVING OF SKY HIGH LIFE AND AMENITIES
       </Text>
       <Flex w="100%" h="100%" direction="column">
         {/* first-left-sec */}
         <Flex w="100%" h="100%" align="flex-start" justify="center">
-          <Flex w="100%" h="100%" pr="25px">
+          <Flex w="100%" h="100%" pr="1.5rem">
             <Image
-              opacity={isInView ? "1" : "0"}
+              opacity={inView ? "1" : "0"}
               transition="all 2s 4s"
               src="/images/sky-high/DECK1.jpg"
               boxShadow="dark-lg"
@@ -45,12 +50,12 @@ const FourthSec = () => {
           </Flex>
           <Flex w="100%" h="100%" align="flex-start" justify="center">
             <Flex
-              transform={isInView ? "none" : "translateY(-50px)"}
-              opacity={isInView ? "1" : "0"}
+              transform={inView ? "none" : "translateY(-50px)"}
+              opacity={inView ? "1" : "0"}
               transition="all 2s 2s"
               direction="column"
               align="center"
-              pr="25px"
+              pr="1.5rem"
             >
               <Divider
                 orientation="vertical"
@@ -69,54 +74,54 @@ const FourthSec = () => {
               />
             </Flex>{" "}
             <Flex
-              py="50px"
+              py="5.1rem"
               w="100%"
               h="100%"
               direction="column"
               justify="center"
             >
               <Heading
-                opacity={isInView ? "1" : "0"}
+                opacity={inView ? "1" : "0"}
                 transition="all 2s 2s"
                 fontFamily="avenir"
                 fontSize="34px"
-                mb="15px"
+                mb="0.9rem"
               >
                 3 SKY DECKS
               </Heading>
               <Text
-                opacity={isInView ? "1" : "0"}
+                opacity={inView ? "1" : "0"}
                 transition="all 2s 2s"
                 fontFamily="veralaRound"
-                fontSize="16px"
-                mb="25px"
+                fontSize="1rem"
+                mb="1.5rem"
               >
                 Enjoy the panoramic sky views from different levels of the
                 tower.
               </Text>
               <Heading
-                opacity={isInView ? "1" : "0"}
+                opacity={inView ? "1" : "0"}
                 transition="all 2s 4s"
                 fontFamily="avenir"
                 fontSize="20px"
-                mb="15px"
+                mb="0.9rem"
               >
                 CAFE DECK
               </Heading>
               <Heading
-                opacity={isInView ? "1" : "0"}
+                opacity={inView ? "1" : "0"}
                 transition="all 2s 6s"
                 fontFamily="avenir"
                 fontSize="20px"
-                mb="15px"
+                mb="1.2rem"
               >
                 KIDS AREA DECK
               </Heading>
               <Heading
-                opacity={isInView ? "1" : "0"}
+                opacity={inView ? "1" : "0"}
                 transition="all 2s 8s"
                 fontFamily="avenir"
-                fontSize="20px"
+                fontSize="1.2rem"
               >
                 LOUNGE DECK
               </Heading>
@@ -126,21 +131,21 @@ const FourthSec = () => {
         {/* first-right-sec */}
         <Flex w="100%" h="100%" align="center" justify="center">
           <Flex
-            opacity={isInView ? "1" : "0"}
+            opacity={inView ? "1" : "0"}
             transition="all 2s 6s"
             w="100%"
             h="100%"
-            my="25px"
-            pr="25px"
+            my="1.5rem"
+            pr="1.5rem"
           >
             <Image src="/images/sky-high/DECK2.jpg" boxShadow="dark-lg" />
           </Flex>
           <Flex
-            opacity={isInView ? "1" : "0"}
+            opacity={inView ? "1" : "0"}
             transition="all 2s 8s"
             w="100%"
             h="100%"
-            my="25px"
+            my="1.5rem"
           >
             <Image src="/images/sky-high/DECK3.jpg" boxShadow="dark-lg" />
           </Flex>
@@ -148,21 +153,21 @@ const FourthSec = () => {
       </Flex>
       <Flex ref={ref} w="100%" h="100%" align="flex-start" justify="center">
         <Flex h="100%" direction="column" alignSelf="center">
-          <Heading fontFamily="avenir" fontSize="34px" mb="15px">
+          <Heading fontFamily="avenir" fontSize="34px" mb="0.9rem">
             SKY TERRACE AVENUE
           </Heading>
-          <Text fontFamily="veralaRound" fontSize="18px">
+          <Text fontFamily="veralaRound" fontSize="1rem">
             The perfect spot to rediscover a forgotten time of the day: Golden
             Sunrises.
           </Text>
         </Flex>
         <Flex
-          transform={isInView ? "none" : "translateY(-50px)"}
-          opacity={isInView ? "1" : "0"}
+          transform={inView ? "none" : "translateY(-50px)"}
+          opacity={inView ? "1" : "0"}
           transition="all 2s 2s"
           direction="column"
           align="center"
-          px="25px"
+          px="1.5rem"
         >
           <Divider
             orientation="vertical"
