@@ -200,7 +200,7 @@ const FourthSec = () => {
         <Flex position="relative" w="100%">
           <Image
             position="absolute"
-            left="6.25"
+            right="6.25"
             w="46rem"
             h="23rem"
             src="/images/sky-high/TERRACE.jpg"
