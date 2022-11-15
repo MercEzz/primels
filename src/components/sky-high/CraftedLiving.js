@@ -47,7 +47,7 @@ const FourthSec = () => {
               opacity={inView ? "1" : "0"}
               transition="all 2s 4s"
               src="/images/sky-high/DECK1.jpg"
-              boxShadow="0px 0px 0px 3px #B88746 opacity(25) blur"
+              boxShadow="dark-lg"
             />
           </Flex>
           <Flex w="100%" h="100%" align="flex-start" justify="center">
@@ -193,7 +193,7 @@ const FourthSec = () => {
             width="30px"
             backgroundColor="#DFBD69"
             border="3px solid white"
-            boxShadow="0px 0px 0px 3px #B88746 opacity(25) blur"
+            boxShadow="0px 0px 0px 3px #B88746"
             borderRadius="50%"
           />
         </Flex>
