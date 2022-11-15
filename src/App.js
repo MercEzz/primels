@@ -12,6 +12,7 @@ import SkyHighSc from "./screens/SkyHighSc";
 import NewsMediaSc from "./screens/NewsMediaSc";
 import AreteHomes from "./screens/AreteHomes";
 import ReferAndEarn from "./screens/ReferAndEarn";
+import CommercialProperties from "./screens/CommercialProperties";
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
           <Route path="/arete-homes" element={<AreteHomes />} />
           <Route path="/news-and-media" element={<NewsMediaSc />} />
           <Route path="/refer-and-earn" element={<ReferAndEarn />} />
+          <Route
+            path="/commmercial-properties"
+            element={<CommercialProperties />}
+          />
         </Routes>
       </Flex>
       <Footer />

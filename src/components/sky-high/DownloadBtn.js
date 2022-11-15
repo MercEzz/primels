@@ -7,11 +7,11 @@ const DownloadBtn = () => {
   return (
     <Button
       pos="fixed"
-      bottom="50px"
-      left="50px"
+      bottom="3.1rem"
+      left="3.1rem"
       borderRadius="50%"
-      h="80px"
-      w="80px"
+      h="5rem"
+      w="5rem"
       zIndex="99"
       bgGradient="linear(to-b, #B88746 ,#DFBD69)"
       color="black"
@@ -20,7 +20,7 @@ const DownloadBtn = () => {
       }}
       _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
     >
-      <BsDownload size="40px" />
+      <BsDownload size="2.5rem" />
     </Button>
   );
 };

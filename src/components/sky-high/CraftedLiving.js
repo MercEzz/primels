@@ -21,7 +21,7 @@ const FourthSec = () => {
       ref={ref}
       w="100%"
       h="70%"
-      p="6.25"
+      p="6.25rem"
       direction="column"
       align="center"
       justify="center"
@@ -42,6 +42,8 @@ const FourthSec = () => {
         <Flex w="100%" h="100%" align="flex-start" justify="center">
           <Flex w="100%" h="100%" pr="1.5rem">
             <Image
+              w="46rem"
+              h="30rem"
               opacity={inView ? "1" : "0"}
               transition="all 2s 4s"
               src="/images/sky-high/DECK1.jpg"
@@ -138,7 +140,12 @@ const FourthSec = () => {
             my="1.5rem"
             pr="1.5rem"
           >
-            <Image src="/images/sky-high/DECK2.jpg" boxShadow="dark-lg" />
+            <Image
+              w="46rem"
+              h="30rem"
+              src="/images/sky-high/DECK2.jpg"
+              boxShadow="dark-lg"
+            />
           </Flex>
           <Flex
             opacity={inView ? "1" : "0"}
@@ -147,7 +154,12 @@ const FourthSec = () => {
             h="100%"
             my="1.5rem"
           >
-            <Image src="/images/sky-high/DECK3.jpg" boxShadow="dark-lg" />
+            <Image
+              w="46rem"
+              h="30rem"
+              src="/images/sky-high/DECK3.jpg"
+              boxShadow="dark-lg"
+            />
           </Flex>
         </Flex>
       </Flex>
@@ -186,7 +198,12 @@ const FourthSec = () => {
           />
         </Flex>
         <Flex w="100%">
-          <Image src="/images/sky-high/TERRACE.jpg" boxShadow="dark-lg" />
+          <Image
+            w="46rem"
+            h="30rem"
+            src="/images/sky-high/TERRACE.jpg"
+            boxShadow="dark-lg"
+          />
         </Flex>
       </Flex>
     </Flex>
