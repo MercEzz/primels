@@ -23,7 +23,7 @@ const ReferEarn = () => {
         direction="column"
         top="40%"
       >
-        <Heading pb="50px" fontfamilty="avenir" fontSize="40px" color="#13314F">
+        <Heading pb="50px" fontfamilty="goudy" fontSize="40px" color="#13314F">
           MORE REFERRALS = MORE EARNINGS
         </Heading>
         <Heading pb="10px" fontfamilty="avenir" fontSize="34px" color="#1F4973">
