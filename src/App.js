@@ -11,13 +11,13 @@ import ChannelPartner from "./screens/ChannelPartner";
 import SkyHighSc from "./screens/SkyHighSc";
 import NewsMediaSc from "./screens/NewsMediaSc";
 import AreteHomes from "./screens/AreteHomes";
+import ReferAndEarn from "./screens/ReferAndEarn";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Flex
-        // mt="100px"
         as="main"
         direction="column"
         w="100%"
@@ -37,6 +37,7 @@ function App() {
           <Route path="/sky-high" element={<SkyHighSc />} />
           <Route path="/arete-homes" element={<AreteHomes />} />
           <Route path="/news-and-media" element={<NewsMediaSc />} />
+          <Route path="/refer-and-earn" element={<ReferAndEarn />} />
         </Routes>
       </Flex>
       <Footer />
