@@ -1,12 +1,12 @@
 import { Box, Flex, Image, IconButton, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Slider from "react-slick";
-
-const MtnBx = motion(Box);
+import banner from "../sky-high imgs/BANNER2.jpg";
 
 const FirstSec = () => {
+  const ref = useRef(null);
   const [slider, setSlider] = useState(null);
+  const [isInView, setIsinView] = useState(false);
   const settings = {
     draggable: false,
     infinite: false,
@@ -18,13 +18,14 @@ const FirstSec = () => {
     slidesToScroll: 1,
     pauseOnHover: false,
   };
-
+  setTimeout(() => {
+    setIsinView(true);
+  }, 1000);
   return (
-    <Flex w="100%" h="100vh">
-      <MtnBx
-        initial={{ scale: 0.6 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 2, type: "just" }}
+    <Flex ref={ref} w="100%" h="100vh">
+      <Box
+        transform={isInView ? "scale(1)" : "scale(0.6)"}
+        transition="all 2s"
         position={"relative"}
         height={"100%"}
         width={"100%"}
@@ -101,14 +102,11 @@ const FirstSec = () => {
         >
           <Text>02</Text>
         </IconButton>
-      </MtnBx>{" "}
+      </Box>{" "}
     </Flex>
   );
 };
 
 export default FirstSec;
 
-const bannerImgs = [
-  "/images/sky-high/BANNER2.jpg",
-  "/images/sky-high/BANNER2.jpg",
-];
+const bannerImgs = [banner, banner];

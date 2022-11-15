@@ -1,6 +1,7 @@
 import { Flex, Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
+import banner from "../news-and-media/BANNER-IMAGE.jpg";
 
 const MtnFlx = motion(Flex);
 const MtnHd = motion(Heading);
@@ -15,7 +16,7 @@ const FirstSec = () => {
         w="100%"
         h="100%"
         pos="absolute"
-        bgImage="/images/NEWS-AND-MEDIA/BANNER-IMAGE.JPG"
+        bgImage={banner}
         bgPos="center"
         bgRepeat="no-repeat"
         bgSize="cover"

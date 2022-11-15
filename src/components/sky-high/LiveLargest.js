@@ -7,15 +7,11 @@ import {
   Heading,
   Button,
 } from "@chakra-ui/react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import React, { useState } from "react";
-import { useEffect } from "react";
+
 import { useRef } from "react";
 import Slider from "react-slick";
-
-const MtnTxt = motion(Text);
-const MtnImg = motion(Image);
-const MtnFlx = motion(Flex);
 
 const FifthSec = () => {
   const [slider, setSlider] = useState(null);
@@ -23,23 +19,7 @@ const FifthSec = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
-    margin: "0px 100px -50px 0px",
   });
-  const animateY = useAnimation();
-  const animateX = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      animateX.start({
-        opacity: 1,
-        x: 0,
-      });
-      animateY.start({
-        opacity: 1,
-        y: 0,
-      });
-    }
-  }, [isInView, animateX, animateY]);
 
   const settings = {
     draggable: true,
@@ -60,17 +40,19 @@ const FifthSec = () => {
       justify="center"
       direction="column"
     >
-      <MtnTxt
-        initial={{ opacity: 0, y: -50 }}
-        animate={animateY}
-        transition={{ duration: 2, type: "just" }}
-        mb="50px"
+      <Text
+        transform={isInView ? "none" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         fontFamily="goudy"
         fontSize="40px"
       >
         LIVE LARGEST, SHOP LARGEST
-      </MtnTxt>
+      </Text>
       <Box
+        transform={isInView ? "none" : "translateX(100px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 2s"
         position={"relative"}
         height={"100%"}
         width={"full"}
@@ -91,10 +73,7 @@ const FifthSec = () => {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {plazaImgs.map((prime) => (
-            <MtnImg
-              initial={{ x: 200, opacity: 0 }}
-              animate={animateX}
-              transition={{ delay: 1.5, duration: 2, type: "just" }}
+            <Image
               key={prime}
               w="100%"
               height="568px"
@@ -125,10 +104,10 @@ const FifthSec = () => {
             justify="center"
             pr="50px"
           >
-            <MtnFlx
-              initial={{ y: -100, opacity: 0 }}
-              animate={animateY}
-              transition={{ delay: 1.5, duration: 2, type: "just" }}
+            <Flex
+              transform={isInView ? "none" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
               direction="column"
               align="center"
               px="25px"
@@ -148,11 +127,11 @@ const FifthSec = () => {
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
               />
-            </MtnFlx>
-            <MtnFlx
-              initial={{ x: -100, opacity: 0 }}
-              animate={animateX}
-              transition={{ delay: 1.5, duration: 2, type: "just" }}
+            </Flex>
+            <Flex
+              transform={isInView ? "none" : "translateX(-100px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
               direction="column"
               alignSelf="center"
             >
@@ -179,7 +158,7 @@ const FifthSec = () => {
               >
                 EXPLORE MORE
               </Button>
-            </MtnFlx>
+            </Flex>
           </Flex>
         </Flex>
       </Box>

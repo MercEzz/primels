@@ -6,10 +6,6 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useEffect } from "react";
 
-const MtnTxt = motion(Text);
-const MtnBx = motion(Box);
-const MtnBtn = motion(Button);
-
 const SixthSec = () => {
   const [slider, setSlider] = useState(null);
 
@@ -17,26 +13,12 @@ const SixthSec = () => {
   const isInView = useInView(ref, {
     once: true,
   });
-  const animateY = useAnimation();
-  const animateScale = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      animateScale.start({
-        scale: 1,
-      });
-      animateY.start({
-        opacity: 1,
-        y: 0,
-      });
-    }
-  }, [isInView, animateScale, animateY]);
 
   const settings = {
-    className: "center",
+    // className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "60px",
+    // centerPadding: "60px",
     draggable: true,
     speed: 500,
     autoplaySpeed: 3000,
@@ -55,20 +37,20 @@ const SixthSec = () => {
       py="100px"
       px="25px"
     >
-      <MtnTxt
-        initial={{ y: -50, opacity: 0 }}
-        animate={animateY}
-        transition={{ duration: 2, type: "just" }}
+      <Text
+        transform={isInView ? "none" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s "
         fontFamily="goudy"
         fontSize="40px"
         pb="25px"
       >
         PVT. PONNERI GYMKHANA CLUB
-      </MtnTxt>
-      <MtnBx
-        initial={{ scale: 0.6 }}
-        animate={animateScale}
-        transition={{ delay: 1.5, duration: 2, type: "just" }}
+      </Text>
+      <Box
+        transform={isInView ? "scale(1)" : "scale(0.6)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 2s"
         position={"relative"}
         height={"100%"}
         width={"full"}
@@ -99,7 +81,7 @@ const SixthSec = () => {
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"
-              objectFit="fill"
+              objectFit="cover"
               src={prime}
             />
           ))}
@@ -141,11 +123,10 @@ const SixthSec = () => {
         >
           <AiOutlineRight color="#B88746" size="40px" />
         </IconButton>
-      </MtnBx>
-      <MtnBtn
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 3, duration: 2, type: "just" }}
+      </Box>
+      <Button
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 4s"
         w="174px"
         h="51px"
         mt="25px"
@@ -159,7 +140,7 @@ const SixthSec = () => {
         _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
       >
         EXPLORE MORE
-      </MtnBtn>
+      </Button>
     </Flex>
   );
 };
@@ -167,8 +148,8 @@ const SixthSec = () => {
 export default SixthSec;
 
 const gymclubimgs = [
-  "/images/sky-high/16 - Cafeteria High Res.jpg",
-  "/images/sky-high/18 - Restaurant High Res.jpg",
+  "/images/sky-high/16 - Cafeteria High Res_1.jpg",
+  "/images/sky-high/18 - Restaurant High Res_1.jpg",
   "/images/sky-high/20 - guest rooms.jpg",
   "/images/sky-high/22 - sauna_s.jpg",
   "/images/sky-high/PGC Banquet Hall.jpg",

@@ -2,8 +2,18 @@ import { Flex, Text, Box, IconButton, Image } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+import press1 from "../news-and-media/PRESS-RELEASE1.PNG";
+import press2 from "../news-and-media/PRESS-RELEASE2.PNG";
+import press3 from "../news-and-media/PRESS-RELEASE3.PNG";
+import press4 from "../news-and-media/PRESS-RELEASE4.PNG";
+import press5 from "../news-and-media/PRESS-RELEASE5.PNG";
+import press6 from "../news-and-media/PRESS-RELEASE6.png";
 
 const SecondSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const [slider, setSlider] = useState(null);
   let [currentSlide, setCurrentSlide] = useState(1);
   const settings = {
@@ -21,6 +31,7 @@ const SecondSec = () => {
   };
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       px="100px"
@@ -29,10 +40,19 @@ const SecondSec = () => {
       align="center"
       justify="center"
     >
-      <Text fontFamily="goudy" fontSize="40px" lineHeight="48px">
+      <Text
+        transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
+        fontFamily="goudy"
+        fontSize="40px"
+        lineHeight="48px"
+      >
         PRESS RELEASE
       </Text>
       <Box
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         position={"relative"}
         height={"100%"}
         width={"full"}
@@ -78,7 +98,14 @@ const SecondSec = () => {
         </Slider>
       </Box>
       {/* Left Icon */}
-      <Flex w="100%" h="100%" align="center" justify="center">
+      <Flex
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 2s"
+        w="100%"
+        h="100%"
+        align="center"
+        justify="center"
+      >
         <IconButton
           aria-label="left-arrow"
           variant="outline"
@@ -134,7 +161,7 @@ const ImgBar = ({ slide }) => {
   if (slide > 0) {
     barFillWidth = slide * 16.666 + "%";
   }
-  console.log(barFillWidth);
+
   return (
     <Flex
       ml="1"
@@ -161,31 +188,31 @@ const pressRelease = [
   {
     title: "DECCAN CHRONICLE",
     date: "29 AUG 2022",
-    img: "/images/news-and-media/PRESS-RELEASE1.PNG",
+    img: press1,
   },
   {
     title: "DECCAN CHRONICLE",
     date: "18 SEPT 2022",
-    img: "/images/news-and-media/PRESS-RELEASE2.PNG",
+    img: press2,
   },
   {
     title: "THE ECONOMIC TIMES",
     date: "26 JULY 2021",
-    img: "/images/news-and-media/PRESS-RELEASE3.PNG",
+    img: press3,
   },
   {
     title: "THE ECONOMIC TIMES",
     date: "26 MARCH 2021",
-    img: "/images/news-and-media/PRESS-RELEASE4.PNG",
+    img: press4,
   },
   {
     title: "NARDECO",
     date: "JULY 2021",
-    img: "/images/news-and-media/PRESS-RELEASE5.PNG",
+    img: press5,
   },
   {
     title: "",
     date: "",
-    img: "/images/news-and-media/PRESS-RELEASE6.PNG",
+    img: press6,
   },
 ];

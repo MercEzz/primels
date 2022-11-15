@@ -1,5 +1,7 @@
 import { Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+// images
+import bgBox from "../careers imgs/bg-box.jpg";
 
 const MotnHead = motion(Heading);
 const MotnTxt = motion(Text);
@@ -22,7 +24,7 @@ const FirstSec = () => {
       h="100vh"
       align="center"
       justify="center"
-      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
     >
       <Flex w="100%" h="100%" align="center" justify="center">
         <MotnImg

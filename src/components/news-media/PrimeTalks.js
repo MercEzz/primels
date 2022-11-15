@@ -1,9 +1,14 @@
 import { Flex, Text, Divider, Box } from "@chakra-ui/react";
+import { useInView } from "framer-motion";
 import React from "react";
+import { useRef } from "react";
 
 const FourthSec = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       px="100px"
@@ -13,12 +18,26 @@ const FourthSec = () => {
       justify="center"
     >
       {" "}
-      <Text fontFamily="goudy" fontSize="40px" lineHeight="48px">
+      <Text
+        transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
+        fontFamily="goudy"
+        fontSize="40px"
+        lineHeight="48px"
+      >
         PRIME TALKS
       </Text>
       <Flex w="100%" h="100%" align="flex-start" justify="flex-start" pt="50px">
-        <Flex w="100%" h="100%" flex="3" pr="25px">
-          <iframe
+        <Flex
+          opacity={isInView ? "1" : "0"}
+          transition="all 2s 2s"
+          w="100%"
+          h="100%"
+          flex="3"
+          pr="25px"
+        >
+          <embed
             width="770"
             height="568"
             src="https://www.youtube.com/embed/Psmw1t_S6-c"
@@ -26,9 +45,17 @@ const FourthSec = () => {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
+          ></embed>
         </Flex>
-        <Flex h="100%" direction="column" justify="flex-start" align="center">
+        <Flex
+          transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+          opacity={isInView ? "1" : "0"}
+          transition="all 2s 2s"
+          h="100%"
+          direction="column"
+          justify="flex-start"
+          align="center"
+        >
           <Divider
             h="25px"
             orientation="vertical"
@@ -48,6 +75,8 @@ const FourthSec = () => {
         </Flex>
         <Flex>
           <Flex
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 2s"
             flex="1"
             direction="column"
             fontFamily="veralaRound"

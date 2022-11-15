@@ -10,6 +10,7 @@ const FifthSec = () => {
 
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       direction="column"
@@ -19,7 +20,6 @@ const FifthSec = () => {
       px="100px"
     >
       <Text
-        ref={ref}
         transform={isInView ? "none" : "translateY(-100px)"}
         opacity={isInView ? 1 : 0}
         transition="all 2s"
@@ -33,7 +33,6 @@ const FifthSec = () => {
         <Flex w="100%" h="100%" direction="column" mr="25px">
           <VStack mb="50px">
             <Image
-              ref={ref}
               transform={isInView ? "scale(1)" : "scale(0.6)"}
               transition="all 2s"
               src="/images/arete-homes/arete meditation retreat 1.jpg"
@@ -47,7 +46,6 @@ const FifthSec = () => {
           </VStack>
           <VStack>
             <Image
-              ref={ref}
               transform={isInView ? "scale(1)" : "scale(0.6)"}
               transition="all 2s"
               src="/images/arete-homes/kids play area.jpeg"
@@ -63,7 +61,6 @@ const FifthSec = () => {
         <Flex w="100%" h="100%" direction="column">
           <VStack mb="50px">
             <Image
-              ref={ref}
               transform={isInView ? "scale(1)" : "scale(0.6)"}
               transition="all 2s"
               src="/images/arete-homes/garden and jogging track.jpg"
@@ -77,7 +74,6 @@ const FifthSec = () => {
           </VStack>
           <VStack>
             <Image
-              ref={ref}
               transform={isInView ? "scale(1)" : "scale(0.6)"}
               transition="all 2s"
               src="/images/arete-homes/open exercise area.jpg"

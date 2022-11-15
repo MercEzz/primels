@@ -9,42 +9,19 @@ import {
   Box,
   UnorderedList,
   ListItem,
+  Image,
+  VStack,
 } from "@chakra-ui/react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { ImLocation } from "react-icons/im";
-
-const MtnTxt = motion(Text);
-const MtnHd = motion(Heading);
-const MtnFlx = motion(Flex);
-const MtnBtn = motion(Button);
-const MtnDvd = motion(Divider);
 
 const NinethSec = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const animateY = useAnimation();
-  const animateX = useAnimation();
-  const animateFade = useAnimation();
-  const animateScale = useAnimation();
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
 
-  useEffect(() => {
-    if (isInView) {
-      animateY.start({
-        y: 0,
-        opacity: 1,
-      });
-      animateX.start({
-        x: 0,
-        opacity: 1,
-      });
-      animateFade.start({
-        opacity: 1,
-      });
-      animateScale.start({
-        scale: 1,
-      });
-    }
-  }, [isInView, animateY, animateX, animateFade, animateScale]);
   return (
     <Flex
       ref={ref}
@@ -57,21 +34,21 @@ const NinethSec = () => {
       align="center"
       justify="center"
     >
-      <MtnTxt
-        initial={{ y: -50, opacity: 0 }}
-        animate={animateY}
-        transition={{ duration: 2, type: "just" }}
+      <Text
+        transform={isInView ? "none" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         fontFamily="goudy"
         fontSize="40px"
         lineHeight="48px"
         textTransform="uppercase"
       >
         LOCATION ADVANTAGE
-      </MtnTxt>
-      <MtnHd
-        initial={{ y: 50, opacity: 0 }}
-        animate={animateY}
-        transition={{ delay: 1.5, duration: 2, type: "just" }}
+      </Text>
+      <Heading
+        transform={isInView ? "none" : "translateY(50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         fontFamily="avenir"
         fontSize="34px"
         lineHeight="48px"
@@ -79,7 +56,7 @@ const NinethSec = () => {
         pb="50px"
       >
         PONNERI - A SMART CITY BY JICA
-      </MtnHd>
+      </Heading>
       <Flex w="100%" h="100%" align="flex-start" justify="flex-start">
         <Flex
           direction="column"
@@ -88,10 +65,10 @@ const NinethSec = () => {
           align="center"
           justify="center"
         >
-          <MtnFlx
-            initial={{ scale: 0.6 }}
-            animate={animateScale}
-            transition={{ delay: 3, duration: 2, type: "just" }}
+          <Flex
+            transform={isInView ? "scale(1)" : "scale(0.6)"}
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 1s"
             w="100%"
             h="100%"
             mb="15px"
@@ -106,15 +83,147 @@ const NinethSec = () => {
               marginwidth="0"
               src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             ></iframe>
-          </MtnFlx>
-          <Flex w="100%" h="100%" mb="20px">
-            icons
+          </Flex>
+          <Flex
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 2s"
+            w="100%"
+            h="100%"
+            mb="20px"
+            align="flex-start"
+            justify="space-between"
+          >
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/TEMPLES.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                TEMPLES
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/HOSPITAL.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                HOSPITALS
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/INSTITUTES.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px" textAlign="center">
+                EDUCATIONAL <br />
+                INSTITUTES
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/SOCIAL FABRIC.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                SOCIAL
+                <br /> FABRIC
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/INDUSTRY.svg"
+                />
+              </Box>
+              <Heading textAlign="center" fontFamily="avenir" fontSize="14px">
+                INDUSTRIAL <br />
+                PARKS
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image w="30px" h="30px" src="/images/arete-homes/PORT.svg" />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                PORTS
+              </Heading>
+            </VStack>
           </Flex>
           <Flex w="100%" h="100%">
-            <MtnBtn
-              initial={{ opacity: 0 }}
-              animate={animateFade}
-              transition={{ delay: 10.5, duration: 2, type: "just" }}
+            <Button
+              transform={isInView ? "none" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 1s"
               w="100%"
               h="51px"
               fontSize="16px"
@@ -128,7 +237,7 @@ const NinethSec = () => {
               _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
             >
               <ImLocation size="30px" /> SHOW LOCATION ON GOOGLE MAPS
-            </MtnBtn>
+            </Button>
           </Flex>
         </Flex>
         <Flex w="100%" h="100%" align="center" direction="column">
@@ -138,10 +247,10 @@ const NinethSec = () => {
             alignSelf="flex-start"
             justify="space-between"
           >
-            <MtnFlx
-              initial={{ y: -50, opacity: 0 }}
-              animate={animateY}
-              transition={{ delay: 3, duration: 2, type: "just" }}
+            <Flex
+              transform={isInView ? "none" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 1s"
               h="100%"
               direction="column"
               justify="flex-start"
@@ -164,21 +273,21 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-              <MtnDvd
-                initial={{ y: -50, opacity: 0 }}
-                animate={animateY}
-                transition={{ delay: 4.5, duration: 2, type: "just" }}
+              <Divider
+                transform={isInView ? "none" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 2s"
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-            </MtnFlx>
-            <MtnFlx
-              initial={{ x: -50, opacity: 0 }}
-              animate={animateX}
-              transition={{ delay: 3, duration: 2, type: "just" }}
+            </Flex>
+            <Flex
+              transform={isInView ? "none" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 1s"
               w="100%"
             >
               <Heading
@@ -201,7 +310,7 @@ const NinethSec = () => {
                 <ListItem pb="10px">DRIVE TO Origin by Mahindra </ListItem>
                 <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
               </UnorderedList>
-            </MtnFlx>
+            </Flex>
           </Flex>
           <Flex
             w="100%"
@@ -210,10 +319,10 @@ const NinethSec = () => {
             justify="space-between"
           >
             {" "}
-            <MtnFlx
-              initial={{ y: -50, opacity: 0 }}
-              animate={animateY}
-              transition={{ delay: 4.5, duration: 2, type: "just" }}
+            <Flex
+              transform={isInView ? "none" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
               h="100%"
               direction="column"
               justify="flex-start"
@@ -236,21 +345,21 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-              <MtnDvd
-                initial={{ y: -50, opacity: 0 }}
-                animate={animateY}
-                transition={{ delay: 6, duration: 2, type: "just" }}
+              <Divider
+                transform={isInView ? "none" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 3s"
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-            </MtnFlx>
-            <MtnFlx
-              initial={{ x: -50, opacity: 0 }}
-              animate={animateX}
-              transition={{ delay: 4.5, duration: 2, type: "just" }}
+            </Flex>
+            <Flex
+              transform={isInView ? "none" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
               w="100%"
             >
               <Heading
@@ -275,14 +384,14 @@ const NinethSec = () => {
                 </ListItem>
                 <ListItem pb="10px">VELS Medical Hospital</ListItem>
               </UnorderedList>
-            </MtnFlx>
+            </Flex>
           </Flex>
           <Flex h="100%" alignSelf="flex-start" justify="center">
             {" "}
-            <MtnFlx
-              initial={{ y: -50, opacity: 0 }}
-              animate={animateY}
-              transition={{ delay: 6, duration: 2, type: "just" }}
+            <Flex
+              transform={isInView ? "none" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 3s"
               h="100%"
               direction="column"
               justify="flex-start"
@@ -305,21 +414,21 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-              <MtnDvd
-                initial={{ y: -50, opacity: 0 }}
-                animate={animateY}
-                transition={{ delay: 7.5, duration: 2, type: "just" }}
+              <Divider
+                transform={isInView ? "none" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 4s"
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-            </MtnFlx>
-            <MtnFlx
-              initial={{ x: -50, opacity: 0 }}
-              animate={animateX}
-              transition={{ delay: 6, duration: 2, type: "just" }}
+            </Flex>
+            <Flex
+              transform={isInView ? "none" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 3s"
               w="100%"
             >
               <Heading
@@ -341,14 +450,14 @@ const NinethSec = () => {
                   <ListItem pb="10px">DRIVE TO GUMMIDIPOONDI SIPCOT</ListItem>
                 </UnorderedList>
               </Flex>
-            </MtnFlx>
+            </Flex>
           </Flex>
           <Flex h="100%" alignSelf="flex-start" justify="center">
             {" "}
-            <MtnFlx
-              initial={{ y: -50, opacity: 0 }}
-              animate={animateY}
-              transition={{ delay: 7.5, duration: 2, type: "just" }}
+            <Flex
+              transform={isInView ? "none" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 4s"
               h="100%"
               direction="column"
               justify="flex-start"
@@ -371,22 +480,22 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-              <MtnDvd
-                initial={{ y: -50, opacity: 0 }}
-                animate={animateY}
-                transition={{ delay: 9, duration: 2, type: "just" }}
+              <Divider
+                transform={isInView ? "none" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 5s"
                 h="50px"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-            </MtnFlx>
-            <MtnFlx
+            </Flex>
+            <Flex
+              transform={isInView ? "none" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 4s"
               w="100%"
-              initial={{ x: -50, opacity: 0 }}
-              animate={animateX}
-              transition={{ delay: 7.5, duration: 2, type: "just" }}
             >
               <Heading
                 alignSelf="center"
@@ -409,15 +518,15 @@ const NinethSec = () => {
                   </ListItem>
                 </UnorderedList>
               </Flex>
-            </MtnFlx>
+            </Flex>
           </Flex>
           <Flex h="100%" alignSelf="flex-start" justify="center">
             {" "}
-            <MtnFlx
+            <Flex
               h="100%"
-              initial={{ y: -50, opacity: 0 }}
-              animate={animateY}
-              transition={{ delay: 9, duration: 2, type: "just" }}
+              transform={isInView ? "none" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 5s"
               direction="column"
               justify="flex-start"
               align="center"
@@ -439,22 +548,22 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-              <MtnDvd
-                initial={{ y: -50, opacity: 0 }}
-                animate={animateY}
-                transition={{ delay: 10.5, duration: 2, type: "just" }}
+              <Divider
+                transform={isInView ? "none" : "translateY(-50px)"}
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 6s"
                 // h="50px"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
-            </MtnFlx>
-            <MtnFlx
+            </Flex>
+            <Flex
               w="100%"
-              initial={{ x: -50, opacity: 0 }}
-              animate={animateX}
-              transition={{ delay: 9, duration: 2, type: "just" }}
+              transform={isInView ? "none" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 5s"
             >
               <Heading
                 alignSelf="center"
@@ -473,14 +582,14 @@ const NinethSec = () => {
                   <ListItem pb="10px">DRIVE TO CHENNAI AIRPORT</ListItem>
                 </UnorderedList>
               </Flex>
-            </MtnFlx>
+            </Flex>
           </Flex>
           <Flex h="100%" alignSelf="flex-start" justify="center">
             {" "}
-            <MtnFlx
-              initial={{ y: -50, opacity: 0 }}
-              animate={animateY}
-              transition={{ delay: 10.5, duration: 2, type: "just" }}
+            <Flex
+              transform={isInView ? "none" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 6s"
               h="100%"
               direction="column"
               justify="flex-start"
@@ -503,12 +612,12 @@ const NinethSec = () => {
                 borderRadius="50%"
                 my="1"
               />
-            </MtnFlx>
-            <MtnFlx
+            </Flex>
+            <Flex
               w="100%"
-              initial={{ x: -50, opacity: 0 }}
-              animate={animateX}
-              transition={{ delay: 10.5, duration: 2, type: "just" }}
+              transform={isInView ? "none" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 6s"
             >
               <Heading
                 alignSelf="center"
@@ -527,7 +636,7 @@ const NinethSec = () => {
                   <ListItem pb="10px">DRIVE TO TIRUPATI</ListItem>
                 </UnorderedList>
               </Flex>
-            </MtnFlx>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

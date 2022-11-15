@@ -4,33 +4,12 @@ import React from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 
-const MtnTxt = motion(Text);
-const MtnImg = motion(Image);
-const MtnFlx = motion(Flex);
-const MtnHd = motion(Heading);
-const MtnDvd = motion(Divider);
-
 const FourthSec = () => {
   const ref = useRef(null);
-
   const isInView = useInView(ref, {
     once: true,
     margin: "0px 100px -50px 0px",
   });
-  const animateFade = useAnimation();
-  const animateY = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      animateFade.start({
-        opacity: 1,
-      });
-      animateY.start({
-        opacity: 1,
-        y: 0,
-      });
-    }
-  }, [isInView, animateFade, animateY]);
 
   return (
     <Flex
@@ -42,49 +21,38 @@ const FourthSec = () => {
       align="center"
       justify="center"
     >
-      <MtnTxt
-        initial={{ y: -50, opacity: 0 }}
-        animate={animateY}
-        transition={{ duration: 2, type: "just" }}
+      <Text
+        transform={isInView ? "none" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s"
         fontFamily="goudy"
         fontSize="40px"
         textAlign="center"
         mb="50px"
       >
         CRAFTED LIVING OF SKY HIGH LIFE AND AMENITIES
-      </MtnTxt>
+      </Text>
       <Flex w="100%" h="100%" direction="column">
         {/* first-left-sec */}
         <Flex w="100%" h="100%" align="flex-start" justify="center">
           <Flex w="100%" h="100%" pr="25px">
-            <MtnImg
-              initial={{ opacity: 0 }}
-              animate={animateFade}
-              transition={{ delay: 3, duration: 2, type: "just" }}
+            <Image
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 4s"
               src="/images/sky-high/DECK1.jpg"
               boxShadow="dark-lg"
             />
           </Flex>
           <Flex w="100%" h="100%" align="flex-start" justify="center">
-            <MtnFlx
-              initial={{ y: -50, opacity: 0 }}
-              animate={animateY}
-              transition={{ delay: 1.5, duration: 2, type: "just" }}
+            <Flex
+              transform={isInView ? "none" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
               direction="column"
               align="center"
               pr="25px"
             >
-              {/* <MtnDvd
-                initial={{ opacity: 0 }}
-                animate={animateFade}
-                transition={{ delay: 3, duration: 2, type: "just" }}
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-                h="58px"
-              /> */}
-              <MtnDvd
+              <Divider
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -99,7 +67,7 @@ const FourthSec = () => {
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
               />
-            </MtnFlx>{" "}
+            </Flex>{" "}
             <Flex
               py="50px"
               w="100%"
@@ -107,78 +75,74 @@ const FourthSec = () => {
               direction="column"
               justify="center"
             >
-              <MtnHd
-                initial={{ opacity: 0 }}
-                animate={animateFade}
-                transition={{ delay: 1.5, duration: 2, type: "just" }}
+              <Heading
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 2s"
                 fontFamily="avenir"
                 fontSize="34px"
                 mb="15px"
               >
                 3 SKY DECKS
-              </MtnHd>
-              <MtnTxt
-                initial={{ opacity: 0 }}
-                animate={animateFade}
-                transition={{ delay: 1.5, duration: 2, type: "just" }}
+              </Heading>
+              <Text
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 2s"
                 fontFamily="veralaRound"
                 fontSize="16px"
                 mb="25px"
               >
                 Enjoy the panoramic sky views from different levels of the
                 tower.
-              </MtnTxt>
-              <MtnHd
-                initial={{ opacity: 0 }}
-                animate={animateFade}
-                transition={{ delay: 3, duration: 2, type: "just" }}
+              </Text>
+              <Heading
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 4s"
                 fontFamily="avenir"
                 fontSize="20px"
                 mb="15px"
               >
                 CAFE DECK
-              </MtnHd>
-              <MtnHd
-                initial={{ opacity: 0 }}
-                animate={animateFade}
-                transition={{ delay: 4.5, duration: 2, type: "just" }}
+              </Heading>
+              <Heading
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 6s"
                 fontFamily="avenir"
                 fontSize="20px"
                 mb="15px"
               >
                 KIDS AREA DECK
-              </MtnHd>
-              <MtnHd
-                initial={{ opacity: 0 }}
-                animate={animateFade}
-                transition={{ delay: 6, duration: 2, type: "just" }}
+              </Heading>
+              <Heading
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 8s"
                 fontFamily="avenir"
                 fontSize="20px"
               >
                 LOUNGE DECK
-              </MtnHd>
+              </Heading>
             </Flex>{" "}
           </Flex>
         </Flex>
         {/* first-right-sec */}
         <Flex w="100%" h="100%" align="center" justify="center">
-          <Flex w="100%" h="100%" my="25px" pr="25px">
-            <MtnImg
-              initial={{ opacity: 0 }}
-              animate={animateFade}
-              transition={{ delay: 4.5, duration: 2, type: "just" }}
-              src="/images/sky-high/DECK2.jpg"
-              boxShadow="dark-lg"
-            />
+          <Flex
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 6s"
+            w="100%"
+            h="100%"
+            my="25px"
+            pr="25px"
+          >
+            <Image src="/images/sky-high/DECK2.jpg" boxShadow="dark-lg" />
           </Flex>
-          <Flex w="100%" h="100%" my="25px">
-            <MtnImg
-              initial={{ opacity: 0 }}
-              animate={animateFade}
-              transition={{ delay: 6, duration: 2, type: "just" }}
-              src="/images/sky-high/DECK3.jpg"
-              boxShadow="dark-lg"
-            />
+          <Flex
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s 8s"
+            w="100%"
+            h="100%"
+            my="25px"
+          >
+            <Image src="/images/sky-high/DECK3.jpg" boxShadow="dark-lg" />
           </Flex>
         </Flex>
       </Flex>
@@ -192,10 +156,10 @@ const FourthSec = () => {
             Sunrises.
           </Text>
         </Flex>
-        <MtnFlx
-          initial={{ opacity: 0, y: -100 }}
-          animate={animateY}
-          transition={{ duration: 2, type: "just" }}
+        <Flex
+          transform={isInView ? "none" : "translateY(-50px)"}
+          opacity={isInView ? "1" : "0"}
+          transition="all 2s 2s"
           direction="column"
           align="center"
           px="25px"
@@ -215,7 +179,7 @@ const FourthSec = () => {
             boxShadow="0px 0px 0px 3px #B88746"
             borderRadius="50%"
           />
-        </MtnFlx>
+        </Flex>
         <Flex w="100%">
           <Image src="/images/sky-high/TERRACE.jpg" boxShadow="dark-lg" />
         </Flex>
