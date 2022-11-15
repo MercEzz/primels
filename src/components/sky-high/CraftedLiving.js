@@ -193,14 +193,14 @@ const FourthSec = () => {
             width="30px"
             backgroundColor="#DFBD69"
             border="3px solid white"
-            boxShadow="0px 0px 0px 3px #B88746 blur"
+            boxShadow="0px 0px 0px 3px #B88746 opacity(25) blur"
             borderRadius="50%"
           />
         </Flex>
         <Flex position="relative" w="100%">
           <Image
             position="absolute"
-            right="6.25"
+            right="0rem"
             w="46rem"
             h="23rem"
             src="/images/sky-high/TERRACE.jpg"
