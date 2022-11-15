@@ -12,7 +12,15 @@ import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-
+import feb2019 from "../news-and-media/PRIME-REALTY-REPORT/FEBRUARY 2019.PNG";
+import april2019 from "../news-and-media/PRIME-REALTY-REPORT/APRIL 2019.PNG";
+import may2019 from "../news-and-media/PRIME-REALTY-REPORT/MAY 2019.PNG";
+import june2019 from "../news-and-media/PRIME-REALTY-REPORT/JUNE 2019.PNG";
+import july2019 from "../news-and-media/PRIME-REALTY-REPORT/JULY 2019.PNG";
+import spet2019 from "../news-and-media/PRIME-REALTY-REPORT/SEPTEMBER 2019.PNG";
+import oct2019 from "../news-and-media/PRIME-REALTY-REPORT/OCTOBER 2019.PNG";
+import nov2019 from "../news-and-media/PRIME-REALTY-REPORT/NOVEMBER 2019.PNG";
+import dec2019 from "../news-and-media/PRIME-REALTY-REPORT/DECEMBER 2019.PNG";
 const LastSec = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -203,31 +211,31 @@ export default LastSec;
 
 const primeReport = [
   {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/FEBRUARY 2019.PNG",
+    img: feb2019,
   },
   {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/APRIL 2019.PNG",
+    img: april2019,
   },
   {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/MAY 2019.PNG",
+    img: may2019,
   },
   {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/JUNE 2019.PNG",
+    img: june2019,
   },
   {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/JULY 2019.PNG",
+    img: july2019,
   },
   {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/SEPTEMBER 2019.PNG",
+    img: spet2019,
   },
   {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/OCTOBER 2019.PNG",
+    img: oct2019,
   },
   {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/NOVEMBER 2019.PNG",
+    img: nov2019,
   },
   {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/DECEMBER 2019.PNG",
+    img: dec2019,
   },
 
   {

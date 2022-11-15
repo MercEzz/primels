@@ -3,6 +3,16 @@ import { Flex, Heading, Text, Box, IconButton, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useInView } from "framer-motion";
+import event1 from "../news-and-media/EVENTS1.jpeg";
+import event2 from "../news-and-media/EVENTS2.jpeg";
+import event3 from "../news-and-media/EVENTS3.jpeg";
+import event4 from "../news-and-media/EVENTS4.jpeg";
+import event5 from "../news-and-media/EVENTS5.jpeg";
+import event6 from "../news-and-media/EVENTS6.jpeg";
+import event7 from "../news-and-media/EVENTS7.jpeg";
+import event8 from "../news-and-media/EVENTS8.jpeg";
+import event9 from "../news-and-media/EVENTS9.jpeg";
+import event10 from "../news-and-media/EVENTS10.jpeg";
 
 const ThirdSec = () => {
   const ref = useRef(null);
@@ -190,16 +200,16 @@ const primeEvents = [
 ];
 
 const primeEvents2 = [
-  { id: 1, width: "520px", img: "/images/news-and-media/EVENTS1.jpeg" },
-  { id: 2, width: "700px", img: "/images/news-and-media/EVENTS2.jpeg" },
-  { id: 3, width: "520px", img: "/images/news-and-media/EVENTS3.jpeg" },
-  { id: 4, width: "700px", img: "/images/news-and-media/EVENTS4.jpeg" },
-  { id: 5, width: "520px", img: "/images/news-and-media/EVENTS5.jpeg" },
-  { id: 6, width: "700px", img: "/images/news-and-media/EVENTS6.jpeg" },
-  { id: 7, width: "520px", img: "/images/news-and-media/EVENTS7.jpeg" },
-  { id: 8, width: "700px", img: "/images/news-and-media/EVENTS8.jpeg" },
-  { id: 9, width: "520px", img: "/images/news-and-media/EVENTS9.jpeg" },
-  { id: 10, width: "700px", img: "/images/news-and-media/EVENTS10.jpeg" },
+  { id: 1, width: "520px", img: event1 },
+  { id: 2, width: "700px", img: event2 },
+  { id: 3, width: "520px", img: event3 },
+  { id: 4, width: "700px", img: event4 },
+  { id: 5, width: "520px", img: event5 },
+  { id: 6, width: "700px", img: event6 },
+  { id: 7, width: "520px", img: event7 },
+  { id: 8, width: "700px", img: event8 },
+  { id: 9, width: "520px", img: event9 },
+  { id: 10, width: "700px", img: event10 },
 ];
 
 export default ThirdSec;

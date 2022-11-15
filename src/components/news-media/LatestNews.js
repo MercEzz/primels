@@ -8,10 +8,18 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Slider from "react-slick";
-
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+// images
+import hindu from "../news-and-media/THE-HINDU.png";
+import news2 from "../news-and-media/NEWS2.jpg";
+import news4 from "../news-and-media/NEWS4.jpg";
+import businessStd from "../news-and-media/BUSINESS-STANDARD.png";
+import news7 from "../news-and-media/NEWS7.jpg";
+import news8 from "../news-and-media/NEWS8.jpg";
+import news9 from "../news-and-media/NEWS9.jpg";
+import news10 from "../news-and-media/NEWS10.jpg";
 
 const FifthSec = () => {
   const ref = useRef(null);
@@ -179,43 +187,43 @@ export default FifthSec;
 
 const primeReport = [
   {
-    img: "/images/news-and-media/THE-HINDU.PNG",
+    img: hindu,
     text: "INVESTING IN NORTH CHENNAI : WHAT YOU DIDN’T KNOW",
   },
   {
-    img: "/images/news-and-media/NEWS2.jpg",
+    img: news2,
     text: "NORTH CHENNAI : YOUR BEST BET",
   },
   {
-    img: "/images/news-and-media/THE-HINDU.PNG",
+    img: hindu,
     text: "CHENNAI PERIPHERAL RING ROAD WORK GETS A BOOST",
   },
   {
-    img: "/images/news-and-media/NEWS4.jpg",
+    img: news4,
     text: "NORTH CHENNAI - TURNING TO WORLD CLASS ECONOMIC ZONE",
   },
   {
-    img: "/images/news-and-media/BUSINESS-STANDARD.PNG",
+    img: businessStd,
     text: "Tata Projects wins Rs 2,100 cr Chennai Peripheral Ring Road Project phase-1",
   },
   {
-    img: "/images/news-and-media/THE-HINDU.PNG",
+    img: hindu,
     text: "RS. 13,314 CRORE INFRASTRUCTURE UPGRADE FOR PONNERI",
   },
   {
-    img: "/images/news-and-media/NEWS7.jpg",
+    img: news7,
     text: "PONNERI TO DEVELOP AS A MEGA ENGINEERING HUB",
   },
   {
-    img: "/images/news-and-media/NEWS8.jpg",
+    img: news8,
     text: "PONNERI - THE ULTIMATE REAL ESTATE DESTINATION OF NORTH CHENNAI",
   },
   {
-    img: "/images/news-and-media/NEWS9.jpg",
+    img: news9,
     text: "INDUSTRIAL PARKS ON AN UPSWING",
   },
   {
-    img: "/images/news-and-media/NEWS10.jpg",
+    img: news10,
     text: "POURING INVESTMENTS IN NORTH CHENNAI",
   },
 ];
