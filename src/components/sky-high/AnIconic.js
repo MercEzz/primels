@@ -6,17 +6,20 @@ import {
   Divider,
   Text,
 } from "@chakra-ui/react";
-import { useInView } from "framer-motion";
+// import { useInView } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import React, { useState } from "react";
 
 import { useRef } from "react";
 import Slider from "react-slick";
 
+import intro1 from "../sky-high imgs/INTRO1.jpg";
+import intro2 from "../sky-high imgs/INTRO2.jpg";
+
 const SecondSec = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
-    once: true,
-    margin: "0px 100px -50px 0px",
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "50px",
   });
 
   const [slider, setSlider] = useState(null);
@@ -42,8 +45,8 @@ const SecondSec = () => {
       py="100px"
     >
       <Heading
-        transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-        opacity={isInView ? "1" : "0"}
+        transform={inView ? "translateY(0)" : "translateY(-50px)"}
+        opacity={inView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
         fontSize="40px"
@@ -57,15 +60,15 @@ const SecondSec = () => {
       </Heading>
       <Flex px="100px" w="100%" h="100%" align="center" justify="center">
         <Flex
-          transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-          opacity={isInView ? "1" : "0"}
+          transform={inView ? "translateY(0)" : "translateY(-50px)"}
+          opacity={inView ? "1" : "0"}
           transition="all 2s"
           w="100%"
           h="100%"
         >
           <Box
-            transform={isInView ? "translateX(0)" : "translateX(-100px)"}
-            opacity={isInView ? "1" : "0"}
+            transform={inView ? "translateX(0)" : "translateX(-100px)"}
+            opacity={inView ? "1" : "0"}
             transition="all 2s 2s"
             position={"relative"}
             height={"568px"}
@@ -149,8 +152,8 @@ const SecondSec = () => {
 
         <Flex h="100%" alignSelf="flex-start">
           <Flex
-            transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-            opacity={isInView ? "1" : "0"}
+            transform={inView ? "translateY(0)" : "translateY(-50px)"}
+            opacity={inView ? "1" : "0"}
             transition="all 2s 2s"
             direction="column"
             align="center"
@@ -175,7 +178,7 @@ const SecondSec = () => {
         </Flex>
         <Flex w="100%" h="100%" direction="column" alignSelf="center">
           <Text
-            opacity={isInView ? "1" : "0"}
+            opacity={inView ? "1" : "0"}
             transition="all 2s 2s"
             mb="15px"
             fontFamily="veralaRound"
@@ -186,7 +189,7 @@ const SecondSec = () => {
             A new world of luxury has taken shape in North Chennai, Ponneri.{" "}
           </Text>
           <Flex
-            opacity={isInView ? "1" : "0"}
+            opacity={inView ? "1" : "0"}
             transition="all 2s 4s"
             w="271px"
             borderRadius="10px"
@@ -199,7 +202,7 @@ const SecondSec = () => {
             </Text>
           </Flex>
           <Flex
-            opacity={isInView ? "1" : "0"}
+            opacity={inView ? "1" : "0"}
             transition="all 2s 6s"
             w="271px"
             borderRadius="10px"
@@ -212,7 +215,7 @@ const SecondSec = () => {
             </Text>
           </Flex>
           <Flex
-            opacity={isInView ? "1" : "0"}
+            opacity={inView ? "1" : "0"}
             transition="all 2s 8s"
             w="271px"
             borderRadius="10px"
@@ -225,7 +228,7 @@ const SecondSec = () => {
             </Text>
           </Flex>
           <Flex
-            opacity={isInView ? "1" : "0"}
+            opacity={inView ? "1" : "0"}
             transition="all 2s 10s"
             w="271px"
             borderRadius="10px"
@@ -244,7 +247,4 @@ const SecondSec = () => {
 
 export default SecondSec;
 
-const introImgs = [
-  "/images/sky-high/INTRO1.jpg",
-  "/images/sky-high/INTRO2.jpg",
-];
+const introImgs = [intro1, intro2];

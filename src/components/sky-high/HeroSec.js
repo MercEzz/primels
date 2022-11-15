@@ -1,6 +1,7 @@
 import { Box, Flex, Image, IconButton, Text } from "@chakra-ui/react";
 import React, { useState, useRef } from "react";
 import Slider from "react-slick";
+import banner from "../sky-high imgs/BANNER2.jpg";
 
 const FirstSec = () => {
   const ref = useRef(null);
@@ -108,7 +109,4 @@ const FirstSec = () => {
 
 export default FirstSec;
 
-const bannerImgs = [
-  "/images/sky-high/BANNER2.jpg",
-  "/images/sky-high/BANNER2.jpg",
-];
+const bannerImgs = [banner, banner];

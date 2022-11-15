@@ -1,13 +1,14 @@
 import { Flex, Image } from "@chakra-ui/react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import React, { useEffect } from "react";
 import { useRef } from "react";
+// images
+import Banner from "../sky-high imgs/3RD SECTION.jpg";
+import bannerasset from "../sky-high imgs/3RD SECTION ASSET.png";
 
 const ThirdSec = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
-    once: true,
-    margin: "0px 100px -50px 0px",
+  const { ref, inView } = useInView({
+    threshold: 0,
   });
 
   return (
@@ -20,22 +21,22 @@ const ThirdSec = () => {
       pos="relative"
     >
       <Image
-        transform={isInView ? "scale(1)" : "scale(0.6)"}
-        opacity={isInView ? "1" : "0"}
+        transform={inView ? "scale(1)" : "scale(0.6)"}
+        opacity={inView ? "1" : "0"}
         transition="all 2s"
         w="100%"
         h="100%"
-        src="/images/sky-high/3RD SECTION.jpg"
+        src={Banner}
         objectPosition="30% 30%"
         bgRepeat="no-repeat"
         objectFit="cover"
       />
       <Image
-        transform={isInView ? "none" : "translateX(-100px)"}
-        opacity={isInView ? "1" : "0"}
+        transform={inView ? "none" : "translateX(-100px)"}
+        opacity={inView ? "1" : "0"}
         transition="all 2s"
         h="200px"
-        src="/images/sky-high/3RD SECTION ASSET.png"
+        src={bannerasset}
         pos="absolute"
         top="125px"
         right="150px"
