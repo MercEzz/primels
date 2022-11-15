@@ -93,7 +93,7 @@ const SecondSec = () => {
                 <Box
                   key={prime.id}
                   w="46rem"
-                  height="29rem"
+                  height="35.5rem"
                   position="relative"
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
