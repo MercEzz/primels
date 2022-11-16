@@ -96,7 +96,7 @@ const AreteSec = () => {
             textAlign="center"
             fontFamily="goudy"
             fontSize="2.5rem"
-            pb="25px"
+            pb="1.563rem"
           >
             ARETE PLAZA
           </Text>
