@@ -27,6 +27,7 @@ import company from "../commercial-properties imgs/company.svg";
 import port from "../commercial-properties imgs/ports.svg";
 import industry from "../commercial-properties imgs/INDUSTRY.svg";
 import locationadv from "../commercial-properties imgs/Asset 1-100.jpg";
+import mall from "../commercial-properties imgs/Arete Mall.jpg";
 import DropDown from "./DropDown";
 
 const AreteSec = () => {
@@ -84,6 +85,7 @@ const AreteSec = () => {
             ARETE MALL
           </Button>
         </Flex>
+        <AretePlaza />
       </Flex>
       <DropDown />
     </>
