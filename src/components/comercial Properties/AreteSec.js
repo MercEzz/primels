@@ -47,7 +47,7 @@ const AreteSec = () => {
             mr="0.625rem"
             p="1.563rem"
             borderRadius="none"
-            fontSize="1rem"
+            fontSize="1.25rem"
             fontFamily="avenir"
             fontWeight="bold"
             _hover={{
@@ -69,7 +69,7 @@ const AreteSec = () => {
             // bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             borderRadius="none"
             color="black"
-            fontSize="1rem"
+            fontSize="1.25rem"
             fontFamily="avenir"
             fontWeight="bold"
             // onClick={() => {
@@ -103,7 +103,7 @@ const AreteSec = () => {
           <Text
             fontFamily="veralaRound"
             fontSize="1.125rem"
-            pb="3.125rem"
+            pb="1.563rem"
             textAlign="center"
           >
             First time ever in North Chennai a tallest tower with G+1 - 20
@@ -125,10 +125,11 @@ const AreteSec = () => {
           </Flex>
         </Flex>
         <Flex w="100%" h="100%" align="flex-start" justify="space-between">
-          <Flex alignSelf="flex-start">
-            <Image h="33rem" src={aretefloor} />
+          <Flex w="60%" alignSelf="flex-start">
+            <Image w="100%" h="29.25rem" src={aretefloor} />
           </Flex>
           <Flex
+            w="10%"
             h="100%"
             direction="column"
             justify="center"
@@ -153,7 +154,13 @@ const AreteSec = () => {
               my="1"
             />
           </Flex>
-          <Flex h="100%" direction="column" alignSelf="center" justify="center">
+          <Flex
+            w="30%"
+            h="100%"
+            direction="column"
+            alignSelf="center"
+            justify="center"
+          >
             <Heading fontFamily="avenir" fontSize="2.125rem" pb="1.25rem">
               FLOOR PLAN
             </Heading>
@@ -170,6 +177,7 @@ const AreteSec = () => {
               450-650 SQFT.
             </Heading>
             <Button
+              w="fit-content"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
               color="white"
               mr="0.625rem"
