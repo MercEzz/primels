@@ -35,9 +35,10 @@ const ReferTabs = () => {
       <Flex w="100%">
         <Button
           w="100%"
-          bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+          bgColor="white"
+          bgGradient={active ? "linear(to-b, #B88746 ,#DFBD69)" : "white"}
           border="1px solid #B88746"
-          color="white"
+          color={active ? "white" : "black"}
           mr="0.625rem"
           p="1.563rem"
           borderRadius="none"
@@ -50,7 +51,7 @@ const ReferTabs = () => {
           onClick={() => {
             setActive(true);
           }}
-          // _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+          _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
         >
           REFER A FRIEND
         </Button>
@@ -58,21 +59,21 @@ const ReferTabs = () => {
           ml="0.625rem"
           w="100%"
           bgColor="white"
+          color={active ? "black" : "white"}
           p="1.563rem"
           border="1px solid #B88746"
-          // bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+          bgGradient={active ? "none" : "linear(to-b, #B88746 ,#DFBD69)"}
           borderRadius="none"
-          color="black"
           fontSize="1rem"
           fontFamily="avenir"
           fontWeight="bold"
           onClick={() => {
             setActive(false);
           }}
-          // _hover={{
-          //   bgGradient: "linear(to-b, #DFBD69, #B88746)",
-          // }}
-          // _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+          _hover={{
+            bgGradient: "linear(to-b, #DFBD69, #B88746)",
+          }}
+          _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
         >
           BOOK A VISIT
         </Button>
