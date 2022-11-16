@@ -23,6 +23,8 @@ import arete2 from "../commercial-properties imgs/ARETE PLAZA4.jpg";
 import arete3 from "../commercial-properties imgs/ARETE PLAZA3.jpg";
 import aretefloor from "../commercial-properties imgs/COMERCIAL.jpg";
 import institute from "../commercial-properties imgs/INSTITUTES.svg";
+import company from "../commercial-properties imgs/company.svg";
+import port from "../commercial-properties imgs/ports.svg";
 import industry from "../commercial-properties imgs/INDUSTRY.svg";
 import locationadv from "../commercial-properties imgs/Asset 1-100.jpg";
 import DropDown from "./DropDown";
@@ -237,7 +239,7 @@ const AreteSec = () => {
               <Flex pb="1.5rem">
                 <Box
                   borderRadius="50%"
-                  p="0.625rem"
+                  p="1rem"
                   bgGradient="linear(to-b,#B88746, #DFBD69)"
                   direction="column"
                   w="5rem"
@@ -258,19 +260,7 @@ const AreteSec = () => {
                 </VStack>
               </Flex>
               <Flex pb="1.5rem">
-                <Box
-                  borderRadius="50%"
-                  p="0.625rem"
-                  bgGradient="linear(to-b,#B88746, #DFBD69)"
-                  direction="column"
-                  w="5rem"
-                  h="5rem"
-                  align="center"
-                  mr="1rem"
-                  _hover={{ cursor: "pointer" }}
-                >
-                  <Image w="3.125rem" h="3.125rem" src={institute} />
-                </Box>
+                <Image w="5rem" h="5rem" src={company} mr="1rem" />
                 <VStack align="flex-start">
                   <Heading fontFamily="avenir" fontSize="2.125rem">
                     2000+
@@ -283,7 +273,7 @@ const AreteSec = () => {
               <Flex pb="1.5rem">
                 <Box
                   borderRadius="50%"
-                  p="0.625rem"
+                  p="1rem"
                   bgGradient="linear(to-b,#B88746, #DFBD69)"
                   direction="column"
                   w="5rem"
@@ -304,19 +294,7 @@ const AreteSec = () => {
                 </VStack>
               </Flex>{" "}
               <Flex pb="1.5rem">
-                <Box
-                  borderRadius="50%"
-                  p="0.625rem"
-                  bgGradient="linear(to-b,#B88746, #DFBD69)"
-                  direction="column"
-                  w="5rem"
-                  h="5rem"
-                  align="center"
-                  mr="1rem"
-                  _hover={{ cursor: "pointer" }}
-                >
-                  <Image w="3.125rem" h="3.125rem" src={industry} />
-                </Box>
+                <Image w="5rem" h="5rem" src={port} mr="1rem" />
                 <VStack align="flex-start">
                   <Heading fontFamily="avenir" fontSize="2.125rem">
                     3
