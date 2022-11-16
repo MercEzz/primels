@@ -92,11 +92,12 @@ const ReferAFriend = () => {
         fontWeight="400"
         fontSize="2.5rem"
         fontFamily="goudy"
-        py="3.125rem"
+        pt="3.125rem"
+        pb="1.875rem"
       >
         HOW IT WORKS?
       </Heading>
-      <Flex w="100%" columnGap="1.25rem" pb="3.125rem">
+      <Flex w="100%" columnGap="1.25rem" pb="1.875rem">
         <Flex w="100%" h="100%" direction="column">
           <Heading fontFamily="avenir" fontSize="1.5rem">
             STEP 1
@@ -123,7 +124,7 @@ const ReferAFriend = () => {
             Fill up the form on website & submit the details of as many friends
             & family members you would like to refer.
           </Text>
-          <Image w="100%" h="18.75rem" src={img1} />
+          <Image w="100%" h="16rem" p="2rem" src={img1} />
         </Flex>
         <Flex w="100%" direction="column">
           <Heading fontFamily="avenir" fontSize="1.5rem">
@@ -151,7 +152,7 @@ const ReferAFriend = () => {
             Your provided referral will be contacted by our team and complete
             assistance will be provided in the booking process.
           </Text>{" "}
-          <Image w="100%" h="15.625rem" src={img2} />
+          <Image w="100%" h="14.625rem" p="2rem" src={img2} />
         </Flex>
         <Flex w="100%" direction="column">
           <Heading fontFamily="avenir" fontSize="1.5rem">
@@ -179,10 +180,10 @@ const ReferAFriend = () => {
             Every time your referral becomes a successful booking, you’ll earn
             rewards upto Rs 1 Lakh.
           </Text>
-          <Image w="100%" h="18.75rem" src={img3} />
+          <Image w="100%" h="16.75rem" p="2rem" src={img3} />
         </Flex>
       </Flex>
-      <Flex w="100%" h="100%" pt="3.125rem" direction="column" pb="6.25rem">
+      <Flex w="100%" h="100%" pt="3.125rem" direction="column" pb="5rem">
         <form
           style={{
             width: "100%",
@@ -540,7 +541,7 @@ const BookAVisit = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex w="100%" h="100%" pt="3.125rem" direction="column" pb="6.25rem">
+      <Flex w="100%" h="100%" pt="5rem" direction="column" pb="5rem">
         <form
           style={{
             width: "100%",
