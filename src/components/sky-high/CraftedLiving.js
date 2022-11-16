@@ -179,7 +179,6 @@ const FourthSec = () => {
           transition="all 2s 2s"
           direction="column"
           align="center"
-          
         >
           <Divider
             orientation="vertical"

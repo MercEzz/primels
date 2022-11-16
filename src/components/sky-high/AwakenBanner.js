@@ -1,15 +1,20 @@
 import { Box, Flex, Image, IconButton, Text } from "@chakra-ui/react";
-import { useInView } from "framer-motion";
+//import { useInView } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import React, { useState } from "react";
 
-import { useRef } from "react";
+//import { useRef } from "react";
 import Slider from "react-slick";
 
 const SeventhSec = () => {
   const [slider, setSlider] = useState(null);
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "50px",
+  });
 
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  //const ref = useRef(null);
+  //const isInView = useInView(ref, { once: true });
 
   const settings = {
     draggable: false,
@@ -26,9 +31,9 @@ const SeventhSec = () => {
   return (
     <Flex ref={ref} w="100%" h="100vh">
       <Box
-        transform={isInView ? "scale(1)" : "scale(0.6)"}
+        transform={inView ? "scale(1)" : "scale(0.6)"}
         transition="all 2s"
-        opacity={isInView ? "1" : "0"}
+        opacity={inView ? "1" : "0"}
         position={"relative"}
         height={"100%"}
         width={"100%"}

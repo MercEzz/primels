@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import { useInView } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+//import { useInView } from "framer-motion";
 import {
   Flex,
   Heading,
@@ -16,9 +17,12 @@ import {
 } from "@chakra-ui/react";
 
 const EightSec = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
+  //const ref = useRef(null);
+  //const isInView = useInView(ref, { once: true });
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "50px",
+  });
   return (
     <Flex
       ref={ref}
@@ -33,8 +37,8 @@ const EightSec = () => {
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
       <Text
-        transform={isInView ? "none" : "translateY(-50px)"}
-        opacity={isInView ? "1" : "0"}
+        transform={inView ? "none" : "translateY(-50px)"}
+        opacity={inView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
         fontSize="40px"
@@ -44,7 +48,7 @@ const EightSec = () => {
         A delightful mix of sky residences
       </Text>
       <Heading
-        opacity={isInView ? "1" : "0"}
+        opacity={inView ? "1" : "0"}
         transition="all 2s 1s"
         fontFamily="avenir"
         fontSize="34px"
@@ -54,7 +58,7 @@ const EightSec = () => {
         FOR CO-LIVING, STUDENT HOUSING & SERVICED APARTMENTS
       </Heading>
       <Text
-        opacity={isInView ? "1" : "0"}
+        opacity={inView ? "1" : "0"}
         transition="all 2s 1s"
         fontFamily="veralaRound"
         fontSize="16px"
@@ -69,8 +73,8 @@ const EightSec = () => {
       <Flex w="100%" h="100%" align="center" justify="center">
         <Flex mr="15px">
           <Image
-            transform={isInView ? "none" : "translateX(-100px)"}
-            opacity={isInView ? "1" : "0"}
+            transform={inView ? "none" : "translateX(-100px)"}
+            opacity={inView ? "1" : "0"}
             transition="all 2s 2s"
             w="100%"
             src="/images/sky-high/FLOOR PLAN1.jpg"
@@ -78,8 +82,8 @@ const EightSec = () => {
         </Flex>
         <Flex>
           <Image
-            transform={isInView ? "none" : "translateX(100px)"}
-            opacity={isInView ? "1" : "0"}
+            transform={inView ? "none" : "translateX(100px)"}
+            opacity={inView ? "1" : "0"}
             transition="all 2s 2s"
             w="100%"
             src="/images/sky-high/FLOOR PLAN2.jpg"
@@ -87,7 +91,7 @@ const EightSec = () => {
         </Flex>
       </Flex>
       <Flex
-        opacity={isInView ? "1" : "0"}
+        opacity={inView ? "1" : "0"}
         transition="all 2s 3s"
         w="100%"
         h="100%"
@@ -197,7 +201,7 @@ const EightSec = () => {
           </TableContainer>
         </Flex>
         <Button
-          opacity={isInView ? "1" : "0"}
+          opacity={inView ? "1" : "0"}
           transition="all 2s 3s"
           w="151px"
           h="51px"
