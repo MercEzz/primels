@@ -21,7 +21,7 @@ import React from "react";
 import arete1 from "../commercial-properties imgs/ARETE PLAZA2.jpg";
 import arete2 from "../commercial-properties imgs/ARETE PLAZA4.jpg";
 import arete3 from "../commercial-properties imgs/ARETE PLAZA3.jpg";
-import aretefloor from "../commercial-properties imgs/A7 commercial with C.A_pages-to-jpg-0001.jpg";
+import aretefloor from "../commercial-properties imgs/COMERCIAL.jpg";
 import institute from "../commercial-properties imgs/INSTITUTES.svg";
 import industry from "../commercial-properties imgs/INDUSTRY.svg";
 import locationadv from "../commercial-properties imgs/Asset 1-100.jpg";
@@ -90,7 +90,7 @@ const AreteSec = () => {
           align="center"
           justify="center"
           pt="3.125rem"
-          pb="6.25rem"
+          pb="5rem"
         >
           <Text
             textAlign="center"
@@ -126,7 +126,12 @@ const AreteSec = () => {
         </Flex>
         <Flex w="100%" h="100%" align="flex-start" justify="space-between">
           <Flex w="60%" alignSelf="flex-start">
-            <Image w="100%" h="29.25rem" src={aretefloor} />
+            <Image
+              w="100%"
+              h="29.25rem"
+              src={aretefloor}
+              border="1px solid grey"
+            />
           </Flex>
           <Flex
             w="10%"
@@ -138,7 +143,7 @@ const AreteSec = () => {
           >
             {" "}
             <Divider
-              h="8rem"
+              h="6rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -198,7 +203,7 @@ const AreteSec = () => {
           w="100%"
           h="100%"
           direction="column"
-          pt="6.25rem"
+          pt="5rem"
           align="center"
           justify="center"
           pb="3.125rem"
@@ -206,11 +211,12 @@ const AreteSec = () => {
           <Text fontFamily="goudy" pb="3.125rem" fontSize="2.5rem">
             LOCATION ADVANTAGE
           </Text>
-          <Flex w="100%" h="100%" justify="space-between" pb="1.563rem">
+          <Flex w="100%" h="100%" justify="space-between" pb="3.125rem">
             <Flex
+              w="30%"
               h="100%"
               direction="column"
-              align="flex-start"
+              alignSelf="center"
               justify="center"
             >
               <Flex pb="1.5rem">
@@ -332,7 +338,14 @@ const AreteSec = () => {
               />
             </Flex>
             <Flex>
-              <Image boxShadow="lg" w="45rem" h="30rem" src={locationadv} />
+              <Image
+                boxShadow="lg"
+                w="45rem"
+                h="29.25rem"
+                objectFit="cover"
+                objectPosition="center"
+                src={locationadv}
+              />
             </Flex>
           </Flex>
           <Flex w="100%">
@@ -498,8 +511,8 @@ const AreteSec = () => {
         <Flex
           w="100%"
           h="100%"
-          pt="3.125rem"
-          pb="6.25rem"
+          pt="1.875rem"
+          pb="5rem"
           align="center"
           justify="center"
           direction="column"
@@ -508,7 +521,7 @@ const AreteSec = () => {
             fontSize="2.5rem"
             fontFamily="goudy"
             textTransform="uppercase"
-            pb="3.125rem"
+            pb="1.563rem"
           >
             pre book & avail best offers
           </Text>
