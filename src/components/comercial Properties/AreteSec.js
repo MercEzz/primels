@@ -38,9 +38,8 @@ const AreteSec = () => {
         direction="column"
         align="center"
         justify="center"
-        px="6.25rem"
       >
-        <Flex w="100%">
+        <Flex w="100%" px="6.25rem">
           <Button
             w="100%"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
@@ -85,70 +84,245 @@ const AreteSec = () => {
             ARETE MALL
           </Button>
         </Flex>
-        <Flex
-          w="100%"
-          h="100%"
-          direction="column"
-          align="center"
-          justify="center"
-          pt="3.125rem"
-          pb="5rem"
+      </Flex>
+      <DropDown />
+    </>
+  );
+};
+
+export default AreteSec;
+
+const AretePlaza = () => {
+  return (
+    <>
+      {" "}
+      <Flex
+        w="100%"
+        h="100%"
+        direction="column"
+        align="center"
+        justify="center"
+        px="6.25rem"
+        pt="3.125rem"
+        pb="5rem"
+      >
+        <Text
+          textAlign="center"
+          fontFamily="goudy"
+          fontSize="2.5rem"
+          pb="1.563rem"
         >
-          <Text
-            textAlign="center"
-            fontFamily="goudy"
-            fontSize="2.5rem"
-            pb="1.563rem"
-          >
-            ARETE PLAZA
-          </Text>
-          <Text
-            fontFamily="veralaRound"
-            fontSize="1.125rem"
-            pb="1.563rem"
-            textAlign="center"
-          >
-            First time ever in North Chennai a tallest tower with G+1 - 20
-            Retail Spaces, an impeccable mix of Shopping, HyperMarket, Pharmacy,
-            Fine Dining & Entertainment.
-          </Text>
-          <Flex w="100%" gap="1.25rem">
-            <Flex w="100%">
-              <Image
-                transition="all .2s"
-                _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
-                h="22rem"
-                src={arete1}
-              />
-            </Flex>
-            <Flex w="100%">
-              {" "}
-              <Image
-                transition="all .2s"
-                _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
-                h="22rem"
-                src={arete2}
-              />
-            </Flex>
-            <Flex w="100%">
-              {" "}
-              <Image
-                transition="all .2s"
-                _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
-                h="22rem"
-                src={arete3}
-              />
-            </Flex>
+          ARETE PLAZA
+        </Text>
+        <Text
+          fontFamily="veralaRound"
+          fontSize="1.125rem"
+          pb="1.563rem"
+          textAlign="center"
+        >
+          First time ever in North Chennai a tallest tower with G+1 - 20 Retail
+          Spaces, an impeccable mix of Shopping, HyperMarket, Pharmacy, Fine
+          Dining & Entertainment.
+        </Text>
+        <Flex w="100%" gap="1.25rem">
+          <Flex w="100%">
+            <Image
+              transition="all .2s"
+              _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+              h="22rem"
+              src={arete1}
+            />
+          </Flex>
+          <Flex w="100%">
+            {" "}
+            <Image
+              transition="all .2s"
+              _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+              h="22rem"
+              src={arete2}
+            />
+          </Flex>
+          <Flex w="100%">
+            {" "}
+            <Image
+              transition="all .2s"
+              _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+              h="22rem"
+              src={arete3}
+            />
           </Flex>
         </Flex>
-        <Flex w="100%" h="100%" align="flex-start" justify="space-between">
-          <Flex w="60%" alignSelf="flex-start">
-            <Image
-              w="100%"
-              h="29.25rem"
-              src={aretefloor}
-              border="1px solid grey"
-            />
+      </Flex>
+      <Flex
+        w="100%"
+        h="100%"
+        align="flex-start"
+        justify="space-between"
+        px="6.25rem"
+      >
+        <Flex w="65%" alignSelf="flex-start">
+          <Image
+            w="100%"
+            h="29.25rem"
+            src={aretefloor}
+            border="1px solid grey"
+          />
+        </Flex>
+        <Flex
+          w="10%"
+          h="100%"
+          direction="column"
+          justify="center"
+          align="center"
+          px="1.563rem"
+        >
+          {" "}
+          <Divider
+            h="6rem"
+            orientation="vertical"
+            border="3px solid"
+            borderColor="#DFBD69"
+            bgColor="#DFBD69"
+          />
+          <Box
+            height="1.875rem"
+            width="1.875rem"
+            backgroundColor="#DFBD69"
+            border="3px solid white"
+            boxShadow="0px 0px 0px 3px #B88746"
+            borderRadius="50%"
+            my="1"
+          />
+        </Flex>
+        <Flex
+          w="25%"
+          h="100%"
+          direction="column"
+          alignSelf="center"
+          justify="center"
+        >
+          <Heading fontFamily="avenir" fontSize="2.125rem" pb="1.25rem">
+            FLOOR PLAN
+          </Heading>
+          <Text fontFamily="veralaRound" fontSize="1.125rem" pb="0.625rem">
+            Typology
+          </Text>
+          <Heading fontFamily="avenir" fontSize="1.25rem" pb="1.25rem">
+            SHOPS/OFFICES
+          </Heading>
+          <Text fontFamily="veralaRound" fontSize="1.125rem" pb="0.625rem">
+            Carpet Area
+          </Text>
+          <Heading fontFamily="avenir" fontSize="1.25rem" pb="1.25rem">
+            450-650 SQFT.
+          </Heading>
+          <Button
+            w="fit-content"
+            bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+            color="white"
+            mr="0.625rem"
+            p="1rem"
+            fontSize="1rem"
+            fontFamily="avenir"
+            fontWeight="bold"
+            _hover={{
+              bgGradient: "linear(to-b, #DFBD69, #B88746)",
+            }}
+            _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+          >
+            CHECK PRICE
+          </Button>
+        </Flex>
+      </Flex>
+      <Flex
+        w="100%"
+        h="100%"
+        direction="column"
+        pt="5rem"
+        align="center"
+        justify="center"
+        pb="3.125rem"
+        px="6.25rem"
+      >
+        <Text fontFamily="goudy" pb="3.125rem" fontSize="2.5rem">
+          LOCATION ADVANTAGE
+        </Text>
+        <Flex w="100%" h="100%" justify="space-between" pb="3.125rem">
+          <Flex
+            w="28%"
+            h="100%"
+            direction="column"
+            alignSelf="center"
+            justify="center"
+          >
+            <Flex pb="1.5rem">
+              <Box
+                borderRadius="50%"
+                p="1rem"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="5rem"
+                h="5rem"
+                align="center"
+                mr="1rem"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image w="3.125rem" h="3.125rem" src={institute} />
+              </Box>
+              <VStack align="flex-start">
+                <Heading fontFamily="avenir" fontSize="2.125rem">
+                  100+
+                </Heading>
+                <Text fontFamily="veralaRound" fontSize="1rem">
+                  EDUCATIONAL INSTITUTES
+                </Text>
+              </VStack>
+            </Flex>
+            <Flex pb="1.5rem">
+              <Image w="5rem" h="5rem" src={company} mr="1rem" />
+              <VStack align="flex-start">
+                <Heading fontFamily="avenir" fontSize="2.125rem">
+                  2000+
+                </Heading>
+                <Text fontFamily="veralaRound" fontSize="1rem">
+                  COMPANIES NEARBY
+                </Text>
+              </VStack>
+            </Flex>{" "}
+            <Flex pb="1.5rem">
+              <Box
+                borderRadius="50%"
+                p="1rem"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="5rem"
+                h="5rem"
+                align="center"
+                mr="1rem"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image w="3.125rem" h="3.125rem" src={industry} />
+              </Box>
+              <VStack align="flex-start">
+                <Heading fontFamily="avenir" fontSize="2.125rem">
+                  2
+                </Heading>
+                <Text fontFamily="veralaRound" fontSize="1rem">
+                  LARGE INDUSTRIAL PARKS
+                </Text>
+              </VStack>
+            </Flex>{" "}
+            <Flex pb="1.5rem">
+              <Image w="5rem" h="5rem" src={port} mr="1rem" />
+              <VStack align="flex-start">
+                <Heading fontFamily="avenir" fontSize="2.125rem">
+                  3
+                </Heading>
+                <Text fontFamily="veralaRound" fontSize="1rem">
+                  MAJOR PORTS, SEZ
+                </Text>
+              </VStack>
+            </Flex>
           </Flex>
           <Flex
             w="10%"
@@ -160,7 +334,7 @@ const AreteSec = () => {
           >
             {" "}
             <Divider
-              h="6rem"
+              h="2rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -176,459 +350,300 @@ const AreteSec = () => {
               my="1"
             />
           </Flex>
-          <Flex
-            w="30%"
-            h="100%"
-            direction="column"
-            alignSelf="center"
-            justify="center"
-          >
-            <Heading fontFamily="avenir" fontSize="2.125rem" pb="1.25rem">
-              FLOOR PLAN
-            </Heading>
-            <Text fontFamily="veralaRound" fontSize="1.125rem" pb="0.625rem">
-              Typology
-            </Text>
-            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1.25rem">
-              SHOPS/OFFICES
-            </Heading>
-            <Text fontFamily="veralaRound" fontSize="1.125rem" pb="0.625rem">
-              Carpet Area
-            </Text>
-            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1.25rem">
-              450-650 SQFT.
-            </Heading>
-            <Button
-              w="fit-content"
-              bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-              color="white"
-              mr="0.625rem"
-              p="1rem"
-              fontSize="1rem"
-              fontFamily="avenir"
-              fontWeight="bold"
-              _hover={{
-                bgGradient: "linear(to-b, #DFBD69, #B88746)",
-              }}
-              _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
-            >
-              CHECK PRICE
-            </Button>
+          <Flex w="62%">
+            <Image
+              boxShadow="lg"
+              w="100%"
+              h="29.25rem"
+              objectFit="cover"
+              objectPosition="center"
+              src={locationadv}
+            />
           </Flex>
         </Flex>
-        <Flex
-          w="100%"
-          h="100%"
-          direction="column"
-          pt="5rem"
-          align="center"
-          justify="center"
-          pb="3.125rem"
-        >
-          <Text fontFamily="goudy" pb="3.125rem" fontSize="2.5rem">
-            LOCATION ADVANTAGE
-          </Text>
-          <Flex w="100%" h="100%" justify="space-between" pb="3.125rem">
-            <Flex
-              w="30%"
-              h="100%"
-              direction="column"
-              alignSelf="center"
-              justify="center"
-            >
-              <Flex pb="1.5rem">
-                <Box
-                  borderRadius="50%"
-                  p="1rem"
-                  bgGradient="linear(to-b,#B88746, #DFBD69)"
-                  direction="column"
-                  w="5rem"
-                  h="5rem"
-                  align="center"
-                  mr="1rem"
-                  _hover={{ cursor: "pointer" }}
-                >
-                  <Image w="3.125rem" h="3.125rem" src={institute} />
-                </Box>
-                <VStack align="flex-start">
-                  <Heading fontFamily="avenir" fontSize="2.125rem">
-                    100+
-                  </Heading>
-                  <Text fontFamily="veralaRound" fontSize="1rem">
-                    EDUCATIONAL INSTITUTES
-                  </Text>
-                </VStack>
-              </Flex>
-              <Flex pb="1.5rem">
-                <Image w="5rem" h="5rem" src={company} mr="1rem" />
-                <VStack align="flex-start">
-                  <Heading fontFamily="avenir" fontSize="2.125rem">
-                    2000+
-                  </Heading>
-                  <Text fontFamily="veralaRound" fontSize="1rem">
-                    COMPANIES NEARBY
-                  </Text>
-                </VStack>
-              </Flex>{" "}
-              <Flex pb="1.5rem">
-                <Box
-                  borderRadius="50%"
-                  p="1rem"
-                  bgGradient="linear(to-b,#B88746, #DFBD69)"
-                  direction="column"
-                  w="5rem"
-                  h="5rem"
-                  align="center"
-                  mr="1rem"
-                  _hover={{ cursor: "pointer" }}
-                >
-                  <Image w="3.125rem" h="3.125rem" src={industry} />
-                </Box>
-                <VStack align="flex-start">
-                  <Heading fontFamily="avenir" fontSize="2.125rem">
-                    2
-                  </Heading>
-                  <Text fontFamily="veralaRound" fontSize="1rem">
-                    LARGE INDUSTRIAL PARKS
-                  </Text>
-                </VStack>
-              </Flex>{" "}
-              <Flex pb="1.5rem">
-                <Image w="5rem" h="5rem" src={port} mr="1rem" />
-                <VStack align="flex-start">
-                  <Heading fontFamily="avenir" fontSize="2.125rem">
-                    3
-                  </Heading>
-                  <Text fontFamily="veralaRound" fontSize="1rem">
-                    MAJOR PORTS, SEZ
-                  </Text>
-                </VStack>
-              </Flex>
-            </Flex>
-            <Flex
-              w="10%"
-              h="100%"
-              direction="column"
-              justify="center"
-              align="center"
-              px="1.563rem"
-            >
-              {" "}
+        <Flex w="100%">
+          <Flex w="100%" direction="column">
+            {" "}
+            <Flex w="100%" align="center" pb="1.563rem">
               <Divider
-                h="2rem"
-                orientation="vertical"
+                orientation="horizontal"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
               <Box
                 height="1.875rem"
-                width="1.875rem"
+                width="4rem"
                 backgroundColor="#DFBD69"
                 border="3px solid white"
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
                 my="1"
+              />{" "}
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
               />
             </Flex>
-            <Flex w="60%">
-              <Image
-                boxShadow="lg"
-                w="100%"
-                h="29.25rem"
-                objectFit="cover"
-                objectPosition="center"
-                src={locationadv}
-              />
-            </Flex>
+            <Heading
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              pb="1rem"
+            >
+              5 MINS
+            </Heading>
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+              <ListItem pb="0.625rem">Velammal International School</ListItem>
+              <ListItem pb="0.625rem">Origin By Mahindra</ListItem>
+              <ListItem>Ponneri Railway Station</ListItem>
+            </UnorderedList>
           </Flex>
-          <Flex w="100%">
-            <Flex w="100%" direction="column">
-              {" "}
-              <Flex w="100%" align="center" pb="1.563rem">
-                <Divider
-                  orientation="horizontal"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width="4rem"
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />{" "}
-                <Divider
-                  orientation="horizontal"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-              </Flex>
-              <Heading
-                textAlign="center"
-                fontFamily="avenir"
-                fontSize="1.5rem"
-                pb="1rem"
-              >
-                5 MINS
-              </Heading>
-              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-                <ListItem pb="0.625rem">Velammal International School</ListItem>
-                <ListItem pb="0.625rem">Origin By Mahindra</ListItem>
-                <ListItem>Ponneri Railway Station</ListItem>
-              </UnorderedList>
-            </Flex>
-            <Flex w="100%" direction="column">
-              {" "}
-              <Flex w="100%" align="center" pb="1.563rem">
-                <Divider
-                  orientation="horizontal"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width="4rem"
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />{" "}
-                <Divider
-                  orientation="horizontal"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-              </Flex>
-              <Heading
-                textAlign="center"
-                fontFamily="avenir"
-                fontSize="1.5rem"
-                pb="1rem"
-              >
-                10 MINS
-              </Heading>
-              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-                <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
-                <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
-                <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
-                <ListItem>R.K.M. Engineering College</ListItem>
-              </UnorderedList>
-            </Flex>
-            <Flex w="100%" direction="column">
-              {" "}
-              <Flex w="100%" align="center" pb="1.563rem">
-                <Divider
-                  orientation="horizontal"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width="4rem"
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />{" "}
-                <Divider
-                  orientation="horizontal"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-              </Flex>
-              <Heading
-                textAlign="center"
-                fontFamily="avenir"
-                fontSize="1.5rem"
-                pb="1rem"
-              >
-                20 MINS
-              </Heading>
-              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-                <ListItem pb="0.625rem">Gummidipoondi SIPCOT</ListItem>
-                <ListItem pb="0.625rem">Amazon</ListItem>
-                <ListItem pb="0.625rem">Minjur</ListItem>
-                <ListItem>Pulicat Lake</ListItem>
-              </UnorderedList>
-            </Flex>
-            <Flex w="100%" direction="column">
-              {" "}
-              <Flex w="100%" align="center" pb="1.563rem">
-                <Divider
-                  orientation="horizontal"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width="4rem"
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />{" "}
-                <Divider
-                  orientation="horizontal"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-              </Flex>
-              <Heading
-                textAlign="center"
-                fontFamily="avenir"
-                fontSize="1.5rem"
-                pb="1rem"
-              >
-                30 MINS
-              </Heading>
-              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-                <ListItem pb="0.625rem">Sri City</ListItem>
-                <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
-              </UnorderedList>
-            </Flex>
-          </Flex>
-        </Flex>
-        <Flex
-          w="100%"
-          h="100%"
-          pt="1.875rem"
-          pb="5rem"
-          align="center"
-          justify="center"
-          direction="column"
-        >
-          <Text
-            fontSize="2.5rem"
-            fontFamily="goudy"
-            textTransform="uppercase"
-            pb="1.563rem"
-          >
-            pre book & avail best offers
-          </Text>
-          <Container w="container.sm" align="center">
+          <Flex w="100%" direction="column">
             {" "}
-            <form>
-              <FormControl isRequired>
-                {" "}
-                <HStack w="100%" justify="space-between" pb="15px">
-                  <FormLabel
-                    fontFamily="avenir"
-                    fontSize="1rem"
-                    fontWeight="bold"
-                  >
-                    NAME
-                  </FormLabel>
-                  <Input
-                    fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="18.75rem"
-                    h="3.125rem"
-                    bgColor="#E5E5E5"
-                    borderRadius="none"
-                  />
-                </HStack>{" "}
-              </FormControl>
-              <FormControl isRequired>
-                {" "}
-                <HStack w="100%" justify="space-between" pb="15px">
-                  <FormLabel
-                    fontFamily="avenir"
-                    fontSize="1rem"
-                    fontWeight="bold"
-                  >
-                    PHONE
-                  </FormLabel>
-                  <Input
-                    fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="18.75rem"
-                    h="3.125rem"
-                    bgColor="#E5E5E5"
-                    borderRadius="none"
-                  />
-                </HStack>{" "}
-              </FormControl>
-              <FormControl>
-                <HStack w="100%" justify="space-between" pb="15px">
-                  <FormLabel
-                    fontFamily="avenir"
-                    fontSize="1rem"
-                    fontWeight="bold"
-                  >
-                    EMAIL
-                  </FormLabel>
-                  <Input
-                    fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="18.75rem"
-                    h="3.125rem"
-                    bgColor="#E5E5E5"
-                    borderRadius="none"
-                  />
-                </HStack>{" "}
-              </FormControl>
-              <FormControl>
-                <HStack
-                  w="100%"
-                  align="flex-start"
-                  justify="space-between"
-                  mb="1.5rem"
-                >
-                  <FormLabel
-                    fontFamily="avenir"
-                    fontSize="1rem"
-                    fontWeight="bold"
-                  >
-                    REQUIREMENTS
-                  </FormLabel>
-                  <Textarea
-                    fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="18.75rem"
-                    h="11.25rem"
-                    bgColor="#E5E5E5"
-                    borderRadius="none"
-                  />
-                </HStack>
-              </FormControl>
-              <Button
-                bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-                color="white"
-                fontSize="1rem"
-                fontFamily="avenir"
-                p="1rem"
-                _hover={{
-                  bgGradient: "linear(to-b, #DFBD69, #B88746)",
-                }}
-                _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
-              >
-                SUBMIT NOW
-              </Button>
-            </form>
-          </Container>
+            <Flex w="100%" align="center" pb="1.563rem">
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="4rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Heading
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              pb="1rem"
+            >
+              10 MINS
+            </Heading>
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+              <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
+              <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
+              <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
+              <ListItem>R.K.M. Engineering College</ListItem>
+            </UnorderedList>
+          </Flex>
+          <Flex w="100%" direction="column">
+            {" "}
+            <Flex w="100%" align="center" pb="1.563rem">
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="4rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Heading
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              pb="1rem"
+            >
+              20 MINS
+            </Heading>
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+              <ListItem pb="0.625rem">Gummidipoondi SIPCOT</ListItem>
+              <ListItem pb="0.625rem">Amazon</ListItem>
+              <ListItem pb="0.625rem">Minjur</ListItem>
+              <ListItem>Pulicat Lake</ListItem>
+            </UnorderedList>
+          </Flex>
+          <Flex w="100%" direction="column">
+            {" "}
+            <Flex w="100%" align="center" pb="1.563rem">
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="4rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Heading
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              pb="1rem"
+            >
+              30 MINS
+            </Heading>
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+              <ListItem pb="0.625rem">Sri City</ListItem>
+              <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
+            </UnorderedList>
+          </Flex>
         </Flex>
       </Flex>
-      <DropDown />
+      <Flex
+        w="100%"
+        h="100%"
+        pt="1.875rem"
+        pb="5rem"
+        align="center"
+        justify="center"
+        direction="column"
+      >
+        <Text
+          fontSize="2.5rem"
+          fontFamily="goudy"
+          textTransform="uppercase"
+          pb="1.563rem"
+        >
+          pre book & avail best offers
+        </Text>
+        <Container w="container.sm" align="center">
+          {" "}
+          <form>
+            <FormControl isRequired>
+              {" "}
+              <HStack w="100%" justify="space-between" pb="15px">
+                <FormLabel
+                  fontFamily="avenir"
+                  fontSize="1rem"
+                  fontWeight="bold"
+                >
+                  NAME
+                </FormLabel>
+                <Input
+                  fontSize="1rem"
+                  fontFamily="avenir"
+                  lineHeight="1.5rem"
+                  w="18.75rem"
+                  h="3.125rem"
+                  bgColor="#E5E5E5"
+                  borderRadius="none"
+                />
+              </HStack>{" "}
+            </FormControl>
+            <FormControl isRequired>
+              {" "}
+              <HStack w="100%" justify="space-between" pb="15px">
+                <FormLabel
+                  fontFamily="avenir"
+                  fontSize="1rem"
+                  fontWeight="bold"
+                >
+                  PHONE
+                </FormLabel>
+                <Input
+                  fontSize="1rem"
+                  fontFamily="avenir"
+                  lineHeight="1.5rem"
+                  w="18.75rem"
+                  h="3.125rem"
+                  bgColor="#E5E5E5"
+                  borderRadius="none"
+                />
+              </HStack>{" "}
+            </FormControl>
+            <FormControl>
+              <HStack w="100%" justify="space-between" pb="15px">
+                <FormLabel
+                  fontFamily="avenir"
+                  fontSize="1rem"
+                  fontWeight="bold"
+                >
+                  EMAIL
+                </FormLabel>
+                <Input
+                  fontSize="1rem"
+                  fontFamily="avenir"
+                  lineHeight="1.5rem"
+                  w="18.75rem"
+                  h="3.125rem"
+                  bgColor="#E5E5E5"
+                  borderRadius="none"
+                />
+              </HStack>{" "}
+            </FormControl>
+            <FormControl>
+              <HStack
+                w="100%"
+                align="flex-start"
+                justify="space-between"
+                mb="1.5rem"
+              >
+                <FormLabel
+                  fontFamily="avenir"
+                  fontSize="1rem"
+                  fontWeight="bold"
+                >
+                  REQUIREMENTS
+                </FormLabel>
+                <Textarea
+                  fontSize="1rem"
+                  fontFamily="avenir"
+                  lineHeight="1.5rem"
+                  w="18.75rem"
+                  h="11.25rem"
+                  bgColor="#E5E5E5"
+                  borderRadius="none"
+                />
+              </HStack>
+            </FormControl>
+            <Button
+              bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+              color="white"
+              fontSize="1rem"
+              fontFamily="avenir"
+              p="1rem"
+              _hover={{
+                bgGradient: "linear(to-b, #DFBD69, #B88746)",
+              }}
+              _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+            >
+              SUBMIT NOW
+            </Button>
+          </form>
+        </Container>
+      </Flex>
     </>
   );
 };
-
-export default AreteSec;
