@@ -112,15 +112,30 @@ const AreteSec = () => {
           </Text>
           <Flex w="100%" gap="1.25rem">
             <Flex w="100%">
-              <Image h="22rem" src={arete1} />
+              <Image
+                transition="all .2s"
+                _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+                h="22rem"
+                src={arete1}
+              />
             </Flex>
             <Flex w="100%">
               {" "}
-              <Image h="22rem" src={arete2} />
+              <Image
+                transition="all .2s"
+                _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+                h="22rem"
+                src={arete2}
+              />
             </Flex>
             <Flex w="100%">
               {" "}
-              <Image h="22rem" src={arete3} />
+              <Image
+                transition="all .2s"
+                _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+                h="22rem"
+                src={arete3}
+              />
             </Flex>
           </Flex>
         </Flex>
@@ -313,6 +328,7 @@ const AreteSec = () => {
               </Flex>
             </Flex>
             <Flex
+              w="10%"
               h="100%"
               direction="column"
               justify="center"
@@ -321,7 +337,7 @@ const AreteSec = () => {
             >
               {" "}
               <Divider
-                h="3rem"
+                h="2rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -337,10 +353,10 @@ const AreteSec = () => {
                 my="1"
               />
             </Flex>
-            <Flex>
+            <Flex w="60%">
               <Image
                 boxShadow="lg"
-                w="45rem"
+                w="100%"
                 h="29.25rem"
                 objectFit="cover"
                 objectPosition="center"
