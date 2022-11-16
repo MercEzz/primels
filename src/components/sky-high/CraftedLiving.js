@@ -21,7 +21,7 @@ const FourthSec = () => {
       ref={ref}
       w="100%"
       h="70%"
-      p="6.25"
+      p="6.25rem"
       direction="column"
       align="center"
       justify="center"
@@ -42,6 +42,8 @@ const FourthSec = () => {
         <Flex w="100%" h="100%" align="flex-start" justify="center">
           <Flex w="100%" h="100%" pr="1.5rem">
             <Image
+              w="46rem"
+              h="23rem"
               opacity={inView ? "1" : "0"}
               transition="all 2s 4s"
               src="/images/sky-high/DECK1.jpg"
@@ -84,7 +86,7 @@ const FourthSec = () => {
                 opacity={inView ? "1" : "0"}
                 transition="all 2s 2s"
                 fontFamily="avenir"
-                fontSize="34px"
+                fontSize="2.125rem"
                 mb="0.9rem"
               >
                 3 SKY DECKS
@@ -103,7 +105,7 @@ const FourthSec = () => {
                 opacity={inView ? "1" : "0"}
                 transition="all 2s 4s"
                 fontFamily="avenir"
-                fontSize="20px"
+                fontSize="1.25rem"
                 mb="0.9rem"
               >
                 CAFE DECK
@@ -112,8 +114,8 @@ const FourthSec = () => {
                 opacity={inView ? "1" : "0"}
                 transition="all 2s 6s"
                 fontFamily="avenir"
-                fontSize="20px"
-                mb="1.2rem"
+                fontSize="1.25rem"
+                mb="0.9rem"
               >
                 KIDS AREA DECK
               </Heading>
@@ -121,7 +123,7 @@ const FourthSec = () => {
                 opacity={inView ? "1" : "0"}
                 transition="all 2s 8s"
                 fontFamily="avenir"
-                fontSize="1.2rem"
+                fontSize="1.25rem"
               >
                 LOUNGE DECK
               </Heading>
@@ -138,7 +140,12 @@ const FourthSec = () => {
             my="1.5rem"
             pr="1.5rem"
           >
-            <Image src="/images/sky-high/DECK2.jpg" boxShadow="dark-lg" />
+            <Image
+              w="46rem"
+              h="23rem"
+              src="/images/sky-high/DECK2.jpg"
+              boxShadow="dark-lg"
+            />
           </Flex>
           <Flex
             opacity={inView ? "1" : "0"}
@@ -147,13 +154,18 @@ const FourthSec = () => {
             h="100%"
             my="1.5rem"
           >
-            <Image src="/images/sky-high/DECK3.jpg" boxShadow="dark-lg" />
+            <Image
+              w="46rem"
+              h="23rem"
+              src="/images/sky-high/DECK3.jpg"
+              boxShadow="dark-lg"
+            />
           </Flex>
         </Flex>
       </Flex>
       <Flex ref={ref} w="100%" h="100%" align="flex-start" justify="center">
         <Flex h="100%" direction="column" alignSelf="center">
-          <Heading fontFamily="avenir" fontSize="34px" mb="0.9rem">
+          <Heading fontFamily="avenir" fontSize="2.125rem" mb="0.9rem">
             SKY TERRACE AVENUE
           </Heading>
           <Text fontFamily="veralaRound" fontSize="1rem">
@@ -167,7 +179,6 @@ const FourthSec = () => {
           transition="all 2s 2s"
           direction="column"
           align="center"
-          px="1.5rem"
         >
           <Divider
             orientation="vertical"
@@ -185,8 +196,15 @@ const FourthSec = () => {
             borderRadius="50%"
           />
         </Flex>
-        <Flex w="100%">
-          <Image src="/images/sky-high/TERRACE.jpg" boxShadow="dark-lg" />
+        <Flex position="relative" w="100%">
+          <Image
+            position="absolute"
+            right="0rem"
+            w="46rem"
+            h="23rem"
+            src="/images/sky-high/TERRACE.jpg"
+            boxShadow="dark-lg"
+          />
         </Flex>
       </Flex>
     </Flex>
