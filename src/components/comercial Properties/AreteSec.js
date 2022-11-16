@@ -15,8 +15,9 @@ import {
   FormControl,
   FormLabel,
   Textarea,
+  SimpleGrid,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 // images
 import arete1 from "../commercial-properties imgs/ARETE PLAZA2.jpg";
 import arete2 from "../commercial-properties imgs/ARETE PLAZA4.jpg";
@@ -31,6 +32,7 @@ import mall from "../commercial-properties imgs/Arete Mall.jpg";
 import DropDown from "./DropDown";
 
 const AreteSec = () => {
+  const [active, setActive] = useState(true);
   return (
     <>
       <Flex
@@ -43,9 +45,10 @@ const AreteSec = () => {
         <Flex w="100%" px="6.25rem">
           <Button
             w="100%"
-            bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+            bgColor="white"
+            bgGradient={active ? "linear(to-b, #B88746 ,#DFBD69)" : "white"}
             border="1px solid #B88746"
-            color="white"
+            color={active ? "white" : "black"}
             mr="0.625rem"
             p="1.563rem"
             borderRadius="none"
@@ -55,38 +58,38 @@ const AreteSec = () => {
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
             }}
-            // onClick={() => {
-            //   setActive(true);
-            // }}
-            // _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+            onClick={() => {
+              setActive(true);
+            }}
+            _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
           >
             ARETE PLAZA
           </Button>
           <Button
             ml="10px"
             w="100%"
-            bgColor="white"
+            color={active ? "black" : "white"}
             p="1.563rem"
             border="1px solid #B88746"
-            // bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+            bgGradient={active ? "white" : "linear(to-b, #B88746 ,#DFBD69)"}
             borderRadius="none"
-            color="black"
             fontSize="1.25rem"
             fontFamily="avenir"
             fontWeight="bold"
-            // onClick={() => {
-            //   setActive(false);
-            // }}
-            // _hover={{
-            //   bgGradient: "linear(to-b, #DFBD69, #B88746)",
-            // }}
-            // _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+            onClick={() => {
+              setActive(false);
+            }}
+            _hover={{
+              bgGradient: "linear(to-b, #DFBD69, #B88746)",
+            }}
+            _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
           >
             ARETE MALL
           </Button>
         </Flex>
-        <AretePlaza />
       </Flex>
+      {active ? <AretePlaza /> : <AreteMall />}
+      <LocationAndForm />
       <DropDown />
     </>
   );
@@ -236,6 +239,283 @@ const AretePlaza = () => {
           </Button>
         </Flex>
       </Flex>
+    </>
+  );
+};
+
+const AreteMall = () => {
+  return (
+    <>
+      <Flex
+        w="100%"
+        h="100%"
+        direction="column"
+        align="center"
+        justify="center"
+        px="6.25rem"
+        pt="3.125rem"
+        pb="1.875rem"
+      >
+        <Text
+          textAlign="center"
+          fontFamily="goudy"
+          fontSize="2.5rem"
+          pb="3.125rem"
+        >
+          ARETE MALL
+        </Text>
+        <Flex w="100%" h="100%" align="flex-start" justify="space-between">
+          <Flex w="50%">
+            <Image src={mall} h="29.25rem" />
+          </Flex>
+          <Flex
+            w="10%"
+            h="100%"
+            direction="column"
+            justify="center"
+            align="center"
+            px="1.563rem"
+          >
+            {" "}
+            <Divider
+              h="6rem"
+              orientation="vertical"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />
+            <Box
+              height="1.875rem"
+              width="1.875rem"
+              backgroundColor="#DFBD69"
+              border="3px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />
+          </Flex>
+          <Flex
+            w="40%"
+            h="100%"
+            direction="column"
+            alignSelf="center"
+            justify="center"
+          >
+            <Text fontSize="1rem" fontFamily="veralaRound" pb="1.875rem">
+              An expansive development of 2.5 lakh sqft retail mall in close
+              proximity to residential townships of North Chennai, will make
+              sure all your social and recreational needs are met with. The mall
+              will create a social fabric which will lead to a more wholesome
+              and integrated living.
+            </Text>
+            <SimpleGrid
+              columns={{ base: 1, md: 2 }}
+              spacing="1.563rem"
+              pb="3.125rem"
+            >
+              <Box>
+                <Text
+                  fontFamily="avenir"
+                  fontSize="1.5rem"
+                  fontWeight="bold"
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  bgClip="text"
+                >
+                  300
+                </Text>
+                <Text fontFamily="veralaRound" fontSize="1rem" color={"black"}>
+                  Car Parkings
+                </Text>
+              </Box>
+              <Box>
+                <Text
+                  fontFamily="avenir"
+                  fontSize="1.5rem"
+                  fontWeight="bold"
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  bgClip="text"
+                >
+                  LG, GF, +4
+                </Text>
+                <Text fontFamily="veralaRound" fontSize="1rem" color={"black"}>
+                  Floors
+                </Text>
+              </Box>
+              <Box>
+                <Text
+                  fontFamily="avenir"
+                  fontSize="1.5rem"
+                  fontWeight="bold"
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  bgClip="text"
+                >
+                  1,50,000 SQFT
+                </Text>
+                <Text fontFamily="veralaRound" fontSize="1rem" color={"black"}>
+                  Carpet Area
+                </Text>
+              </Box>
+              <Box>
+                <Text
+                  fontFamily="avenir"
+                  fontSize="1.5rem"
+                  fontWeight="bold"
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  bgClip="text"
+                >
+                  2,25.000 SQFT
+                </Text>
+                <Text fontFamily="veralaRound" fontSize="1rem" color={"black"}>
+                  GLA
+                </Text>
+              </Box>
+            </SimpleGrid>
+            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
+              FLOOR PLAN
+            </Heading>
+            <Button
+              w="fit-content"
+              bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+              color="white"
+              mr="0.625rem"
+              p="1.563rem"
+              fontSize="1.25rem"
+              fontFamily="avenir"
+              fontWeight="bold"
+              _hover={{
+                bgGradient: "linear(to-b, #DFBD69, #B88746)",
+              }}
+            >
+              DOWNLOAD
+            </Button>
+          </Flex>
+        </Flex>
+      </Flex>
+      <Flex
+        w="100%"
+        h="100%"
+        direction="column"
+        align="center"
+        pt="3.125rem"
+        px="6.25rem"
+      >
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="3.125rem">
+          AMENITIES
+        </Text>
+        <Flex w="100%" h="100%" gap="1.25rem" align="center" pb="0.625rem">
+          <Flex w="100%" direction="column" align="center">
+            <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem">
+              RETAIL SHOPS
+            </Heading>
+          </Flex>
+          <Flex w="100%" direction="column" align="center">
+            <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem">
+              HYPERMARKET
+            </Heading>
+          </Flex>
+          <Flex w="100%" direction="column" align="center">
+            <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem">
+              PHARMACY
+            </Heading>
+          </Flex>
+        </Flex>
+        <Flex w="100%" h="100%" align="center" pb="0.625rem">
+          {" "}
+          <Flex w="100%" align="center">
+            <Divider
+              orientation="horizontal"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />
+            <Box
+              height="1.875rem"
+              width="4rem"
+              backgroundColor="#DFBD69"
+              border="3px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />{" "}
+            <Divider
+              orientation="horizontal"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />
+          </Flex>
+          <Flex w="100%" align="center">
+            <Divider
+              orientation="horizontal"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />
+            <Box
+              height="1.875rem"
+              width="4rem"
+              backgroundColor="#DFBD69"
+              border="3px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />{" "}
+            <Divider
+              orientation="horizontal"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />
+          </Flex>
+          <Flex w="100%" align="center">
+            <Divider
+              orientation="horizontal"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />
+            <Box
+              height="1.875rem"
+              width="4rem"
+              backgroundColor="#DFBD69"
+              border="3px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />{" "}
+            <Divider
+              orientation="horizontal"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />
+          </Flex>
+        </Flex>
+        <Flex w="100%" h="100%" gap="1.25rem" align="center" pb="0.625rem">
+          <Flex w="100%" direction="column" align="center">
+            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
+              FOOD COURT
+            </Heading>
+          </Flex>
+          <Flex w="100%" direction="column" align="center">
+            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
+              8 SCREEN MULTIPLEX
+            </Heading>
+          </Flex>
+          <Flex w="100%" direction="column" align="center">
+            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
+              GAMING ARCADE
+            </Heading>
+          </Flex>
+        </Flex>
+      </Flex>
+    </>
+  );
+};
+
+const LocationAndForm = () => {
+  return (
+    <>
       <Flex
         w="100%"
         h="100%"

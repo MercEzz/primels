@@ -55,11 +55,17 @@ const SecondSec = () => {
       >
         A place of purity and excellence
       </Heading>
-      <Flex px="100px" w="100%" h="100%" align="center" justify="center">
+      <Flex
+        px="100px"
+        w="100%"
+        h="100%"
+        align="flex-start"
+        justify="space-between"
+      >
         <Flex
           opacity={isInView ? "1" : "0"}
           transition="all 2s 2s"
-          w="100%"
+          w="50%"
           h="100%"
         >
           <Box
@@ -143,33 +149,40 @@ const SecondSec = () => {
           </Box>{" "}
         </Flex>
 
-        <Flex h="100%" alignSelf="flex-start">
-          <Flex
-            transform={isInView ? "none" : "translateY(-50xp)"}
-            opacity={isInView ? "1" : "0"}
-            transition="all 2s 2s"
-            direction="column"
-            align="center"
-            px="25px"
-          >
-            <Divider
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-              h="84px"
-            />{" "}
-            <Box
-              height="30px"
-              width="30px"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-            />
-          </Flex>
+        <Flex
+          transform={isInView ? "none" : "translateY(-50xp)"}
+          opacity={isInView ? "1" : "0"}
+          transition="all 2s 2s"
+          w="10%"
+          h="100%"
+          direction="column"
+          justify="center"
+          align="center"
+          px="1.563rem"
+        >
+          <Divider
+            orientation="vertical"
+            border="3px solid"
+            borderColor="#DFBD69"
+            bgColor="#DFBD69"
+            h="84px"
+          />{" "}
+          <Box
+            height="30px"
+            width="30px"
+            backgroundColor="#DFBD69"
+            border="3px solid white"
+            boxShadow="0px 0px 0px 3px #B88746"
+            borderRadius="50%"
+          />
         </Flex>
-        <Flex w="100%" h="100%" direction="column" alignSelf="center">
+        <Flex
+          w="40%"
+          h="100%"
+          direction="column"
+          alignSelf="center"
+          justify="center"
+        >
           <Text
             transform={isInView ? "none" : "translateY(-50xp)"}
             opacity={isInView ? "1" : "0"}
