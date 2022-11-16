@@ -29,6 +29,11 @@ import port from "../commercial-properties imgs/ports.svg";
 import industry from "../commercial-properties imgs/INDUSTRY.svg";
 import locationadv from "../commercial-properties imgs/Asset 1-100.jpg";
 import mall from "../commercial-properties imgs/Arete Mall.jpg";
+import market from "../commercial-properties imgs/hanson-lu-sq5P00L7lXc-unsplash.jpg";
+import multiplex from "../commercial-properties imgs/multipllex.jpg";
+import pharmacy from "../commercial-properties imgs/national-cancer-institute-byGTytEGjBo-unsplash.jpg";
+import gamingArena from "../commercial-properties imgs/yara-2lS63pP77EQ-unsplash.jpg";
+
 import DropDown from "./DropDown";
 
 const AreteSec = () => {
@@ -416,11 +421,13 @@ const AreteMall = () => {
             </Heading>
           </Flex>
           <Flex w="100%" direction="column" align="center">
+            <Image h="15rem" src={market} />
             <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem">
               HYPERMARKET
             </Heading>
           </Flex>
           <Flex w="100%" direction="column" align="center">
+            <Image src={pharmacy} h="15rem" />
             <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem">
               PHARMACY
             </Heading>
@@ -508,11 +515,13 @@ const AreteMall = () => {
             <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
               8 SCREEN MULTIPLEX
             </Heading>
+            <Image src={multiplex} h="15rem" />
           </Flex>
           <Flex w="100%" direction="column" align="center">
             <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
               GAMING ARCADE
             </Heading>
+            <Image src={gamingArena} h="15rem" />
           </Flex>
         </Flex>
       </Flex>
