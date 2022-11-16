@@ -8,7 +8,7 @@ const ReferEarn = () => {
   return (
     <Flex w="100%" h="100vh" bgColor="#ACCAD4" pos="relative" overflow="hidden">
       <Image
-        h="600px"
+        h="37.5rem"
         src={banner}
         pos="absolute"
         objectFit="cover"
@@ -16,28 +16,43 @@ const ReferEarn = () => {
         bottom="0"
       />
       <Flex
-        px="100px"
+        px="6.25rem"
         pos="absolute"
         w="100%"
         h="100%"
         direction="column"
         top="40%"
       >
-        <Heading pb="50px" fontfamilty="goudy" fontSize="40px" color="#13314F">
+        <Heading
+          pb="3.125rem"
+          fontfamilty="goudy"
+          fontSize="2.5rem"
+          color="#13314F"
+        >
           MORE REFERRALS = MORE EARNINGS
         </Heading>
-        <Heading pb="10px" fontfamilty="avenir" fontSize="34px" color="#1F4973">
+        <Heading
+          pb="0.625rem"
+          fontfamilty="avenir"
+          fontSize="2.125rem"
+          color="#1F4973"
+        >
           Gauranteed Rewards
         </Heading>
-        <BiInfinite size="50px" color="#1F4973" />
-        <Heading pb="25px" fontfamilty="avenir" fontSize="34px" color="#1F4973">
+        <BiInfinite size="3.125rem" color="#1F4973" />
+        <Heading
+          pb="1.563rem"
+          fontfamilty="avenir"
+          fontSize="2.125rem"
+          color="#1F4973"
+        >
           Unlimited Times
         </Heading>
         <Button
           w="fit-content"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
           color="white"
-          fontSize="16px"
+          fontSize="1rem"
           fontFamily="avenir"
           fontWeight="bold"
           _hover={{

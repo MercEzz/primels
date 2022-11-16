@@ -183,6 +183,7 @@ const SecondSec = () => {
             mb="0.9rem"
             fontFamily="veralaRound"
             fontSize="1rem"
+          >
             THE ULTIMATE ADDRESS: Experience the breathtaking views of Chennai's
             stunning skyline from Arete Homes SKY HIGH Tower the top 20th floor.
             A new world of luxury has taken shape in North Chennai, Ponneri.{" "}
