@@ -33,6 +33,8 @@ import market from "../commercial-properties imgs/hanson-lu-sq5P00L7lXc-unsplash
 import multiplex from "../commercial-properties imgs/multipllex.jpg";
 import pharmacy from "../commercial-properties imgs/national-cancer-institute-byGTytEGjBo-unsplash.jpg";
 import gamingArena from "../commercial-properties imgs/yara-2lS63pP77EQ-unsplash.jpg";
+import foodCourt from "../commercial-properties imgs/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg";
+import retailShop from "../commercial-properties imgs/carl-raw-s9rsYu-BYNo-unsplash.jpg";
 
 import DropDown from "./DropDown";
 
@@ -416,6 +418,7 @@ const AreteMall = () => {
         </Text>
         <Flex w="100%" h="100%" gap="1.25rem" align="center" pb="0.625rem">
           <Flex w="100%" direction="column" align="center">
+            <Image src={retailShop} h="15rem" />
             <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem">
               RETAIL SHOPS
             </Heading>
@@ -510,6 +513,7 @@ const AreteMall = () => {
             <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
               FOOD COURT
             </Heading>
+            <Image src={foodCourt} h="15rem" />
           </Flex>
           <Flex w="100%" direction="column" align="center">
             <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
