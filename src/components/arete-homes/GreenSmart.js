@@ -25,15 +25,15 @@ const SixthSec = () => {
       direction="column"
       align="center"
       justify="center"
-      px="100px"
+      px="6.25rem"
     >
       <Text
         transform={isInView ? "none" : "translateY(-50px)"}
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
-        mb="25px"
+        fontSize="2.5rem"
+        mb="1.562rem"
         textAlign="center"
       >
         GREEN SMART TOWNSHIP
@@ -42,7 +42,8 @@ const SixthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s 1s"
         fontFamily="veralaRound"
-        fontSize="16px"
+        fontSize="1rem"
+        mb="1.562rem"
       >
         A well planned gated community & is pre-certified Platinum Rated by
         IGBC, that ensures better energy management. With 74% open area, huge
@@ -70,18 +71,18 @@ const SixthSec = () => {
             transition="all 2s 1s"
             direction="column"
             align="center"
-            px="25px"
+            px="1.562rem"
           >
             <Divider
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
-              h="84px"
+              h="5.25rem"
             />{" "}
             <Box
-              height="30px"
-              width="30px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -94,7 +95,7 @@ const SixthSec = () => {
                 <Image
                   opacity={isInView ? "1" : "0"}
                   transition="all 2s 1s"
-                  h="150px"
+                  h="9.375rem"
                   w="100%"
                   objectFit="cover"
                   objectPosition="center bottom"
@@ -123,10 +124,10 @@ const SixthSec = () => {
                   <Heading
                     pos="absolute"
                     fontFamily="avenir"
-                    bottom="25px"
+                    bottom="1.562rem"
                     left="50%"
                     transform="translate(-50%)"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     color="#DFBD69"
                   >
                     GREENERY
@@ -137,7 +138,7 @@ const SixthSec = () => {
                 <Image
                   opacity={isInView ? "1" : "0"}
                   transition="all 2s 1s"
-                  h="150px"
+                  h="9.375rem"
                   w="100%"
                   objectFit="cover"
                   objectPosition="center bottom"
@@ -166,10 +167,10 @@ const SixthSec = () => {
                   <Heading
                     pos="absolute"
                     fontFamily="avenir"
-                    bottom="25px"
+                    bottom="1.562rem"
                     left="50%"
                     transform="translate(-50%)"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     color="#DFBD69"
                   >
                     PAINTING
@@ -180,7 +181,7 @@ const SixthSec = () => {
                 <Image
                   opacity={isInView ? "1" : "0"}
                   transition="all 2s 2s"
-                  h="150px"
+                  h="9.375rem"
                   w="100%"
                   objectFit="cover"
                   objectPosition="center bottom"
@@ -209,10 +210,10 @@ const SixthSec = () => {
                   <Heading
                     pos="absolute"
                     fontFamily="avenir"
-                    bottom="25px"
+                    bottom="1.562rem"
                     left="50%"
                     transform="translate(-50%)"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     color="#DFBD69"
                   >
                     VENTILATION
@@ -223,7 +224,7 @@ const SixthSec = () => {
                 <Image
                   opacity={isInView ? "1" : "0"}
                   transition="all 2s 2s"
-                  h="150px"
+                  h="9.375rem"
                   w="100%"
                   objectFit="cover"
                   objectPosition="center bottom"
@@ -255,10 +256,10 @@ const SixthSec = () => {
                     textTransform="uppercase"
                     pos="absolute"
                     fontFamily="avenir"
-                    bottom="25px"
+                    bottom="1.562rem"
                     left="50%"
                     transform="translate(-50%)"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     color="#DFBD69"
                   >
                     stp plant by daiki
@@ -269,7 +270,7 @@ const SixthSec = () => {
                 <Image
                   opacity={isInView ? "1" : "0"}
                   transition="all 2s 3s"
-                  h="150px"
+                  h="9.375rem"
                   w="100%"
                   objectFit="cover"
                   objectPosition="center bottom"
@@ -301,10 +302,10 @@ const SixthSec = () => {
                     textTransform="uppercase"
                     pos="absolute"
                     fontFamily="avenir"
-                    bottom="25px"
+                    bottom="1.562rem"
                     left="50%"
                     transform="translate(-50%)"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     color="#DFBD69"
                   >
                     GARBAGE SCHUTE
@@ -315,7 +316,7 @@ const SixthSec = () => {
                 <Image
                   opacity={isInView ? "1" : "0"}
                   transition="all 2s 3s"
-                  h="150px"
+                  h="9.375rem"
                   w="100%"
                   objectFit="cover"
                   objectPosition="center bottom"
@@ -347,10 +348,10 @@ const SixthSec = () => {
                     textTransform="uppercase"
                     pos="absolute"
                     fontFamily="avenir"
-                    bottom="25px"
+                    bottom="1.562rem"
                     left="50%"
                     transform="translate(-50%)"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     color="#DFBD69"
                   >
                     SOLAR POWER

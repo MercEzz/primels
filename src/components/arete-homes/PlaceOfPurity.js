@@ -40,22 +40,22 @@ const SecondSec = () => {
       direction="column"
       align="center"
       justify="center"
-      py="100px"
+      py="6.25rem"
     >
       <Heading
         transform={isInView ? "none" : "translateY(-50xp)"}
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
+        fontSize="2.5rem"
         fontWeight="400"
         textTransform="uppercase"
         textAlign="center"
-        pb="50px"
+        pb="3.125rem"
       >
         A place of purity and excellence
       </Heading>
-      <Flex px="100px" w="100%" h="100%" align="center" justify="center">
+      <Flex px="6.25rem" w="100%" h="100%" align="center" justify="center">
         <Flex
           opacity={isInView ? "1" : "0"}
           transition="all 2s 2s"
@@ -64,8 +64,8 @@ const SecondSec = () => {
         >
           <Box
             position={"relative"}
-            height={"568px"}
-            width={"600px"}
+            height={"35.5rem"}
+            width={"37.5rem"}
             overflow={"hidden"}
           >
             {/* CSS files for react-slick */}
@@ -86,7 +86,7 @@ const SecondSec = () => {
                 <Box
                   key={prime.id}
                   w="100%"
-                  height="568px"
+                  height="35.5rem"
                   position="relative"
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
@@ -106,8 +106,8 @@ const SecondSec = () => {
               bottom="0"
               right="50%"
               // transform={"translateX(-50%)"}
-              mx="5px"
-              mb="25px"
+              mx="0.312rem"
+              mb="1.562rem"
               zIndex={2}
               onClick={() => {
                 slider?.slickPrev();
@@ -129,8 +129,8 @@ const SecondSec = () => {
               bottom="0"
               left="50%"
               // transform={"translate(-50%)"}
-              mx="5px"
-              mb="25px"
+              mx="0.312rem"
+              mb="1.562rem"
               zIndex={2}
               onClick={() => {
                 slider?.slickNext();
@@ -150,7 +150,7 @@ const SecondSec = () => {
             transition="all 2s 2s"
             direction="column"
             align="center"
-            px="25px"
+            px="1.562rem"
           >
             <Divider
               orientation="vertical"
@@ -160,8 +160,8 @@ const SecondSec = () => {
               h="84px"
             />{" "}
             <Box
-              height="30px"
-              width="30px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -174,9 +174,9 @@ const SecondSec = () => {
             transform={isInView ? "none" : "translateY(-50xp)"}
             opacity={isInView ? "1" : "0"}
             transition="all 2s 2s"
-            mb="25px"
+            mb="1.562rem"
             fontFamily="veralaRound"
-            fontSize="16px"
+            fontSize="1rem"
           >
             Arete homes, is the first largest smart integrated residential
             township in North Chennai, Ponneri, just Opposite Velammal
@@ -188,7 +188,7 @@ const SecondSec = () => {
             <Box opacity={isInView ? "1" : "0"} transition="all 2s 3s">
               <Text
                 fontFamily="avenir"
-                fontSize="24px"
+                fontSize="1.5rem"
                 fontWeight="bold"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
                 bgClip="text"
@@ -202,7 +202,7 @@ const SecondSec = () => {
             <Box opacity={isInView ? "1" : "0"} transition="all 2s 3s">
               <Text
                 fontFamily="avenir"
-                fontSize="24px"
+                fontSize="1.5rem"
                 fontWeight="bold"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
                 bgClip="text"
@@ -216,56 +216,56 @@ const SecondSec = () => {
             <Box opacity={isInView ? "1" : "0"} transition="all 2s 4s">
               <Text
                 fontFamily="avenir"
-                fontSize="24px"
+                fontSize="1.5rem"
                 fontWeight="bold"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
                 bgClip="text"
               >
                 74% OPEN SPACE
               </Text>
-              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+              <Text fontFamily="veralaRound" fontSize={"1rem"} color={"black"}>
                 IGBC pre-certified Platinum Rated Township
               </Text>
             </Box>
             <Box opacity={isInView ? "1" : "0"} transition="all 2s 4s">
               <Text
                 fontFamily="avenir"
-                fontSize="24px"
+                fontSize="1.5rem"
                 fontWeight="bold"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
                 bgClip="text"
               >
                 100+
               </Text>
-              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+              <Text fontFamily="veralaRound" fontSize={"1.5rem"} color={"black"}>
                 Smart Amenities
               </Text>
             </Box>
             <Box opacity={isInView ? "1" : "0"} transition="all 2s 5s">
               <Text
                 fontFamily="avenir"
-                fontSize="24px"
+                fontSize="1.5rem"
                 fontWeight="bold"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
                 bgClip="text"
               >
                 2, 2.5, 3 BHK
               </Text>
-              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+              <Text fontFamily="veralaRound" fontSize={"1rem"} color={"black"}>
                 Smart Residences
               </Text>
             </Box>
             <Box opacity={isInView ? "1" : "0"} transition="all 2s 5s">
               <Text
                 fontFamily="avenir"
-                fontSize="24px"
+                fontSize="1.5rem"
                 fontWeight="bold"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
                 bgClip="text"
               >
                 A1 TO A6 TOWERS
               </Text>
-              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+              <Text fontFamily="veralaRound" fontSize={"1rem"} color={"black"}>
                 10 Floors
               </Text>
             </Box>

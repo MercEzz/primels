@@ -40,8 +40,8 @@ const ThirdSec = () => {
         animate={animateY}
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
-        fontSize="40px"
-        mb="50px"
+        fontSize="2.5rem"
+        mb="3.125rem"
       >
         MASTER PLAN
       </MtnTxt>
@@ -53,7 +53,7 @@ const ThirdSec = () => {
           w="100%"
           h="100%"
         >
-          <Image h="500px" src="/images/arete-homes/MASTER PLAN.jpg" />
+          <Image h="31.25rem" src="/images/arete-homes/MASTER PLAN.jpg" />
         </MtnFlx>
         <MtnFlx
           initial={{ scale: 0.6 }}

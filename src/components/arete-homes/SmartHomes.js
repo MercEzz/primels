@@ -33,10 +33,10 @@ const NinethSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      px="25px"
-      pt="100px"
-      pb="50px"
-      mb="50px"
+      px="1.562rem"
+      pt="6.25rem"
+      pb="3.125rem"
+      mb="3.125rem"
       direction="column"
       align="center"
       justify="center"
@@ -47,8 +47,8 @@ const NinethSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
-        lineHeight="48px"
+        fontSize="2.5rem"
+        lineHeight="3rem"
       >
         SMART HOMES
       </Text>
@@ -57,13 +57,13 @@ const NinethSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="avenir"
-        fontSize="34px"
-        lineHeight="48px"
-        py="25px"
+        fontSize="2.125rem"
+        lineHeight="3rem"
+        py="1.562rem"
       >
         BUY . RENT . INVEST .
       </Heading>
-      <Text fontFamily="veralaRound" fontSize="18px" pb="25px">
+      <Text fontFamily="veralaRound" fontSize="1.125rem" pb="1.562rem">
         Premium 2 BHK & 3 BHK serviced apartments in North Chennai, with
         customized experience, your way.
       </Text>
@@ -73,8 +73,8 @@ const NinethSec = () => {
         height={"100%"}
         width={"full"}
         overflow={"hidden"}
-        pl="75px"
-        pr="55px"
+        pl="4.687rem"
+        pr="3.437rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -91,11 +91,11 @@ const NinethSec = () => {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {primeEvents.map((prime) => (
-            <Flex pr="20px">
+            <Flex pr="1.25rem">
               <Image
                 key={prime}
                 w="100%"
-                h="400px"
+                h="25rem"
                 position="relative"
                 objectPosition="center center"
                 backgroundRepeat="no-repeat"
@@ -114,15 +114,15 @@ const NinethSec = () => {
           position="absolute"
           top="50%"
           left="0"
-          h="50px"
-          w="50px"
+          h="3.125rem"
+          w="3.125rem"
           transform={"translate(0%, -50%)"}
           zIndex={2}
           onClick={() => {
             slider?.slickPrev();
           }}
         >
-          <AiOutlineLeft color="#B88746" size="40px" />
+          <AiOutlineLeft color="#B88746" size="2.5rem" />
         </IconButton>
 
         <IconButton
@@ -135,23 +135,23 @@ const NinethSec = () => {
           zIndex={2}
           right="0"
           top="50%"
-          h="50px"
-          w="50px"
+          h="3.125rem"
+          w="3.125rem"
           onClick={() => {
             slider?.slickNext();
             // setCurrentSlide(currentSlide++);
           }}
         >
-          <AiOutlineRight color="#B88746" size="40px" />
+          <AiOutlineRight color="#B88746" size="2.5rem" />
         </IconButton>
       </Box>
       <Button
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
-        w="146px"
-        h="51px"
-        mt="25px"
-        fontSize="16px"
+        w="9.125rem"
+        h="3.187rem"
+        mt="1.562rem"
+        fontSize="1rem"
         fontFamily="avenir"
         bgGradient="linear(to-b, #B88746 ,#DFBD69)"
         color="white"
