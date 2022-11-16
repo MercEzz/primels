@@ -20,7 +20,7 @@ const FourthSec = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="70%"
+      h="93rem"
       p="6.25rem"
       direction="column"
       align="center"
@@ -39,7 +39,7 @@ const FourthSec = () => {
       </Text>
       <Flex w="100%" h="100%" direction="column">
         {/* first-left-sec */}
-        <Flex w="100%" h="100%" align="flex-start" justify="center">
+        <Flex w="100%" h="100%" align="flex-start" justify="center" mb="1.562rem">
           <Flex w="100%" h="100%" pr="1.5rem">
             <Image
               w="46rem"
@@ -64,11 +64,11 @@ const FourthSec = () => {
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
-                h="84px"
+                h="5.25rem"
               />{" "}
               <Box
-                height="30px"
-                width="30px"
+                height="1.875rem"
+                width="1.875rem"
                 backgroundColor="#DFBD69"
                 border="3px solid white"
                 boxShadow="0px 0px 0px 3px #B88746"
@@ -185,11 +185,11 @@ const FourthSec = () => {
             border="3px solid"
             borderColor="#DFBD69"
             bgColor="#DFBD69"
-            h="84px"
+            h="5.25rem"
           />{" "}
           <Box
-            height="30px"
-            width="30px"
+            height="1.875rem"
+            width="1.875rem"
             backgroundColor="#DFBD69"
             border="3px solid white"
             boxShadow="0px 0px 0px 3px #B88746"
