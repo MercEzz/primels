@@ -5,17 +5,17 @@ const TenthSec = () => {
   return (
     <Flex
       w="100%"
-      py="50px"
-      px="100px"
+      py="3.125rem"
+      px="6.25rem"
       h="100%"
       direction="column"
       align="center"
       justify="center"
     >
-      <Text fontFamily="goudy" fontSize="40px" mb="25px">
+      <Text fontFamily="goudy" fontSize="2.5rem" mb="1.562rem">
         FLOOR PLAN AND PRICING
       </Text>
-      <Heading fontFamily="avenir" fontSize="34px" mb="25px">
+      <Heading fontFamily="avenir" fontSize="2.125rem" mb="1.562rem">
         SMART HOMES THAT ARE VASTU COMPLIANT
       </Heading>
       <Flex w="100%" h="100%">
@@ -23,10 +23,10 @@ const TenthSec = () => {
         <Button
           borderRadius="none"
           border="1px solid #DFBD69"
-          fontSize="20px"
-          p="15px"
+          fontSize="1.25rem"
+          p="0.937rem"
           fontFamily="avenir"
-          mr="10px"
+          mr="0.625rem"
           bgColor="#DFBD69"
           color="black"
           _hover={{
@@ -40,10 +40,10 @@ const TenthSec = () => {
           borderRadius="none"
           border="1px solid #DFBD69"
           bgColor="white"
-          p="15px"
+          p="0.937rem"
           fontSize="20px"
           fontFamily="avenir"
-          mr="10px"
+          mr="0.625rem"
           color="black"
           _hover={{
             bgColor: "#B88746",
@@ -56,10 +56,10 @@ const TenthSec = () => {
           borderRadius="none"
           border="1px solid #DFBD69"
           bgColor="white"
-          fontSize="20px"
-          p="15px"
+          fontSize="1.25rem"
+          p="0.937rem"
           fontFamily="avenir"
-          mr="10px"
+          mr="0.625rem"
           color="black"
           _hover={{
             bgColor: "#B88746",
@@ -72,8 +72,8 @@ const TenthSec = () => {
           borderRadius="none"
           border="1px solid #DFBD69"
           bgColor="white"
-          p="15px"
-          fontSize="20px"
+          p="0.937rem"
+          fontSize="1.25rem"
           fontFamily="avenir"
           color="black"
           _hover={{

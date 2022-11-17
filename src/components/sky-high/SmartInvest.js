@@ -29,8 +29,8 @@ const TenthSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      px="100px"
-      my="50px"
+      px="6.25rem"
+      my="3.125rem"
       align="center"
       justify="center"
       direction="column"
@@ -40,8 +40,8 @@ const TenthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
-        mb="25px"
+        fontSize="2.5rem"
+        mb="1.562rem"
       >
         SMART INVEST
       </Text>
@@ -49,9 +49,9 @@ const TenthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s 1s"
         fontFamily="avenir"
-        fontSize="34px"
+        fontSize="2.125rem"
         textAlign="center"
-        mb="50px"
+        mb="3.125rem"
       >
         AN EXCELLENT INVESTMENT OPPORTUNITY <br /> IN A LIFETIME GROWING ASSET
       </Heading>
@@ -66,17 +66,17 @@ const TenthSec = () => {
         >
           <Image
             // pos="absolute"
-            h="568px"
-            w="707px"
+            h="35.5rem"
+            w="44.187rem"
             objectPosition="center top"
             objectFit="cover"
             src="/images/sky-high/SMART INVEST.jpg"
           />
           <Image
             pos="absolute"
-            h="225px"
-            bottom="15px"
-            right="15px"
+            h="14.062rem"
+            bottom="0.937rem"
+            right="0.937rem"
             src="/images/sky-high/SMART INVEST ASSET.png"
           />
         </Flex>
@@ -89,18 +89,18 @@ const TenthSec = () => {
             direction="column"
             justify="flex-start"
             align="center"
-            px="25px"
+            px="1.562rem"
           >
             <Divider
-              h="80px"
+              h="5rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
             />
             <Box
-              height="30px"
-              width="30px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -114,17 +114,17 @@ const TenthSec = () => {
               opacity={isInView ? "1" : "0"}
               transition="all 2s 2s"
               w="100%"
-              fontSize="24px"
+              fontSize="1.5rem"
               textAlign="left"
               fontFamily="avenir"
-              mb="25px"
+              mb="1.562rem"
             >
               EMI = RENT
             </Heading>
             <Flex
               opacity={isInView ? "1" : "0"}
               transition="all 2s 2s"
-              mb="25px"
+              mb="1.562rem"
               alignSelf="flex-start"
             >
               <TableContainer>
@@ -138,12 +138,12 @@ const TenthSec = () => {
                       <Th
                         colSpan="2"
                         fontFamily="veralaRound"
-                        fontSize="20px"
+                        fontSize="1.25rem"
                         fontWeight="400"
                         color="white"
                         textAlign="center"
                         border="1px solid #B88746"
-                        p="15px"
+                        p="0.937rem"
                       >
                         Smart 2 BHK - 690 sqft.
                       </Th>
@@ -155,15 +155,15 @@ const TenthSec = () => {
                         w="100%"
                         textAlign="left"
                         fontFamily="veralaRound"
-                        fontSize="18px"
+                        fontSize="1.125rem"
                         border="1px solid #B88746"
-                        p="25px"
+                        p="1.562rem"
                       >
                         <Text
                           as="span"
                           fontWeight="bold"
                           fontFamily="avenir"
-                          fontSize="24px"
+                          fontSize="1.5rem"
                         >
                           Rs. 34 LAKHS{" "}
                         </Text>
@@ -173,15 +173,15 @@ const TenthSec = () => {
                         w="100%"
                         textAlign="left"
                         fontFamily="veralaRound"
-                        fontSize="18px"
+                        fontSize="1.125rem"
                         border="1px solid #B88746"
-                        p="25px"
+                        p="1.562rem"
                       >
                         <Text
                           as="span"
                           fontWeight="bold"
                           fontFamily="avenir"
-                          fontSize="24px"
+                          fontSize="1.5rem"
                         >
                           Rs. 20,000
                         </Text>{" "}
@@ -201,23 +201,23 @@ const TenthSec = () => {
               align="center"
               direction="column"
             >
-              <Heading fontFamily="avenir" fontSize="24px" mb="15px">
+              <Heading fontFamily="avenir" fontSize="1.5rem" mb="0.937rem">
                 2 YEAR DOWNPAYMENT PLAN
               </Heading>
               <Text
-                mb="10px"
+                mb="0.625rem"
                 textAlign="center"
                 textTransform="uppercase"
                 fontFamily="veralaRound"
-                fontSize="16px"
+                fontSize="1rem"
               >
                 Rental income + TAx savings + PMAY Benefits + Appreciation{" "}
               </Text>
               <Text
                 textAlign="center"
                 fontWeight="bold"
-                fontSize="30px"
-                mb="10px"
+                fontSize="1.875rem"
+                mb="0.625rem"
               >
                 &#8595;
               </Text>
@@ -225,9 +225,9 @@ const TenthSec = () => {
                 Income growth journey
               </Text>
               <Button
-                w="146px"
-                h="51px"
-                fontSize="16px"
+                w="9.125rem"
+                h="3.187rem"
+                fontSize="1rem"
                 fontFamily="avenir"
                 bgGradient="linear(to-b, #B88746 ,#DFBD69)"
                 color="white"

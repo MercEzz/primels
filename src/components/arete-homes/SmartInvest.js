@@ -26,7 +26,7 @@ const TenthSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      my="50px"
+      my="3.125rem"
       align="center"
       justify="center"
       direction="column"
@@ -36,8 +36,8 @@ const TenthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
-        mb="25px"
+        fontSize="2.5rem"
+        mb="1.562rem"
       >
         SMART INVEST
       </Text>
@@ -45,9 +45,9 @@ const TenthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s 2s"
         fontFamily="avenir"
-        fontSize="34px"
+        fontSize="2.125rem"
         textAlign="center"
-        mb="50px"
+        mb="3.125rem"
       >
         RETURNS HIGHERN THAN YOUR IMAGINATION
       </Heading>
@@ -60,7 +60,7 @@ const TenthSec = () => {
         >
           <Image
             // pos="absolute"
-            h="568px"
+            h="35.5rem"
             w="100%"
             objectPosition="center top"
             objectFit="cover"
@@ -74,21 +74,21 @@ const TenthSec = () => {
             direction="column"
             justify="flex-start"
             align="center"
-            px="25px"
+            px="1.562rem"
             transform={isInView ? "translateY(0)" : "translateY(-50px)"}
             opacity={isInView ? "1" : "0"}
             transition="all 2s 4s"
           >
             <Divider
-              h="80px"
+              h="5rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
             />
             <Box
-              height="30px"
-              width="30px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -98,7 +98,7 @@ const TenthSec = () => {
           </Flex>
           <Flex
             w="100%"
-            pr="100px"
+            pr="6.25rem"
             direction="column"
             align="center"
             justify="center"
@@ -111,11 +111,11 @@ const TenthSec = () => {
               fontSize="24px"
               textAlign="left"
               fontFamily="avenir"
-              mb="25px"
+              mb="1.5rem"
             >
               EARN HIGHEST RENTAL INCOME (ROI)
             </Heading>
-            <Flex w="100%" mb="25px" alignSelf="flex-start">
+            <Flex w="100%" mb="1.562rem" alignSelf="flex-start">
               <TableContainer
                 opacity={isInView ? "1" : "0"}
                 transition="all 2s 4s"
@@ -129,34 +129,34 @@ const TenthSec = () => {
                     <Tr>
                       <Th
                         fontFamily="veralaRound"
-                        fontSize="20px"
+                        fontSize="1.25rem"
                         fontWeight="400"
                         color="white"
                         textAlign="center"
                         border="1px solid #B88746"
-                        p="15px"
+                        p="0.937rem"
                       >
                         SMART HOME
                       </Th>
                       <Th
                         fontFamily="veralaRound"
-                        fontSize="20px"
+                        fontSize="1.25rem"
                         fontWeight="400"
                         color="white"
                         textAlign="center"
                         border="1px solid #B88746"
-                        p="15px"
+                        p="0.937rem"
                       >
                         PRICE
                       </Th>
                       <Th
                         fontFamily="veralaRound"
-                        fontSize="20px"
+                        fontSize="1.25rem"
                         fontWeight="400"
                         color="white"
                         textAlign="center"
                         border="1px solid #B88746"
-                        p="15px"
+                        p="0.937rem"
                       >
                         RENTAL INCOME
                       </Th>
@@ -168,15 +168,15 @@ const TenthSec = () => {
                         w="100%"
                         textAlign="left"
                         fontFamily="veralaRound"
-                        fontSize="18px"
+                        fontSize="1.125rem"
                         border="1px solid #B88746"
-                        p="25px"
+                        p="1.562rem"
                       >
                         <Text
                           as="span"
                           fontWeight="bold"
                           fontFamily="avenir"
-                          fontSize="24px"
+                          fontSize="1.5rem"
                         >
                           2 BHK
                         </Text>{" "}
@@ -189,13 +189,13 @@ const TenthSec = () => {
                         fontFamily="veralaRound"
                         fontSize="18px"
                         border="1px solid #B88746"
-                        p="25px"
+                        p="1.125rem"
                       >
                         <Text
                           as="span"
                           fontWeight="bold"
                           fontFamily="avenir"
-                          fontSize="24px"
+                          fontSize="1.5rem"
                         >
                           Rs. 52 LAKHS
                         </Text>{" "}
@@ -207,15 +207,15 @@ const TenthSec = () => {
                         w="100%"
                         textAlign="left"
                         fontFamily="veralaRound"
-                        fontSize="18px"
+                        fontSize="1.125rem"
                         border="1px solid #B88746"
-                        p="25px"
+                        p="1.562rem"
                       >
                         <Text
                           as="span"
                           fontWeight="bold"
                           fontFamily="avenir"
-                          fontSize="24px"
+                          fontSize="1.5rem"
                         >
                           Rs. 32,000
                         </Text>{" "}
@@ -228,15 +228,15 @@ const TenthSec = () => {
                         w="100%"
                         textAlign="left"
                         fontFamily="veralaRound"
-                        fontSize="18px"
+                        fontSize="1.125rem"
                         border="1px solid #B88746"
-                        p="25px"
+                        p="1.562rem"
                       >
                         <Text
                           as="span"
                           fontWeight="bold"
                           fontFamily="avenir"
-                          fontSize="24px"
+                          fontSize="1.5rem"
                         >
                           3 BHK
                         </Text>{" "}
@@ -247,15 +247,15 @@ const TenthSec = () => {
                         w="100%"
                         textAlign="left"
                         fontFamily="veralaRound"
-                        fontSize="18px"
+                        fontSize="1.125rem"
                         border="1px solid #B88746"
-                        p="25px"
+                        p="1.562rem"
                       >
                         <Text
                           as="span"
                           fontWeight="bold"
                           fontFamily="avenir"
-                          fontSize="24px"
+                          fontSize="1.5rem"
                         >
                           Rs. 85 LAKHS
                         </Text>{" "}
@@ -266,15 +266,15 @@ const TenthSec = () => {
                         w="100%"
                         textAlign="left"
                         fontFamily="veralaRound"
-                        fontSize="18px"
+                        fontSize="1.125rem"
                         border="1px solid #B88746"
-                        p="25px"
+                        p="1.562rem"
                       >
                         <Text
                           as="span"
                           fontWeight="bold"
                           fontFamily="avenir"
-                          fontSize="24px"
+                          fontSize="1.5rem"
                         >
                           Rs. 48,000
                         </Text>{" "}
@@ -290,17 +290,17 @@ const TenthSec = () => {
               opacity={isInView ? "1" : "0"}
               transition="all 2s 6s"
               fontFamily="avenir"
-              fontSize="20px"
-              mb="25px"
+              fontSize="1.25rem"
+              mb="1.562rem"
             >
               ASSURED RENTAL INCOME FOR 3 YEARS!
             </Heading>
             <Button
               opacity={isInView ? "1" : "0"}
               transition="all 2s 6s"
-              w="146px"
-              h="51px"
-              fontSize="16px"
+              w="9.125"
+              h="3.187rem"
+              fontSize="1rem"
               fontFamily="avenir"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
               color="white"

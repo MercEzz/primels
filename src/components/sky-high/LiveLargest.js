@@ -45,7 +45,8 @@ const FifthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
+        fontSize="2.5rem"
+        mb="1.562rem"
       >
         LIVE LARGEST, SHOP LARGEST
       </Text>
@@ -76,7 +77,7 @@ const FifthSec = () => {
             <Image
               key={prime}
               w="100%"
-              height="568px"
+              height="35.5rem"
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"
@@ -102,7 +103,7 @@ const FifthSec = () => {
             bgColor="white"
             align="flex-start"
             justify="center"
-            pr="50px"
+            pr="3.125rem"
           >
             <Flex
               transform={isInView ? "none" : "translateY(-50px)"}
@@ -110,18 +111,18 @@ const FifthSec = () => {
               transition="all 2s 2s"
               direction="column"
               align="center"
-              px="25px"
+              px="3.125rem"
             >
               <Divider
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
-                h="170px"
+                h="10.625rem"
               />{" "}
               <Box
-                height="30px"
-                width="30px"
+                height="1.875rem"
+                width="1.875rem"
                 backgroundColor="#DFBD69"
                 border="3px solid white"
                 boxShadow="0px 0px 0px 3px #B88746"
@@ -135,19 +136,19 @@ const FifthSec = () => {
               direction="column"
               alignSelf="center"
             >
-              <Heading fontFamily="avenir" fontSize="34px" mb="15px">
+              <Heading fontFamily="avenir" fontSize="2.125rem" mb="0.937rem">
                 ARETE PLAZA
               </Heading>
-              <Text fontFamily="veralaRound" fontSize="16px" mb="15px">
+              <Text fontFamily="veralaRound" fontSize="1rem" mb="0.937rem">
                 An impeccable mix of 20 Retail Spaces such as Shopping,
                 HyperMarket, Pharmacy, Fine Dining & Entertainment. Two
                 enchanting tower lobbies, with a soothing water casacade in the
                 front, positioned for your warm welcome.
               </Text>
               <Button
-                w="174px"
-                h="51px"
-                fontSize="16px"
+                w="10.875rem"
+                h="3.187rem"
+                fontSize="1rem"
                 fontFamily="avenir"
                 bgGradient="linear(to-b, #B88746 ,#DFBD69)"
                 color="white"

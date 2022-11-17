@@ -28,9 +28,9 @@ const EightSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      px="100px"
-      pt="100px"
-      pb="50px"
+      px="6.25rem"
+      pt="6.25rem"
+      pb="3.125rem"
       direction="column"
       align="center"
       justify="center"
@@ -41,8 +41,8 @@ const EightSec = () => {
         opacity={inView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
-        lineHeight="48px"
+        fontSize="2.5rem"
+        lineHeight="3rem"
         textTransform="uppercase"
       >
         A delightful mix of sky residences
@@ -51,9 +51,9 @@ const EightSec = () => {
         opacity={inView ? "1" : "0"}
         transition="all 2s 1s"
         fontFamily="avenir"
-        fontSize="34px"
-        lineHeight="48px"
-        py="25px"
+        fontSize="2.125rem"
+        lineHeight="3rem"
+        py="1.562rem"
       >
         FOR CO-LIVING, STUDENT HOUSING & SERVICED APARTMENTS
       </Heading>
@@ -61,8 +61,8 @@ const EightSec = () => {
         opacity={inView ? "1" : "0"}
         transition="all 2s 1s"
         fontFamily="veralaRound"
-        fontSize="16px"
-        pb="25px"
+        fontSize="1rem"
+        pb="1.562rem"
       >
         An unique collection of flexi-design 2 BHK sky residences, well-planned
         with convertible option, for you to customize your home & needs. The 5
@@ -71,7 +71,7 @@ const EightSec = () => {
         Making it possible to fit up to 5 beds in every apartment.
       </Text>
       <Flex w="100%" h="100%" align="center" justify="center">
-        <Flex mr="15px">
+        <Flex mr="0.937rem">
           <Image
             transform={inView ? "none" : "translateX(-100px)"}
             opacity={inView ? "1" : "0"}
@@ -97,7 +97,7 @@ const EightSec = () => {
         h="100%"
         align="center"
         justify="space-between"
-        mt="15px"
+        mt="0.937rem"
       >
         <Flex>
           <TableContainer>
@@ -109,45 +109,45 @@ const EightSec = () => {
                 <Tr>
                   <Th
                     fontFamily="veralaRound"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     fontWeight="400"
                     color="white"
                     textAlign="center"
                     border="1px solid #B88746"
-                    p="15px"
+                    p="0.937rem"
                   >
                     Configuration
                   </Th>
                   <Th
                     fontFamily="veralaRound"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     fontWeight="400"
                     color="white"
                     textAlign="center"
                     border="1px solid #B88746"
-                    p="15px"
+                    p="0.937rem"
                   >
                     Saleable Area
                   </Th>
                   <Th
                     fontFamily="veralaRound"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     fontWeight="400"
                     color="white"
                     textAlign="center"
                     border="1px solid #B88746"
-                    p="15px"
+                    p="0.937rem"
                   >
                     Net Usable Area
                   </Th>
                   <Th
                     fontFamily="veralaRound"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     fontWeight="400"
                     color="white"
                     textAlign="center"
                     border="1px solid #B88746"
-                    p="15px"
+                    p="0.937rem"
                   >
                     Rera Carpet Area
                   </Th>
@@ -157,41 +157,41 @@ const EightSec = () => {
                 <Tr>
                   <Td
                     fontFamily="avenir"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     fontWeight="bold"
                     textAlign="center"
                     border="1px solid #B88746"
-                    p="15px"
+                    p="0.937rem"
                   >
                     SMART 2 BHK
                   </Td>
                   <Td
                     fontFamily="avenir"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     fontWeight="bold"
                     textAlign="center"
-                    p="15px"
+                    p="0.937rem"
                     border="1px solid #B88746"
                   >
                     690
                   </Td>
                   <Td
                     fontFamily="avenir"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     fontWeight="bold"
                     border="1px solid #B88746"
                     textAlign="center"
-                    p="15px"
+                    p="0.937rem"
                   >
                     452
                   </Td>
                   <Td
                     fontFamily="avenir"
-                    fontSize="20px"
+                    fontSize="1.25rem"
                     fontWeight="bold"
                     textAlign="center"
                     border="1px solid #B88746"
-                    p="15px"
+                    p="0.937rem"
                   >
                     447
                   </Td>
@@ -203,9 +203,9 @@ const EightSec = () => {
         <Button
           opacity={inView ? "1" : "0"}
           transition="all 2s 3s"
-          w="151px"
-          h="51px"
-          fontSize="16px"
+          w="9.437rem"
+          h="3.187rem"
+          fontSize="1rem"
           fontFamily="avenir"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
           color="white"
