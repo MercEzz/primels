@@ -42,11 +42,12 @@ const ReferTabs = () => {
           mr="0.625rem"
           p="1.563rem"
           borderRadius="none"
-          fontSize="1rem"
+          fontSize="1.25rem"
           fontFamily="avenir"
           fontWeight="bold"
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",
+            color: "white",
           }}
           onClick={() => {
             setActive(true);
@@ -64,7 +65,7 @@ const ReferTabs = () => {
           border="1px solid #B88746"
           bgGradient={active ? "none" : "linear(to-b, #B88746 ,#DFBD69)"}
           borderRadius="none"
-          fontSize="1rem"
+          fontSize="1.25rem"
           fontFamily="avenir"
           fontWeight="bold"
           onClick={() => {
@@ -72,6 +73,7 @@ const ReferTabs = () => {
           }}
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",
+            color: "white",
           }}
           _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
         >
@@ -124,7 +126,7 @@ const ReferAFriend = () => {
             Fill up the form on website & submit the details of as many friends
             & family members you would like to refer.
           </Text>
-          <Image w="100%" h="16rem" p="2rem" src={img1} />
+          <Image w="100%" h="16rem" src={img1} />
         </Flex>
         <Flex w="100%" direction="column">
           <Heading fontFamily="avenir" fontSize="1.5rem">
@@ -152,7 +154,7 @@ const ReferAFriend = () => {
             Your provided referral will be contacted by our team and complete
             assistance will be provided in the booking process.
           </Text>{" "}
-          <Image w="100%" h="14.625rem" p="2rem" src={img2} />
+          <Image w="100%" h="14.625rem" src={img2} />
         </Flex>
         <Flex w="100%" direction="column">
           <Heading fontFamily="avenir" fontSize="1.5rem">
@@ -180,7 +182,7 @@ const ReferAFriend = () => {
             Every time your referral becomes a successful booking, you’ll earn
             rewards upto Rs 1 Lakh.
           </Text>
-          <Image w="100%" h="16.75rem" p="2rem" src={img3} />
+          <Image w="100%" h="16.75rem" src={img3} />
         </Flex>
       </Flex>
       <Flex w="100%" h="100%" pt="3.125rem" direction="column" pb="5rem">
@@ -197,7 +199,7 @@ const ReferAFriend = () => {
             textAlign="center"
             fontFamily="goudy"
             fontSize="2.5rem"
-            pb="3.125rem"
+            pb="1.875rem"
           >
             REFER & EARN
           </Text>
@@ -265,7 +267,7 @@ const ReferAFriend = () => {
                     </FormLabel>
                     <Input
                       fontSize="1rem"
-                      fontFamily="avenir"
+                      fontFamily="veralaRound"
                       lineHeight="1.5rem"
                       w="18.75rem"
                       h="3.125rem"
@@ -286,7 +288,7 @@ const ReferAFriend = () => {
                     </FormLabel>
                     <Input
                       fontSize="1rem"
-                      fontFamily="avenir"
+                      fontFamily="veralaRound"
                       lineHeight="1.5rem"
                       w="18.75rem"
                       h="3.125rem"
@@ -306,7 +308,7 @@ const ReferAFriend = () => {
                     </FormLabel>
                     <Input
                       fontSize="1rem"
-                      fontFamily="avenir"
+                      fontFamily="veralaRound"
                       lineHeight="1.5rem"
                       w="18.75rem"
                       h="3.125rem"
@@ -325,17 +327,15 @@ const ReferAFriend = () => {
                       PROJECT REFERRED
                     </FormLabel>
                     <Select
-                      fontFamily="avenir"
+                      fontFamily="veralaRound"
                       fontSize="1rem"
                       w="18.75rem"
+                      h="3.125rem"
                       bgColor="#D9D9D9"
-                      // placeholder="SELECT PROJECT"
                       textTransform="uppercase"
                       variant="flushed"
                       borderBottom="2px solid white"
-                      icon={
-                        <TriangleDownIcon width="1.25rem" height="0.625rem" />
-                      }
+                      icon={<TriangleDownIcon width="1rem" height="0.6rem" />}
                       borderRadius="none"
                     >
                       <option style={{ color: "black" }}>
@@ -377,7 +377,7 @@ const ReferAFriend = () => {
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
+                    fontFamily="veralaRound"
                     lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
@@ -398,7 +398,7 @@ const ReferAFriend = () => {
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
+                    fontFamily="veralaRound"
                     lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
@@ -418,7 +418,7 @@ const ReferAFriend = () => {
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
+                    fontFamily="veralaRound"
                     lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
@@ -441,7 +441,7 @@ const ReferAFriend = () => {
                     fontFamily="avenir"
                     lineHeight="1.5rem"
                     w="18.75rem"
-                    h="11.25rem"
+                    h="8.75rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -471,31 +471,16 @@ const ReferAFriend = () => {
 const BookAVisit = () => {
   return (
     <>
-      <Flex
-        w="100%"
-        h="85vh"
-        bgColor="white"
-        pos="relative"
-        overflow="hidden"
-        pb="3.125rem"
-      >
+      <Flex w="100%" h="100%" pb="3.125rem" pt="3.125rem">
         <Image
+          w="45%"
+          h="30rem"
           src={bookIll}
-          pos="absolute"
           objectFit="cover"
-          left="0"
-          bottom="0"
+          // top="50%"
+          // transform="translate(0, -50%)"
         />
-        <Flex
-          pos="absolute"
-          w="60%"
-          h="100%"
-          direction="column"
-          align="flex-end"
-          top="30%"
-          right="0"
-          bottom="0"
-        >
+        <Flex w="55%" direction="column" align="flex-end" top="20%" right="0">
           <Text
             textAlign="center"
             fontFamily="goudy"
@@ -525,15 +510,15 @@ const BookAVisit = () => {
           >
             GET IN TOUCH WITH US
           </Text>
-          <Flex w="100%" align="center" justify="center" gap="3.125rem">
-            <Flex w="100%" direction="column" align="center">
-              <EmailIcon h="18px" w="28px" mb="1.25rem" />
+          <Flex w="100%" align="center" justify="center" gap="3.25rem">
+            <Flex direction="column" align="center">
+              <EmailIcon h="18px" w="28px" mb="1rem" />
               <Heading fontFamily="avenir" fontSize="1.25rem">
                 sales@primelifespace.com
               </Heading>
             </Flex>
-            <Flex w="100%" direction="column" align="center">
-              <PhoneIcon h="18px" w="28px" mb="1.25rem" />
+            <Flex direction="column" align="center">
+              <PhoneIcon h="18px" w="28px" mb="1rem" />
               <Heading fontFamily="avenir" fontSize="1.25rem">
                 +91-9003199000
               </Heading>
@@ -541,7 +526,7 @@ const BookAVisit = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex w="100%" h="100%" pt="5rem" direction="column" pb="5rem">
+      <Flex w="100%" h="100%" pt="1.875rem" direction="column" pb="5rem">
         <form
           style={{
             width: "100%",
@@ -555,7 +540,7 @@ const BookAVisit = () => {
             textAlign="center"
             fontFamily="goudy"
             fontSize="2.5rem"
-            pb="3.125rem"
+            pb="1.875rem"
           >
             BOOK YOUR FREE SITE VISIT
           </Text>

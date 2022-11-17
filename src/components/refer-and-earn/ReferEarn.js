@@ -24,7 +24,7 @@ const ReferEarn = () => {
         top="40%"
       >
         <Heading
-          pb="3.125rem"
+          pb="1.875rem"
           fontfamilty="goudy"
           fontSize="2.5rem"
           color="#13314F"
