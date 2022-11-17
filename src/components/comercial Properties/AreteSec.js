@@ -64,6 +64,7 @@ const AreteSec = () => {
             fontWeight="bold"
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
+              color: "white",
             }}
             onClick={() => {
               setActive(true);
@@ -89,6 +90,7 @@ const AreteSec = () => {
             }}
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
+              color: "white",
             }}
             _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
           >
@@ -274,13 +276,13 @@ const AreteMall = () => {
           textAlign="center"
           fontFamily="goudy"
           fontSize="2.5rem"
-          pb="3.125rem"
+          pb="1.875rem"
         >
           ARETE MALL
         </Text>
-        <Flex w="100%" h="100%" align="flex-start" justify="space-between">
+        <Flex w="100%" h="100%" align="flex-start" justify="center">
           <Flex w="50%">
-            <Image src={mall} h="29.25rem" />
+            <Image src={mall} w="100%" h="29.25rem" />
           </Flex>
           <Flex
             w="10%"
@@ -325,7 +327,7 @@ const AreteMall = () => {
             <SimpleGrid
               columns={{ base: 1, md: 2 }}
               spacing="1.563rem"
-              pb="3.125rem"
+              pb="1.875rem"
             >
               <Box>
                 <Text
@@ -413,24 +415,24 @@ const AreteMall = () => {
         pt="3.125rem"
         px="6.25rem"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="3.125rem">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem">
           AMENITIES
         </Text>
         <Flex w="100%" h="100%" gap="1.25rem" align="center" pb="0.625rem">
           <Flex w="100%" direction="column" align="center">
-            <Image src={retailShop} h="15rem" />
+            <Image w="100%" src={retailShop} h="15rem" />
             <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem">
               RETAIL SHOPS
             </Heading>
           </Flex>
           <Flex w="100%" direction="column" align="center">
-            <Image h="15rem" src={market} />
+            <Image w="100%" h="15rem" src={market} />
             <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem">
               HYPERMARKET
             </Heading>
           </Flex>
           <Flex w="100%" direction="column" align="center">
-            <Image src={pharmacy} h="15rem" />
+            <Image w="100%" src={pharmacy} h="15rem" />
             <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem">
               PHARMACY
             </Heading>
@@ -513,19 +515,19 @@ const AreteMall = () => {
             <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
               FOOD COURT
             </Heading>
-            <Image src={foodCourt} h="15rem" />
+            <Image w="100%" src={foodCourt} h="15rem" />
           </Flex>
           <Flex w="100%" direction="column" align="center">
             <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
               8 SCREEN MULTIPLEX
             </Heading>
-            <Image src={multiplex} h="15rem" />
+            <Image w="100%" src={multiplex} h="15rem" />
           </Flex>
           <Flex w="100%" direction="column" align="center">
             <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
               GAMING ARCADE
             </Heading>
-            <Image src={gamingArena} h="15rem" />
+            <Image w="100%" src={gamingArena} h="15rem" />
           </Flex>
         </Flex>
       </Flex>
@@ -741,7 +743,7 @@ const LocationAndFormPlaza = () => {
               <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
               <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
               <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
-              <ListItem>R.K.M. Engineering College</ListItem>
+              <ListItem>R.M.K. Engineering College</ListItem>
             </UnorderedList>
           </Flex>
           <Flex w="100%" direction="column">
@@ -1159,7 +1161,7 @@ const LocationAndFormMall = () => {
               <ListItem pb="0.625rem">Drive To Siruvapuri</ListItem>
               <ListItem pb="0.625rem">Murugan Temple</ListItem>
               <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
-              <ListItem>R.K.M. Engineering College</ListItem>
+              <ListItem>R.M.K. Engineering College</ListItem>
             </UnorderedList>
           </Flex>
           <Flex w="100%" direction="column">
