@@ -40,7 +40,7 @@ function App() {
           <Route path="/news-and-media" element={<NewsMediaSc />} />
           <Route path="/refer-and-earn" element={<ReferAndEarn />} />
           <Route
-            path="/commmercial-properties"
+            path="/commercial-properties"
             element={<CommercialProperties />}
           />
         </Routes>
