@@ -25,9 +25,9 @@ const LastSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      px="100px"
-      pt="50px"
-      pb="50px"
+      px="6.25rem"
+      pt="3.125rem"
+      pb="3.125rem"
       direction="column"
       align="center"
       justify="center"
@@ -38,9 +38,9 @@ const LastSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
+        fontSize="2.5rem"
         textAlign="center"
-        mb="50px"
+        mb="3.125rem"
       >
         200+ HAPPY FAMILIES & COUNTING...
       </Text>
@@ -70,8 +70,8 @@ const LastSec = () => {
           pos="absolute"
           left="-1%"
           top="0"
-          w="70px"
-          h="50px"
+          w="4.375rem"
+          h="3.125rem"
           as={ImQuotesLeft}
           color="#DFBD69"
         />
@@ -82,8 +82,8 @@ const LastSec = () => {
           right="0"
           bottom="25%"
           zIndex="10"
-          w="70px"
-          h="50px"
+          w="4.375rem"
+          h="3.125rem"
           as={ImQuotesRight}
         />
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
@@ -94,11 +94,11 @@ const LastSec = () => {
                   direction="column"
                   w="100%"
                   fontFamily="veralaRound"
-                  mt="50px"
+                  mt="3.125rem"
                 >
-                  <Text fontSize="16px">{prime.text}</Text>
-                  <Text fontSize="20px">{prime.title}</Text>
-                  <Text fontSize="20px">{prime.subTitle}</Text>
+                  <Text fontSize="1rem">{prime.text}</Text>
+                  <Text fontSize="1.25rem">{prime.title}</Text>
+                  <Text fontSize="1.25rem">{prime.subTitle}</Text>
                 </Flex>
               </Flex>
               <Flex w="100%" h="100%">

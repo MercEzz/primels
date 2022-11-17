@@ -164,11 +164,11 @@ const SecondSec = () => {
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
-              h="84px"
+              h="5.25rem"
             />
             <Box
-              height="30px"
-              width="30px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -182,17 +182,16 @@ const SecondSec = () => {
             transition="all 2s 2s"
             mb="0.9rem"
             fontFamily="veralaRound"
-            fontSize="1rem"
-          >
+            fontSize="1rem">
             THE ULTIMATE ADDRESS: Experience the breathtaking views of Chennai's
             stunning skyline from Arete Homes SKY HIGH Tower the top 20th floor.
             A new world of luxury has taken shape in North Chennai, Ponneri.{" "}
-          </Text>
+            </Text>
           <Flex
             opacity={inView ? "1" : "0"}
             transition="all 2s 4s"
-            w="271px"
-            borderRadius="10px"
+            w="16.937rem"
+            borderRadius="0.625rem"
             bgColor="#DFBD69"
             p="0.9rem"
             mb="1.2rem"
@@ -204,8 +203,8 @@ const SecondSec = () => {
           <Flex
             opacity={inView ? "1" : "0"}
             transition="all 2s 6s"
-            w="271px"
-            borderRadius="10px"
+            w="16.937rem"
+            borderRadius="0.625rem"
             bgColor="#DFBD69"
             p="0.9rem"
             mb="1.2rem"
@@ -217,8 +216,8 @@ const SecondSec = () => {
           <Flex
             opacity={inView ? "1" : "0"}
             transition="all 2s 8s"
-            w="271px"
-            borderRadius="10px"
+            w="16.937rem"
+            borderRadius="0.625rem"
             bgColor="#DFBD69"
             p="0.9rem"
             mb="1.2rem"
@@ -230,8 +229,8 @@ const SecondSec = () => {
           <Flex
             opacity={inView ? "1" : "0"}
             transition="all 2s 10s"
-            w="271px"
-            borderRadius="10px"
+            w="16.937rem"
+            borderRadius="0.625rem"
             bgColor="#DFBD69"
             p="0.9rem"
           >

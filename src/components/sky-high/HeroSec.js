@@ -22,7 +22,7 @@ const FirstSec = () => {
     setIsinView(true);
   }, 1000);
   return (
-    <Flex ref={ref} w="100%" h="100vh">
+    <Flex ref={ref} w="100%" h="57.937rem">
       <Box
         transform={isInView ? "scale(1)" : "scale(0.6)"}
         transition="all 2s"
@@ -68,8 +68,8 @@ const FirstSec = () => {
           bottom="0"
           right="50%"
           // transform={"translateX(-50%)"}
-          mx="5px"
-          mb="25px"
+          mx="0.312rem"
+          mb="1.562rem"
           zIndex={2}
           onClick={() => {
             slider?.slickPrev();
@@ -91,8 +91,8 @@ const FirstSec = () => {
           bottom="0"
           left="50%"
           // transform={"translate(-50%)"}
-          mx="5px"
-          mb="25px"
+          mx="0.312rem"
+          mb="1.562rem"
           zIndex={2}
           onClick={() => {
             slider?.slickNext();

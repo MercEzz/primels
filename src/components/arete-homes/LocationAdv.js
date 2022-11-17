@@ -23,9 +23,9 @@ const NinethSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      px="100px"
-      pt="50px"
-      pb="50px"
+      px="6.25rem"
+      pt="3.125rem"
+      pb="3.125rem"
       direction="column"
       align="center"
       justify="center"
@@ -35,8 +35,8 @@ const NinethSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
-        lineHeight="48px"
+        fontSize="2.5rem"
+        lineHeight="3rem"
         textTransform="uppercase"
       >
         LOCATION ADVANTAGE
@@ -46,10 +46,10 @@ const NinethSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="avenir"
-        fontSize="34px"
-        lineHeight="48px"
-        pt="25px"
-        pb="50px"
+        fontSize="2.125rem"
+        lineHeight="3rem"
+        pt="1.562rem"
+        pb="1.562rem"
       >
         PONNERI - A SMART CITY BY JICA
       </Heading>
@@ -215,8 +215,8 @@ const NinethSec = () => {
           <Flex w="100%" h="100%">
             <Button
               w="100%"
-              h="51px"
-              fontSize="16px"
+              h="3.187rem"
+              fontSize="1rem"
               fontFamily="avenir"
               fontWeight="bold"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
@@ -226,7 +226,7 @@ const NinethSec = () => {
               }}
               _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
             >
-              <ImLocation size="30px" /> SHOW LOCATION ON GOOGLE MAPS
+              <ImLocation size="1.875rem" /> SHOW LOCATION ON GOOGLE MAPS
             </Button>
           </Flex>
         </Flex>
@@ -242,7 +242,7 @@ const NinethSec = () => {
               direction="column"
               justify="flex-start"
               align="center"
-              px="25px"
+              px="1.562rem"
             >
               {" "}
               <Flex
@@ -255,15 +255,15 @@ const NinethSec = () => {
                 align="center"
               >
                 <Divider
-                  h="50px"
+                  h="3.125rem"
                   orientation="vertical"
                   border="3px solid"
                   borderColor="#DFBD69"
                   bgColor="#DFBD69"
                 />
                 <Box
-                  height="30px"
-                  width="30px"
+                  height="1.875rem"
+                  width="1.875rem"
                   backgroundColor="#DFBD69"
                   border="3px solid white"
                   boxShadow="0px 0px 0px 3px #B88746"
@@ -275,7 +275,7 @@ const NinethSec = () => {
                 transform={isInView ? "translateY(0)" : "translateY(-50px)"}
                 opacity={isInView ? "1" : "0"}
                 transition="all 2s 2s"
-                h="50px"
+                h="3.125rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -291,8 +291,8 @@ const NinethSec = () => {
               <Heading
                 alignSelf="center"
                 fontFamily="avenir"
-                fontSize="20px"
-                mr="25px"
+                fontSize="1.25rem"
+                mr="1.562rem"
               >
                 5 Mins
               </Heading>
@@ -300,13 +300,13 @@ const NinethSec = () => {
                 alignSelf="center"
                 textTransform="uppercase"
                 fontFamily="veralaRound"
-                fontSize="16px"
+                fontSize="1rem"
               >
-                <ListItem pb="10px">
+                <ListItem pb="0.625rem">
                   Walk to Velammal International School{" "}
                 </ListItem>
-                <ListItem pb="10px">DRIVE TO Origin by Mahindra </ListItem>
-                <ListItem pb="10px">DRIVE TO Ponneri Railway Station</ListItem>
+                <ListItem pb="0.625rem">DRIVE TO Origin by Mahindra </ListItem>
+                <ListItem pb="0.625rem">DRIVE TO Ponneri Railway Station</ListItem>
               </UnorderedList>
             </Flex>
           </Flex>
@@ -322,7 +322,7 @@ const NinethSec = () => {
               direction="column"
               justify="flex-start"
               align="center"
-              px="25px"
+              px="1.562rem"
             >
               {" "}
               <Flex
@@ -335,15 +335,15 @@ const NinethSec = () => {
                 align="center"
               >
                 <Divider
-                  h="35px"
+                  h="2.187rem"
                   orientation="vertical"
                   border="3px solid"
                   borderColor="#DFBD69"
                   bgColor="#DFBD69"
                 />
                 <Box
-                  height="30px"
-                  width="30px"
+                  height="1.875rem"
+                  width="1.875rem"
                   backgroundColor="#DFBD69"
                   border="3px solid white"
                   boxShadow="0px 0px 0px 3px #B88746"
@@ -355,7 +355,7 @@ const NinethSec = () => {
                 transform={isInView ? "translateY(0)" : "translateY(-50px)"}
                 opacity={isInView ? "1" : "0"}
                 transition="all 2s 4s"
-                h="50px"
+                h="3.125rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -374,8 +374,8 @@ const NinethSec = () => {
                 display="flex"
                 alignSelf="center"
                 fontFamily="avenir"
-                fontSize="20px"
-                mr="25px"
+                fontSize="1.25rem"
+                mr="1.562rem"
               >
                 10 Mins
               </Heading>
@@ -383,13 +383,13 @@ const NinethSec = () => {
                 textTransform="uppercase"
                 alignSelf="center"
                 fontFamily="veralaRound"
-                fontSize="16px"
+                fontSize="1rem"
               >
-                <ListItem pb="10px">CONNECT TO Outer Ring Road</ListItem>
-                <ListItem pb="10px">
+                <ListItem pb="0.625rem">CONNECT TO Outer Ring Road</ListItem>
+                <ListItem pb="0.625rem">
                   DRIVE TO Siruvapuri Murugan Temple{" "}
                 </ListItem>
-                <ListItem pb="10px">VELS Medical Hospital</ListItem>
+                <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
               </UnorderedList>
             </Flex>
           </Flex>
@@ -400,7 +400,7 @@ const NinethSec = () => {
               direction="column"
               justify="flex-start"
               align="center"
-              px="25px"
+              px="1.562rem"
             >
               {" "}
               <Flex
@@ -413,15 +413,15 @@ const NinethSec = () => {
                 align="center"
               >
                 <Divider
-                  h="25px"
+                  h="1.562rem"
                   orientation="vertical"
                   border="3px solid"
                   borderColor="#DFBD69"
                   bgColor="#DFBD69"
                 />
                 <Box
-                  height="30px"
-                  width="30px"
+                  height="1.875rem"
+                  width="1.875rem"
                   backgroundColor="#DFBD69"
                   border="3px solid white"
                   boxShadow="0px 0px 0px 3px #B88746"
@@ -433,7 +433,7 @@ const NinethSec = () => {
                 transform={isInView ? "translateY(0)" : "translateY(-50px)"}
                 opacity={isInView ? "1" : "0"}
                 transition="all 2s 6s"
-                h="30px"
+                h="1.875rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -451,8 +451,8 @@ const NinethSec = () => {
               <Heading
                 alignSelf="center"
                 fontFamily="avenir"
-                fontSize="20px"
-                mr="25px"
+                fontSize="1.25rem"
+                mr="1.562rem"
               >
                 20 Mins
               </Heading>
@@ -460,11 +460,11 @@ const NinethSec = () => {
                 <UnorderedList
                   textTransform="uppercase"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                 >
-                  <ListItem pb="10px">DRIVE TO REDHILLS</ListItem>
-                  <ListItem pb="10px">PULICAT LAKE </ListItem>
-                  <ListItem pb="10px">DRIVE TO GUMMIDIPOONDI SIPCOT</ListItem>
+                  <ListItem pb="0.625rem">DRIVE TO REDHILLS</ListItem>
+                  <ListItem pb="0.625rem">PULICAT LAKE </ListItem>
+                  <ListItem pb="0.625rem">DRIVE TO GUMMIDIPOONDI SIPCOT</ListItem>
                 </UnorderedList>
               </Flex>
             </Flex>
@@ -476,7 +476,7 @@ const NinethSec = () => {
               direction="column"
               justify="flex-start"
               align="center"
-              px="25px"
+              px="1.562rem"
             >
               <Flex
                 transform={isInView ? "translateY(0)" : "translateY(-50px)"}
@@ -488,15 +488,15 @@ const NinethSec = () => {
                 align="center"
               >
                 <Divider
-                  h="40px"
+                  h="2.5rem"
                   orientation="vertical"
                   border="3px solid"
                   borderColor="#DFBD69"
                   bgColor="#DFBD69"
                 />
                 <Box
-                  height="30px"
-                  width="30px"
+                  height="1.875rem"
+                  width="1.875rem"
                   backgroundColor="#DFBD69"
                   border="3px solid white"
                   boxShadow="0px 0px 0px 3px #B88746"
@@ -508,7 +508,7 @@ const NinethSec = () => {
                 transform={isInView ? "translateY(0)" : "translateY(-50px)"}
                 opacity={isInView ? "1" : "0"}
                 transition="all 2s 8s"
-                h="40px"
+                h="2.5rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -525,8 +525,8 @@ const NinethSec = () => {
               <Heading
                 alignSelf="center"
                 fontFamily="avenir"
-                fontSize="20px"
-                mr="25px"
+                fontSize="1.25rem"
+                mr="1.562rem"
               >
                 30 Mins
               </Heading>
@@ -534,11 +534,11 @@ const NinethSec = () => {
                 <UnorderedList
                   textTransform="uppercase"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                 >
-                  <ListItem pb="10px">DRIVE TO SRI CITY</ListItem>
-                  <ListItem pb="10px">DRIVE TO ADANI PORT</ListItem>
-                  <ListItem pb="10px">
+                  <ListItem pb="0.625rem">DRIVE TO SRI CITY</ListItem>
+                  <ListItem pb="0.625rem">DRIVE TO ADANI PORT</ListItem>
+                  <ListItem pb="0.625rem">
                     DRIVE TO Ponneri Railway Station
                   </ListItem>
                 </UnorderedList>
@@ -552,7 +552,7 @@ const NinethSec = () => {
               direction="column"
               justify="flex-start"
               align="center"
-              px="25px"
+              px="1.562rem"
             >
               <Flex
                 transform={isInView ? "translateY(0)" : "translateY(-50px)"}
@@ -564,15 +564,15 @@ const NinethSec = () => {
                 align="center"
               >
                 <Divider
-                  h="10px"
+                  h="0.625rem"
                   orientation="vertical"
                   border="3px solid"
                   borderColor="#DFBD69"
                   bgColor="#DFBD69"
                 />
                 <Box
-                  height="30px"
-                  width="30px"
+                  height="1.875rem"
+                  width="1.875rem"
                   backgroundColor="#DFBD69"
                   border="3px solid white"
                   boxShadow="0px 0px 0px 3px #B88746"
@@ -584,7 +584,7 @@ const NinethSec = () => {
                 transform={isInView ? "translateY(0)" : "translateY(-50px)"}
                 opacity={isInView ? "1" : "0"}
                 transition="all 2s 10s"
-                h="10px"
+                h="0.625rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -604,8 +604,8 @@ const NinethSec = () => {
                 h="100%"
                 alignSelf="center"
                 fontFamily="avenir"
-                fontSize="20px"
-                mr="25px"
+                fontSize="1.25rem"
+                mr="1.562rem"
               >
                 40 Mins
               </Heading>
@@ -613,9 +613,9 @@ const NinethSec = () => {
                 <UnorderedList
                   textTransform="uppercase"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                 >
-                  <ListItem pb="10px">DRIVE TO CHENNAI AIRPORT</ListItem>
+                  <ListItem pb="0.625rem">DRIVE TO CHENNAI AIRPORT</ListItem>
                 </UnorderedList>
               </Flex>
             </Flex>
@@ -633,15 +633,15 @@ const NinethSec = () => {
               px="25px"
             >
               <Divider
-                h="10px"
+                h="0.625rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
               <Box
-                height="30px"
-                width="30px"
+                height="1.875rem"
+                width="1.875rem"
                 backgroundColor="#DFBD69"
                 border="3px solid white"
                 boxShadow="0px 0px 0px 3px #B88746"
@@ -659,8 +659,8 @@ const NinethSec = () => {
               <Heading
                 alignSelf="center"
                 fontFamily="avenir"
-                fontSize="20px"
-                mr="25px"
+                fontSize="1.25rem"
+                mr="1.562rem"
               >
                 2 Hours
               </Heading>
@@ -668,9 +668,9 @@ const NinethSec = () => {
                 <UnorderedList
                   textTransform="uppercase"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                 >
-                  <ListItem pb="10px">DRIVE TO TIRUPATI</ListItem>
+                  <ListItem pb="0.625rem">DRIVE TO TIRUPATI</ListItem>
                 </UnorderedList>
               </Flex>
             </Flex>

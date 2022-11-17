@@ -34,16 +34,16 @@ const SixthSec = () => {
       direction="column"
       align="center"
       justify="center"
-      py="100px"
-      px="25px"
+      py="6.25rem"
+      px="1.562rem"
     >
       <Text
         transform={isInView ? "none" : "translateY(-50px)"}
         opacity={isInView ? "1" : "0"}
         transition="all 2s "
         fontFamily="goudy"
-        fontSize="40px"
-        pb="25px"
+        fontSize="2.5rem"
+        pb="1.562rem"
       >
         PVT. PONNERI GYMKHANA CLUB
       </Text>
@@ -55,8 +55,8 @@ const SixthSec = () => {
         height={"100%"}
         width={"full"}
         overflow={"hidden"}
-        pl="75px"
-        pr="60px"
+        pl="4.687rem"
+        pr="3.75rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -76,8 +76,8 @@ const SixthSec = () => {
             <Image
               key={prime}
               w="100%"
-              height="247px"
-              pr="15px"
+              height="15.437rem"
+              px="3.2rem"
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"
@@ -94,15 +94,15 @@ const SixthSec = () => {
           position="absolute"
           top="50%"
           left="0"
-          h="50px"
-          w="50px"
+          h="3.125rem"
+          w="3.125rem"
           transform={"translate(0%, -50%)"}
           zIndex={2}
           onClick={() => {
             slider?.slickPrev();
           }}
         >
-          <AiOutlineLeft color="#B88746" size="40px" />
+          <AiOutlineLeft color="#B88746" size="2.5rem" />
         </IconButton>
 
         <IconButton
@@ -115,22 +115,22 @@ const SixthSec = () => {
           zIndex={2}
           right="0"
           top="50%"
-          h="50px"
-          w="50px"
+          h="3.125rem"
+          w="3.125rem"
           onClick={() => {
             slider?.slickNext();
           }}
         >
-          <AiOutlineRight color="#B88746" size="40px" />
+          <AiOutlineRight color="#B88746" size="2.5rem" />
         </IconButton>
       </Box>
       <Button
         opacity={isInView ? "1" : "0"}
         transition="all 2s 4s"
-        w="174px"
-        h="51px"
-        mt="25px"
-        fontSize="16px"
+        w="10.875rem"
+        h="3.187rem"
+        mt="1.562rem"
+        fontSize="1rem"
         fontFamily="avenir"
         bgGradient="linear(to-b, #B88746 ,#DFBD69)"
         color="white"

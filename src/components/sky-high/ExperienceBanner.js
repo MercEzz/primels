@@ -15,7 +15,7 @@ const ThirdSec = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="100vh"
+      h="57.937rem"
       align="center"
       justify="center"
       pos="relative"
@@ -35,11 +35,11 @@ const ThirdSec = () => {
         transform={inView ? "none" : "translateX(-100px)"}
         opacity={inView ? "1" : "0"}
         transition="all 2s"
-        h="200px"
+        h="12.5rem"
         src={bannerasset}
         pos="absolute"
-        top="125px"
-        right="150px"
+        top="7.812rem"
+        right="9.375rem"
       />
     </Flex>
   );
