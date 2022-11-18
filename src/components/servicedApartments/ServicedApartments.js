@@ -963,6 +963,8 @@ const ServicedApartments = () => {
           </HStack>
         </Flex>
       </Flex>
+      {/*Arete Homes Img Galary*/}
+      <Flex w="100%" h="100%"></Flex>
     </>
   );
 };
