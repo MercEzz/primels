@@ -15,6 +15,8 @@ import {
   SimpleGrid,
   HStack,
   VStack,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import React from "react";
 import banner from "../serviced apartments imgs/MIVAN TECHNOLOGY TOWER.jpg";
@@ -22,7 +24,6 @@ import apartment from "../serviced apartments imgs/serviced apartments icons/sma
 import time from "../serviced apartments imgs/serviced apartments icons/smart way of living-2nd.svg";
 import ringbell from "../serviced apartments imgs/serviced apartments icons/smart way of living -3rd.svg";
 import edit from "../serviced apartments imgs/serviced apartments icons/smart way of living -4th.svg";
-
 import studentHousing from "../serviced apartments imgs/group-indian-people.jpg";
 import coliving from "../serviced apartments imgs/arabian-men-women-sitting-kitchen-discussing-news.jpg";
 import managedLiving from "../serviced apartments imgs/portrait-happy-indian-asian-young-family-while-sitting-sofa-lying-floor-sitting-against-wall.jpg";
@@ -47,6 +48,15 @@ import garbage from "../serviced apartments imgs/serviced apartments icons/garba
 import cable from "../serviced apartments imgs/serviced apartments icons/tv cable.svg";
 import parking from "../serviced apartments imgs/serviced apartments icons/parking.svg";
 import toiletries from "../serviced apartments imgs/serviced apartments icons/toiletries.svg";
+// Grid Images
+import partyArea from "../serviced apartments imgs/party area.JPG";
+import garden from "../serviced apartments imgs/garden and jogging track.jpg";
+import gym from "../serviced apartments imgs/gym.JPG";
+import meditation from "../serviced apartments imgs/arete meditation retreat 3.jpg";
+import sports from "../serviced apartments imgs/multi sports arena.jpg";
+import pool from "../serviced apartments imgs/pool.JPG";
+import exercise from "../serviced apartments imgs/open exercise area.jpg";
+import cafe from "../serviced apartments imgs/cafe.jpg";
 
 const ServicedApartments = () => {
   return (
@@ -559,7 +569,309 @@ const ServicedApartments = () => {
           ))}
         </Flex>
       </Flex>
-      <Flex></Flex>
+      {/* amenities sec */}
+      <Flex w="100%" h="100%" pt="3.125rem" direction="column">
+        <Text
+          w="100%"
+          textAlign="center"
+          fontFamily="goudy"
+          fontSize="2.5rem"
+          pb="1.563rem"
+        >
+          AMENITIES
+        </Text>
+        <Heading
+          w="100%"
+          textAlign="center"
+          fontFamily="avenir"
+          fontSize="2.125rem"
+          pb="1.563rem"
+        >
+          EVERYTHING UNDER ONE ROOF
+        </Heading>
+        <Flex w="100%" h="100%" gap="0.938rem">
+          <Flex w="100%" h="100%">
+            <Grid templateColumns="repeat(2, 1fr)" gap="0.938rem">
+              <GridItem rowSpan={2} colSpan={1} pos="relative">
+                <Image
+                  w="100%"
+                  h="35.313rem"
+                  objectFit="cover"
+                  src={partyArea}
+                />{" "}
+                <Box
+                  w="100%"
+                  h="100%"
+                  pos="absolute"
+                  top="0"
+                  bottom="0"
+                  left="0"
+                  right="0"
+                  opacity="0"
+                  bgColor="rgba(0,0,0,0.6)"
+                  transition="all .3s"
+                  _hover={{ opacity: "1" }}
+                >
+                  <Heading
+                    pos="absolute"
+                    fontFamily="avenir"
+                    textAlign="center"
+                    left="50%"
+                    top="50%"
+                    transform="translate(-50%,-50%)"
+                    fontSize="1.25rem"
+                    color="#DFBD69"
+                  >
+                    OPEN PARTY AREA
+                  </Heading>
+                </Box>
+              </GridItem>
+              <GridItem pos="relative">
+                <Image w="100%" h="17.188rem" objectFit="cover" src={garden} />{" "}
+                <Box
+                  w="100%"
+                  h="100%"
+                  pos="absolute"
+                  top="0"
+                  bottom="0"
+                  left="0"
+                  right="0"
+                  opacity="0"
+                  bgColor="rgba(0,0,0,0.6)"
+                  transition="all .3s"
+                  _hover={{ opacity: "1" }}
+                >
+                  <Heading
+                    pos="absolute"
+                    fontFamily="avenir"
+                    textAlign="center"
+                    left="50%"
+                    top="50%"
+                    transform="translate(-50%,-50%)"
+                    fontSize="1.25rem"
+                    color="#DFBD69"
+                  >
+                    GARDEN
+                  </Heading>
+                </Box>
+              </GridItem>
+              <GridItem pos="relative">
+                {" "}
+                <Image
+                  w="100%"
+                  h="17.188rem"
+                  objectFit="cover"
+                  src={gym}
+                />{" "}
+                <Box
+                  w="100%"
+                  h="100%"
+                  pos="absolute"
+                  top="0"
+                  bottom="0"
+                  left="0"
+                  right="0"
+                  opacity="0"
+                  bgColor="rgba(0,0,0,0.6)"
+                  transition="all .3s"
+                  _hover={{ opacity: "1" }}
+                >
+                  <Heading
+                    pos="absolute"
+                    fontFamily="avenir"
+                    textAlign="center"
+                    left="50%"
+                    top="50%"
+                    transform="translate(-50%,-50%)"
+                    fontSize="1.25rem"
+                    color="#DFBD69"
+                  >
+                    GYM
+                  </Heading>
+                </Box>
+              </GridItem>
+              <GridItem colSpan={2} pos="relative">
+                {" "}
+                <Image
+                  w="100%"
+                  h="17.188rem"
+                  objectFit="cover"
+                  src={meditation}
+                />{" "}
+                <Box
+                  w="100%"
+                  h="100%"
+                  pos="absolute"
+                  top="0"
+                  bottom="0"
+                  left="0"
+                  right="0"
+                  opacity="0"
+                  bgColor="rgba(0,0,0,0.6)"
+                  transition="all .3s"
+                  _hover={{ opacity: "1" }}
+                >
+                  <Heading
+                    pos="absolute"
+                    fontFamily="avenir"
+                    textAlign="center"
+                    left="50%"
+                    top="50%"
+                    transform="translate(-50%,-50%)"
+                    fontSize="1.25rem"
+                    color="#DFBD69"
+                  >
+                    MEDITATION CENTRE
+                  </Heading>
+                </Box>
+              </GridItem>
+            </Grid>
+          </Flex>
+          <Flex w="100%" h="100%">
+            <Grid
+              h="100%"
+              templateColumns="repeat(2, 1fr)"
+              // templateRows="repeat(3, 1fr)"
+              gap="0.938rem"
+            >
+              <GridItem colSpan={2} pos="relative">
+                {" "}
+                <Image
+                  w="100%"
+                  h="17.188rem"
+                  objectFit="cover"
+                  src={sports}
+                />{" "}
+                <Box
+                  w="100%"
+                  h="100%"
+                  pos="absolute"
+                  top="0"
+                  bottom="0"
+                  left="0"
+                  right="0"
+                  opacity="0"
+                  bgColor="rgba(0,0,0,0.6)"
+                  transition="all .3s"
+                  _hover={{ opacity: "1" }}
+                >
+                  <Heading
+                    pos="absolute"
+                    fontFamily="avenir"
+                    textAlign="center"
+                    left="50%"
+                    top="50%"
+                    transform="translate(-50%,-50%)"
+                    fontSize="1.25rem"
+                    color="#DFBD69"
+                  >
+                    MULTI SPORTS ARENA
+                  </Heading>
+                </Box>
+              </GridItem>
+              <GridItem pos="relative">
+                {" "}
+                <Image
+                  w="100%"
+                  h="17.188rem"
+                  objectFit="cover"
+                  src={pool}
+                />{" "}
+                <Box
+                  w="100%"
+                  h="100%"
+                  pos="absolute"
+                  top="0"
+                  bottom="0"
+                  left="0"
+                  right="0"
+                  opacity="0"
+                  bgColor="rgba(0,0,0,0.6)"
+                  transition="all .3s"
+                  _hover={{ opacity: "1" }}
+                >
+                  <Heading
+                    pos="absolute"
+                    fontFamily="avenir"
+                    textAlign="center"
+                    left="50%"
+                    top="50%"
+                    transform="translate(-50%,-50%)"
+                    fontSize="1.25rem"
+                    color="#DFBD69"
+                  >
+                    SWIMMING POOL
+                  </Heading>
+                </Box>
+              </GridItem>{" "}
+              <GridItem rowSpan={2} colSpan={1} pos="relative">
+                <Image w="100%" h="35.313rem" objectFit="cover" src={cafe} />
+                <Box
+                  w="100%"
+                  h="100%"
+                  pos="absolute"
+                  top="0"
+                  bottom="0"
+                  left="0"
+                  right="0"
+                  opacity="0"
+                  bgColor="rgba(0,0,0,0.6)"
+                  transition="all .3s"
+                  _hover={{ opacity: "1" }}
+                >
+                  <Heading
+                    pos="absolute"
+                    fontFamily="avenir"
+                    textAlign="center"
+                    left="50%"
+                    top="50%"
+                    transform="translate(-50%,-50%)"
+                    fontSize="1.25rem"
+                    color="#DFBD69"
+                  >
+                    CAFETERIA
+                  </Heading>
+                </Box>
+              </GridItem>
+              <GridItem pos="relative">
+                {" "}
+                <Image
+                  w="100%"
+                  h="17.188rem"
+                  objectFit="cover"
+                  src={exercise}
+                />
+                <Box
+                  w="100%"
+                  h="100%"
+                  pos="absolute"
+                  top="0"
+                  bottom="0"
+                  left="0"
+                  right="0"
+                  opacity="0"
+                  bgColor="rgba(0,0,0,0.6)"
+                  transition="all .3s"
+                  _hover={{ opacity: "1" }}
+                >
+                  <Heading
+                    pos="absolute"
+                    fontFamily="avenir"
+                    textAlign="center"
+                    left="50%"
+                    top="50%"
+                    transform="translate(-50%,-50%)"
+                    fontSize="1.25rem"
+                    color="#DFBD69"
+                  >
+                    OPEN EXERCISE AREA
+                  </Heading>
+                </Box>
+              </GridItem>
+            </Grid>
+          </Flex>
+        </Flex>
+      </Flex>
     </>
   );
 };
