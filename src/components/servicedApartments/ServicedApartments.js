@@ -17,6 +17,7 @@ import {
   VStack,
   Grid,
   GridItem,
+  Button,
 } from "@chakra-ui/react";
 import React from "react";
 import banner from "../serviced apartments imgs/MIVAN TECHNOLOGY TOWER.jpg";
@@ -57,6 +58,8 @@ import sports from "../serviced apartments imgs/multi sports arena.jpg";
 import pool from "../serviced apartments imgs/pool.JPG";
 import exercise from "../serviced apartments imgs/open exercise area.jpg";
 import cafe from "../serviced apartments imgs/cafe.jpg";
+
+import manStanding from "../serviced apartments imgs/1stock-removebg-preview.png";
 
 const ServicedApartments = () => {
   return (
@@ -570,7 +573,7 @@ const ServicedApartments = () => {
         </Flex>
       </Flex>
       {/* amenities sec */}
-      <Flex w="100%" h="100%" pt="3.125rem" direction="column">
+      <Flex w="100%" h="100%" pt="3.125rem" pb="0.938rem" direction="column">
         <Text
           w="100%"
           textAlign="center"
@@ -870,6 +873,94 @@ const ServicedApartments = () => {
               </GridItem>
             </Grid>
           </Flex>
+        </Flex>
+      </Flex>
+      {/*move in sec*/}
+      <Flex
+        w="100%"
+        h="95vh"
+        bgGradient="linear(to-b, #DFBD69, #B88746)"
+        py="3.125rem"
+        pos="relative"
+        direction="column"
+      >
+        <Flex w="100%" h="100%">
+          <Flex
+            w="55%"
+            h="100%"
+            align="flex-start"
+            justify="center"
+            direction="column"
+            pl="6.25rem"
+          >
+            <Heading
+              fontFamily="avenir"
+              color="black"
+              fontSize="2.125rem"
+              pb="0.938rem"
+            >
+              MOVE IN WITH JUST YOUR CLOTHES
+            </Heading>{" "}
+            <Heading
+              fontFamily="avenir"
+              color="white"
+              fontSize="2.125rem"
+              pb="2.5rem"
+            >
+              WE GOT THE REST COVERED
+            </Heading>
+            <Text fontFamily="veralaRound" fontSize="1.25rem" pb="1.563rem">
+              You can choose from an array of apartments with services and
+              customize according to your needs.
+            </Text>
+            <Button
+              bgColor="#000"
+              color="#fff"
+              _hover={{ bgColor: "#000", color: "#fff" }}
+            >
+              SCHEDULE A VISIT
+            </Button>
+          </Flex>
+          <Flex w="45%" h="100%" pos="relative" align="center" justify="center">
+            <Flex
+              w="100%"
+              h="100%"
+              pos="absolute"
+              bgGradient="linear(to-b, #b88746, #B88746)"
+              clipPath="polygon(10% 10%, 100% 40%, 35% 100%)"
+            />
+            <Image pos="absolute" h="100%" src={manStanding} />
+            <Flex
+              w="100%"
+              h="100%"
+              pos="absolute"
+              bgGradient="linear(to-b, #CBA257,#BD8E4B)"
+              clipPath="polygon(68% 70%, 100% 100%, 35% 100%)"
+            />
+          </Flex>
+        </Flex>
+        <Flex
+          w="100%"
+          direction="column"
+          align="center"
+          pos="absolute"
+          bottom="3.125rem"
+        >
+          {" "}
+          <Text fontFamily="goudy" fontSize="2.125rem" pb="0.625rem">
+            LIFE JUST GOT BETTER
+          </Text>
+          <HStack color="white" gap="0.938rem" lineHeight="1.188rem">
+            <Heading fontFamily="avenir" fontSize="1rem">
+              BETTER APARTMENTS
+            </Heading>
+            <Heading fontFamily="avenir" fontSize="1rem">
+              BETTER SERVICES
+            </Heading>
+            <Heading fontFamily="avenir" fontSize="1rem">
+              BETTER AMENITIES
+            </Heading>
+          </HStack>
         </Flex>
       </Flex>
     </>
