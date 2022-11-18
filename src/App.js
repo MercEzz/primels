@@ -13,6 +13,7 @@ import NewsMediaSc from "./screens/NewsMediaSc";
 import AreteHomes from "./screens/AreteHomes";
 import ReferAndEarn from "./screens/ReferAndEarn";
 import CommercialProperties from "./screens/CommercialProperties";
+import ServicedApartSc from "./screens/ServicedApartSc";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             path="/commercial-properties"
             element={<CommercialProperties />}
           />
+          <Route path="/serviced-apartments" element={<ServicedApartSc />} />
         </Routes>
       </Flex>
       <Footer />

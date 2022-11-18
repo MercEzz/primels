@@ -99,11 +99,11 @@ const ReferAFriend = () => {
       >
         HOW IT WORKS?
       </Heading>
-      <Flex w="100%" columnGap="1.25rem" pb="1.875rem">
-        <Flex w="100%" h="100%" direction="column">
+      <Flex w="100%" h="100%" columnGap="1.25rem" pb="1.875rem">
+        <Flex w="100%" direction="column" justify="space-between">
           <Heading fontFamily="avenir" fontSize="1.5rem">
             STEP 1
-          </Heading>{" "}
+          </Heading>
           <Flex w="100%" align="center" py="0.625rem">
             <Divider
               w="100%"
@@ -121,14 +121,14 @@ const ReferAFriend = () => {
               borderRadius="50%"
               my="1"
             />
-          </Flex>
+          </Flex>{" "}
           <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem">
             Fill up the form on website & submit the details of as many friends
             & family members you would like to refer.
           </Text>
-          <Image w="100%" h="16rem" src={img1} />
+          <Image w="100%" h="16.75rem" src={img1} />
         </Flex>
-        <Flex w="100%" direction="column">
+        <Flex w="100%" direction="column" justify="space-between">
           <Heading fontFamily="avenir" fontSize="1.5rem">
             STEP 2
           </Heading>
@@ -156,7 +156,7 @@ const ReferAFriend = () => {
           </Text>{" "}
           <Image w="100%" h="14.625rem" src={img2} />
         </Flex>
-        <Flex w="100%" direction="column">
+        <Flex w="100%" direction="column" justify="space-between">
           <Heading fontFamily="avenir" fontSize="1.5rem">
             STEP 3
           </Heading>
@@ -214,146 +214,143 @@ const ReferAFriend = () => {
               <Text pb="1.563rem" fontFamily="veralaRound" fontSize="1.25rem">
                 YOUR DETAILS
               </Text>
-              <Stack w="100%" h="100%" direction="column">
-                {" "}
-                <FormControl isRequired>
-                  <HStack
-                    w="100%"
-                    h="100%"
-                    justify="space-between"
-                    align="center"
-                    pb="1.563rem"
+              <FormControl isRequired>
+                <HStack
+                  w="100%"
+                  h="100%"
+                  justify="space-between"
+                  align="center"
+                  pb="1.563rem"
+                >
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
                   >
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
+                    ARE YOU A RESIDENT WITH US?
+                  </FormLabel>
+                  <RadioGroup>
+                    <HStack
+                      w="100%"
+                      h="100%"
+                      justify="space-between"
+                      align="center"
+                      fontFamily="veralaRound"
+                      fontSize="18px"
                     >
-                      ARE YOU A RESIDENT WITH US?
-                    </FormLabel>
-                    <RadioGroup>
-                      <HStack
-                        w="100%"
-                        h="100%"
-                        justify="space-between"
-                        align="center"
-                        fontFamily="veralaRound"
-                        fontSize="18px"
+                      <Radio
+                        borderRadius="none"
+                        value="yes"
+                        size="lg"
+                        mr="3.125rem"
                       >
-                        <Radio
-                          borderRadius="none"
-                          value="yes"
-                          size="lg"
-                          mr="3.125rem"
-                        >
-                          YES
-                        </Radio>
-                        <Radio borderRadius="none" value="no" size="lg">
-                          NO
-                        </Radio>
-                      </HStack>
-                    </RadioGroup>
-                  </HStack>
-                </FormControl>
-                <FormControl isRequired>
-                  {" "}
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      NAME
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="veralaRound"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-                <FormControl isRequired>
-                  {" "}
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      PHONE
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="veralaRound"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-                <FormControl>
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      EMAIL
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="veralaRound"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-                <FormControl>
-                  <HStack w="100%" justify="space-between">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      PROJECT REFERRED
-                    </FormLabel>
-                    <Select
-                      fontFamily="veralaRound"
-                      fontSize="1rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#D9D9D9"
-                      textTransform="uppercase"
-                      variant="flushed"
-                      borderBottom="2px solid white"
-                      icon={<TriangleDownIcon width="1rem" height="0.6rem" />}
-                      borderRadius="none"
-                    >
-                      <option style={{ color: "black" }}>
-                        <Text>Select Project</Text>
-                      </option>
-                      <option style={{ color: "black" }}>
-                        <Text>Arete Homes</Text>
-                      </option>
-                      <option style={{ color: "black" }}>
-                        <Text>Sky High Tower</Text>
-                      </option>
-                      <option style={{ color: "black" }}>
-                        <Text>Ponneri Gymkhana Club</Text>
-                      </option>
-                    </Select>
-                  </HStack>{" "}
-                </FormControl>
-              </Stack>
+                        YES
+                      </Radio>
+                      <Radio borderRadius="none" value="no" size="lg">
+                        NO
+                      </Radio>
+                    </HStack>
+                  </RadioGroup>
+                </HStack>
+              </FormControl>
+              <FormControl isRequired>
+                {" "}
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    NAME
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="veralaRound"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl isRequired>
+                {" "}
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    PHONE
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="veralaRound"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl>
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    EMAIL
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="veralaRound"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl>
+                <HStack w="100%" justify="space-between">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    PROJECT REFERRED
+                  </FormLabel>
+                  <Select
+                    fontFamily="veralaRound"
+                    fontSize="1rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#D9D9D9"
+                    textTransform="uppercase"
+                    variant="flushed"
+                    borderBottom="2px solid white"
+                    icon={<TriangleDownIcon width="1rem" height="0.6rem" />}
+                    borderRadius="none"
+                  >
+                    <option style={{ color: "black" }}>
+                      <Text>Select Project</Text>
+                    </option>
+                    <option style={{ color: "black" }}>
+                      <Text>Arete Homes</Text>
+                    </option>
+                    <option style={{ color: "black" }}>
+                      <Text>Sky High Tower</Text>
+                    </option>
+                    <option style={{ color: "black" }}>
+                      <Text>Ponneri Gymkhana Club</Text>
+                    </option>
+                  </Select>
+                </HStack>{" "}
+              </FormControl>
             </Flex>
             <Flex
               w="100%"
@@ -441,7 +438,7 @@ const ReferAFriend = () => {
                     fontFamily="avenir"
                     lineHeight="1.5rem"
                     w="18.75rem"
-                    h="8.75rem"
+                    h="6.75rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -552,71 +549,67 @@ const BookAVisit = () => {
               align="center"
               justify="center"
             >
-              <Stack w="100%" h="100%" direction="column">
+              <FormControl isRequired>
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    NAME
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl isRequired>
                 {" "}
-                <FormControl isRequired>
-                  {" "}
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      NAME
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="avenir"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-                <FormControl isRequired>
-                  {" "}
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      PHONE
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="avenir"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-                <FormControl>
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      EMAIL
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="avenir"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-              </Stack>
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    PHONE
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl>
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    EMAIL
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
             </Flex>
             <Flex
               w="100%"
