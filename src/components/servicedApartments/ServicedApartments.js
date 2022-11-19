@@ -99,6 +99,7 @@ import lAndt from "../serviced apartments imgs/L&T .png";
 import adani from "../serviced apartments imgs/ADANI.png";
 import linde from "../serviced apartments imgs/LINDE.png";
 import yanmar from "../serviced apartments imgs/YANMAR.png";
+import DropDown from "./DropDown";
 
 const ServicedApartments = () => {
   return (
@@ -1636,6 +1637,7 @@ const ServicedApartments = () => {
           </Container>
         </Flex>
       </Flex>
+      <DropDown />
     </>
   );
 };
