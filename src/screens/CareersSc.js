@@ -6,6 +6,7 @@ import Jobopp from "../components/careers/Jobopp";
 import Lifeatls from "../components/careers/Lifeatls";
 import OurEmp from "../components/careers/OurEmp";
 import ResForm from "../components/careers/ResForm";
+import SectionC from "../components/careers/SectionC";
 
 const CareersSc = () => {
   return (
@@ -13,7 +14,8 @@ const CareersSc = () => {
       <FirstSec />
       <Lifeatls />
       {/* <ImgSlider /> */}
-      <Buildchng />
+      {/* <Buildchng /> */}
+      <SectionC/>
       <OurEmp />
       <Jobopp />
       {/* <ResForm /> */}
