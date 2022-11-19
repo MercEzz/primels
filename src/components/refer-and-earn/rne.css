@@ -1,0 +1,65 @@
+.slidein-top.reveal{
+    transform: translateY(-25rem);
+}
+.slidein-top.reveal.active{
+    animation:slidein-top 1 2s linear;
+    transform: translateY(0px);
+}
+.fadein.reveal{
+    opacity: 0;
+}
+.fadein.reveal.active{
+    animation:fadein 1 2s linear;
+    opacity: 1;
+}
+.fadein-2sdelay.reveal{
+    opacity: 0;
+}
+.fadein-2sdelay.reveal.active{
+    animation:fadein 1 6s step-end;
+    opacity: 1;
+}
+.fadein-4sdelay.reveal{
+    opacity: 0;
+}
+.fadein-4sdelay.reveal.active{
+    animation:fadein 1 8s step-end;
+    opacity: 1;
+}
+.sliderightdisco.reveal{
+    opacity: 0;
+    transform: translateY(-31.25rem);
+}
+.sliderightdisco.reveal.active{
+    opacity: 1;
+    animation:sliderightdisco 1 2s linear;
+    transform: translateY(0px);
+}
+.sliderightdisco-2sdelay.reveal{
+    opacity: 0;
+    transform: translateY(-31.25rem);
+}
+.sliderightdisco-2sdelay.reveal.active{
+    opacity: 1;
+    animation:sliderightdisco-2sdelay 1 4s linear;
+    transform: translateY(0px);
+}
+.sliderightdisco-4sdelay.reveal{
+    opacity: 0;
+    transform: translateY(-31.25rem);
+}
+.sliderightdisco-4sdelay.reveal.active{
+    opacity: 1;
+    animation:sliderightdisco-4sdelay 1 8s linear;
+    transform: translateY(0px);
+}
+
+.expand.reveal{
+    opacity: 0;
+    transform: scale(0.01,0.01);
+}
+.expand.reveal.active{
+    opacity: 1;
+    animation:expand 1 4s linear;
+    transform: scale(1,1);
+}

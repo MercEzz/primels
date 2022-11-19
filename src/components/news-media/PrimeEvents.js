@@ -37,9 +37,9 @@ const ThirdSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      pl="100px"
-      pr="75px"
-      py="50px"
+      pl="6.25rem"
+      pr="4.688rem"
+      py="3.125rem"
       direction="column"
       align="center"
       justify="center"
@@ -49,8 +49,8 @@ const ThirdSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
-        lineHeight="48px"
+        fontSize="2.5rem"
+        lineHeight="3rem"
       >
         PRIME EVENTS
       </Text>
@@ -58,9 +58,9 @@ const ThirdSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="avenir"
-        fontSize="34px"
-        lineHeight="48px"
-        py="25px"
+        fontSize="2.125rem"
+        lineHeight="3rem"
+        py="1.563rem"
       >
         SKY HIGH TOWER LAUNCH AT HYATT REGENCY, CHENNAI{" "}
       </Heading>
@@ -90,8 +90,8 @@ const ThirdSec = () => {
             <Image
               key={prime.id}
               w={prime.width}
-              height="468px"
-              pr="20px"
+              height="29.25rem"
+              pr="1.25rem"
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"
@@ -105,7 +105,7 @@ const ThirdSec = () => {
       <Flex
         opacity={isInView ? "1" : "0"}
         transition="all 2s 3s"
-        pt="25px"
+        pt="1.563rem"
         w="100%"
         h="100%"
         align="center"
@@ -120,14 +120,14 @@ const ThirdSec = () => {
           // bottom="0"
           // left="0"
           // transform={"translate(0%, -50%)"}
-          mx="5px"
+          mx="0.313rem"
           zIndex={2}
           onClick={() => {
             slider?.slickPrev();
             setCurrentSlide(currentSlide--);
           }}
         >
-          <AiOutlineLeft color="#B88746" size="30px" />
+          <AiOutlineLeft color="#B88746" size="1.875rem" />
         </IconButton>
         {/* fill box */}
         01
@@ -145,14 +145,14 @@ const ThirdSec = () => {
           // bottom="0"
           // right="0"
           // transform={"translate(0%, -50%)"}
-          mx="5px"
+          mx="0.3rem"
           zIndex={2}
           onClick={() => {
             slider?.slickNext();
             setCurrentSlide(currentSlide++);
           }}
         >
-          <AiOutlineRight color="#B88746" size="30px" />
+          <AiOutlineRight color="#B88746" size="1.875rem" />
         </IconButton>
       </Flex>
     </Flex>
@@ -168,9 +168,9 @@ const ImgBar = ({ slide }) => {
     <Flex
       ml="1"
       mr="1"
-      w="100px"
-      h="5px"
-      borderRadius="15px"
+      w="6.25rem"
+      h="0.3rem"
+      borderRadius="0.9rem"
       align="center"
       justify="flex-start"
     >

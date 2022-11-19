@@ -11,11 +11,12 @@ const FourthSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      px="100px"
-      py="50px"
+      px="6.25rem"
+      py="3.125rem"
       direction="column"
       align="center"
       justify="center"
+      mb="5rem"
     >
       {" "}
       <Text
@@ -23,8 +24,8 @@ const FourthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
-        lineHeight="48px"
+        fontSize="2.5rem"
+        lineHeight="3rem"
       >
         PRIME TALKS
       </Text>
@@ -35,17 +36,18 @@ const FourthSec = () => {
           w="100%"
           h="100%"
           flex="3"
-          pr="25px"
-        >
+          pr="1.562rem"
+        ><div style={{height:"35.5rem",width:"41.875rem"}}>
           <embed
-            width="770"
-            height="568"
+            height="100%"
+            width="100%"
             src="https://www.youtube.com/embed/Psmw1t_S6-c"
             title="The Economic Times | Best Realty Brands 2021 - Prime LifeSpace Developers"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></embed>
+          </div>
         </Flex>
         <Flex
           transform={isInView ? "translateY(0)" : "translateY(-50px)"}
@@ -57,15 +59,15 @@ const FourthSec = () => {
           align="center"
         >
           <Divider
-            h="25px"
+            h="1.562rem"
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
             bgColor="#DFBD69"
           />
           <Box
-            height="30px"
-            width="30px"
+            height="1.875rem"
+            width="1.875rem"
             backgroundColor="#DFBD69"
             border="3px solid white"
             boxShadow="0px 0px 0px 3px #B88746"
@@ -80,22 +82,22 @@ const FourthSec = () => {
             flex="1"
             direction="column"
             fontFamily="veralaRound"
-            fontSize="20px"
+            fontSize="1.25rem"
           >
-            <Text py="25px" pl="25px">
+            <Text py="1.562rem" pl="1.562rem">
               Best Realty Brand 2021 The Economic Times
             </Text>
-            <Text py="25px" pl="25px">
+            <Text py="1.562rem" pl="1.562rem">
               The Future Of Real Estate
             </Text>
-            <Text py="25px" pl="25px">
+            <Text py="1.562rem" pl="1.562rem">
               Best Real Estate Investment 8% Guaranteed Rental Return At Arete
               Homes
             </Text>
-            <Text py="25px" pl="25px">
+            <Text py="1.562rem" pl="1.562rem">
               Sky High Tower Launch Event
             </Text>
-            <Text py="25px" pl="25px">
+            <Text py="1.562rem" pl="1.562rem">
               Dr. Janani Rex Talks About Arete Homes Sky High Towers
             </Text>
           </Flex>

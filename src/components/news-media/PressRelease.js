@@ -34,19 +34,20 @@ const SecondSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      px="100px"
-      py="50px"
+      px="6.25rem"
+      py="3.125rem"
       direction="column"
       align="center"
       justify="center"
+      mb="5rem"
     >
       <Text
         transform={isInView ? "translateY(0)" : "translateY(-50px)"}
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
-        lineHeight="48px"
+        fontSize="2.5rem"
+        lineHeight="3rem"
       >
         PRESS RELEASE
       </Text>
@@ -57,7 +58,7 @@ const SecondSec = () => {
         height={"100%"}
         width={"full"}
         overflow={"hidden"}
-        mt="50px"
+        mt="3.125rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -74,22 +75,22 @@ const SecondSec = () => {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {pressRelease.map((prime) => (
-            <Flex pr="20px">
+            <Flex pr="1.25rem">
               <Image
                 key={prime}
                 w="100%"
-                h="300px"
+                h="18.75rem"
                 position="relative"
                 objectPosition="center top"
                 backgroundRepeat="no-repeat"
                 objectFit="cover"
                 src={prime.img}
               />
-              <Flex py="25px" w="100%" align="center" justify="space-between">
-                <Text fontFamily="avenir" fontWeight="bold" fontSize="24px">
+              <Flex py="1.562rem" w="100%" align="center" justify="space-between">
+                <Text fontFamily="avenir" fontWeight="bold" fontSize="1.5rem">
                   {prime.title}
                 </Text>
-                <Text fontFamily="veralaRound" fontSize="20px">
+                <Text fontFamily="veralaRound" fontSize="1.25rem">
                   {prime.date}
                 </Text>
               </Flex>
@@ -115,14 +116,14 @@ const SecondSec = () => {
           // bottom="0"
           // left="0"
           // transform={"translate(0%, -50%)"}
-          mx="5px"
+          mx="0.312rem"
           zIndex={2}
           onClick={() => {
             slider?.slickPrev();
             setCurrentSlide(currentSlide--);
           }}
         >
-          <AiOutlineLeft color="#B88746" size="30px" />
+          <AiOutlineLeft color="#B88746" size="1.875rem" />
         </IconButton>
         {/* fill box */}
         01
@@ -140,14 +141,14 @@ const SecondSec = () => {
           // bottom="0"
           // right="0"
           // transform={"translate(0%, -50%)"}
-          mx="5px"
+          mx="0.312rem"
           zIndex={2}
           onClick={() => {
             slider?.slickNext();
             setCurrentSlide(currentSlide++);
           }}
         >
-          <AiOutlineRight color="#B88746" size="30px" />
+          <AiOutlineRight color="#B88746" size="1.875rem" />
         </IconButton>
       </Flex>
     </Flex>
@@ -166,9 +167,9 @@ const ImgBar = ({ slide }) => {
     <Flex
       ml="1"
       mr="1"
-      w="100px"
-      h="5px"
-      borderRadius="15px"
+      w="6.25rem"
+      h="0.312rem"
+      borderRadius="0.937rem"
       align="center"
       justify="flex-start"
     >

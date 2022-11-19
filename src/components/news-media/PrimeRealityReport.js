@@ -42,21 +42,22 @@ const LastSec = () => {
       w="100%"
       h="100%"
       direction="column"
-      pt="50px"
-      px="100px"
-      pb="100px"
+      pt="3.125rem"
+      px="6.25rem"
+      pb="6.25rem"
       align="center"
       justify="center"
       pos="relative"
+      mb="5rem"
     >
       <Text
         transform={isInView ? "translateY(0)" : "translateY(-50px)"}
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
-        lineHeight="48px"
-        pb="50px"
+        fontSize="2.5rem"
+        lineHeight="3rem"
+        pb="3.125rem"
       >
         PRIME REALTY REPORT
       </Text>
@@ -88,7 +89,7 @@ const LastSec = () => {
                 <Image
                   key={prime.id}
                   w="100%"
-                  height="400px"
+                  height="25rem"
                   // position="relative"
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
@@ -106,18 +107,18 @@ const LastSec = () => {
             direction="column"
             justify="flex-start"
             align="center"
-            px="25px"
+            px="1.562rem"
           >
             <Divider
-              h="150px"
+              h="9.375rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
             />
             <Box
-              height="30px"
-              width="30px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -135,24 +136,24 @@ const LastSec = () => {
             justify="space-between"
           >
             <Flex direction="column" w="100%" h="100%">
-              <Heading fontFamily="avenir" fontSize="34px">
+              <Heading fontFamily="avenir" fontSize="2.125rem">
                 OCTOBER 2022
               </Heading>
-              <Text fontFamily="veralaRound" fontSize="20px">
+              <Text fontFamily="veralaRound" fontSize="1.25rem">
                 Company Newsletter
               </Text>
-              <Text fontFamily="veralaRound" fontSize="20px">
+              <Text fontFamily="veralaRound" fontSize="1.25rem">
                 READ NOW
               </Text>
             </Flex>
             <Flex direction="column" textAlign="right" w="100%" h="100%">
-              <Heading fontFamily="avenir" fontSize="20px">
+              <Heading fontFamily="avenir" fontSize="1.25rem">
                 PREVIOUS NEWSLETTER
               </Heading>
-              <Heading fontFamily="avenir" fontSize="24px">
+              <Heading fontFamily="avenir" fontSize="1.5rem">
                 AUGUST 2022
               </Heading>
-              <Text fontFamily="veralaRound" fontSize="16px">
+              <Text fontFamily="veralaRound" fontSize="1rem">
                 READ NOW
               </Text>
             </Flex>
@@ -170,13 +171,13 @@ const LastSec = () => {
           bottom="0"
           right="5%"
           transform={"translateX(-50%)"}
-          mx="5px"
+          mx="0.312rem"
           zIndex={2}
           onClick={() => {
             slider?.slickPrev();
           }}
         >
-          <AiOutlineLeft color="#B88746" size="30px" />
+          <AiOutlineLeft color="#B88746" size="1.875rem" />
         </IconButton>
 
         {/* Right Icon */}
@@ -194,13 +195,13 @@ const LastSec = () => {
           bottom="0"
           right="0"
           // transform={"translate(0%, -50%)"}
-          mx="5px"
+          mx="0.312rem"
           zIndex={2}
           onClick={() => {
             slider?.slickNext();
           }}
         >
-          <AiOutlineRight color="#B88746" size="30px" />
+          <AiOutlineRight color="#B88746" size="1.875rem" />
         </IconButton>
       </Flex>
     </Flex>

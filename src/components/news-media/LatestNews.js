@@ -55,20 +55,21 @@ const FifthSec = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="100%"
-      px="25px"
-      py="50px"
+      h="28.937rem"
+      px="1.562rem"
+      py="1.562rem"
       direction="column"
       align="center"
       justify="center"
+      mb="5rem"
     >
       <Text
         transform={isInView ? "translateY(0)" : "translateY(-50px)"}
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="40px"
-        lineHeight="48px"
+        fontSize="2.5rem"
+        lineHeight="3rem"
       >
         LATEST NEWS
       </Text>
@@ -77,12 +78,12 @@ const FifthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         position={"relative"}
-        height={"400px"}
+        height={"28.937rem"}
         width={"full"}
         overflow={"hidden"}
-        my="50px"
-        pl="75px"
-        pr="50px"
+        my="1.562rem"
+        pl="4.687rem"
+        pr="3.125rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -108,13 +109,13 @@ const FifthSec = () => {
           top="50%"
           // transform={"translate(0%, -50%)"}
           zIndex={2}
-          h="50px"
-          w="50px"
+          h="3.125rem"
+          w="3.125rem"
           borderColor="#B88746"
           _hover={{ bgColor: "none" }}
           onClick={() => slider?.slickPrev()}
         >
-          <AiOutlineLeft size="30px" color="#B88746" />
+          <AiOutlineLeft size="1.875rem" color="#B88746" />
         </IconButton>
         {/* Right Icon */}
         <IconButton
@@ -128,13 +129,13 @@ const FifthSec = () => {
           top="50%"
           // transform={"translate(0%, -50%)"}
           zIndex={2}
-          h="50px"
-          w="50px"
+          h="3.125rem"
+          w="3.125rem"
           borderColor="#B88746"
           _hover={{ bgColor: "none" }}
           onClick={() => slider?.slickNext()}
         >
-          <AiOutlineRight size="30px" color="#B88746" />
+          <AiOutlineRight size="1.875rem" color="#B88746" />
         </IconButton>
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
@@ -142,14 +143,14 @@ const FifthSec = () => {
             <Box
               key={index}
               w="100%"
-              pr="25px"
-              my="50px"
-              height={"400px"}
+              pr="1.562rem"
+              my="3.125rem"
+              height="25rem"
               position="relative"
             >
               <Image
                 w="100%"
-                h="400px"
+                h="25rem"
                 src={prime.img}
                 // objectFit="contain"
                 objectFit="cover"
@@ -158,20 +159,20 @@ const FifthSec = () => {
               <Flex
                 spacing={6}
                 w={"90%"}
-                h="150px"
+                h="9.375rem"
                 position="absolute"
                 right="0"
                 bottom="2%"
-                mr="15px"
+                mr="0.937rem"
                 bgGradient="linear(to-b, #B88746, #DFBD69)"
                 transform="translate(0, -50%)"
               >
                 <Text
-                  fontSize={{ base: "md", lg: "20px" }}
+                  fontSize={{ base: "md", lg: "1.25rem" }}
                   fontWeight="bold"
                   fontFamily="avenir"
                   color="white"
-                  p="25px"
+                  p="1.562rem"
                 >
                   {prime.text}
                 </Text>
