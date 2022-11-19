@@ -18,6 +18,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
+
 // images
 import arete1 from "../commercial-properties imgs/ARETE PLAZA2.jpg";
 import arete2 from "../commercial-properties imgs/ARETE PLAZA4.jpg";
@@ -848,7 +849,7 @@ const LocationAndFormPlaza = () => {
           <form>
             <FormControl isRequired>
               {" "}
-              <HStack w="100%" justify="space-between" pb="15px">
+              <HStack w="100%" justify="space-between" pb="0.938rem">
                 <FormLabel
                   fontFamily="avenir"
                   fontSize="1rem"
@@ -869,7 +870,7 @@ const LocationAndFormPlaza = () => {
             </FormControl>
             <FormControl isRequired>
               {" "}
-              <HStack w="100%" justify="space-between" pb="15px">
+              <HStack w="100%" justify="space-between" pb="0.938rem">
                 <FormLabel
                   fontFamily="avenir"
                   fontSize="1rem"
@@ -889,7 +890,7 @@ const LocationAndFormPlaza = () => {
               </HStack>{" "}
             </FormControl>
             <FormControl>
-              <HStack w="100%" justify="space-between" pb="15px">
+              <HStack w="100%" justify="space-between" pb="0.938rem">
                 <FormLabel
                   fontFamily="avenir"
                   fontSize="1rem"
@@ -938,7 +939,7 @@ const LocationAndFormPlaza = () => {
               color="white"
               fontSize="1rem"
               fontFamily="avenir"
-              p="1rem"
+              p="0.938rem"
               _hover={{
                 bgGradient: "linear(to-b, #DFBD69, #B88746)",
               }}

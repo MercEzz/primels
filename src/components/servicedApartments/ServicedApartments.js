@@ -18,7 +18,16 @@ import {
   Grid,
   GridItem,
   Button,
+  UnorderedList,
+  ListItem,
+  FormControl,
+  FormLabel,
+  Input,
+  Container,
+  Checkbox,
+  Icon,
 } from "@chakra-ui/react";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import React from "react";
 import banner from "../serviced apartments imgs/MIVAN TECHNOLOGY TOWER.jpg";
 import apartment from "../serviced apartments imgs/serviced apartments icons/smart way of living - 1st.svg";
@@ -70,6 +79,26 @@ import tabletenis from "../serviced apartments imgs/WhatsApp Image 2021-12-14 at
 import meditating from "../serviced apartments imgs/meditate.png";
 import yoga from "../serviced apartments imgs/activity area.jpeg";
 import planting from "../serviced apartments imgs/WhatsApp Image 2020-06-05 at 10.51.57 PM.jpeg";
+
+// icons
+import temples from "../serviced apartments imgs/LOCATION ADVANTAGE ICONS/TEMPLES.svg";
+import hospitals from "../serviced apartments imgs/LOCATION ADVANTAGE ICONS/HOSPITAL.svg";
+import institute from "../serviced apartments imgs/LOCATION ADVANTAGE ICONS/INSTITUTES.svg";
+import social from "../serviced apartments imgs/LOCATION ADVANTAGE ICONS/SOCIAL FABRIC.svg";
+import industry from "../serviced apartments imgs/LOCATION ADVANTAGE ICONS/INDUSTRY.svg";
+import ports from "../serviced apartments imgs/LOCATION ADVANTAGE ICONS/PORT.svg";
+import { ImLocation } from "react-icons/im";
+import Slider from "react-slick";
+
+// logos
+import herocoop from "../serviced apartments imgs/HERO MOTOR CORP.jpg";
+import velammal from "../serviced apartments imgs/VELAMMAL.png";
+import kobelco from "../serviced apartments imgs/KOBELCO.png";
+import siemens from "../serviced apartments imgs/SIEMENS.png";
+import lAndt from "../serviced apartments imgs/L&T .png";
+import adani from "../serviced apartments imgs/ADANI.png";
+import linde from "../serviced apartments imgs/LINDE.png";
+import yanmar from "../serviced apartments imgs/YANMAR.png";
 
 const ServicedApartments = () => {
   return (
@@ -1106,11 +1135,587 @@ const ServicedApartments = () => {
           </Flex>
         </Flex>
       </Flex>
+      {/* location advantage */}
+      <Flex
+        w="100%"
+        h="100%"
+        direction="column"
+        pt="5rem"
+        align="center"
+        justify="center"
+        px="6.25rem"
+        pb="3.125rem"
+      >
+        {" "}
+        <Text fontFamily="goudy" pb="1.875rem" fontSize="2.5rem">
+          LOCATION ADVANTAGE
+        </Text>
+        <Flex w="100%" h="100%" justify="space-between" pb="3.125rem">
+          <Flex w="60%" h="100%" direction="column">
+            <Box w="100%" h="29.25rem">
+              <embed
+                class="gmap_iframe"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              />
+            </Box>
+            <Button
+              w="100%"
+              h="3.187rem"
+              fontSize="1rem"
+              mt="0.938rem"
+              fontFamily="avenir"
+              fontWeight="bold"
+              bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+              color="white"
+              _hover={{
+                bgGradient: "linear(to-b, #DFBD69, #B88746)",
+              }}
+              _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+            >
+              <ImLocation size="1.875rem" /> SHOW LOCATION ON GOOGLE MAPS
+            </Button>
+          </Flex>
+          <Flex
+            w="10%"
+            h="100%"
+            direction="column"
+            justify="center"
+            align="center"
+            px="1.563rem"
+          >
+            {" "}
+            <Divider
+              h="3.5rem"
+              orientation="vertical"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />
+            <Box
+              height="1.875rem"
+              width="1.875rem"
+              backgroundColor="#DFBD69"
+              border="3px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />
+          </Flex>
+          <Flex
+            w="30%"
+            h="100%"
+            direction="column"
+            alignSelf="center"
+            justify="center"
+          >
+            <Flex pb="1.563rem" align="center">
+              <Box
+                borderRadius="50%"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="3.125rem"
+                h="3.125rem"
+                align="center"
+                p="0.625rem"
+                mr="1rem"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image w="1.875rem" h="1.875rem" src={temples} />
+              </Box>
+
+              <Heading fontFamily="avenir" fontSize="1.25rem">
+                TEMPLES
+              </Heading>
+            </Flex>
+            <Flex pb="1.563rem" align="center">
+              <Box
+                borderRadius="50%"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="3.125rem"
+                h="3.125rem"
+                align="center"
+                p="0.625rem"
+                mr="1rem"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image w="1.875rem" h="1.875rem" src={hospitals} />
+              </Box>
+
+              <Heading fontFamily="avenir" fontSize="1.25rem">
+                HOSPITALS
+              </Heading>
+            </Flex>
+            <Flex pb="1.563rem" align="center">
+              <Box
+                borderRadius="50%"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="3.125rem"
+                h="3.125rem"
+                align="center"
+                p="0.625rem"
+                mr="1rem"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image w="1.875rem" h="1.875rem" src={institute} />
+              </Box>
+
+              <Heading fontFamily="avenir" fontSize="1.25rem">
+                EDUCATIONAL INSTITUTES
+              </Heading>
+            </Flex>{" "}
+            <Flex pb="1.563rem" align="center">
+              <Box
+                borderRadius="50%"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="3.125rem"
+                h="3.125rem"
+                align="center"
+                p="0.625rem"
+                mr="1rem"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image w="1.875rem" h="1.875rem" src={social} />
+              </Box>
+
+              <Heading fontFamily="avenir" fontSize="1.25rem">
+                SOCIAL FABRIC
+              </Heading>
+            </Flex>{" "}
+            <Flex pb="1.563rem" align="center">
+              <Box
+                borderRadius="50%"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="3.125rem"
+                h="3.125rem"
+                align="center"
+                p="0.625rem"
+                mr="1rem"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image w="1.875rem" h="1.875rem" src={industry} />
+              </Box>
+
+              <Heading fontFamily="avenir" fontSize="1.25rem">
+                INDUSTRIAL PARKS
+              </Heading>
+            </Flex>
+            <Flex align="center">
+              <Box
+                borderRadius="50%"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="3.125rem"
+                h="3.125rem"
+                align="center"
+                p="0.625rem"
+                mr="1rem"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image w="1.875rem" h="1.875rem" src={ports} />
+              </Box>
+
+              <Heading fontFamily="avenir" fontSize="1.25rem">
+                PORTS
+              </Heading>
+            </Flex>
+          </Flex>
+        </Flex>
+        <Flex w="100%">
+          <Flex w="100%" direction="column">
+            {" "}
+            <Flex w="100%" align="center" pb="1.563rem">
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="4rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Heading
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              pb="1rem"
+            >
+              5 MINS
+            </Heading>
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+              <ListItem pb="0.625rem">Velammal International School</ListItem>
+              <ListItem pb="0.625rem">Origin By Mahindra</ListItem>
+              <ListItem>Ponneri Railway Station</ListItem>
+            </UnorderedList>
+          </Flex>
+          <Flex w="100%" direction="column">
+            {" "}
+            <Flex w="100%" align="center" pb="1.563rem">
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="4rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Heading
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              pb="1rem"
+            >
+              10 MINS
+            </Heading>
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+              <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
+              <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
+              <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
+              <ListItem>R.M.K. Engineering College</ListItem>
+            </UnorderedList>
+          </Flex>
+          <Flex w="100%" direction="column">
+            {" "}
+            <Flex w="100%" align="center" pb="1.563rem">
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="4rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Heading
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              pb="1rem"
+            >
+              20 MINS
+            </Heading>
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+              <ListItem pb="0.625rem">Gummidipoondi SIPCOT</ListItem>
+              <ListItem pb="0.625rem">Amazon</ListItem>
+              <ListItem pb="0.625rem">Minjur</ListItem>
+              <ListItem>Pulicat Lake</ListItem>
+            </UnorderedList>
+          </Flex>
+          <Flex w="100%" direction="column">
+            {" "}
+            <Flex w="100%" align="center" pb="1.563rem">
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="4rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+            <Heading
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              pb="1rem"
+            >
+              30 MINS
+            </Heading>
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+              <ListItem pb="0.625rem">Sri City</ListItem>
+              <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
+            </UnorderedList>
+          </Flex>
+        </Flex>
+      </Flex>
+      <Flex w="100%" h="100%" pb="5rem" px="6.25rem">
+        <Flex w="50%" h="100%" direction="column">
+          <Heading
+            w="100%"
+            textAlign="center"
+            fontSize="2.5rem"
+            fontFamily="goudy"
+            fontWeight="400"
+          >
+            TESTIMONIALS
+          </Heading>{" "}
+          <Flex pos="relative">
+            <Icon
+              pos="absolute"
+              left="-1%"
+              top="1.75rem"
+              w="4.375rem"
+              h="3.125rem"
+              as={ImQuotesLeft}
+              color="#DFBD69"
+            />
+            <TestimonialCarousel testimonial={testimonial} />{" "}
+            <Icon
+              mr="4"
+              color="#DFBD69"
+              pos="absolute"
+              right="3.25rem"
+              bottom="10rem"
+              zIndex="10"
+              w="4.375rem"
+              h="3.125rem"
+              as={ImQuotesRight}
+            />
+          </Flex>
+        </Flex>
+        <Flex
+          w="50%"
+          h="100%"
+          align="center"
+          justify="center"
+          direction="column"
+        >
+          <Text
+            fontSize="2.5rem"
+            fontFamily="goudy"
+            textTransform="uppercase"
+            pb="1.563rem"
+          >
+            SCHEDULE A VISIT
+          </Text>
+          <Container w="container.sm" align="center">
+            {" "}
+            <form>
+              <FormControl isRequired>
+                {" "}
+                <HStack w="100%" justify="space-between" pb="0.938rem">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    NAME
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="2.5rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl isRequired>
+                {" "}
+                <HStack w="100%" justify="space-between" pb="0.938rem">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    PHONE
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="2.5rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl>
+                <HStack w="100%" justify="space-between" pb="0.938rem">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    EMAIL
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="2.5rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl>
+                <HStack w="100%" align="center" justify="center">
+                  <Checkbox
+                    ml="0.85rem"
+                    value="yes"
+                    fontFamily="veralaRound"
+                    fontSize="1rem"
+                    size="lg"
+                  >
+                    Book a visit
+                  </Checkbox>
+                </HStack>
+              </FormControl>
+              <Button
+                mt="1.563rem"
+                bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+                color="white"
+                fontSize="1rem"
+                fontFamily="avenir"
+                p="0.938rem"
+                _hover={{
+                  bgGradient: "linear(to-b, #DFBD69, #B88746)",
+                }}
+                _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+              >
+                SUBMIT NOW
+              </Button>
+            </form>
+          </Container>
+        </Flex>
+      </Flex>
     </>
   );
 };
 
 export default ServicedApartments;
+
+const TestimonialCarousel = (props) => {
+  const { testimonial } = props;
+  const settings = {
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 5000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+  };
+  return (
+    <Box
+      position={"relative"}
+      width={"full"}
+      height={"full"}
+      overflow={"hidden"}
+    >
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
+
+      <Slider {...settings} style={{ display: "flex" }}>
+        {testimonial.map((tes) => (
+          <Flex
+            align="center"
+            justify="space-between"
+            flexDirection="column"
+            w="100%"
+            mt="1.875rem"
+            key={tes.name}
+            height={"100%"}
+            pr="5.313rem"
+          >
+            <Text
+              fontSize="1rem"
+              fontFamily="veralaRound"
+              textAlign="center"
+              pt="3.25rem"
+              px="2.188rem"
+            >
+              {tes.text}
+            </Text>
+            <Flex
+              w="100%"
+              pt="1.563rem"
+              align="center"
+              justify="flex-start"
+              direction="column"
+            >
+              <Text fontFamily="veralaRound" fontSize="1.25rem" pb="0.625rem">
+                {tes.name}
+              </Text>
+              <Image
+                w="17.75rem"
+                h="6.25rem"
+                objectFit="contain"
+                src={tes.logo}
+              />
+            </Flex>
+          </Flex>
+        ))}
+      </Slider>
+    </Box>
+  );
+};
 
 const furnishedAmenities = [
   {
@@ -1202,5 +1807,48 @@ const premiumHouseSecond = [
   {
     icon: toiletries,
     title: "FREE TOILETRIES",
+  },
+];
+
+const testimonial = [
+  {
+    text: "I’m glad I got a home with all the requirements of my family, my kids have school nearby and my work is just a few mins drive. It’s the most convenient location and one of the finest township.",
+    name: "MR. K SHEKHAR",
+    logo: herocoop,
+  },
+  {
+    text: "I have never seen a well-designed township especially for sports lover. Arete Homes covers the needs of all age groups, fantastically developed sports arena, entertainment zones, meditation centre, fitness gym etc.",
+    name: "MR. SADAGOPAN SATHISH ",
+    logo: velammal,
+  },
+  {
+    text: "At Arete Homes, I feel like I’m living in a resort. It’s wonderful and well designed for modern lifestyle.",
+    name: "MR. MADHAN",
+    logo: kobelco,
+  },
+  {
+    text: "A best project in a beautiful environment but still at an affordable rate in North Chennai.",
+    name: "MR. ANAND",
+    logo: siemens,
+  },
+  {
+    text: "This township is beyond excellence & combined this with the upcoming future developments this is the best investment destination iof Chennai. It’s already giving highest returns!",
+    name: "MR. KUMAR",
+    logo: lAndt,
+  },
+  {
+    text: "We own a 2 BHK and its worth every penny and the construction quality is very good. The team is very helpful in securing home loan and throughout the home buying till the end.",
+    name: "mr. mageshkumar",
+    logo: adani,
+  },
+  {
+    text: "i’m very happy to be living in integrate Smart Township, it’s like a dream! I have also invested in a property here, it gives the highest returns.",
+    name: "mr. DK SINGH",
+    logo: linde,
+  },
+  {
+    text: "Hats off to the team for their dedication to the project as they made it with the best quality & beautifully! With malaysian MIVAN technology, they have delivered the best product as promised! I’m glad to be a part of Arete Homes.",
+    name: "MR. K PANDIYAN",
+    logo: yanmar,
   },
 ];
