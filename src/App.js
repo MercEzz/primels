@@ -14,6 +14,7 @@ import AreteHomes from "./screens/AreteHomes";
 import ReferAndEarn from "./screens/ReferAndEarn";
 import CommercialProperties from "./screens/CommercialProperties";
 import ServicedApartSc from "./screens/ServicedApartSc";
+import BlogSc from "./screens/BlogSc";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             element={<CommercialProperties />}
           />
           <Route path="/serviced-apartments" element={<ServicedApartSc />} />
+          <Route path="/blog" element={<BlogSc />} />
         </Routes>
       </Flex>
       <Footer />
