@@ -61,10 +61,20 @@ import cafe from "../serviced apartments imgs/cafe.jpg";
 
 import manStanding from "../serviced apartments imgs/1stock-removebg-preview.png";
 
+// second grid
+import hall from "../serviced apartments imgs/8.jpeg";
+import cricket from "../serviced apartments imgs/d22de3dc-9dff-4ab2-a5ba-6c87a89e0e7a.JPG";
+import kidsplaying from "../serviced apartments imgs/kids play area.jpeg";
+import badminton from "../serviced apartments imgs/IMG_4483.jpg";
+import tabletenis from "../serviced apartments imgs/WhatsApp Image 2021-12-14 at 1.14.08 PM (1).jpeg";
+import meditating from "../serviced apartments imgs/meditate.png";
+import yoga from "../serviced apartments imgs/activity area.jpeg";
+import planting from "../serviced apartments imgs/WhatsApp Image 2020-06-05 at 10.51.57 PM.jpeg";
+
 const ServicedApartments = () => {
   return (
     <>
-      {/**Banner section  **/}
+      {/* Banner section  */}
       <Flex w="100%" h="100vh" pos="relative">
         <Image
           w="100%"
@@ -964,7 +974,138 @@ const ServicedApartments = () => {
         </Flex>
       </Flex>
       {/*Arete Homes Img Galary*/}
-      <Flex w="100%" h="100%"></Flex>
+      <Flex w="100%" h="100%">
+        <Flex
+          w="100%"
+          h="51.563rem"
+          alignItems="center"
+          justif="center"
+          bgColor="gray.200"
+          pos="relative"
+        >
+          {" "}
+          <Flex
+            w="100%"
+            pos="absolute"
+            top="11.625rem"
+            direction="column"
+            left="6.25rem"
+          >
+            <Text w="40%" fontFamily="goudy" fontSize="2.5rem" pb="1.563rem">
+              A LIFE WHERE YOU DON’T HAVE TO WAIT FOR WEEKENDS TO ENJOY
+            </Text>
+            <Text w="22%" fontFamily="veralaRound" fontSize="1.125rem">
+              Arete Homes aims to provide better experiences in every aspect of
+              life. With innumerable activities lined up for you, there is so
+              much to do, so little time.
+            </Text>
+          </Flex>
+          <Flex w="100%" h="100%" overflow="hidden">
+            <Box
+              w="20.125rem"
+              h="13.75rem"
+              pos="absolute"
+              top="0.938rem"
+              right="21.5rem"
+              left="47.75rem"
+              bottom="37.813rem"
+              bgPos="center"
+              bgSize="contain"
+              bgRepeat="no-repeat"
+              bgImage={hall}
+            />
+            <Box
+              w="19.625rem"
+              h="20.313rem"
+              pos="absolute"
+              top="5.625rem"
+              left="69.438rem"
+              right="0.938rem"
+              bgPos="70%"
+              bgSize="cover"
+              bgRepeat="no-repeat"
+              bgImage={cricket}
+            />
+            <Box
+              w="15.688rem"
+              h="10.938rem"
+              pos="absolute"
+              top="21.25rem"
+              bottom="19.375rem"
+              left="25.625rem"
+              right="48.688rem"
+            >
+              <Image w="100%" h="100%" src={kidsplaying} />
+            </Box>
+            <Box
+              zIndex="3"
+              w="15.375rem"
+              h="22.125rem"
+              pos="absolute"
+              top="15.625rem"
+              bottom="14.75rem"
+              left="45%"
+              right="32.375rem"
+              bgPos="contain"
+              bgSize="cover"
+              bgRepeat="no-repeat"
+              bgImage={badminton}
+            />
+            <Box
+              zIndex="3"
+              w="21.125rem"
+              h="19.688rem"
+              bgColor="blue"
+              pos="absolute"
+              top="13.438rem"
+              bottom="19.375rem"
+              left="58.563rem"
+              right="10.313rem"
+            >
+              <Image
+                h="100%"
+                w="100%"
+                objectFit="cover"
+                objectPosition="80%"
+                src={tabletenis}
+              />
+            </Box>
+            <Box
+              w="25rem"
+              h="16.125rem"
+              pos="absolute"
+              top="34.063rem"
+              bottom="2.313rem"
+              left="23.938rem"
+              right="41.063rem"
+              bgPos="contain"
+              bgSize="cover"
+              bgRepeat="no-repeat"
+              bgImage={meditating}
+            />
+            <Box
+              w="20.75rem"
+              h="18.438rem"
+              pos="absolute"
+              bottom="0"
+              right="19.375rem"
+              left="49.875rem"
+            >
+              <Image w="100%" h="100%" src={yoga} />
+            </Box>
+            <Box
+              w="17.5rem"
+              h="23.875rem"
+              pos="absolute"
+              top="26.875rem"
+              bottom="1.75rem"
+              right="0.938rem"
+            >
+              <Image w="100%" h="100%" src={planting} />
+            </Box>
+          </Flex>
+        </Flex>
+      </Flex>
     </>
   );
 };
