@@ -1010,7 +1010,6 @@ const ServicedApartments = () => {
           h="51.563rem"
           alignItems="center"
           justif="center"
-          bgColor="gray.200"
           pos="relative"
         >
           {" "}
