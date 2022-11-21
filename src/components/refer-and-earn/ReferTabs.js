@@ -27,30 +27,30 @@ import img3 from "../refer and earn imgs/3RD STEP.png";
 import bookIll from "../refer and earn imgs/book a visit illustration.png";
 import carIll from "../refer and earn imgs/CAR ICON.svg";
 import { useState } from "react";
-import "./animations.css"
+import "./animations.css";
 import "./rne.css";
 
 const ReferTabs = () => {
   const [active, setActive] = useState(true);
-  const reveal=()=> {
+  const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
-  
+
     for (var i = 0; i <= reveals.length; i++) {
       var windowHeight = window.innerHeight;
-      var elementTop = reveals[i]?reveals[i].getBoundingClientRect().top:null;
+      var elementTop = reveals[i]
+        ? reveals[i].getBoundingClientRect().top
+        : null;
       var elementVisible = 200;
-  
+
       if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active"); 
-      }
-       else {
+        reveals[i].classList.add("active");
+      } else {
         reveals[i].classList.remove("active");
       }
     }
-  }
-  useLayoutEffect(()=>{
+  };
+  useLayoutEffect(() => {
     window.addEventListener("scroll", reveal);
-   
   });
   return (
     <Flex w="100%" h="100%" px="6.25rem" direction="column" align="center">
@@ -69,6 +69,7 @@ const ReferTabs = () => {
           fontWeight="bold"
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",
+            color: "white",
           }}
           onClick={() => {
             setActive(true);
@@ -94,13 +95,14 @@ const ReferTabs = () => {
           }}
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",
+            color: "white",
           }}
           _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
         >
           BOOK A VISIT
         </Button>
       </Flex>
-      {active ? <ReferAFriend/> : <BookAVisit />}
+      {active ? <ReferAFriend /> : <BookAVisit />}
     </Flex>
   );
 };
@@ -110,7 +112,7 @@ export default ReferTabs;
 const ReferAFriend = () => {
   return (
     <>
-        <Flex overflow="hidden">
+      <Flex overflow="hidden">
         <Heading
           w="100%"
           className="slidein-top reveal"
@@ -123,13 +125,24 @@ const ReferAFriend = () => {
         >
           HOW IT WORKS?
         </Heading>
-        </Flex>
+      </Flex>
       <Flex w="100%" columnGap="1.25rem" pb="1.875rem">
-        <Flex w="100%" h="100%" direction="column" className="fadein reveal" overflow="hidden">
+        <Flex
+          w="100%"
+          h="100%"
+          direction="column"
+          className="fadein reveal"
+          overflow="hidden"
+        >
           <Heading fontFamily="avenir" fontSize="1.5rem">
             STEP 1
           </Heading>{" "}
-          <Flex w="100%" align="center" py="0.625rem" className="sliderightdisco reveal">
+          <Flex
+            w="100%"
+            align="center"
+            py="0.625rem"
+            className="sliderightdisco reveal"
+          >
             <Divider
               w="100%"
               orientation="horizontal"
@@ -139,7 +152,8 @@ const ReferAFriend = () => {
             />{" "}
             <Box
               height="1.875rem"
-              width="1.875rem"
+              width="2.1rem"
+              mr="0.15rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -153,11 +167,22 @@ const ReferAFriend = () => {
           </Text>
           <Image w="100%" h="16rem" p="2rem" src={img1} />
         </Flex>
-        <Flex w="100%" direction="column" overflow="hidden" className="fadein-2sdelay reveal" overflow="hidden">
+        <Flex
+          w="100%"
+          direction="column"
+          overflow="hidden"
+          className="fadein-2sdelay reveal"
+          // overflow="hidden"
+        >
           <Heading fontFamily="avenir" fontSize="1.5rem">
             STEP 2
           </Heading>
-          <Flex w="100%" align="center" py="0.625rem" className="sliderightdisco-2sdelay reveal">
+          <Flex
+            w="100%"
+            align="center"
+            py="0.625rem"
+            className="sliderightdisco-2sdelay reveal"
+          >
             <Divider
               w="100%"
               orientation="horizontal"
@@ -167,7 +192,8 @@ const ReferAFriend = () => {
             />{" "}
             <Box
               height="1.875rem"
-              width="1.875rem"
+              width="2.1rem"
+              mr="0.3rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -181,11 +207,21 @@ const ReferAFriend = () => {
           </Text>{" "}
           <Image w="100%" h="14.625rem" p="2rem" src={img2} />
         </Flex>
-        <Flex w="100%" direction="column" className="fadein-4sdelay reveal" overflow="hidden">
+        <Flex
+          w="100%"
+          direction="column"
+          className="fadein-4sdelay reveal"
+          overflow="hidden"
+        >
           <Heading fontFamily="avenir" fontSize="1.5rem">
             STEP 3
           </Heading>
-          <Flex w="100%" align="center" py="0.625rem" className="sliderightdisco-4sdelay reveal">
+          <Flex
+            w="100%"
+            align="center"
+            py="0.625rem"
+            className="sliderightdisco-4sdelay reveal"
+          >
             <Divider
               w="100%"
               orientation="horizontal"
@@ -195,7 +231,8 @@ const ReferAFriend = () => {
             />{" "}
             <Box
               height="1.875rem"
-              width="1.875rem"
+              width="2.1rem"
+              mr="0.16rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -210,7 +247,14 @@ const ReferAFriend = () => {
           <Image w="100%" h="16.75rem" p="2rem" src={img3} />
         </Flex>
       </Flex>
-      <Flex w="100%" h="100%" pt="3.125rem" direction="column" pb="5rem" overflow="hidden">
+      <Flex
+        w="100%"
+        h="100%"
+        pt="3.125rem"
+        direction="column"
+        pb="5rem"
+        overflow="hidden"
+      >
         <form
           style={{
             width: "100%",
@@ -229,7 +273,14 @@ const ReferAFriend = () => {
           >
             REFER & EARN
           </Text>
-          <Flex w="100%" h="100%" direction="row" gap="6.25rem" pb="1.563rem" className="fadein-2sdelay reveal">
+          <Flex
+            w="100%"
+            h="100%"
+            direction="row"
+            gap="6.25rem"
+            pb="1.563rem"
+            className="fadein-2sdelay reveal"
+          >
             <Flex
               w="100%"
               h="100%"
@@ -239,149 +290,146 @@ const ReferAFriend = () => {
             >
               <Text pb="1.563rem" fontFamily="veralaRound" fontSize="1.25rem">
                 YOUR DETAILS
-              </Text>
-              <Stack w="100%" h="100%" direction="column">
-                {" "}
-                <FormControl isRequired>
-                  <HStack
-                    w="100%"
-                    h="100%"
-                    justify="space-between"
-                    align="center"
-                    pb="1.563rem"
+              </Text>{" "}
+              <FormControl isRequired>
+                <HStack
+                  w="100%"
+                  h="100%"
+                  justify="space-between"
+                  align="center"
+                  pb="1.563rem"
+                >
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
                   >
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
+                    ARE YOU A RESIDENT WITH US?
+                  </FormLabel>
+                  <RadioGroup>
+                    <HStack
+                      w="100%"
+                      h="100%"
+                      justify="space-between"
+                      align="center"
+                      fontFamily="veralaRound"
+                      fontSize="18px"
                     >
-                      ARE YOU A RESIDENT WITH US?
-                    </FormLabel>
-                    <RadioGroup>
-                      <HStack
-                        w="100%"
-                        h="100%"
-                        justify="space-between"
-                        align="center"
-                        fontFamily="veralaRound"
-                        fontSize="18px"
+                      <Radio
+                        borderRadius="none"
+                        value="yes"
+                        size="lg"
+                        mr="3.125rem"
                       >
-                        <Radio
-                          borderRadius="none"
-                          value="yes"
-                          size="lg"
-                          mr="3.125rem"
-                        >
-                          YES
-                        </Radio>
-                        <Radio borderRadius="none" value="no" size="lg">
-                          NO
-                        </Radio>
-                      </HStack>
-                    </RadioGroup>
-                  </HStack>
-                </FormControl>
-                <FormControl isRequired>
-                  {" "}
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      NAME
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="avenir"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-                <FormControl isRequired>
-                  {" "}
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      PHONE
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="avenir"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-                <FormControl>
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      EMAIL
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="avenir"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-                <FormControl>
-                  <HStack w="100%" justify="space-between">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      PROJECT REFERRED
-                    </FormLabel>
-                    <Select
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      w="18.75rem"
-                      bgColor="#D9D9D9"
-                      // placeholder="SELECT PROJECT"
-                      textTransform="uppercase"
-                      variant="flushed"
-                      borderBottom="2px solid white"
-                      icon={
-                        <TriangleDownIcon width="1.25rem" height="0.625rem" />
-                      }
-                      borderRadius="none"
-                    >
-                      <option style={{ color: "black" }}>
-                        <Text>Select Project</Text>
-                      </option>
-                      <option style={{ color: "black" }}>
-                        <Text>Arete Homes</Text>
-                      </option>
-                      <option style={{ color: "black" }}>
-                        <Text>Sky High Tower</Text>
-                      </option>
-                      <option style={{ color: "black" }}>
-                        <Text>Ponneri Gymkhana Club</Text>
-                      </option>
-                    </Select>
-                  </HStack>{" "}
-                </FormControl>
-              </Stack>
+                        YES
+                      </Radio>
+                      <Radio borderRadius="none" value="no" size="lg">
+                        NO
+                      </Radio>
+                    </HStack>
+                  </RadioGroup>
+                </HStack>
+              </FormControl>
+              <FormControl isRequired>
+                {" "}
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    NAME
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl isRequired>
+                {" "}
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    PHONE
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl>
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    EMAIL
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl>
+                <HStack w="100%" justify="space-between">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    PROJECT REFERRED
+                  </FormLabel>
+                  <Select
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    w="18.75rem"
+                    bgColor="#D9D9D9"
+                    // placeholder="SELECT PROJECT"
+                    textTransform="uppercase"
+                    variant="flushed"
+                    borderBottom="2px solid white"
+                    icon={
+                      <TriangleDownIcon width="1.25rem" height="0.625rem" />
+                    }
+                    borderRadius="none"
+                  >
+                    <option style={{ color: "black" }}>
+                      <Text>Select Project</Text>
+                    </option>
+                    <option style={{ color: "black" }}>
+                      <Text>Arete Homes</Text>
+                    </option>
+                    <option style={{ color: "black" }}>
+                      <Text>Sky High Tower</Text>
+                    </option>
+                    <option style={{ color: "black" }}>
+                      <Text>Ponneri Gymkhana Club</Text>
+                    </option>
+                  </Select>
+                </HStack>{" "}
+              </FormControl>
             </Flex>
             <Flex
               w="100%"
@@ -469,7 +517,7 @@ const ReferAFriend = () => {
                     fontFamily="avenir"
                     lineHeight="1.5rem"
                     w="18.75rem"
-                    h="11.25rem"
+                    h="6.25rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -501,7 +549,7 @@ const BookAVisit = () => {
     <>
       <Flex
         w="100%"
-        h="85vh"
+        h="75vh"
         bgColor="white"
         pos="relative"
         overflow="hidden"
@@ -521,8 +569,8 @@ const BookAVisit = () => {
           w="60%"
           h="100%"
           direction="column"
-          align="flex-end"
-          top="30%"
+          align="center"
+          top="20%"
           right="0"
           bottom="0"
         >
@@ -531,50 +579,57 @@ const BookAVisit = () => {
             textAlign="center"
             fontFamily="goudy"
             fontSize="2.5rem"
-            pb="35px"
+            pb="1.875rem"
           >
             YOU ARE ONLY ONE RIDE AWAY FROM YOUR DREAM HOME
           </Text>
           <div className="fadein-4sdelay reveal">
-          <HStack w="100%" align="center" justify="center" pb="3.125rem">
-            <Image src={carIll} />
-            <Heading
+            <HStack w="100%" align="center" justify="center" pb="1.875rem">
+              <Image src={carIll} />
+              <Heading
+                textAlign="center"
+                fontFamily="avenir"
+                fontSize="1.5rem"
+                bgGradient="linear(to-l, #B88746, #DFBD69)"
+                bgClip="text"
+              >
+                FREE PICK UP - DROP SERVICE AVAILABLE
+              </Heading>
+            </HStack>
+            <Text
+              w="100%"
               textAlign="center"
-              fontFamily="avenir"
+              fontFamily="goudy"
               fontSize="1.5rem"
-              bgGradient="linear(to-l, #B88746, #DFBD69)"
-              bgClip="text"
+              pb="0.938rem"
             >
-              FREE PICK UP - DROP SERVICE AVAILABLE
-            </Heading>
-          </HStack>
-          <Text
-            w="100%"
-            textAlign="center"
-            fontFamily="goudy"
-            fontSize="1.5rem"
-            pb="1.563rem"
-          >
-            GET IN TOUCH WITH US
-          </Text>
-          <Flex w="100%" align="center" justify="center" gap="3.125rem">
-            <Flex w="100%" direction="column" align="center">
-              <EmailIcon h="18px" w="28px" mb="1.25rem" />
-              <Heading fontFamily="avenir" fontSize="1.25rem">
-                sales@primelifespace.com
-              </Heading>
+              GET IN TOUCH WITH US
+            </Text>
+            <Flex w="100%" align="center" justify="center" gap="3.125rem">
+              <Flex w="100%" direction="column" align="center">
+                <EmailIcon h="18px" w="28px" mb="0.625rem" />
+                <Heading fontFamily="avenir" fontSize="1.25rem">
+                  sales@primelifespace.com
+                </Heading>
+              </Flex>
+              <Flex w="100%" direction="column" align="center">
+                <PhoneIcon h="18px" w="28px" mb="0.625rem" />
+                <Heading fontFamily="avenir" fontSize="1.25rem">
+                  +91-9003199000
+                </Heading>
+              </Flex>
             </Flex>
-            <Flex w="100%" direction="column" align="center">
-              <PhoneIcon h="18px" w="28px" mb="1.25rem" />
-              <Heading fontFamily="avenir" fontSize="1.25rem">
-                +91-9003199000
-              </Heading>
-            </Flex>
-          </Flex>
           </div>
         </Flex>
       </Flex>
-      <Flex w="100%" h="100%" pt="5rem" direction="column" pb="5rem" overflow="hidden">
+      <Flex
+        w="100%"
+        h="100%"
+        pt="5rem"
+        direction="column"
+        pb="5rem"
+        overflow="hidden"
+      >
         <form
           style={{
             width: "100%",
@@ -593,7 +648,14 @@ const BookAVisit = () => {
           >
             BOOK YOUR FREE SITE VISIT
           </Text>
-          <Flex w="100%" h="100%" direction="row" gap="6.25rem" pb="1.563rem" className="fadein-2sdelay reveal">
+          <Flex
+            w="100%"
+            h="100%"
+            direction="row"
+            gap="6.25rem"
+            pb="1.563rem"
+            className="fadein-2sdelay reveal"
+          >
             <Flex
               w="100%"
               h="100%"
@@ -601,71 +663,68 @@ const BookAVisit = () => {
               align="center"
               justify="center"
             >
-              <Stack w="100%" h="100%" direction="column">
+              <FormControl isRequired>
                 {" "}
-                <FormControl isRequired>
-                  {" "}
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      NAME
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="avenir"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-                <FormControl isRequired>
-                  {" "}
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      PHONE
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="avenir"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-                <FormControl>
-                  <HStack w="100%" justify="space-between" pb="15px">
-                    <FormLabel
-                      fontFamily="avenir"
-                      fontSize="1rem"
-                      fontWeight="bold"
-                    >
-                      EMAIL
-                    </FormLabel>
-                    <Input
-                      fontSize="1rem"
-                      fontFamily="avenir"
-                      lineHeight="1.5rem"
-                      w="18.75rem"
-                      h="3.125rem"
-                      bgColor="#E5E5E5"
-                      borderRadius="none"
-                    />
-                  </HStack>{" "}
-                </FormControl>
-              </Stack>
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    NAME
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl isRequired>
+                {" "}
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    PHONE
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
+              <FormControl>
+                <HStack w="100%" justify="space-between" pb="15px">
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontSize="1rem"
+                    fontWeight="bold"
+                  >
+                    EMAIL
+                  </FormLabel>
+                  <Input
+                    fontSize="1rem"
+                    fontFamily="avenir"
+                    lineHeight="1.5rem"
+                    w="18.75rem"
+                    h="3.125rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                  />
+                </HStack>{" "}
+              </FormControl>
             </Flex>
             <Flex
               w="100%"

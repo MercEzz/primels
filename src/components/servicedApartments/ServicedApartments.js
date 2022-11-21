@@ -1004,134 +1004,125 @@ const ServicedApartments = () => {
         </Flex>
       </Flex>
       {/*Arete Homes Img Galary*/}
-      <Flex w="100%" h="100%">
-        <Flex
-          w="100%"
-          h="51.563rem"
-          alignItems="center"
-          justif="center"
-          pos="relative"
-        >
+      <Flex w="100%" h="100%" pt="0.938rem">
+        <Flex w="100%" h="100%">
           {" "}
           <Flex
-            w="100%"
-            pos="absolute"
-            top="11.625rem"
+            w="45%"
+            // pos="absolute"
             direction="column"
-            left="6.25rem"
+            justify="center"
+            pl="6.25rem"
           >
-            <Text w="40%" fontFamily="goudy" fontSize="2.5rem" pb="1.563rem">
+            <Text w="100%" fontFamily="goudy" fontSize="2.5rem" pb="1.563rem">
               A LIFE WHERE YOU DON’T HAVE TO WAIT FOR WEEKENDS TO ENJOY
             </Text>
-            <Text w="22%" fontFamily="veralaRound" fontSize="1.125rem">
+            <Text
+              w="50%"
+              fontFamily="veralaRound"
+              fontSize="1.125rem"
+              mb="10rem"
+            >
               Arete Homes aims to provide better experiences in every aspect of
-              life. With innumerable activities lined up for you, there is so
+              life.
+              <br /> With innumerable activities lined up for you, there is so
               much to do, so little time.
             </Text>
           </Flex>
-          <Flex w="100%" h="100%" overflow="hidden">
-            <Box
-              w="20.125rem"
-              h="13.75rem"
-              pos="absolute"
-              top="0.938rem"
-              right="21.5rem"
-              left="47.75rem"
-              bottom="37.813rem"
-              bgPos="center"
-              bgSize="contain"
-              bgRepeat="no-repeat"
-              bgImage={hall}
-            />
-            <Box
-              w="19.625rem"
-              h="20.313rem"
-              pos="absolute"
-              top="5.625rem"
-              left="69.438rem"
-              right="0.938rem"
-              bgPos="70%"
-              bgSize="cover"
-              bgRepeat="no-repeat"
-              bgImage={cricket}
-            />
-            <Box
-              w="15.688rem"
-              h="10.938rem"
-              pos="absolute"
-              top="21.25rem"
-              bottom="19.375rem"
-              left="25.625rem"
-              right="48.688rem"
+          <Flex
+            w="55%"
+            h="100%"
+            direction="column"
+            // align="flex-end"
+            pr="0.938rem"
+          >
+            <Flex w="100%" h="100%" justify="flex-end">
+              <Image
+                w="20.125rem"
+                h="13.75rem"
+                // pos="absolute"
+                objectPosition="center"
+                objectFit="contain"
+                src={hall}
+              />
+              <Image
+                mt="4.688rem"
+                w="19.625rem"
+                h="20.313rem"
+                // pos="absolute"
+                top="5.625rem"
+                objectPosition="70%"
+                objectFit="cover"
+                src={cricket}
+              />
+            </Flex>
+            <Flex
+              w="100%"
+              h="100%"
+              gap="0.938rem"
+              // mr="8.65rem"
+              // pos="relative"
+              wrap="nowrap"
+              // top="-4rem"
             >
-              <Image w="100%" h="100%" src={kidsplaying} />
-            </Box>
-            <Box
-              zIndex="3"
-              w="15.375rem"
-              h="22.125rem"
-              pos="absolute"
-              top="15.625rem"
-              bottom="14.75rem"
-              left="45%"
-              right="32.375rem"
-              bgPos="contain"
-              bgSize="cover"
-              bgRepeat="no-repeat"
-              bgImage={badminton}
-            />
-            <Box
-              zIndex="3"
-              w="21.125rem"
-              h="19.688rem"
-              bgColor="blue"
-              pos="absolute"
-              top="13.438rem"
-              bottom="19.375rem"
-              left="58.563rem"
-              right="10.313rem"
+              <Box pos="relative" w="15.688rem" h="10.938rem">
+                <Image src={kidsplaying} pos="absolute" />
+              </Box>{" "}
+              <Box pos="relative" w="15.375rem" h="22.125rem">
+                <Image
+                  zIndex="3"
+                  objectFit="contain"
+                  objectPosition="cover"
+                  src={badminton}
+                  pos="absolute"
+                />
+              </Box>
+              <Box pos="relative" w="21.125rem" h="19.688rem">
+                <Image
+                  zIndex="5"
+                  objectFit="cover"
+                  objectPosition="80%"
+                  // top="-8.5rem"
+                  // right="10rem"
+                  src={tabletenis}
+                  pos="absolute"
+                />
+              </Box>
+            </Flex>
+            <Flex
+              pos="relative"
+              w="100%"
+              h="100%"
+              gap="0.938rem"
+              align="flex-end"
+              bgColor="red"
+              // ml="-19.7rem"
+              // pt="0.938rem"
             >
               <Image
-                h="100%"
-                w="100%"
+                w="25rem"
+                h="16.125rem"
+                objectPosition="center"
                 objectFit="cover"
-                objectPosition="80%"
-                src={tabletenis}
+                left="0"
+                src={meditating}
+                pos="relative"
               />
-            </Box>
-            <Box
-              w="25rem"
-              h="16.125rem"
-              pos="absolute"
-              top="34.063rem"
-              bottom="2.313rem"
-              left="23.938rem"
-              right="41.063rem"
-              bgPos="contain"
-              bgSize="cover"
-              bgRepeat="no-repeat"
-              bgImage={meditating}
-            />
-            <Box
-              w="20.75rem"
-              h="18.438rem"
-              pos="absolute"
-              bottom="0"
-              right="19.375rem"
-              left="49.875rem"
-            >
-              <Image w="100%" h="100%" src={yoga} />
-            </Box>
-            <Box
-              w="17.5rem"
-              h="23.875rem"
-              pos="absolute"
-              top="26.875rem"
-              bottom="1.75rem"
-              right="0.938rem"
-            >
-              <Image w="100%" h="100%" src={planting} />
-            </Box>
+              <Image
+                w="20.75rem"
+                h="18.438rem"
+                src={yoga}
+                pos="relative"
+                left="0"
+              />
+              <Image
+                w="17.5rem"
+                h="23.875rem"
+                src={planting}
+                pos="relative"
+                left="0"
+              />
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

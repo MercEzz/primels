@@ -37,34 +37,35 @@ import foodCourt from "../commercial-properties imgs/nick-karvounis-Ciqxn7FE4vE-
 import retailShop from "../commercial-properties imgs/carl-raw-s9rsYu-BYNo-unsplash.jpg";
 
 import DropDown from "./DropDown";
-import './animations.css'
-import './commercial-properties.css'
+import "./animations.css";
+import "./commercial-properties.css";
 import TenthSec from "../sky-high/SmartInvest";
 
 const AreteSec = () => {
   const [active, setActive] = useState(true);
 
-  const reveal=()=> {
+  const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
-  
+
     for (var i = 0; i <= reveals.length; i++) {
       var windowHeight = window.innerHeight;
-      var elementTop = reveals[i]?reveals[i].getBoundingClientRect().top:null;
+      var elementTop = reveals[i]
+        ? reveals[i].getBoundingClientRect().top
+        : null;
       var elementVisible = 100;
-  
+
       if (elementTop < windowHeight - elementVisible) {
-       reveals[i].classList.add("active");
-      }
-       else {
+        reveals[i].classList.add("active");
+      } else {
         reveals[i].classList.remove("active");
       }
     }
-  }
-  useLayoutEffect(()=>{
+  };
+  useLayoutEffect(() => {
     window.addEventListener("scroll", reveal);
-    return ()=>{
+    return () => {
       window.removeEventListener("scroll", reveal);
-    }
+    };
   });
   return (
     <>
@@ -90,6 +91,7 @@ const AreteSec = () => {
             fontWeight="bold"
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
+              color: "white",
             }}
             onClick={() => {
               setActive(true);
@@ -115,6 +117,7 @@ const AreteSec = () => {
             }}
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
+              color: "white",
             }}
             _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
           >
@@ -143,7 +146,6 @@ const AretePlaza = () => {
         px="6.25rem"
         pt="3.125rem"
         pb="5rem"
-        mb="5rem"
       >
         <Text
           textAlign="center"
@@ -164,7 +166,12 @@ const AretePlaza = () => {
           Spaces, an impeccable mix of Shopping, HyperMarket, Pharmacy, Fine
           Dining & Entertainment.
         </Text>
-        <Flex w="100%" gap="1.25rem" align="center" className="Icon-fadein reveal">
+        <Flex
+          w="100%"
+          gap="1.25rem"
+          align="center"
+          className="Icon-fadein reveal"
+        >
           <Flex w="100%">
             <Image
               transition="all .2s"
@@ -216,34 +223,29 @@ const AretePlaza = () => {
             border="1px solid grey"
           />
         </Flex>
-        <Flex
-          overflow="hidden"
-          w="10%"
-          h="100%"
-          px="1.563rem"
-        >
+        <Flex overflow="hidden" w="10%" h="100%" px="1.563rem">
           <Flex
-          className="discobal-slidein-top reveal"
-          direction="column"
-          justify="center"
-          align="center"
-        >
-          <Divider
-            h="6rem"
-            orientation="vertical"
-            border="3px solid"
-            borderColor="#DFBD69"
-            bgColor="#DFBD69"
-          />
-          <Box
-            height="1.875rem"
-            width="1.875rem"
-            backgroundColor="#DFBD69"
-            border="3px solid white"
-            boxShadow="0px 0px 0px 3px #B88746"
-            borderRadius="50%"
-            my="1"
-          />
+            className="discobal-slidein-top reveal"
+            direction="column"
+            justify="center"
+            align="center"
+          >
+            <Divider
+              h="6rem"
+              orientation="vertical"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />
+            <Box
+              height="1.875rem"
+              width="1.875rem"
+              backgroundColor="#DFBD69"
+              border="3px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />
           </Flex>
         </Flex>
         <Flex
@@ -254,38 +256,43 @@ const AretePlaza = () => {
           alignSelf="center"
           justify="center"
         >
-          <Heading fontFamily="avenir" fontSize="2.125rem" pb="1.25rem" className="Arete-Plaza-FloorPlan-Title reveal">
+          <Heading
+            fontFamily="avenir"
+            fontSize="2.125rem"
+            pb="1.25rem"
+            className="Arete-Plaza-FloorPlan-Title reveal"
+          >
             FLOOR PLAN
           </Heading>
           <div className="Arete-Plaza-FloorPlan-SubText reveal">
-          <Text fontFamily="veralaRound" fontSize="1.125rem" pb="0.625rem" >
-            Typology
-          </Text>
-          <Heading fontFamily="avenir" fontSize="1.25rem" pb="1.25rem">
-            SHOPS/OFFICES
-          </Heading>
-          <Text fontFamily="veralaRound" fontSize="1.125rem" pb="0.625rem">
-            Carpet Area
-          </Text>
-          <Heading fontFamily="avenir" fontSize="1.25rem" pb="1.25rem">
-            450-650 SQFT.
-          </Heading>
-          <Button
-            w="fit-content"
-            bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-            color="white"
-            mr="0.625rem"
-            p="1rem"
-            fontSize="1rem"
-            fontFamily="avenir"
-            fontWeight="bold"
-            _hover={{
-              bgGradient: "linear(to-b, #DFBD69, #B88746)",
-            }}
-            _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
-          >
-            CHECK PRICE
-          </Button>
+            <Text fontFamily="veralaRound" fontSize="1.125rem" pb="0.625rem">
+              Typology
+            </Text>
+            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1.25rem">
+              SHOPS/OFFICES
+            </Heading>
+            <Text fontFamily="veralaRound" fontSize="1.125rem" pb="0.625rem">
+              Carpet Area
+            </Text>
+            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1.25rem">
+              450-650 SQFT.
+            </Heading>
+            <Button
+              w="fit-content"
+              bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+              color="white"
+              mr="0.625rem"
+              p="1rem"
+              fontSize="1rem"
+              fontFamily="avenir"
+              fontWeight="bold"
+              _hover={{
+                bgGradient: "linear(to-b, #DFBD69, #B88746)",
+              }}
+              _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+            >
+              CHECK PRICE
+            </Button>
           </div>
         </Flex>
       </Flex>
@@ -313,13 +320,23 @@ const AreteMall = () => {
           textAlign="center"
           fontFamily="goudy"
           fontSize="2.5rem"
-          pb="3.125rem"
+          pb="1.875rem"
         >
           ARETE MALL
         </Text>
-        <Flex w="100%" h="100%" align="flex-start" justify="space-between" overflow="hidden">
+        <Flex
+          w="100%"
+          h="100%"
+          align="flex-start"
+          justify="space-between"
+          overflow="hidden"
+        >
           <Flex w="50%" overflow="hidden">
-            <Image src={mall} h="29.25rem" className="Arete-Plaza-FloorPlan-Image reveal"/>
+            <Image
+              src={mall}
+              h="26.875rem"
+              className="Arete-Plaza-FloorPlan-Image reveal"
+            />
           </Flex>
           <Flex
             className="discobal-slidein-top reveal"
@@ -332,7 +349,7 @@ const AreteMall = () => {
           >
             {" "}
             <Divider
-              h="6rem"
+              h="9rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -356,7 +373,12 @@ const AreteMall = () => {
             alignSelf="center"
             justify="center"
           >
-            <Text fontSize="1rem" fontFamily="veralaRound" pb="1.875rem" className="Arete-Plaza-FloorPlan-Title reveal">
+            <Text
+              fontSize="1rem"
+              fontFamily="veralaRound"
+              pb="1.875rem"
+              className="Arete-Plaza-FloorPlan-Title reveal"
+            >
               An expansive development of 2.5 lakh sqft retail mall in close
               proximity to residential townships of North Chennai, will make
               sure all your social and recreational needs are met with. The mall
@@ -425,27 +447,27 @@ const AreteMall = () => {
                 </Text>
               </Box>
             </SimpleGrid>
-            <div style={{overflow:"hidden"}}>
-            <div className="discobal-slidein-top reveal">
-            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
-              FLOOR PLAN
-            </Heading>
-            <Button
-              w="fit-content"
-              bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-              color="white"
-              mr="0.625rem"
-              p="1.563rem"
-              fontSize="1.25rem"
-              fontFamily="avenir"
-              fontWeight="bold"
-              _hover={{
-                bgGradient: "linear(to-b, #DFBD69, #B88746)",
-              }}
-            >
-              DOWNLOAD
-            </Button>
-            </div>
+            <div style={{ overflow: "hidden" }}>
+              <div className="discobal-slidein-top reveal">
+                <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
+                  FLOOR PLAN
+                </Heading>
+                <Button
+                  w="fit-content"
+                  bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+                  color="white"
+                  mr="0.625rem"
+                  p="1.563rem"
+                  fontSize="1.25rem"
+                  fontFamily="avenir"
+                  fontWeight="bold"
+                  _hover={{
+                    bgGradient: "linear(to-b, #DFBD69, #B88746)",
+                  }}
+                >
+                  DOWNLOAD
+                </Button>
+              </div>
             </div>
           </Flex>
         </Flex>
@@ -459,125 +481,206 @@ const AreteMall = () => {
         pt="3.125rem"
         px="6.25rem"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="3.125rem" className="discobal-slidein-top reveal">
+        <Text
+          fontFamily="goudy"
+          fontSize="2.5rem"
+          pb="1.875rem"
+          className="discobal-slidein-top reveal"
+        >
           AMENITIES
         </Text>
         <Flex w="100%" h="100%" gap="1.25rem" align="center" pb="0.625rem">
           <Flex w="100%" direction="column" align="center" overflow="hidden">
-            <Image src={retailShop} h="15rem" className="slidein-bottom reveal"/>
-            <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem" className="Icon-fadein reveal">
+            <Image
+              src={retailShop}
+              h="15rem"
+              className="slidein-bottom reveal"
+            />
+            <Heading
+              fontFamily="avenir"
+              fontSize="1.25rem"
+              pt="1rem"
+              className="Icon-fadein reveal"
+            >
               RETAIL SHOPS
             </Heading>
           </Flex>
           <Flex w="100%" direction="column" align="center" overflow="hidden">
-            <Image h="15rem" src={market}  className="slidein-bottom-2sdelay reveal"/>
-            <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem" className="fadein-2sdelay reveal">
+            <Image
+              h="15rem"
+              src={market}
+              className="slidein-bottom-2sdelay reveal"
+            />
+            <Heading
+              fontFamily="avenir"
+              fontSize="1.25rem"
+              pt="1rem"
+              className="fadein-2sdelay reveal"
+            >
               HYPERMARKET
             </Heading>
           </Flex>
           <Flex w="100%" direction="column" align="center" overflow="hidden">
-            <Image src={pharmacy} h="15rem"  className="slidein-bottom-4sdelay reveal"/>
-            <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem" className="fadein-4sdelay reveal">
+            <Image
+              src={pharmacy}
+              h="15rem"
+              className="slidein-bottom-4sdelay reveal"
+            />
+            <Heading
+              fontFamily="avenir"
+              fontSize="1.25rem"
+              pt="1rem"
+              className="fadein-4sdelay reveal"
+            >
               PHARMACY
             </Heading>
           </Flex>
         </Flex>
-        <Flex w="100%" h="100%" align="center" pb="0.625rem" overflow="hidden" mx="1.563rem">
+        <Flex
+          w="100%"
+          h="100%"
+          align="center"
+          pb="0.625rem"
+          overflow="hidden"
+          mx="1.563rem"
+        >
           {" "}
           <Flex w="100%" align="center" overflow="hidden">
-            <Flex w="100%" align="center" className="discoball-slidein-left1 reveal">
-            <Divider
-              orientation="horizontal"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="4rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />{" "}
-            <Divider
-              orientation="horizontal"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
+            <Flex
+              w="100%"
+              align="center"
+              className="discoball-slidein-left1 reveal"
+            >
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="4rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
             </Flex>
           </Flex>
           <Flex w="100%" align="center" overflow="hidden">
-            <Flex w="100%" align="center" className="discoball-slidein-left2 reveal">
-            <Divider
-              orientation="horizontal"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="4rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />{" "}
-            <Divider
-              orientation="horizontal"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
+            <Flex
+              w="100%"
+              align="center"
+              className="discoball-slidein-left2 reveal"
+            >
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="4rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
             </Flex>
           </Flex>
           <Flex w="100%" align="center" overflow="hidden">
-            <Flex w="100%" align="center" className="discoball-slidein-left3 reveal">
-            <Divider
-              orientation="horizontal"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="4rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />{" "}
-            <Divider
-              orientation="horizontal"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
+            <Flex
+              w="100%"
+              align="center"
+              className="discoball-slidein-left3 reveal"
+            >
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="4rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                orientation="horizontal"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
             </Flex>
           </Flex>
         </Flex>
-        <Flex w="100%" h="100%" gap="1.25rem" align="center" pb="0.625rem" overflow="hidden">
+        <Flex
+          w="100%"
+          h="100%"
+          gap="1.25rem"
+          align="center"
+          pb="0.625rem"
+          overflow="hidden"
+        >
           <Flex w="100%" direction="column" align="center">
-            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem" className="Icon-fadein reveal">
+            <Heading
+              fontFamily="avenir"
+              fontSize="1.25rem"
+              pb="1rem"
+              className="Icon-fadein reveal"
+            >
               FOOD COURT
             </Heading>
-            <Image src={foodCourt} h="15rem" className="slidein-top reveal"/>
+            <Image src={foodCourt} h="15rem" className="slidein-top reveal" />
           </Flex>
           <Flex w="100%" direction="column" align="center">
-            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem" className="fadein-2sdelay reveal">
+            <Heading
+              fontFamily="avenir"
+              fontSize="1.25rem"
+              pb="1rem"
+              className="fadein-2sdelay reveal"
+            >
               8 SCREEN MULTIPLEX
             </Heading>
-            <Image src={multiplex} h="15rem" className="slidein-top-2sdelay reveal"/>
+            <Image
+              src={multiplex}
+              h="15rem"
+              className="slidein-top-2sdelay reveal"
+            />
           </Flex>
           <Flex w="100%" direction="column" align="center">
-            <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem" className="fadein-2sdelay reveal">
+            <Heading
+              fontFamily="avenir"
+              fontSize="1.25rem"
+              pb="1rem"
+              className="fadein-2sdelay reveal"
+            >
               GAMING ARCADE
             </Heading>
-            <Image src={gamingArena} h="15rem" className="slidein-top-4sdelay reveal"/>
+            <Image
+              src={gamingArena}
+              h="15rem"
+              className="slidein-top-4sdelay reveal"
+            />
           </Flex>
         </Flex>
       </Flex>
@@ -600,7 +703,12 @@ const LocationAndFormPlaza = () => {
         pb="3.125rem"
         px="6.25rem"
       >
-        <Text fontFamily="goudy" pb="3.125rem" fontSize="2.5rem" className="Arete-Plaza-LocationAdv-Title reveal">
+        <Text
+          fontFamily="goudy"
+          pb="3.125rem"
+          fontSize="2.5rem"
+          className="Arete-Plaza-LocationAdv-Title reveal"
+        >
           LOCATION ADVANTAGE
         </Text>
         <Flex w="100%" h="100%" justify="space-between" pb="3.125rem">
@@ -623,7 +731,7 @@ const LocationAndFormPlaza = () => {
                 mr="1rem"
                 _hover={{ cursor: "pointer" }}
               >
-                <Image w="3.125rem" h="3.125rem" src={institute}/>
+                <Image w="3.125rem" h="3.125rem" src={institute} />
               </Box>
               <VStack align="flex-start">
                 <Heading fontFamily="avenir" fontSize="2.125rem">
@@ -680,40 +788,36 @@ const LocationAndFormPlaza = () => {
               </VStack>
             </Flex>
           </Flex>
-          <Flex
-            overflow="hidden"
-            w="10%"
-            h="100%"
-            px="1.563rem"
-          >
+          <Flex overflow="hidden" w="10%" h="100%" px="1.563rem">
             <Flex
               className="discobal-slidein-top reveal"
               direction="column"
               justify="center"
               align="center"
               w="100%"
-              h="100%">
-            <Divider
-              h="2rem"
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />
+              h="100%"
+            >
+              <Divider
+                h="2rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
             </Flex>
           </Flex>
           <Flex w="62%">
             <Image
-            className="Arete-Plaza-LocationAdv-Image reveal"
+              className="Arete-Plaza-LocationAdv-Image reveal"
               boxShadow="lg"
               w="100%"
               h="29.25rem"
@@ -726,7 +830,13 @@ const LocationAndFormPlaza = () => {
         <Flex w="100%">
           <Flex w="100%" direction="column" overflow="hidden">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem" id="0" className="discoball-slidein-left1 reveal">
+            <Flex
+              w="100%"
+              align="center"
+              pb="1.563rem"
+              id="0"
+              className="discoball-slidein-left1 reveal"
+            >
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -750,24 +860,30 @@ const LocationAndFormPlaza = () => {
               />
             </Flex>
             <div id="0" className="Icon-fadein reveal">
-            <Heading
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
-            >
-              5 MINS
-            </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-              <ListItem pb="0.625rem">Velammal International School</ListItem>
-              <ListItem pb="0.625rem">Origin By Mahindra</ListItem>
-              <ListItem>Ponneri Railway Station</ListItem>
-            </UnorderedList>
+              <Heading
+                textAlign="center"
+                fontFamily="avenir"
+                fontSize="1.5rem"
+                pb="1rem"
+              >
+                5 MINS
+              </Heading>
+              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+                <ListItem pb="0.625rem">Velammal International School</ListItem>
+                <ListItem pb="0.625rem">Origin By Mahindra</ListItem>
+                <ListItem>Ponneri Railway Station</ListItem>
+              </UnorderedList>
             </div>
           </Flex>
           <Flex w="100%" direction="column" overflow="hidden">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem" id="1" className="discoball-slidein-left2 reveal">
+            <Flex
+              w="100%"
+              align="center"
+              pb="1.563rem"
+              id="1"
+              className="discoball-slidein-left2 reveal"
+            >
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -791,25 +907,31 @@ const LocationAndFormPlaza = () => {
               />
             </Flex>
             <div id="1" className="slideintop-2sdelay reveal">
-            <Heading
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
-            >
-              10 MINS
-            </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-              <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
-              <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
-              <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
-              <ListItem>R.K.M. Engineering College</ListItem>
-            </UnorderedList>
+              <Heading
+                textAlign="center"
+                fontFamily="avenir"
+                fontSize="1.5rem"
+                pb="1rem"
+              >
+                10 MINS
+              </Heading>
+              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+                <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
+                <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
+                <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
+                <ListItem>R.K.M. Engineering College</ListItem>
+              </UnorderedList>
             </div>
           </Flex>
           <Flex w="100%" direction="column" overflow="hidden">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem" id="2" className="discoball-slidein-left3 reveal">
+            <Flex
+              w="100%"
+              align="center"
+              pb="1.563rem"
+              id="2"
+              className="discoball-slidein-left3 reveal"
+            >
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -833,25 +955,31 @@ const LocationAndFormPlaza = () => {
               />
             </Flex>
             <div id="2" className="fadein-4sdelay reveal">
-            <Heading
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
-            >
-              20 MINS
-            </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-              <ListItem pb="0.625rem">Gummidipoondi SIPCOT</ListItem>
-              <ListItem pb="0.625rem">Amazon</ListItem>
-              <ListItem pb="0.625rem">Minjur</ListItem>
-              <ListItem>Pulicat Lake</ListItem>
-            </UnorderedList>
+              <Heading
+                textAlign="center"
+                fontFamily="avenir"
+                fontSize="1.5rem"
+                pb="1rem"
+              >
+                20 MINS
+              </Heading>
+              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+                <ListItem pb="0.625rem">Gummidipoondi SIPCOT</ListItem>
+                <ListItem pb="0.625rem">Amazon</ListItem>
+                <ListItem pb="0.625rem">Minjur</ListItem>
+                <ListItem>Pulicat Lake</ListItem>
+              </UnorderedList>
             </div>
           </Flex>
           <Flex w="100%" direction="column" overflow="hidden">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem" id="3" className="discoball-slidein-left4 reveal">
+            <Flex
+              w="100%"
+              align="center"
+              pb="1.563rem"
+              id="3"
+              className="discoball-slidein-left4 reveal"
+            >
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -875,18 +1003,18 @@ const LocationAndFormPlaza = () => {
               />
             </Flex>
             <div id="3" className="fadein-6sdelay reveal">
-            <Heading
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
-            >
-              30 MINS
-            </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-              <ListItem pb="0.625rem">Sri City</ListItem>
-              <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
-            </UnorderedList>
+              <Heading
+                textAlign="center"
+                fontFamily="avenir"
+                fontSize="1.5rem"
+                pb="1rem"
+              >
+                30 MINS
+              </Heading>
+              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+                <ListItem pb="0.625rem">Sri City</ListItem>
+                <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
+              </UnorderedList>
             </div>
           </Flex>
         </Flex>
@@ -910,7 +1038,11 @@ const LocationAndFormPlaza = () => {
         >
           pre book & avail best offers
         </Text>
-        <Container w="container.sm" align="center" className="Icon-fadein reveal">
+        <Container
+          w="container.sm"
+          align="center"
+          className="Icon-fadein reveal"
+        >
           {" "}
           <form>
             <FormControl isRequired>
@@ -1034,7 +1166,12 @@ const LocationAndFormMall = () => {
         pb="3.125rem"
         px="6.25rem"
       >
-        <Text fontFamily="goudy" pb="3.125rem" fontSize="2.5rem" className="Arete-Plaza-LocationAdv-Title reveal">
+        <Text
+          fontFamily="goudy"
+          pb="3.125rem"
+          fontSize="2.5rem"
+          className="Arete-Plaza-LocationAdv-Title reveal"
+        >
           LOCATION ADVANTAGE
         </Text>
         <Flex w="100%" h="100%" justify="space-between" pb="3.125rem">
@@ -1057,7 +1194,7 @@ const LocationAndFormMall = () => {
                 mr="1rem"
                 _hover={{ cursor: "pointer" }}
               >
-                <Image w="3.125rem" h="3.125rem" src={institute}/>
+                <Image w="3.125rem" h="3.125rem" src={institute} />
               </Box>
               <VStack align="flex-start">
                 <Heading fontFamily="avenir" fontSize="2.125rem">
@@ -1114,40 +1251,36 @@ const LocationAndFormMall = () => {
               </VStack>
             </Flex>
           </Flex>
-          <Flex
-            overflow="hidden"
-            w="10%"
-            h="100%"
-            px="1.563rem"
-          >
+          <Flex overflow="hidden" w="10%" h="100%" px="1.563rem">
             <Flex
               className="discobal-slidein-top reveal"
               direction="column"
               justify="center"
               align="center"
               w="100%"
-              h="100%">
-            <Divider
-              h="2rem"
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />
+              h="100%"
+            >
+              <Divider
+                h="2rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
             </Flex>
           </Flex>
           <Flex w="62%">
             <Image
-            className="Arete-Plaza-LocationAdv-Image reveal"
+              className="Arete-Plaza-LocationAdv-Image reveal"
               boxShadow="lg"
               w="100%"
               h="29.25rem"
@@ -1160,7 +1293,13 @@ const LocationAndFormMall = () => {
         <Flex w="100%">
           <Flex w="100%" direction="column" overflow="hidden">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem" id="0" className="discoball-slidein-left1 reveal">
+            <Flex
+              w="100%"
+              align="center"
+              pb="1.563rem"
+              id="0"
+              className="discoball-slidein-left1 reveal"
+            >
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -1184,24 +1323,30 @@ const LocationAndFormMall = () => {
               />
             </Flex>
             <div id="0" className="Icon-fadein reveal">
-            <Heading
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
-            >
-              5 MINS
-            </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-              <ListItem pb="0.625rem">Velammal International School</ListItem>
-              <ListItem pb="0.625rem">Origin By Mahindra</ListItem>
-              <ListItem>Ponneri Railway Station</ListItem>
-            </UnorderedList>
+              <Heading
+                textAlign="center"
+                fontFamily="avenir"
+                fontSize="1.5rem"
+                pb="1rem"
+              >
+                5 MINS
+              </Heading>
+              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+                <ListItem pb="0.625rem">Velammal International School</ListItem>
+                <ListItem pb="0.625rem">Origin By Mahindra</ListItem>
+                <ListItem>Ponneri Railway Station</ListItem>
+              </UnorderedList>
             </div>
           </Flex>
           <Flex w="100%" direction="column" overflow="hidden">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem" id="1" className="discoball-slidein-left2 reveal">
+            <Flex
+              w="100%"
+              align="center"
+              pb="1.563rem"
+              id="1"
+              className="discoball-slidein-left2 reveal"
+            >
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -1225,25 +1370,31 @@ const LocationAndFormMall = () => {
               />
             </Flex>
             <div id="1" className="slideintop-2sdelay reveal">
-            <Heading
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
-            >
-              10 MINS
-            </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-              <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
-              <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
-              <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
-              <ListItem>R.K.M. Engineering College</ListItem>
-            </UnorderedList>
+              <Heading
+                textAlign="center"
+                fontFamily="avenir"
+                fontSize="1.5rem"
+                pb="1rem"
+              >
+                10 MINS
+              </Heading>
+              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+                <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
+                <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
+                <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
+                <ListItem>R.K.M. Engineering College</ListItem>
+              </UnorderedList>
             </div>
           </Flex>
           <Flex w="100%" direction="column" overflow="hidden">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem" id="2" className="discoball-slidein-left3 reveal">
+            <Flex
+              w="100%"
+              align="center"
+              pb="1.563rem"
+              id="2"
+              className="discoball-slidein-left3 reveal"
+            >
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -1267,25 +1418,31 @@ const LocationAndFormMall = () => {
               />
             </Flex>
             <div id="2" className="fadein-4sdelay reveal">
-            <Heading
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
-            >
-              20 MINS
-            </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-              <ListItem pb="0.625rem">Gummidipoondi SIPCOT</ListItem>
-              <ListItem pb="0.625rem">Amazon</ListItem>
-              <ListItem pb="0.625rem">Minjur</ListItem>
-              <ListItem>Pulicat Lake</ListItem>
-            </UnorderedList>
+              <Heading
+                textAlign="center"
+                fontFamily="avenir"
+                fontSize="1.5rem"
+                pb="1rem"
+              >
+                20 MINS
+              </Heading>
+              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+                <ListItem pb="0.625rem">Gummidipoondi SIPCOT</ListItem>
+                <ListItem pb="0.625rem">Amazon</ListItem>
+                <ListItem pb="0.625rem">Minjur</ListItem>
+                <ListItem>Pulicat Lake</ListItem>
+              </UnorderedList>
             </div>
           </Flex>
           <Flex w="100%" direction="column" overflow="hidden">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem" id="3" className="discoball-slidein-left4 reveal">
+            <Flex
+              w="100%"
+              align="center"
+              pb="1.563rem"
+              id="3"
+              className="discoball-slidein-left4 reveal"
+            >
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -1309,18 +1466,18 @@ const LocationAndFormMall = () => {
               />
             </Flex>
             <div id="3" className="fadein-6sdelay reveal">
-            <Heading
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
-            >
-              30 MINS
-            </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-              <ListItem pb="0.625rem">Sri City</ListItem>
-              <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
-            </UnorderedList>
+              <Heading
+                textAlign="center"
+                fontFamily="avenir"
+                fontSize="1.5rem"
+                pb="1rem"
+              >
+                30 MINS
+              </Heading>
+              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+                <ListItem pb="0.625rem">Sri City</ListItem>
+                <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
+              </UnorderedList>
             </div>
           </Flex>
         </Flex>
@@ -1344,7 +1501,11 @@ const LocationAndFormMall = () => {
         >
           pre book & avail best offers
         </Text>
-        <Container w="container.sm" align="center" className="Icon-fadein reveal">
+        <Container
+          w="container.sm"
+          align="center"
+          className="Icon-fadein reveal"
+        >
           {" "}
           <form>
             <FormControl isRequired>
