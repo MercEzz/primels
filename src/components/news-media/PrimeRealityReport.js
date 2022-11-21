@@ -209,7 +209,44 @@ const LastSec = () => {
 };
 
 export default LastSec;
-
+const months = [
+  {
+    month: "OCTOBER 2022",
+  },
+  {
+    month: "AUGUST 2022",
+  },
+  {
+    month: "FEBRUARY 2022",
+  },
+  {
+    month: "JANUARY 2022",
+  },
+  {
+    month: "DECEMBER 2019",
+  },
+  {
+    month: "NOVEMBER 2019",
+  },
+  {
+    month: "OCTOBER 2019",
+  },
+  {
+    month: "SEPTEMBER 2019",
+  },
+  {
+    month: "JULY 2019",
+  },
+  {
+    month: "JUNE 2019",
+  },
+  {
+    month: "MAY 2019",
+  },
+  {
+    month: "APRIL 2019",
+  },
+]
 const primeReport = [
   {
     img: feb2019,

@@ -22,11 +22,11 @@ const ThirdSec = () => {
   const settings = {
     draggable: false,
     infinite: false,
-    autoplay: false,
+    autoplay: true,
     speed: 500,
     autoplaySpeed: 5000,
     slidesToShow: 2,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     afterChange: () => {
       setCurrentSlide(currentSlide++);
     },
@@ -39,7 +39,7 @@ const ThirdSec = () => {
       h="100%"
       pl="6.25rem"
       pr="4.688rem"
-      py="3.125rem"
+      pt="5rem"
       direction="column"
       align="center"
       justify="center"
@@ -90,7 +90,7 @@ const ThirdSec = () => {
             <Image
               key={prime.id}
               w={prime.width}
-              height="29.25rem"
+              height="26.875rem"
               pr="1.25rem"
               position="relative"
               objectPosition="center"

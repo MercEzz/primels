@@ -12,11 +12,10 @@ const FourthSec = () => {
       w="100%"
       h="100%"
       px="6.25rem"
-      py="3.125rem"
+      pt="5rem"
       direction="column"
       align="center"
       justify="center"
-      mb="5rem"
     >
       {" "}
       <Text
@@ -29,7 +28,7 @@ const FourthSec = () => {
       >
         PRIME TALKS
       </Text>
-      <Flex w="100%" h="100%" align="flex-start" justify="flex-start" pt="50px">
+      <Flex w="100%" h="100%" align="flex-start" justify="flex-start" pt="1.875rem">
         <Flex
           opacity={isInView ? "1" : "0"}
           transition="all 2s 2s"
@@ -37,7 +36,7 @@ const FourthSec = () => {
           h="100%"
           flex="3"
           pr="1.562rem"
-        ><div style={{height:"35.5rem",width:"41.875rem"}}>
+        ><div style={{height:"29.5rem",width:"41.75rem"}}>
           <embed
             height="100%"
             width="100%"
@@ -75,29 +74,31 @@ const FourthSec = () => {
             my="1"
           />
         </Flex>
-        <Flex>
+        <Flex w="100%" h="100%">
           <Flex
+          height="100%"
             opacity={isInView ? "1" : "0"}
             transition="all 2s 2s"
             flex="1"
             direction="column"
             fontFamily="veralaRound"
             fontSize="1.25rem"
+            justify="center"
           >
-            <Text py="1.562rem" pl="1.562rem">
+            <Text pb="1.562rem" mt="" pl="1.562rem">
               Best Realty Brand 2021 The Economic Times
             </Text>
-            <Text py="1.562rem" pl="1.562rem">
+            <Text pb="1.562rem" pl="1.562rem">
               The Future Of Real Estate
             </Text>
-            <Text py="1.562rem" pl="1.562rem">
+            <Text pb="1.562rem" pl="1.562rem">
               Best Real Estate Investment 8% Guaranteed Rental Return At Arete
               Homes
             </Text>
-            <Text py="1.562rem" pl="1.562rem">
+            <Text pb="1.562rem" pl="1.562rem">
               Sky High Tower Launch Event
             </Text>
-            <Text py="1.562rem" pl="1.562rem">
+            <Text pl="1.562rem">
               Dr. Janani Rex Talks About Arete Homes Sky High Towers
             </Text>
           </Flex>

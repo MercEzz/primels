@@ -15,11 +15,11 @@ const SecondSec = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [slider, setSlider] = useState(null);
-  let [currentSlide, setCurrentSlide] = useState(1);
+  let [currentSlide, setCurrentSlide] = useState(33.333);
   const settings = {
     draggable: false,
     infinite: false,
-    autoplay: false,
+    autoplay: true,
     speed: 500,
     autoplaySpeed: 5000,
     slidesToShow: 2,
@@ -35,11 +35,10 @@ const SecondSec = () => {
       w="100%"
       h="100%"
       px="6.25rem"
-      py="3.125rem"
+      pt="5rem"
       direction="column"
       align="center"
       justify="center"
-      mb="5rem"
     >
       <Text
         transform={isInView ? "translateY(0)" : "translateY(-50px)"}
@@ -77,6 +76,7 @@ const SecondSec = () => {
           {pressRelease.map((prime) => (
             <Flex pr="1.25rem">
               <Image
+                boxShadow="Dark lg"
                 key={prime}
                 w="100%"
                 h="18.75rem"
@@ -85,6 +85,7 @@ const SecondSec = () => {
                 backgroundRepeat="no-repeat"
                 objectFit="cover"
                 src={prime.img}
+                
               />
               <Flex py="1.562rem" w="100%" align="center" justify="space-between">
                 <Text fontFamily="avenir" fontWeight="bold" fontSize="1.5rem">
@@ -126,9 +127,9 @@ const SecondSec = () => {
           <AiOutlineLeft color="#B88746" size="1.875rem" />
         </IconButton>
         {/* fill box */}
-        01
+        <Text fontFamily="avenir"  fontWeight="bold" color="#B88746">01</Text>
         <ImgBar slide={currentSlide} />
-        06
+        <Text fontFamily="avenir" fontWeight="bold" color="#B88746">03</Text>
         {/* Right Icon */}
         <IconButton
           aria-label="right-arrow"
@@ -144,6 +145,7 @@ const SecondSec = () => {
           mx="0.312rem"
           zIndex={2}
           onClick={() => {
+
             slider?.slickNext();
             setCurrentSlide(currentSlide++);
           }}
@@ -160,7 +162,7 @@ export default SecondSec;
 const ImgBar = ({ slide }) => {
   let barFillWidth = "0%";
   if (slide > 0) {
-    barFillWidth = slide * 16.666 + "%";
+    barFillWidth = slide + slide + "%";
   }
 
   return (
@@ -174,6 +176,7 @@ const ImgBar = ({ slide }) => {
       justify="flex-start"
     >
       <Flex
+        borderRadius="25px"
         color="black"
         bgColor="#B88746"
         style={{ width: barFillWidth }}
