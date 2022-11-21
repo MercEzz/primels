@@ -23,12 +23,14 @@
     opacity: 0;
 }
 .Arete-Plaza-FloorPlan-Image.reveal{
+    opacity: 0;
     transform: translateX(46.313rem);
 }
 .Arete-Plaza-FloorPlan-Discoball.reveal.active{
     transform: translateY(0px);
 }
 .Arete-Plaza-FloorPlan-Title.reveal.active{
+    opacity: 1;
     animation: Arete-Plaza-FloorPlan-Title 1 2s linear;
     transform: translateX(0px);
 }

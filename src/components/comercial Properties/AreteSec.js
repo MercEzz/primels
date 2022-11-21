@@ -319,7 +319,7 @@ const AreteMall = () => {
         </Text>
         <Flex w="100%" h="100%" align="flex-start" justify="space-between" overflow="hidden">
           <Flex w="50%" overflow="hidden">
-            <Image src={mall} h="29.25rem" className="Arete-Plaza-FloorPlan-Image reveal"/>
+            <Image src={mall} h="29.25rem" w="100%" className="Arete-Plaza-FloorPlan-Image reveal"/>
           </Flex>
           <Flex
             className="discobal-slidein-top reveal"
