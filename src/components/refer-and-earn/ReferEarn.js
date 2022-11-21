@@ -24,20 +24,19 @@ const ReferEarn = () => {
         w="100%"
         h="100%"
         direction="column"
-        top="40%"
+        top="35%"
       >
         <Heading
           style={{ opactiy: 0, animation: "fadein 1 2s linear" }}
-          pb="3.125rem"
+          pb="1.875rem"
           fontfamilty="goudy"
           fontSize="2.5rem"
           color="#13314F"
         >
-          MORE REFERRALS = MORE EARNINGS
+          MORE REFERRALS=MORE EARNINGS
         </Heading>
         <Heading
           style={{ opactiy: 0, animation: "fadein-2sdelay 1 4s linear" }}
-          pb="0.625rem"
           fontfamilty="avenir"
           fontSize="2.125rem"
           color="#1F4973"
