@@ -8,7 +8,7 @@ const MtnHd = motion(Heading);
 
 const FirstSec = () => {
   return (
-    <Flex w="100%" h="57.937rem" pos="relative" mb="5rem">
+    <Flex w="100%" h="57.937rem" pos="relative" mt="5rem">
       <MtnFlx
         initial={{ scale: 0.6 }}
         animate={{ scale: 1 }}
@@ -28,7 +28,7 @@ const FirstSec = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 2, type: "just" }}
         pos="absolute"
-        top="50%"
+        top="35%"
         left="50%"
         transform="translateX(-50%)"
         fontFamily="avenir"

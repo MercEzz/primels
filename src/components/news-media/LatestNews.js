@@ -55,15 +55,15 @@ const FifthSec = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="28.937rem"
+      h="32.937rem"
       px="1.562rem"
-      py="1.562rem"
+      mt="5rem"
       direction="column"
       align="center"
       justify="center"
-      mb="5rem"
     >
       <Text
+        mt="1.875rem"
         transform={isInView ? "translateY(0)" : "translateY(-50px)"}
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
@@ -78,10 +78,9 @@ const FifthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         position={"relative"}
-        height={"28.937rem"}
+        height={"100%"}
         width={"full"}
-        overflow={"hidden"}
-        my="1.562rem"
+        mt="1.875rem"
         pl="4.687rem"
         pr="3.125rem"
       >
@@ -144,7 +143,7 @@ const FifthSec = () => {
               key={index}
               w="100%"
               pr="1.562rem"
-              my="3.125rem"
+              
               height="25rem"
               position="relative"
             >
@@ -157,12 +156,13 @@ const FifthSec = () => {
                 objectPosition="center top"
               />
               <Flex
+                boxShadow="Dark-lg"
                 spacing={6}
                 w={"90%"}
                 h="9.375rem"
                 position="absolute"
                 right="0"
-                bottom="2%"
+                bottom="-6rem"
                 mr="0.937rem"
                 bgGradient="linear(to-b, #B88746, #DFBD69)"
                 transform="translate(0, -50%)"

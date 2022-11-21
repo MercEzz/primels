@@ -82,7 +82,7 @@ const Blog = () => {
         px="6.25rem"
         pt="1.563rem"
         pb="3.125rem"
-        gap="1.563rem"
+        gap="1.875rem"
       >
         <Flex w="70%" h="100%" direction="column" align="center">
           <Grid
@@ -591,8 +591,8 @@ const BlogForm = () => {
           POPULAR BLOGS
         </Heading>
         <VStack
-          divider={<StackDivider borderColor="gray.200" />}
-          spacing={"1.563rem"}
+          divider={<StackDivider borderColor="#B88746" />}
+          spacing={"0.938rem"}
           align="flex-start"
         >
           <Box>
