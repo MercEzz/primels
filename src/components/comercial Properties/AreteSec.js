@@ -43,6 +43,7 @@ import TenthSec from "../sky-high/SmartInvest";
 
 const AreteSec = () => {
   const [active, setActive] = useState(true);
+  const [animate, setAnimate] = useState(false);
 
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
@@ -56,8 +57,14 @@ const AreteSec = () => {
 
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
+        if(reveals[i].getAttribute("id")==="b0"){
+          setAnimate(true);
+        }
       } else {
         reveals[i].classList.remove("active");
+        if(reveals[i].getAttribute("id")==="b0"){
+          setAnimate(false);
+        }
       }
     }
   }catch(e){
@@ -141,14 +148,14 @@ const AretePlaza = () => {
     <>
       {" "}
       <Flex
-        mt="5rem"
+        mt="3.125rem"
         w="100%"
         h="100%"
         direction="column"
         align="center"
         justify="center"
         px="6.25rem"
-        pt="3.125rem"
+        
       >
         <Text
           textAlign="center"
@@ -488,9 +495,10 @@ const AreteMall = () => {
         >
           AMENITIES
         </Text>
-        <Flex w="100%" h="100%" gap="1.25rem" align="center">
-          <Flex w="100%" direction="column" align="center" overflow="hidden">
+        <Flex w="100%" h="100%" gap="1.25rem" align="center" pb="0.9rem">
+          <Flex w="100%" direction="column" align="center" overflow="hidden" >
             <Image
+              zIndex="2"
               src={retailShop}
               h="15rem"
               className="slidein-bottom reveal"
@@ -506,6 +514,7 @@ const AreteMall = () => {
           </Flex>
           <Flex w="100%" direction="column" align="center" overflow="hidden">
             <Image
+              zIndex="2"
               h="15rem"
               src={market}
               className="slidein-bottom-2sdelay reveal"
@@ -521,6 +530,7 @@ const AreteMall = () => {
           </Flex>
           <Flex w="100%" direction="column" align="center" overflow="hidden">
             <Image
+              zIndex="2"
               src={pharmacy}
               h="15rem"
               className="slidein-bottom-4sdelay reveal"
@@ -649,7 +659,7 @@ const AreteMall = () => {
             >
               FOOD COURT
             </Heading>
-            <Image src={foodCourt} h="15rem" className="slidein-top reveal" />
+            <Image src={foodCourt} h="15rem" className="slidein-top reveal" id="b0"/>
           </Flex>
           <Flex w="100%" direction="column" align="center">
             <Heading

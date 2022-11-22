@@ -155,21 +155,21 @@
 }
 .slideintop-2sdelay.reveal.active {
   opacity: 1;
-  animation: slideintop-2sdelay 1 4s ease-in;
+  animation: slideintop-2sdelay 1 4s linear;
   transform: translateX(0px);
 }
 .fadein-2sdelay.reveal {
   opacity: 0;
 }
 .fadein-2sdelay.reveal.active{
-    animation:fadein 1 4s step-end;
+    animation:fadein 1 4s linear;
     opacity: 1;
 }
 .fadein-4sdelay.reveal {
   opacity: 0;
 }
 .fadein-4sdelay.reveal.active{
-    animation:fadein 1 6s step-end;
+    animation:fadein 1 6s linear;
     opacity: 1;
 }
 .fadein-6sdelay.reveal {

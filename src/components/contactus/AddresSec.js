@@ -22,7 +22,7 @@ const AddresSec = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
-    margin: "0px 100px -50px 0px",
+    margin: "0px 6.25rem -3.125rem 0px",
   });
   const animateFlx = useAnimation();
   const animateFade = useAnimation();
@@ -53,11 +53,11 @@ const AddresSec = () => {
           direction="column"
           w="100%"
           h="100%"
-          py="25px"
+          py="1.563rem"
           align="center"
           justify="center"
-          pl="100px"
-          pr="50px"
+          pl="6.25rem"
+          pr="3.125rem"
           bgGradient={add ? "linear(to-b, #B88746, #DFBD69)" : "white"}
           _hover={{ textDecoration: "none" }}
           onClick={(e) => {
@@ -70,9 +70,9 @@ const AddresSec = () => {
             transition={{ delay: 1, duration: 2, type: "just" }}
             w="100%"
             fontFamily="avenir"
-            fontSize="34px"
-            pb="25px"
-            lineHeight="41px"
+            fontSize="2.125rem"
+            pb="1.563rem"
+            lineHeight="2.563rem"
             textAlign="left"
           >
             CORPORATE OFFICE
@@ -85,21 +85,21 @@ const AddresSec = () => {
             align="flex-start"
           >
             <HStack align="flex-start" mb="7px">
-              <Icon as={ImLocation} w="30px" h="40px" mt="-1" />
-              <Text fontFamily="veralaRound" fontSize="16px" lineHeight="24px">
+              <Icon as={ImLocation} w="1.875rem" h="2.5rem" mt="-1" />
+              <Text fontFamily="veralaRound" fontSize="1rem" lineHeight="1.5rem">
                 202, Krishna Kunj, above HDFC Bank,30, Navyug Society V.M. Road,
                 J.V.P.D. Scheme Vile Parle (West), Mumbai- 400 056
               </Text>
             </HStack>
             <HStack align="center" mb="7px">
-              <Icon as={HiMail} w="35px" h="30px" />
-              <Text fontFamily="veralaRound" fontSize="16px" lineHeight="24px">
+              <Icon as={HiMail} w="2.188rem" h="1.875rem" />
+              <Text fontFamily="veralaRound" fontSize="1rem" lineHeight="1.5rem">
                 info@primelifespace.com
               </Text>
             </HStack>
             <HStack align="center">
-              <Icon as={HiPhone} w="35px" h="40px" />
-              <Text fontFamily="veralaRound" fontSize="16px" lineHeight="24px">
+              <Icon as={HiPhone} w="2.188rem" h="2.5rem" />
+              <Text fontFamily="veralaRound" fontSize="1rem" lineHeight="1.5rem">
                 7338808775
               </Text>
             </HStack>
@@ -115,8 +115,8 @@ const AddresSec = () => {
           h="100%"
           align="center"
           justify="center"
-          pl="100px"
-          pr="50px"
+          pl="6.25rem"
+          pr="3.125rem"
           _hover={{ textDecoration: "none" }}
           bgGradient={add ? "white" : "linear(to-b, #B88746, #DFBD69)"}
           onClick={(e) => {
@@ -129,9 +129,9 @@ const AddresSec = () => {
             transition={{ delay: 2, duration: 2, type: "just" }}
             w="100%"
             fontFamily="avenir"
-            fontSize="34px"
-            pb="25px"
-            lineHeight="41px"
+            fontSize="2.125rem"
+            pb="1.563rem"
+            lineHeight="2.563rem"
             textAlign="left"
           >
             CHENNAI OFFICE
@@ -144,21 +144,21 @@ const AddresSec = () => {
             align="flex-start"
           >
             <HStack align="flex-start" mb="7px">
-              <Icon as={ImLocation} w="30px" h="40px" mt="-1" />
-              <Text fontFamily="veralaRound" fontSize="16px" lineHeight="24px">
+              <Icon as={ImLocation} w="1.875rem" h="2.5rem" mt="-1" />
+              <Text fontFamily="veralaRound" fontSize="1rem" lineHeight="1.5rem">
                 Prime Expat Infra No. 33, Mandapam Road, Kilpauk, Chennai -
                 600010
               </Text>
             </HStack>
             <HStack align="center" mb="7px">
-              <Icon as={HiMail} w="35px" h="30px" />
-              <Text fontFamily="veralaRound" fontSize="16px" lineHeight="24px">
+              <Icon as={HiMail} w="2.188rem" h="1.875rem" />
+              <Text fontFamily="veralaRound" fontSize="1rem" lineHeight="1.5rem">
                 sales@primelifespace.com
               </Text>
             </HStack>
             <HStack align="center">
-              <Icon as={HiPhone} w="35px" h="40px" />
-              <Text fontFamily="veralaRound" fontSize="16px" lineHeight="24px">
+              <Icon as={HiPhone} w="2.188rem" h="2.5rem" />
+              <Text fontFamily="veralaRound" fontSize="1rem" lineHeight="1.5rem">
                 7338808775
               </Text>
             </HStack>

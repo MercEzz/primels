@@ -16,14 +16,14 @@
     opacity: 0;
 }
 .fadein-2sdelay.reveal.active{
-    animation:fadein 1 6s step-end;
+    animation:fadein 1 4s linear;
     opacity: 1;
 }
 .fadein-4sdelay.reveal{
     opacity: 0;
 }
 .fadein-4sdelay.reveal.active{
-    animation:fadein 1 8s step-end;
+    animation:fadein 1 6s linear;
     opacity: 1;
 }
 .sliderightdisco.reveal{
@@ -50,7 +50,7 @@
 }
 .sliderightdisco-4sdelay.reveal.active{
     opacity: 1;
-    animation:sliderightdisco-4sdelay 1 8s linear;
+    animation:sliderightdisco-4sdelay 1 6s linear;
     transform: translateY(0px);
 }
 
