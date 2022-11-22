@@ -181,9 +181,11 @@
 }
 @keyframes Arete-Plaza-FloorPlan-Title{
   from {
+      opacity: 0;
       transform: translateX(-25rem);
     }
     to {
+      opacity: 1;
       transform: translateX(0px);
     }
 }
@@ -197,9 +199,11 @@
 }
 @keyframes Arete-Plaza-FloorPlan-Image{
   from {
+      opacity: 0;
       transform: translateX(46.313rem);
     }
     to {
+      opacity: 1;
       transform: translateX(0px);
     }
 }

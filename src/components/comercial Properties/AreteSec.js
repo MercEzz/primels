@@ -46,7 +46,7 @@ const AreteSec = () => {
 
   const reveal=()=> {
     var reveals = document.querySelectorAll(".reveal");
-  
+  try{
     for (var i = 0; i <= reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i]?reveals[i].getBoundingClientRect().top:null;
@@ -59,6 +59,9 @@ const AreteSec = () => {
         reveals[i].classList.remove("active");
       }
     }
+  }catch(e){
+
+  }
   }
   useLayoutEffect(()=>{
     window.addEventListener("scroll", reveal);
@@ -135,6 +138,7 @@ const AretePlaza = () => {
     <>
       {" "}
       <Flex
+        mt="5rem"
         w="100%"
         h="100%"
         direction="column"
@@ -142,8 +146,6 @@ const AretePlaza = () => {
         justify="center"
         px="6.25rem"
         pt="3.125rem"
-        pb="5rem"
-        mb="5rem"
       >
         <Text
           textAlign="center"
@@ -168,7 +170,7 @@ const AretePlaza = () => {
           <Flex w="100%">
             <Image
               transition="all .2s"
-              _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+              _hover={{ transform: "scale(1.05)", boxShadow: "1px 1px 1px 1px black"}}
               objectFit="cover"
               objectPosition="50%"
               h="20rem"
@@ -180,7 +182,7 @@ const AretePlaza = () => {
             <Image
               className="expand reveal"
               transition="all .2s"
-              _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+              _hover={{ transform: "scale(1.05)", boxShadow: "1px 1px 1px 1px black" }}
               objectFit="cover"
               objectPosition="50% 50%"
               h="20rem"
@@ -191,7 +193,7 @@ const AretePlaza = () => {
             {" "}
             <Image
               transition="all .2s"
-              _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+              _hover={{ transform: "scale(1.05)", boxShadow: "1px 1px 1px 1px black" }}
               objectFit="cover"
               objectPosition="50%"
               h="20rem"
@@ -201,10 +203,10 @@ const AretePlaza = () => {
         </Flex>
       </Flex>
       <Flex
+      mt="5rem"
         w="100%"
         h="100%"
-        align="flex-start"
-        justify="space-between"
+        gap="1.875rem"
         px="6.25rem"
       >
         <Flex w="65%" alignSelf="flex-start" overflow="hidden">
@@ -218,11 +220,12 @@ const AretePlaza = () => {
         </Flex>
         <Flex
           overflow="hidden"
-          w="10%"
+          w="2.4rem"
           h="100%"
-          px="1.563rem"
+          justify="center"
         >
           <Flex
+          w="1.875rem"
           className="discobal-slidein-top reveal"
           direction="column"
           justify="center"
@@ -248,7 +251,7 @@ const AretePlaza = () => {
         </Flex>
         <Flex
           overflow="hidden"
-          w="25%"
+          w="30%"
           h="100%"
           direction="column"
           alignSelf="center"
@@ -317,18 +320,18 @@ const AreteMall = () => {
         >
           ARETE MALL
         </Text>
-        <Flex w="100%" h="100%" align="flex-start" justify="space-between" overflow="hidden">
+        <Flex w="100%" h="100%" align="flex-start" gap="1.8rem" overflow="hidden">
           <Flex w="50%" overflow="hidden">
             <Image src={mall} h="29.25rem" w="100%" className="Arete-Plaza-FloorPlan-Image reveal"/>
           </Flex>
           <Flex
             className="discobal-slidein-top reveal"
-            w="10%"
+            w="2rem"
             h="100%"
             direction="column"
             justify="center"
             align="center"
-            px="1.563rem"
+            
           >
             {" "}
             <Divider
@@ -350,7 +353,7 @@ const AreteMall = () => {
           </Flex>
           <Flex
             overflow="hidden"
-            w="40%"
+            w="50%"
             h="100%"
             direction="column"
             alignSelf="center"
@@ -462,7 +465,7 @@ const AreteMall = () => {
         <Text fontFamily="goudy" fontSize="2.5rem" pb="3.125rem" className="discobal-slidein-top reveal">
           AMENITIES
         </Text>
-        <Flex w="100%" h="100%" gap="1.25rem" align="center" pb="0.625rem">
+        <Flex w="100%" h="100%" gap="1.25rem" align="center">
           <Flex w="100%" direction="column" align="center" overflow="hidden">
             <Image src={retailShop} h="15rem" className="slidein-bottom reveal"/>
             <Heading fontFamily="avenir" fontSize="1.25rem" pt="1rem" className="Icon-fadein reveal">
@@ -790,7 +793,7 @@ const LocationAndFormPlaza = () => {
                 bgColor="#DFBD69"
               />
             </Flex>
-            <div id="1" className="slideintop-2sdelay reveal">
+            <div id="1" className="fadein-2sdelay reveal">
             <Heading
               textAlign="center"
               fontFamily="avenir"
@@ -1224,7 +1227,7 @@ const LocationAndFormMall = () => {
                 bgColor="#DFBD69"
               />
             </Flex>
-            <div id="1" className="slideintop-2sdelay reveal">
+            <div id="1" className="fadein-2sdelay reveal">
             <Heading
               textAlign="center"
               fontFamily="avenir"

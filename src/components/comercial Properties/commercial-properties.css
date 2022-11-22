@@ -17,6 +17,7 @@
     transform: translateY(-200px);
 }
 .Arete-Plaza-FloorPlan-Title.reveal{
+    opacity: 0;
     transform: translateX(-25rem);
 }
 .Arete-Plaza-FloorPlan-SubText.reveal{
@@ -30,8 +31,8 @@
     transform: translateY(0px);
 }
 .Arete-Plaza-FloorPlan-Title.reveal.active{
-    opacity: 1;
     animation: Arete-Plaza-FloorPlan-Title 1 2s linear;
+    opacity: 1;
     transform: translateX(0px);
 }
 .Arete-Plaza-FloorPlan-SubText.reveal.active{
@@ -40,6 +41,7 @@
 }
 .Arete-Plaza-FloorPlan-Image.reveal.active{
     animation: Arete-Plaza-FloorPlan-Image 1 2s linear;
+    opacity: 1;
     transform: translateX(0px);
 }
 /*Arete-Plaza-LocationAdv*/
@@ -73,7 +75,12 @@
 }
 .expand.active{
     animation: expand 1 2s linear;
+    box-shadow: "1px 1px 1px 1px black";
     transform: scale(1,1);
+}
+.expand.active:hover{
+    box-shadow: "1px 1px 1px 1px black";
+    transform: scale(1.05,1.05);
 }
 .slidein-bottom.reveal{
     transform: translateY(18.75rem);
@@ -154,14 +161,14 @@
     opacity: 0;
 }
 .fadein-2sdelay.reveal.active{
-    animation:fadein 1 4s ease-in;
+    animation:fadein 1 4s step-end;
     opacity: 1;
 }
 .fadein-4sdelay.reveal{
     opacity: 0;
 }
 .fadein-4sdelay.reveal.active{
-    animation:fadein 6s step-end;
+    animation:fadein 1 6s step-end;
     opacity: 1;
 }
 .fadein-6sdelay.reveal{
