@@ -34,6 +34,8 @@ const ThirdSec = () => {
       direction="column"
       align="center"
       justify="center"
+      px="6.25rem"
+      pb="3.125rem"
     >
       <MtnTxt
         initial={{ y: -50, opacity: 0 }}
@@ -41,7 +43,7 @@ const ThirdSec = () => {
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontSize="2.5rem"
-        mb="3.125rem"
+        mb="1.875rem"
       >
         MASTER PLAN
       </MtnTxt>

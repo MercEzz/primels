@@ -7,6 +7,7 @@ import {
   Text,
   VStack,
   SimpleGrid,
+  Image,
 } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useState } from "react";
@@ -40,7 +41,7 @@ const SecondSec = () => {
       direction="column"
       align="center"
       justify="center"
-      py="6.25rem"
+      py="5rem"
     >
       <Heading
         transform={isInView ? "none" : "translateY(-50xp)"}
@@ -51,7 +52,7 @@ const SecondSec = () => {
         fontWeight="400"
         textTransform="uppercase"
         textAlign="center"
-        pb="3.125rem"
+        pb="1.875rem"
       >
         A place of purity and excellence
       </Heading>
@@ -59,13 +60,13 @@ const SecondSec = () => {
         <Flex
           opacity={isInView ? "1" : "0"}
           transition="all 2s 2s"
-          w="100%"
+          w="47.5%"
           h="100%"
         >
           <Box
             position={"relative"}
-            height={"35.5rem"}
-            width={"37.5rem"}
+            height={"100%"}
+            width={"100%"}
             overflow={"hidden"}
           >
             {/* CSS files for react-slick */}
@@ -83,15 +84,14 @@ const SecondSec = () => {
             {/* Slider */}
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
               {introImgs.map((prime) => (
-                <Box
+                <Image
                   key={prime.id}
                   w="100%"
-                  height="35.5rem"
+                  height="29.25rem"
                   position="relative"
-                  backgroundPosition="center"
-                  backgroundRepeat="no-repeat"
-                  backgroundSize="cover"
-                  bgImage={prime}
+                  objectPosition="center"
+                  objectFit="cover"
+                  src={prime}
                   boxShadow="dark-lg"
                 />
               ))}
@@ -115,7 +115,7 @@ const SecondSec = () => {
               color="white"
               _hover={{ bgColor: "none" }}
             >
-              {/* <Text>01</Text> */}
+              <Text>01</Text>
             </IconButton>
 
             {/* Right Icon */}
@@ -138,38 +138,39 @@ const SecondSec = () => {
               color="white"
               _hover={{ bgColor: "none" }}
             >
-              {/* <Text>02</Text> */}
+              <Text>02</Text>
             </IconButton>
           </Box>{" "}
         </Flex>
 
-        <Flex h="100%" alignSelf="flex-start">
-          <Flex
-            transform={isInView ? "none" : "translateY(-50xp)"}
-            opacity={isInView ? "1" : "0"}
-            transition="all 2s 2s"
-            direction="column"
-            align="center"
-            px="1.562rem"
-          >
-            <Divider
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-              h="84px"
-            />{" "}
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-            />
-          </Flex>
+        <Flex
+          h="100%"
+          transform={isInView ? "none" : "translateY(-50xp)"}
+          opacity={isInView ? "1" : "0"}
+          transition="all 2s 2s"
+          direction="column"
+          align="center"
+          px="1.562rem"
+          alignSelf="flex-start"
+        >
+          <Divider
+            orientation="vertical"
+            border="3px solid"
+            borderColor="#DFBD69"
+            bgColor="#DFBD69"
+            h="11rem"
+          />{" "}
+          <Box
+            height="1.875rem"
+            width="1.875rem"
+            backgroundColor="#DFBD69"
+            border="3px solid white"
+            boxShadow="0px 0px 0px 3px #B88746"
+            borderRadius="50%"
+          />
         </Flex>
-        <Flex w="100%" h="100%" direction="column" alignSelf="center">
+
+        <Flex w="47.5%" h="100%" direction="column" alignSelf="center">
           <Text
             transform={isInView ? "none" : "translateY(-50xp)"}
             opacity={isInView ? "1" : "0"}
@@ -209,7 +210,7 @@ const SecondSec = () => {
               >
                 PRIVATE CLUB
               </Text>
-              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+              <Text fontFamily="veralaRound" fontSize={"1rem"} color={"black"}>
                 PGC - 60,000 SQFT.
               </Text>
             </Box>
@@ -237,7 +238,7 @@ const SecondSec = () => {
               >
                 100+
               </Text>
-              <Text fontFamily="veralaRound" fontSize={"1.5rem"} color={"black"}>
+              <Text fontFamily="veralaRound" fontSize={"1rem"} color={"black"}>
                 Smart Amenities
               </Text>
             </Box>

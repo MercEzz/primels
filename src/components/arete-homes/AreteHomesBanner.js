@@ -29,7 +29,7 @@ const FourthSec = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="57.937rem"
+      h="35.5rem"
       align="center"
       justify="center"
       pos="relative"
@@ -52,7 +52,7 @@ const FourthSec = () => {
         h="6.25rem"
         src="/images/arete-homes/Asset.png"
         pos="absolute"
-        bottom="5rem"
+        bottom="3.125rem"
         right="39%"
         transform={"translateX(-50%)"}
       />

@@ -5,17 +5,17 @@ const TenthSec = () => {
   return (
     <Flex
       w="100%"
-      py="3.125rem"
+      pt="3.125rem"
       px="6.25rem"
       h="100%"
       direction="column"
       align="center"
       justify="center"
     >
-      <Text fontFamily="goudy" fontSize="2.5rem" mb="1.562rem">
+      <Text fontFamily="goudy" fontSize="2.5rem" mb="1.563rem">
         FLOOR PLAN AND PRICING
       </Text>
-      <Heading fontFamily="avenir" fontSize="2.125rem" mb="1.562rem">
+      <Heading fontFamily="avenir" fontSize="2.125rem" mb="1.563rem">
         SMART HOMES THAT ARE VASTU COMPLIANT
       </Heading>
       <Flex w="100%" h="100%">

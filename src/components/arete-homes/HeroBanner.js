@@ -25,7 +25,7 @@ const FirstSec = () => {
   }, 1000);
 
   return (
-    <Flex ref={ref} w="100%" h="57.937rem">
+    <Flex ref={ref} w="100%" h="100vh">
       <Box
         transform={isInView ? "scale(1)" : "scale(0.6)"}
         transition="all 2s"

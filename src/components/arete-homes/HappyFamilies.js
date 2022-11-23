@@ -26,11 +26,15 @@ const LastSec = () => {
       w="100%"
       h="100%"
       px="6.25rem"
-      pt="3.125rem"
+      mt="3.125rem"
+      pt="1.875rem"
       pb="3.125rem"
       direction="column"
       align="center"
       justify="center"
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
       <Text
@@ -40,7 +44,7 @@ const LastSec = () => {
         fontFamily="goudy"
         fontSize="2.5rem"
         textAlign="center"
-        mb="3.125rem"
+        mb="1.875rem"
       >
         200+ HAPPY FAMILIES & COUNTING...
       </Text>
@@ -68,7 +72,7 @@ const LastSec = () => {
         {/* Slider */}{" "}
         <Icon
           pos="absolute"
-          left="-1%"
+          left="-0.5%"
           top="0"
           w="4.375rem"
           h="3.125rem"
@@ -96,9 +100,13 @@ const LastSec = () => {
                   fontFamily="veralaRound"
                   mt="3.125rem"
                 >
-                  <Text fontSize="1rem">{prime.text}</Text>
+                  <Text fontSize="1rem" pb="0.938rem">
+                    {prime.text}
+                  </Text>
                   <Text fontSize="1.25rem">{prime.title}</Text>
-                  <Text fontSize="1.25rem">{prime.subTitle}</Text>
+                  <Text fontSize="1.25rem" textTransform="uppercase">
+                    {prime.subTitle}
+                  </Text>
                 </Flex>
               </Flex>
               <Flex w="100%" h="100%">

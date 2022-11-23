@@ -24,7 +24,7 @@ const NinethSec = () => {
       w="100%"
       h="100%"
       px="6.25rem"
-      pt="3.125rem"
+      pt="5rem"
       pb="3.125rem"
       direction="column"
       align="center"
@@ -70,8 +70,8 @@ const NinethSec = () => {
           >
             <iframe
               class="gmap_iframe"
-              width="662"
-              height="458"
+              width="100%"
+              height="430"
               frameborder="0"
               scrolling="no"
               marginheight="0"
@@ -306,7 +306,9 @@ const NinethSec = () => {
                   Walk to Velammal International School{" "}
                 </ListItem>
                 <ListItem pb="0.625rem">DRIVE TO Origin by Mahindra </ListItem>
-                <ListItem pb="0.625rem">DRIVE TO Ponneri Railway Station</ListItem>
+                <ListItem pb="0.625rem">
+                  DRIVE TO Ponneri Railway Station
+                </ListItem>
               </UnorderedList>
             </Flex>
           </Flex>
@@ -464,7 +466,9 @@ const NinethSec = () => {
                 >
                   <ListItem pb="0.625rem">DRIVE TO REDHILLS</ListItem>
                   <ListItem pb="0.625rem">PULICAT LAKE </ListItem>
-                  <ListItem pb="0.625rem">DRIVE TO GUMMIDIPOONDI SIPCOT</ListItem>
+                  <ListItem pb="0.625rem">
+                    DRIVE TO GUMMIDIPOONDI SIPCOT
+                  </ListItem>
                 </UnorderedList>
               </Flex>
             </Flex>

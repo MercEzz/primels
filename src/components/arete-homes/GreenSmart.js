@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
+import igbCert from "../arete-homes imgs/IGBC CERTIFICATE.jpeg";
 
 const SixthSec = () => {
   const ref = useRef(null);
@@ -60,8 +61,8 @@ const SixthSec = () => {
             transition="all 2s 1s"
             fontFamily="veralaRound"
             w="100%"
-            h="100%"
-            src="/images/arete-homes/IGBC CERTIFICATE.jpeg"
+            h="30rem"
+            src={igbCert}
           />
         </Flex>
         <Flex w="100%" h="100%">
@@ -90,7 +91,11 @@ const SixthSec = () => {
             />
           </Flex>
           <Flex w="100%" h="100%">
-            <SimpleGrid w="100%" columns={{ base: 1, md: 2 }} spacing="15px">
+            <SimpleGrid
+              w="100%"
+              columns={{ base: 1, md: 2 }}
+              spacing="0.938rem"
+            >
               <Box pos="relative">
                 <Image
                   opacity={isInView ? "1" : "0"}
@@ -337,7 +342,7 @@ const SixthSec = () => {
                 >
                   <Image
                     pos="absolute"
-                    bottom="60%"
+                    bottom="50%"
                     left="50%"
                     transform="translate(-50%)"
                     src="/images/arete-homes/SOLAR POWER HEATER.svg"
@@ -348,7 +353,7 @@ const SixthSec = () => {
                     textTransform="uppercase"
                     pos="absolute"
                     fontFamily="avenir"
-                    bottom="1.562rem"
+                    bottom="1.25rem"
                     left="50%"
                     transform="translate(-50%)"
                     fontSize="1.25rem"

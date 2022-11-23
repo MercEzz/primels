@@ -13,6 +13,16 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
+import smart1 from "../arete-homes imgs/SMART HOME1.JPG";
+import smart2 from "../arete-homes imgs/SMART HOME2.JPG";
+import smart3 from "../arete-homes imgs/SMART HOME3.JPG";
+import smart4 from "../arete-homes imgs/SMART HOME4.jpg";
+import smart5 from "../arete-homes imgs/SMART HOME5.jpg";
+import smart6 from "../arete-homes imgs/SMART HOME6.jpg";
+import smart7 from "../arete-homes imgs/SMART HOME7.jpg";
+import smart8 from "../arete-homes imgs/SMART HOME8.jpg";
+import smart9 from "../arete-homes imgs/SMART HOME9.jpeg";
+
 const NinethSec = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -34,9 +44,8 @@ const NinethSec = () => {
       w="100%"
       h="100%"
       px="1.562rem"
-      pt="6.25rem"
-      pb="3.125rem"
-      mb="3.125rem"
+      pt="5rem"
+      pb="1.875rem"
       direction="column"
       align="center"
       justify="center"
@@ -59,11 +68,11 @@ const NinethSec = () => {
         fontFamily="avenir"
         fontSize="2.125rem"
         lineHeight="3rem"
-        py="1.562rem"
+        py="1.563rem"
       >
         BUY . RENT . INVEST .
       </Heading>
-      <Text fontFamily="veralaRound" fontSize="1.125rem" pb="1.562rem">
+      <Text fontFamily="veralaRound" fontSize="1.125rem" pb="1.563rem">
         Premium 2 BHK & 3 BHK serviced apartments in North Chennai, with
         customized experience, your way.
       </Text>
@@ -101,7 +110,7 @@ const NinethSec = () => {
                 backgroundRepeat="no-repeat"
                 objectFit="cover"
                 src={prime}
-                boxShadow="md"
+                boxShadow="6px 3px 10px rgba(0,0,0,0.5)"
               />
             </Flex>
           ))}
@@ -167,15 +176,15 @@ const NinethSec = () => {
 };
 
 const primeEvents = [
-  "/images/arete-homes/SMART HOME1.jpg",
-  "/images/arete-homes/SMART HOME2.jpg",
-  "/images/arete-homes/SMART HOME3.jpg",
-  "/images/arete-homes/SMART HOME4.jpg",
-  "/images/arete-homes/SMART HOME5.jpg",
-  "/images/arete-homes/SMART HOME6.jpg",
-  "/images/arete-homes/SMART HOME7.jpg",
-  "/images/arete-homes/SMART HOME8.jpg",
-  "/images/arete-homes/SMART HOME9.jpeg",
+  smart1,
+  smart2,
+  smart3,
+  smart4,
+  smart5,
+  smart6,
+  smart7,
+  smart8,
+  smart9,
 ];
 
 export default NinethSec;

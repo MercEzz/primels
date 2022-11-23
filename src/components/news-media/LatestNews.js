@@ -143,7 +143,6 @@ const FifthSec = () => {
               key={index}
               w="100%"
               pr="1.562rem"
-              
               height="25rem"
               position="relative"
             >

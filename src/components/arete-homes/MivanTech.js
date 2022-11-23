@@ -15,7 +15,7 @@ const EightSec = () => {
       transform={isInView ? "scale(1)" : "scale(0.6)"}
       transition="all 2s"
       w="100%"
-      h="57.937rem"
+      h="35.5rem"
       pos="relative"
     >
       <Image
@@ -27,16 +27,16 @@ const EightSec = () => {
       />
       <Image
         pos="absolute"
-        top="4.687rem"
+        top="1.25rem"
         left="50%"
-        h="7.812rem"
+        h="6.25rem"
         transform="translateX(-50%)"
         src="/images/arete-homes/MIVAN TECHNOLOGY 2.png"
       />
       <Image
-        top="13.437rem"
+        top="8.5rem"
         left="50%"
-        h="5rem"
+        h="4.375rem"
         pos="absolute"
         transform="translateX(-50%)"
         src="/images/arete-homes/MIVAN TECHNOLOGY 1.png"

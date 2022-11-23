@@ -1,7 +1,24 @@
-import { Flex, Image, Text, Box, IconButton, Button } from "@chakra-ui/react";
+import {
+  Flex,
+  Image,
+  Text,
+  Box,
+  IconButton,
+  Button,
+  Heading,
+} from "@chakra-ui/react";
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import pgclogo from "../arete-homes imgs/Asset 1.png";
+import activityArea from "../arete-homes imgs/PGC-ACTIVITY AREA.jpeg";
+import banquetHall from "../arete-homes imgs/PGC-BANQUET HALL.jpg";
+import cafeteria from "../arete-homes imgs/PGC-CAFETERIA.jpg";
+import grandEntrance from "../arete-homes imgs/PGC-GRAND ENTRANCE.JPG";
+import gym from "../arete-homes imgs/PGC-GYM.JPG";
+import multiSports from "../arete-homes imgs/PGC-multi sports arena.jpg";
+import squashCourt from "../arete-homes imgs/PGC-SQUASH COURT.jpg";
+import swimmingPool from "../arete-homes imgs/PGC-SWIMMING POOL.JPG";
 
 const SeventhSec = () => {
   const [slider, setSlider] = useState(null);
@@ -24,12 +41,19 @@ const SeventhSec = () => {
       direction="column"
       align="center"
       justify="center"
-      py="6.25rem"
+      pt="5rem"
+      pb="3.125rem"
       px="1.562rem"
     >
-      <Text fontFamily="goudy" fontSize="2.5rem" pb="1.562rem">
-        PVT. PONNERI GYMKHANA CLUB
-      </Text>
+      <Flex w="100%" align="center" justify="center" pb="1.875rem">
+        <Image src={pgclogo} h="2.5rem" w="2.5rem" mr="0.625rem" />
+        <Text fontFamily="goudy" fontSize="2.5rem">
+          <Text as="span" fontSize="1.5rem">
+            PVT.
+          </Text>{" "}
+          PONNERI GYMKHANA CLUB
+        </Text>
+      </Flex>
       <Box
         position={"relative"}
         height={"100%"}
@@ -53,17 +77,28 @@ const SeventhSec = () => {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {gymclubimgs.map((prime) => (
-            <Image
-              key={prime}
-              w="100%"
-              height="15.437rem"
-              pr="0.937rem"
-              position="relative"
-              objectPosition="center"
-              backgroundRepeat="no-repeat"
-              objectFit="fill"
-              src={prime}
-            />
+            <Flex w="100%" align="center">
+              <Image
+                key={prime}
+                w="100%"
+                height="15.437rem"
+                pr="0.937rem"
+                position="relative"
+                objectPosition="center"
+                backgroundRepeat="no-repeat"
+                objectFit="fill"
+                src={prime.img}
+              />
+              <Heading
+                w="96%"
+                align="center"
+                fontFamily="avenir"
+                fontSize="1.25rem"
+                pt="0.938rem"
+              >
+                {prime.title}
+              </Heading>
+            </Flex>
           ))}
         </Slider>
         <IconButton
@@ -126,12 +161,18 @@ const SeventhSec = () => {
 export default SeventhSec;
 
 const gymclubimgs = [
-  "/images/arete-homes/PGC-ACTIVITY AREA.jpeg",
-  "/images/arete-homes/PGC-BANQUET HALL.jpg",
-  "/images/arete-homes/PGC-CAFETERIA.jpg",
-  "/images/arete-homes/PGC-GRAND ENTRANCE.jpg",
-  "/images/arete-homes/PGC-GYM.jpg",
-  "/images/arete-homes/PGC-multi sports arena.jpg",
-  "/images/arete-homes/PGC-SQUASH COURT.jpg",
-  "/images/arete-homes/PGC-SWIMMING POOL.jpg",
+  { img: activityArea, title: "ACTIVITY AREA" },
+  { img: banquetHall, title: "BANQUET HALL" },
+  { img: cafeteria, title: "CAFETERIA" },
+  {
+    img: grandEntrance,
+    title: "GRAND ENTRANCE",
+  },
+  { img: gym, title: "GYM" },
+  {
+    img: multiSports,
+    title: "MULTI SPORTS ARENA",
+  },
+  { img: squashCourt, title: "SQUASH COURT" },
+  { img: swimmingPool, title: "SWIMMING POOL" },
 ];

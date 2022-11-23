@@ -16,7 +16,7 @@ const FifthSec = () => {
       direction="column"
       align="center"
       justify="center"
-      py="6.25rem"
+      py="5rem"
       px="6.25rem"
     >
       <Text
@@ -25,13 +25,13 @@ const FifthSec = () => {
         transition="all 2s"
         fontFamily="goudy"
         fontSize="2.5rem"
-        mb="3.125rem"
+        mb="1.875rem"
       >
         A TOWNSHIP THAT DEFINES SMART LIVING
       </Text>
       <Flex w="100%" h="100%">
         <Flex w="100%" h="100%" direction="column" mr="1.562rem">
-          <VStack mb="3.125rem">
+          <Flex direction="column" align="center" mb="1.875rem">
             <Image
               transform={isInView ? "scale(1)" : "scale(0.6)"}
               transition="all 2s"
@@ -40,11 +40,11 @@ const FifthSec = () => {
               w="100%"
               boxShadow="lg"
             />
-            <Heading fontSize="2.125rem" fontFamily="avenir" pt="1.562rem">
+            <Heading fontSize="1.5rem" fontFamily="avenir" pt="0.938rem">
               ARETE MEDITATION RETREAT
             </Heading>
-          </VStack>
-          <VStack>
+          </Flex>
+          <Flex direction="column" align="center">
             <Image
               transform={isInView ? "scale(1)" : "scale(0.6)"}
               transition="all 2s"
@@ -53,13 +53,13 @@ const FifthSec = () => {
               w="100%"
               boxShadow="lg"
             />
-            <Heading fontSize="2.125rem" fontFamily="avenir" pt="1.562rem">
+            <Heading fontSize="1.5rem" fontFamily="avenir" pt="0.938rem">
               KIDS PLAY AREA
             </Heading>
-          </VStack>
+          </Flex>
         </Flex>
         <Flex w="100%" h="100%" direction="column">
-          <VStack mb="3.125rem">
+          <Flex direction="column" align="center" mb="1.875rem">
             <Image
               transform={isInView ? "scale(1)" : "scale(0.6)"}
               transition="all 2s"
@@ -68,11 +68,11 @@ const FifthSec = () => {
               w="100%"
               boxShadow="lg"
             />
-            <Heading fontSize="2.125rem" fontFamily="avenir" pt="1.562rem">
+            <Heading fontSize="1.5rem" fontFamily="avenir" pt="0.938rem">
               GARDEN & JOGGING TRACK
             </Heading>
-          </VStack>
-          <VStack>
+          </Flex>
+          <Flex direction="column" align="center">
             <Image
               transform={isInView ? "scale(1)" : "scale(0.6)"}
               transition="all 2s"
@@ -81,10 +81,10 @@ const FifthSec = () => {
               w="100%"
               boxShadow="lg"
             />
-            <Heading fontSize="2.125rem" fontFamily="avenir" pt="1.562rem">
+            <Heading fontSize="1.5rem" fontFamily="avenir" pt="0.938rem">
               OPEN EXERCISE AREA
             </Heading>
-          </VStack>
+          </Flex>
         </Flex>
       </Flex>
     </Flex>
