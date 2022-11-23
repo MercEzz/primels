@@ -35,7 +35,7 @@ const Lifeatls = () => {
   const isInView = useInView(ref, { once: true });
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "40px" });
+  const side = useBreakpointValue({ base: "30%", md: "2.5rem" });
 
   const animationHead = useAnimation();
   const animationText = useAnimation();
@@ -70,10 +70,10 @@ const Lifeatls = () => {
       h="100%"
       direction="column"
       textAlign="center"
-      px="25px"
-      pt="100px"
-      pb="50px"
-      mb="50px"
+      px="1.562rem"
+      pt="6.25rem"
+      pb="3.125rem"
+      mb="3.125rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgPos="center"
@@ -83,10 +83,10 @@ const Lifeatls = () => {
         initial={{ opacity: 0, y: -100 }}
         animate={animationHead}
         transition={{ duration: 2, type: "just" }}
-        fontSize="40px"
+        fontSize="2.5rem"
         fontFamily="goudy"
         fontWeight="400"
-        pb="25px"
+        pb="1.562rem"
       >
         LIFE AT PRIME LIFESPACE
       </MtnHead>
@@ -94,9 +94,9 @@ const Lifeatls = () => {
         initial={{ opacity: 0 }}
         animate={animationText}
         transition={{ delay: 1, duration: 2, type: "just" }}
-        fontSize="16px"
+        fontSize="1rem"
         fontFamily="veralaRound"
-        pb="25px"
+        pb="1.562rem"
       >
         We believe when everyone is moving forward together then success takes
         care of itself.
@@ -110,8 +110,8 @@ const Lifeatls = () => {
           height={"100%"}
           width={"full"}
           overflow={"hidden"}
-          pl="75px"
-          pr="55px"
+          pl="4.687rem"
+          pr="3.437rem"
         >
           {/* CSS files for react-slick */}
           <link
@@ -132,7 +132,7 @@ const Lifeatls = () => {
                 <Image
                   key={prime}
                   w="100%"
-                  h="400px"
+                  h="25rem"
                   position="relative"
                   objectPosition="center top"
                   backgroundRepeat="no-repeat"
@@ -151,8 +151,8 @@ const Lifeatls = () => {
             position="absolute"
             top="50%"
             left="0"
-            h="50px"
-            w="50px"
+            h="3.125rem"
+            w="3.125rem"
             transform={"translate(0%, -50%)"}
             zIndex={2}
             onClick={() => {
@@ -160,7 +160,7 @@ const Lifeatls = () => {
               setCurrentSlide(currentSlide--);
             }}
           >
-            <AiOutlineLeft color="#B88746" size="40px" />
+            <AiOutlineLeft color="#B88746" size="2.5rem" />
           </IconButton>
 
           <IconButton
@@ -173,14 +173,14 @@ const Lifeatls = () => {
             zIndex={2}
             right="0"
             top="50%"
-            h="50px"
-            w="50px"
+            h="3.125rem"
+            w="3.125rem"
             onClick={() => {
               slider?.slickNext();
               // setCurrentSlide(currentSlide++);
             }}
           >
-            <AiOutlineRight color="#B88746" size="40px" />
+            <AiOutlineRight color="#B88746" size="2.5rem" />
           </IconButton>
         </Box>
       </Flex>
@@ -200,7 +200,7 @@ const ImgBar = ({ slide }) => {
     <Flex
       ml="1"
       mr="1"
-      w="100px"
+      w="6.25rem"
       h="5px"
       borderRadius="15px"
       align="center"

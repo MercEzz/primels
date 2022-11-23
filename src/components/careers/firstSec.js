@@ -43,7 +43,7 @@ const FirstSec = () => {
         justify="flex-end"
         direction="column"
         textAlign="center"
-        m="0 30px"
+        m="0 1.875rem"
       >
         <MotnHead
           variants={variants}
@@ -52,8 +52,8 @@ const FirstSec = () => {
           transition={{ duration: 2, type: "just" }}
           fontSize="40px"
           fontFamily="avenir"
-          px="25px"
-          pb="15px"
+          px="1.562rem"
+          pb="0.937rem"
         >
           JOIN OUR TRIBE
         </MotnHead>
@@ -62,7 +62,7 @@ const FirstSec = () => {
           initial="hidden"
           animate="enter"
           transition={{ duration: 2, type: "just" }}
-          fontSize="18px"
+          fontSize="1.125rem"
           fontFamily="veralaRound"
         >
           Let’s join our efforts towards building the unshakable foundation for

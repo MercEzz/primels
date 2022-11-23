@@ -102,7 +102,7 @@ const Buildchng = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={animationHead}
           transition={{ duration: 2, type: "just" }}
-          fontSize="40px"
+          fontSize="2.5rem"
           fontWeight="400"
           fontFamily="goudy"
         >
@@ -110,7 +110,7 @@ const Buildchng = () => {
         </MtnHead>
         <Flex
           align="center"
-          mt="50px"
+          mt="3.125rem"
           justify="center"
           w="100%"
           h="100%"
@@ -122,8 +122,8 @@ const Buildchng = () => {
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={animationImg}
                 transition={{ duration: 2, type: "just" }}
-                w="500px"
-                h="500px"
+                w="31.25rem"
+                h="31.25rem"
                 top="30rem"
                 left="1rem"
                 right="1rem"
@@ -154,11 +154,11 @@ const Buildchng = () => {
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
-                h="84px"
+                h="5.25rem"
               />{" "}
               <Box
-                height="30px"
-                width="30px"
+                height="1.875rem"
+                width="1.875rem"
                 backgroundColor="#DFBD69"
                 border="3px solid white"
                 boxShadow="0px 0px 0px 3px #B88746"
@@ -172,12 +172,12 @@ const Buildchng = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
                 transition={{ delay: 1, duration: 2, type: "just" }}
-                fontSize="110px"
+                fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="132px"
+                lineHeight="12rem"
                 color="#D9D9D9"
-                pr="45px"
+                pr="2.812rem"
               >
                 P
               </MtnHead>
@@ -187,12 +187,12 @@ const Buildchng = () => {
                 transition={{ delay: 1, duration: 2, type: "just" }}
                 direction="column"
               >
-                <Heading fontSize="20px" pb="10px" fontFamily="avenir">
+                <Heading fontSize="1.25rem" pb="0.625rem" fontFamily="avenir">
                   PROBLEM SOLVING SKILLS
                 </Heading>
                 <Text
-                  fontSize="16px"
-                  lineHeight="24px"
+                  fontSize="1rem"
+                  lineHeight="1.5rem"
                   fontFamily="veralaRound"
                 >
                   We believe to nurture problem solvers, who lead better.
@@ -205,12 +205,12 @@ const Buildchng = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
                 transition={{ delay: 3.5, duration: 2, type: "just" }}
-                fontSize="110px"
+                fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="132px"
+                lineHeight="12rem"
                 color="#D9D9D9"
-                pr="32px"
+                pr="2rem"
               >
                 R
               </MtnHead>
@@ -220,10 +220,10 @@ const Buildchng = () => {
                 transition={{ delay: 3.5, duration: 2, type: "just" }}
                 direction="column"
               >
-                <Heading fontSize="20px" pb="10px" fontFamily="avenir">
+                <Heading fontSize="1.25rem" pb="0.625rem" fontFamily="avenir">
                   RELIABILITY
                 </Heading>
-                <Text fontSize="16px" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   We believe transperancy is the first step to any beginning.
                 </Text>
               </MtnFlx>
@@ -234,13 +234,13 @@ const Buildchng = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
                 transition={{ delay: 5, duration: 2, type: "just" }}
-                fontSize="110px"
+                fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="132px"
+                lineHeight="12rem"
                 color="#D9D9D9"
-                pr="55px"
-                pl="15px"
+                pr="3.437rem"
+                pl="0.937rem"
               >
                 I
               </MtnHead>
@@ -250,10 +250,10 @@ const Buildchng = () => {
                 transition={{ delay: 5, duration: 2, type: "just" }}
                 direction="column"
               >
-                <Heading fontSize="20px" pb="10px" fontFamily="avenir">
+                <Heading fontSize="1.25rem" pb="0.625rem" fontFamily="avenir">
                   INNOVATIVE THINKING
                 </Heading>
-                <Text fontSize="16px" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   We encourage innovative ideas and improvising new things.
                 </Text>
               </MtnFlx>
@@ -264,13 +264,13 @@ const Buildchng = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
                 transition={{ delay: 7.5, duration: 2, type: "just" }}
-                fontSize="110px"
+                fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="132px"
+                lineHeight="12rem"
                 color="#D9D9D9"
-                pr="22px"
-                ml="-12px"
+                pr="1.375rem"
+                ml="-0.75rem"
               >
                 M
               </MtnHead>
@@ -280,10 +280,10 @@ const Buildchng = () => {
                 transition={{ delay: 7.5, duration: 2, type: "just" }}
                 direction="column"
               >
-                <Heading fontSize="20px" pb="10px" fontFamily="avenir">
+                <Heading fontSize="1.25rem" pb="0.625rem" fontFamily="avenir">
                   MANAGEMENT SKILLS
                 </Heading>
-                <Text fontSize="16px" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   We believe transperancy is the first step to any beginning.
                 </Text>
               </MtnFlx>
@@ -294,10 +294,10 @@ const Buildchng = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
                 transition={{ delay: 10, duration: 2, type: "just" }}
-                fontSize="110px"
+                fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="132px"
+                lineHeight="12rem"
                 color="#D9D9D9"
                 pr="42px"
               >
@@ -309,10 +309,10 @@ const Buildchng = () => {
                 transition={{ delay: 10, duration: 2, type: "just" }}
                 direction="column"
               >
-                <Heading fontSize="20px" pb="10px" fontFamily="avenir">
+                <Heading fontSize="1.25rem" pb="0.625rem" fontFamily="avenir">
                   ENGAGEMENT
                 </Heading>
-                <Text fontSize="16px" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   Team work is the secret to achieve uncommon results.
                 </Text>
               </MtnFlx>
