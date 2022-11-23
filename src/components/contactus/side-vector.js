@@ -48,7 +48,7 @@ const SideVector = () => {
             color="black"
             pos="fixed"
             right="0"
-            px="50px"
+            px="3.125rem"
           >
             <Divider
               h="25vh"
@@ -58,7 +58,7 @@ const SideVector = () => {
               bgColor="#DFBD69"
             />{" "}
             <Flex
-              h="30px"
+              h="1.875rem"
               pos="relative"
               align="center"
               justify="center"
@@ -66,16 +66,16 @@ const SideVector = () => {
             >
               <Box
                 pos="absolute"
-                height="30px"
-                width="30px"
+                height="1.875rem"
+                width="1.875rem"
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
                 my="0.5"
               />
               <Box
                 pos="absolute"
-                height="22px"
-                width="22px"
+                height="1.375rem"
+                width="1.375rem"
                 backgroundColor="#DFBD69"
                 borderRadius="50%"
                 my="0.5"
@@ -92,8 +92,8 @@ const SideVector = () => {
             >
               <Icon
                 as={RiInstagramFill}
-                h="50px"
-                w="50px"
+                h="3.125rem"
+                w="3.125rem"
                 mt="10px"
                 _hover={{
                   color: "#B88746",
@@ -103,8 +103,8 @@ const SideVector = () => {
 
               <Icon
                 as={RiLinkedinBoxFill}
-                h="50px"
-                w="50px"
+                h="3.125rem"
+                w="3.125rem"
                 my="10px"
                 _hover={{ color: "#B88746" }}
                 transition="linear 200ms"
@@ -112,8 +112,8 @@ const SideVector = () => {
 
               <Icon
                 as={RiFacebookCircleFill}
-                h="50px"
-                w="50px"
+                h="3.125rem"
+                w="3.125rem"
                 mb="10px"
                 borderRadius="50%"
                 _hover={{ color: "#B88746" }}
@@ -121,8 +121,8 @@ const SideVector = () => {
               />
               <Icon
                 as={RiYoutubeFill}
-                h="50px"
-                w="50px"
+                h="3.125rem"
+                w="3.125rem"
                 _hover={{ color: "#B88746" }}
                 transition="linear 200ms"
               />

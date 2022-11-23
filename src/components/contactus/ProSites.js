@@ -37,9 +37,9 @@ const ProSites = () => {
       direction="column"
       w="100%"
       h="100%"
-      pt="100px"
-      pb="50px"
-      px="100px"
+      pt="6.25rem"
+      pb="3.125rem"
+      px="6.25rem"
       align="center"
       justify="center"
       pos="relative"
@@ -50,8 +50,8 @@ const ProSites = () => {
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
-        fontSize="40px"
-        lineHeight="58px"
+        fontSize="2.5rem"
+        lineHeight="3.625rem"
       >
         OUR PROJECT SITES
       </MtnHd>
@@ -60,9 +60,9 @@ const ProSites = () => {
         animate={animateFade}
         transition={{ delay: 2, duration: 2, type: "just" }}
         w="100%"
-        mt="50px"
-        mb="50px"
-        // px="100px"
+        mt="3.125rem"
+        mb="3.125rem"
+        // px="6.25rem"
         justify="center"
       >
         <Flex
@@ -73,12 +73,12 @@ const ProSites = () => {
           textAlign="center"
         >
           <Image
-            h="100px"
-            mb="15px"
+            h="6.25rem"
+            mb="0.938rem"
             w="300px"
             src="/images/contactus/Asset-1.png"
           />
-          <Text fontFamily="veralaRound" fontSize="16px">
+          <Text fontFamily="veralaRound" fontSize="1rem">
             V no.76, Peruncheri, Ponneri <br /> Opposite Velammal International{" "}
             <br />
             School,
@@ -94,12 +94,12 @@ const ProSites = () => {
           textAlign="center"
         >
           <Image
-            h="100px"
-            mb="15px"
+            h="6.25rem"
+            mb="0.938rem"
             w="300px"
             src="/images/contactus/Asset-2.png"
           />
-          <Text fontFamily="veralaRound" fontSize="16px">
+          <Text fontFamily="veralaRound" fontSize="1rem">
             V. No. 76 , Thatchoor 1,
             <br /> Perucheri, Ponneri,
             <br /> Taluk, Thiruvallur District, <br />
@@ -114,12 +114,12 @@ const ProSites = () => {
           textAlign="center"
         >
           <Image
-            h="100px"
-            mb="15px"
+            h="6.25rem"
+            mb="0.938rem"
             w="300px"
             src="/images/contactus/Asset-3.png"
           />
-          <Text fontFamily="veralaRound" fontSize="16px">
+          <Text fontFamily="veralaRound" fontSize="1rem">
             Next To Arete Homes <br /> V no.76, Peruncheri, Ponneri <br />
             North Chennai - 601204
           </Text>
@@ -129,12 +129,12 @@ const ProSites = () => {
         initial={{ opacity: 0 }}
         animate={animateFade}
         transition={{ delay: 2, duration: 2, type: "just" }}
-        mb="50px"
+        mb="3.125rem"
       >
-        <Text fontFamily="veralaRound" fontSize="20px" lineHeight="24px">
+        <Text fontFamily="veralaRound" fontSize="1.25rem" lineHeight="1.5rem">
           For consultancy related queries, email us at
         </Text>
-        <Heading fontFamily="avenir" fontSize="24px" lineHeight="41px">
+        <Heading fontFamily="avenir" fontSize="1.5rem" lineHeight="41px">
           info@primelifespace.com
         </Heading>
       </MtnStk>
@@ -143,10 +143,10 @@ const ProSites = () => {
         animate={animateFade}
         transition={{ delay: 2, duration: 2, type: "just" }}
       >
-        <Text fontFamily="veralaRound" fontSize="20px" lineHeight="24px">
+        <Text fontFamily="veralaRound" fontSize="1.25rem" lineHeight="1.5rem">
           For procurement related queries, email us at
         </Text>
-        <Heading fontFamily="avenir" fontSize="24px" lineHeight="41px">
+        <Heading fontFamily="avenir" fontSize="1.5rem" lineHeight="2.563rem">
           purchase@primelifespace.com
         </Heading>
       </MtnStk>

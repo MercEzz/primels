@@ -43,10 +43,11 @@ import TenthSec from "../sky-high/SmartInvest";
 
 const AreteSec = () => {
   const [active, setActive] = useState(true);
+  const [animate, setAnimate] = useState(false);
 
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
-
+  try{
     for (var i = 0; i <= reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i]
@@ -56,12 +57,21 @@ const AreteSec = () => {
 
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
+        if(reveals[i].getAttribute("id")==="b0"){
+          setAnimate(true);
+        }
       } else {
         reveals[i].classList.remove("active");
+        if(reveals[i].getAttribute("id")==="b0"){
+          setAnimate(false);
+        }
       }
     }
-  };
-  useLayoutEffect(() => {
+  }catch(e){
+
+  }
+  }
+  useLayoutEffect(()=>{
     window.addEventListener("scroll", reveal);
     return () => {
       window.removeEventListener("scroll", reveal);
@@ -138,14 +148,14 @@ const AretePlaza = () => {
     <>
       {" "}
       <Flex
+        mt="3.125rem"
         w="100%"
         h="100%"
         direction="column"
         align="center"
         justify="center"
         px="6.25rem"
-        pt="3.125rem"
-        pb="5rem"
+        
       >
         <Text
           textAlign="center"
@@ -175,7 +185,7 @@ const AretePlaza = () => {
           <Flex w="100%">
             <Image
               transition="all .2s"
-              _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+              _hover={{ transform: "scale(1.05)", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}
               objectFit="cover"
               objectPosition="50%"
               h="20rem"
@@ -187,7 +197,7 @@ const AretePlaza = () => {
             <Image
               className="expand reveal"
               transition="all .2s"
-              _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+              _hover={{ transform: "scale(1.05)", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
               objectFit="cover"
               objectPosition="50% 50%"
               h="20rem"
@@ -198,7 +208,7 @@ const AretePlaza = () => {
             {" "}
             <Image
               transition="all .2s"
-              _hover={{ transform: "scale(1.05)", boxShadow: "lg" }}
+              _hover={{ transform: "scale(1.05)", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
               objectFit="cover"
               objectPosition="50%"
               h="20rem"
@@ -208,10 +218,10 @@ const AretePlaza = () => {
         </Flex>
       </Flex>
       <Flex
+      mt="5rem"
         w="100%"
         h="100%"
-        align="flex-start"
-        justify="space-between"
+        gap="1.875rem"
         px="6.25rem"
       >
         <Flex w="65%" alignSelf="flex-start" overflow="hidden">
@@ -223,34 +233,40 @@ const AretePlaza = () => {
             border="1px solid grey"
           />
         </Flex>
-        <Flex overflow="hidden" w="10%" h="100%" px="1.563rem">
+        <Flex
+          overflow="hidden"
+          w="2.4rem"
+          h="100%"
+          justify="center"
+        >
           <Flex
-            className="discobal-slidein-top reveal"
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Divider
-              h="6rem"
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />
+          w="1.875rem"
+          className="discobal-slidein-top reveal"
+          direction="column"
+          justify="center"
+          align="center"
+        >
+          <Divider
+            h="6rem"
+            orientation="vertical"
+            border="3px solid"
+            borderColor="#DFBD69"
+            bgColor="#DFBD69"
+          />
+          <Box
+            height="1.875rem"
+            width="1.875rem"
+            backgroundColor="#DFBD69"
+            border="3px solid white"
+            boxShadow="0px 0px 0px 3px #B88746"
+            borderRadius="50%"
+            my="1"
+          />
           </Flex>
         </Flex>
         <Flex
           overflow="hidden"
-          w="25%"
+          w="30%"
           h="100%"
           direction="column"
           alignSelf="center"
@@ -324,28 +340,18 @@ const AreteMall = () => {
         >
           ARETE MALL
         </Text>
-        <Flex
-          w="100%"
-          h="100%"
-          align="flex-start"
-          justify="space-between"
-          overflow="hidden"
-        >
+        <Flex w="100%" h="100%" align="flex-start" gap="1.8rem" overflow="hidden">
           <Flex w="50%" overflow="hidden">
-            <Image
-              src={mall}
-              h="26.875rem"
-              className="Arete-Plaza-FloorPlan-Image reveal"
-            />
+            <Image src={mall} h="29.25rem" w="100%" className="Arete-Plaza-FloorPlan-Image reveal"/>
           </Flex>
           <Flex
             className="discobal-slidein-top reveal"
-            w="10%"
+            w="2rem"
             h="100%"
             direction="column"
             justify="center"
             align="center"
-            px="1.563rem"
+            
           >
             {" "}
             <Divider
@@ -367,7 +373,7 @@ const AreteMall = () => {
           </Flex>
           <Flex
             overflow="hidden"
-            w="40%"
+            w="50%"
             h="100%"
             direction="column"
             alignSelf="center"
@@ -489,9 +495,10 @@ const AreteMall = () => {
         >
           AMENITIES
         </Text>
-        <Flex w="100%" h="100%" gap="1.25rem" align="center" pb="0.625rem">
-          <Flex w="100%" direction="column" align="center" overflow="hidden">
+        <Flex w="100%" h="100%" gap="1.25rem" align="center" pb="0.9rem">
+          <Flex w="100%" direction="column" align="center" overflow="hidden" >
             <Image
+              zIndex="2"
               src={retailShop}
               h="15rem"
               className="slidein-bottom reveal"
@@ -507,6 +514,7 @@ const AreteMall = () => {
           </Flex>
           <Flex w="100%" direction="column" align="center" overflow="hidden">
             <Image
+              zIndex="2"
               h="15rem"
               src={market}
               className="slidein-bottom-2sdelay reveal"
@@ -522,6 +530,7 @@ const AreteMall = () => {
           </Flex>
           <Flex w="100%" direction="column" align="center" overflow="hidden">
             <Image
+              zIndex="2"
               src={pharmacy}
               h="15rem"
               className="slidein-bottom-4sdelay reveal"
@@ -650,7 +659,7 @@ const AreteMall = () => {
             >
               FOOD COURT
             </Heading>
-            <Image src={foodCourt} h="15rem" className="slidein-top reveal" />
+            <Image src={foodCourt} h="15rem" className="slidein-top reveal" id="b0"/>
           </Flex>
           <Flex w="100%" direction="column" align="center">
             <Heading
@@ -906,21 +915,21 @@ const LocationAndFormPlaza = () => {
                 bgColor="#DFBD69"
               />
             </Flex>
-            <div id="1" className="slideintop-2sdelay reveal">
-              <Heading
-                textAlign="center"
-                fontFamily="avenir"
-                fontSize="1.5rem"
-                pb="1rem"
-              >
-                10 MINS
-              </Heading>
-              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-                <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
-                <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
-                <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
-                <ListItem>R.K.M. Engineering College</ListItem>
-              </UnorderedList>
+            <div id="1" className="fadein-2sdelay reveal">
+            <Heading
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              pb="1rem"
+            >
+              10 MINS
+            </Heading>
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+              <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
+              <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
+              <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
+              <ListItem>R.K.M. Engineering College</ListItem>
+            </UnorderedList>
             </div>
           </Flex>
           <Flex w="100%" direction="column" overflow="hidden">
@@ -1369,21 +1378,21 @@ const LocationAndFormMall = () => {
                 bgColor="#DFBD69"
               />
             </Flex>
-            <div id="1" className="slideintop-2sdelay reveal">
-              <Heading
-                textAlign="center"
-                fontFamily="avenir"
-                fontSize="1.5rem"
-                pb="1rem"
-              >
-                10 MINS
-              </Heading>
-              <UnorderedList fontFamily="veralaRound" fontSize="1rem">
-                <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
-                <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
-                <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
-                <ListItem>R.K.M. Engineering College</ListItem>
-              </UnorderedList>
+            <div id="1" className="fadein-2sdelay reveal">
+            <Heading
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              pb="1rem"
+            >
+              10 MINS
+            </Heading>
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+              <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
+              <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
+              <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
+              <ListItem>R.K.M. Engineering College</ListItem>
+            </UnorderedList>
             </div>
           </Flex>
           <Flex w="100%" direction="column" overflow="hidden">

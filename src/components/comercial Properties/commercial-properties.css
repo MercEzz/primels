@@ -7,7 +7,6 @@
 }
 .Arete-Plaza-Image.reveal.active {
   opacity: 1;
-  box-shadow: "2px 2px black";
 }
 .Arete-Plaza-SubText.reveal.active {
   opacity: 1;
@@ -17,29 +16,33 @@
 .Arete-Plaza-FloorPlan-Discoball.reveal {
   transform: translateY(-200px);
 }
-.Arete-Plaza-FloorPlan-Title.reveal {
-  transform: translateX(-25rem);
+.Arete-Plaza-FloorPlan-Title.reveal{
+    opacity: 0;
+    transform: translateX(-25rem);
 }
 .Arete-Plaza-FloorPlan-SubText.reveal {
   opacity: 0;
 }
-.Arete-Plaza-FloorPlan-Image.reveal {
-  transform: translateX(46.313rem);
+.Arete-Plaza-FloorPlan-Image.reveal{
+    opacity: 0;
+    transform: translateX(46.313rem);
 }
 .Arete-Plaza-FloorPlan-Discoball.reveal.active {
   transform: translateY(0px);
 }
-.Arete-Plaza-FloorPlan-Title.reveal.active {
-  animation: Arete-Plaza-FloorPlan-Title 1 2s linear;
-  transform: translateX(0px);
+.Arete-Plaza-FloorPlan-Title.reveal.active{
+    animation: Arete-Plaza-FloorPlan-Title 1 2s linear;
+    opacity: 1;
+    transform: translateX(0px);
 }
 .Arete-Plaza-FloorPlan-SubText.reveal.active {
   animation: fadein 1 4s linear;
   opacity: 1;
 }
-.Arete-Plaza-FloorPlan-Image.reveal.active {
-  animation: Arete-Plaza-FloorPlan-Image 1 2s linear;
-  transform: translateX(0px);
+.Arete-Plaza-FloorPlan-Image.reveal.active{
+    animation: Arete-Plaza-FloorPlan-Image 1 2s linear;
+    opacity: 1;
+    transform: translateX(0px);
 }
 /*Arete-Plaza-LocationAdv*/
 .Arete-Plaza-LocationAdv-Title.reveal {
@@ -70,12 +73,16 @@
 .expand.reveal {
   transform: scale(1, 1);
 }
-.expand.active {
-  animation: expand 1 2s linear;
-  transform: scale(1, 1);
+.expand.active{
+    animation: expand 1 2s linear;
+    transform: scale(1,1);
 }
-.slidein-bottom.reveal {
-  transform: translateY(18.75rem);
+.expand.active:hover{
+    box-shadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px";
+    transform: scale(1.05,1.05);
+}
+.slidein-bottom.reveal{
+    transform: translateY(18.75rem);
 }
 .slidein-bottom.reveal.active {
   animation: slidein-bottom 1 2s linear;
@@ -146,28 +153,28 @@
 }
 .slideintop-2sdelay.reveal.active {
   opacity: 1;
-  animation: slideintop-2sdelay 1 4s ease-in;
+  animation: slideintop-2sdelay 1 4s linear;
   transform: translateX(0px);
 }
 .fadein-2sdelay.reveal {
   opacity: 0;
 }
-.fadein-2sdelay.reveal.active {
-  animation: fadein 1 4s ease-in;
-  opacity: 1;
+.fadein-2sdelay.reveal.active{
+    animation:fadein-2sdelay 1 4s linear;
+    opacity: 1;
 }
 .fadein-4sdelay.reveal {
   opacity: 0;
 }
-.fadein-4sdelay.reveal.active {
-  animation: fadein 6s step-end;
-  opacity: 1;
+.fadein-4sdelay.reveal.active{
+    animation:fadein-4sdelay 1 6s linear;
+    opacity: 1;
 }
 .fadein-6sdelay.reveal {
   opacity: 0;
 }
 .fadein-6sdelay.reveal.active {
-  animation: fadein 1 8s step-end;
+  animation: fadein-6sdelay 1 8s linear;
   opacity: 1;
 }
 
@@ -179,16 +186,16 @@
   transform: translateY(0px);
 }
 .slidein-top-2sdelay.reveal {
-  transform: translateY(-18.75rem);
+  transform: translateY(-21.875rem);
 }
 .slidein-top-2sdelay.reveal.active {
-  animation: slidein-top 1 4s linear;
+  animation: slidein-top-2sdelay 1 4s linear;
   transform: translateY(0px);
 }
 .slidein-top-4sdelay.reveal {
-  transform: translateY(-18.75rem);
+  transform: translateY(-21.875rem);
 }
 .slidein-top-4sdelay.reveal.active {
-  animation: slidein-top 1 6s linear;
+  animation: slidein-top-4sdelay 1 6s linear;
   transform: translateY(0px);
 }

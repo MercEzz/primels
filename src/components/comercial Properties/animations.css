@@ -16,10 +16,10 @@
 }
 @keyframes slidein-top-2sdelay{
   0% {
-    transform: translateY(-18.75rem);
+    transform: translateY(-21.875rem);
   }
   50% {
-    transform: translateY(-18.75rem);
+    transform: translateY(-21.875rem);
   }
   100% {
     transform: translateY(0px);
@@ -27,10 +27,10 @@
 }
 @keyframes slidein-top-4sdelay{
   0% {
-    transform: translateY(-18.75rem);
+    transform: translateY(-21.875rem);
   }
   75% {
-    transform: translateY(-18.75rem);
+    transform: translateY(-21.875rem);
   }
   100% {
     transform: translateY(0px);
@@ -83,6 +83,7 @@
       transform: scale(1,1);
     }
     to {
+      box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
       transform: scale(1.05,1.05);
     }
 }
@@ -181,9 +182,11 @@
 }
 @keyframes Arete-Plaza-FloorPlan-Title{
   from {
+      opacity: 0;
       transform: translateX(-25rem);
     }
     to {
+      opacity: 1;
       transform: translateX(0px);
     }
 }
@@ -197,9 +200,11 @@
 }
 @keyframes Arete-Plaza-FloorPlan-Image{
   from {
+      opacity: 0;
       transform: translateX(46.313rem);
     }
     to {
+      opacity: 1;
       transform: translateX(0px);
     }
 }

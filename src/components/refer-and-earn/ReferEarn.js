@@ -62,7 +62,7 @@ const ReferEarn = () => {
           w="fit-content"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
           color="white"
-          fontSize="1.25rem"
+          fontSize="1rem"
           fontFamily="avenir"
           fontWeight="bold"
           _hover={{

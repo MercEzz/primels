@@ -14,8 +14,8 @@ const CareersSc = () => {
       <FirstSec />
       <Lifeatls />
       {/* <ImgSlider /> */}
-      {/* <Buildchng /> */}
-      <SectionC/>
+      {/* <SectionC/> */}
+      <Buildchng />
       <OurEmp />
       <Jobopp />
       {/* <ResForm /> */}

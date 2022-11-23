@@ -24,8 +24,8 @@ const ContactMain = () => {
         align="center"
         justify="center"
         bgColor="blackAlpha.300"
-        pb="150px"
-        px="100px"
+        pb="9.375rem"
+        px="6.25rem"
       >
         {" "}
         <Flex
@@ -43,8 +43,8 @@ const ContactMain = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 2, type: "just" }}
-            py="15px"
-            fontSize="40px"
+            py="0.938rem"
+            fontSize="2.5rem"
             fontFamily="avenir"
           >
             CONTACT US
@@ -53,7 +53,7 @@ const ContactMain = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 2, type: "just" }}
-            fontSize="18px"
+            fontSize="1.125rem"
             fontFamily="veralaRound"
             textAlign="center"
           >

@@ -34,8 +34,10 @@ const ReferTabs = () => {
   const [active, setActive] = useState(true);
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
+    try{
 
     for (var i = 0; i <= reveals.length; i++) {
+      
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i]
         ? reveals[i].getBoundingClientRect().top
@@ -48,8 +50,11 @@ const ReferTabs = () => {
         reveals[i].classList.remove("active");
       }
     }
-  };
-  useLayoutEffect(() => {
+  }catch(e){
+    
+  }
+  }
+  useLayoutEffect(()=>{
     window.addEventListener("scroll", reveal);
   });
   return (
@@ -144,7 +149,7 @@ const ReferAFriend = () => {
             className="sliderightdisco reveal"
           >
             <Divider
-              w="100%"
+              w="89%"
               orientation="horizontal"
               border="3px solid"
               borderColor="#DFBD69"
@@ -167,14 +172,8 @@ const ReferAFriend = () => {
           </Text>
           <Image w="100%" h="16rem" p="2rem" src={img1} />
         </Flex>
-        <Flex
-          w="100%"
-          direction="column"
-          overflow="hidden"
-          className="fadein-2sdelay reveal"
-          // overflow="hidden"
-        >
-          <Heading fontFamily="avenir" fontSize="1.5rem">
+        <Flex w="100%" direction="column" overflow="hidden">
+          <Heading fontFamily="avenir" fontSize="1.5rem" className="fadein-2sdelay reveal">
             STEP 2
           </Heading>
           <Flex
@@ -184,7 +183,7 @@ const ReferAFriend = () => {
             className="sliderightdisco-2sdelay reveal"
           >
             <Divider
-              w="100%"
+              w="89%"
               orientation="horizontal"
               border="3px solid"
               borderColor="#DFBD69"
@@ -201,19 +200,14 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>{" "}
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem">
+          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem"  className="fadein-2sdelay reveal">
             Your provided referral will be contacted by our team and complete
             assistance will be provided in the booking process.
           </Text>{" "}
-          <Image w="100%" h="14.625rem" p="2rem" src={img2} />
+          <Image w="100%" h="14.625rem" p="2rem" src={img2} className="fadein-2sdelay reveal"/>
         </Flex>
-        <Flex
-          w="100%"
-          direction="column"
-          className="fadein-4sdelay reveal"
-          overflow="hidden"
-        >
-          <Heading fontFamily="avenir" fontSize="1.5rem">
+        <Flex w="100%" direction="column" overflow="hidden">
+          <Heading fontFamily="avenir" fontSize="1.5rem" className="fadein-4sdelay reveal">
             STEP 3
           </Heading>
           <Flex
@@ -223,7 +217,7 @@ const ReferAFriend = () => {
             className="sliderightdisco-4sdelay reveal"
           >
             <Divider
-              w="100%"
+              w="89%"
               orientation="horizontal"
               border="3px solid"
               borderColor="#DFBD69"
@@ -240,11 +234,11 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>{" "}
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem">
+          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem" className="fadein-4sdelay reveal">
             Every time your referral becomes a successful booking, you’ll earn
             rewards upto Rs 1 Lakh.
           </Text>
-          <Image w="100%" h="16.75rem" p="2rem" src={img3} />
+          <Image w="100%" h="16.75rem" p="2rem" src={img3} className="fadein-4sdelay reveal"/>
         </Flex>
       </Flex>
       <Flex
@@ -273,14 +267,7 @@ const ReferAFriend = () => {
           >
             REFER & EARN
           </Text>
-          <Flex
-            w="100%"
-            h="100%"
-            direction="row"
-            gap="6.25rem"
-            pb="1.563rem"
-            className="fadein-2sdelay reveal"
-          >
+          <Flex w="100%" h="100%" direction="row" gap="6.25rem" pb="1.563rem" className="fadein reveal">
             <Flex
               w="100%"
               h="100%"
@@ -556,7 +543,7 @@ const BookAVisit = () => {
         pb="3.125rem"
       >
         <Image
-          className="expand reveal"
+          className="expandcar reveal"
           src={bookIll}
           pos="absolute"
           objectFit="cover"
@@ -583,28 +570,28 @@ const BookAVisit = () => {
           >
             YOU ARE ONLY ONE RIDE AWAY FROM YOUR DREAM HOME
           </Text>
-          <div className="fadein-4sdelay reveal">
-            <HStack w="100%" align="center" justify="center" pb="1.875rem">
-              <Image src={carIll} />
-              <Heading
-                textAlign="center"
-                fontFamily="avenir"
-                fontSize="1.5rem"
-                bgGradient="linear(to-l, #B88746, #DFBD69)"
-                bgClip="text"
-              >
-                FREE PICK UP - DROP SERVICE AVAILABLE
-              </Heading>
+          <div className="fadein reveal">
+          <HStack w="100%" align="center" justify="center" pb="3.125rem">
+            <Image src={carIll} />
+            <Heading
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              bgGradient="linear(to-l, #B88746, #DFBD69)"
+              bgClip="text"
+            >
+              FREE PICK UP - DROP SERVICE AVAILABLE
+            </Heading>
             </HStack>
-            <Text
-              w="100%"
+            <Heading
               textAlign="center"
               fontFamily="goudy"
               fontSize="1.5rem"
               pb="0.938rem"
             >
+              
               GET IN TOUCH WITH US
-            </Text>
+            </Heading>
             <Flex w="100%" align="center" justify="center" gap="3.125rem">
               <Flex w="100%" direction="column" align="center">
                 <EmailIcon h="18px" w="28px" mb="0.625rem" />
@@ -648,14 +635,7 @@ const BookAVisit = () => {
           >
             BOOK YOUR FREE SITE VISIT
           </Text>
-          <Flex
-            w="100%"
-            h="100%"
-            direction="row"
-            gap="6.25rem"
-            pb="1.563rem"
-            className="fadein-2sdelay reveal"
-          >
+          <Flex w="100%" h="100%" direction="row" gap="6.25rem" pb="1.563rem" className="fadein reveal">
             <Flex
               w="100%"
               h="100%"

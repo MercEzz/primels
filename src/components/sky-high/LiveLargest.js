@@ -24,10 +24,10 @@ const FifthSec = () => {
   const settings = {
     draggable: true,
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     speed: 500,
     autoplaySpeed: 3000,
-    pauseOnHover: false,
+    //pauseOnHover: false,
     slidesToShow: 2,
     slidesToScroll: 1,
   };

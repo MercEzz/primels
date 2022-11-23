@@ -66,9 +66,9 @@ const GetInTouch = () => {
       direction="column"
       w="100%"
       h="100%"
-      // pt="50px"
-      py="50px"
-      px="100px"
+      // pt="3.125rem"
+      py="3.125rem"
+      px="6.25rem"
       align="center"
       justify="center"
       pos="relative"
@@ -80,8 +80,8 @@ const GetInTouch = () => {
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
-        fontSize="40px"
-        lineHeight="60px"
+        fontSize="2.5rem"
+        lineHeight="3.75rem"
       >
         GET IN TOUCH
       </MtnHd>
@@ -89,9 +89,9 @@ const GetInTouch = () => {
         initial={{ opacity: 0 }}
         animate={animateFade}
         transition={{ delay: 1.5, duration: 2, type: "just" }}
-        fontSize="16px"
+        fontSize="1rem"
         fontFamily="veralaRound"
-        py="25px"
+        py="1.563rem"
         textAlign="center"
       >
         Leave us your information and our team will get back to you.
@@ -115,7 +115,7 @@ const GetInTouch = () => {
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="16px"
+                  fontSize="1rem"
                   htmlFor="name"
                 >
                   NAME*
@@ -126,12 +126,12 @@ const GetInTouch = () => {
                   value={name}
                   onChange={onChange}
                   type="text"
-                  w="350px"
-                  h="40px"
+                  w="33.125rem"
+                  h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                   isRequired
                   borderWidth="2px"
                   isInvalid={borderClr}
@@ -142,7 +142,7 @@ const GetInTouch = () => {
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="16px"
+                  fontSize="1rem"
                   htmlFor="email"
                 >
                   EMAIL
@@ -153,12 +153,12 @@ const GetInTouch = () => {
                   value={email}
                   onChange={onChange}
                   type="email"
-                  w="350px"
-                  h="40px"
+                  w="33.125rem"
+                  h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                   isRequired
                 />
               </Flex>
@@ -166,7 +166,7 @@ const GetInTouch = () => {
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="16px"
+                  fontSize="1rem"
                   htmlFor="phoneNo"
                 >
                   PHONE NO.*
@@ -177,12 +177,12 @@ const GetInTouch = () => {
                   value={phoneNo}
                   onChange={onChange}
                   type="number"
-                  w="350px"
-                  h="40px"
+                  w="33.125rem"
+                  h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                   isRequired
                 />
               </Flex>
@@ -190,7 +190,7 @@ const GetInTouch = () => {
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="16px"
+                  fontSize="1rem"
                   htmlFor="message"
                 >
                   MESSAGE
@@ -201,21 +201,21 @@ const GetInTouch = () => {
                   value={message}
                   onChange={onChange}
                   maxLength="200"
-                  w="350px"
-                  h="120px"
+                  w="33.125rem"
+                  h="7.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                 />
               </Flex>
             </VStack>
             <Button
               type="submit"
-              mt="25px"
+              mt="1.563rem"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
               color="white"
-              fontSize="16px"
+              fontSize="1rem"
               fontFamily="avenir"
               _hover={{
                 bgGradient: "linear(to-b, #DFBD69, #B88746)",

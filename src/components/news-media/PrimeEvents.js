@@ -37,8 +37,8 @@ const ThirdSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      pl="6.25rem"
-      pr="4.688rem"
+      pl="1.563rem"
+      pr="1.563rem"
       pt="5rem"
       direction="column"
       align="center"
@@ -71,6 +71,8 @@ const ThirdSec = () => {
         height={"100%"}
         width={"full"}
         overflow={"hidden"}
+        pl="4.687rem"
+        pr="4.687rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -84,6 +86,45 @@ const ThirdSec = () => {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
+        <IconButton
+          aria-label="left-arrow"
+          variant="outline"
+          position="absolute"
+          borderRadius="50%"
+          // left={side}
+          // top={top}
+          left="0"
+          top="50%"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          h="3.125rem"
+          w="3.125rem"
+          borderColor="#B88746"
+          _hover={{ bgColor: "none" }}
+          onClick={() => slider?.slickPrev()}
+        >
+          <AiOutlineLeft size="1.875rem" color="#B88746" />
+        </IconButton>
+        {/* Right Icon */}
+        <IconButton
+          aria-label="right-arrow"
+          variant="outline"
+          position="absolute"
+          borderRadius="50%"
+          // right={side}
+          // top={top}
+          right="0"
+          top="50%"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          h="3.125rem"
+          w="3.125rem"
+          borderColor="#B88746"
+          _hover={{ bgColor: "none" }}
+          onClick={() => slider?.slickNext()}
+        >
+          <AiOutlineRight size="1.875rem" color="#B88746" />
+        </IconButton>
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {primeEvents2.map((prime) => (
@@ -91,7 +132,7 @@ const ThirdSec = () => {
               key={prime.id}
               w={prime.width}
               height="26.875rem"
-              pr="1.25rem"
+              px="1.25rem"
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"
@@ -101,60 +142,6 @@ const ThirdSec = () => {
           ))}
         </Slider>
       </Box>
-      {/* Left Icon */}
-      <Flex
-        opacity={isInView ? "1" : "0"}
-        transition="all 2s 3s"
-        pt="1.563rem"
-        w="100%"
-        h="100%"
-        align="center"
-        justify="center"
-      >
-        <IconButton
-          aria-label="left-arrow"
-          variant="outline"
-          borderColor="#B88746"
-          borderRadius="full"
-          // position="absolute"
-          // bottom="0"
-          // left="0"
-          // transform={"translate(0%, -50%)"}
-          mx="0.313rem"
-          zIndex={2}
-          onClick={() => {
-            slider?.slickPrev();
-            setCurrentSlide(currentSlide--);
-          }}
-        >
-          <AiOutlineLeft color="#B88746" size="1.875rem" />
-        </IconButton>
-        {/* fill box */}
-        01
-        <ImgBar slide={currentSlide} />
-        10
-        {/* Right Icon */}
-        <IconButton
-          aria-label="right-arrow"
-          borderRadius="full"
-          variant="outline"
-          borderColor="#B88746"
-          // position="absolute"
-          // right={side}
-          // top={top}
-          // bottom="0"
-          // right="0"
-          // transform={"translate(0%, -50%)"}
-          mx="0.3rem"
-          zIndex={2}
-          onClick={() => {
-            slider?.slickNext();
-            setCurrentSlide(currentSlide++);
-          }}
-        >
-          <AiOutlineRight color="#B88746" size="1.875rem" />
-        </IconButton>
-      </Flex>
     </Flex>
   );
 };
