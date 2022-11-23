@@ -75,7 +75,7 @@ const ProSites = () => {
           <Image
             h="6.25rem"
             mb="0.938rem"
-            w="300px"
+            w="18.75rem"
             src="/images/contactus/Asset-1.png"
           />
           <Text fontFamily="veralaRound" fontSize="1rem">
@@ -96,7 +96,7 @@ const ProSites = () => {
           <Image
             h="6.25rem"
             mb="0.938rem"
-            w="300px"
+            w="18.75rem"
             src="/images/contactus/Asset-2.png"
           />
           <Text fontFamily="veralaRound" fontSize="1rem">
@@ -116,7 +116,7 @@ const ProSites = () => {
           <Image
             h="6.25rem"
             mb="0.938rem"
-            w="300px"
+            w="18.75rem"
             src="/images/contactus/Asset-3.png"
           />
           <Text fontFamily="veralaRound" fontSize="1rem">

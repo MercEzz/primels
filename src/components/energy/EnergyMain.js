@@ -36,8 +36,8 @@ const EnergyMain = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 2, type: "just" }}
             fontFamily="avenir"
-            fontSize="40px"
-            lineHeight="58px"
+            fontSize="2.5rem"
+            lineHeight="3.625rem"
             color="white"
             textAlign="center"
           >
@@ -48,8 +48,8 @@ const EnergyMain = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             fontFamily="avenir"
-            fontSize="40px"
-            lineHeight="58px"
+            fontSize="2.5rem"
+            lineHeight="3.625rem"
             color="white"
             textAlign="center"
           >

@@ -84,14 +84,14 @@ const AddresSec = () => {
             w="100%"
             align="flex-start"
           >
-            <HStack align="flex-start" mb="7px">
+            <HStack align="flex-start" mb="0.437rem">
               <Icon as={ImLocation} w="1.875rem" h="2.5rem" mt="-1" />
               <Text fontFamily="veralaRound" fontSize="1rem" lineHeight="1.5rem">
                 202, Krishna Kunj, above HDFC Bank,30, Navyug Society V.M. Road,
                 J.V.P.D. Scheme Vile Parle (West), Mumbai- 400 056
               </Text>
             </HStack>
-            <HStack align="center" mb="7px">
+            <HStack align="center" mb="0.437rem">
               <Icon as={HiMail} w="2.188rem" h="1.875rem" />
               <Text fontFamily="veralaRound" fontSize="1rem" lineHeight="1.5rem">
                 info@primelifespace.com
@@ -143,14 +143,14 @@ const AddresSec = () => {
             w="100%"
             align="flex-start"
           >
-            <HStack align="flex-start" mb="7px">
+            <HStack align="flex-start" mb="0.437rem">
               <Icon as={ImLocation} w="1.875rem" h="2.5rem" mt="-1" />
               <Text fontFamily="veralaRound" fontSize="1rem" lineHeight="1.5rem">
                 Prime Expat Infra No. 33, Mandapam Road, Kilpauk, Chennai -
                 600010
               </Text>
             </HStack>
-            <HStack align="center" mb="7px">
+            <HStack align="center" mb="0.437rem">
               <Icon as={HiMail} w="2.188rem" h="1.875rem" />
               <Text fontFamily="veralaRound" fontSize="1rem" lineHeight="1.5rem">
                 sales@primelifespace.com

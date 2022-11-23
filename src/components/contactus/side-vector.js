@@ -94,7 +94,7 @@ const SideVector = () => {
                 as={RiInstagramFill}
                 h="3.125rem"
                 w="3.125rem"
-                mt="10px"
+                mt="0.625rem"
                 _hover={{
                   color: "#B88746",
                 }}
@@ -105,7 +105,7 @@ const SideVector = () => {
                 as={RiLinkedinBoxFill}
                 h="3.125rem"
                 w="3.125rem"
-                my="10px"
+                my="0.625rem"
                 _hover={{ color: "#B88746" }}
                 transition="linear 200ms"
               />
@@ -114,7 +114,7 @@ const SideVector = () => {
                 as={RiFacebookCircleFill}
                 h="3.125rem"
                 w="3.125rem"
-                mb="10px"
+                mb="0.625rem"
                 borderRadius="50%"
                 _hover={{ color: "#B88746" }}
                 transition="linear 200ms"

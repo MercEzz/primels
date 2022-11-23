@@ -42,11 +42,11 @@ const PLSGreen = () => {
           initial={{ opacity: 0 }}
           animate={animateHd}
           transition={{ duration: 2, type: "just" }}
-          pb="25px"
+          pb="1.562rem"
           fontFamily="goudy"
           fontWeight="400"
-          fontSize="40px"
-          lineHeight="58px"
+          fontSize="2.5rem"
+          lineHeight="3.625rem"
           textAlign="center"
         >
           PLS GREEN POWER PVT LTD
@@ -55,10 +55,10 @@ const PLSGreen = () => {
           initial={{ opacity: 0 }}
           animate={animateHd}
           transition={{ duration: 2, type: "just" }}
-          pb="15px"
+          pb="0.937rem"
           fontFamily="veralaRound"
-          fontSize="16px"
-          lineHeight="24px"
+          fontSize="1rem"
+          lineHeight="1.5rem"
         >
           We provide solutions in the power sector including conventional and
           non conventional energy sector. We are committed for more than 2
@@ -71,8 +71,8 @@ const PLSGreen = () => {
           animate={animateHd}
           transition={{ duration: 2, type: "just" }}
           fontFamily="veralaRound"
-          fontSize="16px"
-          lineHeight="24px"
+          fontSize="1rem"
+          lineHeight="1.5rem"
         >
           Establishing IMS System for major power sector including ISO 9001,
           14001, 18001, ISO 17025 for laboratory Accreditation & safety norms.
@@ -131,16 +131,16 @@ const PLSGreen = () => {
                 bgColor="#DFBD69"
               />
               <Box
-                height="30px"
-                width="30px"
+                height="1.875rem"
+                width="1.875rem"
                 backgroundColor="#DFBD69"
                 border="4px solid rgba(255, 255, 255, .7)"
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
                 my="0.5"
                 // _hover={{
-                //   width: "25px",
-                //   height: "25px",
+                //   width: "1.562rem",
+                //   height: "1.562rem",
                 // }}
                 // transition="all .5s"
               />
@@ -156,17 +156,17 @@ const PLSGreen = () => {
             >
               <Heading
                 fontFamily="goudy"
-                fontSize="40px"
-                lineHeight="58px"
+                fontSize="2.5rem"
+                lineHeight="3.625rem"
                 fontWeight="400"
-                pb="15px"
+                pb="0.937rem"
               >
                 OUR PROJECT
               </Heading>
               <Text
                 fontFamily="veralaRound"
-                fontSize="16px"
-                lineHeight="24px"
+                fontSize="1rem"
+                lineHeight="1.5rem"
                 mr="6"
               >
                 Execution of a solar power plant of 5 <br />

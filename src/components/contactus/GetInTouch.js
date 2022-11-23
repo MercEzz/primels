@@ -110,7 +110,7 @@ const GetInTouch = () => {
                 w="100%"
                 align="flex-end"
                 justifyContent="space-between"
-                pb="7px"
+                pb="0.437rem"
               >
                 <FormLabel
                   fontFamily="avenir"
@@ -138,7 +138,7 @@ const GetInTouch = () => {
                   errorBorderColor="crimson"
                 />
               </Flex>
-              <Flex w="100%" align="center" justify="space-between" pb="7px">
+              <Flex w="100%" align="center" justify="space-between" pb="0.437rem">
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
@@ -162,7 +162,7 @@ const GetInTouch = () => {
                   isRequired
                 />
               </Flex>
-              <Flex w="100%" align="center" justify="space-between" pb="7px">
+              <Flex w="100%" align="center" justify="space-between" pb="0.437rem">
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"

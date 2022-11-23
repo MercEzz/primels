@@ -33,9 +33,9 @@ const OneStop = () => {
       minH="100%"
       align="center"
       justify="center"
-      pt="100px"
-      pb="50px"
-      px="100px"
+      pt="6.25rem"
+      pb="3.125rem"
+      px="6.25rem"
       direction="column"
       pos="relative"
       bgColor="white"
@@ -46,10 +46,10 @@ const OneStop = () => {
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         w="100%"
-        fontSize="40px"
-        lineHeight="58px"
+        fontSize="2.5rem"
+        lineHeight="3.625rem"
         fontWeight="400"
-        pb="25px"
+        pb="1.562rem"
         textAlign="center"
       >
         ONE STOP SOLUTION FOR POWER SECTOR
@@ -64,32 +64,32 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
-            pb="25px"
-            pt="25px"
+            pb="1.562rem"
+            pt="1.562rem"
           >
-            <Flex w="100%" pb="15px" align="center" justify="center">
+            <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="80px"
-                h="80px"
+                w="5rem"
+                h="5rem"
                 src="/images/energy-page/financial-and-ppa.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="24px"
-              lineHeight="41px"
+              fontSize="1.5rem"
+              lineHeight="2.562rem"
               textTransform="uppercase"
-              mb="15px"
+              mb="0.937rem"
             >
               FINANCIAL & PPA SUPPORT
             </Heading>
             <UnorderedList
               fontFamily="veralaRound"
-              fontSize="16px"
-              lineHeight="24px"
+              fontSize="1rem"
+              lineHeight="1.5rem"
               fontWeight="400"
             >
-              <ListItem pb="10px">Project Financing</ListItem>
+              <ListItem pb="0.625rem">Project Financing</ListItem>
               <ListItem>Power Purchase Agreements</ListItem>
             </UnorderedList>
           </MtnFlx>{" "}
@@ -113,8 +113,8 @@ const OneStop = () => {
               bgColor="#DFBD69"
             />
             <Box
-              height="30px"
-              width="30px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid #fff"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -140,29 +140,29 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
-            pb="25px"
-            pt="25px"
+            pb="1.562rem"
+            pt="1.562rem"
           >
-            <Flex w="100%" pb="15px" align="center" justify="center">
+            <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="80px"
-                h="80px"
+                w="5rem"
+                h="5rem"
                 src="/images/energy-page/liaisoning.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="24px"
-              lineHeight="41px"
+              fontSize="1.5rem"
+              lineHeight="2.562rem"
               textTransform="uppercase"
-              mb="15px"
+              mb="0.937rem"
             >
               LIAISONING & APPROVALS
             </Heading>
             <UnorderedList
               fontFamily="veralaRound"
-              fontSize="16px"
-              lineHeight="24px"
+              fontSize="1rem"
+              lineHeight="1.5rem"
               fontWeight="400"
             >
               <ListItem>
@@ -180,40 +180,40 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
-            pb="25px"
-            pt="25px"
+            pb="1.562rem"
+            pt="1.562rem"
           >
-            <Flex w="100%" pb="15px" align="center" justify="center">
+            <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="80px"
-                h="80px"
+                w="5rem"
+                h="5rem"
                 src="/images/energy-page/engineering-design.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="24px"
-              lineHeight="41px"
+              fontSize="1.5rem"
+              lineHeight="2.562rem"
               textTransform="uppercase"
-              mb="15px"
+              mb="0.937rem"
             >
               Engineering, Design & due diligence
             </Heading>
             <UnorderedList
               fontFamily="veralaRound"
-              fontSize="16px"
-              lineHeight="24px"
+              fontSize="1rem"
+              lineHeight="1.5rem"
               fontWeight="400"
             >
-              <ListItem pb="10px">
+              <ListItem pb="0.625rem">
                 Material Procurement and Negotiation on behalf of client
               </ListItem>
-              <ListItem pb="10px">Project & Site Management</ListItem>
-              <ListItem pb="10px">
+              <ListItem pb="0.625rem">Project & Site Management</ListItem>
+              <ListItem pb="0.625rem">
                 Plant Commissioning & Synchronisation
               </ListItem>
-              <ListItem pb="10px">Performance Test</ListItem>
-              <ListItem pb="10px">Technology Assessment</ListItem>
+              <ListItem pb="0.625rem">Performance Test</ListItem>
+              <ListItem pb="0.625rem">Technology Assessment</ListItem>
               <ListItem>
                 Independent Technical & Commercial Due diligence
               </ListItem>
@@ -239,8 +239,8 @@ const OneStop = () => {
               bgColor="#DFBD69"
             />
             <Box
-              height="30px"
-              width="30px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid #fff"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -266,39 +266,39 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
-            pb="25px"
-            pt="25px"
+            pb="1.562rem"
+            pt="1.562rem"
           >
-            <Flex w="100%" pb="15px" align="center" justify="center">
+            <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="80px"
-                h="80px"
+                w="5rem"
+                h="5rem"
                 src="/images/energy-page/feasibility.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="24px"
-              lineHeight="41px"
+              fontSize="1.5rem"
+              lineHeight="2.562rem"
               textTransform="uppercase"
-              mb="15px"
+              mb="0.937rem"
             >
               FEASIBILITY STUDY
             </Heading>
             <UnorderedList
               fontFamily="veralaRound"
-              fontSize="16px"
-              lineHeight="24px"
+              fontSize="1rem"
+              lineHeight="1.5rem"
               fontWeight="400"
             >
-              <ListItem pb="10px">Site Selection</ListItem>
-              <ListItem pb="10px">Resource Analysis</ListItem>
-              <ListItem pb="10px">Technical Review</ListItem>
-              <ListItem pb="10px">Environment Impact Analysis</ListItem>
-              <ListItem pb="10px">
+              <ListItem pb="0.625rem">Site Selection</ListItem>
+              <ListItem pb="0.625rem">Resource Analysis</ListItem>
+              <ListItem pb="0.625rem">Technical Review</ListItem>
+              <ListItem pb="0.625rem">Environment Impact Analysis</ListItem>
+              <ListItem pb="0.625rem">
                 Identification & Selection of Technology
               </ListItem>
-              <ListItem pb="10px">Site Visits</ListItem>
+              <ListItem pb="0.625rem">Site Visits</ListItem>
               <ListItem>Detail Project Reports</ListItem>
             </UnorderedList>
           </MtnFlx>
@@ -312,32 +312,32 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
-            pb="25px"
-            pt="25px"
+            pb="1.562rem"
+            pt="1.562rem"
           >
-            <Flex w="100%" pb="15px" align="center" justify="center">
+            <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="80px"
-                h="80px"
+                w="5rem"
+                h="5rem"
                 src="/images/energy-page/financial-and-ppa.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="24px"
-              lineHeight="41px"
+              fontSize="1.5rem"
+              lineHeight="2.562rem"
               textTransform="uppercase"
-              mb="15px"
+              mb="0.937rem"
             >
               O & M+ CONSULTANCY
             </Heading>
             <UnorderedList
               fontFamily="veralaRound"
-              fontSize="16px"
-              lineHeight="24px"
+              fontSize="1rem"
+              lineHeight="1.5rem"
               fontWeight="400"
             >
-              <ListItem pb="10px">
+              <ListItem pb="0.625rem">
                 Plant AMC for Operation & Maintenance
               </ListItem>
               <ListItem>Specification and Tender Assessment</ListItem>
@@ -363,8 +363,8 @@ const OneStop = () => {
               bgColor="#DFBD69"
             />
             <Box
-              height="30px"
-              width="30px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid #fff"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -379,33 +379,33 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
-            pb="25px"
-            pt="25px"
+            pb="1.562rem"
+            pt="1.562rem"
           >
-            <Flex w="100%" pb="15px" align="center" justify="center">
+            <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="80px"
-                h="80px"
+                w="5rem"
+                h="5rem"
                 src="/images/energy-page/procurement.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="24px"
-              lineHeight="41px"
+              fontSize="1.5rem"
+              lineHeight="2.562rem"
               textTransform="uppercase"
-              mb="15px"
+              mb="0.937rem"
             >
               PROCUREMENT & CONSTRUCTION
             </Heading>
             <UnorderedList
               fontFamily="veralaRound"
-              fontSize="16px"
-              lineHeight="24px"
+              fontSize="1rem"
+              lineHeight="1.5rem"
               fontWeight="400"
             >
-              <ListItem pb="10px">Project Design and Optimization</ListItem>
-              <ListItem pb="10px">
+              <ListItem pb="0.625rem">Project Design and Optimization</ListItem>
+              <ListItem pb="0.625rem">
                 Detail Technology Assessment, Selection and Specification
                 Preparation
               </ListItem>
