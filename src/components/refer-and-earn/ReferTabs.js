@@ -543,7 +543,7 @@ const BookAVisit = () => {
         pb="3.125rem"
       >
         <Image
-          className="expand reveal"
+          className="expandcar reveal"
           src={bookIll}
           pos="absolute"
           objectFit="cover"
@@ -575,10 +575,21 @@ const BookAVisit = () => {
             <Image src={carIll} />
             <Heading
               textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+              bgGradient="linear(to-l, #B88746, #DFBD69)"
+              bgClip="text"
+            >
+              FREE PICK UP - DROP SERVICE AVAILABLE
+            </Heading>
+            </HStack>
+            <Heading
+              textAlign="center"
               fontFamily="goudy"
               fontSize="1.5rem"
               pb="0.938rem"
             >
+              
               GET IN TOUCH WITH US
             </Heading>
             <Flex w="100%" align="center" justify="center" gap="3.125rem">
@@ -595,7 +606,6 @@ const BookAVisit = () => {
                 </Heading>
               </Flex>
             </Flex>
-            </HStack>
           </div>
         </Flex>
       </Flex>

@@ -7,7 +7,6 @@
 }
 .Arete-Plaza-Image.reveal.active {
   opacity: 1;
-  box-shadow: "0px 0px 5px 0px black";
 }
 .Arete-Plaza-SubText.reveal.active {
   opacity: 1;
@@ -76,11 +75,10 @@
 }
 .expand.active{
     animation: expand 1 2s linear;
-    box-shadow: "1px 1px 1px 1px black";
     transform: scale(1,1);
 }
 .expand.active:hover{
-    box-shadow: "1px 1px 1px 1px black";
+    box-shadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px";
     transform: scale(1.05,1.05);
 }
 .slidein-bottom.reveal{
@@ -162,21 +160,21 @@
   opacity: 0;
 }
 .fadein-2sdelay.reveal.active{
-    animation:fadein 1 4s linear;
+    animation:fadein-2sdelay 1 4s linear;
     opacity: 1;
 }
 .fadein-4sdelay.reveal {
   opacity: 0;
 }
 .fadein-4sdelay.reveal.active{
-    animation:fadein 1 6s linear;
+    animation:fadein-4sdelay 1 6s linear;
     opacity: 1;
 }
 .fadein-6sdelay.reveal {
   opacity: 0;
 }
 .fadein-6sdelay.reveal.active {
-  animation: fadein 1 8s step-end;
+  animation: fadein-6sdelay 1 8s linear;
   opacity: 1;
 }
 

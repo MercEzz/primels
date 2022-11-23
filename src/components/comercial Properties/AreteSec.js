@@ -185,7 +185,7 @@ const AretePlaza = () => {
           <Flex w="100%">
             <Image
               transition="all .2s"
-              _hover={{ transform: "scale(1.05)", boxShadow: "0px 0px 5px 0px black"}}
+              _hover={{ transform: "scale(1.05)", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}
               objectFit="cover"
               objectPosition="50%"
               h="20rem"
@@ -197,7 +197,7 @@ const AretePlaza = () => {
             <Image
               className="expand reveal"
               transition="all .2s"
-              _hover={{ transform: "scale(1.05)", boxShadow: "0px 0px 5px 0px black" }}
+              _hover={{ transform: "scale(1.05)", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
               objectFit="cover"
               objectPosition="50% 50%"
               h="20rem"
@@ -208,7 +208,7 @@ const AretePlaza = () => {
             {" "}
             <Image
               transition="all .2s"
-              _hover={{ transform: "scale(1.05)", boxShadow: "0px 0px 5px 0px black" }}
+              _hover={{ transform: "scale(1.05)", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
               objectFit="cover"
               objectPosition="50%"
               h="20rem"

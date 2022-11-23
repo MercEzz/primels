@@ -16,14 +16,14 @@
     opacity: 0;
 }
 .fadein-2sdelay.reveal.active{
-    animation:fadein 1 4s linear;
+    animation:fadein-2sdelay 1 4s ease-in;
     opacity: 1;
 }
 .fadein-4sdelay.reveal{
     opacity: 0;
 }
 .fadein-4sdelay.reveal.active{
-    animation:fadein 1 6s linear;
+    animation:fadein-4sdelay 1 6s ease-in;
     opacity: 1;
 }
 .sliderightdisco.reveal{
@@ -54,12 +54,12 @@
     transform: translateY(0px);
 }
 
-.expand.reveal{
+.expandcar.reveal{
     opacity: 0;
     transform: scale(0.01,0.01);
 }
-.expand.reveal.active{
+.expandcar.reveal.active{
     opacity: 1;
-    animation:expand 1 4s linear;
+    animation:expandcar 1 2s linear;
     transform: scale(1,1);
 }

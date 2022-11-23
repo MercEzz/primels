@@ -6,9 +6,9 @@
         opacity: 1;
       }
 }
-@keyframes expand{
+@keyframes expandcar{
   from {
-      transform:scale(0.01,0.01)
+      transform:scale(0.8,0.8)
     }
     to {
       transform:scale(1,1);
