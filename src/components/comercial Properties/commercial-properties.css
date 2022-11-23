@@ -7,7 +7,7 @@
 }
 .Arete-Plaza-Image.reveal.active {
   opacity: 1;
-  box-shadow: "2px 2px black";
+  box-shadow: "0px 0px 5px 0px black";
 }
 .Arete-Plaza-SubText.reveal.active {
   opacity: 1;
@@ -188,16 +188,16 @@
   transform: translateY(0px);
 }
 .slidein-top-2sdelay.reveal {
-  transform: translateY(-18.75rem);
+  transform: translateY(-21.875rem);
 }
 .slidein-top-2sdelay.reveal.active {
-  animation: slidein-top 1 4s linear;
+  animation: slidein-top-2sdelay 1 4s linear;
   transform: translateY(0px);
 }
 .slidein-top-4sdelay.reveal {
-  transform: translateY(-18.75rem);
+  transform: translateY(-21.875rem);
 }
 .slidein-top-4sdelay.reveal.active {
-  animation: slidein-top 1 6s linear;
+  animation: slidein-top-4sdelay 1 6s linear;
   transform: translateY(0px);
 }

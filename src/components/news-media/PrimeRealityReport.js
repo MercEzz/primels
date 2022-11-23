@@ -61,219 +61,206 @@ const LastSec = () => {
       >
         PRIME REALTY REPORT
       </Text>
-      <Flex w="100%" h="100%" align="center" pos="relative">
-        <Flex w="50%" h="100%">
-          <Box
-            opacity={isInView ? "1" : "0"}
-            transition="all 2s 2s"
-            position={"relative"}
-            height={"100%"}
-            width={"100%"}
-            overflow={"hidden"}
-          >
-            {/* CSS files for react-slick */}
-            <link
-              rel="stylesheet"
-              type="text/css"
-              charSet="UTF-8"
-              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-            />
-            <link
-              rel="stylesheet"
-              type="text/css"
-              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-            />
-            {/* Slider */}
-            <Slider {...settings} ref={(slider) => setSlider(slider)}>
-              {primeReport.map((prime) => (
-                <Image
-                  key={prime.id}
+      <Box
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 2s"
+        position={"relative"}
+        height={"100%"}
+        width={"100%"}
+        overflow={"hidden"}
+      >
+        {/* CSS files for react-slick */}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+        {/* Slider */}
+        <Slider {...settings} ref={(slider) => setSlider(slider)}>
+          {primeReport.map((prime) => (
+            <Flex w="100%" h="100%" align="center" pos="relative">
+              <Flex w="50%" h="100%">
+                <Flex w="100%">
+                  <Image
+                    key={prime.id}
+                    w="100%"
+                    height="25rem"
+                    // position="relative"
+                    objectFit="cover"
+                    src={prime.img}
+                  />
+                </Flex>
+                <Flex
+                  transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+                  opacity={isInView ? "1" : "0"}
+                  transition="all 2s 2s"
+                  h="100%"
+                  direction="column"
+                  justify="flex-start"
+                  align="center"
+                  px="1.562rem"
+                >
+                  <Divider
+                    h="9.375rem"
+                    orientation="vertical"
+                    border="3px solid"
+                    borderColor="#DFBD69"
+                    bgColor="#DFBD69"
+                  />
+                  <Box
+                    height="1.875rem"
+                    width="1.875rem"
+                    backgroundColor="#DFBD69"
+                    border="3px solid white"
+                    boxShadow="0px 0px 0px 3px #B88746"
+                    borderRadius="50%"
+                    my="1"
+                  />
+                </Flex>
+              </Flex>
+              <Flex
+                pos="absolute"
+                right="0"
+                top="39%"
+                w="50%"
+                h="100%"
+                direction="column"
+                justify="flex-end"
+              >
+                <Flex
+                  opacity={isInView ? "1" : "0"}
+                  transition="all 2s 2s"
                   w="100%"
-                  height="25rem"
-                  // position="relative"
-                  backgroundPosition="center"
-                  backgroundRepeat="no-repeat"
-                  backgroundSize="cover"
-                  src={prime.img}
-                />
-              ))}
-            </Slider>
-          </Box>{" "}
-          <Flex
-            transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-            opacity={isInView ? "1" : "0"}
-            transition="all 2s 2s"
-            h="100%"
-            direction="column"
-            justify="flex-start"
-            align="center"
-            px="1.562rem"
-          >
-            <Divider
-              h="9.375rem"
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />
-          </Flex>
-        </Flex>
-        <Flex w="50%" h="100%" direction="column" justify="flex-end">
-          <Flex
-            opacity={isInView ? "1" : "0"}
-            transition="all 2s 2s"
-            w="100%"
-            h="100%"
-            justify="space-between"
-          >
-            <Flex direction="column" w="100%" h="100%">
-              <Heading fontFamily="avenir" fontSize="2.125rem">
-                OCTOBER 2022
-              </Heading>
-              <Text fontFamily="veralaRound" fontSize="1.25rem">
-                Company Newsletter
-              </Text>
-              <Text fontFamily="veralaRound" fontSize="1.25rem">
-                READ NOW
-              </Text>
+                  h="100%"
+                  justify="space-between"
+                >
+                  <Flex direction="column" w="100%" h="100%">
+                    <Heading fontFamily="avenir" fontSize="2.125rem">
+                      {prime.month}
+                    </Heading>
+                    <Text fontFamily="veralaRound" fontSize="1.25rem">
+                      Company Newsletter
+                    </Text>
+                    <Text fontFamily="veralaRound" fontSize="1.25rem">
+                      READ NOW
+                    </Text>
+                  </Flex>
+                  <Flex direction="column" textAlign="right" w="100%" h="100%">
+                    <Heading fontFamily="avenir" fontSize="1.25rem">
+                      PREVIOUS NEWSLETTER
+                    </Heading>
+                    <Heading fontFamily="avenir" fontSize="1.5rem">
+                      {prime.prevmonth}
+                    </Heading>
+                    <Text fontFamily="veralaRound" fontSize="1rem">
+                      READ NOW
+                    </Text>
+                  </Flex>
+                </Flex>
+              </Flex>
+              <IconButton
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 2s"
+                pos="absolute"
+                aria-label="left-arrow"
+                variant="outline"
+                borderColor="#B88746"
+                borderRadius="full"
+                // position="absolute"
+                bottom="0"
+                right="5%"
+                transform={"translateX(-50%)"}
+                mx="0.312rem"
+                zIndex={2}
+                onClick={() => {
+                  slider?.slickPrev();
+                }}
+              >
+                <AiOutlineLeft color="#B88746" size="1.875rem" />
+              </IconButton>
+              {/* Right Icon */}
+              <IconButton
+                opacity={isInView ? "1" : "0"}
+                transition="all 2s 2s"
+                pos="absolute"
+                aria-label="right-arrow"
+                borderRadius="full"
+                variant="outline"
+                borderColor="#B88746"
+                // position="absolute"
+                // right={side}
+                // top={top}
+                bottom="0"
+                right="0"
+                // transform={"translate(0%, -50%)"}
+                mx="0.312rem"
+                zIndex={2}
+                onClick={() => {
+                  slider?.slickNext();
+                }}
+              >
+                <AiOutlineRight color="#B88746" size="1.875rem" />
+              </IconButton>
             </Flex>
-            <Flex direction="column" textAlign="right" w="100%" h="100%">
-              <Heading fontFamily="avenir" fontSize="1.25rem">
-                PREVIOUS NEWSLETTER
-              </Heading>
-              <Heading fontFamily="avenir" fontSize="1.5rem">
-                AUGUST 2022
-              </Heading>
-              <Text fontFamily="veralaRound" fontSize="1rem">
-                READ NOW
-              </Text>
-            </Flex>
-          </Flex>
-        </Flex>
-        <IconButton
-          opacity={isInView ? "1" : "0"}
-          transition="all 2s 2s"
-          pos="absolute"
-          aria-label="left-arrow"
-          variant="outline"
-          borderColor="#B88746"
-          borderRadius="full"
-          // position="absolute"
-          bottom="0"
-          right="5%"
-          transform={"translateX(-50%)"}
-          mx="0.312rem"
-          zIndex={2}
-          onClick={() => {
-            slider?.slickPrev();
-          }}
-        >
-          <AiOutlineLeft color="#B88746" size="1.875rem" />
-        </IconButton>
-
-        {/* Right Icon */}
-        <IconButton
-          opacity={isInView ? "1" : "0"}
-          transition="all 2s 2s"
-          pos="absolute"
-          aria-label="right-arrow"
-          borderRadius="full"
-          variant="outline"
-          borderColor="#B88746"
-          // position="absolute"
-          // right={side}
-          // top={top}
-          bottom="0"
-          right="0"
-          // transform={"translate(0%, -50%)"}
-          mx="0.312rem"
-          zIndex={2}
-          onClick={() => {
-            slider?.slickNext();
-          }}
-        >
-          <AiOutlineRight color="#B88746" size="1.875rem" />
-        </IconButton>
-      </Flex>
+          ))}
+        </Slider>
+      </Box>
     </Flex>
   );
 };
 
 export default LastSec;
-const months = [
-  {
-    month: "OCTOBER 2022",
-  },
-  {
-    month: "AUGUST 2022",
-  },
-  {
-    month: "FEBRUARY 2022",
-  },
-  {
-    month: "JANUARY 2022",
-  },
-  {
-    month: "DECEMBER 2019",
-  },
-  {
-    month: "NOVEMBER 2019",
-  },
-  {
-    month: "OCTOBER 2019",
-  },
-  {
-    month: "SEPTEMBER 2019",
-  },
-  {
-    month: "JULY 2019",
-  },
-  {
-    month: "JUNE 2019",
-  },
-  {
-    month: "MAY 2019",
-  },
-  {
-    month: "APRIL 2019",
-  },
-]
 const primeReport = [
   {
     img: feb2019,
+    month: "FEBRUARY 2019",
+    prevmonth: "JANUARY 2019",
   },
   {
     img: april2019,
+    month: "APRIL 2019",
+    prevmonth: "FEBRUARY 2019",
   },
   {
     img: may2019,
+    month: "MAY 2019",
+    prevmonth: "JUNE 2019",
   },
   {
     img: june2019,
+    month: "JUNE 2022",
+    prevmonth: "MAY 2019",
   },
   {
     img: july2019,
+    month: "JUNE 2022",
+    prevmonth: "JULY 2019",
   },
   {
     img: spet2019,
+    month: "SEPTEMBER 2019",
+    prevmonth: "OCTOBER 2019",
   },
   {
     img: oct2019,
+    month: "OCTOBER 2019",
+    prevmonth: "SEPTEMBER 2019",
   },
   {
     img: nov2019,
+    month: "NOVEMBER 2019",
+    prevmonth: "OCTOBER 2019",
   },
   {
     img: dec2019,
+    month: "DECEMBER 2019",
+    prevmonth: "NOVEMBER 2019",
   },
 
   {

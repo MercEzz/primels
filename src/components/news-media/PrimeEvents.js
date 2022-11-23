@@ -37,8 +37,8 @@ const ThirdSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      pl="6.25rem"
-      pr="4.688rem"
+      pl="1.563rem"
+      pr="1.563rem"
       pt="5rem"
       direction="column"
       align="center"
@@ -71,6 +71,8 @@ const ThirdSec = () => {
         height={"100%"}
         width={"full"}
         overflow={"hidden"}
+        pl="4.687rem"
+        pr="4.687rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -130,7 +132,7 @@ const ThirdSec = () => {
               key={prime.id}
               w={prime.width}
               height="26.875rem"
-              pr="1.25rem"
+              px="1.25rem"
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"
