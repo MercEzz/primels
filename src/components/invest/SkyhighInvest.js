@@ -962,68 +962,73 @@ const SkyhighInvest = () => {
         <Flex w="100%" h="100%" gap="0.938rem">
           <Flex
             w="100%"
-            h="100%"
+            h="25rem"
             direction="column"
-            p="1.875rem"
+            pt="1.875rem"
+            px="1.875rem"
             align="center"
-            justify="space-between"
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
               CONNECTIVITY
-            </Heading>
-            <UnorderedList
-              fontFamily="veralaRound"
-              fontSize="1rem"
-              pb="0.625rem"
-            >
-              <ListItem>
-                Peripheral Ring Road - Pass Through Arete Homes
-              </ListItem>
-              <ListItem>Outer Ring Road</ListItem>
-              <ListItem>Railway Network - Large Ponneri Station</ListItem>
-            </UnorderedList>
-            <Image
-              justifySelf="flex-end"
-              h="9.375rem"
-              src={locationImg}
-              objectFit="contain"
-              objectPosition="20% 80%"
-            />
+            </Heading>{" "}
+            <Flex w="100%" h="100%" direction="column" justify="space-between">
+              <UnorderedList
+                fontFamily="veralaRound"
+                fontSize="1rem"
+                pb="0.625rem"
+              >
+                <ListItem>
+                  Peripheral Ring Road - Pass Through Arete Homes
+                </ListItem>
+                <ListItem>Outer Ring Road</ListItem>
+                <ListItem>Railway Network - Large Ponneri Station</ListItem>
+              </UnorderedList>
+              <Image
+                justifySelf="flex-end"
+                h="9.375rem"
+                src={locationImg}
+                objectFit="contain"
+                objectPosition="50% 80%"
+              />
+            </Flex>
           </Flex>
           <Flex
             w="100%"
-            h="100%"
+            h="25rem"
             direction="column"
-            p="1.875rem"
+            pt="1.875rem"
+            px="1.875rem"
             align="center"
-            justify="space-between"
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
               FOREIGN INVESTMENTS
             </Heading>
-            <UnorderedList
-              fontFamily="veralaRound"
-              fontSize="1rem"
-              pb="0.625rem"
-            >
-              <ListItem>
-                JICA Japan International Cooperation Agency chose Ponneri to
-                manage, design and develop as a ‘Smart City’ in 3 phases.
-              </ListItem>
-            </UnorderedList>
-            <Image
-              justifySelf="flex-end"
-              h="9.375rem"
-              src={foreignInvest}
-              objectFit="contain"
-              objectPosition="20% 80%"
-            />
+            <Flex w="100%" h="100%" direction="column" justify="space-between">
+              <UnorderedList
+                fontFamily="veralaRound"
+                fontSize="1rem"
+                pb="0.625rem"
+              >
+                <ListItem>
+                  JICA Japan International Cooperation Agency chose Ponneri to
+                  manage, design and develop as a ‘Smart City’ in 3 phases.
+                </ListItem>
+              </UnorderedList>
+              <Image
+                justifySelf="flex-end"
+                h="9.375rem"
+                src={foreignInvest}
+                objectFit="contain"
+                objectPosition="50% 80%"
+              />
+            </Flex>
           </Flex>
           <Flex
             w="100%"
-            h="100%"
+            h="25rem"
             direction="column"
-            p="1.875rem"
+            pt="1.875rem"
+            px="1.875rem"
             align="center"
             justify="space-between"
           >
@@ -1043,12 +1048,11 @@ const SkyhighInvest = () => {
               </ListItem>
             </UnorderedList>
             <Image
-              alignSelf="flex-end"
-              justifySelf="flex-end"
-              h="9.375rem"
+              w="100%"
+              h="11.25rem"
               src={socialFabric}
               objectFit="contain"
-              objectPosition="20% 80%"
+              objectPosition="150%"
             />
           </Flex>
         </Flex>
@@ -1135,10 +1139,9 @@ const SkyhighInvest = () => {
           </Text>
           <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
             GET AN EXPERT OPINION
-          </Heading>
-          <Container w="container.sm" align="center">
-            {" "}
-            <form>
+          </Heading>{" "}
+          <form>
+            <Flex w="100%" align="center" justify="center" direction="column">
               <FormControl isRequired>
                 {" "}
                 <HStack w="100%" justify="space-between" pb="0.938rem">
@@ -1202,7 +1205,7 @@ const SkyhighInvest = () => {
                 </HStack>{" "}
               </FormControl>
               <FormControl>
-                <HStack w="100%" align="center" justify="center">
+                <HStack w="100%" ml="4.5rem">
                   <Checkbox
                     ml="0.85rem"
                     value="yes"
@@ -1227,9 +1230,9 @@ const SkyhighInvest = () => {
                 _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
               >
                 SCHEDULE A CALL
-              </Button>
-            </form>
-          </Container>
+              </Button>{" "}
+            </Flex>
+          </form>
         </Flex>
       </Flex>
       <Text fontSize="0.625rem" pb="1.25rem">

@@ -10,7 +10,6 @@ import {
   UnorderedList,
   ListItem,
   IconButton,
-  Container,
   FormControl,
   HStack,
   FormLabel,
@@ -41,6 +40,8 @@ import locationadv from "../commercial-properties imgs/Asset 1-100.jpg";
 import DropDown from "./DropDown";
 
 import areteInto1 from "../Invest imgs/arete homes - intro1.jpeg";
+import twoBhkFloor from "../Invest imgs/arete homes Tower A6-1.jpg";
+import snarttwobhk from "../Invest imgs/INTRO1.jpg";
 
 const SkyhighInvest = () => {
   const [active, setActive] = useState(true);
@@ -260,10 +261,10 @@ const Twobhk = () => {
             boxShadow="2xl"
             p="1.875rem"
           >
-            <Heading align="center" fontSize="1.5rem" pb="3.125rem">
+            <Heading align="center" fontSize="1.5rem" pb="1.563rem">
               PRINCIPAL INSTALLMENT
             </Heading>
-            <Flex w="100%" gap="0.625rem">
+            <Flex w="100%" gap="0.625rem" align="flex-end">
               <Text w="60%" fontSize="1rem" fontFamily="veralaRound">
                 PRINCIPAL
                 <br /> AMOUNT
@@ -987,7 +988,7 @@ const Twobhk = () => {
           </Flex>
         </Flex>
       </Flex>
-      {/* delightfull */}
+      {/* Floor plan */}
       <Flex w="100%" h="100%" align="center" py="1.875rem" direction="column">
         <Text
           w="100%"
@@ -997,38 +998,13 @@ const Twobhk = () => {
           textTransform="uppercase"
           pb="1.875rem"
         >
-          A delightful mix of sky residences
+          FLOOR PLAN
         </Text>
-        <Flex w="100%" h="100%">
+        <Flex w="100%" h="100%" gap="1.563rem">
           <Flex w="58%">
-            <Image boxShadow="2xl" w="100%" h="100%" src={floorPlan} />
+            <Image boxShadow="2xl" w="100%" h="100%" src={twoBhkFloor} />
           </Flex>
-          <Flex
-            w="10%"
-            h="100%"
-            direction="column"
-            justify="flex-start"
-            align="center"
-            px="1.563rem"
-          >
-            <Divider
-              h="3.9rem"
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />
-          </Flex>
-          <Flex w="32%" h="100%" alignSelf="center" direction="column">
+          <Flex w="42%" h="100%" alignSelf="flex-start" direction="column">
             {" "}
             <Heading
               fontSize="1.5rem"
@@ -1036,17 +1012,69 @@ const Twobhk = () => {
               fontFamily="avenir"
               pb="0.938rem"
             >
-              convertible flexi-design FOR CO-LIVING, STUDENT HOUSING & SERVICED
-              APARTMENTS
+              SMART HOMES THAT ARE VASTU COMPLIANT
             </Heading>
-            <Text fontFamily="veralaRound" fontSize="1rem">
-              An unique collection of flexi-design 2 BHK sky residences,
-              well-planned with convertible option, for you to customize your
-              home & needs. The 5 different design innovations allow variations
-              in private or shared rooms, more bedrooms or spacious living, one
-              or more bathrooms etc. Making it possible to fit up to 5 beds in
-              every apartment.
-            </Text>
+            <Flex
+              w="100%"
+              h="100%"
+              direction="column"
+              align="center"
+              border="1px solid #B88746"
+            >
+              <Text
+                w="100%"
+                textAlign="center"
+                bgGradient="linear(to-b, #DFBD69, #B88746)"
+                fontFamily="veralaRound"
+                fontSize="1.25rem"
+                p="0.938rem"
+                color="white"
+                borderBottom="1px solid #B88746"
+              >
+                TOWER DETAILS
+              </Text>
+              <Flex
+                w="100%"
+                pt="0.938rem"
+                pb="1.875rem"
+                px="1.875rem"
+                direction="column"
+                gap="1.875rem"
+              >
+                <Flex w="100%" align="center" gap="3.125rem">
+                  <Text w="50%" fontFamily="veralaRound" fontSize="1.25rem">
+                    TYPE OF UNITS
+                  </Text>
+                  <Heading w="50%" fontFamily="avenir" fontSize="1.25rem">
+                    2 BHK(C), 2 BHK(L), 3 BHK
+                  </Heading>
+                </Flex>
+                <Flex w="100%" align="center" gap="3.125rem">
+                  <Text w="50%" fontFamily="veralaRound" fontSize="1.25rem">
+                    SALEABLE AREA
+                  </Text>
+                  <Heading w="50%" fontFamily="avenir" fontSize="1.25rem">
+                    1008-1748 SQFT.
+                  </Heading>
+                </Flex>
+                <Flex w="100%" align="center" gap="3.125rem">
+                  <Text w="50%" fontFamily="veralaRound" fontSize="1.25rem">
+                    FLOORS
+                  </Text>
+                  <Heading w="50%" fontFamily="avenir" fontSize="1.25rem">
+                    10
+                  </Heading>
+                </Flex>
+                <Flex w="100%" align="center" gap="3.125rem">
+                  <Text w="50%" fontFamily="veralaRound" fontSize="1.25rem">
+                    NO. OF FLATS ON EACH FLOOR
+                  </Text>
+                  <Heading w="50%" fontFamily="avenir" fontSize="1.25rem">
+                    8
+                  </Heading>
+                </Flex>
+              </Flex>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>
@@ -1058,68 +1086,73 @@ const Twobhk = () => {
         <Flex w="100%" h="100%" gap="0.938rem">
           <Flex
             w="100%"
-            h="100%"
+            h="25rem"
             direction="column"
-            p="1.875rem"
+            pt="1.875rem"
+            px="1.875rem"
             align="center"
-            justify="space-between"
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
               CONNECTIVITY
-            </Heading>
-            <UnorderedList
-              fontFamily="veralaRound"
-              fontSize="1rem"
-              pb="0.625rem"
-            >
-              <ListItem>
-                Peripheral Ring Road - Pass Through Arete Homes
-              </ListItem>
-              <ListItem>Outer Ring Road</ListItem>
-              <ListItem>Railway Network - Large Ponneri Station</ListItem>
-            </UnorderedList>
-            <Image
-              justifySelf="flex-end"
-              h="9.375rem"
-              src={locationImg}
-              objectFit="contain"
-              objectPosition="20% 80%"
-            />
+            </Heading>{" "}
+            <Flex w="100%" h="100%" direction="column" justify="space-between">
+              <UnorderedList
+                fontFamily="veralaRound"
+                fontSize="1rem"
+                pb="0.625rem"
+              >
+                <ListItem>
+                  Peripheral Ring Road - Pass Through Arete Homes
+                </ListItem>
+                <ListItem>Outer Ring Road</ListItem>
+                <ListItem>Railway Network - Large Ponneri Station</ListItem>
+              </UnorderedList>
+              <Image
+                justifySelf="flex-end"
+                h="9.375rem"
+                src={locationImg}
+                objectFit="contain"
+                objectPosition="50% 80%"
+              />
+            </Flex>
           </Flex>
           <Flex
             w="100%"
-            h="100%"
+            h="25rem"
             direction="column"
-            p="1.875rem"
+            pt="1.875rem"
+            px="1.875rem"
             align="center"
-            justify="space-between"
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
               FOREIGN INVESTMENTS
             </Heading>
-            <UnorderedList
-              fontFamily="veralaRound"
-              fontSize="1rem"
-              pb="0.625rem"
-            >
-              <ListItem>
-                JICA Japan International Cooperation Agency chose Ponneri to
-                manage, design and develop as a ‘Smart City’ in 3 phases.
-              </ListItem>
-            </UnorderedList>
-            <Image
-              justifySelf="flex-end"
-              h="9.375rem"
-              src={foreignInvest}
-              objectFit="contain"
-              objectPosition="20% 80%"
-            />
+            <Flex w="100%" h="100%" direction="column" justify="space-between">
+              <UnorderedList
+                fontFamily="veralaRound"
+                fontSize="1rem"
+                pb="0.625rem"
+              >
+                <ListItem>
+                  JICA Japan International Cooperation Agency chose Ponneri to
+                  manage, design and develop as a ‘Smart City’ in 3 phases.
+                </ListItem>
+              </UnorderedList>
+              <Image
+                justifySelf="flex-end"
+                h="9.375rem"
+                src={foreignInvest}
+                objectFit="contain"
+                objectPosition="50% 80%"
+              />
+            </Flex>
           </Flex>
           <Flex
             w="100%"
-            h="100%"
+            h="25rem"
             direction="column"
-            p="1.875rem"
+            pt="1.875rem"
+            px="1.875rem"
             align="center"
             justify="space-between"
           >
@@ -1127,8 +1160,8 @@ const Twobhk = () => {
               SOCIAL FABRIC
             </Heading>
             <UnorderedList
-              fontFamilyr="veralaRound"
-              fontSize="1em"
+              fontFamily="veralaRound"
+              fontSize="1rem"
               pb="0.625rem"
             >
               <ListItem>Nearby Stores - Revathi, Saravana etc.</ListItem>
@@ -1139,12 +1172,11 @@ const Twobhk = () => {
               </ListItem>
             </UnorderedList>
             <Image
-              alignSelf="flex-end"
-              justifySelf="flex-end"
-              h="9.375rem"
+              w="100%"
+              h="11.25rem"
               src={socialFabric}
               objectFit="contain"
-              objectPosition="20% 80%"
+              objectPosition="150%"
             />
           </Flex>
         </Flex>
@@ -1161,10 +1193,10 @@ const Twobhk = () => {
       <Flex w="100%" h="100%" gap="3.125rem" pb="5rem">
         <Flex w="60%" h="100%" direction="column" align="center">
           <Text fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
-            8% ROI ON ARETE HOMES
+            7% ROI ON ARETE HOMES
           </Text>
           <Flex w h="100%" gap="1.875rem" justify="center" align="center">
-            <Image w="20.75rem" h="15.313rem" src={roiImg} />
+            <Image w="20.75rem" h="15.313rem" src={snarttwobhk} />
             <Flex
               h="100%"
               direction="column"
@@ -1172,13 +1204,13 @@ const Twobhk = () => {
               fontFamily="avenir"
             >
               <Heading fontSize="1.25rem" pb="0.938rem">
-                2 BHK - 1025 SQFT.
+                SMART 2 BHK - 690 SQFT.
               </Heading>
-              <Heading fontSize="1.5rem">₹52 LAKHS</Heading>
+              <Heading fontSize="1.5rem">₹34 LAKHS</Heading>
               <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem">
                 Fully Furnished With White Goods
               </Text>
-              <Heading fontSize="1.5rem">₹32,000</Heading>
+              <Heading fontSize="1.5rem">₹20,000</Heading>
               <Text
                 textTransform="uppercase"
                 fontFamily="veralaRound"
@@ -1224,10 +1256,9 @@ const Twobhk = () => {
           </Text>
           <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
             GET AN EXPERT OPINION
-          </Heading>
-          <Container w="container.sm" align="center">
-            {" "}
-            <form>
+          </Heading>{" "}
+          <form>
+            <Flex w="100%" align="center" justify="center" direction="column">
               <FormControl isRequired>
                 {" "}
                 <HStack w="100%" justify="space-between" pb="0.938rem">
@@ -1291,7 +1322,7 @@ const Twobhk = () => {
                 </HStack>{" "}
               </FormControl>
               <FormControl>
-                <HStack w="100%" align="center" justify="center">
+                <HStack w="100%" ml="4.5rem">
                   <Checkbox
                     ml="0.85rem"
                     value="yes"
@@ -1316,9 +1347,9 @@ const Twobhk = () => {
                 _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
               >
                 SCHEDULE A CALL
-              </Button>
-            </form>
-          </Container>
+              </Button>{" "}
+            </Flex>
+          </form>
         </Flex>
       </Flex>
     </>
@@ -1329,114 +1360,73 @@ const Threebhk = () => {
   return (
     <>
       {/* Smart invest */}
-      <Flex w="100%" h="100%" direction="column" align="center" py="5rem">
+      <Flex w="100%" h="100%" direction="column" align="center" py="3.125rem">
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem">
           SMART INVESTMENT
         </Text>
         <Flex w="100%" h="100%">
-          <Flex w="100%" h="100%">
+          <Flex w="49%" h="100%">
             <Image src={smartInvest} />
           </Flex>
-          <Flex w="100%" h="100%">
-            {" "}
-            <Flex
-              h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="1.563rem"
-            >
-              <Divider
-                h="9.375rem"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="1.875rem"
-                width="1.875rem"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
-            </Flex>
-            <Flex
-              w="100%"
-              h="100%"
-              direction="column"
-              justify="center"
-              fontFamily="avenir"
-            >
-              <Heading fontSize="1.5rem" pb="0.938rem">
-                ARETE HOMES SKY HIGH TOWER
-              </Heading>
-              <Heading fontSize="1.25rem" pb="0.938rem">
-                SMART 2 BHK - 690 SQFT.
-              </Heading>
-              <Heading fontSize="2.125rem" pb="0.625rem">
-                ₹ 34 LAKHS
-              </Heading>
-              <Text fontFamily="veralaRound" fontSize="1rem" pb="2.188rem">
-                Fully Furnished With White Goods
-              </Text>
-              <Flex w="100%" gap="2.938rem" pb="1.875rem">
-                <Flex w="100%" direction="column" align="center">
-                  <Image
-                    w="3.125rem"
-                    h="3.125rem"
-                    src={rentalYield}
-                    mb="0.625rem"
-                  />
-                  <Heading fontSize="1.5rem" mb="0.625rem">
-                    7 %
-                  </Heading>
-                  <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                    Rental Yield
-                  </Text>
-                </Flex>
-                <Flex w="100%" direction="column" align="center">
-                  {" "}
-                  <Image
-                    w="3.125rem"
-                    h="3.125rem"
-                    src={rentalIncome}
-                    mb="0.625rem"
-                  />
-                  <Heading fontSize="1.5rem" mb="0.625rem">
-                    ₹ 20,000
-                  </Heading>
-                  <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                    Rental Income per month
-                  </Text>
-                </Flex>
-                <Flex w="100%" direction="column" align="center">
-                  <Image
-                    w="3.125rem"
-                    h="3.125rem"
-                    src={rentalyears}
-                    mb="0.625rem"
-                  />
-                  <Heading fontSize="1.5rem" mb="0.625rem">
-                    3 YEARS
-                  </Heading>
-                  <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                    Assured Rental Income
-                  </Text>
-                </Flex>
+          <Flex
+            w="7.5%"
+            h="100%"
+            direction="column"
+            justify="flex-start"
+            align="center"
+            px="1.563rem"
+          >
+            <Divider
+              h="9.375rem"
+              orientation="vertical"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />
+            <Box
+              height="1.875rem"
+              width="1.875rem"
+              backgroundColor="#DFBD69"
+              border="3px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />
+          </Flex>
+          <Flex
+            w="43.5%"
+            h="100%"
+            direction="column"
+            justify="center"
+            fontFamily="avenir"
+          >
+            <Flex align="center" justify="space-between" justifySelf="center">
+              <Flex direction="column">
+                <Heading fontSize="1.5rem" pb="0.938rem">
+                  ARETE HOMES
+                </Heading>
+                <Heading fontSize="1.25rem" pb="0.938rem">
+                  3 BHK - 1787 SQFT.
+                </Heading>
+                <Heading
+                  fontSize="2.125rem"
+                  pb="0.625rem"
+                  bgGradient="linear(to-b, #B88746, #DFBD69)"
+                  bgClip="text"
+                >
+                  ₹85 LAKHS
+                </Heading>
+                <Text fontFamily="veralaRound" fontSize="1rem" pb="2.188rem">
+                  Fully Furnished With White Goods
+                </Text>
               </Flex>
               <Button
-                alignSelf="center"
                 w="fit-content"
                 bgGradient="linear(to-b, #B88746 ,#DFBD69)"
                 color="white"
-                mr="0.625rem"
-                p="1rem"
                 fontSize="1rem"
                 fontFamily="avenir"
-                fontWeight="bold"
+                p="1rem"
                 _hover={{
                   bgGradient: "linear(to-b, #DFBD69, #B88746)",
                 }}
@@ -1445,6 +1435,69 @@ const Threebhk = () => {
                 I AM INTERESTED
               </Button>
             </Flex>
+            <Flex
+              w="100%"
+              gap="2.938rem"
+              pb="1.875rem"
+              textTransform="uppercase"
+            >
+              <Flex w="100%" direction="column" align="center">
+                <Image
+                  w="3.125rem"
+                  h="3.125rem"
+                  src={rentalYield}
+                  mb="0.625rem"
+                />
+                <Heading fontSize="1.5rem" mb="0.625rem">
+                  HIGH
+                </Heading>
+                <Text align="center" fontFamily="veralaRound" fontSize="1rem">
+                  Rental Yield
+                </Text>
+              </Flex>
+              <Flex w="100%" direction="column" align="center">
+                {" "}
+                <Image
+                  w="3.125rem"
+                  h="3.125rem"
+                  src={rentalIncome}
+                  mb="0.625rem"
+                />
+                <Heading fontSize="1.5rem" mb="0.625rem">
+                  ₹48,000
+                </Heading>
+                <Text align="center" fontFamily="veralaRound" fontSize="1rem">
+                  Rental Income per month
+                </Text>
+              </Flex>
+              <Flex w="100%" direction="column" align="center">
+                <Image
+                  w="3.125rem"
+                  h="3.125rem"
+                  src={rentalyears}
+                  mb="0.625rem"
+                />
+                <Heading fontSize="1.5rem" mb="0.625rem">
+                  3 YEARS
+                </Heading>
+                <Text
+                  align="center"
+                  fontFamily="veralaRound"
+                  fontSize="1rem"
+                  textTransform="uppercase"
+                >
+                  Assured Rental Income
+                </Text>
+              </Flex>
+            </Flex>
+            <Heading
+              w="100%"
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="2.125rem"
+            >
+              ASSURED RENT > EMI
+            </Heading>
           </Flex>
         </Flex>
       </Flex>
@@ -1463,23 +1516,20 @@ const Threebhk = () => {
             boxShadow="2xl"
             p="1.875rem"
           >
-            <Heading align="center" fontSize="1.5rem" pb="3.125rem">
-              10% PRINCIPAL INSTALLMENT
-              <br /> IN 2 YEARS{" "}
+            <Heading align="center" fontSize="1.5rem" pb="1.563rem">
+              PRINCIPAL INSTALLMENT
             </Heading>
-            <Flex w="100%" gap="0.625rem">
-              <Text w="20%" fontSize="1rem" fontFamily="veralaRound">
-                Booking <br />
-                Amount
+            <Flex w="100%" gap="0.625rem" align="flex-end">
+              <Text w="60%" fontSize="1rem" fontFamily="veralaRound">
+                PRINCIPAL
+                <br /> AMOUNT
               </Text>
               <Text w="100%" fontSize="1rem" fontFamily="veralaRound">
-                7 Installments
-                <br />
-                rs. 50,000 every quater
+                HOME LOAN AMOUNT
               </Text>
             </Flex>
             <Flex w="100%" h="0.938rem" my="1.25rem">
-              <Flex bgColor="#B88746" w="20%" />
+              <Flex bgColor="#B88746" w="50%" />
               <Divider
                 mt="-0.4rem"
                 h="1.563rem"
@@ -1490,20 +1540,14 @@ const Threebhk = () => {
               />
               <Flex w="100%" h="100%">
                 <Box w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
               </Flex>
             </Flex>
             <Flex w="100%" gap="0.625rem" pb="1.875rem">
-              <Heading w="20%" fontSize="1rem" fontFamily="veralaRound">
-                ₹ 1 LAKH
+              <Heading w="60%" fontSize="1rem" fontFamily="veralaRound">
+                ₹ 25 LAKHS
               </Heading>
               <Heading w="100%" fontSize="1rem" fontFamily="veralaRound">
-                ₹ 3.5 LAKHS
+                ₹ 60 LAKHS
               </Heading>
             </Flex>
             <Divider
@@ -1513,12 +1557,26 @@ const Threebhk = () => {
               bgColor="#B88746"
               mb="0.938rem"
             />
-            <Flex w="100%" justify="space-between">
+            <Flex w="100%" justify="space-between" pb="1.25rem">
               <Text fontSize="1rem" fontFamily="veralaRound">
-                Total Principal Amount{" "}
+                TOTAL INVESTMENT
               </Text>
-              <Heading fontSize="1.5rem">₹ 4,50,000</Heading>
+              <Heading fontSize="1.5rem">₹ 85,00,000</Heading>
             </Flex>
+            <Flex w="100%" justify="space-between" pb="1.25rem">
+              <Text fontSize="1rem" fontFamily="veralaRound">
+                ASSURED RENT PER MONTH
+              </Text>
+              <Heading fontSize="1.5rem">₹ 48,000</Heading>
+            </Flex>{" "}
+            <Heading
+              w="100%"
+              textAlign="center"
+              fontFamily="avenir"
+              fontSize="1.5rem"
+            >
+              ASSURED RENT > EMI
+            </Heading>
           </Flex>
           <Flex
             w="100%"
@@ -1529,7 +1587,7 @@ const Threebhk = () => {
             fontFamily="avenir"
           >
             <Heading fontSize="1.5rem" pb="1.875rem">
-              90% HOME LOAN
+              HOME LOAN
             </Heading>
             <Flex w="100%" gap="2.938rem" pb="1.875rem">
               <Flex w="100%" direction="column" align="center">
@@ -1540,7 +1598,7 @@ const Threebhk = () => {
                   mb="0.625rem"
                 />
                 <Heading fontSize="1.25rem" mb="0.625rem">
-                  ₹ 29.5 LAKHS
+                  ₹62 LAKHS
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
                   LOAN AMOUNT
@@ -1569,7 +1627,7 @@ const Threebhk = () => {
                   mb="0.625rem"
                 />
                 <Heading fontSize="1.25rem" mb="0.625rem">
-                  6.5% p.a.
+                  6.7% p.a.
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
                   INTEREST RATE
@@ -1587,7 +1645,7 @@ const Threebhk = () => {
               <Text fontSize="1rem" fontFamily="veralaRound">
                 EMI PER MONTH
               </Text>
-              <Heading fontSize="1.5rem">₹ 20,000</Heading>
+              <Heading fontSize="1.5rem">₹41,265</Heading>
             </Flex>
             <Button
               alignSelf="center"
@@ -1634,7 +1692,7 @@ const Threebhk = () => {
                 mr="0.625rem"
               />
               <Heading color="#D4AD4B" fontSize="1.25rem">
-                RENTAL INCOME ₹2.4 LAKHS
+                RENTAL INCOME ₹5.7 LAKHS
               </Heading>
             </Flex>
             <Text color="#B88746" fontSize="1.563rem" my="0.938rem">
@@ -1644,7 +1702,7 @@ const Threebhk = () => {
               {" "}
               <Image w="3.125rem" h="3.125rem" src={tax} mr="0.625rem" />
               <Heading color="#B78C23" fontSize="1.25rem">
-                TAX SAVINGS UPTO ₹1 LAKH
+                TAX SAVINGS UPTO ₹2 LAKH
               </Heading>
             </Flex>
             <Text color="#B88746" fontSize="1.563rem" my="0.938rem">
@@ -1677,12 +1735,12 @@ const Threebhk = () => {
             w="10%"
             h="100%"
             direction="column"
-            justify="flex-start"
+            justify="flex-end"
             align="center"
             px="1.563rem"
           >
             <Divider
-              h="29.25rem"
+              h="27.25rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -1722,12 +1780,12 @@ const Threebhk = () => {
                 justify="flex-end"
               >
                 <Heading textAlign="center" fontSize="1.125rem">
-                  ₹7.77 L
+                  ₹14.6 L
                 </Heading>
-                <Flex h="6.875rem" bgColor="#8D6229" />
-                <Flex h="5rem" bgColor="#B88746" />
-                <Flex h="3.125rem" bgColor="#B78C23" />
-                <Flex h="6.25rem" bgColor="#D4AD4B" />
+                <Flex h="5rem" bgColor="#8D6229" />
+                <Flex h="4.375rem" bgColor="#B88746" />
+                <Flex h="3.75rem" bgColor="#B78C23" />
+                <Flex h="8.125rem" bgColor="#D4AD4B" />
               </Flex>
               <Flex
                 w="100%"
@@ -1737,11 +1795,11 @@ const Threebhk = () => {
               >
                 {" "}
                 <Heading textAlign="center" fontSize="1.125rem">
-                  ₹5.1 L
+                  ₹12 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" />
-                <Flex h="3.125rem" bgColor="#B78C23" />
-                <Flex h="6.25rem" bgColor="#D4AD4B" />
+                <Flex h="4.375rem" bgColor="#B88746" />
+                <Flex h="3.75rem" bgColor="#B78C23" />
+                <Flex h="8.125rem" bgColor="#D4AD4B" />
               </Flex>
               <Flex
                 w="100%"
@@ -1751,11 +1809,11 @@ const Threebhk = () => {
               >
                 {" "}
                 <Heading textAlign="center" fontSize="1.125rem">
-                  ₹5.1 L
+                  ₹12 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" />
-                <Flex h="3.125rem" bgColor="#B78C23" />
-                <Flex h="6.25rem" bgColor="#D4AD4B" />
+                <Flex h="4.375rem" bgColor="#B88746" />
+                <Flex h="3.75rem" bgColor="#B78C23" />
+                <Flex h="8.125rem" bgColor="#D4AD4B" />
               </Flex>
               <Flex
                 w="100%"
@@ -1765,11 +1823,11 @@ const Threebhk = () => {
               >
                 {" "}
                 <Heading textAlign="center" fontSize="1.125rem">
-                  ₹5.1 L
+                  ₹12.4 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" />
-                <Flex h="3.125rem" bgColor="#B78C23" />
-                <Flex h="6.25rem" bgColor="#D4AD4B" />
+                <Flex h="4.375rem" bgColor="#B88746" />
+                <Flex h="3.75rem" bgColor="#B78C23" />
+                <Flex h="9.375rem" bgColor="#D4AD4B" />
               </Flex>
               <Flex
                 w="100%"
@@ -1779,11 +1837,11 @@ const Threebhk = () => {
               >
                 {" "}
                 <Heading textAlign="center" fontSize="1.125rem">
-                  ₹5.5 L
+                  ₹12.4 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" />
-                <Flex h="3.125rem" bgColor="#B78C23" />
-                <Flex h="7.5rem" bgColor="#D4AD4B" />
+                <Flex h="4.375rem" bgColor="#B88746" />
+                <Flex h="3.75rem" bgColor="#B78C23" />
+                <Flex h="9.375rem" bgColor="#D4AD4B" />
               </Flex>
               <Flex
                 w="100%"
@@ -1793,11 +1851,11 @@ const Threebhk = () => {
               >
                 {" "}
                 <Heading textAlign="center" fontSize="1.125rem">
-                  ₹5.5 L
+                  ₹12.4 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" />
-                <Flex h="3.125rem" bgColor="#B78C23" />
-                <Flex h="7.5rem" bgColor="#D4AD4B" />
+                <Flex h="4.375rem" bgColor="#B88746" />
+                <Flex h="3.75rem" bgColor="#B78C23" />
+                <Flex h="9.375rem" bgColor="#D4AD4B" />
               </Flex>
             </Flex>
             <Divider border="1px solid" borderColor="#B88746" />
@@ -1831,7 +1889,7 @@ const Threebhk = () => {
             <Text as={"span"} fontSize="1.25rem">
               APPROX.
             </Text>{" "}
-            ₹34 LAKHS
+            ₹76 LAKHS
           </Heading>
         </Flex>
       </Flex>
@@ -1864,16 +1922,12 @@ const Threebhk = () => {
             <Flex pb="1.5rem">
               <Box
                 borderRadius="50%"
-                p="1rem"
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
                 direction="column"
-                w="5rem"
-                h="5rem"
                 align="center"
                 mr="1rem"
                 _hover={{ cursor: "pointer" }}
               >
-                <Image w="3.125rem" h="3.125rem" src={institute} />
+                <Image w="5rem" h="5rem" src={institute} />
               </Box>
               <VStack align="flex-start">
                 <Heading fontFamily="avenir" fontSize="2.125rem">
@@ -1898,16 +1952,12 @@ const Threebhk = () => {
             <Flex pb="1.5rem">
               <Box
                 borderRadius="50%"
-                p="1rem"
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
                 direction="column"
-                w="5rem"
-                h="5rem"
                 align="center"
                 mr="1rem"
                 _hover={{ cursor: "pointer" }}
               >
-                <Image w="3.125rem" h="3.125rem" src={industry} />
+                <Image w="5rem" h="5rem" src={industry} />
               </Box>
               <VStack align="flex-start">
                 <Heading fontFamily="avenir" fontSize="2.125rem">
@@ -2135,7 +2185,7 @@ const Threebhk = () => {
           </Flex>
         </Flex>
       </Flex>
-      {/* delightfull */}
+      {/* Floor plan */}
       <Flex w="100%" h="100%" align="center" py="1.875rem" direction="column">
         <Text
           w="100%"
@@ -2145,38 +2195,13 @@ const Threebhk = () => {
           textTransform="uppercase"
           pb="1.875rem"
         >
-          A delightful mix of sky residences
+          FLOOR PLAN
         </Text>
-        <Flex w="100%" h="100%">
+        <Flex w="100%" h="100%" gap="1.563rem">
           <Flex w="58%">
-            <Image boxShadow="2xl" w="100%" h="100%" src={floorPlan} />
+            <Image boxShadow="2xl" w="100%" h="100%" src={twoBhkFloor} />
           </Flex>
-          <Flex
-            w="10%"
-            h="100%"
-            direction="column"
-            justify="flex-start"
-            align="center"
-            px="1.563rem"
-          >
-            <Divider
-              h="3.9rem"
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />
-          </Flex>
-          <Flex w="32%" h="100%" alignSelf="center" direction="column">
+          <Flex w="42%" h="100%" alignSelf="center" direction="column">
             {" "}
             <Heading
               fontSize="1.5rem"
@@ -2184,17 +2209,69 @@ const Threebhk = () => {
               fontFamily="avenir"
               pb="0.938rem"
             >
-              convertible flexi-design FOR CO-LIVING, STUDENT HOUSING & SERVICED
-              APARTMENTS
+              SMART HOMES THAT ARE VASTU COMPLIANT
             </Heading>
-            <Text fontFamily="veralaRound" fontSize="1rem">
-              An unique collection of flexi-design 2 BHK sky residences,
-              well-planned with convertible option, for you to customize your
-              home & needs. The 5 different design innovations allow variations
-              in private or shared rooms, more bedrooms or spacious living, one
-              or more bathrooms etc. Making it possible to fit up to 5 beds in
-              every apartment.
-            </Text>
+            <Flex
+              w="100%"
+              h="100%"
+              direction="column"
+              align="center"
+              border="1px solid #B88746"
+            >
+              <Text
+                w="100%"
+                textAlign="center"
+                bgGradient="linear(to-b, #DFBD69, #B88746)"
+                fontFamily="veralaRound"
+                fontSize="1.25rem"
+                p="0.938rem"
+                color="white"
+                borderBottom="1px solid #B88746"
+              >
+                TOWER DETAILS
+              </Text>
+              <Flex
+                w="100%"
+                pt="0.938rem"
+                pb="1.875rem"
+                px="1.875rem"
+                direction="column"
+                gap="1.875rem"
+              >
+                <Flex w="100%" align="center" gap="3.125rem">
+                  <Text w="50%" fontFamily="veralaRound" fontSize="1.25rem">
+                    TYPE OF UNITS
+                  </Text>
+                  <Heading w="50%" fontFamily="avenir" fontSize="1.25rem">
+                    2 BHK(C), 2 BHK(L), 3 BHK
+                  </Heading>
+                </Flex>
+                <Flex w="100%" align="center" gap="3.125rem">
+                  <Text w="50%" fontFamily="veralaRound" fontSize="1.25rem">
+                    SALEABLE AREA
+                  </Text>
+                  <Heading w="50%" fontFamily="avenir" fontSize="1.25rem">
+                    1008-1748 SQFT.
+                  </Heading>
+                </Flex>
+                <Flex w="100%" align="center" gap="3.125rem">
+                  <Text w="50%" fontFamily="veralaRound" fontSize="1.25rem">
+                    FLOORS
+                  </Text>
+                  <Heading w="50%" fontFamily="avenir" fontSize="1.25rem">
+                    10
+                  </Heading>
+                </Flex>
+                <Flex w="100%" align="center" gap="3.125rem">
+                  <Text w="50%" fontFamily="veralaRound" fontSize="1.25rem">
+                    NO. OF FLATS ON EACH FLOOR
+                  </Text>
+                  <Heading w="50%" fontFamily="avenir" fontSize="1.25rem">
+                    8
+                  </Heading>
+                </Flex>
+              </Flex>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>
@@ -2206,68 +2283,73 @@ const Threebhk = () => {
         <Flex w="100%" h="100%" gap="0.938rem">
           <Flex
             w="100%"
-            h="100%"
+            h="25rem"
             direction="column"
-            p="1.875rem"
+            pt="1.875rem"
+            px="1.875rem"
             align="center"
-            justify="space-between"
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
               CONNECTIVITY
-            </Heading>
-            <UnorderedList
-              fontFamily="veralaRound"
-              fontSize="1rem"
-              pb="0.625rem"
-            >
-              <ListItem>
-                Peripheral Ring Road - Pass Through Arete Homes
-              </ListItem>
-              <ListItem>Outer Ring Road</ListItem>
-              <ListItem>Railway Network - Large Ponneri Station</ListItem>
-            </UnorderedList>
-            <Image
-              justifySelf="flex-end"
-              h="9.375rem"
-              src={locationImg}
-              objectFit="contain"
-              objectPosition="20% 80%"
-            />
+            </Heading>{" "}
+            <Flex w="100%" h="100%" direction="column" justify="space-between">
+              <UnorderedList
+                fontFamily="veralaRound"
+                fontSize="1rem"
+                pb="0.625rem"
+              >
+                <ListItem>
+                  Peripheral Ring Road - Pass Through Arete Homes
+                </ListItem>
+                <ListItem>Outer Ring Road</ListItem>
+                <ListItem>Railway Network - Large Ponneri Station</ListItem>
+              </UnorderedList>
+              <Image
+                justifySelf="flex-end"
+                h="9.375rem"
+                src={locationImg}
+                objectFit="contain"
+                objectPosition="50% 80%"
+              />
+            </Flex>
           </Flex>
           <Flex
             w="100%"
-            h="100%"
+            h="25rem"
             direction="column"
-            p="1.875rem"
+            pt="1.875rem"
+            px="1.875rem"
             align="center"
-            justify="space-between"
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
               FOREIGN INVESTMENTS
             </Heading>
-            <UnorderedList
-              fontFamily="veralaRound"
-              fontSize="1rem"
-              pb="0.625rem"
-            >
-              <ListItem>
-                JICA Japan International Cooperation Agency chose Ponneri to
-                manage, design and develop as a ‘Smart City’ in 3 phases.
-              </ListItem>
-            </UnorderedList>
-            <Image
-              justifySelf="flex-end"
-              h="9.375rem"
-              src={foreignInvest}
-              objectFit="contain"
-              objectPosition="20% 80%"
-            />
+            <Flex w="100%" h="100%" direction="column" justify="space-between">
+              <UnorderedList
+                fontFamily="veralaRound"
+                fontSize="1rem"
+                pb="0.625rem"
+              >
+                <ListItem>
+                  JICA Japan International Cooperation Agency chose Ponneri to
+                  manage, design and develop as a ‘Smart City’ in 3 phases.
+                </ListItem>
+              </UnorderedList>
+              <Image
+                justifySelf="flex-end"
+                h="9.375rem"
+                src={foreignInvest}
+                objectFit="contain"
+                objectPosition="50% 80%"
+              />
+            </Flex>
           </Flex>
           <Flex
             w="100%"
-            h="100%"
+            h="25rem"
             direction="column"
-            p="1.875rem"
+            pt="1.875rem"
+            px="1.875rem"
             align="center"
             justify="space-between"
           >
@@ -2287,12 +2369,11 @@ const Threebhk = () => {
               </ListItem>
             </UnorderedList>
             <Image
-              alignSelf="flex-end"
-              justifySelf="flex-end"
-              h="9.375rem"
+              w="100%"
+              h="11.25rem"
               src={socialFabric}
               objectFit="contain"
-              objectPosition="20% 80%"
+              objectPosition="150%"
             />
           </Flex>
         </Flex>
@@ -2309,10 +2390,10 @@ const Threebhk = () => {
       <Flex w="100%" h="100%" gap="3.125rem" pb="5rem">
         <Flex w="60%" h="100%" direction="column" align="center">
           <Text fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
-            8% ROI ON ARETE HOMES
+            7% ROI ON ARETE HOMES
           </Text>
-          <Flex w h="100%" gap="1.875rem" justify="center" align="center">
-            <Image w="20.75rem" h="15.313rem" src={roiImg} />
+          <Flex h="100%" gap="1.875rem" justify="center" align="center">
+            <Image w="20.75rem" h="15.313rem" src={snarttwobhk} />
             <Flex
               h="100%"
               direction="column"
@@ -2320,13 +2401,17 @@ const Threebhk = () => {
               fontFamily="avenir"
             >
               <Heading fontSize="1.25rem" pb="0.938rem">
-                2 BHK - 1025 SQFT.
+                SMART 2 BHK - 690 SQFT.
               </Heading>
-              <Heading fontSize="1.5rem">₹52 LAKHS</Heading>
+              <Heading fontSize="1.5rem" pb="0.625rem">
+                ₹34 LAKHS
+              </Heading>
               <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem">
                 Fully Furnished With White Goods
               </Text>
-              <Heading fontSize="1.5rem">₹32,000</Heading>
+              <Heading fontSize="1.5rem" pb="0.625rem">
+                ₹20,000
+              </Heading>
               <Text
                 textTransform="uppercase"
                 fontFamily="veralaRound"
@@ -2372,10 +2457,9 @@ const Threebhk = () => {
           </Text>
           <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
             GET AN EXPERT OPINION
-          </Heading>
-          <Container w="container.sm" align="center">
-            {" "}
-            <form>
+          </Heading>{" "}
+          <form>
+            <Flex w="100%" align="center" justify="center" direction="column">
               <FormControl isRequired>
                 {" "}
                 <HStack w="100%" justify="space-between" pb="0.938rem">
@@ -2439,7 +2523,7 @@ const Threebhk = () => {
                 </HStack>{" "}
               </FormControl>
               <FormControl>
-                <HStack w="100%" align="center" justify="center">
+                <HStack w="100%" ml="4.5rem">
                   <Checkbox
                     ml="0.85rem"
                     value="yes"
@@ -2464,9 +2548,9 @@ const Threebhk = () => {
                 _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
               >
                 SCHEDULE A CALL
-              </Button>
-            </form>
-          </Container>
+              </Button>{" "}
+            </Flex>
+          </form>
         </Flex>
       </Flex>
     </>
