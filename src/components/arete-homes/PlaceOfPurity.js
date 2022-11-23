@@ -40,7 +40,7 @@ const SecondSec = () => {
       direction="column"
       align="center"
       justify="center"
-      py="6.25rem"
+      py="5rem"
     >
       <Heading
         transform={isInView ? "none" : "translateY(-50xp)"}
@@ -51,7 +51,7 @@ const SecondSec = () => {
         fontWeight="400"
         textTransform="uppercase"
         textAlign="center"
-        pb="3.125rem"
+        pb="1.875rem"
       >
         A place of purity and excellence
       </Heading>
@@ -86,7 +86,7 @@ const SecondSec = () => {
                 <Box
                   key={prime.id}
                   w="100%"
-                  height="35.5rem"
+                  height="29.25rem"
                   position="relative"
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
@@ -169,7 +169,7 @@ const SecondSec = () => {
             />
           </Flex>
         </Flex>
-        <Flex w="100%" h="100%" direction="column" alignSelf="center">
+        <Flex w="100%" h="100%" direction="column" alignSelf="center" align="center" justify="center">
           <Text
             transform={isInView ? "none" : "translateY(-50xp)"}
             opacity={isInView ? "1" : "0"}
@@ -184,7 +184,7 @@ const SecondSec = () => {
             well planned gated community, comprising magnificent towers, rising
             with the elevated podium and many other unique amenities.
           </Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing="25px">
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20.9rem">
             <Box opacity={isInView ? "1" : "0"} transition="all 2s 3s">
               <Text
                 fontFamily="avenir"
@@ -195,7 +195,7 @@ const SecondSec = () => {
               >
                 20.25 ACRES
               </Text>
-              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+              <Text fontFamily="veralaRound" fontSize={"1rem"} color={"black"}>
                 Largest Smart Township
               </Text>
             </Box>
@@ -209,7 +209,7 @@ const SecondSec = () => {
               >
                 PRIVATE CLUB
               </Text>
-              <Text fontFamily="veralaRound" fontSize={"16px"} color={"black"}>
+              <Text fontFamily="veralaRound" fontSize={"1rem"} color={"black"}>
                 PGC - 60,000 SQFT.
               </Text>
             </Box>
@@ -237,7 +237,7 @@ const SecondSec = () => {
               >
                 100+
               </Text>
-              <Text fontFamily="veralaRound" fontSize={"1.5rem"} color={"black"}>
+              <Text fontFamily="veralaRound" fontSize={"1rem"} color={"black"}>
                 Smart Amenities
               </Text>
             </Box>
