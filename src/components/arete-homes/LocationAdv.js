@@ -48,8 +48,8 @@ const NinethSec = () => {
         fontFamily="avenir"
         fontSize="2.125rem"
         lineHeight="3rem"
-        pt="1.562rem"
-        pb="1.562rem"
+        pt="1.563rem"
+        pb="1.563rem"
       >
         PONNERI - A SMART CITY BY JICA
       </Heading>
@@ -230,414 +230,19 @@ const NinethSec = () => {
             </Button>
           </Flex>
         </Flex>
-        <Flex w="100%" h="100%" align="center" direction="column">
-          <Flex
-            w="100%"
-            h="100%"
-            alignSelf="flex-start"
-            justify="space-between"
-          >
-            <Flex
-              h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="1.562rem"
-            >
-              {" "}
-              <Flex
-                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s"
-                h="100%"
-                direction="column"
-                justify="flex-start"
-                align="center"
-              >
-                <Divider
-                  h="3.125rem"
-                  orientation="vertical"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width="1.875rem"
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />
-              </Flex>
-              <Divider
-                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s 2s"
-                h="3.125rem"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>
-            <Flex
-              w="100%"
-              transform={isInView ? "none" : "translateX(-100px)"}
-              opacity={isInView ? "1" : "0"}
-              transition="all 2s"
-            >
-              <Heading
-                alignSelf="center"
-                fontFamily="avenir"
-                fontSize="1.25rem"
-                mr="1.562rem"
-              >
-                5 Mins
-              </Heading>
-              <UnorderedList
-                alignSelf="center"
-                textTransform="uppercase"
-                fontFamily="veralaRound"
-                fontSize="1rem"
-              >
-                <ListItem pb="0.625rem">
-                  Walk to Velammal International School{" "}
-                </ListItem>
-                <ListItem pb="0.625rem">DRIVE TO Origin by Mahindra </ListItem>
-                <ListItem pb="0.625rem">
-                  DRIVE TO Ponneri Railway Station
-                </ListItem>
-              </UnorderedList>
-            </Flex>
-          </Flex>
-          <Flex
-            w="100%"
-            h="100%"
-            alignSelf="flex-start"
-            justify="space-between"
-          >
-            {" "}
-            <Flex
-              h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="1.562rem"
-            >
-              {" "}
-              <Flex
-                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s 2s"
-                h="100%"
-                direction="column"
-                justify="flex-start"
-                align="center"
-              >
-                <Divider
-                  h="2.187rem"
-                  orientation="vertical"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width="1.875rem"
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />
-              </Flex>
-              <Divider
-                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s 4s"
-                h="3.125rem"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>
-            <Flex
-              w="100%"
-              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
-              opacity={isInView ? "1" : "0"}
-              transition="all 2s 2s"
-              h="100%"
-            >
-              <Heading
-                w="fit-content"
-                display="flex"
-                alignSelf="center"
-                fontFamily="avenir"
-                fontSize="1.25rem"
-                mr="1.562rem"
-              >
-                10 Mins
-              </Heading>
-              <UnorderedList
-                textTransform="uppercase"
-                alignSelf="center"
-                fontFamily="veralaRound"
-                fontSize="1rem"
-              >
-                <ListItem pb="0.625rem">CONNECT TO Outer Ring Road</ListItem>
-                <ListItem pb="0.625rem">
-                  DRIVE TO Siruvapuri Murugan Temple{" "}
-                </ListItem>
-                <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
-              </UnorderedList>
-            </Flex>
-          </Flex>
-          <Flex h="100%" alignSelf="flex-start" justify="center">
-            {" "}
-            <Flex
-              h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="1.562rem"
-            >
-              {" "}
-              <Flex
-                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s 4s"
-                h="100%"
-                direction="column"
-                justify="flex-start"
-                align="center"
-              >
-                <Divider
-                  h="1.562rem"
-                  orientation="vertical"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width="1.875rem"
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />
-              </Flex>
-              <Divider
-                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s 6s"
-                h="1.875rem"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>{" "}
-            <Flex
-              w="100%"
-              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
-              opacity={isInView ? "1" : "0"}
-              transition="all 2s 4s"
-              h="100%"
-            >
-              {" "}
-              <Heading
-                alignSelf="center"
-                fontFamily="avenir"
-                fontSize="1.25rem"
-                mr="1.562rem"
-              >
-                20 Mins
-              </Heading>
-              <Flex alignSelf="center">
-                <UnorderedList
-                  textTransform="uppercase"
-                  fontFamily="veralaRound"
-                  fontSize="1rem"
-                >
-                  <ListItem pb="0.625rem">DRIVE TO REDHILLS</ListItem>
-                  <ListItem pb="0.625rem">PULICAT LAKE </ListItem>
-                  <ListItem pb="0.625rem">
-                    DRIVE TO GUMMIDIPOONDI SIPCOT
-                  </ListItem>
-                </UnorderedList>
-              </Flex>
-            </Flex>
-          </Flex>
-          <Flex h="100%" alignSelf="flex-start" justify="center">
-            {" "}
-            <Flex
-              h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="1.562rem"
-            >
-              <Flex
-                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s 6s"
-                h="100%"
-                direction="column"
-                justify="flex-start"
-                align="center"
-              >
-                <Divider
-                  h="2.5rem"
-                  orientation="vertical"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width="1.875rem"
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />
-              </Flex>
-              <Divider
-                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s 8s"
-                h="2.5rem"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>{" "}
-            <Flex
-              w="100%"
-              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
-              opacity={isInView ? "1" : "0"}
-              transition="all 2s 6s"
-              h="100%"
-            >
-              <Heading
-                alignSelf="center"
-                fontFamily="avenir"
-                fontSize="1.25rem"
-                mr="1.562rem"
-              >
-                30 Mins
-              </Heading>
-              <Flex alignSelf="center">
-                <UnorderedList
-                  textTransform="uppercase"
-                  fontFamily="veralaRound"
-                  fontSize="1rem"
-                >
-                  <ListItem pb="0.625rem">DRIVE TO SRI CITY</ListItem>
-                  <ListItem pb="0.625rem">DRIVE TO ADANI PORT</ListItem>
-                  <ListItem pb="0.625rem">
-                    DRIVE TO Ponneri Railway Station
-                  </ListItem>
-                </UnorderedList>
-              </Flex>
-            </Flex>
-          </Flex>
-          <Flex w="100%" h="100%" align="center" justify="space-between">
-            {" "}
-            <Flex
-              h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="1.562rem"
-            >
-              <Flex
-                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s 8s"
-                h="100%"
-                direction="column"
-                justify="flex-start"
-                align="center"
-              >
-                <Divider
-                  h="0.625rem"
-                  orientation="vertical"
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width="1.875rem"
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />
-              </Flex>
-              <Divider
-                transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-                opacity={isInView ? "1" : "0"}
-                transition="all 2s 10s"
-                h="0.625rem"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>{" "}
-            <Flex
-              w="100%"
-              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
-              opacity={isInView ? "1" : "0"}
-              transition="all 2s 8s"
-              h="100%"
-              align="center"
-              justify="flex-start"
-            >
-              <Heading
-                h="100%"
-                alignSelf="center"
-                fontFamily="avenir"
-                fontSize="1.25rem"
-                mr="1.562rem"
-              >
-                40 Mins
-              </Heading>
-              <Flex w="100%" h="100%" alignSelf="center">
-                <UnorderedList
-                  textTransform="uppercase"
-                  fontFamily="veralaRound"
-                  fontSize="1rem"
-                >
-                  <ListItem pb="0.625rem">DRIVE TO CHENNAI AIRPORT</ListItem>
-                </UnorderedList>
-              </Flex>
-            </Flex>
-          </Flex>
-          <Flex w="100%" h="100%" align="center" justify="space-between">
-            {" "}
+        <Flex w="100%" h="100%" align="flex-start" justify="space-between">
+          <Flex h="100%" direction="column" px="1.563rem">
             <Flex
               transform={isInView ? "translateY(0)" : "translateY(-50px)"}
               opacity={isInView ? "1" : "0"}
-              transition="all 2s 10s"
+              transition="all 2s"
               h="100%"
               direction="column"
               justify="flex-start"
               align="center"
-              px="25px"
             >
               <Divider
-                h="0.625rem"
+                h="3.125rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -654,30 +259,292 @@ const NinethSec = () => {
               />
             </Flex>{" "}
             <Flex
-              w="100%"
-              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+            >
+              <Divider
+                h="5rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
+            <Flex
+              transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 4s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+            >
+              <Divider
+                h="4.8rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
+            <Flex
+              transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 6s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+            >
+              <Divider
+                h="4.9rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
+            <Flex
+              transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 8s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+            >
+              <Divider
+                h="2.75rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
+            <Flex
+              transform={isInView ? "translateY(0)" : "translateY(-50px)"}
               opacity={isInView ? "1" : "0"}
               transition="all 2s 10s"
               h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
             >
-              <Heading
-                alignSelf="center"
-                fontFamily="avenir"
-                fontSize="1.25rem"
-                mr="1.562rem"
-              >
-                2 Hours
-              </Heading>
-              <Flex alignSelf="center">
-                <UnorderedList
-                  textTransform="uppercase"
-                  fontFamily="veralaRound"
-                  fontSize="1rem"
-                >
-                  <ListItem pb="0.625rem">DRIVE TO TIRUPATI</ListItem>
-                </UnorderedList>
-              </Flex>
+              <Divider
+                h="0.5rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
             </Flex>
+          </Flex>
+          <Flex
+            h="100%"
+            direction="column"
+            align="flex-start"
+            justify="space-between"
+            pr="0.938rem"
+          >
+            <Heading
+              pt="3.925rem"
+              transform={isInView ? "none" : "translateX(-100px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+            >
+              5 Mins
+            </Heading>
+            <Heading
+              pt="6.25rem"
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+            >
+              10 Mins
+            </Heading>
+            <Heading
+              pt="6rem"
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 4s"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+            >
+              20 Mins
+            </Heading>
+            <Heading
+              pt="6.25rem"
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 6s"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+            >
+              30 Mins
+            </Heading>
+            <Heading
+              pt="3.9rem"
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 8s"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+            >
+              40 Mins
+            </Heading>
+            <Heading
+              pt="1.8rem"
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 10s"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+            >
+              2 Hours
+            </Heading>
+          </Flex>
+          <Flex w="70%" h="100%" direction="column" gap="1.875rem">
+            <UnorderedList
+              pt="1.875rem"
+              transform={isInView ? "none" : "translateX(-100px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
+            >
+              <ListItem pb="0.625rem">
+                Walk to Velammal International School{" "}
+              </ListItem>
+              <ListItem pb="0.625rem">DRIVE TO Origin by Mahindra </ListItem>
+              <ListItem>DRIVE TO Ponneri Railway Station</ListItem>
+            </UnorderedList>
+            <UnorderedList
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
+            >
+              <ListItem pb="0.625rem">CONNECT TO Outer Ring Road</ListItem>
+              <ListItem pb="0.625rem">
+                DRIVE TO Siruvapuri Murugan Temple{" "}
+              </ListItem>
+              <ListItem>VELS Medical Hospital</ListItem>
+            </UnorderedList>
+            <UnorderedList
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 4s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
+            >
+              <ListItem pb="0.625rem">DRIVE TO REDHILLS</ListItem>
+              <ListItem pb="0.625rem">PULICAT LAKE </ListItem>
+              <ListItem>DRIVE TO GUMMIDIPOONDI SIPCOT</ListItem>
+            </UnorderedList>
+            <UnorderedList
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 6s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
+            >
+              <ListItem pb="0.625rem">DRIVE TO SRI CITY</ListItem>
+              <ListItem pb="0.625rem">DRIVE TO ADANI PORT</ListItem>
+              <ListItem>DRIVE TO Ponneri Railway Station</ListItem>
+            </UnorderedList>
+            <UnorderedList
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 8s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
+            >
+              {" "}
+              <ListItem>DRIVE TO CHENNAI AIRPORT</ListItem>
+            </UnorderedList>
+            <UnorderedList
+              transform={isInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 10s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
+            >
+              {" "}
+              <ListItem>DRIVE TO TIRUPATI</ListItem>
+            </UnorderedList>
           </Flex>
         </Flex>
       </Flex>

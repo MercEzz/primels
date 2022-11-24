@@ -6,13 +6,7 @@ import {
   Divider,
   Box,
   Button,
-  TableContainer,
-  Table,
-  Thead,
-  Tr,
-  Th,
-  Tbody,
-  Td,
+  VStack,
 } from "@chakra-ui/react";
 import { useInView } from "framer-motion";
 import React from "react";
@@ -62,7 +56,7 @@ const TenthSec = () => {
         >
           <Image
             // pos="absolute"
-            h="29.25rem"
+            h="35.5rem"
             w="100%"
             objectPosition="center top"
             objectFit="cover"
@@ -131,173 +125,134 @@ const TenthSec = () => {
             alignSelf="flex-start"
             opacity={isInView ? "1" : "0"}
             transition="all 2s 4s"
+            direction="column"
           >
-            <TableContainer>
-              <Table w="100%">
-                <Thead
-                  textTransform="uppercase"
-                  bgGradient="linear(to-b, #DFBD69, #B88746)"
-                >
-                  {" "}
-                  <Tr>
-                    <Th
-                      fontFamily="veralaRound"
-                      fontSize="1.25rem"
-                      fontWeight="400"
-                      color="white"
-                      textAlign="center"
-                      border="1px solid #B88746"
-                      p="0.937rem"
-                    >
-                      SMART HOME
-                    </Th>
-                    <Th
-                      fontFamily="veralaRound"
-                      fontSize="1.25rem"
-                      fontWeight="400"
-                      color="white"
-                      textAlign="center"
-                      border="1px solid #B88746"
-                      p="0.937rem"
-                    >
-                      PRICE
-                    </Th>
-                    <Th
-                      fontFamily="veralaRound"
-                      fontSize="1.25rem"
-                      fontWeight="400"
-                      color="white"
-                      textAlign="center"
-                      border="1px solid #B88746"
-                      p="0.937rem"
-                    >
-                      RENTAL INCOME
-                    </Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
-                  <Tr>
-                    <Td
-                      textAlign="left"
-                      fontFamily="veralaRound"
-                      fontSize="1.125rem"
-                      border="1px solid #B88746"
-                      p="1.25rem"
-                    >
-                      <Text
-                        as="span"
-                        fontWeight="bold"
-                        fontFamily="avenir"
-                        fontSize="1.5rem"
-                        pb="0.313rem"
-                      >
-                        2 BHK
-                      </Text>{" "}
-                      <br />
-                      1085 SQFT.
-                    </Td>
-                    <Td
-                      textAlign="left"
-                      fontFamily="veralaRound"
-                      fontSize="1.125rem"
-                      border="1px solid #B88746"
-                      p="1.125rem"
-                    >
-                      <Text
-                        as="span"
-                        fontWeight="bold"
-                        fontFamily="avenir"
-                        fontSize="1.5rem"
-                        pb="0.313rem"
-                      >
-                        Rs. 52 LAKHS
-                      </Text>{" "}
-                      <br />
-                      Fully Furnished With <br />
-                      White Goods
-                    </Td>
-                    <Td
-                      textAlign="left"
-                      fontFamily="veralaRound"
-                      fontSize="1.125rem"
-                      border="1px solid #B88746"
-                      p="1.25rem"
-                    >
-                      <Text
-                        as="span"
-                        fontWeight="bold"
-                        fontFamily="avenir"
-                        fontSize="1.5rem"
-                        pb="0.313rem"
-                      >
-                        Rs. 32,000
-                      </Text>{" "}
-                      <br />
-                      Per Month
-                    </Td>
-                  </Tr>
-                  <Tr>
-                    <Td
-                      textAlign="left"
-                      fontFamily="veralaRound"
-                      fontSize="1.125rem"
-                      border="1px solid #B88746"
-                      p="1.25rem"
-                    >
-                      <Text
-                        as="span"
-                        fontWeight="bold"
-                        fontFamily="avenir"
-                        fontSize="1.5rem"
-                        pb="0.313rem"
-                      >
-                        3 BHK
-                      </Text>{" "}
-                      <br />
-                      1787 SQFT.
-                    </Td>
-                    <Td
-                      textAlign="left"
-                      fontFamily="veralaRound"
-                      fontSize="1.125rem"
-                      border="1px solid #B88746"
-                      p="1.25rem"
-                    >
-                      <Text
-                        as="span"
-                        fontWeight="bold"
-                        fontFamily="avenir"
-                        fontSize="1.5rem"
-                        pb="0.313rem"
-                      >
-                        Rs. 85 LAKHS
-                      </Text>{" "}
-                      <br />
-                      Fully Furnished With <br /> White Goods
-                    </Td>
-                    <Td
-                      textAlign="left"
-                      fontFamily="veralaRound"
-                      fontSize="1.125rem"
-                      border="1px solid #B88746"
-                      p="1.25rem"
-                    >
-                      <Text
-                        as="span"
-                        fontWeight="bold"
-                        fontFamily="avenir"
-                        fontSize="1.5rem"
-                        pb="0.313rem"
-                      >
-                        Rs. 48,000
-                      </Text>{" "}
-                      <br />
-                      Per Month
-                    </Td>
-                  </Tr>
-                </Tbody>
-              </Table>{" "}
-            </TableContainer>
+            <Flex w="100%" border="1px solid #B88746">
+              {" "}
+              <Text
+                textAlign="center"
+                border="1px solid #B88746"
+                borderLeft="none"
+                borderBottom="none"
+                w="30%"
+                fontFamiily="veralaRound"
+                fontSize="1.125rem"
+                px="0.625rem"
+                py="1rem"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                color="white"
+              >
+                SMART HOME
+              </Text>{" "}
+              <Text
+                textAlign="center"
+                border="1px solid #B88746"
+                borderLeft="none"
+                borderBottom="none"
+                w="40%"
+                fontFamiily="veralaRound"
+                fontSize="1.125rem"
+                px="0.625rem"
+                py="1rem"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                color="white"
+              >
+                PRICE
+              </Text>{" "}
+              <Text
+                textAlign="center"
+                border="1px solid #B88746"
+                borderLeft="none"
+                borderBottom="none"
+                borderRight="none"
+                w="30%"
+                fontFamiily="veralaRound"
+                fontSize="1.125rem"
+                px="0.625rem"
+                py="1rem"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                color="white"
+              >
+                RENTAL INCOME
+              </Text>
+            </Flex>
+
+            <Flex w="100%" borderTop="none" border="1px solid #B88746">
+              <VStack
+                w="30%"
+                align="flex-start"
+                px="1.25rem"
+                py="1.25rem"
+                borderRight="1px solid #B88746"
+              >
+                <Heading fontFamily="avenir" fontSize="1.5rem">
+                  2 BHK
+                </Heading>
+                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                  1085 SQFT.
+                </Text>
+              </VStack>
+              <VStack
+                w="40%"
+                align="flex-start"
+                px="1.25rem"
+                py="1.25rem"
+                borderRight="1px solid #B88746"
+              >
+                <Heading fontFamily="avenir" fontSize="1.5rem">
+                  Rs. 52 LAKHS
+                </Heading>
+                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                  Fully Furnished With White Goods
+                </Text>
+              </VStack>
+              <VStack w="30%" align="flex-start" px="1.25rem" py="1.25rem">
+                <Heading fontFamily="avenir" fontSize="1.5rem">
+                  Rs. 32,000
+                </Heading>
+                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                  Per Month
+                </Text>
+              </VStack>
+            </Flex>
+            <Flex w="100%" borderTop="none" border="1px solid #B88746">
+              <VStack
+                w="30%"
+                align="flex-start"
+                px="1.25rem"
+                py="1.25rem"
+                borderRight="1px solid #B88746"
+              >
+                <Heading fontFamily="avenir" fontSize="1.5rem">
+                  3 BHK
+                </Heading>
+                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                  1787 SQFT.
+                </Text>
+              </VStack>
+              <VStack
+                w="40%"
+                align="flex-start"
+                px="1.25rem"
+                py="1.25rem"
+                borderRight="1px solid #B88746"
+              >
+                <Heading fontFamily="avenir" fontSize="1.5rem">
+                  Rs. 85 LAKHS
+                </Heading>
+                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                  Fully Furnished With White Goods
+                </Text>
+              </VStack>
+              <VStack w="30%" align="flex-start" px="1.25rem" py="1.25rem">
+                <Heading fontFamily="avenir" fontSize="1.5rem">
+                  Rs. 48,000
+                </Heading>
+                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                  Per Month
+                </Text>
+              </VStack>
+            </Flex>
           </Flex>
           <Heading
             opacity={isInView ? "1" : "0"}

@@ -191,7 +191,7 @@ const SecondSec = () => {
             well planned gated community, comprising magnificent towers, rising
             with the elevated podium and many other unique amenities.
           </Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20.9rem">
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing="1.563rem">
             <Box opacity={isInView ? "1" : "0"} transition="all 2s 3s">
               <Text
                 fontFamily="avenir"
