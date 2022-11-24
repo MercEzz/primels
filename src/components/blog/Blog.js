@@ -18,7 +18,7 @@ import {
   UnorderedList,
   Box,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useLayoutEffect } from "react";
 // images
 import banner1 from "../blog imgs/construction-silhouette.jpg";
 import banner2 from "../blog imgs/01.jpg";
@@ -36,13 +36,42 @@ import {
   AiOutlineLinkedin,
 } from "react-icons/ai";
 import { RiFacebookCircleLine } from "react-icons/ri";
-
+//animation
+import "./bloganimation.css"
+import "./blogstyle.css"
 const Blog = () => {
+  const reveal = () => {
+    var reveals = document.querySelectorAll(".reveal");
+    try{
+
+    for (var i = 0; i <= reveals.length; i++) {
+      
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i]
+        ? reveals[i].getBoundingClientRect().top
+        : null;
+      var elementVisible = 200;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }catch(e){
+    
+  }
+  }
+  useLayoutEffect(()=>{
+    window.addEventListener("scroll", reveal);
+    return()=>{window.removeEventListener("scroll", reveal);}
+  });
   return (
     <>
       {/* banner sec */}
       <Flex w="100%" h="100vh" pos="relative" overflow="hidden">
         <Image
+          animation="blog-banner-down 1 2s linear"
           w="33%"
           h="100%"
           objectFit="cover"
@@ -50,6 +79,7 @@ const Blog = () => {
           src={banner1}
         />
         <Image
+          animation="blog-banner-up 1 2s linear"
           w="34%"
           h="100%"
           objectFit="cover"
@@ -57,6 +87,7 @@ const Blog = () => {
           src={banner2}
         />
         <Image
+          animation="blog-banner-down 1 2s linear"
           w="33%"
           h="100%"
           objectFit="cover"
@@ -71,6 +102,7 @@ const Blog = () => {
           textAlign="center"
           fontFamily="avenir"
           fontSize="3rem"
+          animation="fadein 1 1s linear"
         >
           BLOG
         </Heading>
@@ -93,8 +125,9 @@ const Blog = () => {
           >
             <GridItem colSpan={2}>
               <Flex w="100%" h="100%" boxShadow="xl">
-                <Flex w="100%" h="100%">
+                <Flex w="100%" h="100%" overflow="hidden">
                   <Image
+                    className="blog-image-left reveal"
                     w="100%"
                     h="100%"
                     objectFit="cover"
@@ -103,6 +136,7 @@ const Blog = () => {
                   />
                 </Flex>
                 <Flex
+                  overflow="hidden"
                   w="100%"
                   h="30.688rem"
                   align="center"
@@ -122,6 +156,7 @@ const Blog = () => {
                     future?
                   </Text>
                   <Flex
+                    className="blog-text-right reveal"
                     pos="absolute"
                     w="110%"
                     bgColor="#DFBD69"
@@ -148,9 +183,11 @@ const Blog = () => {
                 boxShadow="xl"
                 direction="column"
                 pos="relative"
+                overflow="hidden"
               >
                 <Flex w="100%" h="100%">
                   <Image
+                    className="blog-image-down reveal"
                     w="100%"
                     h="20.375rem"
                     objectFit="cover"
@@ -206,9 +243,11 @@ const Blog = () => {
                 boxShadow="xl"
                 direction="column"
                 pos="relative"
+                overflow="hidden"
               >
                 <Flex w="100%" h="100%">
                   <Image
+                    className="blog-image-down reveal"
                     w="100%"
                     h="20.375rem"
                     objectFit="cover"
@@ -258,9 +297,10 @@ const Blog = () => {
               </Flex>
             </GridItem>
             <GridItem colSpan={2}>
-              <Flex w="100%" h="100%" boxShadow="xl">
+              <Flex w="100%" h="100%" boxShadow="xl" overflow="hidden">
                 <Flex w="100%" h="100%">
                   <Image
+                    className="blog-image-left reveal"
                     w="100%"
                     h="100%"
                     objectFit="cover"
@@ -287,6 +327,7 @@ const Blog = () => {
                     WHY SHOULD YOU CHOOSE FLAT OVER INDEPENDENT HOUSES?
                   </Text>
                   <Flex
+                    className="blog-text-right reveal"
                     pos="absolute"
                     w="110%"
                     bgColor="black"
@@ -314,9 +355,11 @@ const Blog = () => {
                 boxShadow="xl"
                 direction="column"
                 pos="relative"
+                overflow="hidden"
               >
                 <Flex w="100%" h="100%">
                   <Image
+                    className="blog-image-down reveal"
                     w="100%"
                     h="20.375rem"
                     objectFit="cover"
@@ -373,9 +416,11 @@ const Blog = () => {
                 boxShadow="xl"
                 direction="column"
                 pos="relative"
+                overflow="hidden"
               >
                 <Flex w="100%" h="100%">
                   <Image
+                    className="blog-image-down reveal"
                     w="100%"
                     h="20.375rem"
                     objectFit="cover"
