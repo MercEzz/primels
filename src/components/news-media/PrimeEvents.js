@@ -25,8 +25,8 @@ const ThirdSec = () => {
     autoplay: true,
     speed: 500,
     autoplaySpeed: 5000,
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     afterChange: () => {
       setCurrentSlide(currentSlide++);
     },
@@ -54,16 +54,6 @@ const ThirdSec = () => {
       >
         PRIME EVENTS
       </Text>
-      <Heading
-        opacity={isInView ? "1" : "0"}
-        transition="all 2s"
-        fontFamily="avenir"
-        fontSize="2.125rem"
-        lineHeight="3rem"
-        py="1.563rem"
-      >
-        SKY HIGH TOWER LAUNCH AT HYATT REGENCY, CHENNAI{" "}
-      </Heading>
       <Box
         opacity={isInView ? "1" : "0"}
         transition="all 2s 2s"
@@ -73,6 +63,7 @@ const ThirdSec = () => {
         overflow={"hidden"}
         pl="4.687rem"
         pr="4.687rem"
+        align="center"
       >
         {/* CSS files for react-slick */}
         <link
@@ -128,17 +119,47 @@ const ThirdSec = () => {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {primeEvents2.map((prime) => (
+            <Flex
+              w="100%"
+             key={prime.id}
+            direction="column"
+            align="center"
+            justify="center">
+                <Heading
+                  opacity={isInView ? "1" : "0"}
+                  transition="all 2s"
+                  fontFamily="avenir"
+                  fontSize="2.125rem"
+                  lineHeight="3rem"
+                  py="1.563rem"
+                >
+                {prime.eventName}
+              </Heading>
+              <Flex 
+                direction="row">
             <Image
-              key={prime.id}
-              w={prime.width}
+              minW={prime.width1}
               height="26.875rem"
               px="1.25rem"
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"
               objectFit="cover"
-              src={prime.img}
+              src={prime.img1}
             />
+            <Image
+              minW={prime.width2}
+              maxW="100%"
+              height="26.875rem"
+              px="1.25rem"
+              position="relative"
+              objectPosition="center"
+              backgroundRepeat="no-repeat"
+              objectFit="cover"
+              src={prime.img2}
+            />
+            </Flex>
+            </Flex>
           ))}
         </Slider>
       </Box>
@@ -187,16 +208,11 @@ const primeEvents = [
 ];
 
 const primeEvents2 = [
-  { id: 1, width: "520px", img: event1 },
-  { id: 2, width: "700px", img: event2 },
-  { id: 3, width: "520px", img: event3 },
-  { id: 4, width: "700px", img: event4 },
-  { id: 5, width: "520px", img: event5 },
-  { id: 6, width: "700px", img: event6 },
-  { id: 7, width: "520px", img: event7 },
-  { id: 8, width: "700px", img: event8 },
-  { id: 9, width: "520px", img: event9 },
-  { id: 10, width: "700px", img: event10 },
+  { id: 1, width1: "520px", img1: event1, width2: "700px", img2: event2, eventName:"SKY HIGH TOWER LAUNCH AT HYATT REGENCY, CHENNAI", },
+  { id: 2, width1: "520px", img1: event3, width2: "700px", img2: event4, eventName:"SKY HIGH TOWER LAUNCH AT HYATT REGENCY, CHENNAI", },
+  { id: 3, width1: "520px", img1: event5, width2: "700px", img2: event6, eventName:"SKY HIGH TOWER LAUNCH AT HYATT REGENCY, CHENNAI", },
+  { id: 4, width1: "520px", img1: event7, width2: "700px", img2: event8, eventName:"CREDAI FAIR PRO 2022", },
+  { id: 5, width1: "520px", img1: event9, width2: "700px", img2: event10, eventName:"SBI HOME LOAN UTSAV 2022",},
 ];
 
 export default ThirdSec;
