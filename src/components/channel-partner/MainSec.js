@@ -49,9 +49,9 @@ const MainSec = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 2, type: "just" }}
         pos={dis ? "static" : "fixed"}
-        fontSize="40px"
+        fontSize="2.5rem"
         fontFamily="avenir"
-        lineHeight="57px"
+        lineHeight="3.563rem"
         textTransform="uppercase"
         textAlign="center"
         zIndex="10"

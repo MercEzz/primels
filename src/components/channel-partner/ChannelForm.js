@@ -10,20 +10,17 @@ import {
   Text,
   Icon,
   Button,
-  Select,
   RadioGroup,
   Radio,
-  FormErrorMessage,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
+  Select,
 } from "@chakra-ui/react";
+import "./drop.css";
 import React, { useRef, useState, useEffect } from "react";
 import { BsUpload } from "react-icons/bs";
 import { AiOutlineDownload } from "react-icons/ai";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { TriangleDownIcon } from "@chakra-ui/icons";
+// import Select from "react-select";
 
 // const MtnHd = motion(Heading);
 const MtnTxt = motion(Text);
@@ -123,6 +120,26 @@ const ChannelForm = () => {
     designation2,
   } = initialValues;
 
+  const options = [
+    { value: "ARETE HOMES", label: "ARETE HOMES" },
+    { value: "SKY HIGH TOWER", label: "SKY HIGH TOWER" },
+    { value: "PGC", label: "PGC" },
+    { value: "ARETE PLAZA", label: "ARETE PLAZA" },
+    { value: "ARETE MALL", label: "ARETE MALL" },
+  ];
+  const customStyles = {
+    option: (provided, state) => ({
+      ...provided,
+      position: "absolute",
+      borderBottom: "2px dotted green",
+      color: state.isSelected ? "yellow" : "black",
+      backgroundColor: state.isSelected ? "green" : "white",
+    }),
+    control: (provided) => ({
+      ...provided,
+      marginTop: "5%",
+    }),
+  };
   return (
     <>
       <Flex
@@ -132,16 +149,16 @@ const ChannelForm = () => {
         direction="column"
         align="center"
         justify="center"
-        pt="50px"
-        px="100px"
+        pt="3.125rem"
+        px="6.25rem"
         bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       >
         {" "}
         <Heading
           pos={dis ? "static" : "fixed"}
-          fontSize="40px"
+          fontSize="2.5rem"
           fontFamily="avenir"
-          lineHeight="57px"
+          lineHeight="3.563rem"
           textTransform="uppercase"
           textAlign="center"
           zIndex="10"
@@ -156,19 +173,19 @@ const ChannelForm = () => {
           initial={{ opacity: 0 }}
           animate={animateFlx}
           transition={{ duration: 2, type: "just" }}
-          // px="50px"
-          pt={dis ? "25px" : "150px"}
+          // px="3.125rem"
+          pt={dis ? "1.563rem" : "9.375rem"}
           fontFamily="veralaRound"
-          fontSize="16px"
-          lineHeight="24px"
-          mb="50px"
+          fontSize="1rem"
+          lineHeight="1.5"
+          mb="3.125rem"
         >
           Your association with us is extremely valuable to us. We support our
           Channel Partners to catalyst their growth with ours. Join our network
           and scale to greater heights as we bring to you various reward wining
           sources from our projects. So come, to be introduced to an achiever's
           destination reserved for those who make success happen.
-          <Text pt="15px">
+          <Text pt="0.938rem">
             Please fill in the details below for all your marketing
             requirements.
           </Text>
@@ -186,12 +203,12 @@ const ChannelForm = () => {
               w="100%"
             >
               {/* top - left */}
-              <Flex w="100%" direction="column" pr="45px">
-                <Flex justify="space-between" mb="15px">
+              <Flex w="100%" direction="column" pr="2.813rem">
+                <Flex justify="space-between" mb="0.938rem">
                   <FormLabel
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="24px"
+                    lineHeight="1.5rem"
                     fontWeight="700"
                     htmlFor="companyName"
                   >
@@ -205,22 +222,22 @@ const ChannelForm = () => {
                     onChange={(e) => onChange(e)}
                     value={companyName}
                     type="text"
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="24px"
-                    w="340px"
-                    h="50px"
+                    lineHeight="1.5rem"
+                    w="21.25rem"
+                    h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </Flex>
                 <FormControl isRequired>
-                  <Flex justify="space-between" mb="15px">
+                  <Flex justify="space-between" mb="0.938rem">
                     <FormLabel
                       pt="4"
-                      fontSize="16px"
+                      fontSize="1rem"
                       fontFamily="avenir"
-                      lineHeight="24px"
+                      lineHeight="1.5rem"
                       fontWeight="700"
                       htmlFor="nameOfOwner"
                     >
@@ -232,10 +249,10 @@ const ChannelForm = () => {
                       onChange={(e) => onChange(e)}
                       value={nameOfOwner}
                       type="text"
-                      fontSize="16px"
+                      fontSize="1rem"
                       fontFamily="avenir"
-                      w="340px"
-                      h="50px"
+                      w="21.25rem"
+                      h="3.125rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
                       isRequired
@@ -245,15 +262,15 @@ const ChannelForm = () => {
                 {/* left-bottom */}
                 <FormControl isRequired>
                   <FormLabel
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="24px"
+                    lineHeight="1.5rem"
                     fontWeight="700"
                   >
                     ENTITY
                   </FormLabel>
                   <Flex
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontFamily="veralaRound"
                     justify="space-between"
                   >
@@ -347,14 +364,14 @@ const ChannelForm = () => {
                     </VStack>
                   </Flex>
                 </FormControl>
-                <Flex w="100%" direction="column" mr="45px" mt="25px">
+                <Flex w="100%" direction="column" mr="2.813rem" mt="1.563rem">
                   <FormControl isRequired>
-                    <Flex align="center" justify="space-between" mb="15px">
+                    <Flex align="center" justify="space-between" mb="0.938rem">
                       <FormLabel
                         pt="2"
-                        fontSize="16px"
+                        fontSize="1rem"
                         fontFamily="avenir"
-                        lineHeight="24px"
+                        lineHeight="1.5rem"
                         fontWeight="700"
                         htmlFor="officeAdd"
                       >
@@ -366,10 +383,10 @@ const ChannelForm = () => {
                         onChange={(e) => onChange(e)}
                         value={officeAdd}
                         type="text"
-                        fontSize="16px"
+                        fontSize="1rem"
                         fontFamily="avenir"
-                        w="340px"
-                        h="50px"
+                        w="21.25rem"
+                        h="3.125rem"
                         bgColor="#E5E5E5"
                         borderRadius="none"
                         isRequired
@@ -377,12 +394,12 @@ const ChannelForm = () => {
                     </Flex>
                   </FormControl>
                   <FormControl isRequired>
-                    <Flex align="center" justify="space-between" mb="15px">
+                    <Flex align="center" justify="space-between" mb="0.938rem">
                       <FormLabel
                         pt="2"
-                        fontSize="16px"
+                        fontSize="1rem"
                         fontFamily="avenir"
-                        lineHeight="24px"
+                        lineHeight="1.5rem"
                         fontWeight="700"
                         htmlFor="mobileNo"
                       >
@@ -403,22 +420,22 @@ const ChannelForm = () => {
                             });
                           }
                         }}
-                        fontSize="16px"
+                        fontSize="1rem"
                         fontFamily="avenir"
-                        w="340px"
-                        h="50px"
+                        w="21.25rem"
+                        h="3.125rem"
                         bgColor="#E5E5E5"
                         borderRadius="none"
                         isRequired
                       />
                     </Flex>
                   </FormControl>
-                  <Flex align="center" justify="space-between" mb="15px">
+                  <Flex align="center" justify="space-between" mb="0.938rem">
                     <FormLabel
                       pt="2"
-                      fontSize="16px"
+                      fontSize="1rem"
                       fontFamily="avenir"
-                      lineHeight="24px"
+                      lineHeight="1.5rem"
                       fontWeight="700"
                       htmlFor="website"
                     >
@@ -430,21 +447,21 @@ const ChannelForm = () => {
                       value={website}
                       onChange={(e) => onChange(e)}
                       type="url"
-                      fontSize="16px"
+                      fontSize="1rem"
                       fontFamily="avenir"
-                      w="340px"
-                      h="50px"
+                      w="21.25rem"
+                      h="3.125rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
                     />
                   </Flex>
                   <FormControl isRequired>
-                    <Flex align="center" justify="space-between" mb="15px">
+                    <Flex align="center" justify="space-between" mb="0.938rem">
                       <FormLabel
                         pt="2"
-                        fontSize="16px"
+                        fontSize="1rem"
                         fontFamily="avenir"
-                        lineHeight="24px"
+                        lineHeight="1.5rem"
                         fontWeight="700"
                         htmlFor="email"
                       >
@@ -456,10 +473,10 @@ const ChannelForm = () => {
                         value={email}
                         onChange={(e) => onChange(e)}
                         type="email"
-                        fontSize="16px"
+                        fontSize="1rem"
                         fontFamily="avenir"
-                        w="340px"
-                        h="50px"
+                        w="21.25rem"
+                        h="3.125rem"
                         bgColor="#E5E5E5"
                         borderRadius="none"
                         isRequired
@@ -470,11 +487,11 @@ const ChannelForm = () => {
               </Flex>
               {/* top-right */}
               <Flex w="100%" direction="column">
-                <Flex justify="space-between" mb="15px">
+                <Flex justify="space-between" mb="0.938rem">
                   <FormLabel
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="24px"
+                    lineHeight="1.5rem"
                     fontWeight="700"
                     htmlFor="yourFocusLocationArea"
                   >
@@ -488,32 +505,32 @@ const ChannelForm = () => {
                     onChange={(e) => onChange(e)}
                     type="text"
                     size="lg"
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    w="340px"
-                    h="50px"
+                    w="21.25rem"
+                    h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </Flex>
                 <FormControl isRequired>
                   <FormLabel
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontWeight="bold"
                     fontFamily="avenir"
-                    lineHeight="24px"
+                    lineHeight="1.5rem"
                     textAlign="left"
                   >
                     EXPERTISE
                   </FormLabel>
                   <Flex
                     w="100%"
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontFamily="veralaRound"
                     align="center"
                     justify="space-between"
-                    mt="15px"
-                    mb="15px"
+                    mt="0.938rem"
+                    mb="0.938rem"
                   >
                     <VStack align="flex-start">
                       <Checkbox
@@ -596,19 +613,19 @@ const ChannelForm = () => {
                   name="others"
                   value={othersTxt}
                   onChange={(e) => onChange(e)}
-                  fontSize="16px"
+                  fontSize="1rem"
                   fontFamily="avenir"
                   w="100%"
-                  h="50px"
+                  h="3.125rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
-                <Flex w="100%" direction="column" mt="25px">
-                  <Flex align="center" justify="space-between" pb="15px">
+                <Flex w="100%" direction="column" mt="1.563rem">
+                  <Flex align="center" justify="space-between" pb="0.938rem">
                     <FormLabel
-                      fontSize="16px"
+                      fontSize="1rem"
                       fontFamily="avenir"
-                      lineHeight="24px"
+                      lineHeight="1.5rem"
                       fontWeight="700"
                       htmlFor="gstNo"
                     >
@@ -620,20 +637,20 @@ const ChannelForm = () => {
                       value={gstNo}
                       onChange={(e) => onChange(e)}
                       type="text"
-                      fontSize="16px"
+                      fontSize="1rem"
                       fontFamily="avenir"
-                      w="340px"
-                      h="50px"
+                      w="21.25rem"
+                      h="3.125rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
                     />
                   </Flex>
-                  <Flex align="center" justify="space-between" pb="15px">
+                  <Flex align="center" justify="space-between" pb="0.938rem">
                     <FormLabel
                       pt="2"
-                      fontSize="16px"
+                      fontSize="1rem"
                       fontFamily="avenir"
-                      lineHeight="24px"
+                      lineHeight="1.5rem"
                       fontWeight="700"
                       htmlFor="reraNo"
                     >
@@ -645,10 +662,10 @@ const ChannelForm = () => {
                       value={reraNo}
                       onChange={(e) => onChange(e)}
                       type="text"
-                      fontSize="16px"
+                      fontSize="1rem"
                       fontFamily="avenir"
-                      w="340px"
-                      h="50px"
+                      w="21.25rem"
+                      h="3.125rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
                     />
@@ -657,18 +674,18 @@ const ChannelForm = () => {
                     <FormLabel
                       fontWeight="bold"
                       htmlFor="brokerAssoc"
-                      fontSize="16px"
+                      fontSize="1rem"
                       fontFamily="avenir"
-                      mt="10px"
+                      mt="0.625rem"
                       textAlign="left"
-                      pb="15px"
+                      pb="0.938rem"
                     >
                       AFFILIATION TO ANY BROKER ASSOCIATION
                     </FormLabel>{" "}
                     <Flex
                       justify="space-between"
                       fontFamily="veralaRound"
-                      fontSize="20px"
+                      fontSize="1.25rem"
                       pr="8rem"
                     >
                       <Radio value="yes" size="lg">
@@ -685,16 +702,16 @@ const ChannelForm = () => {
             {/* left-bottom */}
             <Flex
               w="100%"
-              pb="15px"
-              mt="15px"
+              pb="0.938rem"
+              mt="0.938rem"
               align="flex-start"
               justify="center"
             >
               <FormLabel
-                pl="10px"
-                fontSize="16px"
+                pl="0.625rem"
+                fontSize="1rem"
                 fontFamily="avenir"
-                lineHeight="24px"
+                lineHeight="1.5rem"
                 fontWeight="700"
                 htmlFor="identityDoc"
               >
@@ -712,45 +729,45 @@ const ChannelForm = () => {
                     });
                   }}
                   type="file"
-                  w="353px"
-                  h="50px"
+                  w="22.063rem"
+                  h="3.125rem"
                   p="2"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
                 <Text
-                  fontSize="16px"
+                  fontSize="1rem"
                   fontFamily="veralaRound"
-                  pt="15px"
-                  pb="15px"
+                  pt="0.938rem"
+                  pb="0.938rem"
                 >
-                  <Icon as={BsUpload} mr="14px" />
+                  <Icon as={BsUpload} mr="0.875rem" />
                   Upload File
                 </Text>
               </Flex>
             </Flex>
 
-            <Flex direction="column" w="100%" align="center" px="202px">
+            <Flex direction="column" w="100%" align="center" px="12.625rem">
               <Heading
-                fontSize="16px"
+                fontSize="1rem"
                 fontFamily="avenir"
-                lineHeight="24px"
-                pb="15px"
+                lineHeight="1.5rem"
+                pb="0.938rem"
               >
                 AUTHORISED SIGNATORIES
               </Heading>
               <Flex>
                 <Flex
-                  mr="50px"
-                  mb="15px"
+                  mr="3.125rem"
+                  mb="0.938rem"
                   justify="space-between"
                   align="center"
                 >
                   <FormLabel
-                    pl="10px"
-                    fontSize="16px"
+                    pl="0.625rem"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="24px"
+                    lineHeight="1.5rem"
                     fontWeight="700"
                     htmlFor="name1"
                   >
@@ -762,20 +779,20 @@ const ChannelForm = () => {
                     value={name1}
                     onChange={(e) => onChange(e)}
                     type="text"
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    w="240px"
-                    h="50px"
+                    w="15rem"
+                    h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </Flex>
-                <Flex mb="15px" justify="space-between" align="center">
+                <Flex mb="0.938rem" justify="space-between" align="center">
                   <FormLabel
-                    pl="10px"
-                    fontSize="16px"
+                    pl="0.625rem"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="24px"
+                    lineHeight="1.5rem"
                     fontWeight="700"
                     htmlFor="designation1"
                   >
@@ -787,22 +804,22 @@ const ChannelForm = () => {
                     value={designation1}
                     onChange={(e) => onChange(e)}
                     type="text"
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    w="240px"
-                    h="50px"
+                    w="15rem"
+                    h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </Flex>
               </Flex>
               <Flex>
-                <Flex mr="50px" justify="space-between" align="center">
+                <Flex mr="3.125rem" justify="space-between" align="center">
                   <FormLabel
-                    pl="10px"
-                    fontSize="16px"
+                    pl="0.625rem"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="24px"
+                    lineHeight="1.5rem"
                     fontWeight="700"
                     htmlFor="name2"
                   >
@@ -814,20 +831,20 @@ const ChannelForm = () => {
                     value={name2}
                     onChange={(e) => onChange(e)}
                     type="text"
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    w="240px"
-                    h="50px"
+                    w="15rem"
+                    h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </Flex>
                 <Flex justify="space-between" align="center">
                   <FormLabel
-                    pl="10px"
-                    fontSize="16px"
+                    pl="0.625rem"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="24px"
+                    lineHeight="1.5rem"
                     fontWeight="700"
                     htmlFor="designation2"
                   >
@@ -839,10 +856,10 @@ const ChannelForm = () => {
                     value={designation2}
                     onChange={(e) => onChange(e)}
                     type="text"
-                    fontSize="16px"
+                    fontSize="1rem"
                     fontFamily="avenir"
-                    w="240px"
-                    h="50px"
+                    w="15rem"
+                    h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -851,16 +868,14 @@ const ChannelForm = () => {
             </Flex>
             <Button
               type="submit"
-              mt="25px"
-              mb="75px"
-              h="51px"
-              w="168px"
+              mt="1.563rem"
+              mb="4.688rem"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
               color="white"
-              fontSize="16px"
+              fontSize="1rem"
               fontFamily="avenir"
-              px="16px"
-              py="15px"
+              px="1rem"
+              py="0.938rem"
               _hover={{
                 bgGradient: "linear(to-b, #DFBD69, #B88746)",
               }}
@@ -878,8 +893,8 @@ const ChannelForm = () => {
         justify="center"
         bgColor="#B88746"
         color="white"
-        h="70px"
-        fontSize="16px"
+        h="4.375rem"
+        fontSize="1rem"
         fontFamily="avenir"
       >
         <Flex
@@ -887,77 +902,46 @@ const ChannelForm = () => {
           pos="relative"
           align="center"
           justify="flex-end"
-          pr="50px"
+          pr="3.125rem"
           fontFamily="avenir"
-          fontSize="16px"
+          fontSize="1rem"
         >
           <Select
             fontFamily="avenir"
-            fontSize="20px"
-            w="250px"
+            fontSize="1.25rem"
+            w="15.625rem"
             fontWeight="bold"
-            // placeholder="SELECT PROJECT"
             textTransform="uppercase"
             variant="flushed"
             borderBottom="2px solid white"
-            icon={<TriangleDownIcon width="18px" height="18px" />}
+            className="drop"
+            icon={<TriangleDownIcon width="1.125rem" height="1.125rem" />}
             borderRadius="none"
           >
-            <option style={{ color: "black" }}>
-              <Text>ARETE HOMES</Text>
-            </option>
-            <option style={{ color: "black" }}>
-              <Text>SKY HIGH TOWER</Text>
-            </option>
-            <option style={{ color: "black" }}>
-              <Text>PGC</Text>
-            </option>
-            <option style={{ color: "black" }}>
-              <Text>ARETE PLAZA</Text>
-            </option>
-            <option style={{ color: "black" }}>
-              <Text>ARETE MALL</Text>
-            </option>
+            <option style={{ color: "black" }}>ARETE HOMES</option>
+            <option style={{ color: "black" }}>SKY HIGH TOWER</option>
+            <option style={{ color: "black" }}>PGC</option>
+            <option style={{ color: "black" }}>ARETE PLAZA</option>
+            <option style={{ color: "black" }}>ARETE MALL</option>
           </Select>
-          {/* <Menu closeOnBlur>
-            <MenuButton
-              fontFamily="avenir"
-              fontSize="16px"
-              variant="flushed"
-              as={Button}
-              rightIcon={<TriangleDownIcon />}
-              textAlign="left"
-            >
-              SELECT PROJECT
-            </MenuButton>
-            <MenuList
-              color="black"
-              w="100%"
-              fontWeight="bold"
-              fontFamily="avenir"
-              fontSize="16px"
-              borderRadius="0"
-            >
-              <MenuItem>ARETE HOMES</MenuItem>
-              <MenuItem>SKY HIGH TOWER</MenuItem>
-              <MenuItem>PGC</MenuItem>
-              <MenuItem>ARETE PLAZA</MenuItem>
-              <MenuItem>ARETE MALL</MenuItem>
-            </MenuList>
-          </Menu> */}
         </Flex>
         {/* {validForm ? ( */}
         <Flex
           w="100%"
           align="center"
           justify="flex-start"
-          pl="50px"
+          pl="3.125rem"
           cursor="pointer"
           fontFamily="avenir"
           fontWeight="bold"
-          fontSize="20px"
+          fontSize="1.25rem"
         >
-          <Icon as={AiOutlineDownload} h="30px" w="30px" mr="10px" />
+          <Icon
+            as={AiOutlineDownload}
+            h="1.875rem"
+            w="1.875rem"
+            mr="0.625rem"
+          />
           DOWNLOAD CP-BROCHURE
         </Flex>
         {/* ) : (
