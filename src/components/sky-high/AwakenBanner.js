@@ -18,7 +18,7 @@ const SeventhSec = () => {
 
   const settings = {
     draggable: false,
-    infinite: true,
+    infinite: false,
     autoplay: true,
     speed: 500,
     fade: true,
@@ -29,7 +29,7 @@ const SeventhSec = () => {
   };
 
   return (
-    <Flex ref={ref} w="100%" h="57.937rem">
+    <Flex ref={ref} w="100%" h="35.5rem">
       <Box
         transform={inView ? "scale(1)" : "scale(0.6)"}
         transition="all 2s"

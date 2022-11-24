@@ -5,6 +5,8 @@ import {
   Box,
   Divider,
   Text,
+  HStack,
+  Image,
 } from "@chakra-ui/react";
 // import { useInView } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -15,6 +17,12 @@ import Slider from "react-slick";
 
 import intro1 from "../sky-high imgs/INTRO1.jpg";
 import intro2 from "../sky-high imgs/INTRO2.jpg";
+
+// icons
+import first from "../sky-high imgs/1ST.svg";
+import second from "../sky-high imgs/2ND.svg";
+import third from "../sky-high imgs/3RD.svg";
+import fourth from "../sky-high imgs/4TH.svg";
 
 const SecondSec = () => {
   const { ref, inView } = useInView({
@@ -42,7 +50,9 @@ const SecondSec = () => {
       direction="column"
       align="center"
       justify="center"
-      py="6.25rem"
+      pt="5rem"
+      pb="3.125rem"
+      px="6.25rem"
     >
       <Heading
         transform={inView ? "translateY(0)" : "translateY(-50px)"}
@@ -53,26 +63,23 @@ const SecondSec = () => {
         fontWeight="400"
         textTransform="uppercase"
         textAlign="center"
-        pb="1.5rem"
+        pb="1.875rem"
       >
         An iconic dwell of <br />
         sky high residences and retail spaces
       </Heading>
-      <Flex px="100px" w="100%" h="100%" align="center" justify="center">
+      <Flex w="100%" h="100%" align="center" justify="center">
         <Flex
-          transform={inView ? "translateY(0)" : "translateY(-50px)"}
+          transform={inView ? "translateX(0)" : "translateX(-100px)"}
           opacity={inView ? "1" : "0"}
-          transition="all 2s"
-          w="100%"
+          transition="all 2s 2s"
+          w="47.5%"
           h="100%"
         >
           <Box
-            transform={inView ? "translateX(0)" : "translateX(-100px)"}
-            opacity={inView ? "1" : "0"}
-            transition="all 2s 2s"
             position={"relative"}
-            height={"568px"}
-            width={"600px"}
+            height={"100%"}
+            width={"100%"}
             overflow={"hidden"}
           >
             {/* CSS files for react-slick */}
@@ -92,8 +99,8 @@ const SecondSec = () => {
               {introImgs.map((prime) => (
                 <Box
                   key={prime.id}
-                  w="46rem"
-                  height="35.5rem"
+                  w="100%"
+                  height="29.25rem"
                   position="relative"
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
@@ -122,7 +129,7 @@ const SecondSec = () => {
               color="white"
               _hover={{ bgColor: "none" }}
             >
-              {/* <Text>01</Text> */}
+              <Text>01</Text>
             </IconButton>
 
             {/* Right Icon */}
@@ -145,60 +152,66 @@ const SecondSec = () => {
               color="white"
               _hover={{ bgColor: "none" }}
             >
-              {/* <Text>02</Text> */}
+              <Text>02</Text>
             </IconButton>
           </Box>
         </Flex>
 
-        <Flex h="100%" alignSelf="flex-start">
-          <Flex
-            transform={inView ? "translateY(0)" : "translateY(-50px)"}
-            opacity={inView ? "1" : "0"}
-            transition="all 2s 2s"
-            direction="column"
-            align="center"
-            px="1.5rem"
-          >
-            <Divider
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-              h="5.25rem"
-            />
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-            />
-          </Flex>
+        <Flex
+          transform={inView ? "translateY(0)" : "translateY(-50px)"}
+          opacity={inView ? "1" : "0"}
+          transition="all 2s 2s"
+          direction="column"
+          align="center"
+          px="1.5rem"
+          alignSelf="flex-start"
+        >
+          <Divider
+            orientation="vertical"
+            border="3px solid"
+            borderColor="#DFBD69"
+            bgColor="#DFBD69"
+            h="5.25rem"
+          />
+          <Box
+            height="1.875rem"
+            width="1.875rem"
+            backgroundColor="#DFBD69"
+            border="3px solid white"
+            boxShadow="0px 0px 0px 3px #B88746"
+            borderRadius="50%"
+          />
         </Flex>
+
         <Flex w="100%" h="100%" direction="column" alignSelf="center">
           <Text
             opacity={inView ? "1" : "0"}
             transition="all 2s 2s"
             mb="0.9rem"
             fontFamily="veralaRound"
-            fontSize="1rem">
+            fontSize="1rem"
+          >
             THE ULTIMATE ADDRESS: Experience the breathtaking views of Chennai's
             stunning skyline from Arete Homes SKY HIGH Tower the top 20th floor.
             A new world of luxury has taken shape in North Chennai, Ponneri.{" "}
-            </Text>
+          </Text>
           <Flex
             opacity={inView ? "1" : "0"}
             transition="all 2s 4s"
             w="16.937rem"
             borderRadius="0.625rem"
             bgColor="#DFBD69"
-            p="0.9rem"
+            px="0.938rem"
+            py="0.625rem"
             mb="1.2rem"
           >
-            <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
-              18 STOREY’S TALL
-            </Text>
+            <HStack>
+              {" "}
+              <Image src={first} />
+              <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
+                18 STOREY’S TALL
+              </Text>
+            </HStack>
           </Flex>
           <Flex
             opacity={inView ? "1" : "0"}
@@ -206,12 +219,17 @@ const SecondSec = () => {
             w="16.937rem"
             borderRadius="0.625rem"
             bgColor="#DFBD69"
-            p="0.9rem"
+            p="0.938rem"
+            py="0. 625rem"
             mb="1.2rem"
           >
-            <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
-              2 TOWER LOBBIES
-            </Text>
+            <HStack>
+              {" "}
+              <Image src={second} />
+              <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
+                2 TOWER LOBBIES
+              </Text>
+            </HStack>
           </Flex>
           <Flex
             opacity={inView ? "1" : "0"}
@@ -219,12 +237,15 @@ const SecondSec = () => {
             w="16.937rem"
             borderRadius="0.625rem"
             bgColor="#DFBD69"
-            p="0.9rem"
+            p="0.938rem"
             mb="1.2rem"
           >
-            <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
-              4 ELEVATORS
-            </Text>
+            <HStack>
+              <Image src={third} />
+              <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
+                4 ELEVATORS
+              </Text>
+            </HStack>
           </Flex>
           <Flex
             opacity={inView ? "1" : "0"}
@@ -232,11 +253,15 @@ const SecondSec = () => {
             w="16.937rem"
             borderRadius="0.625rem"
             bgColor="#DFBD69"
-            p="0.9rem"
+            px="0.938rem"
+            py="0.625rem"
           >
-            <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
-              20 RETAIL SHOPS
-            </Text>
+            <HStack>
+              <Image src={fourth} />
+              <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
+                20 RETAIL SHOPS
+              </Text>
+            </HStack>
           </Flex>
         </Flex>
       </Flex>

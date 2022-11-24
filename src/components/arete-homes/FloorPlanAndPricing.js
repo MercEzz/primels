@@ -1,5 +1,9 @@
 import { Flex, Heading, Text, Button, Image } from "@chakra-ui/react";
 import React from "react";
+import towerA3_1 from "../arete-homes imgs/Tower A3-1.jpg";
+// import towerA3_2 from "../arete-homes imgs/Tower A3-2.png";
+// import towerA3_3 from "../arete-homes imgs/Tower A3-3.jpg";
+// import towerA3_4 from "../arete-homes imgs/Tower A3-4.jpg";
 
 const TenthSec = () => {
   return (
@@ -101,7 +105,7 @@ const towers = [
       floors: "10",
       noOfFlats: "8",
       a3Imgs: [
-        "/images/ARETE HOMES/Tower A3-1.jpg",
+        towerA3_1,
         "/images/ARETE HOMES/Tower A3-2.png",
         "/images/ARETE HOMES/Tower A3-3.jpg",
         "/images/ARETE HOMES/Tower A3-4.jpg",

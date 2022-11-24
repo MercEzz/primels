@@ -29,7 +29,7 @@ const LastSec = () => {
       w="100%"
       h="100%"
       px="6.25rem"
-      pt="3.125rem"
+      pt="5rem"
       pb="3.125rem"
       direction="column"
       align="center"
@@ -99,7 +99,9 @@ const LastSec = () => {
                   fontFamily="veralaRound"
                   mt="50px"
                 >
-                  <Text fontSize="1rem">{prime.text}</Text>
+                  <Text fontSize="1rem" pb="0.938rem">
+                    {prime.text}
+                  </Text>
                   <Text fontSize="1.25rem">{prime.title}</Text>
                   <Text fontSize="1.25rem">{prime.subTitle}</Text>
                 </Flex>

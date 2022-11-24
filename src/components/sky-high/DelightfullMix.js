@@ -29,7 +29,7 @@ const EightSec = () => {
       w="100%"
       h="100%"
       px="6.25rem"
-      pt="6.25rem"
+      pt="5rem"
       pb="3.125rem"
       direction="column"
       align="center"
@@ -70,23 +70,27 @@ const EightSec = () => {
         rooms, more bedrooms or spacious living, one or more bathrooms etc.
         Making it possible to fit up to 5 beds in every apartment.
       </Text>
-      <Flex w="100%" h="100%" align="center" justify="center">
-        <Flex mr="0.937rem">
+      <Flex w="100%" h="100%" align="center" justify="center" gap="0.937rem">
+        <Flex boxShadow="dark-lg">
           <Image
             transform={inView ? "none" : "translateX(-100px)"}
             opacity={inView ? "1" : "0"}
             transition="all 2s 2s"
             w="100%"
             src="/images/sky-high/FLOOR PLAN1.jpg"
+            filter="auto"
+            blur="5px"
           />
         </Flex>
-        <Flex>
+        <Flex boxShadow="dark-lg">
           <Image
             transform={inView ? "none" : "translateX(100px)"}
             opacity={inView ? "1" : "0"}
             transition="all 2s 2s"
             w="100%"
             src="/images/sky-high/FLOOR PLAN2.jpg"
+            filter="auto"
+            blur="5px"
           />
         </Flex>
       </Flex>
@@ -99,106 +103,115 @@ const EightSec = () => {
         justify="space-between"
         mt="0.937rem"
       >
-        <Flex>
-          <TableContainer>
-            <Table variant="unstyled">
-              <Thead
-                textTransform="uppercase"
-                bgGradient="linear(to-b, #DFBD69, #B88746)"
-              >
-                <Tr>
-                  <Th
-                    fontFamily="veralaRound"
-                    fontSize="1.25rem"
-                    fontWeight="400"
-                    color="white"
-                    textAlign="center"
-                    border="1px solid #B88746"
-                    p="0.937rem"
-                  >
-                    Configuration
-                  </Th>
-                  <Th
-                    fontFamily="veralaRound"
-                    fontSize="1.25rem"
-                    fontWeight="400"
-                    color="white"
-                    textAlign="center"
-                    border="1px solid #B88746"
-                    p="0.937rem"
-                  >
-                    Saleable Area
-                  </Th>
-                  <Th
-                    fontFamily="veralaRound"
-                    fontSize="1.25rem"
-                    fontWeight="400"
-                    color="white"
-                    textAlign="center"
-                    border="1px solid #B88746"
-                    p="0.937rem"
-                  >
-                    Net Usable Area
-                  </Th>
-                  <Th
-                    fontFamily="veralaRound"
-                    fontSize="1.25rem"
-                    fontWeight="400"
-                    color="white"
-                    textAlign="center"
-                    border="1px solid #B88746"
-                    p="0.937rem"
-                  >
-                    Rera Carpet Area
-                  </Th>
-                </Tr>
-              </Thead>
-              <Tbody textTransform="uppercase">
-                <Tr>
-                  <Td
-                    fontFamily="avenir"
-                    fontSize="1.25rem"
-                    fontWeight="bold"
-                    textAlign="center"
-                    border="1px solid #B88746"
-                    p="0.937rem"
-                  >
-                    SMART 2 BHK
-                  </Td>
-                  <Td
-                    fontFamily="avenir"
-                    fontSize="1.25rem"
-                    fontWeight="bold"
-                    textAlign="center"
-                    p="0.937rem"
-                    border="1px solid #B88746"
-                  >
-                    690
-                  </Td>
-                  <Td
-                    fontFamily="avenir"
-                    fontSize="1.25rem"
-                    fontWeight="bold"
-                    border="1px solid #B88746"
-                    textAlign="center"
-                    p="0.937rem"
-                  >
-                    452
-                  </Td>
-                  <Td
-                    fontFamily="avenir"
-                    fontSize="1.25rem"
-                    fontWeight="bold"
-                    textAlign="center"
-                    border="1px solid #B88746"
-                    p="0.937rem"
-                  >
-                    447
-                  </Td>
-                </Tr>
-              </Tbody>
-            </Table>
-          </TableContainer>
+        {" "}
+        <Flex w="100%" direction="column" pr="1.875rem">
+          <Flex
+            w="100%"
+            bgGradient="linear(to-b,#DFBD69, #B88746)"
+            textTransform="uppercase"
+          >
+            <Text
+              w="100%"
+              fontFamily="veralaRound"
+              fontSize="1.25rem"
+              fontWeight="400"
+              color="white"
+              textAlign="center"
+              border="1px solid #B88746"
+              borderRight="none"
+              p="0.937rem"
+            >
+              Configuration
+            </Text>
+            <Text
+              w="100%"
+              fontFamily="veralaRound"
+              fontSize="1.25rem"
+              fontWeight="400"
+              color="white"
+              textAlign="center"
+              border="1px solid #B88746"
+              borderRight="none"
+              p="0.937rem"
+            >
+              Saleable Area
+            </Text>
+            <Text
+              w="100%"
+              fontFamily="veralaRound"
+              fontSize="1.25rem"
+              fontWeight="400"
+              color="white"
+              textAlign="center"
+              border="1px solid #B88746"
+              borderRight="none"
+              p="0.937rem"
+            >
+              Net Usable Area
+            </Text>
+            <Text
+              w="100%"
+              fontFamily="veralaRound"
+              fontSize="1.25rem"
+              fontWeight="400"
+              color="white"
+              textAlign="center"
+              border="1px solid #B88746"
+              borderRight="none"
+              p="0.937rem"
+            >
+              Rera Carpet Area
+            </Text>
+          </Flex>
+          <Flex w="100%" textTransform="uppercase">
+            <Heading
+              w="100%"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+              fontWeight="bold"
+              textAlign="center"
+              border="1px solid #B88746"
+              borderRight="none"
+              p="0.937rem"
+            >
+              SMART 2 BHK
+            </Heading>
+            <Heading
+              w="100%"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+              fontWeight="bold"
+              textAlign="center"
+              p="0.937rem"
+              border="1px solid #B88746"
+              borderRight="none"
+            >
+              690
+            </Heading>
+            <Heading
+              w="100%"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+              fontWeight="bold"
+              border="1px solid #B88746"
+              borderRight="none"
+              textAlign="center"
+              p="0.937rem"
+            >
+              452
+            </Heading>
+            <Heading
+              w="100%"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+              fontWeight="bold"
+              textAlign="center"
+              border="1px solid #B88746"
+              p="0.937rem"
+            >
+              447
+            </Heading>
+          </Flex>
         </Flex>
         <Button
           opacity={inView ? "1" : "0"}

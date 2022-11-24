@@ -56,7 +56,7 @@ const TenthSec = () => {
         >
           <Image
             // pos="absolute"
-            h="35.5rem"
+            h="31.25rem"
             w="100%"
             objectPosition="center top"
             objectFit="cover"
@@ -84,7 +84,7 @@ const TenthSec = () => {
           transition="all 2s 4s"
         >
           <Divider
-            h="4rem"
+            h="3.7rem"
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
@@ -115,13 +115,13 @@ const TenthSec = () => {
             fontSize="1.5rem"
             textAlign="left"
             fontFamily="avenir"
-            mb="1.5rem"
+            mb="0.938rem"
           >
             EARN HIGHEST RENTAL INCOME (ROI)
           </Heading>
           <Flex
             w="100%"
-            mb="1.562rem"
+            mb="0.938rem"
             alignSelf="flex-start"
             opacity={isInView ? "1" : "0"}
             transition="all 2s 4s"
@@ -138,7 +138,7 @@ const TenthSec = () => {
                 fontFamiily="veralaRound"
                 fontSize="1.125rem"
                 px="0.625rem"
-                py="1rem"
+                py="0.938rem"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
                 color="white"
               >
@@ -153,7 +153,7 @@ const TenthSec = () => {
                 fontFamiily="veralaRound"
                 fontSize="1.125rem"
                 px="0.625rem"
-                py="1rem"
+                py="0.938rem"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
                 color="white"
               >
@@ -169,7 +169,7 @@ const TenthSec = () => {
                 fontFamiily="veralaRound"
                 fontSize="1.125rem"
                 px="0.625rem"
-                py="1rem"
+                py="0.938rem"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
                 color="white"
               >
@@ -259,7 +259,7 @@ const TenthSec = () => {
             transition="all 2s 6s"
             fontFamily="avenir"
             fontSize="1.25rem"
-            mb="1.562rem"
+            mb="0.938rem"
           >
             ASSURED RENTAL INCOME FOR 3 YEARS!
           </Heading>

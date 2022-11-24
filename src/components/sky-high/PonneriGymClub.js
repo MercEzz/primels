@@ -1,10 +1,31 @@
-import { Flex, Image, Text, Box, IconButton, Button } from "@chakra-ui/react";
+import {
+  Flex,
+  Image,
+  Text,
+  Box,
+  IconButton,
+  Button,
+  Heading,
+} from "@chakra-ui/react";
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { useEffect } from "react";
+import pgclogo from "../arete-homes imgs/Asset 1.png";
+// images
+import gym from "../sky-high imgs/7 - gym.tif";
+import golf from "../sky-high imgs/5 - Open Golf Putting Area.png";
+import sports from "../sky-high imgs/PGC Sports Bar.jpg";
+import swimming from "../sky-high imgs/3 - Swimming Pool High Res.tif";
+import banquet from "../sky-high imgs/PGC Banquet Hall.jpg";
+import spa from "../sky-high imgs/22 - sauna_s.jpg";
+import guest from "../sky-high imgs/20 - guest rooms.jpg";
+import restaurant from "../sky-high imgs/18 - Restaurant High Res_1.jpg";
+import bar from "../sky-high imgs/PGC Sports Bar.jpg";
+import cafeteria from "../sky-high imgs/16 - Cafeteria High Res_1.jpg";
+import terrace from "../sky-high imgs/TERRACE.jpg";
+import theatre from "../sky-high imgs/PGC Theatre.jpg";
 
 const SixthSec = () => {
   const [slider, setSlider] = useState(null);
@@ -34,19 +55,28 @@ const SixthSec = () => {
       direction="column"
       align="center"
       justify="center"
-      py="6.25rem"
+      pt="5rem"
+      pb="3.125rem"
       px="1.562rem"
     >
-      <Text
+      {" "}
+      <Flex
         transform={isInView ? "none" : "translateY(-50px)"}
         opacity={isInView ? "1" : "0"}
         transition="all 2s "
-        fontFamily="goudy"
-        fontSize="2.5rem"
-        pb="1.562rem"
+        w="100%"
+        align="center"
+        justify="center"
+        pb="1.875rem"
       >
-        PVT. PONNERI GYMKHANA CLUB
-      </Text>
+        <Image src={pgclogo} h="2.5rem" w="2.5rem" mr="0.625rem" />
+        <Text fontFamily="goudy" fontSize="2.5rem">
+          <Text as="span" fontSize="1.5rem">
+            PVT.
+          </Text>{" "}
+          PONNERI GYMKHANA CLUB
+        </Text>
+      </Flex>
       <Box
         transform={isInView ? "scale(1)" : "scale(0.6)"}
         opacity={isInView ? "1" : "0"}
@@ -73,17 +103,28 @@ const SixthSec = () => {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {gymclubimgs.map((prime) => (
-            <Image
-              key={prime}
-              w="100%"
-              height="15.437rem"
-              px="3.2rem"
-              position="relative"
-              objectPosition="center"
-              backgroundRepeat="no-repeat"
-              objectFit="cover"
-              src={prime}
-            />
+            <Flex w="100%" align="center">
+              <Image
+                key={prime}
+                w="100%"
+                height="15.437rem"
+                pr="0.937rem"
+                position="relative"
+                objectPosition="center"
+                backgroundRepeat="no-repeat"
+                objectFit="fill"
+                src={prime.img}
+              />
+              <Heading
+                w="96%"
+                align="center"
+                fontFamily="avenir"
+                fontSize="1.25rem"
+                pt="0.938rem"
+              >
+                {prime.title}
+              </Heading>
+            </Flex>
           ))}
         </Slider>
         <IconButton
@@ -148,12 +189,16 @@ const SixthSec = () => {
 export default SixthSec;
 
 const gymclubimgs = [
-  "/images/sky-high/16 - Cafeteria High Res_1.jpg",
-  "/images/sky-high/18 - Restaurant High Res_1.jpg",
-  "/images/sky-high/20 - guest rooms.jpg",
-  "/images/sky-high/22 - sauna_s.jpg",
-  "/images/sky-high/PGC Banquet Hall.jpg",
-  "/images/sky-high/PGC Sports Bar.jpg",
-  "/images/sky-high/PGC Terrace.jpg",
-  "/images/sky-high/PGC Theatre.jpg",
+  { img: gym, title: "GYM" },
+  { img: golf, title: "GOLF PUTTING AREA" },
+  { img: sports, title: "MULTI SPORTS ARENA" },
+  { img: swimming, title: "SWIMMING POOL" },
+  { img: banquet, title: "BANQUET HALL" },
+  { img: spa, title: "SPA & SAUNA" },
+  { img: guest, title: "GUEST ROOM" },
+  { img: restaurant, title: "RESTAURANT" },
+  { img: bar, title: "BAR" },
+  { img: cafeteria, title: "CAFETERIA" },
+  { img: terrace, title: "TERRACE" },
+  { img: theatre, title: "THEATRE" },
 ];

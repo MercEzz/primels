@@ -46,7 +46,7 @@ const FifthSec = () => {
         transition="all 2s"
         fontFamily="goudy"
         fontSize="2.5rem"
-        mb="1.562rem"
+        mb="1.875rem"
       >
         LIVE LARGEST, SHOP LARGEST
       </Text>
@@ -77,7 +77,7 @@ const FifthSec = () => {
             <Image
               key={prime}
               w="100%"
-              height="35.5rem"
+              height="29.25rem"
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"
@@ -118,7 +118,7 @@ const FifthSec = () => {
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
-                h="10.625rem"
+                h="7rem"
               />{" "}
               <Box
                 height="1.875rem"
