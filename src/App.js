@@ -21,7 +21,7 @@ import AretehomesInvestSc from "./screens/AretehomesInvestSc";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
       <Flex
         as="main"
         direction="column"
@@ -53,7 +53,7 @@ function App() {
           <Route path="/arete-homes-invest" element={<AretehomesInvestSc />} />
         </Routes>
       </Flex>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

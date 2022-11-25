@@ -17,7 +17,12 @@ import { AiOutlineDownCircle } from "react-icons/ai";
 
 const DropDown = () => {
   return (
-    <Flex h="100%" w="100%" bgColor="#B88746">
+    <Flex
+      display={{ base: "none", lg: "flex" }}
+      h="100%"
+      w="100%"
+      bgColor="#B88746"
+    >
       <Accordion
         w="100%"
         border="1px solid #B88746"

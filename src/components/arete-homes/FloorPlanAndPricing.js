@@ -40,6 +40,7 @@ import towerA6_4 from "../arete-homes imgs/TOWER A6-4.jpg";
 const settings = {
   infinite: true,
   autoplay: true,
+  dots: true,
   speed: 500,
   fade: true,
   autoplaySpeed: 3000,

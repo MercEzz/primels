@@ -49,11 +49,9 @@ const Banner = () => {
             <Image
               key={prime.id}
               w="100%"
-              height="100%"
-              // position="relative"
-              backgroundPosition="center"
-              backgroundRepeat="no-repeat"
-              backgroundSize="cover"
+              height={{ base: "100vh", md: "100vh", lg: "100%" }}
+              objectPosition="center"
+              objectFit="cover"
               src={prime}
             />
           ))}
@@ -79,8 +77,6 @@ const Banner = () => {
         >
           <Text>01</Text>
         </IconButton>
-
-        {/* Right Icon */}
         <IconButton
           pos="absolute"
           aria-label="right-arrow"
@@ -104,9 +100,10 @@ const Banner = () => {
         </IconButton>
       </Box>
       <Heading
+        textAlign="center"
         pos="absolute"
         fontFamily="avenir"
-        fontSize="3rem"
+        fontSize={{ base: "1.5rem", md: "3rem" }}
         color="white"
         textShadow="2px 2px 3px black"
         top="50%"
