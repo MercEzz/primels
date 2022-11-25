@@ -124,7 +124,7 @@
   transform: translateX(-18.75rem);
 }
 .discoball-slidein-left2.reveal.active {
-  animation: discoball-slidein-left2 1 4s ease-in;
+  animation: discoball-slidein-left2 1 4s linear;
   opacity: 1;
   transform: translateX(0px);
 }
@@ -133,7 +133,7 @@
   transform: translateX(-18.75rem);
 }
 .discoball-slidein-left3.reveal.active {
-  animation: discoball-slidein-left3 1 6s ease-in;
+  animation: discoball-slidein-left3 1 6s linear;
   opacity: 1;
   transform: translateX(0px);
 }
@@ -142,7 +142,7 @@
   transform: translateX(-18.75rem);
 }
 .discoball-slidein-left4.reveal.active {
-  animation: discoball-slidein-left4 1 8s ease-in;
+  animation: discoball-slidein-left4 1 8s linear;
   opacity: 1;
   transform: translateX(0px);
 }

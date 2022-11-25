@@ -1464,9 +1464,9 @@ const ServicedApartments = () => {
               <ListItem>R.M.K. Engineering College</ListItem>
             </UnorderedList>
           </Flex>
-          <Flex w="100%" direction="column" className="discoball-slidein-left3 reveal">
+          <Flex w="100%" direction="column">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem">
+            <Flex w="100%" align="center" pb="1.563rem" className="discoball-slidein-left3 reveal">
               <Divider
                 orientation="horizontal"
                 border="3px solid"
