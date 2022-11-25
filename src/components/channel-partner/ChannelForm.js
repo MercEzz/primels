@@ -20,6 +20,7 @@ import { BsUpload } from "react-icons/bs";
 import { AiOutlineDownload } from "react-icons/ai";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { TriangleDownIcon } from "@chakra-ui/icons";
+import DropMenu from "./DropMenu";
 // import Select from "react-select";
 
 // const MtnHd = motion(Heading);
@@ -906,24 +907,7 @@ const ChannelForm = () => {
           fontFamily="avenir"
           fontSize="1rem"
         >
-          <Select
-            fontFamily="avenir"
-            fontSize="1.25rem"
-            w="15.625rem"
-            fontWeight="bold"
-            textTransform="uppercase"
-            variant="flushed"
-            borderBottom="2px solid white"
-            className="drop"
-            icon={<TriangleDownIcon width="1.125rem" height="1.125rem" />}
-            borderRadius="none"
-          >
-            <option style={{ color: "black" }}>ARETE HOMES</option>
-            <option style={{ color: "black" }}>SKY HIGH TOWER</option>
-            <option style={{ color: "black" }}>PGC</option>
-            <option style={{ color: "black" }}>ARETE PLAZA</option>
-            <option style={{ color: "black" }}>ARETE MALL</option>
-          </Select>
+          <DropMenu />
         </Flex>
         {/* {validForm ? ( */}
         <Flex
