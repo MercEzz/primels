@@ -28,7 +28,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import banner from "../serviced apartments imgs/MIVAN TECHNOLOGY TOWER.jpg";
 import apartment from "../serviced apartments imgs/serviced apartments icons/smart way of living - 1st.svg";
 import time from "../serviced apartments imgs/serviced apartments icons/smart way of living-2nd.svg";
@@ -100,8 +100,37 @@ import adani from "../serviced apartments imgs/ADANI.png";
 import linde from "../serviced apartments imgs/LINDE.png";
 import yanmar from "../serviced apartments imgs/YANMAR.png";
 import DropDown from "./DropDown";
-
+import "./serviceaptAnimation.css"
+import "./serviceaptStyle.css"
 const ServicedApartments = () => {
+  const reveal = () => {
+    var reveals = document.querySelectorAll(".reveal");
+    try{
+
+    for (var i = 0; i <= reveals.length; i++) {
+      
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i]
+        ? reveals[i].getBoundingClientRect().top
+        : null;
+      var elementVisible = 200;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }catch(e){
+    
+  }
+  }
+  useLayoutEffect(()=>{
+    window.addEventListener("scroll", reveal);
+    return()=>{
+      window.removeEventListener("scroll", reveal);
+    }
+  });
   return (
     <>
       {/* Banner section  */}
@@ -125,8 +154,10 @@ const ServicedApartments = () => {
           color="white"
           direction="column"
           pt="7.25rem"
+          overflow="hidden"
         >
           <Text
+            animation="serv-text-up 1 1s linear"
             fontFamily="goudy"
             fontSize="3rem"
             textShadow="black 1px 1px 10px"
@@ -135,6 +166,7 @@ const ServicedApartments = () => {
             WELCOME TO ARETE HOMES!
           </Text>
           <Heading
+            animation="serv-text-down 1 1s linear"
             fontFamily="avenir"
             fontSize="2.125rem"
             textShadow="black 1px 1px 10px"
@@ -149,8 +181,9 @@ const ServicedApartments = () => {
             align="center"
             justify="center"
             px="11.25rem"
+            overflow="hidden"
           >
-            <Box w="100%" pos="relative">
+            <Box w="100%" pos="relative" animation="serv-text-down 1 2s linear">
               <Image
                 w="100%"
                 h="18.75rem"
@@ -169,7 +202,7 @@ const ServicedApartments = () => {
                 STUDENT HOUSING
               </Heading>
             </Box>
-            <Box w="100%" pos="relative">
+            <Box w="100%" pos="relative" animation="serv-text-down 1 2s linear">
               <Image
                 w="100%"
                 h="18.75rem"
@@ -189,7 +222,7 @@ const ServicedApartments = () => {
                 CO-LIVING FOR PROFESSIONALS
               </Heading>
             </Box>
-            <Box w="100%" pos="relative">
+            <Box w="100%" pos="relative" animation="serv-text-down 1 2s linear">
               <Image
                 w="100%"
                 h="18.75rem"
@@ -213,6 +246,7 @@ const ServicedApartments = () => {
       </Flex>
       {/** Smart way of living section  **/}
       <Flex
+        overflow="hidden"
         w="100%"
         h="100%"
         px="6.25rem"
@@ -221,13 +255,13 @@ const ServicedApartments = () => {
         pt="5rem"
         pb="3.125rem"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
           A SMART WAY OF LIVING
         </Text>
         <Flex w="100%" h="100%" gap="1.25rem">
-          <Flex w="100%" align="center" justify="center" direction="column">
-            <Image mb="1rem" src={apartment} />
-            <Flex w="100%" align="center" mb="1rem">
+          <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
+            <Image mb="1rem" src={apartment} className="fadein reveal"/>
+            <Flex w="100%" align="center" mb="1rem" className="discoleft1 reveal">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -246,6 +280,7 @@ const ServicedApartments = () => {
               />{" "}
             </Flex>
             <Heading
+              className="fadein reveal"
               w="100%"
               fontFamily="avenir"
               fontSize="1.25rem"
@@ -254,9 +289,9 @@ const ServicedApartments = () => {
               Choose your APARTMENT
             </Heading>
           </Flex>
-          <Flex w="100%" align="center" justify="center" direction="column">
-            <Image mb="1rem" src={time} />
-            <Flex w="100%" align="center" mb="1rem">
+          <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
+            <Image mb="1rem" src={time} className="fadein2 reveal"/>
+            <Flex w="100%" align="center" mb="1rem" className="discoleft2 reveal">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -275,6 +310,7 @@ const ServicedApartments = () => {
               />{" "}
             </Flex>
             <Heading
+              className="fadein2 reveal"
               w="100%"
               fontFamily="avenir"
               fontSize="1.25rem"
@@ -283,9 +319,9 @@ const ServicedApartments = () => {
               Choose your Rental Duration
             </Heading>
           </Flex>
-          <Flex w="100%" align="center" justify="center" direction="column">
-            <Image mb="1rem" src={ringbell} />
-            <Flex w="100%" align="center" mb="1rem">
+          <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
+            <Image mb="1rem" src={ringbell} className="fadein3 reveal"/>
+            <Flex w="100%" align="center" mb="1rem" className="discoleft3 reveal">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -304,6 +340,7 @@ const ServicedApartments = () => {
               />{" "}
             </Flex>
             <Heading
+              className="fadein3 reveal"
               w="100%"
               fontFamily="avenir"
               fontSize="1.25rem"
@@ -312,9 +349,9 @@ const ServicedApartments = () => {
               Tailor the services your way
             </Heading>
           </Flex>
-          <Flex w="100%" align="center" justify="center" direction="column">
-            <Image mb="1rem" src={edit} />
-            <Flex w="100%" align="center" mb="1rem">
+          <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
+            <Image mb="1rem" src={edit} className="fadein4 reveal"/>
+            <Flex w="100%" align="center" mb="1rem" className="discoleft4 reveal">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -333,6 +370,7 @@ const ServicedApartments = () => {
               />{" "}
             </Flex>
             <Heading
+              className="fadein4 reveal"
               w="100%"
               fontFamily="avenir"
               fontSize="1.25rem"
@@ -351,12 +389,14 @@ const ServicedApartments = () => {
         direction="column"
         py="1.875rem"
         px="6.25rem"
+        overflow="hidden"
       >
         {" "}
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.563rem">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.563rem" className="serv-text-up reveal">
           PREMIUM SMART HOMES
         </Text>
         <Text
+          className="fadein reveal"
           textAlign="center"
           fontFamily="goudy"
           fontSize="1.125rem"
@@ -370,9 +410,10 @@ const ServicedApartments = () => {
         Carousels
       </Flex>
       {/** premium smart homes 2nd section **/}
-      <Flex w="100%" h="100%" px="6.25rem" py="3.125rem">
+      <Flex w="100%" h="100%" px="6.25rem" py="3.125rem" overflow="hidden">
         <Flex w="30%">video</Flex>
         <Flex
+          className="discoup reveal"
           w="10%"
           h="100%"
           direction="column"
@@ -558,8 +599,9 @@ const ServicedApartments = () => {
           </SimpleGrid>
         </Flex>
       </Flex>
-      <Flex w="100%" h="100%" direction="column" px="6.25rem" py="1.875rem">
+      <Flex w="100%" h="100%" direction="column" px="6.25rem" py="1.875rem" overflow="hidden">
         <Text
+          className="serv-text-up reveal"
           textAlign="center"
           fontFamily="goudy"
           fontSize="2.5rem"
@@ -568,6 +610,7 @@ const ServicedApartments = () => {
           PREMIUM HOME SERVICES
         </Text>
         <Flex
+          className="fadein reveal"
           w="100%"
           h="100%"
           align="center"
@@ -590,6 +633,7 @@ const ServicedApartments = () => {
           ))}
         </Flex>{" "}
         <Flex
+          className="fadein reveal"
           w="100%"
           h="100%"
           align="center"
@@ -613,8 +657,9 @@ const ServicedApartments = () => {
         </Flex>
       </Flex>
       {/* amenities sec */}
-      <Flex w="100%" h="100%" pt="3.125rem" pb="0.938rem" direction="column">
+      <Flex w="100%" h="100%" pt="3.125rem" pb="0.938rem" direction="column" overflow="hidden">
         <Text
+          className="serv-text-up reveal"
           w="100%"
           textAlign="center"
           fontFamily="goudy"
@@ -623,7 +668,9 @@ const ServicedApartments = () => {
         >
           AMENITIES
         </Text>
+        <Flex overflow="hidden">
         <Heading
+          className="serv-text-down reveal"
           w="100%"
           textAlign="center"
           fontFamily="avenir"
@@ -632,10 +679,11 @@ const ServicedApartments = () => {
         >
           EVERYTHING UNDER ONE ROOF
         </Heading>
+        </Flex>
         <Flex w="100%" h="100%" gap="0.938rem">
           <Flex w="100%" h="100%">
             <Grid templateColumns="repeat(2, 1fr)" gap="0.938rem">
-              <GridItem rowSpan={2} colSpan={1} pos="relative">
+              <GridItem rowSpan={2} colSpan={1} pos="relative" className="serv-expand-img reveal">
                 <Image
                   w="100%"
                   h="35.313rem"
@@ -669,7 +717,7 @@ const ServicedApartments = () => {
                   </Heading>
                 </Box>
               </GridItem>
-              <GridItem pos="relative">
+              <GridItem pos="relative" className="serv-expand-img reveal">
                 <Image w="100%" h="17.188rem" objectFit="cover" src={garden} />{" "}
                 <Box
                   w="100%"
@@ -698,7 +746,7 @@ const ServicedApartments = () => {
                   </Heading>
                 </Box>
               </GridItem>
-              <GridItem pos="relative">
+              <GridItem pos="relative" className="serv-expand-img reveal">
                 {" "}
                 <Image
                   w="100%"
@@ -733,7 +781,7 @@ const ServicedApartments = () => {
                   </Heading>
                 </Box>
               </GridItem>
-              <GridItem colSpan={2} pos="relative">
+              <GridItem colSpan={2} pos="relative" className="serv-expand-img reveal">
                 {" "}
                 <Image
                   w="100%"
@@ -777,7 +825,7 @@ const ServicedApartments = () => {
               // templateRows="repeat(3, 1fr)"
               gap="0.938rem"
             >
-              <GridItem colSpan={2} pos="relative">
+              <GridItem colSpan={2} pos="relative" className="serv-expand-img reveal">
                 {" "}
                 <Image
                   w="100%"
@@ -812,7 +860,7 @@ const ServicedApartments = () => {
                   </Heading>
                 </Box>
               </GridItem>
-              <GridItem pos="relative">
+              <GridItem pos="relative" className="serv-expand-img reveal">
                 {" "}
                 <Image
                   w="100%"
@@ -847,7 +895,7 @@ const ServicedApartments = () => {
                   </Heading>
                 </Box>
               </GridItem>{" "}
-              <GridItem rowSpan={2} colSpan={1} pos="relative">
+              <GridItem rowSpan={2} colSpan={1} pos="relative" className="serv-expand-img reveal">
                 <Image w="100%" h="35.313rem" objectFit="cover" src={cafe} />
                 <Box
                   w="100%"
@@ -876,7 +924,7 @@ const ServicedApartments = () => {
                   </Heading>
                 </Box>
               </GridItem>
-              <GridItem pos="relative">
+              <GridItem pos="relative" className="serv-expand-img reveal">
                 {" "}
                 <Image
                   w="100%"
@@ -917,6 +965,7 @@ const ServicedApartments = () => {
       </Flex>
       {/*move in sec*/}
       <Flex
+        overflow="hidden"
         w="100%"
         h="95vh"
         bgGradient="linear(to-b, #DFBD69, #B88746)"
@@ -926,22 +975,29 @@ const ServicedApartments = () => {
       >
         <Flex w="100%" h="100%">
           <Flex
+            overflow="hidden"
             w="55%"
             h="100%"
             align="flex-start"
             justify="center"
             direction="column"
             pl="6.25rem"
+            
           >
+            <Flex overflow="hidden">
             <Heading
+              className="serv-text-up reveal"
               fontFamily="avenir"
               color="black"
               fontSize="2.125rem"
               pb="0.938rem"
             >
               MOVE IN WITH JUST YOUR CLOTHES
-            </Heading>{" "}
+            </Heading>
+            </Flex>
+            <Flex overflow="hidden">
             <Heading
+              className="serv-text-down reveal"
               fontFamily="avenir"
               color="white"
               fontSize="2.125rem"
@@ -949,11 +1005,13 @@ const ServicedApartments = () => {
             >
               WE GOT THE REST COVERED
             </Heading>
-            <Text fontFamily="veralaRound" fontSize="1.25rem" pb="1.563rem">
+            </Flex>
+            <Text fontFamily="veralaRound" fontSize="1.25rem" pb="1.563rem" className="fadein2 reveal">
               You can choose from an array of apartments with services and
               customize according to your needs.
             </Text>
             <Button
+              className="fadein2 reveal"
               bgColor="#000"
               color="#fff"
               _hover={{ bgColor: "#000", color: "#fff" }}
@@ -980,6 +1038,7 @@ const ServicedApartments = () => {
           </Flex>
         </Flex>
         <Flex
+          className="fadein2 reveal"
           w="100%"
           direction="column"
           align="center"
@@ -1013,8 +1072,9 @@ const ServicedApartments = () => {
             direction="column"
             justify="center"
             pl="6.25rem"
+            
           >
-            <Text w="100%" fontFamily="goudy" fontSize="2.5rem" pb="1.563rem">
+            <Text w="100%" fontFamily="goudy" fontSize="2.5rem" pb="1.563rem" className="serv-text-up reveal">
               A LIFE WHERE YOU DON’T HAVE TO WAIT FOR WEEKENDS TO ENJOY
             </Text>
             <Text
@@ -1138,12 +1198,12 @@ const ServicedApartments = () => {
         pb="3.125rem"
       >
         {" "}
-        <Text fontFamily="goudy" pb="1.875rem" fontSize="2.5rem">
+        <Text fontFamily="goudy" pb="1.875rem" fontSize="2.5rem" className="serv-text-up reveal">
           LOCATION ADVANTAGE
         </Text>
         <Flex w="100%" h="100%" justify="space-between" pb="3.125rem">
           <Flex w="60%" h="100%" direction="column">
-            <Box w="100%" h="29.25rem">
+            <Box w="100%" h="29.25rem" className="expand reveal">
               <embed
                 class="gmap_iframe"
                 width="100%"
@@ -1173,6 +1233,7 @@ const ServicedApartments = () => {
             </Button>
           </Flex>
           <Flex
+            className="discoup reveal"
             w="10%"
             h="100%"
             direction="column"
@@ -1205,7 +1266,7 @@ const ServicedApartments = () => {
             alignSelf="center"
             justify="center"
           >
-            <Flex pb="1.563rem" align="center">
+            <Flex pb="1.563rem" align="center" className="fadein reveal">
               <Box
                 borderRadius="50%"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
@@ -1224,7 +1285,7 @@ const ServicedApartments = () => {
                 TEMPLES
               </Heading>
             </Flex>
-            <Flex pb="1.563rem" align="center">
+            <Flex pb="1.563rem" align="center" className="fadein reveal">
               <Box
                 borderRadius="50%"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
@@ -1243,7 +1304,7 @@ const ServicedApartments = () => {
                 HOSPITALS
               </Heading>
             </Flex>
-            <Flex pb="1.563rem" align="center">
+            <Flex pb="1.563rem" align="center" className="fadein reveal">
               <Box
                 borderRadius="50%"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
@@ -1262,7 +1323,7 @@ const ServicedApartments = () => {
                 EDUCATIONAL INSTITUTES
               </Heading>
             </Flex>{" "}
-            <Flex pb="1.563rem" align="center">
+            <Flex pb="1.563rem" align="center" className="fadein reveal">
               <Box
                 borderRadius="50%"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
@@ -1281,7 +1342,7 @@ const ServicedApartments = () => {
                 SOCIAL FABRIC
               </Heading>
             </Flex>{" "}
-            <Flex pb="1.563rem" align="center">
+            <Flex pb="1.563rem" align="center" className="fadein reveal">
               <Box
                 borderRadius="50%"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
@@ -1300,7 +1361,7 @@ const ServicedApartments = () => {
                 INDUSTRIAL PARKS
               </Heading>
             </Flex>
-            <Flex align="center">
+            <Flex align="center" className="fadein reveal">
               <Box
                 borderRadius="50%"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
@@ -1324,7 +1385,7 @@ const ServicedApartments = () => {
         <Flex w="100%">
           <Flex w="100%" direction="column">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem">
+            <Flex w="100%" align="center" pb="1.563rem" className="discoball-slidein-left1 reveal">
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -1348,6 +1409,7 @@ const ServicedApartments = () => {
               />
             </Flex>
             <Heading
+              className="fadein reveal"
               textAlign="center"
               fontFamily="avenir"
               fontSize="1.5rem"
@@ -1355,7 +1417,7 @@ const ServicedApartments = () => {
             >
               5 MINS
             </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem" className="fadein reveal">
               <ListItem pb="0.625rem">Velammal International School</ListItem>
               <ListItem pb="0.625rem">Origin By Mahindra</ListItem>
               <ListItem>Ponneri Railway Station</ListItem>
@@ -1363,7 +1425,7 @@ const ServicedApartments = () => {
           </Flex>
           <Flex w="100%" direction="column">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem">
+            <Flex w="100%" align="center" pb="1.563rem" className="discoball-slidein-left2 reveal">
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -1387,6 +1449,7 @@ const ServicedApartments = () => {
               />
             </Flex>
             <Heading
+              className="fadein2 reveal"
               textAlign="center"
               fontFamily="avenir"
               fontSize="1.5rem"
@@ -1394,14 +1457,14 @@ const ServicedApartments = () => {
             >
               10 MINS
             </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem" className="fadein2 reveal">
               <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
               <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
               <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
               <ListItem>R.M.K. Engineering College</ListItem>
             </UnorderedList>
           </Flex>
-          <Flex w="100%" direction="column">
+          <Flex w="100%" direction="column" className="discoball-slidein-left3 reveal">
             {" "}
             <Flex w="100%" align="center" pb="1.563rem">
               <Divider
@@ -1427,6 +1490,7 @@ const ServicedApartments = () => {
               />
             </Flex>
             <Heading
+              className="fadein3 reveal"
               textAlign="center"
               fontFamily="avenir"
               fontSize="1.5rem"
@@ -1434,7 +1498,7 @@ const ServicedApartments = () => {
             >
               20 MINS
             </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem" className="fadein3 reveal">
               <ListItem pb="0.625rem">Gummidipoondi SIPCOT</ListItem>
               <ListItem pb="0.625rem">Amazon</ListItem>
               <ListItem pb="0.625rem">Minjur</ListItem>
@@ -1443,7 +1507,7 @@ const ServicedApartments = () => {
           </Flex>
           <Flex w="100%" direction="column">
             {" "}
-            <Flex w="100%" align="center" pb="1.563rem">
+            <Flex w="100%" align="center" pb="1.563rem" className="discoball-slidein-left4 reveal">
               <Divider
                 orientation="horizontal"
                 border="3px solid"
@@ -1467,6 +1531,7 @@ const ServicedApartments = () => {
               />
             </Flex>
             <Heading
+              className="fadein4 reveal"
               textAlign="center"
               fontFamily="avenir"
               fontSize="1.5rem"
@@ -1474,7 +1539,7 @@ const ServicedApartments = () => {
             >
               30 MINS
             </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem">
+            <UnorderedList fontFamily="veralaRound" fontSize="1rem" className="fadein4 reveal">
               <ListItem pb="0.625rem">Sri City</ListItem>
               <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
             </UnorderedList>
