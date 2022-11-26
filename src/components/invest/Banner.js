@@ -6,6 +6,7 @@ const Banner = () => {
   return (
     <Flex w="100%" h="100vh" pos="relative">
       <Image
+        animation="serv-expand-img 1 1s linear"
         w="100%"
         h="100%"
         objectFit="cover"
@@ -20,6 +21,7 @@ const Banner = () => {
         justify="center"
       >
         <Text
+          animation="fadein2 1 2s linear"
           pos="absolute"
           top="50%"
           transform="translateY(-150%)"
