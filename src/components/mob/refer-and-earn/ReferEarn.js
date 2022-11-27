@@ -2,7 +2,7 @@ import { Button, Flex, Heading, Icon, Image } from "@chakra-ui/react";
 import React from "react";
 import { BiInfinite } from "react-icons/bi";
 // images
-import banner from "../refer and earn imgs/BANNER IMAGE.png";
+import banner from "../../refer and earn imgs/BANNER IMAGE.png";
 import "./animations.css";
 import "./rne.css";
 

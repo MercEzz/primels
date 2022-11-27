@@ -21,11 +21,11 @@ import { EmailIcon } from "@chakra-ui/icons";
 import React, { useLayoutEffect } from "react";
 import { TriangleDownIcon, PhoneIcon } from "@chakra-ui/icons";
 // images
-import img1 from "../refer and earn imgs/1ST STEP.png";
-import img2 from "../refer and earn imgs/2ND STEP.png";
-import img3 from "../refer and earn imgs/3RD STEP.png";
-import bookIll from "../refer and earn imgs/book a visit illustration.png";
-import carIll from "../refer and earn imgs/CAR ICON.svg";
+import img1 from "../../refer and earn imgs/1ST STEP.png";
+import img2 from "../../refer and earn imgs/2ND STEP.png";
+import img3 from "../../refer and earn imgs/3RD STEP.png";
+import bookIll from "../../refer and earn imgs/book a visit illustration.png";
+import carIll from "../../refer and earn imgs/CAR ICON.svg";
 import { useState } from "react";
 import "./animations.css";
 import "./rne.css";
@@ -135,10 +135,11 @@ const ReferAFriend = () => {
         <Flex
           w="100%"
           h="100%"
-          direction="column"
+          direction="row"
           className="fadein reveal"
           overflow="hidden"
         >
+          <Flex direction="column">
           <Heading fontFamily="avenir" fontSize="1.5rem">
             STEP 1
           </Heading>{" "}
@@ -166,29 +167,25 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem">
+          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1rem">
             Fill up the form on website & submit the details of as many friends
             & family members you would like to refer.
           </Text>
-          <Image w="100%" h="16rem" p="2rem" src={img1} />
+          </Flex>
+          <Image w="60%" h="16rem" src={img1} />
         </Flex>
-        <Flex w="100%" direction="column" overflow="hidden">
-          <Heading fontFamily="avenir" fontSize="1.5rem" className="fadein-2sdelay reveal">
+        <Flex w="100%" direction="row" overflow="hidden">
+        <Image w="60%" h="16rem" src={img2} className="fadein reveal"/>
+        <Flex direction="column">
+          <Heading fontFamily="avenir" fontSize="1.5rem" className="fadein reveal">
             STEP 2
           </Heading>
           <Flex
             w="100%"
             align="center"
             py="0.625rem"
-            className="sliderightdisco-2sdelay reveal"
+            className="sliderightdisco reveal"
           >
-            <Divider
-              w="89%"
-              orientation="horizontal"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />{" "}
             <Box
               height="1.875rem"
               width="2.1rem"
@@ -199,22 +196,30 @@ const ReferAFriend = () => {
               borderRadius="50%"
               my="1"
             />
+            <Divider
+              w="89%"
+              orientation="horizontal"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />{" "}
           </Flex>{" "}
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem"  className="fadein-2sdelay reveal">
+          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1rem"  className="fadein-2sdelay reveal">
             Your provided referral will be contacted by our team and complete
             assistance will be provided in the booking process.
-          </Text>{" "}
-          <Image w="100%" h="14.625rem" p="2rem" src={img2} className="fadein-2sdelay reveal"/>
+          </Text>
+          </Flex>
         </Flex>
-        <Flex w="100%" direction="column" overflow="hidden">
-          <Heading fontFamily="avenir" fontSize="1.5rem" className="fadein-4sdelay reveal">
+        <Flex w="100%" direction="row" overflow="hidden">
+        <Flex direction="column">
+          <Heading fontFamily="avenir" fontSize="1.5rem" className="fadein reveal">
             STEP 3
           </Heading>
           <Flex
             w="100%"
             align="center"
             py="0.625rem"
-            className="sliderightdisco-4sdelay reveal"
+            className="sliderightdisco reveal"
           >
             <Divider
               w="89%"
@@ -234,11 +239,12 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>{" "}
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem" className="fadein-4sdelay reveal">
+          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1rem" className="fadein reveal">
             Every time your referral becomes a successful booking, you’ll earn
             rewards upto Rs 1 Lakh.
           </Text>
-          <Image w="100%" h="16.75rem" p="2rem" src={img3} className="fadein-4sdelay reveal"/>
+          </Flex>
+          <Image w="60%" h="16rem" src={img3} className="fadein reveal"/>
         </Flex>
       </Flex>
       <Flex
@@ -571,12 +577,12 @@ const BookAVisit = () => {
             YOU ARE ONLY ONE RIDE AWAY FROM YOUR DREAM HOME
           </Text>
           <div className="fadein reveal">
-          <HStack w="100%" align="center" justify="center" pb="3.125rem">
+          <HStack w="80%" align="center" justify="center" pb="3.125rem">
             <Image src={carIll} />
             <Heading
               textAlign="center"
               fontFamily="avenir"
-              fontSize={{base:"1rem",lg:"1.5rem"}}
+              fontSize={{base:"1rem"}}
               bgGradient="linear(to-l, #B88746, #DFBD69)"
               bgClip="text"
             >
@@ -592,7 +598,7 @@ const BookAVisit = () => {
               
               GET IN TOUCH WITH US
             </Heading>
-            <Flex w="100%" align="center" justify="center" gap="3.125rem">
+            <Flex w="100%" direction="column" align="center" justify="center" gap="3.125rem">
               <Flex w="100%" direction="column" align="center">
                 <EmailIcon h="18px" w="28px" mb="0.625rem" />
                 <Heading fontFamily="avenir" fontSize="1.25rem">
