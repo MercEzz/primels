@@ -43,8 +43,8 @@ const AddresSec = () => {
   }, [isInView, animateFlx, animateFade]);
 
   return (
-    <Flex ref={ref} w="100%" h="100vh">
-      <Flex w="40%" h="100%" direction="column" align="center" justify="center">
+    <Flex ref={ref} w="100%" h="110vh" direction="column">
+      <Flex w="100%" h="100%" direction="column" align="center" justify="center">
         <MtnFlx
           as={Link}
           initial={{ opacity: 0, scale: 0.5 }}
@@ -56,8 +56,8 @@ const AddresSec = () => {
           py="1.563rem"
           align="center"
           justify="center"
-          pl="6.25rem"
-          pr="3.125rem"
+          pl="1rem"
+          pr="1rem"
           bgGradient={add ? "linear(to-b, #B88746, #DFBD69)" : "white"}
           _hover={{ textDecoration: "none" }}
           onClick={(e) => {
@@ -115,8 +115,9 @@ const AddresSec = () => {
           h="100%"
           align="center"
           justify="center"
-          pl="6.25rem"
-          pr="3.125rem"
+          py="1.563rem"
+          pl="1rem"
+          pr="1rem"
           _hover={{ textDecoration: "none" }}
           bgGradient={add ? "white" : "linear(to-b, #B88746, #DFBD69)"}
           onClick={(e) => {
@@ -170,13 +171,13 @@ const AddresSec = () => {
         animate={animateFlx}
         transition={{ duration: 2, type: "just" }}
         h="100%"
-        w="60%"
+        w="100%"
       >
         {add ? (
           <iframe
             class="gmap_iframe"
             width="100%"
-            height="100%"
+            height="300rem"
             frameborder="0"
             scrolling="no"
             marginheight="0"
@@ -187,7 +188,7 @@ const AddresSec = () => {
           <iframe
             class="gmap_iframe"
             width="100%"
-            height="100%"
+            height="300rem"
             frameborder="0"
             scrolling="no"
             marginheight="0"

@@ -19,6 +19,7 @@ import SkyhighInvestSc from "./screens/SkyhighInvestSc";
 import AretehomesInvestSc from "./screens/AretehomesInvestSc";
 import { useEffect, useState } from "react";
 import MobReferAndEarn from "./screens/ReferAndEarn .mob";
+import MobContact from "./screens/Contact.mob";
 
 function App() {
   const [isMobile,setIsMobile]=useState(false);
@@ -87,7 +88,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeSc />} />
             <Route path="/careers" element={<CareersSc />} />
-            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/contact-us" element={<MobContact />} />
             <Route path="/energy-get-in-touch-with-us" element={<EnergySc />} />
             <Route path="/channel-partner" element={<ChannelPartner />} />
             <Route path="/sky-high" element={<SkyHighSc />} />
