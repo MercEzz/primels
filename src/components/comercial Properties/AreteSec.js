@@ -796,7 +796,7 @@ const AreteMall = () => {
         </Text>
         <Flex w="100%">
           <Flex
-            w={{ base: "47.5%", lg: "100%" }}
+            // w={{ base: "47.5%", lg: "100%" }}
             h="100%"
             gap="1.25rem"
             direction={{ base: "column", lg: "row" }}
@@ -807,12 +807,12 @@ const AreteMall = () => {
               <Image
                 zIndex="2"
                 src={retailShop}
-                h="15rem"
+                h={{ base: "8.563rem", lg: "15rem" }}
                 className="slidein-bottom reveal"
               />
               <Heading
                 fontFamily="avenir"
-                fontSize="1.25rem"
+                fontSize={{ base: "1rem", lg: "1.25rem" }}
                 pt="1rem"
                 className="Icon-fadein reveal"
               >
@@ -822,13 +822,13 @@ const AreteMall = () => {
             <Flex w="100%" direction="column" align="center" overflow="hidden">
               <Image
                 zIndex="2"
-                h="15rem"
+                h={{ base: "8.563rem", lg: "15rem" }}
                 src={market}
                 className="slidein-bottom-2sdelay reveal"
               />
               <Heading
                 fontFamily="avenir"
-                fontSize="1.25rem"
+                fontSize={{ base: "1rem", lg: "1.25rem" }}
                 pt="1rem"
                 className="fadein-2sdelay reveal"
               >
@@ -839,12 +839,12 @@ const AreteMall = () => {
               <Image
                 zIndex="2"
                 src={pharmacy}
-                h="15rem"
+                h={{ base: "8.563rem", lg: "15rem" }}
                 className="slidein-bottom-4sdelay reveal"
               />
               <Heading
                 fontFamily="avenir"
-                fontSize="1.25rem"
+                fontSize={{ base: "1rem", lg: "1.25rem" }}
                 pt="1rem"
                 className="fadein-4sdelay reveal"
               >
@@ -857,11 +857,11 @@ const AreteMall = () => {
             align="center"
             pb="0.625rem"
             overflow="hidden"
-            mx="1.563rem"
+            px={{ base: "0.938rem", lg: "1.563rem" }}
             direction={{ base: "column", lg: "row" }}
           >
             {" "}
-            <Flex w="100%" align="center" overflow="hidden">
+            <Flex w="100%" h="100%" align="center" overflow="hidden">
               <Flex
                 w="100%"
                 align="center"
@@ -952,7 +952,7 @@ const AreteMall = () => {
             </Flex>
           </Flex>
           <Flex
-            w={{ base: "47.5%", lg: "100%" }}
+            // w={{ base: "47.5%", lg: "100%" }}
             h="100%"
             gap="1.25rem"
             align="center"
@@ -960,49 +960,67 @@ const AreteMall = () => {
             overflow="hidden"
             direction={{ base: "column", lg: "row" }}
           >
-            <Flex w="100%" direction="column" align="center">
+            <Flex
+              w="100%"
+              direction={{ base: "column-reverse", lg: "column" }}
+              align="center"
+            >
               <Heading
                 fontFamily="avenir"
-                fontSize="1.25rem"
-                pb="1rem"
+                fontSize={{ base: "1rem", lg: "1.25rem" }}
+                pb={{ base: "0", lg: "1rem" }}
+                pt={{ base: "1rem", lg: "0" }}
                 className="Icon-fadein reveal"
+                textAlign="center"
               >
                 FOOD COURT
               </Heading>
               <Image
                 src={foodCourt}
-                h="15rem"
+                h={{ base: "8.563rem", lg: "15rem" }}
                 className="slidein-top reveal"
                 id="b0"
               />
             </Flex>
-            <Flex w="100%" direction="column" align="center">
+            <Flex
+              w="100%"
+              direction={{ base: "column-reverse", lg: "column" }}
+              align="center"
+            >
               <Heading
                 fontFamily="avenir"
-                fontSize="1.25rem"
-                pb="1rem"
+                fontSize={{ base: "1rem", lg: "1.25rem" }}
+                pb={{ base: "0", lg: "1rem" }}
+                pt={{ base: "1rem", lg: "0" }}
+                textAlign="center"
                 className="fadein-2sdelay reveal"
               >
                 8 SCREEN MULTIPLEX
               </Heading>
               <Image
                 src={multiplex}
-                h="15rem"
+                h={{ base: "8.563rem", lg: "15rem" }}
                 className="slidein-top-2sdelay reveal"
               />
             </Flex>
-            <Flex w="100%" direction="column" align="center">
+            <Flex
+              w="100%"
+              direction={{ base: "column-reverse", lg: "column" }}
+              align="center"
+            >
               <Heading
                 fontFamily="avenir"
-                fontSize="1.25rem"
-                pb="1rem"
+                fontSize={{ base: "1rem", lg: "1.25rem" }}
+                pb={{ base: "0", lg: "1rem" }}
+                pt={{ base: "1rem", lg: "0" }}
+                textAlign="center"
                 className="fadein-2sdelay reveal"
               >
                 GAMING ARCADE
               </Heading>
               <Image
                 src={gamingArena}
-                h="15rem"
+                h={{ base: "8.563rem", lg: "15rem" }}
                 className="slidein-top-4sdelay reveal"
               />
             </Flex>
@@ -1510,7 +1528,7 @@ const LocationAndFormPlaza = () => {
           fontSize={{ base: "1.5rem", lg: "2.5rem" }}
           fontFamily="goudy"
           textTransform="uppercase"
-          px={{ base: "6rem", lg: "0" }}
+          // px={{ base: "6rem", lg: "0" }}
           pb="1.563rem"
         >
           pre book & avail best offers
@@ -1977,6 +1995,7 @@ const LocationAndFormMall = () => {
               align="center"
               pb={{ base: "0", lg: "1.563rem" }}
               id="2"
+              direction={{ base: "column", lg: "row" }}
               className="discoball-slidein-left3 reveal"
             >
               <Divider
@@ -2125,7 +2144,7 @@ const LocationAndFormMall = () => {
           fontSize={{ base: "1.5rem", lg: "2.5rem" }}
           fontFamily="goudy"
           textTransform="uppercase"
-          px={{ base: "6rem", lg: "0" }}
+          // px={{ base: "6rem", lg: "0" }}
           pb="1.563rem"
         >
           pre book & avail best offers
