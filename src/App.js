@@ -20,6 +20,8 @@ import AretehomesInvestSc from "./screens/AretehomesInvestSc";
 import { useEffect, useState } from "react";
 import MobReferAndEarn from "./screens/ReferAndEarn .mob";
 import MobContact from "./screens/Contact.mob";
+import MobChannelPartner from "./screens/ChannelPartner.mob";
+import MobBlogSc from "./screens/BlogSc.mob";
 
 function App() {
   const [isMobile,setIsMobile]=useState(false);
@@ -90,7 +92,7 @@ function App() {
             <Route path="/careers" element={<CareersSc />} />
             <Route path="/contact-us" element={<MobContact />} />
             <Route path="/energy-get-in-touch-with-us" element={<EnergySc />} />
-            <Route path="/channel-partner" element={<ChannelPartner />} />
+            <Route path="/channel-partner" element={<MobChannelPartner />} />
             <Route path="/sky-high" element={<SkyHighSc />} />
             <Route path="/arete-homes" element={<AreteHomes />} />
             <Route path="/news-and-media" element={<NewsMediaSc />} />
@@ -100,7 +102,7 @@ function App() {
               element={<CommercialProperties />}
             />
             <Route path="/serviced-apartments" element={<ServicedApartSc />} />
-            <Route path="/blog" element={<BlogSc />} />
+            <Route path="/blog" element={<MobBlogSc />} />
             <Route path="/sky-high-invest" element={<SkyhighInvestSc />} />
             <Route path="/arete-homes-invest" element={<AretehomesInvestSc />} />
           </Routes>
