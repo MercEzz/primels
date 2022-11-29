@@ -28,7 +28,7 @@ import hall from "../blog imgs/spacejoy-q3Qd86sfaoU-unsplash.jpg";
 import key from "../blog imgs/maria-ziegler-jJnZg7vBfMs-unsplash.jpg";
 import kidbed from "../blog imgs/toa-heftiba-bcLE7reXFLM-unsplash.jpg";
 import sunlight from "../blog imgs/jared-rice-NTyBbu66_SI-unsplash.jpg";
-import spacejoy from "../blog imgs/spacejoy-sh6Aj176NAQ-unsplash.jpg";
+import spacejoy from "../blog imgs/boxes.jpg";
 // icons
 import {
   AiOutlineYoutube,
@@ -136,6 +136,7 @@ const Blog = () => {
                   />
                 </Flex>
                 <Flex
+                  zIndex="3"
                   overflow="hidden"
                   w="100%"
                   h="30.688rem"
@@ -156,6 +157,7 @@ const Blog = () => {
                     future?
                   </Text>
                   <Flex
+                    zIndex="2"
                     className="blog-text-right reveal"
                     pos="absolute"
                     w="110%"
@@ -340,8 +342,7 @@ const Blog = () => {
                     <Text fontFamily="veralaRound" fontSize="1.125rem">
                       With modernisation making life simpler and unfolding the
                       chapters of growth for every citizen, its time to
-                      understand the advantages of apartments in gated community
-                      over The...…
+                      understand the advantages of apartments in gated community...…
                     </Text>
                   </Flex>
                 </Flex>
@@ -500,7 +501,7 @@ const BlogForm = () => {
   return (
     <>
       <Flex h="100%" justify="flex-end" pb="0.938rem">
-        <Icon as={AiOutlineYoutube} w="2.563rem" h="1.875rem" />
+        <Icon as={AiOutlineYoutube} w="2.563rem" h="2.1rem" />
         <Icon as={AiOutlineInstagram} w="1.875rem" h="1.875rem" />
         <Icon as={RiFacebookCircleLine} w="1.875rem" h="1.875rem" />
         <Icon as={AiOutlineLinkedin} w="1.875rem" h="1.875rem" />
@@ -630,32 +631,6 @@ const BlogForm = () => {
             SUBMIT NOW
           </Button>
         </form>
-      </Flex>
-      <Flex w="100%" h="100%" direction="column" pt="1.563rem">
-        <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
-          POPULAR BLOGS
-        </Heading>
-        <VStack
-          divider={<StackDivider borderColor="#B88746" />}
-          spacing={"0.938rem"}
-          align="flex-start"
-        >
-          <Box>
-            <Text fontFamily="veralaRound" fontSize="1rem">
-              Why should you choose flat over independent house?
-            </Text>
-          </Box>
-          <Box>
-            <Text fontFamily="veralaRound" fontSize="1rem">
-              Why investing in residential property, a must for better future?
-            </Text>
-          </Box>
-          <Box>
-            <Text fontFamily="veralaRound" fontSize="1rem">
-              Amenities to ensure when buying a rented properties for sale
-            </Text>
-          </Box>
-        </VStack>
       </Flex>
     </>
   );
