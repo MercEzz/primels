@@ -543,6 +543,7 @@ const BookAVisit = () => {
         pb="3.125rem"
       >
         <Image
+          w="45%"
           className="expandcar reveal"
           src={bookIll}
           pos="absolute"
