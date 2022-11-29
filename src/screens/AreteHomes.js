@@ -13,10 +13,12 @@ import EleventhSec from "../components/arete-homes/LocationAdv";
 import TwelvethSec from "../components/arete-homes/SmartInvest";
 import LastSec from "../components/arete-homes/HappyFamilies";
 import DropDown from "../components/arete-homes/DropDown";
+import DownloadBtn from "../components/sky-high/DownloadBtn";
 
 const AreteHomes = () => {
   return (
     <>
+      <DownloadBtn />
       <FirstSec />
       <SecondSec />
       <ThirdSec />

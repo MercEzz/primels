@@ -33,7 +33,8 @@ const MainSec = () => {
           position: "fixed",
           top: 0,
           left: 0,
-          minHeight: "100%",
+          height:"100vh",
+          minHeight: "100vh",
           minWidth: "100%",
           // zIndex: -1,
         }}

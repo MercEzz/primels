@@ -58,21 +58,6 @@ const ReferEarn = () => {
         >
           Unlimited Times
         </Heading>
-        <Button
-          style={{ opactiy: 0, animation: "fadein-2sdelay 1 4s linear" }}
-          w="fit-content"
-          bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-          color="white"
-          fontSize="1rem"
-          fontFamily="avenir"
-          fontWeight="bold"
-          _hover={{
-            bgGradient: "linear(to-b, #DFBD69, #B88746)",
-          }}
-          _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
-        >
-          BOOK A SITE VISIT
-        </Button>
       </Flex>
     </Flex>
   );

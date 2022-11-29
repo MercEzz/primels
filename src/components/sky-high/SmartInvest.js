@@ -34,7 +34,7 @@ const TenthSec = () => {
         transition="all 2s"
         fontFamily="goudy"
         fontSize="2.5rem"
-        mb="1.562rem"
+        mb="0.937rem"
       >
         SMART INVEST
       </Text>
@@ -44,7 +44,7 @@ const TenthSec = () => {
         fontFamily="avenir"
         fontSize="2.125rem"
         textAlign="center"
-        mb="1.563rem"
+        mb="0.937rem"
       >
         AN EXCELLENT INVESTMENT OPPORTUNITY IN A <br />
         LIFETIME GROWING ASSET

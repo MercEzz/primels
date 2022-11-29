@@ -39,7 +39,7 @@ const ThirdSec = () => {
       h="100%"
       pl="1.563rem"
       pr="1.563rem"
-      pt="5rem"
+      pt="1rem"
       direction="column"
       align="center"
       justify="center"

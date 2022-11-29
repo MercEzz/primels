@@ -37,6 +37,8 @@ import towerA6_2 from "../arete-homes imgs/TOWER A6-2.png";
 import towerA6_3 from "../arete-homes imgs/TOWER A6-3.jpg";
 import towerA6_4 from "../arete-homes imgs/TOWER A6-4.jpg";
 
+;
+
 const settings = {
   infinite: true,
   autoplay: true,
@@ -50,6 +52,29 @@ const settings = {
 };
 
 const TenthSec = () => {
+  const [tower, setTower] = useState("TOWER A3")
+  const handleClick=(event)=>{
+    setTower(String(event.target.innerText));
+  }
+  const renderTower=()=>{
+    switch (tower){
+    case "TOWER A3":
+        return <TowerA3/>;
+        break;
+    case "TOWER A4":
+        return <TowerA4/>;
+        break;
+    case "TOWER A5":
+      return <TowerA5/>;
+        break;
+    case "TOWER A6":
+      return <TowerA6/>;
+        break;
+    default:
+        return <></>
+        break;
+}
+  }
   return (
     <Flex
       w="100%"
@@ -69,13 +94,14 @@ const TenthSec = () => {
       <Flex w="100%" h="100%" pb="0.938rem">
         {" "}
         <Button
+          onClick={(e)=>handleClick(e)}
           borderRadius="none"
           border="1px solid #DFBD69"
           fontSize="1.25rem"
           p="0.937rem"
           fontFamily="avenir"
           mr="0.625rem"
-          bgColor="#DFBD69"
+          bgColor={tower==="TOWER A3"?"#DFBD69":"white"}
           color="black"
           _hover={{
             bgColor: "#B88746",
@@ -85,9 +111,10 @@ const TenthSec = () => {
           TOWER A3
         </Button>
         <Button
+          onClick={(e)=>handleClick(e)}
           borderRadius="none"
           border="1px solid #DFBD69"
-          bgColor="white"
+          bgColor={tower==="TOWER A4"?"#DFBD69":"white"}
           p="0.937rem"
           fontSize="20px"
           fontFamily="avenir"
@@ -101,9 +128,10 @@ const TenthSec = () => {
           TOWER A4
         </Button>
         <Button
+          onClick={(e)=>handleClick(e)}
           borderRadius="none"
           border="1px solid #DFBD69"
-          bgColor="white"
+          bgColor={tower==="TOWER A5"?"#DFBD69":"white"}
           fontSize="1.25rem"
           p="0.937rem"
           fontFamily="avenir"
@@ -117,9 +145,10 @@ const TenthSec = () => {
           TOWER A5
         </Button>
         <Button
+          onClick={(e)=>handleClick(e)}
           borderRadius="none"
           border="1px solid #DFBD69"
-          bgColor="white"
+          bgColor={tower==="TOWER A6"?"#DFBD69":"white"}
           p="0.937rem"
           fontSize="1.25rem"
           fontFamily="avenir"
@@ -133,7 +162,7 @@ const TenthSec = () => {
         </Button>
       </Flex>
       <Flex w="100%" h="100%" gap="1.563rem">
-        <TowerA3 />
+        {renderTower()}
       </Flex>
     </Flex>
   );
@@ -476,14 +505,6 @@ const TowerA5 = () => {
         align="center"
         direction="column"
       >
-        <Image
-          pos="absolute"
-          src={soldout}
-          w="7.5rem"
-          h="7.5rem"
-          left="0"
-          top="0"
-        />
         <Text
           w="100%"
           textAlign="center"
@@ -603,14 +624,6 @@ const TowerA6 = () => {
         align="center"
         direction="column"
       >
-        <Image
-          pos="absolute"
-          src={soldout}
-          w="7.5rem"
-          h="7.5rem"
-          left="0"
-          top="0"
-        />
         <Text
           w="100%"
           textAlign="center"

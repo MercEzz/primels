@@ -23,6 +23,7 @@ import MobContact from "./screens/Contact.mob";
 import MobChannelPartner from "./screens/ChannelPartner.mob";
 import MobBlogSc from "./screens/BlogSc.mob";
 import MobCareersSc from "./screens/CareersSc.mob";
+import MobEnergySc from "./screens/EnergySc.mob";
 
 function App() {
   const [isMobile,setIsMobile]=useState(false);
@@ -92,7 +93,7 @@ function App() {
             <Route path="/" element={<HomeSc />} />
             <Route path="/careers" element={<MobCareersSc />} />
             <Route path="/contact-us" element={<MobContact />} />
-            <Route path="/energy-get-in-touch-with-us" element={<EnergySc />} />
+            <Route path="/energy-get-in-touch-with-us" element={<MobEnergySc />} />
             <Route path="/channel-partner" element={<MobChannelPartner />} />
             <Route path="/sky-high" element={<SkyHighSc />} />
             <Route path="/arete-homes" element={<AreteHomes />} />

@@ -38,7 +38,7 @@ const ProSites = () => {
       w="100%"
       h="100%"
       pt="5rem"
-      pb="3.125rem"
+
       px="6.25rem"
       align="center"
       justify="center"

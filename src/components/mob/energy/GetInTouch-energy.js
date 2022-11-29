@@ -21,19 +21,12 @@ const GetInTouch = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const animateHd = useAnimation();
-  const animateFade = useAnimation();
 
   useEffect(() => {
     if (isInView) {
-      animateHd.start({
-        opacity: 1,
-        y: 0,
-      });
-      animateFade.start({
-        opacity: 1,
-      });
+      animateHd.start({ opacity: 1, y: 0 });
     }
-  }, [isInView, animateHd, animateFade]);
+  }, [isInView, animateHd]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -42,10 +35,8 @@ const GetInTouch = () => {
     message: "",
   });
 
-  const [borderClr, setbordorClr] = useState(false);
-  useEffect(() => {
-    console.log(borderClr);
-  }, [borderClr]);
+  const [borderClr, setbordorClr] = useState(null);
+
   const { name, email, phoneNo, message } = formData;
 
   const submitHandler = (e) => {
@@ -58,7 +49,6 @@ const GetInTouch = () => {
     }
   };
 
- 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -68,12 +58,12 @@ const GetInTouch = () => {
       direction="column"
       w="100%"
       h="100%"
-      // pt="3.125rem"
       py="3.125rem"
-      px="6.25rem"
       align="center"
       justify="center"
+      px="6.25rem"
       pos="relative"
+      bgColor="white"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
       <MtnHd
@@ -89,22 +79,21 @@ const GetInTouch = () => {
       </MtnHd>
       <MtnTxt
         initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 1.5, duration: 2, type: "just" }}
+        animate={animateHd}
+        transition={{ delay: 1, duration: 2, type: "just" }}
         fontSize="1rem"
         fontFamily="veralaRound"
-        py="1.563rem"
+        py="1.562rem"
         textAlign="center"
       >
         Leave us your information and our team will get back to you.
       </MtnTxt>
       <MtnContainer
         initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 3, duration: 2, type: "just" }}
+        animate={animateHd}
+        transition={{ delay: 1, duration: 2, type: "just" }}
         minw="container.sm"
       >
-        {" "}
         <form onSubmit={submitHandler}>
           <FormControl align="center" justify="center">
             <VStack align="flex-start">
@@ -122,7 +111,6 @@ const GetInTouch = () => {
                 >
                   NAME*
                 </FormLabel>
-                {borderClr?
                 <Input
                   id="name"
                   name="name"
@@ -134,29 +122,11 @@ const GetInTouch = () => {
                   bgColor="#E5E5E5"
                   borderRadius="none"
                   fontFamily="veralaRound"
-                  boxShadow="0px 0px 2px 2px red"
                   fontSize="1rem"
                   isRequired
-                  borderWidth="2px"
-                  isInvalid={borderClr}
-                  errorBorderColor="crimson"
-                />:<Input
-                id="name"
-                name="name"
-                value={name}
-                onChange={onChange}
-                type="text"
-                w="33.125rem"
-                h="2.5rem"
-                bgColor="#E5E5E5"
-                borderRadius="none"
-                fontFamily="veralaRound"
-                fontSize="1rem"
-                isRequired
-                borderWidth="2px"
-                isInvalid={borderClr}
-                errorBorderColor="crimson"
-              />}
+                  focusBorderColor="none"
+                  // borderColor={borderClr ? "#eee" : "#fa2"}
+                />
               </Flex>
               <Flex w="100%" align="center" justify="space-between" pb="0.437rem">
                 <FormLabel
@@ -199,8 +169,7 @@ const GetInTouch = () => {
                   type="number"
                   w="33.125rem"
                   h="2.5rem"
-                  boxShadow={borderClr?"0px 0px 2px 2px red":""}
-                  bgColor=""
+                  bgColor="#E5E5E5"
                   borderRadius="none"
                   fontFamily="veralaRound"
                   fontSize="1rem"
@@ -233,7 +202,7 @@ const GetInTouch = () => {
             </VStack>
             <Button
               type="submit"
-              mt="1.563rem"
+              mt="1.562rem"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
               color="white"
               fontSize="1rem"

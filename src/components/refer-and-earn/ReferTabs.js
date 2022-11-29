@@ -735,7 +735,7 @@ const BookAVisit = () => {
                   />
                 </HStack>{" "}
               </FormControl>
-              <FormControl isRequired>
+              <FormControl isRequired pos="relative">
                 {" "}
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
@@ -745,8 +745,14 @@ const BookAVisit = () => {
                   >
                     TIME
                   </FormLabel>
+                  <select style={{position:"absolute",right:"0px",zIndex:"2",height:"3.125rem",backgroundColor:"#E5E5E5"}}>
+                    <option>AM</option>
+                    <option>PM</option>
+                  </select>
                   <Input
                     type="time"
+                    min="01:00"
+                    max="12:00"
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
@@ -755,6 +761,7 @@ const BookAVisit = () => {
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
+                  
                 </HStack>{" "}
               </FormControl>
               <FormControl>

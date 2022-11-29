@@ -16,7 +16,7 @@ import pgclogo from "../arete-homes imgs/Asset 1.png";
 // images
 import gym from "../sky-high imgs/7 - gym.tif";
 import golf from "../sky-high imgs/5 - Open Golf Putting Area.png";
-import sports from "../sky-high imgs/PGC Sports Bar.jpg";
+import sports from "../sky-high imgs/2 - Multi Sports Arena.jpg";
 import swimming from "../sky-high imgs/3 - Swimming Pool High Res.tif";
 import banquet from "../sky-high imgs/PGC Banquet Hall.jpg";
 import spa from "../sky-high imgs/22 - sauna_s.jpg";

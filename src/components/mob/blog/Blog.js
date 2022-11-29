@@ -119,7 +119,7 @@ const Blog = () => {
       >
         <Flex w="100%" h="100%" direction="column" align="center">
         <Flex h="100%" justify="flex-end" pb="0.938rem">
-        <Icon as={AiOutlineYoutube} w="2.563rem" h="1.875rem" />
+        <Icon as={AiOutlineYoutube}  w="2.563rem" h="2.1rem" />
         <Icon as={AiOutlineInstagram} w="1.875rem" h="1.875rem" />
         <Icon as={RiFacebookCircleLine} w="1.875rem" h="1.875rem" />
         <Icon as={AiOutlineLinkedin} w="1.875rem" h="1.875rem" />
