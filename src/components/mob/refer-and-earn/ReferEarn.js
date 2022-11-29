@@ -8,7 +8,7 @@ import "./rne.css";
 
 const ReferEarn = () => {
   return (
-    <Flex w="100%" h="100vh" bgColor="#ACCAD4" pos="relative" overflow="hidden">
+    <Flex w="100%" h="100vh" bgColor="#ACCAD4" pos="relative" overflow="hidden" align="center">
       <Image
         style={{ opactiy: 0, animation: "fadein 1 2s linear" }}
         h={{base:"27rem",lg:"37.5rem"}}
@@ -19,6 +19,7 @@ const ReferEarn = () => {
         bottom="0"
       />
       <Flex
+        align="center"
         px={{base:"0.8rem",lg:"6.25rem"}}
         pos="absolute"
         w="100%"
