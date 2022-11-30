@@ -120,7 +120,7 @@ const ReferAFriend = () => {
       <Flex overflow="hidden">
         <Heading
           w="100%"
-          className="slidein-top reveal"
+          className="serv-text-down reveal"
           textAlign="center"
           fontWeight="400"
           fontSize="2.5rem"
@@ -265,7 +265,7 @@ const ReferAFriend = () => {
           }}
         >
           <Text
-            className="slidein-top reveal"
+            className="serv-text-down reveal"
             textAlign="center"
             fontFamily="goudy"
             fontSize="2.5rem"
@@ -568,7 +568,7 @@ const BookAVisit = () => {
           bottom="0"
         >
           <Text
-            className="slidein-top reveal"
+            className="serv-text-down reveal"
             textAlign="center"
             fontFamily="goudy"
             fontSize={{base:"2rem",lg:"2.5rem"}}
@@ -633,7 +633,7 @@ const BookAVisit = () => {
           }}
         >
           <Text
-            className="slidein-top reveal"
+            className="serv-text-down reveal"
             textAlign="center"
             fontFamily="goudy"
             fontSize="2.5rem"
