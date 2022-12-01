@@ -97,6 +97,7 @@ const Buildchng = () => {
         align="center"
         justify="center"
         overflow="hidden"
+        pt="3.125rem"
       >
         <MtnHead
           initial={{ opacity: 0, y: -50 }}

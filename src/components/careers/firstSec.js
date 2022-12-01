@@ -2,6 +2,7 @@ import { Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 // images
 import bgBox from "../careers imgs/bg-box.jpg";
+import firstSec from "../careers imgs/first section.jpg";
 
 const MotnHead = motion(Heading);
 const MotnTxt = motion(Text);
@@ -33,7 +34,7 @@ const FirstSec = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2, type: "just" }}
-          src="/images/careers/first section.jpg"
+          src={firstSec}
         />
       </Flex>
 

@@ -12,20 +12,19 @@ import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import career1 from "../careers imgs/career1_2_11zon.jpeg";
+import career2 from "../careers imgs/career2_4_11zon.jpg";
+import career3 from "../careers imgs/career3_5_11zon.jpeg";
+import career4 from "../careers imgs/career4_6_11zon.jpeg";
+import career5 from "../careers imgs/career5_7_11zon.jpeg";
+import career6 from "../careers imgs/career6_8_11zon.jpeg";
+import career7 from "../careers imgs/EVENTS10_11zon.jpeg";
 
 const MtnHead = motion(Heading);
 const MotnTxt = motion(Text);
 const MtnBx = motion(Box);
 
-const images = [
-  "/images/careers/career1.jpeg",
-  "/images/careers/career2.JPG",
-  "/images/careers/career3.jpeg",
-  "/images/careers/career4.jpeg",
-  "/images/careers/career5.jpeg",
-  "/images/careers/career6.jpeg",
-  "/images/careers/career7.jpeg",
-];
+const images = [career1, career2, career3, career4, career5, career6, career7];
 
 const Lifeatls = () => {
   const [slider, setSlider] = useState(null);
@@ -44,7 +43,7 @@ const Lifeatls = () => {
   const settings = {
     draggable: true,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     speed: 500,
     autoplaySpeed: 5000,
     slidesToShow: 2,
@@ -71,9 +70,8 @@ const Lifeatls = () => {
       direction="column"
       textAlign="center"
       px="1.562rem"
-      pt="6.25rem"
-      pb="3.125rem"
-      mb="3.125rem"
+      pt="5rem"
+      pb="1.875rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgPos="center"
@@ -86,7 +84,7 @@ const Lifeatls = () => {
         fontSize="2.5rem"
         fontFamily="goudy"
         fontWeight="400"
-        pb="1.562rem"
+        pb="1.563rem"
       >
         LIFE AT PRIME LIFESPACE
       </MtnHead>
@@ -96,7 +94,7 @@ const Lifeatls = () => {
         transition={{ delay: 1, duration: 2, type: "just" }}
         fontSize="1rem"
         fontFamily="veralaRound"
-        pb="1.562rem"
+        pb="1.563rem"
       >
         We believe when everyone is moving forward together then success takes
         care of itself.

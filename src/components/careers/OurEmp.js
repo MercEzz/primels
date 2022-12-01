@@ -35,10 +35,10 @@ const OurEmp = () => {
     <Flex
       ref={ref}
       direction="column"
-      mt="90px"
+      pt="5rem"
       w="100%"
       h="100%"
-      px="100px"
+      px="6.25rem"
       align="flex-start"
       justify="center"
     >
@@ -48,14 +48,13 @@ const OurEmp = () => {
         transition={{ duration: 2, type: "just" }}
         w="100%"
         textAlign="center"
-        fontSize="40px"
+        fontSize="2.5rem"
         fontFamily="goudy"
         fontWeight="400"
         // pb="25px"
       >
         OUR HAPPY EMPLOYEES
       </MtnHead>
-
       <MtnFlx
         w="100%"
         h="full"
@@ -70,8 +69,8 @@ const OurEmp = () => {
           pos="absolute"
           left="-1%"
           top="0"
-          w="70px"
-          h="50px"
+          w="4.375rem"
+          h="3.125rem"
           as={ImQuotesLeft}
           color="#DFBD69"
         />
@@ -83,8 +82,8 @@ const OurEmp = () => {
           right="0"
           bottom="25%"
           zIndex="10"
-          w="70px"
-          h="50px"
+          w="4.375rem"
+          h="3.125rem"
           as={ImQuotesRight}
         />
       </MtnFlx>

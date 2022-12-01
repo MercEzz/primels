@@ -40,27 +40,33 @@ const ImgCarousel = (props) => {
               justify="space-between"
               flexDirection="column"
               w="100%"
-              pr="25px"
-              py="5px"
-              mt="50px"
+              pr="1.563rem"
+              py="0.313rem"
+              mt="3.125rem"
               key={tes.name}
               height={"100%"}
               position="relative"
             >
-              <Text fontSize="16px" fontFamily="veralaRound">
+              <Text fontSize="1rem" fontFamily="veralaRound">
                 {tes.text}
               </Text>
-              <Flex w="100%" pt="25px" align="center" justify="flex-start">
+              <Flex
+                w="100%"
+                pt="1.563rem"
+                align="center"
+                justify="flex-start"
+                alignSelf="flex-end"
+              >
                 <Avatar
-                  h="80px"
-                  w="80px"
-                  mr="10px"
+                  h="5rem"
+                  w="5rem"
+                  mr="0.625rem"
                   src={tes.avtr}
                   alt={tes.name}
                 />
                 <Stack spacing={-1}>
                   <Text
-                    fontSize="18px"
+                    fontSize="1.125rem"
                     fontFamily="veralaRound"
                     fontWeight={400}
                   >
@@ -69,7 +75,7 @@ const ImgCarousel = (props) => {
                   <Text
                     fontFamily="veralaRound"
                     fontWeight={400}
-                    fontSize="16px"
+                    fontSize="1rem"
                     color="black"
                   >
                     {tes.title}
