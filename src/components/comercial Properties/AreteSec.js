@@ -1381,10 +1381,18 @@ const LocationAndFormPlaza = () => {
                     100+
                   </Heading>
                   <Text
+                    display={{ base: "none", lg: "flex" }}
                     fontFamily="veralaRound"
                     fontSize={{ base: "0.75rem", lg: "1rem" }}
                   >
-                    EDUCATIONAL INSTITUTES
+                    EDUCATIONAL <br /> INSTITUTES
+                  </Text>
+                  <Text
+                    display={{ base: "flex", lg: "none" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    EDUCATIONAL <br /> INSTITUTES
                   </Text>
                 </VStack>
               </Flex>
@@ -1436,10 +1444,20 @@ const LocationAndFormPlaza = () => {
                     2
                   </Heading>
                   <Text
+                    display={{ base: "none", lg: "flex" }}
                     fontFamily="veralaRound"
                     fontSize={{ base: "0.75rem", lg: "1rem" }}
                   >
                     LARGE INDUSTRIAL PARKS
+                  </Text>
+                  <Text
+                    display={{ base: "flex", lg: "none" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    LARGE <br />
+                    INDUSTRIAL <br />
+                    PARKS
                   </Text>
                 </VStack>
               </Flex>{" "}
@@ -2003,10 +2021,19 @@ const LocationAndFormMall = () => {
                     100+
                   </Heading>
                   <Text
+                    display={{ base: "none", lg: "flex" }}
                     fontFamily="veralaRound"
                     fontSize={{ base: "0.75rem", lg: "1rem" }}
                   >
                     EDUCATIONAL INSTITUTES
+                  </Text>
+                  <Text
+                    display={{ base: "flex", lg: "none" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    EDUCATIONAL <br />
+                    INSTITUTES
                   </Text>
                 </VStack>
               </Flex>
@@ -2058,10 +2085,20 @@ const LocationAndFormMall = () => {
                     2
                   </Heading>
                   <Text
+                    display={{ base: "none", lg: "flex" }}
                     fontFamily="veralaRound"
                     fontSize={{ base: "0.75rem", lg: "1rem" }}
                   >
                     LARGE INDUSTRIAL PARKS
+                  </Text>
+                  <Text
+                    display={{ base: "flex", lg: "none" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    LARGE <br />
+                    INDUSTRIAL <br />
+                    PARKS
                   </Text>
                 </VStack>
               </Flex>{" "}
