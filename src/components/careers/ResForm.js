@@ -62,11 +62,14 @@ const ResForm = () => {
       direction="column"
       w="100%"
       h="100%"
-      pt="50px"
-      mb="25px"
+      pt="1.875rem"
+      mb="1.563rem"
       align="center"
       justify="center"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
     >
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
@@ -74,7 +77,7 @@ const ResForm = () => {
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
-        fontSize="40px"
+        fontSize="2.5rem"
       >
         SEND YOUR RESUME
       </MtnHead>
@@ -82,9 +85,9 @@ const ResForm = () => {
         initial={{ opacity: 0 }}
         animate={animationFade}
         transition={{ delay: 1, duration: 2, type: "just" }}
-        fontSize="16px"
+        fontSize="1rem"
         fontFamily="veralaRound"
-        py="25px"
+        py="1.563rem"
         textAlign="center"
       >
         Work with us, send your resume and our team will get back to you.
@@ -104,12 +107,12 @@ const ResForm = () => {
                   w="100%"
                   align="center"
                   justifyContent="space-between"
-                  pb="15px"
+                  pb="0.938rem"
                 >
                   <FormLabel
                     fontFamily="avenir"
                     fontWeight="700"
-                    fontSize="16px"
+                    fontSize="1rem"
                     htmlFor="name"
                   >
                     NAME
@@ -119,18 +122,24 @@ const ResForm = () => {
                     id="name"
                     value={name}
                     onChange={onChange}
-                    w="350px"
-                    h="40px"
+                    fontFamily="veralaRound"
+                    w="21.875rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </Flex>
               </FormControl>
-              <Flex w="100%" align="center" justify="space-between" pb="7px">
+              <Flex
+                w="100%"
+                align="center"
+                justify="space-between"
+                pb="0.438rem"
+              >
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="16px"
+                  fontSize="1rem"
                   htmlFor="email"
                 >
                   EMAIL
@@ -140,18 +149,24 @@ const ResForm = () => {
                   id="email"
                   value={email}
                   onChange={onChange}
-                  w="350px"
-                  h="40px"
+                  w="21.875rem"
+                  h="2.5rem"
+                  fontFamily="veralaRound"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
               </Flex>
               <FormControl isRequired>
-                <Flex w="100%" align="center" justify="space-between" pb="7px">
+                <Flex
+                  w="100%"
+                  align="center"
+                  justify="space-between"
+                  pb="0.438rem"
+                >
                   <FormLabel
                     fontFamily="avenir"
                     fontWeight="700"
-                    fontSize="16px"
+                    fontSize="1rem"
                     htmlFor="phoneNo"
                   >
                     PHONE NO.
@@ -161,18 +176,24 @@ const ResForm = () => {
                     id="phoneNo"
                     value={phoneNo}
                     onChange={onChange}
-                    w="350px"
-                    h="40px"
+                    w="21.875rem"
+                    h="2.5rem"
+                    fontFamily="veralaRound"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </Flex>
               </FormControl>
-              <Flex w="100%" align="center" justify="space-between" pb="7px">
+              <Flex
+                w="100%"
+                align="center"
+                justify="space-between"
+                pb="0.438rem"
+              >
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="16px"
+                  fontSize="1rem"
                   htmlFor="areaOfInterest"
                 >
                   AREA OF INTEREST
@@ -182,18 +203,24 @@ const ResForm = () => {
                   id="areaOfInterest"
                   value={areaOfInterest}
                   onChange={onChange}
-                  w="350px"
-                  h="40px"
+                  fontFamily="veralaRound"
+                  w="21.875rem"
+                  h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
               </Flex>
               <FormControl isRequired>
-                <Flex w="100%" align="center" justify="space-between" pb="7px">
+                <Flex
+                  w="100%"
+                  align="center"
+                  justify="space-between"
+                  pb="0.438rem"
+                >
                   <FormLabel
                     fontFamily="avenir"
                     fontWeight="700"
-                    fontSize="16px"
+                    fontSize="1rem"
                     htmlFor="resume"
                   >
                     RESUME
@@ -203,26 +230,27 @@ const ResForm = () => {
                     id="resume"
                     value={resume}
                     onChange={onChange}
+                    fontFamily="veralaRound"
                     p="1"
-                    w="350px"
-                    h="40px"
+                    w="21.875rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </Flex>
               </FormControl>
             </MtnStk>
-            <Text ml="-10" fontSize="16px" fontFamily="veralaRound">
+            <Text ml="-10" fontSize="1rem" fontFamily="veralaRound">
               <Icon as={BsUpload} mr="10px" />
               Upload File
             </Text>
             <Button
               type="submit"
-              mt="25px"
-              mb="50px"
+              mt="1.563rem"
+              mb="3.125rem"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
               color="white"
-              fontSize="16px"
+              fontSize="1rem"
               fontFamily="avenir"
               _hover={{
                 bgGradient: "linear(to-b, #DFBD69, #B88746)",

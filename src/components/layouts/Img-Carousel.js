@@ -14,79 +14,78 @@ const ImgCarousel = (props) => {
     pauseOnHover: false,
   };
   return (
-    <Flex w="100%" h="100%">
-      <Box
-        position={"relative"}
-        height={"full"}
-        width={"full"}
-        overflow={"hidden"}
-      >
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charSet="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
+    <Box
+      position={"relative"}
+      height={"full"}
+      width={"full"}
+      overflow={"hidden"}
+    >
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
 
-        <Slider {...settings} style={{ display: "flex" }}>
-          {testimonial.map((tes) => (
+      <Slider {...settings}>
+        {testimonial.map((tes) => (
+          <Flex
+            alignItems="flex-start"
+            justifyContent="flex-end"
+            flexDirection="column"
+            w="100%"
+            h="100%"
+            pr="1.563rem"
+            py="0.313rem"
+            mt="3.125rem"
+            key={tes.name}
+          >
+            <Text fontSize="1rem" fontFamily="veralaRound">
+              {tes.text}
+            </Text>
             <Flex
-              align="flex-start"
-              justify="space-between"
-              flexDirection="column"
               w="100%"
-              pr="1.563rem"
-              py="0.313rem"
-              mt="3.125rem"
-              key={tes.name}
-              height={"100%"}
-              position="relative"
+              h="100%"
+              pt="1.563rem"
+              align="center"
+              justify="flex-start"
+              alignSelf="flex-end"
+              justifySelf="flex-end"
             >
-              <Text fontSize="1rem" fontFamily="veralaRound">
-                {tes.text}
-              </Text>
-              <Flex
-                w="100%"
-                pt="1.563rem"
-                align="center"
-                justify="flex-start"
-                alignSelf="flex-end"
-              >
-                <Avatar
-                  h="5rem"
-                  w="5rem"
-                  mr="0.625rem"
-                  src={tes.avtr}
-                  alt={tes.name}
-                />
-                <Stack spacing={-1}>
-                  <Text
-                    fontSize="1.125rem"
-                    fontFamily="veralaRound"
-                    fontWeight={400}
-                  >
-                    {tes.name}
-                  </Text>
-                  <Text
-                    fontFamily="veralaRound"
-                    fontWeight={400}
-                    fontSize="1rem"
-                    color="black"
-                  >
-                    {tes.title}
-                  </Text>
-                </Stack>
+              <Avatar
+                h="5rem"
+                w="5rem"
+                mr="0.625rem"
+                src={tes.avtr}
+                alt={tes.name}
+              />
+              <Flex direction="column">
+                <Text
+                  fontSize="1.125rem"
+                  fontFamily="veralaRound"
+                  fontWeight={400}
+                >
+                  {tes.name}
+                </Text>
+                <Text
+                  fontFamily="veralaRound"
+                  fontWeight={400}
+                  fontSize="1rem"
+                  color="black"
+                >
+                  {tes.title}
+                </Text>
               </Flex>
             </Flex>
-          ))}
-        </Slider>
-      </Box>
-    </Flex>
+          </Flex>
+        ))}
+      </Slider>
+    </Box>
   );
 };
 

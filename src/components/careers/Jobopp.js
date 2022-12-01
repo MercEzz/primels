@@ -47,18 +47,18 @@ const Jobopp = () => {
         w="100%"
         h="100%"
         align="center"
-        mt="100px"
-        px="100px"
-        pb="50px"
+        pt="5rem"
+        px="6.25rem"
+        pb="3.125rem"
       >
         <MtnHead
           initial={{ opacity: 0, y: -100 }}
           animate={animationHead}
           transition={{ duration: 2, type: "just" }}
           fontFamily="goudy"
-          fontSize="40px"
+          fontSize="2.5rem"
           fontWeight="400"
-          mb="50px"
+          mb="1.875rem"
         >
           JOB OPPORTUNITIES
         </MtnHead>
@@ -67,8 +67,8 @@ const Jobopp = () => {
             direction="column"
             w="100%"
             h="100%"
-            py="75px"
-            mr="15px"
+            py="4.688rem"
+            mr="0.938rem"
             align="center"
             justify="center"
             textAlign="center"
@@ -79,9 +79,9 @@ const Jobopp = () => {
               animate={animationLftHd}
               transition={{ delay: 1, duration: 2, type: "just" }}
               fontFamily="avenir"
-              fontSize="24px"
-              py="25px"
-              px="100px"
+              fontSize="1.5rem"
+              py="1.563rem"
+              px="6.25rem"
             >
               FOLLOW US ON LINKEDIN
             </MtnHead>
@@ -90,9 +90,9 @@ const Jobopp = () => {
               animate={animationLftHd}
               transition={{ delay: 1, duration: 2, type: "just" }}
               fontFamily="veralaRound"
-              fontSize="16px"
-              px="85px"
-              pb="15px"
+              fontSize="1rem"
+              px="5.313rem"
+              pb="0.938rem"
             >
               The best way to stay updated on Job Opportunities at Prime
               Lifespace is to follow us on Linkedin.
@@ -110,9 +110,9 @@ const Jobopp = () => {
                 href="https://www.linkedin.com/company/prime-lifespace-consultancy-pvt-ltd/"
                 isExternal
               >
-                <Icon h="80px" w="80px" color="#0A66C2" as={AiFillLinkedin} />
+                <Icon h="5rem" w="5rem" color="#0A66C2" as={AiFillLinkedin} />
               </Link>
-              <Image w="50%" h="50%" pt="15px" src="/images/logo.png" />
+              <Image w="50%" h="50%" pt="0.938rem" src="/images/logo.png" />
             </MtnFlx>
           </Flex>
           <Flex w="100%">
@@ -121,7 +121,7 @@ const Jobopp = () => {
               h="100%"
               templateRows="repeat(2, 1fr)"
               templateColumns="repeat(2, 1fr)"
-              gap="15px"
+              gap="0.938rem"
             >
               <Flex
                 as={Link}
@@ -130,20 +130,24 @@ const Jobopp = () => {
                 justify="center"
                 w="100%"
                 h="100%"
-                py="25px"
+                py="1.563rem"
                 bgGradient="linear(to-b, #DFBD69, #B88746)"
                 textAlign="center"
                 color="white"
-                _hover={{ textDecoration: "none" }}
+                _hover={{
+                  textDecoration: "none",
+                  bgGradient: "linear(to-b,  #B88746, #DFBD69)",
+                }}
                 onClick={clickHandler}
+                cursor="pointer"
               >
                 <MtnHead
                   initial={{ opacity: 0 }}
                   animate={animationLftHd}
                   transition={{ delay: 1, duration: 2, type: "just" }}
-                  fontSize="20px"
+                  fontSize="1.25rem"
                   fontFamily="avenir"
-                  pb="15px"
+                  pb="0.938rem"
                 >
                   SALES MANAGER
                 </MtnHead>
@@ -153,18 +157,18 @@ const Jobopp = () => {
                   transition={{ delay: 1, duration: 2, type: "just" }}
                   align="flex-start"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                 >
                   <Flex align="center" justify="flex-start">
-                    <Icon as={MdLocationOn} w="6" h="6" mx="7px" />
+                    <Icon as={MdLocationOn} w="6" h="6" mx="0.438rem" />
                     <Text>Chennai</Text>
                   </Flex>
                   <Flex align="center" justify="flex-start">
-                    <Icon as={FaBusinessTime} w="6" h="6" mx="7px" />
+                    <Icon as={FaBusinessTime} w="6" h="6" mx="0.438rem" />
                     <Text>5-7 years</Text>
                   </Flex>
                   <Flex align="center" justify="flex-start">
-                    <Icon as={MdBusinessCenter} w="6" h="6" mx="7px" />
+                    <Icon as={MdBusinessCenter} w="6" h="6" mx="0.438rem" />
                     <Text>Full-time</Text>
                   </Flex>
                 </MtnStk>
@@ -176,20 +180,23 @@ const Jobopp = () => {
                 justify="center"
                 w="100%"
                 h="100%"
-                py="25px"
+                py="1.563rem"
                 bgGradient="linear(to-b, #DFBD69, #B88746)"
                 textAlign="center"
                 color="white"
-                _hover={{ textDecoration: "none" }}
+                _hover={{
+                  textDecoration: "none",
+                  bgGradient: "linear(to-b,  #B88746, #DFBD69)",
+                }}
                 onClick={clickHandler}
               >
                 <MtnHead
                   initial={{ opacity: 0 }}
                   animate={animationLftHd}
                   transition={{ delay: 1, duration: 2, type: "just" }}
-                  fontSize="20px"
+                  fontSize="1.25rem"
                   fontFamily="avenir"
-                  pb="15px"
+                  pb="0.938rem"
                 >
                   OPERATIONS <br />
                   MANAGER
@@ -200,18 +207,18 @@ const Jobopp = () => {
                   transition={{ delay: 1, duration: 2, type: "just" }}
                   align="flex-start"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                 >
                   <Flex align="center" justify="flex-start">
-                    <Icon as={MdLocationOn} w="6" h="6" mx="7px" />
+                    <Icon as={MdLocationOn} w="6" h="6" mx="0.438rem" />
                     <Text>Chennai</Text>
                   </Flex>
                   <Flex align="center" justify="flex-start">
-                    <Icon as={FaBusinessTime} w="6" h="6" mx="7px" />
+                    <Icon as={FaBusinessTime} w="6" h="6" mx="0.438rem" />
                     <Text>5-7 years</Text>
                   </Flex>
                   <Flex align="center" justify="flex-start">
-                    <Icon as={MdBusinessCenter} w="6" h="6" mx="7px" />
+                    <Icon as={MdBusinessCenter} w="6" h="6" mx="0.438rem" />
                     <Text>Full-time</Text>
                   </Flex>
                 </MtnStk>
@@ -222,20 +229,23 @@ const Jobopp = () => {
                 align="center"
                 justify="center"
                 w="100%"
-                py="25px"
+                py="1.563rem"
                 bgGradient="linear(to-t, #DFBD69, #B88746)"
                 textAlign="center"
                 color="white"
-                _hover={{ textDecoration: "none" }}
+                _hover={{
+                  textDecoration: "none",
+                  bgGradient: "linear(to-t,  #B88746, #DFBD69)",
+                }}
                 onClick={clickHandler}
               >
                 <MtnHead
                   initial={{ opacity: 0 }}
                   animate={animationLftHd}
                   transition={{ delay: 1, duration: 2, type: "just" }}
-                  fontSize="20px"
+                  fontSize="1.25rem"
                   fontFamily="avenir"
-                  pb="15px"
+                  pb="0.938rem"
                 >
                   GRAPHIC DESIGNER
                 </MtnHead>
@@ -245,18 +255,18 @@ const Jobopp = () => {
                   transition={{ delay: 1, duration: 2, type: "just" }}
                   align="flex-start"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                 >
                   <Flex align="center" justify="flex-start">
-                    <Icon as={MdLocationOn} w="6" h="6" mx="7px" />
+                    <Icon as={MdLocationOn} w="6" h="6" mx="0.438rem" />
                     <Text>Mumbai</Text>
                   </Flex>
                   <Flex align="center" justify="flex-start">
-                    <Icon as={FaBusinessTime} w="6" h="6" mx="7px" />
+                    <Icon as={FaBusinessTime} w="6" h="6" mx="0.438rem" />
                     <Text>1-2 years</Text>
                   </Flex>
                   <Flex align="center" justify="flex-start">
-                    <Icon as={MdBusinessCenter} w="6" h="6" mx="7px" />
+                    <Icon as={MdBusinessCenter} w="6" h="6" mx="0.438rem" />
                     <Text>Internship</Text>
                   </Flex>
                 </MtnStk>
@@ -266,24 +276,25 @@ const Jobopp = () => {
                 direction="column"
                 align="center"
                 justify="center"
-                // w="250px"
-                // h="200px"
                 w="100%"
                 h="100%"
-                py="25px"
+                py="1.563rem"
                 bgGradient="linear(to-t, #DFBD69, #B88746)"
                 textAlign="center"
                 color="white"
-                _hover={{ textDecoration: "none" }}
+                _hover={{
+                  textDecoration: "none",
+                  bgGradient: "linear(to-t,  #B88746, #DFBD69)",
+                }}
                 onClick={clickHandler}
               >
                 <MtnHead
                   initial={{ opacity: 0 }}
                   animate={animationLftHd}
                   transition={{ delay: 1, duration: 2, type: "just" }}
-                  fontSize="20px"
+                  fontSize="1.25rem"
                   fontFamily="avenir"
-                  pb="15px"
+                  pb="0.938rem"
                 >
                   HOSPITALITY <br />
                   MANAGEMENT
@@ -294,18 +305,18 @@ const Jobopp = () => {
                   transition={{ delay: 1, duration: 2, type: "just" }}
                   align="flex-start"
                   fontFamily="veralaRound"
-                  fontSize="16px"
+                  fontSize="1rem"
                 >
                   <Flex align="center" justify="flex-start">
-                    <Icon as={MdLocationOn} w="6" h="6" mx="7px" />
+                    <Icon as={MdLocationOn} w="6" h="6" mx="0.438rem" />
                     <Text>Mumbai</Text>
                   </Flex>
                   <Flex align="center" justify="flex-start">
-                    <Icon as={FaBusinessTime} w="6" h="6" mx="7px" />
+                    <Icon as={FaBusinessTime} w="6" h="6" mx="0.438rem" />
                     <Text>1-2 years</Text>
                   </Flex>
                   <Flex align="center" justify="flex-start">
-                    <Icon as={MdBusinessCenter} w="6" h="6" mx="7px" />
+                    <Icon as={MdBusinessCenter} w="6" h="6" mx="0.438rem" />
                     <Text>Full-time</Text>
                   </Flex>
                 </MtnStk>
