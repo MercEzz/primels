@@ -22,7 +22,7 @@ const FirstSec = () => {
     setIsinView(true);
   }, 1000);
   return (
-    <Flex ref={ref} w="100%" h="41.75rem">
+    <Flex ref={ref} w="100%" h="57.937rem">
       <Box
         transform={isInView ? "scale(1)" : "scale(0.6)"}
         transition="all 2s"

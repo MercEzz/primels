@@ -15,7 +15,7 @@ const ThirdSec = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="35.5rem"
+      h="57.937rem"
       align="center"
       justify="center"
       pos="relative"
