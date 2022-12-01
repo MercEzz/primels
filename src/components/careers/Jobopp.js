@@ -9,7 +9,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React, { useRef, useEffect } from "react";
-import { AiFillLinkedin } from "react-icons/ai";
+import { GrLinkedinOption } from "react-icons/gr";
 import { MdLocationOn, MdBusinessCenter } from "react-icons/md";
 import { FaBusinessTime } from "react-icons/fa";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -110,7 +110,15 @@ const Jobopp = () => {
                 href="https://www.linkedin.com/company/prime-lifespace-consultancy-pvt-ltd/"
                 isExternal
               >
-                <Icon h="5rem" w="5rem" color="#0A66C2" as={AiFillLinkedin} />
+                <Icon
+                  h="5rem"
+                  w="5rem"
+                  boxShadow=" 2px 4px 6px rgba(0,0,0, 0.3)"
+                  bgColor="#0A66C2"
+                  color="#fff"
+                  p="0.313rem"
+                  as={GrLinkedinOption}
+                />
               </Link>
               <Image w="50%" h="50%" pt="0.938rem" src="/images/logo.png" />
             </MtnFlx>
