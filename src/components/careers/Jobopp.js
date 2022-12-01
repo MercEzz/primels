@@ -106,7 +106,12 @@ const Jobopp = () => {
               align="center"
               justify="center"
             >
-              <Icon h="80px" w="80px" color="#0A66C2" as={AiFillLinkedin} />
+              <Link
+                href="https://www.linkedin.com/company/prime-lifespace-consultancy-pvt-ltd/"
+                isExternal
+              >
+                <Icon h="80px" w="80px" color="#0A66C2" as={AiFillLinkedin} />
+              </Link>
               <Image w="50%" h="50%" pt="15px" src="/images/logo.png" />
             </MtnFlx>
           </Flex>

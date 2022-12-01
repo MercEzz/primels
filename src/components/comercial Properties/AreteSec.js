@@ -301,6 +301,7 @@ const AretePlaza = () => {
         direction="column"
         gap="1.875rem"
         px={{ base: "0", lg: "6.25rem" }}
+        pb="3.125rem"
       >
         <Flex
           overflow="hidden"
@@ -407,7 +408,7 @@ const AretePlaza = () => {
             CHECK PRICE
           </Button>
         </Flex>{" "}
-        <Flex w="100%" px="0.938rem" overflow="hidden" pb="3.125rem">
+        <Flex w="100%" px="0.938rem" overflow="hidden">
           <Image
             className="Arete-Plaza-FloorPlan-Image reveal"
             w="100%"
@@ -425,6 +426,7 @@ const AretePlaza = () => {
         h="100%"
         gap="1.875rem"
         px="6.25rem"
+        pb="5rem"
       >
         <Flex w="65%" alignSelf="flex-start" overflow="hidden">
           <Image
@@ -777,6 +779,7 @@ const AreteMall = () => {
         </Flex>
       </Flex>
       <Flex
+        dispaly={{ base: "none", lg: "flex" }}
         overflow="hidden"
         w="100%"
         h="100%"
@@ -793,236 +796,502 @@ const AreteMall = () => {
         >
           AMENITIES
         </Text>
-        <Flex w="100%">
-          <Flex
-            // w={{ base: "47.5%", lg: "100%" }}
-            h="100%"
-            gap="1.25rem"
-            direction={{ base: "column", lg: "row" }}
-            align="center"
-            pb="0.9rem"
-          >
-            <Flex w="100%" direction="column" align="center" overflow="hidden">
-              <Image
-                zIndex="2"
-                src={retailShop}
-                h={{ base: "8.563rem", lg: "15rem" }}
-                className="slidein-bottom reveal"
+
+        <Flex
+          w={{ base: "47.5%", lg: "100%" }}
+          h="100%"
+          gap="1.25rem"
+          direction={{ base: "column", lg: "row" }}
+          align="center"
+          pb="0.9rem"
+        >
+          <Flex w="100%" direction="column" align="center" overflow="hidden">
+            <Image
+              zIndex="2"
+              src={retailShop}
+              h={{ base: "8.563rem", lg: "15rem" }}
+              className="slidein-bottom reveal"
+            />
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pt="1rem"
+              className="Icon-fadein reveal"
+            >
+              RETAIL SHOPS
+            </Heading>
+          </Flex>
+          <Flex w="100%" direction="column" align="center" overflow="hidden">
+            <Image
+              zIndex="2"
+              h={{ base: "8.563rem", lg: "15rem" }}
+              src={market}
+              className="slidein-bottom-2sdelay reveal"
+            />
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pt="1rem"
+              className="fadein-2sdelay reveal"
+            >
+              HYPERMARKET
+            </Heading>
+          </Flex>
+          <Flex w="100%" direction="column" align="center" overflow="hidden">
+            <Image
+              zIndex="2"
+              src={pharmacy}
+              h={{ base: "8.563rem", lg: "15rem" }}
+              className="slidein-bottom-4sdelay reveal"
+            />
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pt="1rem"
+              className="fadein-4sdelay reveal"
+            >
+              PHARMACY
+            </Heading>
+          </Flex>
+        </Flex>
+        <Flex
+          w="100%"
+          h="100%"
+          align="center"
+          pb="0.625rem"
+          overflow="hidden"
+          px={{ base: "0.938rem", lg: "0" }}
+          direction={{ base: "column", lg: "row" }}
+        >
+          {" "}
+          <Flex w="100%" h="100%" align="center" overflow="hidden">
+            <Flex
+              w="100%"
+              align="center"
+              className="discoball-slidein-left1 reveal"
+              direction={{ base: "column", lg: "row" }}
+            >
+              <Divider
+                w="100%"
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
               />
-              <Heading
-                fontFamily="avenir"
-                fontSize={{ base: "1rem", lg: "1.25rem" }}
-                pt="1rem"
-                className="Icon-fadein reveal"
-              >
-                RETAIL SHOPS
-              </Heading>
-            </Flex>
-            <Flex w="100%" direction="column" align="center" overflow="hidden">
-              <Image
-                zIndex="2"
-                h={{ base: "8.563rem", lg: "15rem" }}
-                src={market}
-                className="slidein-bottom-2sdelay reveal"
+              <Box
+                height="1.875rem"
+                width={{ base: "1.875rem", lg: "4rem" }}
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                w="100%"
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
               />
-              <Heading
-                fontFamily="avenir"
-                fontSize={{ base: "1rem", lg: "1.25rem" }}
-                pt="1rem"
-                className="fadein-2sdelay reveal"
-              >
-                HYPERMARKET
-              </Heading>
-            </Flex>
-            <Flex w="100%" direction="column" align="center" overflow="hidden">
-              <Image
-                zIndex="2"
-                src={pharmacy}
-                h={{ base: "8.563rem", lg: "15rem" }}
-                className="slidein-bottom-4sdelay reveal"
-              />
-              <Heading
-                fontFamily="avenir"
-                fontSize={{ base: "1rem", lg: "1.25rem" }}
-                pt="1rem"
-                className="fadein-4sdelay reveal"
-              >
-                PHARMACY
-              </Heading>
             </Flex>
           </Flex>
-          <Flex
-            h="100%"
-            align="center"
-            pb="0.625rem"
-            overflow="hidden"
-            px={{ base: "0.938rem", lg: "1.563rem" }}
-            direction={{ base: "column", lg: "row" }}
-          >
-            {" "}
-            <Flex w="100%" h="100%" align="center" overflow="hidden">
-              <Flex
+          <Flex w="100%" align="center" overflow="hidden">
+            <Flex
+              w="100%"
+              align="center"
+              className="discoball-slidein-left2 reveal"
+              direction={{ base: "column", lg: "row" }}
+            >
+              <Divider
                 w="100%"
-                align="center"
-                className="discoball-slidein-left1 reveal"
-                direction={{ base: "column", lg: "row" }}
-              >
-                <Divider
-                  orientation={{ base: "vertical", lg: "horizontal" }}
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width={{ base: "1.875rem", lg: "4rem" }}
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />{" "}
-                <Divider
-                  orientation={{ base: "vertical", lg: "horizontal" }}
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-              </Flex>
-            </Flex>
-            <Flex w="100%" align="center" overflow="hidden">
-              <Flex
-                align="center"
-                className="discoball-slidein-left2 reveal"
-                direction={{ base: "column", lg: "row" }}
-              >
-                <Divider
-                  orientation={{ base: "vertical", lg: "horizontal" }}
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width={{ base: "1.875rem", lg: "4rem" }}
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />{" "}
-                <Divider
-                  orientation={{ base: "vertical", lg: "horizontal" }}
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-              </Flex>
-            </Flex>
-            <Flex w="100%" align="center" overflow="hidden">
-              <Flex
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width={{ base: "1.875rem", lg: "4rem" }}
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
                 w="100%"
-                align="center"
-                className="discoball-slidein-left3 reveal"
-                direction={{ base: "column", lg: "row" }}
-              >
-                <Divider
-                  orientation={{ base: "vertical", lg: "horizontal" }}
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-                <Box
-                  height="1.875rem"
-                  width={{ base: "1.875rem", lg: "4rem" }}
-                  backgroundColor="#DFBD69"
-                  border="3px solid white"
-                  boxShadow="0px 0px 0px 3px #B88746"
-                  borderRadius="50%"
-                  my="1"
-                />{" "}
-                <Divider
-                  orientation={{ base: "vertical", lg: "horizontal" }}
-                  border="3px solid"
-                  borderColor="#DFBD69"
-                  bgColor="#DFBD69"
-                />
-              </Flex>
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
             </Flex>
           </Flex>
+          <Flex w="100%" align="center" overflow="hidden">
+            <Flex
+              w="100%"
+              align="center"
+              className="discoball-slidein-left3 reveal"
+              direction={{ base: "column", lg: "row" }}
+            >
+              <Divider
+                w="100%"
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width={{ base: "1.875rem", lg: "4rem" }}
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                w="100%"
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+            </Flex>
+          </Flex>
+        </Flex>
+        <Flex
+          w={{ base: "47.5%", lg: "100%" }}
+          h="100%"
+          gap="1.25rem"
+          align="center"
+          pb="0.625rem"
+          overflow="hidden"
+          direction={{ base: "column", lg: "row" }}
+        >
           <Flex
-            // w={{ base: "47.5%", lg: "100%" }}
-            h="100%"
-            gap="1.25rem"
+            w="100%"
+            direction={{ base: "column-reverse", lg: "column" }}
             align="center"
-            pb="0.625rem"
-            overflow="hidden"
-            direction={{ base: "column", lg: "row" }}
           >
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pb={{ base: "0", lg: "1rem" }}
+              pt={{ base: "1rem", lg: "0" }}
+              className="Icon-fadein reveal"
+              textAlign="center"
+            >
+              FOOD COURT
+            </Heading>
+            <Image
+              src={foodCourt}
+              h={{ base: "8.563rem", lg: "15rem" }}
+              className="slidein-top reveal"
+              id="b0"
+            />
+          </Flex>
+          <Flex
+            w="100%"
+            direction={{ base: "column-reverse", lg: "column" }}
+            align="center"
+          >
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pb={{ base: "0", lg: "1rem" }}
+              pt={{ base: "1rem", lg: "0" }}
+              textAlign="center"
+              className="fadein-2sdelay reveal"
+            >
+              8 SCREEN MULTIPLEX
+            </Heading>
+            <Image
+              src={multiplex}
+              h={{ base: "8.563rem", lg: "15rem" }}
+              className="slidein-top-2sdelay reveal"
+            />
+          </Flex>
+          <Flex
+            w="100%"
+            direction={{ base: "column-reverse", lg: "column" }}
+            align="center"
+          >
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pb={{ base: "0", lg: "1rem" }}
+              pt={{ base: "1rem", lg: "0" }}
+              textAlign="center"
+              className="fadein-2sdelay reveal"
+            >
+              GAMING ARCADE
+            </Heading>
+            <Image
+              src={gamingArena}
+              h={{ base: "8.563rem", lg: "15rem" }}
+              className="slidein-top-4sdelay reveal"
+            />
+          </Flex>
+        </Flex>
+      </Flex>
+      {/* mobile view amenities */}
+      <Flex
+        display={{ base: "flex", lg: "none" }}
+        overflow="hidden"
+        w="100%"
+        h="100%"
+        direction="column"
+        align="center"
+        pt={{ base: "1.25rem", lg: "3.125rem" }}
+        px={{ base: "0.938rem", lg: "6.25rem" }}
+      >
+        <Text
+          fontFamily="goudy"
+          fontSize={{ base: "1.5rem", lg: "2.5rem" }}
+          pb="1.875rem"
+          className="discobal-slidein-top reveal"
+        >
+          AMENITIES
+        </Text>
+
+        <Flex
+          w={{ base: "47.5%", lg: "100%" }}
+          h="100%"
+          gap="1.25rem"
+          direction={{ base: "column", lg: "row" }}
+          align="center"
+          pb="0.9rem"
+        >
+          <Flex w="100%" direction="column" align="center" overflow="hidden">
+            <Image
+              zIndex="2"
+              src={retailShop}
+              h={{ base: "8.563rem", lg: "15rem" }}
+              className="slidein-bottom reveal"
+            />
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pt="1rem"
+              className="Icon-fadein reveal"
+            >
+              RETAIL SHOPS
+            </Heading>
+          </Flex>
+          <Flex w="100%" direction="column" align="center" overflow="hidden">
+            <Image
+              zIndex="2"
+              h={{ base: "8.563rem", lg: "15rem" }}
+              src={market}
+              className="slidein-bottom-2sdelay reveal"
+            />
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pt="1rem"
+              className="fadein-2sdelay reveal"
+            >
+              HYPERMARKET
+            </Heading>
+          </Flex>
+          <Flex w="100%" direction="column" align="center" overflow="hidden">
+            <Image
+              zIndex="2"
+              src={pharmacy}
+              h={{ base: "8.563rem", lg: "15rem" }}
+              className="slidein-bottom-4sdelay reveal"
+            />
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pt="1rem"
+              className="fadein-4sdelay reveal"
+            >
+              PHARMACY
+            </Heading>
+          </Flex>
+        </Flex>
+        <Flex
+          w="100%"
+          h="100%"
+          align="center"
+          pb="0.625rem"
+          overflow="hidden"
+          px={{ base: "0.938rem", lg: "0" }}
+          direction={{ base: "column", lg: "row" }}
+        >
+          {" "}
+          <Flex w="100%" h="100%" align="center" overflow="hidden">
             <Flex
               w="100%"
-              direction={{ base: "column-reverse", lg: "column" }}
               align="center"
+              className="discoball-slidein-left1 reveal"
+              direction={{ base: "column", lg: "row" }}
             >
-              <Heading
-                fontFamily="avenir"
-                fontSize={{ base: "1rem", lg: "1.25rem" }}
-                pb={{ base: "0", lg: "1rem" }}
-                pt={{ base: "1rem", lg: "0" }}
-                className="Icon-fadein reveal"
-                textAlign="center"
-              >
-                FOOD COURT
-              </Heading>
-              <Image
-                src={foodCourt}
-                h={{ base: "8.563rem", lg: "15rem" }}
-                className="slidein-top reveal"
-                id="b0"
+              <Divider
+                w="100%"
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width={{ base: "1.875rem", lg: "4rem" }}
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                w="100%"
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
               />
             </Flex>
+          </Flex>
+          <Flex w="100%" align="center" overflow="hidden">
             <Flex
               w="100%"
-              direction={{ base: "column-reverse", lg: "column" }}
               align="center"
+              className="discoball-slidein-left2 reveal"
+              direction={{ base: "column", lg: "row" }}
             >
-              <Heading
-                fontFamily="avenir"
-                fontSize={{ base: "1rem", lg: "1.25rem" }}
-                pb={{ base: "0", lg: "1rem" }}
-                pt={{ base: "1rem", lg: "0" }}
-                textAlign="center"
-                className="fadein-2sdelay reveal"
-              >
-                8 SCREEN MULTIPLEX
-              </Heading>
-              <Image
-                src={multiplex}
-                h={{ base: "8.563rem", lg: "15rem" }}
-                className="slidein-top-2sdelay reveal"
+              <Divider
+                w="100%"
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width={{ base: "1.875rem", lg: "4rem" }}
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                w="100%"
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
               />
             </Flex>
+          </Flex>
+          <Flex w="100%" align="center" overflow="hidden">
             <Flex
               w="100%"
-              direction={{ base: "column-reverse", lg: "column" }}
               align="center"
+              className="discoball-slidein-left3 reveal"
+              direction={{ base: "column", lg: "row" }}
             >
-              <Heading
-                fontFamily="avenir"
-                fontSize={{ base: "1rem", lg: "1.25rem" }}
-                pb={{ base: "0", lg: "1rem" }}
-                pt={{ base: "1rem", lg: "0" }}
-                textAlign="center"
-                className="fadein-2sdelay reveal"
-              >
-                GAMING ARCADE
-              </Heading>
-              <Image
-                src={gamingArena}
-                h={{ base: "8.563rem", lg: "15rem" }}
-                className="slidein-top-4sdelay reveal"
+              <Divider
+                w="100%"
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width={{ base: "1.875rem", lg: "4rem" }}
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />{" "}
+              <Divider
+                w="100%"
+                orientation={{ base: "vertical", lg: "horizontal" }}
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
               />
             </Flex>
+          </Flex>
+        </Flex>
+        <Flex
+          w={{ base: "47.5%", lg: "100%" }}
+          h="100%"
+          gap="1.25rem"
+          align="center"
+          pb="0.625rem"
+          overflow="hidden"
+          direction={{ base: "column", lg: "row" }}
+        >
+          <Flex
+            w="100%"
+            direction={{ base: "column-reverse", lg: "column" }}
+            align="center"
+          >
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pb={{ base: "0", lg: "1rem" }}
+              pt={{ base: "1rem", lg: "0" }}
+              className="Icon-fadein reveal"
+              textAlign="center"
+            >
+              FOOD COURT
+            </Heading>
+            <Image
+              src={foodCourt}
+              h={{ base: "8.563rem", lg: "15rem" }}
+              className="slidein-top reveal"
+              id="b0"
+            />
+          </Flex>
+          <Flex
+            w="100%"
+            direction={{ base: "column-reverse", lg: "column" }}
+            align="center"
+          >
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pb={{ base: "0", lg: "1rem" }}
+              pt={{ base: "1rem", lg: "0" }}
+              textAlign="center"
+              className="fadein-2sdelay reveal"
+            >
+              8 SCREEN MULTIPLEX
+            </Heading>
+            <Image
+              src={multiplex}
+              h={{ base: "8.563rem", lg: "15rem" }}
+              className="slidein-top-2sdelay reveal"
+            />
+          </Flex>
+          <Flex
+            w="100%"
+            direction={{ base: "column-reverse", lg: "column" }}
+            align="center"
+          >
+            <Heading
+              fontFamily="avenir"
+              fontSize={{ base: "1rem", lg: "1.25rem" }}
+              pb={{ base: "0", lg: "1rem" }}
+              pt={{ base: "1rem", lg: "0" }}
+              textAlign="center"
+              className="fadein-2sdelay reveal"
+            >
+              GAMING ARCADE
+            </Heading>
+            <Image
+              src={gamingArena}
+              h={{ base: "8.563rem", lg: "15rem" }}
+              className="slidein-top-4sdelay reveal"
+            />
           </Flex>
         </Flex>
       </Flex>
@@ -1062,128 +1331,131 @@ const LocationAndFormPlaza = () => {
           pb="3.125rem"
         >
           <Flex
-            w={{ base: "100%", lg: "28%" }}
+            display={{ base: "grid", lg: "flex" }}
+            w={{ base: "100%", lg: "40%" }}
             h="100%"
             wrap="wrap"
             alignSelf={{ base: "none", lg: "center" }}
             justify={{ base: "flex-start", lg: "flex-start" }}
             gap={{ base: "1.125rem", lg: "0" }}
           >
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Box
-                borderRadius="50%"
-                p={{ base: "0.625rem", lg: "1rem" }}
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                align="center"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
+            <SimpleGrid columns={{ base: "2", lg: "1" }}>
+              <Flex pb="1.5rem" className="Icon-fadein reveal">
+                <Box
+                  borderRadius="50%"
+                  p={{ base: "0.625rem", lg: "1rem" }}
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  direction="column"
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  align="center"
+                  mr="1rem"
+                  _hover={{ cursor: "pointer" }}
+                >
+                  <Image
+                    w={{ base: "1.875rem", lg: "3.125rem" }}
+                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    src={institute}
+                  />
+                </Box>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    100+
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    EDUCATIONAL INSTITUTES
+                  </Text>
+                </VStack>
+              </Flex>
+              <Flex pb="1.5rem" className="Icon-fadein reveal">
                 <Image
-                  w={{ base: "1.875rem", lg: "3.125rem" }}
-                  h={{ base: "1.875rem", lg: "3.125rem" }}
-                  src={institute}
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  src={company}
+                  mr="1rem"
                 />
-              </Box>
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    2000+
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    COMPANIES NEARBY
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+              <Flex pb="1.5rem" className="Icon-fadein reveal">
+                <Box
+                  borderRadius="50%"
+                  p={{ base: "0.625rem", lg: "1rem" }}
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  direction="column"
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  align="center"
+                  mr="1rem"
+                  _hover={{ cursor: "pointer" }}
                 >
-                  100+
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  EDUCATIONAL INSTITUTES
-                </Text>
-              </VStack>
-            </Flex>
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Image
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                src={company}
-                mr="1rem"
-              />
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  2000+
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  COMPANIES NEARBY
-                </Text>
-              </VStack>
-            </Flex>{" "}
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Box
-                borderRadius="50%"
-                p={{ base: "0.625rem", lg: "1rem" }}
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                align="center"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
+                  <Image
+                    w={{ base: "1.875rem", lg: "3.125rem" }}
+                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    src={industry}
+                  />
+                </Box>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    2
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    LARGE INDUSTRIAL PARKS
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+              <Flex pb="1.5rem" className="Icon-fadein reveal">
                 <Image
-                  w={{ base: "1.875rem", lg: "3.125rem" }}
-                  h={{ base: "1.875rem", lg: "3.125rem" }}
-                  src={industry}
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  src={port}
+                  mr="1rem"
                 />
-              </Box>
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  2
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  LARGE INDUSTRIAL PARKS
-                </Text>
-              </VStack>
-            </Flex>{" "}
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Image
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                src={port}
-                mr="1rem"
-              />
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  3
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  MAJOR PORTS, SEZ
-                </Text>
-              </VStack>
-            </Flex>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    3
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    MAJOR PORTS, SEZ
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+            </SimpleGrid>
           </Flex>
           <Flex
             display={{ base: "none", lg: "flex" }}
             overflow="hidden"
-            w="10%"
+            // w="10%"
             h="100%"
             px="1.563rem"
           >
@@ -1241,7 +1513,7 @@ const LocationAndFormPlaza = () => {
               className="discoball-slidein-left1 reveal"
             >
               <Divider
-                h={{ base: "1.225rem", lg: "0" }}
+                h={{ base: "1.6rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -1311,7 +1583,7 @@ const LocationAndFormPlaza = () => {
               className="discoball-slidein-left2 reveal"
             >
               <Divider
-                h={{ base: "1.75rem", lg: "0" }}
+                h={{ base: "3.5rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -1328,7 +1600,7 @@ const LocationAndFormPlaza = () => {
                 my="1"
               />{" "}
               <Divider
-                h={{ base: "3.7rem", lg: "0" }}
+                h={{ base: "5.3rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -1382,7 +1654,7 @@ const LocationAndFormPlaza = () => {
               className="discoball-slidein-left3 reveal"
             >
               <Divider
-                h={{ base: "1.7rem", lg: "0" }}
+                h={{ base: "1.8rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -1399,7 +1671,7 @@ const LocationAndFormPlaza = () => {
                 my="1"
               />{" "}
               <Divider
-                h={{ base: "3.8rem", lg: "0" }}
+                h={{ base: "3.7rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -1453,7 +1725,7 @@ const LocationAndFormPlaza = () => {
               direction={{ base: "column", lg: "row" }}
             >
               <Divider
-                h={{ base: "0.15rem", lg: "0" }}
+                h={{ base: "0.55rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"

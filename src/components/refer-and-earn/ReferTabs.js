@@ -34,32 +34,28 @@ const ReferTabs = () => {
   const [active, setActive] = useState(true);
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
-    try{
+    try {
+      for (var i = 0; i <= reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i]
+          ? reveals[i].getBoundingClientRect().top
+          : null;
+        var elementVisible = 200;
 
-    for (var i = 0; i <= reveals.length; i++) {
-      
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i]
-        ? reveals[i].getBoundingClientRect().top
-        : null;
-      var elementVisible = 200;
-
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
       }
-    }
-  }catch(e){
-    
-  }
-  }
-  useLayoutEffect(()=>{
+    } catch (e) {}
+  };
+  useLayoutEffect(() => {
     window.addEventListener("scroll", reveal);
   });
   return (
-    <Flex w="100%" h="100%" px={{base:"1rem",lg:"6.25rem"}} direction="column" align="center">
-      <Flex w="100%">
+    <Flex w="100%" h="100%" direction="column" align="center">
+      <Flex w="100%" px={{ base: "1rem", lg: "6.25rem" }}>
         <Button
           w="100%"
           bgColor="white"
@@ -131,7 +127,13 @@ const ReferAFriend = () => {
           HOW IT WORKS?
         </Heading>
       </Flex>
-      <Flex w="100%" columnGap="1.25rem" pb="1.875rem" direction={{base:"column",lg:"row"}}>
+      <Flex
+        w="100%"
+        columnGap="1.25rem"
+        pb="1.875rem"
+        direction={{ base: "column", lg: "row" }}
+        px="6.25rem"
+      >
         <Flex
           w="100%"
           h="100%"
@@ -173,7 +175,11 @@ const ReferAFriend = () => {
           <Image w="100%" h="16rem" p="2rem" src={img1} />
         </Flex>
         <Flex w="100%" direction="column" overflow="hidden">
-          <Heading fontFamily="avenir" fontSize="1.5rem" className="fadein-2sdelay reveal">
+          <Heading
+            fontFamily="avenir"
+            fontSize="1.5rem"
+            className="fadein-2sdelay reveal"
+          >
             STEP 2
           </Heading>
           <Flex
@@ -200,14 +206,29 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>{" "}
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem"  className="fadein-2sdelay reveal">
+          <Text
+            pb="1.25rem"
+            fontFamily="veralaRound"
+            fontSize="1.25rem"
+            className="fadein-2sdelay reveal"
+          >
             Your provided referral will be contacted by our team and complete
             assistance will be provided in the booking process.
           </Text>{" "}
-          <Image w="100%" h="14.625rem" p="2rem" src={img2} className="fadein-2sdelay reveal"/>
+          <Image
+            w="100%"
+            h="14.625rem"
+            p="2rem"
+            src={img2}
+            className="fadein-2sdelay reveal"
+          />
         </Flex>
         <Flex w="100%" direction="column" overflow="hidden">
-          <Heading fontFamily="avenir" fontSize="1.5rem" className="fadein-4sdelay reveal">
+          <Heading
+            fontFamily="avenir"
+            fontSize="1.5rem"
+            className="fadein-4sdelay reveal"
+          >
             STEP 3
           </Heading>
           <Flex
@@ -234,11 +255,22 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>{" "}
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem" className="fadein-4sdelay reveal">
+          <Text
+            pb="1.25rem"
+            fontFamily="veralaRound"
+            fontSize="1.25rem"
+            className="fadein-4sdelay reveal"
+          >
             Every time your referral becomes a successful booking, you’ll earn
             rewards upto Rs 1 Lakh.
           </Text>
-          <Image w="100%" h="16.75rem" p="2rem" src={img3} className="fadein-4sdelay reveal"/>
+          <Image
+            w="100%"
+            h="16.75rem"
+            p="2rem"
+            src={img3}
+            className="fadein-4sdelay reveal"
+          />
         </Flex>
       </Flex>
       <Flex
@@ -248,6 +280,11 @@ const ReferAFriend = () => {
         direction="column"
         pb="5rem"
         overflow="hidden"
+        bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+        bgRepeat="no-repeat"
+        bgPos="center"
+        bgSize="cover"
+        px="6.25rem"
       >
         <form
           style={{
@@ -267,7 +304,14 @@ const ReferAFriend = () => {
           >
             REFER & EARN
           </Text>
-          <Flex w="100%" h="100%" direction="row" gap="6.25rem" pb="1.563rem" className="fadein reveal">
+          <Flex
+            w="100%"
+            h="100%"
+            direction="row"
+            gap="6.25rem"
+            pb="1.563rem"
+            className="fadein reveal"
+          >
             <Flex
               w="100%"
               h="100%"
@@ -549,16 +593,16 @@ const BookAVisit = () => {
           pos="absolute"
           objectFit="cover"
           left="0"
-          bottom={{base:"10rem",lg:"0"}}
+          bottom={{ base: "10rem", lg: "0" }}
         />
         <Flex
           overflow="hidden"
           pos="absolute"
-          w={{base:"100%",lg:"60%"}}
+          w={{ base: "100%", lg: "60%" }}
           h="100%"
           direction="column"
           align="center"
-          top={{base:"5%",lg:"20%"}}
+          top={{ base: "5%", lg: "20%" }}
           right="0"
           bottom="0"
         >
@@ -566,23 +610,23 @@ const BookAVisit = () => {
             className="serv-text-down reveal"
             textAlign="center"
             fontFamily="goudy"
-            fontSize={{base:"2rem",lg:"2.5rem"}}
+            fontSize={{ base: "2rem", lg: "2.5rem" }}
             pb="1.875rem"
           >
             YOU ARE ONLY ONE RIDE AWAY FROM YOUR DREAM HOME
           </Text>
           <div className="fadein reveal">
-          <HStack w="100%" align="center" justify="center" pb="3.125rem">
-            <Image src={carIll} />
-            <Heading
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize={{base:"1rem",lg:"1.5rem"}}
-              bgGradient="linear(to-l, #B88746, #DFBD69)"
-              bgClip="text"
-            >
-              FREE PICK UP - DROP SERVICE AVAILABLE
-            </Heading>
+            <HStack w="100%" align="center" justify="center" pb="3.125rem">
+              <Image src={carIll} />
+              <Heading
+                textAlign="center"
+                fontFamily="avenir"
+                fontSize={{ base: "1rem", lg: "1.5rem" }}
+                bgGradient="linear(to-l, #B88746, #DFBD69)"
+                bgClip="text"
+              >
+                FREE PICK UP - DROP SERVICE AVAILABLE
+              </Heading>
             </HStack>
             <Heading
               textAlign="center"
@@ -590,7 +634,6 @@ const BookAVisit = () => {
               fontSize="1.5rem"
               pb="0.938rem"
             >
-              
               GET IN TOUCH WITH US
             </Heading>
             <Flex w="100%" align="center" justify="center" gap="3.125rem">
@@ -636,7 +679,14 @@ const BookAVisit = () => {
           >
             BOOK YOUR FREE SITE VISIT
           </Text>
-          <Flex w="100%" h="100%" direction="row" gap="6.25rem" pb="1.563rem" className="fadein reveal">
+          <Flex
+            w="100%"
+            h="100%"
+            direction="row"
+            gap="6.25rem"
+            pb="1.563rem"
+            className="fadein reveal"
+          >
             <Flex
               w="100%"
               h="100%"
@@ -746,7 +796,15 @@ const BookAVisit = () => {
                   >
                     TIME
                   </FormLabel>
-                  <select style={{position:"absolute",right:"0px",zIndex:"2",height:"3.125rem",backgroundColor:"#E5E5E5"}}>
+                  <select
+                    style={{
+                      position: "absolute",
+                      right: "0px",
+                      zIndex: "2",
+                      height: "3.125rem",
+                      backgroundColor: "#E5E5E5",
+                    }}
+                  >
                     <option>AM</option>
                     <option>PM</option>
                   </select>
@@ -762,7 +820,6 @@ const BookAVisit = () => {
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
-                  
                 </HStack>{" "}
               </FormControl>
               <FormControl>

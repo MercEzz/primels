@@ -163,7 +163,8 @@ const FourthSec = () => {
             SKY TERRACE AVENUE
           </Heading>
           <Text fontFamily="veralaRound" fontSize="1rem">
-            The perfect spot to rediscover a forgotten time of the day: Golden
+            The perfect spot to rediscover a <br />
+            forgotten time of the day: Golden <br />
             Sunrises.
           </Text>
         </Flex>
@@ -181,7 +182,7 @@ const FourthSec = () => {
             border="3px solid"
             borderColor="#DFBD69"
             bgColor="#DFBD69"
-            h="5.25rem"
+            h="7rem"
           />{" "}
           <Box
             height="1.875rem"

@@ -15,7 +15,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const MtnHd = motion(Heading);
 const MtnTxt = motion(Text);
-const MtnContainer = motion(Container);
+const MtnFlex = motion(Flex);
 
 const GetInTouch = () => {
   const ref = useRef(null);
@@ -58,7 +58,6 @@ const GetInTouch = () => {
     }
   };
 
- 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -98,11 +97,13 @@ const GetInTouch = () => {
       >
         Leave us your information and our team will get back to you.
       </MtnTxt>
-      <MtnContainer
+      <MtnFlex
         initial={{ opacity: 0 }}
         animate={animateFade}
         transition={{ delay: 3, duration: 2, type: "just" }}
-        minw="container.sm"
+        w="full"
+        align="center"
+        justify="center"
       >
         {" "}
         <form onSubmit={submitHandler}>
@@ -122,43 +123,51 @@ const GetInTouch = () => {
                 >
                   NAME*
                 </FormLabel>
-                {borderClr?
-                <Input
-                  id="name"
-                  name="name"
-                  value={name}
-                  onChange={onChange}
-                  type="text"
-                  w="33.125rem"
-                  h="2.5rem"
-                  bgColor="#E5E5E5"
-                  borderRadius="none"
-                  fontFamily="veralaRound"
-                  boxShadow="0px 0px 2px 2px red"
-                  fontSize="1rem"
-                  isRequired
-                  borderWidth="2px"
-                  isInvalid={borderClr}
-                  errorBorderColor="crimson"
-                />:<Input
-                id="name"
-                name="name"
-                value={name}
-                onChange={onChange}
-                type="text"
-                w="33.125rem"
-                h="2.5rem"
-                bgColor="#E5E5E5"
-                borderRadius="none"
-                fontFamily="veralaRound"
-                fontSize="1rem"
-                isRequired
-                borderWidth="2px"
-                isInvalid={borderClr}
-                errorBorderColor="crimson"
-              />}
+                {borderClr ? (
+                  <Input
+                    id="name"
+                    name="name"
+                    value={name}
+                    onChange={onChange}
+                    type="text"
+                    w="24.813rem"
+                    h="2.5rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                    fontFamily="veralaRound"
+                    boxShadow="0px 0px 2px 2px red"
+                    fontSize="1rem"
+                    isRequired
+                    borderWidth="2px"
+                    isInvalid={borderClr}
+                    errorBorderColor="crimson"
+                  />
+                ) : (
+                  <Input
+                    id="name"
+                    name="name"
+                    value={name}
+                    onChange={onChange}
+                    type="text"
+                    w="24.813rem"
+                    h="2.5rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                    fontFamily="veralaRound"
+                    fontSize="1rem"
+                    isRequired
+                    borderWidth="2px"
+                    isInvalid={borderClr}
+                    errorBorderColor="crimson"
+                  />
+                )}
               </Flex>
-              <Flex w="100%" align="center" justify="space-between" pb="0.437rem">
+              <Flex
+                w="100%"
+                align="center"
+                justify="space-between"
+                pb="0.437rem"
+              >
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
@@ -173,7 +182,7 @@ const GetInTouch = () => {
                   value={email}
                   onChange={onChange}
                   type="email"
-                  w="33.125rem"
+                  w="24.813rem"
                   h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
@@ -182,7 +191,12 @@ const GetInTouch = () => {
                   isRequired
                 />
               </Flex>
-              <Flex w="100%" align="center" justify="space-between" pb="0.437rem">
+              <Flex
+                w="100%"
+                align="center"
+                justify="space-between"
+                pb="0.437rem"
+              >
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
@@ -197,10 +211,9 @@ const GetInTouch = () => {
                   value={phoneNo}
                   onChange={onChange}
                   type="number"
-                  w="33.125rem"
+                  w="24.813rem"
                   h="2.5rem"
-                  boxShadow={borderClr?"0px 0px 2px 2px red":""}
-                  bgColor=""
+                  bgColor="#E5E5E5"
                   borderRadius="none"
                   fontFamily="veralaRound"
                   fontSize="1rem"
@@ -222,7 +235,7 @@ const GetInTouch = () => {
                   value={message}
                   onChange={onChange}
                   maxLength="200"
-                  w="33.125rem"
+                  w="24.813rem"
                   h="7.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
@@ -247,7 +260,7 @@ const GetInTouch = () => {
             </Button>
           </FormControl>
         </form>
-      </MtnContainer>
+      </MtnFlex>
     </Flex>
   );
 };

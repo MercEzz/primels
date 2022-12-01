@@ -53,6 +53,10 @@ const SecondSec = () => {
       pt="5rem"
       pb="3.125rem"
       px="6.25rem"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
     >
       <Heading
         transform={inView ? "translateY(0)" : "translateY(-50px)"}
@@ -81,6 +85,7 @@ const SecondSec = () => {
             height={"100%"}
             width={"100%"}
             overflow={"hidden"}
+            boxShadow="dark-lg"
           >
             {/* CSS files for react-slick */}
             <link
@@ -106,7 +111,6 @@ const SecondSec = () => {
                   backgroundRepeat="no-repeat"
                   backgroundSize="cover"
                   bgImage={prime}
-                  boxShadow="dark-lg"
                 />
               ))}
             </Slider>
@@ -171,7 +175,7 @@ const SecondSec = () => {
             border="3px solid"
             borderColor="#DFBD69"
             bgColor="#DFBD69"
-            h="5.25rem"
+            h="2.75rem"
           />
           <Box
             height="1.875rem"
