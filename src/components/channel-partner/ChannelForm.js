@@ -12,7 +12,6 @@ import {
   Button,
   RadioGroup,
   Radio,
-  Select,
 } from "@chakra-ui/react";
 import "./drop.css";
 import React, { useRef, useState, useEffect } from "react";
@@ -179,7 +178,7 @@ const ChannelForm = () => {
           fontFamily="veralaRound"
           fontSize="1rem"
           lineHeight="1.5"
-          mb="3.125rem"
+          mb="1.875rem"
         >
           Your association with us is extremely valuable to us. We support our
           Channel Partners to catalyst their growth with ours. Join our network
@@ -907,7 +906,7 @@ const ChannelForm = () => {
           fontFamily="avenir"
           fontSize="1rem"
         >
-          <DropMenu />
+          {/*<DropMenu />*/}
         </Flex>
         {/* {validForm ? ( */}
         <Flex

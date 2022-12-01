@@ -29,42 +29,40 @@ import key from "../blog imgs/maria-ziegler-jJnZg7vBfMs-unsplash.jpg";
 import kidbed from "../blog imgs/toa-heftiba-bcLE7reXFLM-unsplash.jpg";
 import sunlight from "../blog imgs/jared-rice-NTyBbu66_SI-unsplash.jpg";
 import spacejoy from "../blog imgs/boxes.jpg";
+import bgBox from "../careers imgs/bg-box.jpg";
 // icons
-import {
-  AiOutlineYoutube,
-  AiOutlineInstagram,
-  AiOutlineLinkedin,
-} from "react-icons/ai";
+import yt from "../blog imgs/youtube.svg";
+import insta from "../blog imgs/insta.svg";
+import linkedIn from "../blog imgs/linkedin.svg";
+import fb from "../blog imgs/facebook.svg";
 import { RiFacebookCircleLine } from "react-icons/ri";
 //animation
-import "./bloganimation.css"
-import "./blogstyle.css"
+import "./bloganimation.css";
+import "./blogstyle.css";
 const Blog = () => {
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
-    try{
+    try {
+      for (var i = 0; i <= reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i]
+          ? reveals[i].getBoundingClientRect().top
+          : null;
+        var elementVisible = 200;
 
-    for (var i = 0; i <= reveals.length; i++) {
-      
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i]
-        ? reveals[i].getBoundingClientRect().top
-        : null;
-      var elementVisible = 200;
-
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
       }
-    }
-  }catch(e){
-    
-  }
-  }
-  useLayoutEffect(()=>{
+    } catch (e) {}
+  };
+  useLayoutEffect(() => {
     window.addEventListener("scroll", reveal);
-    return()=>{window.removeEventListener("scroll", reveal);}
+    return () => {
+      window.removeEventListener("scroll", reveal);
+    };
   });
   return (
     <>
@@ -342,7 +340,8 @@ const Blog = () => {
                     <Text fontFamily="veralaRound" fontSize="1.125rem">
                       With modernisation making life simpler and unfolding the
                       chapters of growth for every citizen, its time to
-                      understand the advantages of apartments in gated community...…
+                      understand the advantages of apartments in gated
+                      community...…
                     </Text>
                   </Flex>
                 </Flex>
@@ -500,11 +499,11 @@ export default Blog;
 const BlogForm = () => {
   return (
     <>
-      <Flex h="100%" justify="flex-end" pb="0.938rem">
-        <Icon as={AiOutlineYoutube} w="2.563rem" h="2.1rem" />
-        <Icon as={AiOutlineInstagram} w="1.875rem" h="1.875rem" />
-        <Icon as={RiFacebookCircleLine} w="1.875rem" h="1.875rem" />
-        <Icon as={AiOutlineLinkedin} w="1.875rem" h="1.875rem" />
+      <Flex h="100%" justify="flex-end" pb="0.938rem" gap="0.625rem">
+        <Image src={yt} />
+        <Image src={insta} />
+        <Image src={fb} />
+        <Image src={linkedIn} />
       </Flex>
       <Flex w="100%" direction="column" pb="0.938rem">
         <Text fontFamily="veralaRound" fontSize="1rem" pb="0.625rem">
@@ -538,6 +537,10 @@ const BlogForm = () => {
         pb="1.875rem"
         align="center"
         justify="center"
+        bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
+        bgRepeat="no-repeat"
+        bgPos="center"
+        bgSize="cover"
       >
         {" "}
         <Heading
