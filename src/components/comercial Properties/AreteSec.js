@@ -18,15 +18,15 @@ import {
 } from "@chakra-ui/react";
 import React, { useLayoutEffect, useState } from "react";
 // images
-import arete1 from "../commercial-properties imgs/ARETE PLAZA2.jpg";
-import arete2 from "../commercial-properties imgs/ARETE PLAZA4.jpg";
-import arete3 from "../commercial-properties imgs/ARETE PLAZA3.jpg";
-import aretefloor from "../commercial-properties imgs/COMERCIAL.jpg";
+import arete1 from "../commercial-properties imgs/ARETE PLAZA2_11zon.jpg";
+import arete2 from "../commercial-properties imgs/ARETE PLAZA4_11zon.jpg";
+import arete3 from "../commercial-properties imgs/ARETE PLAZA3_11zon.jpg";
+import aretefloor from "../commercial-properties imgs/A7 commercial with C.A_pages-to-jpg-0001_11zon.jpg";
 import institute from "../commercial-properties imgs/INSTITUTES.svg";
 import company from "../commercial-properties imgs/company.svg";
 import port from "../commercial-properties imgs/ports.svg";
 import industry from "../commercial-properties imgs/INDUSTRY.svg";
-import locationadv from "../commercial-properties imgs/Asset 1-100.jpg";
+import locationadv from "../commercial-properties imgs/Asset 1-100_11zon.jpg";
 import mall from "../commercial-properties imgs/Arete Mall.jpg";
 import market from "../commercial-properties imgs/hanson-lu-sq5P00L7lXc-unsplash.jpg";
 import multiplex from "../commercial-properties imgs/multipllex.jpg";
@@ -34,6 +34,7 @@ import pharmacy from "../commercial-properties imgs/national-cancer-institute-by
 import gamingArena from "../commercial-properties imgs/yara-2lS63pP77EQ-unsplash.jpg";
 import foodCourt from "../commercial-properties imgs/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg";
 import retailShop from "../commercial-properties imgs/carl-raw-s9rsYu-BYNo-unsplash.jpg";
+import bgBox from "../careers imgs/bg-box.jpg";
 
 import DropDown from "./DropDown";
 import "./animations.css";
@@ -83,11 +84,15 @@ const AreteSec = () => {
         align="center"
         justify="center"
         px={{ base: "0.625rem", lg: "0" }}
+        bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
+        bgRepeat="no-repeat"
+        bgPos="top"
+        bgSize="cover"
       >
         <Flex w="100%" px={{ base: "0", lg: "6.25rem" }} gap="1.25rem">
           <Button
             w="100%"
-            bgColor="white"
+            bgColor="transparent"
             bgGradient={active ? "linear(to-b, #B88746 ,#DFBD69)" : "white"}
             border="1px solid #B88746"
             color={active ? "white" : "black"}
@@ -96,7 +101,7 @@ const AreteSec = () => {
             fontSize={{ base: "0.875rem", lg: "1.25rem" }}
             fontFamily="avenir"
             fontWeight="bold"
-            boxShadow={active ? "dark-lg" : "none"}
+            boxShadow={active ? "2xl" : "none"}
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
               color: "white",
@@ -111,7 +116,7 @@ const AreteSec = () => {
           <Button
             w="100%"
             color={active ? "black" : "white"}
-            bgColor="white"
+            bgColor="transparent"
             p={{ base: "0.625rem", lg: "1.563rem" }}
             border="1px solid #B88746"
             bgGradient={active ? "white" : "linear(to-b, #B88746 ,#DFBD69)"}
@@ -119,7 +124,7 @@ const AreteSec = () => {
             fontSize={{ base: "0.875rem", lg: "1.25rem" }}
             fontFamily="avenir"
             fontWeight="bold"
-            boxShadow={active ? "none" : "dark-lg"}
+            boxShadow={active ? "none" : "2xl"}
             onClick={() => {
               setActive(false);
             }}
@@ -153,6 +158,11 @@ const AretePlaza = () => {
         align="center"
         justify="center"
         px={{ base: "0.625rem", lg: "6.25rem" }}
+        pb={{ base: "0", lg: "1.875rem" }}
+        bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
+        bgRepeat="no-repeat"
+        bgPos="center"
+        bgSize="cover"
       >
         <Flex
           w="100%"
@@ -421,14 +431,14 @@ const AretePlaza = () => {
       </Flex>
       <Flex
         display={{ base: "none", lg: "flex" }}
-        mt="5rem"
+        mt="3.125rem"
         w="100%"
         h="100%"
         gap="1.875rem"
         px="6.25rem"
         pb="5rem"
       >
-        <Flex w="65%" alignSelf="flex-start" overflow="hidden">
+        <Flex w="65%" alignSelf="flex-start" overflow="hidden" boxShadow="2xl">
           <Image
             className="Arete-Plaza-FloorPlan-Image reveal"
             w="100%"
@@ -1488,7 +1498,7 @@ const LocationAndFormPlaza = () => {
           <Flex w="100%">
             <Image
               className="Arete-Plaza-LocationAdv-Image reveal"
-              boxShadow="lg"
+              boxShadow="2xl"
               w="100%"
               h={{ base: "20.625rem", lg: "29.25rem" }}
               objectFit="cover"
@@ -1557,7 +1567,7 @@ const LocationAndFormPlaza = () => {
                 5 MINS
               </Heading>{" "}
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -1627,7 +1637,7 @@ const LocationAndFormPlaza = () => {
                 10 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -1698,7 +1708,7 @@ const LocationAndFormPlaza = () => {
                 20 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -1769,7 +1779,7 @@ const LocationAndFormPlaza = () => {
                 30 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -1790,6 +1800,10 @@ const LocationAndFormPlaza = () => {
         align="center"
         justify="center"
         direction="column"
+        bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
+        bgRepeat="no-repeat"
+        bgPos="center"
+        bgSize="cover"
         px={{ base: "1.563rem", lg: "0" }}
       >
         <Text
