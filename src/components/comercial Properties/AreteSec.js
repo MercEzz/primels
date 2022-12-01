@@ -536,6 +536,10 @@ const AreteMall = () => {
         direction="column"
         align="center"
         justify="center"
+        bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
+        bgRepeat="no-repeat"
+        bgPos="center"
+        bgSize="cover"
         px={{ base: "0.625rem", lg: "6.25rem" }}
         pt={{ base: "0", lg: "1.875rem" }}
         pb={{ base: "0", lg: "1.875rem" }}
@@ -575,12 +579,13 @@ const AreteMall = () => {
               />
             </Flex>{" "}
             <Button
+              display={{ base: "block", lg: "none" }}
               alignSelf="center"
               w="fit-content"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
               color="white"
               mr={{ base: "0", lg: "0.625rem" }}
-              p={{ base: "0.938rem", lg: "1.563rem" }}
+              p={{ base: "0.625rem", lg: "1.563rem" }}
               fontSize="1.25rem"
               fontFamily="avenir"
               fontWeight="bold"
@@ -644,7 +649,7 @@ const AreteMall = () => {
             >
               {" "}
               <Divider
-                h="9rem"
+                h="10rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -772,7 +777,7 @@ const AreteMall = () => {
                     bgGradient="linear(to-b, #B88746 ,#DFBD69)"
                     color="white"
                     mr="0.625rem"
-                    p="1.563rem"
+                    p={"1.563rem"}
                     fontSize="1.25rem"
                     fontFamily="avenir"
                     fontWeight="bold"
@@ -1940,7 +1945,6 @@ const LocationAndFormMall = () => {
         w="100%"
         h="100%"
         direction="column"
-        pt="5rem"
         align="center"
         justify="center"
         pb="3.125rem"
@@ -1964,128 +1968,131 @@ const LocationAndFormMall = () => {
           pb="3.125rem"
         >
           <Flex
-            w={{ base: "100%", lg: "28%" }}
+            display={{ base: "grid", lg: "flex" }}
+            w={{ base: "100%", lg: "40%" }}
             h="100%"
             wrap="wrap"
             alignSelf={{ base: "none", lg: "center" }}
             justify={{ base: "flex-start", lg: "flex-start" }}
             gap={{ base: "1.125rem", lg: "0" }}
           >
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Box
-                borderRadius="50%"
-                p={{ base: "0.625rem", lg: "1rem" }}
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                align="center"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
+            <SimpleGrid columns={{ base: "2", lg: "1" }}>
+              <Flex pb="1.5rem" className="Icon-fadein reveal">
+                <Box
+                  borderRadius="50%"
+                  p={{ base: "0.625rem", lg: "1rem" }}
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  direction="column"
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  align="center"
+                  mr="1rem"
+                  _hover={{ cursor: "pointer" }}
+                >
+                  <Image
+                    w={{ base: "1.875rem", lg: "3.125rem" }}
+                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    src={institute}
+                  />
+                </Box>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    100+
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    EDUCATIONAL INSTITUTES
+                  </Text>
+                </VStack>
+              </Flex>
+              <Flex pb="1.5rem" className="Icon-fadein reveal">
                 <Image
-                  w={{ base: "1.875rem", lg: "3.125rem" }}
-                  h={{ base: "1.875rem", lg: "3.125rem" }}
-                  src={institute}
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  src={company}
+                  mr="1rem"
                 />
-              </Box>
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    2000+
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    COMPANIES NEARBY
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+              <Flex pb="1.5rem" className="Icon-fadein reveal">
+                <Box
+                  borderRadius="50%"
+                  p={{ base: "0.625rem", lg: "1rem" }}
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  direction="column"
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  align="center"
+                  mr="1rem"
+                  _hover={{ cursor: "pointer" }}
                 >
-                  100+
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  EDUCATIONAL INSTITUTES
-                </Text>
-              </VStack>
-            </Flex>
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Image
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                src={company}
-                mr="1rem"
-              />
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  2000+
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  COMPANIES NEARBY
-                </Text>
-              </VStack>
-            </Flex>{" "}
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Box
-                borderRadius="50%"
-                p={{ base: "0.625rem", lg: "1rem" }}
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                align="center"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
+                  <Image
+                    w={{ base: "1.875rem", lg: "3.125rem" }}
+                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    src={industry}
+                  />
+                </Box>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    2
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    LARGE INDUSTRIAL PARKS
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+              <Flex pb="1.5rem" className="Icon-fadein reveal">
                 <Image
-                  w={{ base: "1.875rem", lg: "3.125rem" }}
-                  h={{ base: "1.875rem", lg: "3.125rem" }}
-                  src={industry}
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  src={port}
+                  mr="1rem"
                 />
-              </Box>
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  2
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  LARGE INDUSTRIAL PARKS
-                </Text>
-              </VStack>
-            </Flex>{" "}
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Image
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                src={port}
-                mr="1rem"
-              />
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  3
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  MAJOR PORTS, SEZ
-                </Text>
-              </VStack>
-            </Flex>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    3
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    MAJOR PORTS, SEZ
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+            </SimpleGrid>
           </Flex>
           <Flex
             display={{ base: "none", lg: "flex" }}
             overflow="hidden"
-            w="10%"
+            // w="10%"
             h="100%"
             px="1.563rem"
           >
@@ -2118,7 +2125,7 @@ const LocationAndFormMall = () => {
           <Flex w="100%">
             <Image
               className="Arete-Plaza-LocationAdv-Image reveal"
-              boxShadow="lg"
+              boxShadow="2xl"
               w="100%"
               h={{ base: "20.625rem", lg: "29.25rem" }}
               objectFit="cover"
@@ -2143,7 +2150,7 @@ const LocationAndFormMall = () => {
               className="discoball-slidein-left1 reveal"
             >
               <Divider
-                h={{ base: "1.225rem", lg: "0" }}
+                h={{ base: "1.6rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2160,7 +2167,7 @@ const LocationAndFormMall = () => {
                 my="1"
               />{" "}
               <Divider
-                h={{ base: "1.225rem", lg: "0" }}
+                h={{ base: "3.5rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2169,8 +2176,8 @@ const LocationAndFormMall = () => {
               />
             </Flex>
             <Flex
-              w="100%"
               id="0"
+              w="100%"
               className="Icon-fadein reveal"
               gap={{ base: "1.125rem", lg: "0" }}
               align="center"
@@ -2185,9 +2192,9 @@ const LocationAndFormMall = () => {
                 pb={{ base: "0", lg: "1rem" }}
               >
                 5 MINS
-              </Heading>
+              </Heading>{" "}
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -2213,7 +2220,7 @@ const LocationAndFormMall = () => {
               className="discoball-slidein-left2 reveal"
             >
               <Divider
-                h={{ base: "1.75rem", lg: "0" }}
+                h={{ base: "3.5rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2230,7 +2237,7 @@ const LocationAndFormMall = () => {
                 my="1"
               />{" "}
               <Divider
-                h={{ base: "3.7rem", lg: "0" }}
+                h={{ base: "5.3rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2257,7 +2264,7 @@ const LocationAndFormMall = () => {
                 10 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -2284,7 +2291,7 @@ const LocationAndFormMall = () => {
               className="discoball-slidein-left3 reveal"
             >
               <Divider
-                h={{ base: "1.7rem", lg: "0" }}
+                h={{ base: "1.8rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2301,7 +2308,7 @@ const LocationAndFormMall = () => {
                 my="1"
               />{" "}
               <Divider
-                h={{ base: "3.8rem", lg: "0" }}
+                h={{ base: "3.7rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2328,7 +2335,7 @@ const LocationAndFormMall = () => {
                 20 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -2355,7 +2362,7 @@ const LocationAndFormMall = () => {
               direction={{ base: "column", lg: "row" }}
             >
               <Divider
-                h={{ base: "0.15rem", lg: "0" }}
+                h={{ base: "0.55rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2399,7 +2406,7 @@ const LocationAndFormMall = () => {
                 30 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -2420,6 +2427,10 @@ const LocationAndFormMall = () => {
         align="center"
         justify="center"
         direction="column"
+        bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
+        bgRepeat="no-repeat"
+        bgPos="center"
+        bgSize="cover"
         px={{ base: "1.563rem", lg: "0" }}
       >
         <Text
