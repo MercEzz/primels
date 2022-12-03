@@ -24,6 +24,7 @@ import MobChannelPartner from "./screens/ChannelPartner.mob";
 import MobBlogSc from "./screens/BlogSc.mob";
 import MobCareersSc from "./screens/CareersSc.mob";
 import MobEnergySc from "./screens/EnergySc.mob";
+import BottomMenu from "./components/comercial Properties/BottomMenu";
 
 function App() {
   const [isMobile,setIsMobile]=useState(false);
@@ -108,6 +109,7 @@ function App() {
             <Route path="/sky-high-invest" element={<SkyhighInvestSc />} />
             <Route path="/arete-homes-invest" element={<AretehomesInvestSc />} />
           </Routes>
+          <BottomMenu/>
         </Flex>
         {/* <Footer /> */}
       </BrowserRouter>

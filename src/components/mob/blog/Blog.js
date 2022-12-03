@@ -177,7 +177,7 @@ const Blog = () => {
                     fontFamily="goudy"
                     fontSize="1.5rem"
                     pb="1.563rem"
-                    px="1rem"
+                    px="0.6rem"
                     pt="1rem"
                     textTransform="uppercase"
                   >
@@ -187,11 +187,11 @@ const Blog = () => {
                   <Flex
                     className="blog-text-right reveal"
                     pos="absolute"
-                    w="110%"
+                    w="100%"
                     bgColor="#DFBD69"
                     p="0.8rem"
                     boxShadow="xl"
-                    bottom="0.263rem"
+                    bottom="0rem"
                     right="0"
                   >
                     <Text fontFamily="veralaRound" fontSize="1rem">
@@ -358,7 +358,7 @@ const Blog = () => {
                   <Flex
                     className="blog-text-right reveal"
                     pos="absolute"
-                    w="110%"
+                    w="100%"
                     bgColor="black"
                     color="white"
                     p="1rem"

@@ -109,19 +109,21 @@ const GetInTouch = () => {
         <form onSubmit={submitHandler}>
           <FormControl align="center" justify="center">
             <VStack align="flex-start">
+            <FormControl isRequired>
               <Flex
                 w="100%"
                 align="flex-end"
                 justifyContent="space-between"
                 pb="0.437rem"
               >
+                
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
                   fontSize="1rem"
                   htmlFor="name"
                 >
-                  NAME*
+                  NAME
                 </FormLabel>
                 {borderClr ? (
                   <Input
@@ -161,7 +163,9 @@ const GetInTouch = () => {
                     errorBorderColor="crimson"
                   />
                 )}
+                
               </Flex>
+              </FormControl>
               <Flex
                 w="100%"
                 align="center"
@@ -191,6 +195,7 @@ const GetInTouch = () => {
                   isRequired
                 />
               </Flex>
+              <FormControl isRequired>
               <Flex
                 w="100%"
                 align="center"
@@ -203,7 +208,7 @@ const GetInTouch = () => {
                   fontSize="1rem"
                   htmlFor="phoneNo"
                 >
-                  PHONE NO.*
+                  PHONE NO.
                 </FormLabel>
                 <Input
                   id="phoneNo"
@@ -220,6 +225,7 @@ const GetInTouch = () => {
                   isRequired
                 />
               </Flex>
+              </FormControl>
               <Flex w="100%" align="flex-start" justify="space-between">
                 <FormLabel
                   fontFamily="avenir"
