@@ -40,10 +40,19 @@ import port from "../Invest imgs/port.svg";
 import locationadv from "../commercial-properties imgs/Asset 1-100.jpg";
 import DropDown from "./DropDown";
 import './invest.css'
+import ModalWindwow from "../modalWindow";
 
 const SkyhighInvest = () => {
+  const [isOpen, setIsOpen]= useState(false);
+  const close =() =>{
+    setIsOpen(false);
+  }
+  const open =() =>{
+    setIsOpen(true);
+  }
   return (
     <>
+      {isOpen?<ModalWindwow modalTitle={"SKY HIGH"} modalImage={smartInvest} isOpen={isOpen} onClose={()=>close()} />:<></>}
       {/* Smart invest */}
       <Flex
         overflow="hidden"
@@ -59,7 +68,7 @@ const SkyhighInvest = () => {
         </Text>
         <Flex w="100%" h="100%">
           <Flex w="100%" h="100%" overflow="hidden">
-            <Image src={smartInvest} className="Arete-Plaza-FloorPlan-Image reveal"/>
+            <Image onMouseEnter={()=>open()} src={smartInvest} className="Arete-Plaza-FloorPlan-Image reveal"/>
           </Flex>
           <Flex w="100%" h="100%" overflow="hidden">
             {" "}

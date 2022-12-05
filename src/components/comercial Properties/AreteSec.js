@@ -40,11 +40,12 @@ import DropDown from "./DropDown";
 import "./animations.css";
 import "./commercial-properties.css";
 import TenthSec from "../sky-high/SmartInvest";
+import ModalWindwow from "../modalWindow";
 
 const AreteSec = () => {
   const [active, setActive] = useState(true);
   const [animate, setAnimate] = useState(false);
-
+ 
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
     try {
@@ -527,8 +528,16 @@ const AretePlaza = () => {
 };
 
 const AreteMall = () => {
+  const [isOpen, setIsOpen]= useState(false);
+  const close =() =>{
+    setIsOpen(false);
+  }
+  const open =() =>{
+    setIsOpen(true);
+  }
   return (
     <>
+      {isOpen?<ModalWindwow modalTitle={"ARETE MALL"} modalImage={mall} isOpen={isOpen} onClose={()=>close()} />:<></>}
       <Flex
         overflow="hidden"
         w="100%"
@@ -572,6 +581,7 @@ const AreteMall = () => {
           >
             <Flex w={{ base: "100%", lg: "50%" }} overflow="hidden">
               <Image
+                onMouseEnter={()=>open()}
                 src={mall}
                 h={{ base: "18.125rem", lg: "29.25rem" }}
                 w="100%"
