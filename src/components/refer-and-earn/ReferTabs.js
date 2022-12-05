@@ -26,6 +26,7 @@ import img2 from "../refer and earn imgs/2ND STEP.png";
 import img3 from "../refer and earn imgs/3RD STEP.png";
 import bookIll from "../refer and earn imgs/book a visit illustration.png";
 import carIll from "../refer and earn imgs/CAR ICON.svg";
+import calender from "../refer and earn imgs/calender.svg";
 import { useState } from "react";
 import "./animations.css";
 import "./rne.css";
@@ -130,7 +131,7 @@ const ReferAFriend = () => {
       <Flex
         w="100%"
         columnGap="1.25rem"
-        pb="1.875rem"
+        pb="3.125rem"
         direction={{ base: "column", lg: "row" }}
         px="6.25rem"
       >
@@ -276,7 +277,7 @@ const ReferAFriend = () => {
       <Flex
         w="100%"
         h="100%"
-        pt="3.125rem"
+        pt="1.875rem"
         direction="column"
         pb="5rem"
         overflow="hidden"
@@ -300,7 +301,7 @@ const ReferAFriend = () => {
             textAlign="center"
             fontFamily="goudy"
             fontSize="2.5rem"
-            pb="3.125rem"
+            pb="1.875rem"
           >
             REFER & EARN
           </Text>
@@ -566,7 +567,7 @@ const BookAVisit = () => {
     <>
       <Flex
         w="100%"
-        h="75vh"
+        h="79vh"
         bgColor="white"
         pos="relative"
         overflow="hidden"
@@ -591,6 +592,7 @@ const BookAVisit = () => {
           top={{ base: "5%", lg: "20%" }}
           right="0"
           bottom="0"
+          pr="6.25rem"
         >
           <Text
             className="serv-text-up reveal"
@@ -642,7 +644,7 @@ const BookAVisit = () => {
       <Flex
         w="100%"
         h="100%"
-        pt="5rem"
+        pt="1.875rem"
         direction="column"
         pb="5rem"
         overflow="hidden"
@@ -666,7 +668,7 @@ const BookAVisit = () => {
             textAlign="center"
             fontFamily="goudy"
             fontSize="2.5rem"
-            pb="3.125rem"
+            pb="1.875rem"
           >
             BOOK YOUR FREE SITE VISIT
           </Text>
@@ -752,7 +754,7 @@ const BookAVisit = () => {
               align="center"
               justify="center"
             >
-              <FormControl isRequired>
+              <FormControl isRequired pos="relative">
                 {" "}
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
@@ -765,11 +767,21 @@ const BookAVisit = () => {
                   <Input
                     type="date"
                     fontSize="1rem"
-                    fontFamily="avenir"
+                    fontFamily="veralaRound"
+                    textTransform="uppercase"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
+                  />
+
+                  <Image
+                    bgColor="#C1C1C1"
+                    src={calender}
+                    right="0%"
+                    zIndex="2"
+                    p="0.625rem"
+                    pos="absolute"
                   />
                 </HStack>{" "}
               </FormControl>
@@ -789,7 +801,8 @@ const BookAVisit = () => {
                       right: "0px",
                       zIndex: "2",
                       height: "3.125rem",
-                      backgroundColor: "#E5E5E5",
+                      padding: "0.625rem",
+                      backgroundColor: "#C1C1C1",
                     }}
                   >
                     <option>AM</option>
