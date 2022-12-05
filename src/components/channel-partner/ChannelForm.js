@@ -915,7 +915,7 @@ const ChannelForm = () => {
             w="18.75rem"
             placeholder="SELECT PROJECT"
             fontSize="1.125rem"
-            fontFamily="avenir"
+            fontFamily="veralaRound"
             bgColor="transparent"
             borderRadius="none"
             borderTop="0"
