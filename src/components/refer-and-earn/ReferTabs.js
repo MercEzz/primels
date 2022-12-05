@@ -374,7 +374,6 @@ const ReferAFriend = () => {
                   <Input
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
@@ -395,7 +394,6 @@ const ReferAFriend = () => {
                   <Input
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
@@ -415,7 +413,6 @@ const ReferAFriend = () => {
                   <Input
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
@@ -436,27 +433,20 @@ const ReferAFriend = () => {
                     fontFamily="avenir"
                     fontSize="1rem"
                     w="18.75rem"
+                    h="3.125rem"
                     bgColor="#D9D9D9"
-                    // placeholder="SELECT PROJECT"
+                    placeholder="SELECT PROJECT"
                     textTransform="uppercase"
-                    variant="flushed"
                     borderBottom="2px solid white"
                     icon={
                       <TriangleDownIcon width="1.25rem" height="0.625rem" />
                     }
                     borderRadius="none"
                   >
+                    <option style={{ color: "black" }}>Arete Homes</option>
+                    <option style={{ color: "black" }}>Sky High Tower</option>
                     <option style={{ color: "black" }}>
-                      <Text>Select Project</Text>
-                    </option>
-                    <option style={{ color: "black" }}>
-                      <Text>Arete Homes</Text>
-                    </option>
-                    <option style={{ color: "black" }}>
-                      <Text>Sky High Tower</Text>
-                    </option>
-                    <option style={{ color: "black" }}>
-                      <Text>Ponneri Gymkhana Club</Text>
+                      Ponneri Gymkhana Club
                     </option>
                   </Select>
                 </HStack>{" "}
@@ -484,8 +474,7 @@ const ReferAFriend = () => {
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
+                    fontFamily="veralaRound"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
@@ -505,8 +494,7 @@ const ReferAFriend = () => {
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
+                    fontFamily="veralaRound"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
@@ -525,8 +513,7 @@ const ReferAFriend = () => {
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
+                    fontFamily="veralaRound"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
@@ -545,8 +532,7 @@ const ReferAFriend = () => {
                   </FormLabel>
                   <Textarea
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
+                    fontFamily="veralaRound"
                     w="18.75rem"
                     h="6.25rem"
                     bgColor="#E5E5E5"
@@ -660,6 +646,11 @@ const BookAVisit = () => {
         direction="column"
         pb="5rem"
         overflow="hidden"
+        bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+        bgRepeat="no-repeat"
+        bgPos="center"
+        bgSize="cover"
+        px="6.25rem"
       >
         <form
           style={{
@@ -707,7 +698,6 @@ const BookAVisit = () => {
                   <Input
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
@@ -728,7 +718,6 @@ const BookAVisit = () => {
                   <Input
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
@@ -748,7 +737,6 @@ const BookAVisit = () => {
                   <Input
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
@@ -778,7 +766,6 @@ const BookAVisit = () => {
                     type="date"
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
@@ -814,7 +801,6 @@ const BookAVisit = () => {
                     max="12:00"
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
@@ -834,7 +820,6 @@ const BookAVisit = () => {
                   <Input
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
