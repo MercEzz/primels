@@ -40,7 +40,6 @@ const ProSites = () => {
       w="100%"
       h="100%"
       pt="5rem"
-
       px="6.25rem"
       align="center"
       justify="center"
@@ -51,7 +50,6 @@ const ProSites = () => {
         fontFamily="goudy"
         fontWeight="400"
         fontSize="2.5rem"
-        lineHeight="3.625rem"
       >
         OUR PROJECT SITES
       </Heading>
@@ -123,25 +121,19 @@ const ProSites = () => {
           </Text>
         </Flex>
       </Flex>
-      <VStack
-        className="fadein reveal"
-        mb="1.875rem"
-      >
-        <Text fontFamily="veralaRound" fontSize="1.25rem" lineHeight="1.5rem">
+      <VStack className="fadein reveal" mb="1.875rem">
+        <Text fontFamily="veralaRound" fontSize="1.25rem">
           For consultancy related queries, email us at
         </Text>
-        <Heading fontFamily="avenir" fontSize="1.5rem" lineHeight="41px">
+        <Heading fontFamily="avenir" fontSize="1.5rem">
           info@primelifespace.com
         </Heading>
       </VStack>
-      <VStack
-        mb="3.125rem"
-        className="fadein reveal"
-      >
-        <Text fontFamily="veralaRound" fontSize="1.25rem" lineHeight="1.5rem">
+      <VStack mb="3.125rem" className="fadein reveal">
+        <Text fontFamily="veralaRound" fontSize="1.25rem">
           For procurement related queries, email us at
         </Text>
-        <Heading fontFamily="avenir" fontSize="1.5rem" lineHeight="2.563rem">
+        <Heading fontFamily="avenir" fontSize="1.5rem">
           purchase@primelifespace.com
         </Heading>
       </VStack>

@@ -90,50 +90,57 @@ const SideVector = () => {
               overflow="hidden"
               align="center"
             >
-              <Icon
-                as={RiInstagramFill}
-                h="3.125rem"
-                w="3.125rem"
-                mt="0.625rem"
-                _hover={{
-                  color: "#B88746",
-                }}
-                transition="linear 200ms"
-              />
+              <Link
+                href="https://instagram.com/prime_lifespace?igshid=YmMyMTA2M2Y="
+                isExternal
+              >
+                <Icon
+                  as={RiInstagramFill}
+                  h="3.125rem"
+                  w="3.125rem"
+                  mt="0.625rem"
+                  _hover={{
+                    color: "#B88746",
+                  }}
+                  transition="linear 200ms"
+                />
+              </Link>
               <Link
                 href="https://www.linkedin.com/company/prime-lifespace-consultancy-pvt-ltd/"
                 isExternal
               >
-              <Icon
-                as={RiLinkedinBoxFill}
-                h="3.125rem"
-                w="3.125rem"
-                my="0.625rem"
-                _hover={{ color: "#B88746" }}
-                transition="linear 200ms"
-              />
+                <Icon
+                  as={RiLinkedinBoxFill}
+                  h="3.125rem"
+                  w="3.125rem"
+                  my="0.625rem"
+                  _hover={{ color: "#B88746" }}
+                  transition="linear 200ms"
+                />
               </Link>
               <Link
                 href="https://www.facebook.com/primelifespacearetehomes"
                 isExternal
               >
-              <Icon
-                as={RiFacebookCircleFill}
-                h="3.125rem"
-                w="3.125rem"
-                mb="0.625rem"
-                borderRadius="50%"
-                _hover={{ color: "#B88746" }}
-                transition="linear 200ms"
-              />
+                <Icon
+                  as={RiFacebookCircleFill}
+                  h="3.125rem"
+                  w="3.125rem"
+                  mb="0.625rem"
+                  borderRadius="50%"
+                  _hover={{ color: "#B88746" }}
+                  transition="linear 200ms"
+                />
               </Link>
-              <Icon
-                as={RiYoutubeFill}
-                h="3.125rem"
-                w="3.125rem"
-                _hover={{ color: "#B88746" }}
-                transition="linear 200ms"
-              />
+              <Link href="https://youtube.com/@PrimeLifespace" isExternal>
+                <Icon
+                  as={RiYoutubeFill}
+                  h="3.125rem"
+                  w="3.125rem"
+                  _hover={{ color: "#B88746" }}
+                  transition="linear 200ms"
+                />
+              </Link>
             </Flex>
           </MtnFlx>
         </MtnFlx>

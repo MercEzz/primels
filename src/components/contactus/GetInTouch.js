@@ -18,7 +18,6 @@ import React, { useEffect, useRef, useState } from "react";
 //const MtnFlex = motion(Flex);
 
 const GetInTouch = () => {
-  
   const ref = useRef(null);
   /*
   const isInView = useInView(ref, { once:false });
@@ -62,7 +61,7 @@ const GetInTouch = () => {
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  
+
   return (
     <Flex
       overflow="hidden"
@@ -78,13 +77,15 @@ const GetInTouch = () => {
       justify="center"
       pos="relative"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
     >
       <Heading
         className="serv-text-up reveal"
         fontFamily="goudy"
         fontWeight="400"
         fontSize="2.5rem"
-        lineHeight="3.75rem"
       >
         GET IN TOUCH
       </Heading>
@@ -97,72 +98,65 @@ const GetInTouch = () => {
       >
         Leave us your information and our team will get back to you.
       </Text>
-      <Flex
-        className="fadein reveal"
-        w="full"
-        align="center"
-        justify="center"
-      >
+      <Flex className="fadein reveal" w="full" align="center" justify="center">
         {" "}
         <form onSubmit={submitHandler}>
           <FormControl align="center" justify="center">
             <VStack align="flex-start">
-            <FormControl isRequired>
-              <Flex
-                w="100%"
-                align="flex-end"
-                justifyContent="space-between"
-                pb="0.437rem"
-              >
-                
-                <FormLabel
-                  fontFamily="avenir"
-                  fontWeight="700"
-                  fontSize="1rem"
-                  htmlFor="name"
+              <FormControl isRequired>
+                <Flex
+                  w="100%"
+                  align="flex-end"
+                  justifyContent="space-between"
+                  pb="0.437rem"
                 >
-                  NAME
-                </FormLabel>
-                {borderClr ? (
-                  <Input
-                    id="name"
-                    name="name"
-                    value={name}
-                    onChange={onChange}
-                    type="text"
-                    w="24.813rem"
-                    h="2.5rem"
-                    bgColor="#E5E5E5"
-                    borderRadius="none"
-                    fontFamily="veralaRound"
-                    boxShadow="0px 0px 2px 2px red"
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontWeight="700"
                     fontSize="1rem"
-                    isRequired
-                    borderWidth="2px"
-                    isInvalid={borderClr}
-                    errorBorderColor="crimson"
-                  />
-                ) : (
-                  <Input
-                    id="name"
-                    name="name"
-                    value={name}
-                    onChange={onChange}
-                    type="text"
-                    w="24.813rem"
-                    h="2.5rem"
-                    bgColor="#E5E5E5"
-                    borderRadius="none"
-                    fontFamily="veralaRound"
-                    fontSize="1rem"
-                    isRequired
-                    borderWidth="2px"
-                    isInvalid={borderClr}
-                    errorBorderColor="crimson"
-                  />
-                )}
-                
-              </Flex>
+                    htmlFor="name"
+                  >
+                    NAME
+                  </FormLabel>
+                  {borderClr ? (
+                    <Input
+                      id="name"
+                      name="name"
+                      value={name}
+                      onChange={onChange}
+                      type="text"
+                      w="24.813rem"
+                      h="2.5rem"
+                      bgColor="#E5E5E5"
+                      borderRadius="none"
+                      fontFamily="veralaRound"
+                      boxShadow="0px 0px 2px 2px red"
+                      fontSize="1rem"
+                      isRequired
+                      borderWidth="2px"
+                      isInvalid={borderClr}
+                      errorBorderColor="crimson"
+                    />
+                  ) : (
+                    <Input
+                      id="name"
+                      name="name"
+                      value={name}
+                      onChange={onChange}
+                      type="text"
+                      w="24.813rem"
+                      h="2.5rem"
+                      bgColor="#E5E5E5"
+                      borderRadius="none"
+                      fontFamily="veralaRound"
+                      fontSize="1rem"
+                      isRequired
+                      borderWidth="2px"
+                      isInvalid={borderClr}
+                      errorBorderColor="crimson"
+                    />
+                  )}
+                </Flex>
               </FormControl>
               <Flex
                 w="100%"
@@ -194,35 +188,35 @@ const GetInTouch = () => {
                 />
               </Flex>
               <FormControl isRequired>
-              <Flex
-                w="100%"
-                align="center"
-                justify="space-between"
-                pb="0.437rem"
-              >
-                <FormLabel
-                  fontFamily="avenir"
-                  fontWeight="700"
-                  fontSize="1rem"
-                  htmlFor="phoneNo"
+                <Flex
+                  w="100%"
+                  align="center"
+                  justify="space-between"
+                  pb="0.437rem"
                 >
-                  PHONE NO.
-                </FormLabel>
-                <Input
-                  id="phoneNo"
-                  name="phoneNo"
-                  value={phoneNo}
-                  onChange={onChange}
-                  type="number"
-                  w="24.813rem"
-                  h="2.5rem"
-                  bgColor="#E5E5E5"
-                  borderRadius="none"
-                  fontFamily="veralaRound"
-                  fontSize="1rem"
-                  isRequired
-                />
-              </Flex>
+                  <FormLabel
+                    fontFamily="avenir"
+                    fontWeight="700"
+                    fontSize="1rem"
+                    htmlFor="phoneNo"
+                  >
+                    PHONE NO.
+                  </FormLabel>
+                  <Input
+                    id="phoneNo"
+                    name="phoneNo"
+                    value={phoneNo}
+                    onChange={onChange}
+                    type="number"
+                    w="24.813rem"
+                    h="2.5rem"
+                    bgColor="#E5E5E5"
+                    borderRadius="none"
+                    fontFamily="veralaRound"
+                    fontSize="1rem"
+                    isRequired
+                  />
+                </Flex>
               </FormControl>
               <Flex w="100%" align="flex-start" justify="space-between">
                 <FormLabel

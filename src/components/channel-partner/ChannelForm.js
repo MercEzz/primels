@@ -12,6 +12,7 @@ import {
   Button,
   RadioGroup,
   Radio,
+  Select,
 } from "@chakra-ui/react";
 import "./drop.css";
 import React, { useRef, useState, useEffect } from "react";
@@ -901,7 +902,7 @@ const ChannelForm = () => {
         fontFamily="avenir"
       >
         <Flex
-          w="100%"
+          w="full"
           pos="relative"
           align="center"
           justify="flex-end"
@@ -909,6 +910,26 @@ const ChannelForm = () => {
           fontFamily="avenir"
           fontSize="1rem"
         >
+          {" "}
+          <Select
+            w="18.75rem"
+            placeholder="SELECT PROJECT"
+            fontSize="1.125rem"
+            fontFamily="avenir"
+            bgColor="transparent"
+            borderRadius="none"
+            borderTop="0"
+            borderLeft="0"
+            borderRight="0"
+            borderBottom="3px solid"
+            icon={<TriangleDownIcon width="18px" height="18px" />}
+          >
+            <option style={{ color: "black" }}>ARETE HOMES</option>
+            <option style={{ color: "black" }}>SKY HIGH TOWER</option>
+            <option style={{ color: "black" }}>PGC</option>
+            <option style={{ color: "black" }}>ARETE PLAZA</option>
+            <option style={{ color: "black" }}>ARETE MALL</option>
+          </Select>
           {/*<DropMenu />*/}
         </Flex>
         {/* {validForm ? ( */}
