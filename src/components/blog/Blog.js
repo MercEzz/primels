@@ -114,7 +114,7 @@ const Blog = () => {
         pb="3.125rem"
         gap="1.875rem"
       >
-        <Flex w="70%" h="100%" direction="column" align="center">
+        <Flex w="66%" h="100%" direction="column" align="center">
           <Grid
             h="100%"
             templateColumns="repeat(2, 1fr)"
@@ -485,7 +485,7 @@ const Blog = () => {
             LOAD MORE
           </Button>
         </Flex>
-        <Flex w="30%" h="100%" direction="column">
+        <Flex w="34%" h="100%" direction="column">
           <BlogForm />
         </Flex>
       </Flex>
@@ -553,7 +553,7 @@ const BlogForm = () => {
         <form>
           <FormControl isRequired>
             {" "}
-            <HStack w="100%" justify="space-between" pb="0.938rem">
+            <Flex w="100%" justify="space-between" pb="0.938rem">
               <FormLabel fontFamily="avenir" fontSize="1rem" fontWeight="bold">
                 NAME
               </FormLabel>
@@ -566,11 +566,11 @@ const BlogForm = () => {
                 bgColor="#E5E5E5"
                 borderRadius="none"
               />
-            </HStack>{" "}
+            </Flex>{" "}
           </FormControl>
           <FormControl isRequired>
             {" "}
-            <HStack w="100%" justify="space-between" pb="0.938rem">
+            <Flex w="100%" justify="space-between" pb="0.938rem">
               <FormLabel fontFamily="avenir" fontSize="1rem" fontWeight="bold">
                 PHONE
               </FormLabel>
@@ -583,10 +583,10 @@ const BlogForm = () => {
                 bgColor="#E5E5E5"
                 borderRadius="none"
               />
-            </HStack>{" "}
+            </Flex>{" "}
           </FormControl>
           <FormControl>
-            <HStack w="100%" justify="space-between" pb="0.938rem">
+            <Flex w="100%" justify="space-between" pb="0.938rem">
               <FormLabel fontFamily="avenir" fontSize="1rem" fontWeight="bold">
                 EMAIL
               </FormLabel>
@@ -599,10 +599,10 @@ const BlogForm = () => {
                 bgColor="#E5E5E5"
                 borderRadius="none"
               />
-            </HStack>{" "}
+            </Flex>{" "}
           </FormControl>
           <FormControl>
-            <HStack w="100%" align="flex-start" justify="space-between">
+            <Flex w="100%" align="flex-start" justify="space-between">
               <FormLabel fontFamily="avenir" fontSize="1rem" fontWeight="bold">
                 MESSAGE
               </FormLabel>
@@ -615,7 +615,7 @@ const BlogForm = () => {
                 bgColor="#E5E5E5"
                 borderRadius="none"
               />
-            </HStack>
+            </Flex>
           </FormControl>
           <Button
             mx="6.875rem"
