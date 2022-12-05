@@ -122,8 +122,8 @@ const Blog = () => {
             pb="1.563rem"
           >
             <GridItem colSpan={2}>
-              <Flex w="100%" h="100%" boxShadow="xl">
-                <Flex w="100%" h="100%" overflow="hidden">
+              <Flex w="100%" h="100%" boxShadow="xl" overflow="hidden">
+                <Flex w="100%" h="100%">
                   <Image
                     className="blog-image-left reveal"
                     w="100%"
@@ -134,12 +134,10 @@ const Blog = () => {
                   />
                 </Flex>
                 <Flex
-                  zIndex="3"
-                  overflow="hidden"
                   w="100%"
                   h="30.688rem"
                   align="center"
-                  jsutify="center"
+                  // justify="center"
                   direction="column"
                   pos="relative"
                 >
@@ -311,7 +309,7 @@ const Blog = () => {
                   w="100%"
                   h="30.688rem"
                   align="center"
-                  jsutify="center"
+                  // justify="center"
                   direction="column"
                   pos="relative"
                 >
@@ -514,9 +512,9 @@ const BlogForm = () => {
           fontFamily="avenir"
           bgColor="gray.200"
           borderRadius="none"
-          
+          _hover={{ bgColor: "DFBD69" }}
         >
-          <option  value="Home Buying Journey">Home Buying Journey</option>
+          <option value="Home Buying Journey">Home Buying Journey</option>
           <option value="Real Estate Investments">
             Real Estate Investments
           </option>
