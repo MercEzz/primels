@@ -39,7 +39,6 @@ const ProSites = () => {
       direction="column"
       w="100%"
       h="100%"
-      pt="5rem"
       px="6.25rem"
       align="center"
       justify="center"
