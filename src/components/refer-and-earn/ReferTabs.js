@@ -803,7 +803,9 @@ const BookAVisit = () => {
                       height: "3.125rem",
                       padding: "0.625rem",
                       backgroundColor: "#C1C1C1",
+                      fontWeight: "bold",
                     }}
+                    fontFamily="veralaRound"
                   >
                     <option>AM</option>
                     <option>PM</option>
