@@ -512,13 +512,21 @@ const BlogForm = () => {
           fontFamily="avenir"
           bgColor="gray.200"
           borderRadius="none"
-          _hover={{ bgColor: "DFBD69" }}
         >
           <option value="Home Buying Journey">Home Buying Journey</option>
           <option value="Real Estate Investments">
             Real Estate Investments
           </option>
-          <option value="NRI Corner">NRI Corner</option>
+          <option
+            style={{
+              "&:hover": {
+                backgroundColor: "#DFBD69",
+              },
+            }}
+            value="NRI Corner"
+          >
+            NRI Corner
+          </option>
           <option value="Commercial Property">Commercial Property</option>
           <option value="Residential Property">Residential Property</option>
           <option value="Real Estate Trends">Real Estate Trends</option>
