@@ -581,7 +581,7 @@ const AreteMall = () => {
           >
             <Flex w={{ base: "100%", lg: "50%" }} overflow="hidden">
               <Image
-                onMouseEnter={()=>open()}
+                onClick={()=>open()}
                 src={mall}
                 h={{ base: "18.125rem", lg: "29.25rem" }}
                 w="100%"
