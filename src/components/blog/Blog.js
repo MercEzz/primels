@@ -227,7 +227,7 @@ const Blog = () => {
                         fontSize="1rem"
                       >
                         Prime Lifespace Developers presents the Largest Smart
-                        Township Of North Channai, Arete...
+                        Township Of North Chennai...
                       </Text>
                     </Text>
                   </Flex>
@@ -400,7 +400,7 @@ const Blog = () => {
                         fontSize="1rem"
                       >
                         Purchasing a home is regarded as a major milestone in
-                        one’s life. Home ownership is associated with ........
+                        one’s life.........
                       </Text>
                     </Text>
                   </Flex>
@@ -462,8 +462,7 @@ const Blog = () => {
                         fontSize="1rem"
                       >
                         In today’s time, living a ahealthy lifestyle with a
-                        rational and serene mindset is a luxuiry and is
-                        consid.....
+                        rational and serene mindset is a luxury and.....
                       </Text>
                     </Text>
                   </Flex>
@@ -712,17 +711,25 @@ const BlogForm = () => {
         >
           <Box>
             <Text fontFamily="veralaRound" fontSize="1rem">
+              <li>
               Why should you choose flat over independent house?
+              </li>
             </Text>
           </Box>
           <Box>
+            
             <Text fontFamily="veralaRound" fontSize="1rem">
+              <li>
               Why investing in residential property, a must for better future?
+              </li>
             </Text>
+            
           </Box>
           <Box>
             <Text fontFamily="veralaRound" fontSize="1rem">
+              <li>
               Amenities to ensure when buying a rented properties for sale
+              </li>
             </Text>
           </Box>
         </VStack>
