@@ -12,6 +12,7 @@ import {
   Input,
   Textarea,
   Link,
+  Box,
 } from "@chakra-ui/react";
 import React, { useLayoutEffect } from "react";
 // images
@@ -27,9 +28,13 @@ import spacejoy from "../blog imgs/boxes.jpg";
 import bgBox from "../careers imgs/bg-box.jpg";
 // icons
 import yt from "../blog imgs/youtube.svg";
+import yyt from "../blog imgs/1.svg";
 import insta from "../blog imgs/insta.svg";
+import yinsta from "../blog imgs/2.svg";
 import linkedIn from "../blog imgs/linkedin.svg";
-import fb from "../blog imgs/facebook.svg";
+import yfb from "../blog imgs/face.svg";
+import fb from "../blog imgs/face1.svg";
+import yLinked from "../blog imgs/4.svg";
 import { RiFacebookCircleLine } from "react-icons/ri";
 //animation
 import "./bloganimation.css";
@@ -493,25 +498,67 @@ const BlogForm = () => {
     <>
       <Flex h="100%" justify="flex-end" pb="0.938rem" gap="0.625rem">
         <Link href="https://youtube.com/@PrimeLifespace" isExternal>
-          <Image src={yt} />
+          <Box pos="relative">
+            <Image src={yt} />
+            <Image
+              src={yyt}
+              pos="absolute"
+              top="0"
+              left="2%"
+              opacity="0"
+              _hover={{ opacity: 1 }}
+            />
+          </Box>
         </Link>
         <Link
           href="https://instagram.com/prime_lifespace?igshid=YmMyMTA2M2Y="
           isExternal
         >
-          <Image src={insta} />
+          <Box pos="relative">
+            <Image src={insta} />{" "}
+            <Image
+              src={yinsta}
+              pos="absolute"
+              top="0"
+              left="1%"
+              opacity="0"
+              _hover={{ opacity: 1 }}
+            />
+          </Box>
         </Link>
         <Link
           href="https://www.facebook.com/primelifespacearetehomes"
           isExternal
         >
-          <Image src={fb} />
+          <Box pos="relative">
+            <Image src={fb} />
+            <Image
+              src={yfb}
+              pos="absolute"
+              top="0%"
+              left="0%"
+              bottom="0"
+              right="0"
+              opacity="0"
+              _hover={{ opacity: 1 }}
+            />
+          </Box>
         </Link>
         <Link
           href="https://www.linkedin.com/company/prime-lifespace-consultancy-pvt-ltd/"
           isExternal
         >
-          <Image src={linkedIn} />
+          <Box pos="relative">
+            <Image src={linkedIn} />
+            <Image
+              src={yLinked}
+              pos="absolute"
+              top="0"
+              left="1%"
+              opacity="0"
+              _hover={{ opacity: 1 }}
+            />
+          </Box>
         </Link>
       </Flex>
       <Flex w="100%" direction="column" pb="0.938rem">
