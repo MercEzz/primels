@@ -14,10 +14,10 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import pgclogo from "../arete-homes imgs/Asset 1.png";
 // images
-import gym from "../sky-high imgs/7 - gym.tif";
-import golf from "../sky-high imgs/5 - Open Golf Putting Area.png";
+import gym from "../sky-high imgs/7 - gym.jpg";
+import golf from "../sky-high imgs/5 - Open Golf Putting Area.jpg";
 import sports from "../sky-high imgs/2 - Multi Sports Arena.jpg";
-import swimming from "../sky-high imgs/3 - Swimming Pool High Res.tif";
+import swimming from "../sky-high imgs/3 - Swimming Pool High Res.jpg";
 import banquet from "../sky-high imgs/PGC Banquet Hall.jpg";
 import spa from "../sky-high imgs/22 - sauna_s.jpg";
 import guest from "../sky-high imgs/20 - guest rooms.jpg";
