@@ -400,7 +400,7 @@ const Blog = () => {
                         fontSize="1rem"
                       >
                         Purchasing a home is regarded as a major milestone in
-                        one’s life.........
+                        one’s...
                       </Text>
                     </Text>
                   </Flex>
