@@ -114,7 +114,7 @@ export default ReferTabs;
 const ReferAFriend = () => {
   return (
     <>
-      <Flex overflow="hidden">
+      <Flex overflow="hidden" mt="5rem">
         <Heading
           w="100%"
           className="serv-text-up reveal"
@@ -122,7 +122,6 @@ const ReferAFriend = () => {
           fontWeight="400"
           fontSize="2.5rem"
           fontFamily="goudy"
-          pt="3.125rem"
           pb="1.875rem"
         >
           HOW IT WORKS?

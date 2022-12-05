@@ -171,7 +171,7 @@
     opacity: 0;
       transform: translateX(-18.75rem);
     }
-    50% {
+    75% {
       opacity: 0;
         transform: translateX(-18.75rem);
       }
