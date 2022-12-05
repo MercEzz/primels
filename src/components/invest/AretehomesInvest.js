@@ -42,9 +42,11 @@ import DropDown from "./DropDown";
 import areteInto1 from "../Invest imgs/arete homes - intro1.jpeg";
 import twoBhkFloor from "../Invest imgs/arete homes Tower A6-1.jpg";
 import snarttwobhk from "../Invest imgs/INTRO1.jpg";
+import ModalWindwow from "../modalWindow";
 
 const SkyhighInvest = () => {
   const [active, setActive] = useState(true);
+  
   return (
     <>
       {" "}
@@ -110,8 +112,16 @@ const SkyhighInvest = () => {
 };
 
 const Twobhk = () => {
+  const [isOpen, setIsOpen]= useState(false);
+  const close =() =>{
+    setIsOpen(false);
+  }
+  const open =() =>{
+    setIsOpen(true);
+  }
   return (
     <>
+      {isOpen?<ModalWindwow modalTitle={"ARETE HOMES"} modalImage={areteInto1} isOpen={isOpen} onClose={()=>close()} />:<></>}
       {/* Smart invest */}
       <Flex w="100%" h="100%" direction="column" align="center" py="3.125rem" overflow="hidden">
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
@@ -119,7 +129,7 @@ const Twobhk = () => {
         </Text>
         <Flex w="100%" h="100%">
           <Flex w="100%" h="100%" overflow="hidden">
-            <Image src={areteInto1} className="Arete-Plaza-FloorPlan-Image reveal"/>
+            <Image onMouseEnter={()=>open()} src={areteInto1} className="Arete-Plaza-FloorPlan-Image reveal"/>
           </Flex>
           <Flex w="100%" h="100%" overflow="hidden">
             {" "}
@@ -1565,8 +1575,16 @@ const Twobhk = () => {
 };
 
 const Threebhk = () => {
+  const [isOpen, setIsOpen]= useState(false);
+  const close =() =>{
+    setIsOpen(false);
+  }
+  const open =() =>{
+    setIsOpen(true);
+  }
   return (
     <>
+      {isOpen?<ModalWindwow modalTitle={"ARETE HOMES"} modalImage={smartInvest} isOpen={isOpen} onClose={()=>close()} />:<></>}
       {/* Smart invest */}
       <Flex w="100%" h="100%" direction="column" align="center" py="3.125rem">
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem">
@@ -1574,7 +1592,7 @@ const Threebhk = () => {
         </Text>
         <Flex w="100%" h="100%" overflow="hidden">
           <Flex w="49%" h="100%" overflow="hidden">
-            <Image src={smartInvest} className="Arete-Plaza-FloorPlan-Image reveal"/>
+            <Image onMouseEnter={()=>open()} src={smartInvest} className="Arete-Plaza-FloorPlan-Image reveal"/>
           </Flex>
           <Flex
             className="discobal-slidein-top reveal"

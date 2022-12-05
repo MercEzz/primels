@@ -10,16 +10,18 @@ import {
   Container,
   Textarea,
 } from "@chakra-ui/react";
-import { motion, useAnimation, useInView } from "framer-motion";
+//import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-const MtnHd = motion(Heading);
-const MtnTxt = motion(Text);
-const MtnFlex = motion(Flex);
+//const MtnHd = motion(Heading);
+//const MtnTxt = motion(Text);
+//const MtnFlex = motion(Flex);
 
 const GetInTouch = () => {
+  
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  /*
+  const isInView = useInView(ref, { once:false });
   const animateHd = useAnimation();
   const animateFade = useAnimation();
 
@@ -34,7 +36,7 @@ const GetInTouch = () => {
       });
     }
   }, [isInView, animateHd, animateFade]);
-
+  */
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -60,47 +62,43 @@ const GetInTouch = () => {
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-
+  
   return (
     <Flex
+      overflow="hidden"
       ref={ref}
       direction="column"
       w="100%"
       h="100%"
       // pt="3.125rem"
-      py="3.125rem"
+      pt="1.8725rem"
+      pd="3.125rem"
       px="6.25rem"
       align="center"
       justify="center"
       pos="relative"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
-      <MtnHd
-        initial={{ opacity: 0, y: -50 }}
-        animate={animateHd}
-        transition={{ duration: 2, type: "just" }}
+      <Heading
+        className="serv-text-up reveal"
         fontFamily="goudy"
         fontWeight="400"
         fontSize="2.5rem"
         lineHeight="3.75rem"
       >
         GET IN TOUCH
-      </MtnHd>
-      <MtnTxt
-        initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 1.5, duration: 2, type: "just" }}
+      </Heading>
+      <Text
+        className="fadein reveal"
         fontSize="1rem"
         fontFamily="veralaRound"
         py="1.563rem"
         textAlign="center"
       >
         Leave us your information and our team will get back to you.
-      </MtnTxt>
-      <MtnFlex
-        initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 3, duration: 2, type: "just" }}
+      </Text>
+      <Flex
+        className="fadein reveal"
         w="full"
         align="center"
         justify="center"
@@ -109,19 +107,21 @@ const GetInTouch = () => {
         <form onSubmit={submitHandler}>
           <FormControl align="center" justify="center">
             <VStack align="flex-start">
+            <FormControl isRequired>
               <Flex
                 w="100%"
                 align="flex-end"
                 justifyContent="space-between"
                 pb="0.437rem"
               >
+                
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
                   fontSize="1rem"
                   htmlFor="name"
                 >
-                  NAME*
+                  NAME
                 </FormLabel>
                 {borderClr ? (
                   <Input
@@ -161,7 +161,9 @@ const GetInTouch = () => {
                     errorBorderColor="crimson"
                   />
                 )}
+                
               </Flex>
+              </FormControl>
               <Flex
                 w="100%"
                 align="center"
@@ -191,6 +193,7 @@ const GetInTouch = () => {
                   isRequired
                 />
               </Flex>
+              <FormControl isRequired>
               <Flex
                 w="100%"
                 align="center"
@@ -203,7 +206,7 @@ const GetInTouch = () => {
                   fontSize="1rem"
                   htmlFor="phoneNo"
                 >
-                  PHONE NO.*
+                  PHONE NO.
                 </FormLabel>
                 <Input
                   id="phoneNo"
@@ -220,6 +223,7 @@ const GetInTouch = () => {
                   isRequired
                 />
               </Flex>
+              </FormControl>
               <Flex w="100%" align="flex-start" justify="space-between">
                 <FormLabel
                   fontFamily="avenir"
@@ -247,6 +251,7 @@ const GetInTouch = () => {
             <Button
               type="submit"
               mt="1.563rem"
+              mb="5rem"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
               color="white"
               fontSize="1rem"
@@ -260,7 +265,7 @@ const GetInTouch = () => {
             </Button>
           </FormControl>
         </form>
-      </MtnFlex>
+      </Flex>
     </Flex>
   );
 };
