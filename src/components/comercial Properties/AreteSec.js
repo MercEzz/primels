@@ -1842,7 +1842,7 @@ const LocationAndFormPlaza = () => {
         <Text
           w="100%"
           textAlign="center"
-          className="discobal-slidein-top reveal"
+          className="serv-text-up reveal"
           fontSize={{ base: "1.5rem", lg: "2.5rem" }}
           fontFamily="goudy"
           textTransform="uppercase"
@@ -1853,6 +1853,7 @@ const LocationAndFormPlaza = () => {
         </Text>
 
         <form
+          className="fadein reveal"
           style={{
             display: "flex",
             flexDirection: "column",
@@ -2483,7 +2484,7 @@ const LocationAndFormMall = () => {
         <Text
           w="100%"
           textAlign="center"
-          className="discobal-slidein-top reveal"
+          className="serv-text-up reveal"
           fontSize={{ base: "1.5rem", lg: "2.5rem" }}
           fontFamily="goudy"
           textTransform="uppercase"
@@ -2494,6 +2495,7 @@ const LocationAndFormMall = () => {
         </Text>
 
         <form
+          className="fadein reveal"
           style={{
             display: "flex",
             flexDirection: "column",
