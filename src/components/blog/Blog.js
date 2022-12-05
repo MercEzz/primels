@@ -320,7 +320,7 @@ const Blog = () => {
                     fontSize="1.5rem"
                     pb="1.563rem"
                     px="1.563rem"
-                    pt="4.688rem"
+                    pt="3rem"
                     textTransform="uppercase"
                   >
                     WHY SHOULD YOU CHOOSE FLAT OVER INDEPENDENT HOUSES?
@@ -333,7 +333,7 @@ const Blog = () => {
                     color="white"
                     p="3.125rem"
                     boxShadow="xl"
-                    bottom="4.375rem"
+                    bottom="2rem"
                     right="0"
                   >
                     <Text fontFamily="veralaRound" fontSize="1.125rem">

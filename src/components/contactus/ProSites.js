@@ -60,7 +60,7 @@ const ProSites = () => {
         animate={animateFade}
         transition={{ delay: 2, duration: 2, type: "just" }}
         w="100%"
-        mt="3.125rem"
+        mt="1.875rem"
         mb="3.125rem"
         // px="6.25rem"
         justify="center"
@@ -129,7 +129,7 @@ const ProSites = () => {
         initial={{ opacity: 0 }}
         animate={animateFade}
         transition={{ delay: 2, duration: 2, type: "just" }}
-        mb="3.125rem"
+        mb="1.875rem"
       >
         <Text fontFamily="veralaRound" fontSize="1.25rem" lineHeight="1.5rem">
           For consultancy related queries, email us at
@@ -139,6 +139,7 @@ const ProSites = () => {
         </Heading>
       </MtnStk>
       <MtnStk
+        mb="3.125rem"
         initial={{ opacity: 0 }}
         animate={animateFade}
         transition={{ delay: 2, duration: 2, type: "just" }}

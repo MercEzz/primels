@@ -43,7 +43,7 @@ const AddresSec = () => {
   }, [isInView, animateFlx, animateFade]);
 
   return (
-    <Flex ref={ref} w="100%" h="100vh">
+    <Flex ref={ref} w="100%" h="35.5rem">
       <Flex w="40%" h="100%" direction="column" align="center" justify="center">
         <MtnFlx
           as={Link}

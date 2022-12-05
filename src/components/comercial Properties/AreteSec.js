@@ -562,7 +562,7 @@ const AreteMall = () => {
           pb={{ base: "1.25rem", lg: "0" }}
         >
           <Text
-            className="discobal-slidein-top reveal"
+            className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
             pt={{ base: "1.875rem", lg: "0" }}
@@ -762,7 +762,7 @@ const AreteMall = () => {
                     bgGradient="linear(to-b,#B88746, #DFBD69)"
                     bgClip="text"
                   >
-                    2,25.000 SQFT
+                    2,25,000 SQFT
                   </Text>
                   <Text
                     fontFamily="veralaRound"
@@ -777,7 +777,7 @@ const AreteMall = () => {
                 <Flex
                   display={{ base: "none", lg: "flex" }}
                   direction="column"
-                  className="discobal-slidein-top reveal"
+                  className="fadein reveal"
                 >
                   <Heading fontFamily="avenir" fontSize="1.25rem" pb="1rem">
                     FLOOR PLAN
@@ -1500,7 +1500,7 @@ const LocationAndFormPlaza = () => {
             overflow="hidden"
             // w="10%"
             h="100%"
-            px="1.563rem"
+            px="1.875rem"
           >
             <Flex
               className="discobal-slidein-top reveal"
@@ -1874,7 +1874,7 @@ const LocationAndFormPlaza = () => {
                 fontSize="1rem"
                 fontFamily="avenir"
                 lineHeight="1.5rem"
-                w={{ base: "12.75rem", lg: "18.75rem" }}
+                w={{ base: "12.75rem", lg: "21.875rem" }}
                 h={{ base: "1.875rem", lg: "3.125rem" }}
                 bgColor="#E5E5E5"
                 borderRadius="none"
@@ -1895,7 +1895,7 @@ const LocationAndFormPlaza = () => {
                 fontSize="1rem"
                 fontFamily="avenir"
                 lineHeight="1.5rem"
-                w={{ base: "12.75rem", lg: "18.75rem" }}
+                w={{ base: "12.75rem", lg: "21.875rem" }}
                 h={{ base: "1.875rem", lg: "3.125rem" }}
                 bgColor="#E5E5E5"
                 borderRadius="none"
@@ -1915,7 +1915,7 @@ const LocationAndFormPlaza = () => {
                 fontSize="1rem"
                 fontFamily="avenir"
                 lineHeight="1.5rem"
-                w={{ base: "12.75rem", lg: "18.75rem" }}
+                w={{ base: "12.75rem", lg: "21.875rem" }}
                 h={{ base: "1.875rem", lg: "3.125rem" }}
                 bgColor="#E5E5E5"
                 borderRadius="none"
@@ -1940,7 +1940,7 @@ const LocationAndFormPlaza = () => {
                 fontSize="1rem"
                 fontFamily="avenir"
                 lineHeight="1.5rem"
-                w={{ base: "12.75rem", lg: "18.75rem" }}
+                w={{ base: "12.75rem", lg: "21.875rem" }}
                 h={{ base: "5.625rem", lg: "11.25rem" }}
                 bgColor="#E5E5E5"
                 borderRadius="none"
@@ -1976,6 +1976,7 @@ const LocationAndFormMall = () => {
         direction="column"
         align="center"
         justify="center"
+        pt="5rem"
         pb="3.125rem"
         px={{ base: "0.938rem", lg: "6.25rem" }}
       >
@@ -1983,6 +1984,7 @@ const LocationAndFormMall = () => {
           px={{ base: "10rem", lg: "0" }}
           textAlign="center"
           fontFamily="goudy"
+          
           pb="1.875rem"
           fontSize={{ base: "1.5rem", lg: "2.5rem" }}
           className="Arete-Plaza-LocationAdv-Title reveal"
@@ -2516,7 +2518,7 @@ const LocationAndFormMall = () => {
                 fontSize="1rem"
                 fontFamily="avenir"
                 lineHeight="1.5rem"
-                w={{ base: "12.75rem", lg: "18.75rem" }}
+                w={{ base: "12.75rem", lg: "21.875rem" }}
                 h={{ base: "1.875rem", lg: "3.125rem" }}
                 bgColor="#E5E5E5"
                 borderRadius="none"
@@ -2537,7 +2539,7 @@ const LocationAndFormMall = () => {
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 fontFamily="avenir"
                 lineHeight="1.5rem"
-                w={{ base: "12.75rem", lg: "18.75rem" }}
+                w={{ base: "12.75rem", lg: "21.875rem" }}
                 h={{ base: "1.875rem", lg: "3.125rem" }}
                 bgColor="#E5E5E5"
                 borderRadius="none"
@@ -2557,7 +2559,7 @@ const LocationAndFormMall = () => {
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 fontFamily="avenir"
                 lineHeight="1.5rem"
-                w={{ base: "12.75rem", lg: "18.75rem" }}
+                w={{ base: "12.75rem", lg: "21.875rem" }}
                 h={{ base: "1.875rem", lg: "3.125rem" }}
                 bgColor="#E5E5E5"
                 borderRadius="none"
@@ -2582,7 +2584,7 @@ const LocationAndFormMall = () => {
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 fontFamily="avenir"
                 lineHeight="1.5rem"
-                w={{ base: "12.75rem", lg: "18.75rem" }}
+                w={{ base: "12.75rem", lg: "21.875rem" }}
                 h={{ base: "5.625rem", lg: "11.25rem" }}
                 bgColor="#E5E5E5"
                 borderRadius="none"
