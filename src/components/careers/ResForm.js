@@ -14,12 +14,13 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { BsUpload } from "react-icons/bs";
 
-const MtnHead = motion(Heading);
-const MtnText = motion(Text);
-const MtnStk = motion(VStack);
+//const Heading = motion(Heading);
+//const Text = motion(Text);
+//const VStack = motion(VStack);
 
 const ResForm = () => {
   const ref = useRef(null);
+  /*
   const isInView = useInView(ref, { once: true });
   const animationHead = useAnimation();
   const animationFade = useAnimation();
@@ -30,7 +31,7 @@ const ResForm = () => {
       animationFade.start({ opacity: 1 });
     }
   }, [isInView, animationHead, animationFade]);
-
+  */
   const [borderClr, setbordorClr] = useState(null);
 
   const [formData, setFormData] = useState({
@@ -58,6 +59,7 @@ const ResForm = () => {
 
   return (
     <Flex
+      overflow="hidden"
       ref={ref}
       direction="column"
       w="100%"
@@ -71,35 +73,29 @@ const ResForm = () => {
       bgPos="center"
       bgSize="cover"
     >
-      <MtnHead
-        initial={{ opacity: 0, y: -50 }}
-        animate={animationHead}
-        transition={{ duration: 2, type: "just" }}
+      <Heading
+        className="serv-text-up reveal"
         fontFamily="goudy"
         fontWeight="400"
         fontSize="2.5rem"
       >
         SEND YOUR RESUME
-      </MtnHead>
-      <MtnText
-        initial={{ opacity: 0 }}
-        animate={animationFade}
-        transition={{ delay: 1, duration: 2, type: "just" }}
+      </Heading>
+      <Text
+        className="fadein reveal"
         fontSize="1rem"
         fontFamily="veralaRound"
         py="1.563rem"
         textAlign="center"
       >
         Work with us, send your resume and our team will get back to you.
-      </MtnText>
+      </Text>
       <Container minW="container.sm">
         <form onSubmit={submitHandler}>
           <FormControl align="center" justify="center">
-            <MtnStk
+            <VStack
               w="90%"
-              initial={{ opacity: 0 }}
-              animate={animationFade}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+              className="fadein reveal"
               align="center"
             >
               <FormControl isRequired>
@@ -239,7 +235,7 @@ const ResForm = () => {
                   />
                 </Flex>
               </FormControl>
-            </MtnStk>
+            </VStack>
             <Text ml="-10" fontSize="1rem" fontFamily="veralaRound">
               <Icon as={BsUpload} mr="10px" />
               Upload File

@@ -640,6 +640,32 @@ const BlogForm = () => {
           </Button>
         </form>
       </Flex>
+      <Flex w="100%" h="100%" direction="column" pt="1.563rem">
+        <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
+          POPULAR BLOGS
+        </Heading>
+        <VStack
+          divider={<StackDivider borderColor="#B88746" />}
+          spacing={"0.938rem"}
+          align="flex-start"
+        >
+          <Box>
+            <Text fontFamily="veralaRound" fontSize="1rem">
+              Why should you choose flat over independent house?
+            </Text>
+          </Box>
+          <Box>
+            <Text fontFamily="veralaRound" fontSize="1rem">
+              Why investing in residential property, a must for better future?
+            </Text>
+          </Box>
+          <Box>
+            <Text fontFamily="veralaRound" fontSize="1rem">
+              Amenities to ensure when buying a rented properties for sale
+            </Text>
+          </Box>
+        </VStack>
+      </Flex>
     </>
   );
 };

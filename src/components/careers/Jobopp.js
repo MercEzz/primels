@@ -8,32 +8,32 @@ import {
   Image,
   Link,
 } from "@chakra-ui/react";
-import React, { useRef, useEffect } from "react";
+import React, { useVStackRef, useEffect,useRef } from "react";
 import { GrLinkedinOption } from "react-icons/gr";
 import { MdLocationOn, MdBusinessCenter } from "react-icons/md";
 import { FaBusinessTime } from "react-icons/fa";
-import { motion, useAnimation, useInView } from "framer-motion";
+//import { motion, useAnimation, useInView } from "framer-motion";
 import ResForm from "./ResForm";
 
-const MtnHead = motion(Heading);
-const MtnTxt = motion(Text);
-const MtnFlx = motion(Flex);
-const MtnStk = motion(VStack);
+//const Heading = motion(Heading);
+//const Text = motion(Text);
+//const Flex = motion(Flex);
+//const VStack = motion(VStack);
 
 const Jobopp = () => {
   const ref = useRef(null);
   const refforForm = useRef(null);
+  /*
   const isInView = useInView(ref, { once: true });
   const animationHead = useAnimation();
   const animationLftHd = useAnimation();
-
   useEffect(() => {
     if (isInView) {
       animationHead.start({ opacity: 1, y: 0 });
       animationLftHd.start({ opacity: 1 });
     }
   }, [isInView, animationHead, animationLftHd]);
-
+  */
   const clickHandler = (e) => {
     e.preventDefault();
     refforForm.current?.scrollIntoView({ behavior: "smooth" });
@@ -42,6 +42,7 @@ const Jobopp = () => {
   return (
     <>
       <Flex
+        overflow="hidden"
         ref={ref}
         direction="column"
         w="100%"
@@ -51,17 +52,15 @@ const Jobopp = () => {
         px="6.25rem"
         pb="3.125rem"
       >
-        <MtnHead
-          initial={{ opacity: 0, y: -100 }}
-          animate={animationHead}
-          transition={{ duration: 2, type: "just" }}
+        <Heading
+          className="serv-text-up reveal"
           fontFamily="goudy"
           fontSize="2.5rem"
           fontWeight="400"
           mb="1.875rem"
         >
           JOB OPPORTUNITIES
-        </MtnHead>
+        </Heading>
         <Flex w="100%" h="100%">
           <Flex
             direction="column"
@@ -74,21 +73,17 @@ const Jobopp = () => {
             textAlign="center"
             bgImage="/images/bg-box.jpg"
           >
-            <MtnHead
-              initial={{ opacity: 0 }}
-              animate={animationLftHd}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+            <Heading
+              className="fadein reveal"
               fontFamily="avenir"
               fontSize="1.5rem"
               py="1.563rem"
               px="6.25rem"
             >
               FOLLOW US ON LINKEDIN
-            </MtnHead>
-            <MtnTxt
-              initial={{ opacity: 0 }}
-              animate={animationLftHd}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+            </Heading>
+            <Text
+              className="fadein reveal"
               fontFamily="veralaRound"
               fontSize="1rem"
               px="5.313rem"
@@ -96,12 +91,10 @@ const Jobopp = () => {
             >
               The best way to stay updated on Job Opportunities at Prime
               Lifespace is to follow us on Linkedin.
-            </MtnTxt>
-            <MtnFlx
+            </Text>
+            <Flex
               w="100%"
-              initial={{ opacity: 0 }}
-              animate={animationLftHd}
-              transition={{ delay: 1, duration: 2, type: "just" }}
+              className="fadein reveal"
               direction="column"
               align="center"
               justify="center"
@@ -121,7 +114,7 @@ const Jobopp = () => {
                 />
               </Link>
               <Image w="50%" h="50%" pt="0.938rem" src="/images/logo.png" />
-            </MtnFlx>
+            </Flex>
           </Flex>
           <Flex w="100%">
             <Grid
@@ -149,20 +142,16 @@ const Jobopp = () => {
                 onClick={clickHandler}
                 cursor="pointer"
               >
-                <MtnHead
-                  initial={{ opacity: 0 }}
-                  animate={animationLftHd}
-                  transition={{ delay: 1, duration: 2, type: "just" }}
+                <Heading
+                  className="fadein reveal"
                   fontSize="1.25rem"
                   fontFamily="avenir"
                   pb="0.938rem"
                 >
                   SALES MANAGER
-                </MtnHead>
-                <MtnStk
-                  initial={{ opacity: 0 }}
-                  animate={animationLftHd}
-                  transition={{ delay: 1, duration: 2, type: "just" }}
+                </Heading>
+                <VStack
+                  className="fadein reveal"
                   align="flex-start"
                   fontFamily="veralaRound"
                   fontSize="1rem"
@@ -179,7 +168,7 @@ const Jobopp = () => {
                     <Icon as={MdBusinessCenter} w="6" h="6" mx="0.438rem" />
                     <Text>Full-time</Text>
                   </Flex>
-                </MtnStk>
+                </VStack>
               </Flex>
               <Flex
                 as={Link}
@@ -198,21 +187,17 @@ const Jobopp = () => {
                 }}
                 onClick={clickHandler}
               >
-                <MtnHead
-                  initial={{ opacity: 0 }}
-                  animate={animationLftHd}
-                  transition={{ delay: 1, duration: 2, type: "just" }}
+                <Heading
+                  className="fadein reveal"
                   fontSize="1.25rem"
                   fontFamily="avenir"
                   pb="0.938rem"
                 >
                   OPERATIONS <br />
                   MANAGER
-                </MtnHead>
-                <MtnStk
-                  initial={{ opacity: 0 }}
-                  animate={animationLftHd}
-                  transition={{ delay: 1, duration: 2, type: "just" }}
+                </Heading>
+                <VStack
+                  className="fadein reveal"
                   align="flex-start"
                   fontFamily="veralaRound"
                   fontSize="1rem"
@@ -229,7 +214,7 @@ const Jobopp = () => {
                     <Icon as={MdBusinessCenter} w="6" h="6" mx="0.438rem" />
                     <Text>Full-time</Text>
                   </Flex>
-                </MtnStk>
+                </VStack>
               </Flex>
               <Flex
                 as={Link}
@@ -247,20 +232,16 @@ const Jobopp = () => {
                 }}
                 onClick={clickHandler}
               >
-                <MtnHead
-                  initial={{ opacity: 0 }}
-                  animate={animationLftHd}
-                  transition={{ delay: 1, duration: 2, type: "just" }}
+                <Heading
+                  className="fadein reveal"
                   fontSize="1.25rem"
                   fontFamily="avenir"
                   pb="0.938rem"
                 >
                   GRAPHIC DESIGNER
-                </MtnHead>
-                <MtnStk
-                  initial={{ opacity: 0 }}
-                  animate={animationLftHd}
-                  transition={{ delay: 1, duration: 2, type: "just" }}
+                </Heading>
+                <VStack
+                  className="fadein reveal"
                   align="flex-start"
                   fontFamily="veralaRound"
                   fontSize="1rem"
@@ -277,7 +258,7 @@ const Jobopp = () => {
                     <Icon as={MdBusinessCenter} w="6" h="6" mx="0.438rem" />
                     <Text>Internship</Text>
                   </Flex>
-                </MtnStk>
+                </VStack>
               </Flex>
               <Flex
                 as={Link}
@@ -296,21 +277,17 @@ const Jobopp = () => {
                 }}
                 onClick={clickHandler}
               >
-                <MtnHead
-                  initial={{ opacity: 0 }}
-                  animate={animationLftHd}
-                  transition={{ delay: 1, duration: 2, type: "just" }}
+                <Heading
+                  className="fadein reveal"
                   fontSize="1.25rem"
                   fontFamily="avenir"
                   pb="0.938rem"
                 >
                   HOSPITALITY <br />
                   MANAGEMENT
-                </MtnHead>
-                <MtnStk
-                  initial={{ opacity: 0 }}
-                  animate={animationLftHd}
-                  transition={{ delay: 1, duration: 2, type: "just" }}
+                </Heading>
+                <VStack
+                  className="fadein reveal"
                   align="flex-start"
                   fontFamily="veralaRound"
                   fontSize="1rem"
@@ -327,7 +304,7 @@ const Jobopp = () => {
                     <Icon as={MdBusinessCenter} w="6" h="6" mx="0.438rem" />
                     <Text>Full-time</Text>
                   </Flex>
-                </MtnStk>
+                </VStack>
               </Flex>
             </Grid>
           </Flex>

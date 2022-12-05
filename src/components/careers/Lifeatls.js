@@ -7,7 +7,7 @@ import {
   IconButton,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { motion, useAnimation } from "framer-motion";
+//import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import Slider from "react-slick";
@@ -20,9 +20,9 @@ import career5 from "../careers imgs/career5_7_11zon.jpeg";
 import career6 from "../careers imgs/career6_8_11zon.jpeg";
 import career7 from "../careers imgs/EVENTS10_11zon.jpeg";
 
-const MtnHead = motion(Heading);
-const MotnTxt = motion(Text);
-const MtnBx = motion(Box);
+//const Heading = motion(Heading);
+//const Text = motion(Text);
+//const Box = motion(Box);
 
 const images = [career1, career2, career3, career4, career5, career6, career7];
 
@@ -36,9 +36,9 @@ const Lifeatls = () => {
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "2.5rem" });
 
-  const animationHead = useAnimation();
-  const animationText = useAnimation();
-  const animationImg = useAnimation();
+  //const animationHead = useAnimation();
+  //const animationText = useAnimation();
+  //const animationImg = useAnimation();
 
   const settings = {
     draggable: true,
@@ -53,7 +53,7 @@ const Lifeatls = () => {
       setCurrentSlide(currentSlide++);
     },
   };
-
+/*
   useEffect(() => {
     if (isInView) {
       animationHead.start({ opacity: 1, y: 0 });
@@ -61,9 +61,10 @@ const Lifeatls = () => {
       animationImg.start({ opacity: 1, x: 0 });
     }
   }, [isInView, animationHead, animationText, animationImg]);
-
+*/
   return (
     <Flex
+      overflow="hidden"
       ref={ref}
       w="100%"
       h="100%"
@@ -77,21 +78,17 @@ const Lifeatls = () => {
       bgPos="center"
       bgSize="cover"
     >
-      <MtnHead
-        initial={{ opacity: 0, y: -100 }}
-        animate={animationHead}
-        transition={{ duration: 2, type: "just" }}
+      <Heading
+        className="serv-text-up reveal"
         fontSize="2.5rem"
         fontFamily="goudy"
         fontWeight="400"
         pb="1.563rem"
       >
         LIFE AT PRIME LIFESPACE
-      </MtnHead>
-      <MotnTxt
-        initial={{ opacity: 0 }}
-        animate={animationText}
-        transition={{ delay: 1, duration: 2, type: "just" }}
+      </Heading>
+      <Text
+        className="fadein reveal"
         fontSize="1rem"
         fontFamily="veralaRound"
         pb="1.563rem"
@@ -100,7 +97,7 @@ const Lifeatls = () => {
         care of itself.
         <br /> Here is a glimpse of what’s it’s like to be a member of the Prime
         Lifespace Team.
-      </MotnTxt>
+      </Text>
       <Flex w="100%" h="100%">
         {" "}
         <Box

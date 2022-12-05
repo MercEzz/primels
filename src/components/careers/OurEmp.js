@@ -1,15 +1,16 @@
 import { Flex, Heading, Text, Avatar, Stack, Icon } from "@chakra-ui/react";
-import { motion, useAnimation, useInView } from "framer-motion";
+//import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 // import Slider from "react-slick";
 import ImgCarousel from "../layouts/Img-Carousel";
 
-const MtnHead = motion(Heading);
-const MtnFlx = motion(Flex);
+//const Heading = motion(Heading);
+//const Flex = motion(Flex);
 
 const OurEmp = () => {
   const ref = useRef(null);
+  /*
   const isInView = useInView(ref, { once: true });
   const animationHead = useAnimation();
   const animationTest = useAnimation();
@@ -20,7 +21,7 @@ const OurEmp = () => {
       animationTest.start({ opacity: 1, y: 0 });
     }
   }, [isInView, animationHead, animationTest]);
-
+  */
   const settings = {
     infinite: true,
     autoplay: true,
@@ -33,6 +34,7 @@ const OurEmp = () => {
 
   return (
     <Flex
+      overflow="hidden"
       ref={ref}
       direction="column"
       pt="5rem"
@@ -42,10 +44,8 @@ const OurEmp = () => {
       align="flex-start"
       justify="center"
     >
-      <MtnHead
-        initial={{ opacity: 0, y: -100 }}
-        animate={animationHead}
-        transition={{ duration: 2, type: "just" }}
+      <Heading
+        className="serv-text-up reveal"
         w="100%"
         textAlign="center"
         fontSize="2.5rem"
@@ -54,13 +54,11 @@ const OurEmp = () => {
         // pb="25px"
       >
         OUR HAPPY EMPLOYEES
-      </MtnHead>
-      <MtnFlx
+      </Heading>
+      <Flex
         w="100%"
         h="full"
-        initial={{ opacity: 0, y: 100 }}
-        animate={animationTest}
-        transition={{ delay: 1, duration: 2, type: "just" }}
+        className="fadein reveal"
         pos="relative"
         align="flex-start"
         justify="space-between"
@@ -86,7 +84,7 @@ const OurEmp = () => {
           h="3.125rem"
           as={ImQuotesRight}
         />
-      </MtnFlx>
+      </Flex>
     </Flex>
   );
 };
