@@ -12,21 +12,21 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 import { ImLocation } from "react-icons/im";
 import { HiMail, HiPhone } from "react-icons/hi";
-import { motion, useAnimation, useInView } from "framer-motion";
+//import { motion, useAnimation, useInView } from "framer-motion";
 
-const MtnFlx = motion(Flex);
-const MtnHead = motion(Heading);
-const MtnStk = motion(VStack);
+//const Flex = motion(Flex);
+//const Heading = motion(Heading);
+//const VStack = motion(VStack);
 
 const AddresSec = () => {
   const ref = useRef(null);
+  /*
   const isInView = useInView(ref, {
-    once: true,
     margin: "0px 100px -50px 0px",
   });
   const animateFlx = useAnimation();
   const animateFade = useAnimation();
-
+  */
   const [add, setAdd] = useState(true);
 
   const CorporateAdd =
@@ -35,21 +35,20 @@ const AddresSec = () => {
   const ChennaiAdd =
     "https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime Expat Infra, chennai&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed";
 
+    /*
   useEffect(() => {
     if (isInView) {
       animateFlx.start({ opacity: 1, scale: 1 });
       animateFade.start({ opacity: 1 });
     }
   }, [isInView, animateFlx, animateFade]);
-
+*/
   return (
     <Flex ref={ref} w="100%" h="35.5rem">
       <Flex w="40%" h="100%" direction="column" align="center" justify="center">
-        <MtnFlx
+        <Flex
           as={Link}
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={animateFlx}
-          transition={{ duration: 2, type: "just" }}
+          className="expand reveal"
           direction="column"
           w="100%"
           h="100%"
@@ -64,10 +63,8 @@ const AddresSec = () => {
             setAdd(true);
           }}
         >
-          <MtnHead
-            initial={{ opacity: 0 }}
-            animate={animateFade}
-            transition={{ delay: 1, duration: 2, type: "just" }}
+          <Heading
+            className="fadein reveal"
             w="100%"
             fontFamily="avenir"
             fontSize="2.125rem"
@@ -76,11 +73,9 @@ const AddresSec = () => {
             textAlign="left"
           >
             CORPORATE OFFICE
-          </MtnHead>
-          <MtnStk
-            initial={{ opacity: 0 }}
-            animate={animateFade}
-            transition={{ delay: 1, duration: 2, type: "just" }}
+          </Heading>
+          <VStack
+            className="fadein reveal"
             w="100%"
             align="flex-start"
           >
@@ -103,13 +98,11 @@ const AddresSec = () => {
                 7338808775
               </Text>
             </HStack>
-          </MtnStk>
-        </MtnFlx>
-        <MtnFlx
+          </VStack>
+        </Flex>
+        <Flex
           as={Link}
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={animateFlx}
-          transition={{ duration: 2, type: "just" }}
+          className="expand reveal"
           direction="column"
           w="100%"
           h="100%"
@@ -123,10 +116,8 @@ const AddresSec = () => {
             setAdd(false);
           }}
         >
-          <MtnHead
-            initial={{ opacity: 0 }}
-            animate={animateFade}
-            transition={{ delay: 2, duration: 2, type: "just" }}
+          <Heading
+            className="fadein reveal"
             w="100%"
             fontFamily="avenir"
             fontSize="2.125rem"
@@ -135,11 +126,9 @@ const AddresSec = () => {
             textAlign="left"
           >
             CHENNAI OFFICE
-          </MtnHead>
-          <MtnStk
-            initial={{ opacity: 0 }}
-            animate={animateFade}
-            transition={{ delay: 2, duration: 2, type: "just" }}
+          </Heading>
+          <VStack
+            className="fadein reveal"
             w="100%"
             align="flex-start"
           >
@@ -162,13 +151,11 @@ const AddresSec = () => {
                 7338808775
               </Text>
             </HStack>
-          </MtnStk>
-        </MtnFlx>
+          </VStack>
+        </Flex>
       </Flex>
-      <MtnFlx
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={animateFlx}
-        transition={{ duration: 2, type: "just" }}
+      <Flex
+        className="expand reveal"
         h="100%"
         w="60%"
       >
@@ -195,7 +182,7 @@ const AddresSec = () => {
             src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime Expat Infra, chennai&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           ></iframe>
         )}
-      </MtnFlx>
+      </Flex>
     </Flex>
   );
 };

@@ -100,7 +100,10 @@ const SideVector = () => {
                 }}
                 transition="linear 200ms"
               />
-
+              <Link
+                href="https://www.linkedin.com/company/prime-lifespace-consultancy-pvt-ltd/"
+                isExternal
+              >
               <Icon
                 as={RiLinkedinBoxFill}
                 h="3.125rem"
@@ -109,7 +112,11 @@ const SideVector = () => {
                 _hover={{ color: "#B88746" }}
                 transition="linear 200ms"
               />
-
+              </Link>
+              <Link
+                href="https://www.facebook.com/primelifespacearetehomes"
+                isExternal
+              >
               <Icon
                 as={RiFacebookCircleFill}
                 h="3.125rem"
@@ -119,6 +126,7 @@ const SideVector = () => {
                 _hover={{ color: "#B88746" }}
                 transition="linear 200ms"
               />
+              </Link>
               <Icon
                 as={RiYoutubeFill}
                 h="3.125rem"

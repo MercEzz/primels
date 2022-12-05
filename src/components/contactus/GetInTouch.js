@@ -10,16 +10,18 @@ import {
   Container,
   Textarea,
 } from "@chakra-ui/react";
-import { motion, useAnimation, useInView } from "framer-motion";
+//import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-const MtnHd = motion(Heading);
-const MtnTxt = motion(Text);
-const MtnFlex = motion(Flex);
+//const MtnHd = motion(Heading);
+//const MtnTxt = motion(Text);
+//const MtnFlex = motion(Flex);
 
 const GetInTouch = () => {
+  
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  /*
+  const isInView = useInView(ref, { once:false });
   const animateHd = useAnimation();
   const animateFade = useAnimation();
 
@@ -34,7 +36,7 @@ const GetInTouch = () => {
       });
     }
   }, [isInView, animateHd, animateFade]);
-
+  */
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -60,9 +62,10 @@ const GetInTouch = () => {
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-
+  
   return (
     <Flex
+      overflow="hidden"
       ref={ref}
       direction="column"
       w="100%"
@@ -76,32 +79,26 @@ const GetInTouch = () => {
       pos="relative"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
-      <MtnHd
-        initial={{ opacity: 0, y: -50 }}
-        animate={animateHd}
-        transition={{ duration: 2, type: "just" }}
+      <Heading
+        className="serv-text-up reveal"
         fontFamily="goudy"
         fontWeight="400"
         fontSize="2.5rem"
         lineHeight="3.75rem"
       >
         GET IN TOUCH
-      </MtnHd>
-      <MtnTxt
-        initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 1.5, duration: 2, type: "just" }}
+      </Heading>
+      <Text
+        className="fadein reveal"
         fontSize="1rem"
         fontFamily="veralaRound"
         py="1.563rem"
         textAlign="center"
       >
         Leave us your information and our team will get back to you.
-      </MtnTxt>
-      <MtnFlex
-        initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 3, duration: 2, type: "just" }}
+      </Text>
+      <Flex
+        className="fadein reveal"
         w="full"
         align="center"
         justify="center"
@@ -268,7 +265,7 @@ const GetInTouch = () => {
             </Button>
           </FormControl>
         </form>
-      </MtnFlex>
+      </Flex>
     </Flex>
   );
 };

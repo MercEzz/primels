@@ -6,19 +6,20 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { motion, useAnimation, useInView } from "framer-motion";
+//import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
-const MtnHd = motion(Heading);
-const MtnFlx = motion(Flex);
-const MtnStk = motion(VStack);
-
+/*
+const Heading = motion(Heading);
+const Flex = motion(Flex);
+const VStack = motion(VStack);
+*/
 const ProSites = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  /*
+  const isInView = useInView(ref, { });
   const animateHd = useAnimation();
   const animateFade = useAnimation();
-
   useEffect(() => {
     if (isInView) {
       animateHd.start({
@@ -30,9 +31,10 @@ const ProSites = () => {
       });
     }
   }, [isInView, animateHd, animateFade]);
-
+  */
   return (
     <Flex
+      overflow="hidden"
       ref={ref}
       direction="column"
       w="100%"
@@ -44,21 +46,17 @@ const ProSites = () => {
       justify="center"
       pos="relative"
     >
-      <MtnHd
-        initial={{ opacity: 0, y: -50 }}
-        animate={animateHd}
-        transition={{ duration: 2, type: "just" }}
+      <Heading
+        className="serv-text-up reveal"
         fontFamily="goudy"
         fontWeight="400"
         fontSize="2.5rem"
         lineHeight="3.625rem"
       >
         OUR PROJECT SITES
-      </MtnHd>
-      <MtnFlx
-        initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 2, duration: 2, type: "just" }}
+      </Heading>
+      <Flex
+        className="fadein reveal"
         w="100%"
         mt="1.875rem"
         mb="3.125rem"
@@ -124,11 +122,9 @@ const ProSites = () => {
             North Chennai - 601204
           </Text>
         </Flex>
-      </MtnFlx>
-      <MtnStk
-        initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 2, duration: 2, type: "just" }}
+      </Flex>
+      <VStack
+        className="fadein reveal"
         mb="1.875rem"
       >
         <Text fontFamily="veralaRound" fontSize="1.25rem" lineHeight="1.5rem">
@@ -137,12 +133,10 @@ const ProSites = () => {
         <Heading fontFamily="avenir" fontSize="1.5rem" lineHeight="41px">
           info@primelifespace.com
         </Heading>
-      </MtnStk>
-      <MtnStk
+      </VStack>
+      <VStack
         mb="3.125rem"
-        initial={{ opacity: 0 }}
-        animate={animateFade}
-        transition={{ delay: 2, duration: 2, type: "just" }}
+        className="fadein reveal"
       >
         <Text fontFamily="veralaRound" fontSize="1.25rem" lineHeight="1.5rem">
           For procurement related queries, email us at
@@ -150,7 +144,7 @@ const ProSites = () => {
         <Heading fontFamily="avenir" fontSize="1.5rem" lineHeight="2.563rem">
           purchase@primelifespace.com
         </Heading>
-      </MtnStk>
+      </VStack>
     </Flex>
   );
 };
