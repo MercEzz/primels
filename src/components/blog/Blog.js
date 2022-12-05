@@ -6,17 +6,12 @@ import {
   Heading,
   Image,
   Button,
-  Icon,
   Select,
   FormControl,
   FormLabel,
   Input,
   Textarea,
-  HStack,
-  VStack,
-  StackDivider,
-  UnorderedList,
-  Box,
+  Link,
 } from "@chakra-ui/react";
 import React, { useLayoutEffect } from "react";
 // images
@@ -497,10 +492,27 @@ const BlogForm = () => {
   return (
     <>
       <Flex h="100%" justify="flex-end" pb="0.938rem" gap="0.625rem">
-        <Image src={yt} />
-        <Image src={insta} />
-        <Image src={fb} />
-        <Image src={linkedIn} />
+        <Link href="https://youtube.com/@PrimeLifespace" isExternal>
+          <Image src={yt} />
+        </Link>
+        <Link
+          href="https://instagram.com/prime_lifespace?igshid=YmMyMTA2M2Y="
+          isExternal
+        >
+          <Image src={insta} />
+        </Link>
+        <Link
+          href="https://www.facebook.com/primelifespacearetehomes"
+          isExternal
+        >
+          <Image src={fb} />
+        </Link>
+        <Link
+          href="https://www.linkedin.com/company/prime-lifespace-consultancy-pvt-ltd/"
+          isExternal
+        >
+          <Image src={linkedIn} />
+        </Link>
       </Flex>
       <Flex w="100%" direction="column" pb="0.938rem">
         <Text fontFamily="veralaRound" fontSize="1rem" pb="0.625rem">
