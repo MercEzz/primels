@@ -217,7 +217,7 @@ const ReferAFriend = () => {
           </Text>{" "}
           <Image
             w="100%"
-            h="14.625rem"
+            h="16rem"
             p="2rem"
             src={img2}
             className="fadein-2sdelay reveal"
@@ -266,7 +266,7 @@ const ReferAFriend = () => {
           </Text>
           <Image
             w="100%"
-            h="16.75rem"
+            h="16rem"
             p="2rem"
             src={img3}
             className="fadein-4sdelay reveal"
