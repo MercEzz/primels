@@ -33,7 +33,7 @@ const PLSGreen = () => {
         h="100%"
         direction="column"
         px="100px"
-        py="100px"
+        pt="5rem"
         pos="relative"
         bgColor="white"
         zIndex="10"
@@ -42,7 +42,7 @@ const PLSGreen = () => {
           initial={{ opacity: 0 }}
           animate={animateHd}
           transition={{ duration: 2, type: "just" }}
-          pb="1.562rem"
+          pb="1.875rem"
           fontFamily="goudy"
           fontWeight="400"
           fontSize="2.5rem"
@@ -55,7 +55,7 @@ const PLSGreen = () => {
           initial={{ opacity: 0 }}
           animate={animateHd}
           transition={{ duration: 2, type: "just" }}
-          pb="0.937rem"
+          pb="0.625rem"
           fontFamily="veralaRound"
           fontSize="1rem"
           lineHeight="1.5rem"
@@ -73,6 +73,7 @@ const PLSGreen = () => {
           fontFamily="veralaRound"
           fontSize="1rem"
           lineHeight="1.5rem"
+          mb="5rem"
         >
           Establishing IMS System for major power sector including ISO 9001,
           14001, 18001, ISO 17025 for laboratory Accreditation & safety norms.

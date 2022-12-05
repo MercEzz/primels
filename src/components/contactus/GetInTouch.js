@@ -254,6 +254,7 @@ const GetInTouch = () => {
             <Button
               type="submit"
               mt="1.563rem"
+              mb="5rem"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
               color="white"
               fontSize="1rem"
