@@ -13,6 +13,8 @@ import {
   Textarea,
   Link,
   Box,
+  StackDivider,
+  VStack,
 } from "@chakra-ui/react";
 import React, { useLayoutEffect } from "react";
 // images
