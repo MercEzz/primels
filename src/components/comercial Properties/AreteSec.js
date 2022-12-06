@@ -41,6 +41,7 @@ import "./animations.css";
 import "./commercial-properties.css";
 import TenthSec from "../sky-high/SmartInvest";
 import ModalWindwow from "../modalWindow";
+import ModalImage from "../modalImage";
 
 const AreteSec = () => {
   const [active, setActive] = useState(true);
@@ -148,8 +149,16 @@ const AreteSec = () => {
 export default AreteSec;
 
 const AretePlaza = () => {
-  return (
-    <>
+const [isOpen,setIsOpen]=useState(false);  
+const closeImage =() =>{
+  setIsOpen(false);
+}
+const openImage =() =>{
+  setIsOpen(true);
+}
+return (
+  <>
+    {isOpen?<ModalImage modalImage={aretefloor} isOpen={isOpen} onClose={()=>closeImage()} />:<></>}
       {" "}
       <Flex
         pt={{ base: "0", lg: "1.875rem" }}
@@ -441,6 +450,8 @@ const AretePlaza = () => {
       >
         <Flex w="65%" alignSelf="flex-start" overflow="hidden" boxShadow="2xl">
           <Image
+            onClick={()=>openImage()}
+            _hover={{cursor:"pointer"}}
             className="Arete-Plaza-FloorPlan-Image reveal"
             w="100%"
             h="29.25rem"
@@ -1326,8 +1337,16 @@ const AreteMall = () => {
 };
 
 const LocationAndFormPlaza = () => {
+  const [isOpen, setIsOpen]= useState(false);
+  const closeImage =() =>{
+    setIsOpen(false);
+  }
+  const openImage =() =>{
+    setIsOpen(true);
+  }
   return (
     <>
+      {isOpen?<ModalImage modalImage={locationadv} isOpen={isOpen} onClose={()=>closeImage()} />:<></>}
       <Flex
         overflow="hidden"
         w="100%"
@@ -1530,6 +1549,8 @@ const LocationAndFormPlaza = () => {
           </Flex>
           <Flex w="100%">
             <Image
+              onClick={()=>{openImage()}}
+              _hover={{ cursor: "pointer" }}
               className="Arete-Plaza-LocationAdv-Image reveal"
               boxShadow="2xl"
               w="100%"
@@ -1966,9 +1987,16 @@ const LocationAndFormPlaza = () => {
   );
 };
 
-const LocationAndFormMall = () => {
+const LocationAndFormMall = () => {const [isOpen, setIsOpen]= useState(false);
+  const closeImage =() =>{
+    setIsOpen(false);
+  }
+  const openImage =() =>{
+    setIsOpen(true);
+  }
   return (
     <>
+      {isOpen?<ModalImage modalImage={locationadv} isOpen={isOpen} onClose={()=>closeImage()} />:<></>}
       <Flex
         overflow="hidden"
         w="100%"
@@ -2174,6 +2202,8 @@ const LocationAndFormMall = () => {
           </Flex>
           <Flex w="100%">
             <Image
+              onClick={()=>openImage()}
+              _hover={{ cursor: "pointer" }}
               className="Arete-Plaza-LocationAdv-Image reveal"
               boxShadow="2xl"
               w="100%"

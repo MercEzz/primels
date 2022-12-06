@@ -138,10 +138,9 @@ const ReferAFriend = () => {
           w="100%"
           h="100%"
           direction="column"
-          className="fadein reveal"
           overflow="hidden"
         >
-          <Heading fontFamily="avenir" fontSize="1.5rem">
+          <Heading fontFamily="avenir" fontSize="1.5rem" className="fadein reveal">
             STEP 1
           </Heading>{" "}
           <Flex
@@ -168,11 +167,11 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem">
+          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem" className="fadein reveal">
             Fill up the form on website & submit the details of as many friends
             & family members you would like to refer.
           </Text>
-          <Image w="100%" h="16rem" p="2rem" src={img1} />
+          <Image w="100%" h="16rem" p="2rem" src={img1} className="fadein reveal"/>
         </Flex>
         <Flex w="100%" direction="column" overflow="hidden">
           <Heading
@@ -212,8 +211,7 @@ const ReferAFriend = () => {
             fontSize="1.25rem"
             className="fadein-2sdelay reveal"
           >
-            Your provided referral will be contacted by our team and complete
-            assistance will be provided in the booking process.
+            Your provided referral will be contacted by our team and complete assistance will be provided in the booking process.
           </Text>{" "}
           <Image
             w="100%"
@@ -261,8 +259,7 @@ const ReferAFriend = () => {
             fontSize="1.25rem"
             className="fadein-4sdelay reveal"
           >
-            Every time your referral becomes a successful booking, you’ll earn
-            rewards upto Rs 1 Lakh.
+            Every time your referral becomes a successful booking, you’ll earn rewards upto Rs 1 Lakh.
           </Text>
           <Image
             w="100%"
