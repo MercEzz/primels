@@ -89,7 +89,7 @@ const PLSGreen = () => {
         align="center"
         justify="center"
       >
-        <Flex w="100%" h="100%" pos="absolute" direction="column" left="0">
+        <Flex w="100%" h="100%" pos="absolute" direction="column" left="0" ml="100px">
           <MtnImg
             boxShadow="dark-lg"
             initial={{ opacity: 0, x: 100 }}
@@ -97,7 +97,7 @@ const PLSGreen = () => {
             transition={{ duration: 2, type: "just" }}
             src="/images/energy/ourPro1.jpeg"
             objectSize="cover"
-            h="60%"
+            h="50%"
             w="60%"
           />
           <MtnImg
@@ -106,11 +106,11 @@ const PLSGreen = () => {
             animate={animateImg}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             src="/images/energy/ourPro2.jpeg"
-            h="60%"
+            h="50%"
             w="60%"
             pos="absolute"
             left="18%"
-            bottom="0"
+            bottom="15%"
           />{" "}
           
         </Flex>
