@@ -33,11 +33,11 @@ const SecondSec = () => {
   const [slider, setSlider] = useState(null);
   const settings = {
     draggable: false,
-    infinite: false,
+    infinite: true,
     autoplay: true,
     speed: 500,
     fade: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
@@ -237,7 +237,7 @@ const SecondSec = () => {
           </Flex>
           <Flex
             opacity={inView ? "1" : "0"}
-            transition="all 2s 8s"
+            transition="all 1s 8s"
             w="16.937rem"
             borderRadius="0.625rem"
             bgColor="#DFBD69"
@@ -253,7 +253,7 @@ const SecondSec = () => {
           </Flex>
           <Flex
             opacity={inView ? "1" : "0"}
-            transition="all 2s 10s"
+            transition="all 1s 10s"
             w="16.937rem"
             borderRadius="0.625rem"
             bgColor="#DFBD69"

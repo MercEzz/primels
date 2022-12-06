@@ -68,7 +68,7 @@ const SkyhighInvest = () => {
         </Text>
         <Flex w="100%" h="100%">
           <Flex w="100%" h="100%" overflow="hidden">
-            <Image onMouseEnter={()=>open()} src={smartInvest} className="Arete-Plaza-FloorPlan-Image reveal"/>
+            <Image onClick={()=>open()} src={smartInvest} className="Arete-Plaza-FloorPlan-Image reveal"/>
           </Flex>
           <Flex w="100%" h="100%" overflow="hidden">
             {" "}
@@ -377,7 +377,7 @@ const SkyhighInvest = () => {
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
           FINANCIAL MODEL
         </Text>
-        <Flex w="100%" h="100%">
+        <Flex w="100%" h="100%" overflow="hidden">
           <Flex
           overflow="hidden"
             w="38%"
