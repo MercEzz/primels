@@ -6,17 +6,16 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-//import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
-/*
-const Heading = motion(Heading);
-const Flex = motion(Flex);
-const VStack = motion(VStack);
-*/
+const MtnHd = motion(Heading);
+const MtnTxt = motion(Text);
+const MtnStk = motion(VStack);
+
 const ProSites = () => {
   const ref = useRef(null);
-  /*
+  
   const isInView = useInView(ref, { });
   const animateHd = useAnimation();
   const animateFade = useAnimation();
@@ -31,7 +30,6 @@ const ProSites = () => {
       });
     }
   }, [isInView, animateHd, animateFade]);
-  */
   return (
     <Flex
       overflow="hidden"
@@ -44,16 +42,18 @@ const ProSites = () => {
       justify="center"
       pos="relative"
     >
-      <Heading
-        className="serv-text-up reveal"
+      <MtnHd
+        initial={{ opacity: 0, y: -50 }}
+        animate={animateHd}
+        transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
         fontSize="2.5rem"
       >
         OUR PROJECT SITES
-      </Heading>
+      </MtnHd>
       <Flex
-        className="fadein reveal"
+        
         w="100%"
         mt="1.875rem"
         mb="3.125rem"
@@ -68,18 +68,21 @@ const ProSites = () => {
           textAlign="center"
         >
           <Image
+            className="fadein reveal"
             h="6.25rem"
             mb="0.938rem"
             w="18.75rem"
             src="/images/contactus/Asset-1.png"
           />
-          <Text fontFamily="veralaRound" fontSize="1rem">
+          <MtnTxt initial={{ opacity: 0 }}
+        animate={animateFade}
+        transition={{ delay: 2, duration: 2, type: "just" }} fontFamily="veralaRound" fontSize="1rem">
             V no.76, Peruncheri, Ponneri <br /> Opposite Velammal International{" "}
             <br />
             School,
             <br />
             North Chennai - 601204
-          </Text>
+          </MtnTxt>
         </Flex>
         <Flex
           direction="column"
@@ -89,17 +92,21 @@ const ProSites = () => {
           textAlign="center"
         >
           <Image
+            className="fadein reveal"
             h="6.25rem"
             mb="0.938rem"
             w="18.75rem"
             src="/images/contactus/Asset-2.png"
           />
-          <Text fontFamily="veralaRound" fontSize="1rem">
+          <MtnTxt
+          initial={{ opacity: 0 }}
+          animate={animateFade}
+          transition={{ delay: 2, duration: 2, type: "just" }} fontFamily="veralaRound" fontSize="1rem">
             V. No. 76 , Thatchoor 1,
             <br /> Perucheri, Ponneri,
             <br /> Taluk, Thiruvallur District, <br />
             Chennai- 6001 204
-          </Text>
+          </MtnTxt>
         </Flex>
         <Flex
           direction="column"
@@ -109,33 +116,41 @@ const ProSites = () => {
           textAlign="center"
         >
           <Image
+            className="fadein reveal"
             h="6.25rem"
             mb="0.938rem"
             w="18.75rem"
             src="/images/contactus/Asset-3.png"
           />
-          <Text fontFamily="veralaRound" fontSize="1rem">
+          <MtnTxt
+          initial={{ opacity: 0 }}
+          animate={animateFade}
+          transition={{ delay: 2, duration: 2, type: "just" }} fontFamily="veralaRound" fontSize="1rem">
             Next To Arete Homes <br /> V no.76, Peruncheri, Ponneri <br />
             North Chennai - 601204
-          </Text>
+          </MtnTxt>
         </Flex>
       </Flex>
-      <VStack className="fadein reveal" mb="1.875rem">
+      <MtnStk initial={{ opacity: 0 }}
+        animate={animateFade}
+        transition={{ delay: 2, duration: 2, type: "just" }} mb="1.875rem">
         <Text fontFamily="veralaRound" fontSize="1.25rem">
           For consultancy related queries, email us at
         </Text>
         <Heading fontFamily="avenir" fontSize="1.5rem">
           info@primelifespace.com
         </Heading>
-      </VStack>
-      <VStack mb="3.125rem" className="fadein reveal">
+      </MtnStk>
+      <MtnStk mb="3.125rem" initial={{ opacity: 0 }}
+        animate={animateFade}
+        transition={{ delay: 2, duration: 2, type: "just" }}>
         <Text fontFamily="veralaRound" fontSize="1.25rem">
           For procurement related queries, email us at
         </Text>
         <Heading fontFamily="avenir" fontSize="1.5rem">
           purchase@primelifespace.com
         </Heading>
-      </VStack>
+      </MtnStk>
     </Flex>
   );
 };

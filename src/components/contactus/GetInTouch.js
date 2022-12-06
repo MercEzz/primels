@@ -10,16 +10,16 @@ import {
   Container,
   Textarea,
 } from "@chakra-ui/react";
-//import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-//const MtnHd = motion(Heading);
-//const MtnTxt = motion(Text);
-//const MtnFlex = motion(Flex);
+const MtnHd = motion(Heading);
+const MtnTxt = motion(Text);
+const MtnFlex = motion(Flex);
 
 const GetInTouch = () => {
   const ref = useRef(null);
-  /*
+  
   const isInView = useInView(ref, { once:false });
   const animateHd = useAnimation();
   const animateFade = useAnimation();
@@ -35,7 +35,6 @@ const GetInTouch = () => {
       });
     }
   }, [isInView, animateHd, animateFade]);
-  */
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -81,24 +80,27 @@ const GetInTouch = () => {
       bgPos="center"
       bgSize="cover"
     >
-      <Heading
-        className="serv-text-up reveal"
+      <MtnHd
         fontFamily="goudy"
         fontWeight="400"
         fontSize="2.5rem"
       >
         GET IN TOUCH
-      </Heading>
-      <Text
-        className="fadein reveal"
+      </MtnHd>
+      <MtnTxt
+        initial={{ opacity: 0 }}
+        animate={animateFade}
         fontSize="1rem"
         fontFamily="veralaRound"
         py="1.563rem"
         textAlign="center"
       >
         Leave us your information and our team will get back to you.
-      </Text>
-      <Flex className="fadein reveal" w="full" align="center" justify="center">
+      </MtnTxt>
+      <MtnFlex
+        initial={{ opacity: 0 }}
+        animate={animateFade}
+        transition={{ delay: 3, duration: 2, type: "just" }} w="full" align="center" justify="center">
         {" "}
         <form onSubmit={submitHandler}>
           <FormControl align="center" justify="center">
@@ -259,7 +261,7 @@ const GetInTouch = () => {
             </Button>
           </FormControl>
         </form>
-      </Flex>
+      </MtnFlex>
     </Flex>
   );
 };
