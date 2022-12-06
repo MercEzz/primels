@@ -63,13 +63,11 @@ const FifthSec = () => {
       justify="center"
     >
       <Text
-        mt="1.875rem"
         transform={isInView ? "translateY(0)" : "translateY(-50px)"}
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
         fontSize="2.5rem"
-        lineHeight="3rem"
       >
         LATEST NEWS
       </Text>

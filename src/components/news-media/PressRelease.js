@@ -18,7 +18,7 @@ const SecondSec = () => {
   let [currentSlide, setCurrentSlide] = useState(33.333);
   const settings = {
     draggable: false,
-    infinite: false,
+    infinite: true,
     autoplay: true,
     speed: 500,
     autoplaySpeed: 5000,
@@ -47,7 +47,6 @@ const SecondSec = () => {
         transition="all 2s"
         fontFamily="goudy"
         fontSize="2.5rem"
-        lineHeight="3rem"
       >
         PRESS RELEASE
       </Text>
@@ -58,7 +57,7 @@ const SecondSec = () => {
         height={"100%"}
         width={"full"}
         overflow={"hidden"}
-        mt="3.125rem"
+        mt="1.875rem"
         pl="4.687rem"
         pr="4.687rem"
       >
@@ -116,9 +115,10 @@ const SecondSec = () => {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {pressRelease.map((prime) => (
-            <Flex px="1.563rem">
+            <Flex px="0.625rem">
               <Image
-                boxShadow="Dark lg"
+                
+                boxShadow="dark-lg"
                 key={prime}
                 w="100%"
                 h="18.75rem"

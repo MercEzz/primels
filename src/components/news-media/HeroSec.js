@@ -8,7 +8,7 @@ const MtnHd = motion(Heading);
 
 const FirstSec = () => {
   return (
-    <Flex w="100%" h="57.937rem" pos="relative" mt="5rem">
+    <Flex w="100%" h="57.937rem" pos="relative">
       <MtnFlx
         initial={{ scale: 0.6 }}
         animate={{ scale: 1 }}

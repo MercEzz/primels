@@ -24,7 +24,6 @@ const FourthSec = () => {
         transition="all 2s"
         fontFamily="goudy"
         fontSize="2.5rem"
-        lineHeight="3rem"
       >
         PRIME TALKS
       </Text>

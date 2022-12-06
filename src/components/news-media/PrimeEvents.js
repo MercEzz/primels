@@ -21,7 +21,7 @@ const ThirdSec = () => {
   let [currentSlide, setCurrentSlide] = useState(1);
   const settings = {
     draggable: false,
-    infinite: false,
+    infinite: true,
     autoplay: true,
     speed: 500,
     autoplaySpeed: 5000,
@@ -85,7 +85,7 @@ const ThirdSec = () => {
           // left={side}
           // top={top}
           left="0"
-          top="50%"
+          top="60%"
           transform={"translate(0%, -50%)"}
           zIndex={2}
           h="3.125rem"
@@ -98,14 +98,13 @@ const ThirdSec = () => {
         </IconButton>
         {/* Right Icon */}
         <IconButton
-          aria-label="right-arrow"
           variant="outline"
           position="absolute"
           borderRadius="50%"
           // right={side}
           // top={top}
           right="0"
-          top="50%"
+          top="60%"
           transform={"translate(0%, -50%)"}
           zIndex={2}
           h="3.125rem"
@@ -129,18 +128,17 @@ const ThirdSec = () => {
                   opacity={isInView ? "1" : "0"}
                   transition="all 2s"
                   fontFamily="avenir"
-                  fontSize="2.125rem"
-                  lineHeight="3rem"
+                  fontSize="1.875rem"
                   py="1.563rem"
                 >
                 {prime.eventName}
               </Heading>
               <Flex 
-                direction="row">
+                direction="row" >
             <Image
-              minW={prime.width1}
+              w="50%"
               height="26.875rem"
-              px="1.25rem"
+              px="0.625rem"
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"
@@ -148,10 +146,9 @@ const ThirdSec = () => {
               src={prime.img1}
             />
             <Image
-              minW={prime.width2}
-              maxW="100%"
+              w="50%"
               height="26.875rem"
-              px="1.25rem"
+              px="0.625rem"
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"
