@@ -89,7 +89,7 @@ const PLSGreen = () => {
         align="center"
         justify="center"
       >
-        <Flex w="100%" h="100%" pos="absolute" direction="column" left="0" ml="100px">
+        <Flex w="100%" h="100%" pos="absolute" direction="column" left="0" ml="100px" pt="1.875rem">
           <MtnImg
             boxShadow="dark-lg"
             initial={{ opacity: 0, x: 100 }}
@@ -114,7 +114,7 @@ const PLSGreen = () => {
           />{" "}
           
         </Flex>
-        <Flex w="100%" h="100%" pos="absolute" right="10%" justify="flex-end">
+        <Flex w="100%" h="100%" pos="absolute" right="10%" justify="flex-end" pt="1.875rem">
             <MtnFlx
               h="100%"
               px="12"
