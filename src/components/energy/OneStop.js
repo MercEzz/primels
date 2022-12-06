@@ -33,7 +33,7 @@ const OneStop = () => {
       minH="100%"
       align="center"
       justify="center"
-      pt="6.25rem"
+      pt="5rem"
       pb="3.125rem"
       px="6.25rem"
       direction="column"
@@ -47,9 +47,8 @@ const OneStop = () => {
         fontFamily="goudy"
         w="100%"
         fontSize="2.5rem"
-        lineHeight="3.625rem"
         fontWeight="400"
-        pb="1.562rem"
+        pb="1.875rem"
         textAlign="center"
       >
         ONE STOP SOLUTION FOR POWER SECTOR
@@ -77,7 +76,6 @@ const OneStop = () => {
             <Heading
               fontFamily="avenir"
               fontSize="1.5rem"
-              lineHeight="2.562rem"
               textTransform="uppercase"
               mb="0.937rem"
             >
@@ -86,7 +84,6 @@ const OneStop = () => {
             <UnorderedList
               fontFamily="veralaRound"
               fontSize="1rem"
-              lineHeight="1.5rem"
               fontWeight="400"
             >
               <ListItem pb="0.625rem">Project Financing</ListItem>
@@ -153,7 +150,6 @@ const OneStop = () => {
             <Heading
               fontFamily="avenir"
               fontSize="1.5rem"
-              lineHeight="2.562rem"
               textTransform="uppercase"
               mb="0.937rem"
             >
@@ -162,7 +158,6 @@ const OneStop = () => {
             <UnorderedList
               fontFamily="veralaRound"
               fontSize="1rem"
-              lineHeight="1.5rem"
               fontWeight="400"
             >
               <ListItem>
@@ -193,7 +188,6 @@ const OneStop = () => {
             <Heading
               fontFamily="avenir"
               fontSize="1.5rem"
-              lineHeight="2.562rem"
               textTransform="uppercase"
               mb="0.937rem"
             >
@@ -202,7 +196,6 @@ const OneStop = () => {
             <UnorderedList
               fontFamily="veralaRound"
               fontSize="1rem"
-              lineHeight="1.5rem"
               fontWeight="400"
             >
               <ListItem pb="0.625rem">
@@ -279,7 +272,6 @@ const OneStop = () => {
             <Heading
               fontFamily="avenir"
               fontSize="1.5rem"
-              lineHeight="2.562rem"
               textTransform="uppercase"
               mb="0.937rem"
             >
@@ -288,7 +280,6 @@ const OneStop = () => {
             <UnorderedList
               fontFamily="veralaRound"
               fontSize="1rem"
-              lineHeight="1.5rem"
               fontWeight="400"
             >
               <ListItem pb="0.625rem">Site Selection</ListItem>
@@ -325,7 +316,6 @@ const OneStop = () => {
             <Heading
               fontFamily="avenir"
               fontSize="1.5rem"
-              lineHeight="2.562rem"
               textTransform="uppercase"
               mb="0.937rem"
             >
@@ -334,7 +324,6 @@ const OneStop = () => {
             <UnorderedList
               fontFamily="veralaRound"
               fontSize="1rem"
-              lineHeight="1.5rem"
               fontWeight="400"
             >
               <ListItem pb="0.625rem">
@@ -392,7 +381,6 @@ const OneStop = () => {
             <Heading
               fontFamily="avenir"
               fontSize="1.5rem"
-              lineHeight="2.562rem"
               textTransform="uppercase"
               mb="0.937rem"
             >
@@ -401,7 +389,6 @@ const OneStop = () => {
             <UnorderedList
               fontFamily="veralaRound"
               fontSize="1rem"
-              lineHeight="1.5rem"
               fontWeight="400"
             >
               <ListItem pb="0.625rem">Project Design and Optimization</ListItem>

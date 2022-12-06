@@ -68,12 +68,15 @@ const GetInTouch = () => {
       w="100%"
       h="100%"
       // pt="3.125rem"
-      py="3.125rem"
+      pt="1.875rem"
+      pb="1.875rem"
       px="6.25rem"
       align="center"
       justify="center"
       pos="relative"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgSize="cover"
     >
       <MtnHd
         initial={{ opacity: 0, y: -50 }}
@@ -82,7 +85,7 @@ const GetInTouch = () => {
         fontFamily="goudy"
         fontWeight="400"
         fontSize="2.5rem"
-        lineHeight="3.75rem"
+        pb="1.563rem"
       >
         GET IN TOUCH
       </MtnHd>
@@ -92,7 +95,7 @@ const GetInTouch = () => {
         transition={{ delay: 1.5, duration: 2, type: "just" }}
         fontSize="1rem"
         fontFamily="veralaRound"
-        py="1.563rem"
+        pb="1.563rem"
         textAlign="center"
       >
         Leave us your information and our team will get back to you.

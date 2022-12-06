@@ -46,10 +46,9 @@ const PLSGreen = () => {
           fontFamily="goudy"
           fontWeight="400"
           fontSize="2.5rem"
-          lineHeight="3.625rem"
           textAlign="center"
         >
-          PLS GREEN POWER PVT LTD
+          PLS GREEN POWER PVT. LTD
         </MtnHd>
         <MtnTxt
           initial={{ opacity: 0 }}
@@ -72,7 +71,6 @@ const PLSGreen = () => {
           transition={{ duration: 2, type: "just" }}
           fontFamily="veralaRound"
           fontSize="1rem"
-          lineHeight="1.5rem"
           mb="5rem"
         >
           Establishing IMS System for major power sector including ISO 9001,
@@ -114,7 +112,9 @@ const PLSGreen = () => {
             left="18%"
             bottom="0"
           />{" "}
-          <Flex w="100%" h="100%" pos="absolute" right="10%" justify="flex-end">
+          
+        </Flex>
+        <Flex w="100%" h="100%" pos="absolute" right="10%" justify="flex-end">
             <MtnFlx
               h="100%"
               px="12"
@@ -158,7 +158,6 @@ const PLSGreen = () => {
               <Heading
                 fontFamily="goudy"
                 fontSize="2.5rem"
-                lineHeight="3.625rem"
                 fontWeight="400"
                 pb="0.937rem"
               >
@@ -167,7 +166,6 @@ const PLSGreen = () => {
               <Text
                 fontFamily="veralaRound"
                 fontSize="1rem"
-                lineHeight="1.5rem"
                 mr="6"
               >
                 Execution of a solar power plant of 5 <br />
@@ -176,7 +174,6 @@ const PLSGreen = () => {
               </Text>
             </MtnFlx>
           </Flex>
-        </Flex>
       </Flex>
     </>
   );

@@ -171,7 +171,7 @@ const ReferAFriend = () => {
             Fill up the form on website & submit the details of as many friends
             & family members you would like to refer.
           </Text>
-          <Image w="100%" h="16rem" p="2rem" src={img1} className="fadein reveal"/>
+          <Image alignSelf="center" w="16rem" h="16rem" p="2rem" src={img1} className="fadein reveal"/>
         </Flex>
         <Flex w="100%" direction="column" overflow="hidden">
           <Heading
@@ -214,7 +214,8 @@ const ReferAFriend = () => {
             Your provided referral will be contacted by our team and complete assistance will be provided in the booking process.
           </Text>{" "}
           <Image
-            w="100%"
+            alignSelf="center"
+            w="16rem"
             h="16rem"
             p="2rem"
             src={img2}
@@ -262,7 +263,8 @@ const ReferAFriend = () => {
             Every time your referral becomes a successful booking, you’ll earn rewards upto Rs 1 Lakh.
           </Text>
           <Image
-            w="100%"
+            alignSelf="center"
+            w="16rem"
             h="16rem"
             p="2rem"
             src={img3}
