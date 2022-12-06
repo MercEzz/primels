@@ -90,17 +90,16 @@ const PLSGreen = () => {
         justify="center"
       >
         <Flex w="100%" h="100%" pos="absolute" direction="column" left="0" ml="100px" pt="1.875rem">
-          <MtnImg
+          <Image
+            className="image-sliedleft reveal"
             boxShadow="dark-lg"
-            initial={{ opacity: 0, x: 100 }}
-            animate={animateImg}
-            transition={{ duration: 2, type: "just" }}
             src="/images/energy/ourPro1.jpeg"
             objectSize="cover"
             h="50%"
             w="60%"
           />
-          <MtnImg
+          <Image
+            className="fadein reveal"
             boxShadow="dark-lg"
             initial={{ opacity: 0 }}
             animate={animateImg}

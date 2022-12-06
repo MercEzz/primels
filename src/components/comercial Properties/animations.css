@@ -87,6 +87,16 @@
       transform: scale(1.05,1.05);
     }
 }
+@keyframes image-sliedleft{
+  from {
+      opacity: 0;
+      transform: translateX(-100vw);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0vw);
+    }
+}
 @keyframes slidein-bottom{
   from {
 

@@ -199,3 +199,10 @@
   animation: slidein-top-4sdelay 1 6s linear;
   transform: translateY(0px);
 }
+.image-sliedleft.reveal {
+  transform: translateX(-100vw);
+}
+.image-sliedleft.reveal.active {
+  animation: image-sliedleft 1 2s linear;
+  transform: translateX(0vw);
+}
