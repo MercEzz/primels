@@ -167,13 +167,13 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>
-          <Flex h="9.375rem">
+          <Flex h="8rem">
           <Text fontFamily="veralaRound" fontSize="1.25rem" className="fadein reveal">
             Fill up the form on website & submit the details of as many friends
             & family members you would like to refer.
           </Text>
           </Flex>
-          <Image alignSelf="center" w="16rem" h="16rem" pd="2rem" px="2rem" src={img1} className="fadein reveal"/>
+          <Image alignSelf="center" w="16rem" h="16rem" src={img1} className="fadein reveal"/>
         </Flex>
         <Flex w="100%" direction="column" overflow="hidden">
           <Heading
@@ -207,7 +207,7 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>
-          <Flex h="9.375rem">
+          <Flex h="8rem">
           <Text
             fontFamily="veralaRound"
             fontSize="1.25rem"
@@ -220,7 +220,6 @@ const ReferAFriend = () => {
             alignSelf="center"
             w="16rem"
             h="16rem"
-            pd="2rem" px="2rem"
             src={img2}
             className="fadein-2sdelay reveal"
           />
@@ -257,7 +256,7 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>
-          <Flex h="9.375rem">
+          <Flex h="8rem">
           <Text
             fontFamily="veralaRound"
             fontSize="1.25rem"
@@ -270,7 +269,6 @@ const ReferAFriend = () => {
             alignSelf="center"
             w="16rem"
             h="16rem"
-            pd="2rem" px="2rem"
             src={img3}
             className="fadein-4sdelay reveal"
           />
