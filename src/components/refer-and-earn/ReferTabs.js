@@ -167,11 +167,13 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1.25rem" className="fadein reveal">
+          <Flex h="9.375rem">
+          <Text fontFamily="veralaRound" fontSize="1.25rem" className="fadein reveal">
             Fill up the form on website & submit the details of as many friends
             & family members you would like to refer.
           </Text>
-          <Image alignSelf="center" w="16rem" h="16rem" p="2rem" src={img1} className="fadein reveal"/>
+          </Flex>
+          <Image alignSelf="center" w="16rem" h="16rem" pd="2rem" px="2rem" src={img1} className="fadein reveal"/>
         </Flex>
         <Flex w="100%" direction="column" overflow="hidden">
           <Heading
@@ -204,20 +206,21 @@ const ReferAFriend = () => {
               borderRadius="50%"
               my="1"
             />
-          </Flex>{" "}
+          </Flex>
+          <Flex h="9.375rem">
           <Text
-            pb="1.25rem"
             fontFamily="veralaRound"
             fontSize="1.25rem"
             className="fadein-2sdelay reveal"
           >
             Your provided referral will be contacted by our team and complete assistance will be provided in the booking process.
-          </Text>{" "}
+          </Text>
+          </Flex>
           <Image
             alignSelf="center"
             w="16rem"
             h="16rem"
-            p="2rem"
+            pd="2rem" px="2rem"
             src={img2}
             className="fadein-2sdelay reveal"
           />
@@ -253,20 +256,21 @@ const ReferAFriend = () => {
               borderRadius="50%"
               my="1"
             />
-          </Flex>{" "}
+          </Flex>
+          <Flex h="9.375rem">
           <Text
-            pb="1.25rem"
             fontFamily="veralaRound"
             fontSize="1.25rem"
             className="fadein-4sdelay reveal"
           >
             Every time your referral becomes a successful booking, you’ll earn rewards upto Rs 1 Lakh.
           </Text>
+          </Flex>
           <Image
             alignSelf="center"
             w="16rem"
             h="16rem"
-            p="2rem"
+            pd="2rem" px="2rem"
             src={img3}
             className="fadein-4sdelay reveal"
           />
