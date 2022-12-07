@@ -89,7 +89,7 @@ const PLSGreen = () => {
         align="center"
         justify="center"
       >
-        <Flex w="100%" h="100%" pos="absolute" direction="column" left="0" ml="100px" pt="1.875rem">
+        <Flex w="100%" h="100%" pos="absolute" direction="column" left="0rem" ml="6.25rem" pt="1.875rem">
           <Image
             className="image-sliedleft reveal"
             boxShadow="dark-lg"
@@ -113,11 +113,11 @@ const PLSGreen = () => {
           />{" "}
           
         </Flex>
-        <Flex w="100%" h="100%" pos="absolute" right="10%" justify="flex-end" pt="1.875rem">
+        <Flex w="100%" h="100%" pos="absolute" right="0rem"  justify="flex-end" pt="1.875rem">
             <MtnFlx
               className="discobal-slidein-top reveal"
               h="100%"
-              px="12"
+              px="1.256rem"
               initial={{ opacity: 0, y: -100 }}
               animate={animateFlx}
               transition={{ duration: 2, type: "just" }}
