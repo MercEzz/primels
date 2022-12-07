@@ -10,6 +10,7 @@ import press3 from "../news-and-media/PRESS-RELEASE3.PNG";
 import press4 from "../news-and-media/PRESS-RELEASE4.PNG";
 import press5 from "../news-and-media/PRESS-RELEASE5.PNG";
 import press6 from "../news-and-media/PRESS-RELEASE6.png";
+import ModalImage from "../modalImage";
 
 const SecondSec = () => {
   const ref = useRef(null);
@@ -29,7 +30,19 @@ const SecondSec = () => {
       setCurrentSlide(currentSlide++);
     },
   };
+  const [isOpen,setIsOpen] = useState(false);
+  const closeImage =() =>{
+    setIsOpen(false);
+  }
+  const openImage =() =>{
+    setIsOpen(true);
+  }
+  const redirect =(loc) =>{
+    window.open(`${loc}`);
+  }
   return (
+    <>
+      {isOpen?<ModalImage modalImage={press6} isOpen={isOpen} onClose={()=>closeImage()} />:<></>}
     <Flex
       ref={ref}
       w="100%"
@@ -117,7 +130,8 @@ const SecondSec = () => {
           {pressRelease.map((prime) => (
             <Flex px="0.625rem">
               <Image
-                
+                _hover={{cursor:"pointer"}}
+                onClick={prime.title===""?()=>openImage():(prime)=>redirect(prime.location)}
                 boxShadow="dark-lg"
                 key={prime}
                 w="100%"
@@ -143,6 +157,7 @@ const SecondSec = () => {
       </Box>
       
     </Flex>
+    </>
   );
 };
 

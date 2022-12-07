@@ -235,7 +235,7 @@ const primeReport = [
   {
     img: may2019,
     month: "MAY 2019",
-    prevmonth: "JUNE 2019",
+    prevmonth: "APRIL 2019",
   },
   {
     img: june2019,

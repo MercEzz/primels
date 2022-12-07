@@ -20,6 +20,7 @@ import news7 from "../news-and-media/NEWS7.jpg";
 import news8 from "../news-and-media/NEWS8.jpg";
 import news9 from "../news-and-media/NEWS9.jpg";
 import news10 from "../news-and-media/NEWS10.jpg";
+import ModalImage from "../modalImage";
 
 const FifthSec = () => {
   const ref = useRef(null);
@@ -50,8 +51,21 @@ const FifthSec = () => {
 
   // const top = useBreakpointValue({ base: "90%", md: "50%" });
   // const side = useBreakpointValue({ base: "30%", md: "40px" });
-
+  const [isOpen,setIsOpen] = useState(false);
+  const [modalImage,setModalImage]=useState()
+  const closeImage =() =>{
+    setIsOpen(false);
+  }
+  const openImage =(image) =>{
+    setModalImage(image)
+    setIsOpen(true);
+  }
+  const redirect =(loc) =>{
+    window.open(`${loc}`);
+  }
   return (
+    <>
+      {isOpen?<ModalImage modalImage={modalImage} isOpen={isOpen} onClose={()=>closeImage()} />:<></>}
     <Flex
       ref={ref}
       w="100%"
@@ -145,6 +159,8 @@ const FifthSec = () => {
               position="relative"
             >
               <Image
+                _hover={{cursor:"pointer"}}
+                onClick={prime.title===""?()=>openImage():(prime)=>redirect(prime.location)}
                 w="100%"
                 h="25rem"
                 src={prime.img}
@@ -179,6 +195,7 @@ const FifthSec = () => {
         </Slider>
       </Box>
     </Flex>
+    </>
   );
 };
 export default FifthSec;
