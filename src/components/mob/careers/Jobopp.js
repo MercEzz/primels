@@ -7,6 +7,7 @@ import {
   VStack,
   Image,
   Link,
+  HStack,
 } from "@chakra-ui/react";
 import React, { useRef, useEffect } from "react";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -18,7 +19,7 @@ import ResForm from "./ResForm";
 const MtnHead = motion(Heading);
 const MtnTxt = motion(Text);
 const MtnFlx = motion(Flex);
-const MtnStk = motion(VStack);
+const MtnStk = motion(HStack);
 
 const Jobopp = () => {
   const ref = useRef(null);
@@ -67,8 +68,8 @@ const Jobopp = () => {
             <Grid
               w="100%"
               h="100%"
-              templateRows="repeat(2, 1fr)"
-              templateColumns="repeat(2, 1fr)"
+              templateRows="repeat(1, 1fr)"
+              templateColumns="repeat(1, 1fr)"
               gap="15px"
             >
               <Flex
@@ -78,7 +79,7 @@ const Jobopp = () => {
                 justify="center"
                 w="100%"
                 h="100%"
-                py="25px"
+                py="10px"
                 bgGradient="linear(to-b, #DFBD69, #B88746)"
                 textAlign="center"
                 color="white"
@@ -124,7 +125,7 @@ const Jobopp = () => {
                 justify="center"
                 w="100%"
                 h="100%"
-                py="25px"
+                py="10px"
                 bgGradient="linear(to-b, #DFBD69, #B88746)"
                 textAlign="center"
                 color="white"
@@ -139,8 +140,7 @@ const Jobopp = () => {
                   fontFamily="avenir"
                   pb="15px"
                 >
-                  OPERATIONS <br />
-                  MANAGER
+                  OPERATIONS MANAGER
                 </MtnHead>
                 <MtnStk
                   initial={{ opacity: 0 }}
@@ -170,7 +170,7 @@ const Jobopp = () => {
                 align="center"
                 justify="center"
                 w="100%"
-                py="25px"
+                py="10px"
                 bgGradient="linear(to-t, #DFBD69, #B88746)"
                 textAlign="center"
                 color="white"
@@ -218,7 +218,7 @@ const Jobopp = () => {
                 // h="200px"
                 w="100%"
                 h="100%"
-                py="25px"
+                py="10px"
                 bgGradient="linear(to-t, #DFBD69, #B88746)"
                 textAlign="center"
                 color="white"
@@ -233,8 +233,7 @@ const Jobopp = () => {
                   fontFamily="avenir"
                   pb="15px"
                 >
-                  HOSPITALITY <br />
-                  MANAGEMENT
+                  HOSPITALITY MANAGEMENT
                 </MtnHead>
                 <MtnStk
                   initial={{ opacity: 0 }}
@@ -277,8 +276,8 @@ const Jobopp = () => {
               transition={{ delay: 1, duration: 2, type: "just" }}
               fontFamily="avenir"
               fontSize="24px"
-              py="25px"
-              px="100px"
+              py="10px"
+              px="1rem"
             >
               FOLLOW US ON LINKEDIN
             </MtnHead>
@@ -288,7 +287,7 @@ const Jobopp = () => {
               transition={{ delay: 1, duration: 2, type: "just" }}
               fontFamily="veralaRound"
               fontSize="16px"
-              px="85px"
+              px="1rem"
               pb="15px"
             >
               The best way to stay updated on Job Opportunities at Prime

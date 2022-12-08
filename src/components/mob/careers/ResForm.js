@@ -5,6 +5,7 @@ import {
   FormControl,
   FormLabel,
   Heading,
+  HStack,
   Icon,
   Input,
   Text,
@@ -82,15 +83,21 @@ const ResForm = () => {
         initial={{ opacity: 0 }}
         animate={animationFade}
         transition={{ delay: 1, duration: 2, type: "just" }}
-        fontSize="16px"
+        fontSize="1rem"
         fontFamily="veralaRound"
-        py="25px"
+        py="1rem"
         textAlign="center"
       >
         Work with us, send your resume and our team will get back to you.
       </MtnText>
       <Container minW="container.sm">
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}>
           <FormControl align="center" justify="center">
             <MtnStk
               w="100%"
@@ -98,121 +105,144 @@ const ResForm = () => {
               animate={animationFade}
               transition={{ delay: 1, duration: 2, type: "just" }}
               align="center"
+              justify="center"
             >
               <FormControl isRequired>
                 <Flex
+                  pos="relative"
                   w="100%"
                   align="center"
                   justifyContent="space-between"
                   pb="15px"
                 >
+                  <HStack align="flex-start" justify="space-between">
                   <FormLabel
                     fontFamily="avenir"
                     fontWeight="700"
-                    fontSize="16px"
+                    fontSize="1rem"
                     htmlFor="name"
                   >
                     NAME
                   </FormLabel>
                   <Input
+                    pos="absolute"
+                    left="8rem"
                     type="text"
                     id="name"
                     value={name}
                     onChange={onChange}
-                    w="350px"
-                    h="40px"
+                    w="13.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
+                  </HStack>
                 </Flex>
               </FormControl>
               <Flex w="100%" align="center" justify="space-between" pb="7px">
+              <HStack align="flex-start" justify="space-between">
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="16px"
+                  fontSize="1rem"
                   htmlFor="email"
                 >
                   EMAIL
                 </FormLabel>
                 <Input
+                  pos="absolute"
+                  left="8rem"
                   type="email"
                   id="email"
                   value={email}
                   onChange={onChange}
-                  w="350px"
-                  h="40px"
+                  w="13.75rem"
+                  h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
+                </HStack>
               </Flex>
               <FormControl isRequired>
                 <Flex w="100%" align="center" justify="space-between" pb="7px">
+                <HStack align="flex-start" justify="space-between">
                   <FormLabel
                     fontFamily="avenir"
                     fontWeight="700"
-                    fontSize="16px"
+                    fontSize="1rem"
                     htmlFor="phoneNo"
                   >
                     PHONE NO.
                   </FormLabel>
                   <Input
+                    pos="absolute"
+                    left="8rem"
                     type="number"
                     id="phoneNo"
                     value={phoneNo}
                     onChange={onChange}
-                    w="350px"
-                    h="40px"
+                    w="13.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
+                  </HStack>
                 </Flex>
               </FormControl>
               <Flex w="100%" align="center" justify="space-between" pb="7px">
+              <HStack align="flex-start" justify="space-between">
                 <FormLabel
+                  w="5rem"
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="16px"
+                  fontSize="1rem"
                   htmlFor="areaOfInterest"
                 >
                   AREA OF INTEREST
                 </FormLabel>
                 <Input
+                  pos="absolute"
+                  left="8rem"
                   type="text"
                   id="areaOfInterest"
                   value={areaOfInterest}
                   onChange={onChange}
-                  w="350px"
-                  h="40px"
+                  w="13.75rem"
+                  h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
+                </HStack>
               </Flex>
               <FormControl isRequired>
                 <Flex w="100%" align="center" justify="space-between" pb="7px">
+                <HStack align="flex-start" justify="space-between">
                   <FormLabel
                     fontFamily="avenir"
                     fontWeight="700"
-                    fontSize="16px"
+                    fontSize="1rem"
                     htmlFor="resume"
                   >
                     RESUME
                   </FormLabel>
                   <Input
+                    pos="absolute"
+                    left="8rem"
                     type="file"
                     id="resume"
                     value={resume}
                     onChange={onChange}
                     p="1"
-                    w="350px"
-                    h="40px"
+                    w="13.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
+                  </HStack>
                 </Flex>
               </FormControl>
             </MtnStk>
-            <Text ml="-10" fontSize="16px" fontFamily="veralaRound">
+            <Text ml="-10" fontSize="1rem" fontFamily="veralaRound">
               <Icon as={BsUpload} mr="10px" />
               Upload File
             </Text>
@@ -222,7 +252,7 @@ const ResForm = () => {
               mb="50px"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
               color="white"
-              fontSize="16px"
+              fontSize="1rem"
               fontFamily="avenir"
               _hover={{
                 bgGradient: "linear(to-b, #DFBD69, #B88746)",
