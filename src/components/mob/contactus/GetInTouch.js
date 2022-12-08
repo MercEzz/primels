@@ -81,7 +81,6 @@ const GetInTouch = () => {
         fontFamily="goudy"
         fontWeight="400"
         fontSize="2.5rem"
-        lineHeight="3.75rem"
       >
         GET IN TOUCH
       </MtnHd>
@@ -109,24 +108,28 @@ const GetInTouch = () => {
               <Flex
                 w="100%"
                 align="flex-end"
-                justifyContent="space-between"
+                justify="space-between"
                 pb="0.437rem"
               >
+                <Flex direction="row" gap="0">
+                <FormControl isRequired>
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
                   fontSize="1rem"
                   htmlFor="name"
                 >
-                  NAME*
+                  NAME
                 </FormLabel>
+                </FormControl>
+                </Flex>
                 <Input
                   id="name"
                   name="name"
                   value={name}
                   onChange={onChange}
                   type="text"
-                  w="33.125rem"
+                  w="13.75rem"
                   h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
@@ -153,7 +156,7 @@ const GetInTouch = () => {
                   value={email}
                   onChange={onChange}
                   type="email"
-                  w="33.125rem"
+                  w="13.75rem"
                   h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
@@ -163,21 +166,25 @@ const GetInTouch = () => {
                 />
               </Flex>
               <Flex w="100%" align="center" justify="space-between" pb="0.437rem">
+                <Flex direction="row" gap="0">
+                <FormControl isRequired>
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
                   fontSize="1rem"
                   htmlFor="phoneNo"
                 >
-                  PHONE NO.*
+                  PHONE NO.
                 </FormLabel>
+                </FormControl>
+                </Flex>
                 <Input
                   id="phoneNo"
                   name="phoneNo"
                   value={phoneNo}
                   onChange={onChange}
                   type="number"
-                  w="33.125rem"
+                  w="13.75rem"
                   h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
@@ -185,6 +192,7 @@ const GetInTouch = () => {
                   fontSize="1rem"
                   isRequired
                 />
+                
               </Flex>
               <Flex w="100%" align="flex-start" justify="space-between">
                 <FormLabel
@@ -201,7 +209,7 @@ const GetInTouch = () => {
                   value={message}
                   onChange={onChange}
                   maxLength="200"
-                  w="33.125rem"
+                  w="13.75rem"
                   h="7.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"

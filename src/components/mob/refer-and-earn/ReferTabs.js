@@ -31,6 +31,7 @@ import "./animations.css";
 import "./rne.css";
 
 const ReferTabs = () => {
+
   const [active, setActive] = useState(true);
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
@@ -120,7 +121,7 @@ const ReferAFriend = () => {
       <Flex overflow="hidden">
         <Heading
           w="100%"
-          className="serv-text-down reveal"
+          className="serv-text-up reveal"
           textAlign="center"
           fontWeight="400"
           fontSize="2.5rem"
@@ -265,7 +266,7 @@ const ReferAFriend = () => {
           }}
         >
           <Text
-            className="serv-text-down reveal"
+            className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
             fontSize="2.5rem"
@@ -273,7 +274,7 @@ const ReferAFriend = () => {
           >
             REFER & EARN
           </Text>
-          <Flex w="100%" h="100%" direction="row" gap="6.25rem" pb="1.563rem" className="fadein reveal">
+          <Flex w="100%" h="100%" direction="column" gap="6.25rem" pb="1.563rem" className="fadein reveal">
             <Flex
               w="100%"
               h="100%"
@@ -337,7 +338,7 @@ const ReferAFriend = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -358,7 +359,7 @@ const ReferAFriend = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -378,7 +379,7 @@ const ReferAFriend = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -397,7 +398,7 @@ const ReferAFriend = () => {
                   <Select
                     fontFamily="avenir"
                     fontSize="1rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     bgColor="#D9D9D9"
                     // placeholder="SELECT PROJECT"
                     textTransform="uppercase"
@@ -448,7 +449,7 @@ const ReferAFriend = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -469,7 +470,7 @@ const ReferAFriend = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -489,7 +490,7 @@ const ReferAFriend = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -509,7 +510,7 @@ const ReferAFriend = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="6.25rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -542,7 +543,7 @@ const BookAVisit = () => {
     <>
       <Flex
         w="100%"
-        h="75vh"
+        h="100vh"
         bgColor="white"
         pos="relative"
         overflow="hidden"
@@ -554,7 +555,7 @@ const BookAVisit = () => {
           pos="absolute"
           objectFit="cover"
           left="0"
-          bottom={{base:"10rem",lg:"0"}}
+          bottom={{base:"22rem",lg:"0"}}
         />
         <Flex
           overflow="hidden"
@@ -568,7 +569,7 @@ const BookAVisit = () => {
           bottom="0"
         >
           <Text
-            className="serv-text-down reveal"
+            className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
             fontSize={{base:"2rem",lg:"2.5rem"}}
@@ -577,7 +578,7 @@ const BookAVisit = () => {
             YOU ARE ONLY ONE RIDE AWAY FROM YOUR DREAM HOME
           </Text>
           <div className="fadein reveal">
-          <HStack w="80%" align="center" justify="center" pb="3.125rem">
+          <HStack w="80%" align="center" justify="center" pb="3.125rem" mt="17.25rem">
             <Image src={carIll} />
             <Heading
               textAlign="center"
@@ -633,7 +634,7 @@ const BookAVisit = () => {
           }}
         >
           <Text
-            className="serv-text-down reveal"
+            className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
             fontSize="2.5rem"
@@ -663,7 +664,7 @@ const BookAVisit = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -684,7 +685,7 @@ const BookAVisit = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -704,7 +705,7 @@ const BookAVisit = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -734,7 +735,7 @@ const BookAVisit = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -756,7 +757,7 @@ const BookAVisit = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -776,7 +777,7 @@ const BookAVisit = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -796,7 +797,7 @@ const BookAVisit = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
-                    w="18.75rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"

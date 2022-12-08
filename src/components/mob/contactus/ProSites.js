@@ -74,6 +74,7 @@ const ProSites = () => {
           textAlign="center"
         >
           <Image
+            className="fadein reveal"
             h="6.25rem"
             mb="0.938rem"
             w="18.75rem"
@@ -95,6 +96,7 @@ const ProSites = () => {
           textAlign="center"
         >
           <Image
+            className="fadein reveal"
             h="6.25rem"
             mb="0.938rem"
             w="18.75rem"
@@ -115,6 +117,7 @@ const ProSites = () => {
           textAlign="center"
         >
           <Image
+            className="fadein reveal"
             h="6.25rem"
             mb="0.938rem"
             w="18.75rem"

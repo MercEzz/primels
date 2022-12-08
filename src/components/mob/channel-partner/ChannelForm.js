@@ -13,6 +13,7 @@ import {
   RadioGroup,
   Radio,
   Select,
+  HStack,
 } from "@chakra-ui/react";
 import "./drop.css";
 import React, { useRef, useState, useEffect } from "react";
@@ -157,9 +158,8 @@ const ChannelForm = () => {
         {" "}
         <Heading
           pos={dis ? "static" : "fixed"}
-          fontSize="2rem"
+          fontSize="1.8rem"
           fontFamily="avenir"
-          lineHeight="3.563rem"
           textTransform="uppercase"
           textAlign="center"
           zIndex="10"
@@ -178,8 +178,7 @@ const ChannelForm = () => {
           pt={dis ? "1.563rem" : "9.375rem"}
           fontFamily="veralaRound"
           fontSize="1rem"
-          lineHeight="1.5"
-          mb="3.125rem"
+                mb="3.125rem"
         >
           Your association with us is extremely valuable to us. We support our
           Channel Partners to catalyst their growth with ours. Join our network
@@ -192,6 +191,13 @@ const ChannelForm = () => {
           </Text>
         </MtnTxt>
         <form
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
           onSubmit={(e) => {
             onSubmit(e);
           }}
@@ -201,15 +207,15 @@ const ChannelForm = () => {
               initial={{ opacity: 0 }}
               animate={animateFlx}
               transition={{ duration: 2, type: "just" }}
-              w="100%"
+              w="100%"              
             >
               {/* top - left */}
-              <Flex w="100%" direction="column" pr="2.813rem">
+              <Flex w="100%" direction="column">
                 <Flex justify="space-between" mb="0.938rem">
                   <FormLabel
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
+                    
                     fontWeight="700"
                     htmlFor="companyName"
                   >
@@ -225,8 +231,8 @@ const ChannelForm = () => {
                     type="text"
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="21.25rem"
+                    
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -238,7 +244,7 @@ const ChannelForm = () => {
                       pt="4"
                       fontSize="1rem"
                       fontFamily="avenir"
-                      lineHeight="1.5rem"
+                      
                       fontWeight="700"
                       htmlFor="nameOfOwner"
                     >
@@ -252,7 +258,7 @@ const ChannelForm = () => {
                       type="text"
                       fontSize="1rem"
                       fontFamily="avenir"
-                      w="21.25rem"
+                      w="13.75rem"
                       h="3.125rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
@@ -265,7 +271,6 @@ const ChannelForm = () => {
                   <FormLabel
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     fontWeight="700"
                   >
                     ENTITY
@@ -367,12 +372,11 @@ const ChannelForm = () => {
                 </FormControl>
                 <Flex w="100%" direction="column" mr="2.813rem" mt="1.563rem">
                   <FormControl isRequired>
-                    <Flex align="center" justify="space-between" mb="0.938rem">
+                  <Flex align="center" justify="space-between" mb="0.938rem">
                       <FormLabel
                         pt="2"
                         fontSize="1rem"
                         fontFamily="avenir"
-                        lineHeight="1.5rem"
                         fontWeight="700"
                         htmlFor="officeAdd"
                       >
@@ -386,7 +390,7 @@ const ChannelForm = () => {
                         type="text"
                         fontSize="1rem"
                         fontFamily="avenir"
-                        w="21.25rem"
+                        w="13.75rem"
                         h="3.125rem"
                         bgColor="#E5E5E5"
                         borderRadius="none"
@@ -395,12 +399,11 @@ const ChannelForm = () => {
                     </Flex>
                   </FormControl>
                   <FormControl isRequired>
-                    <Flex align="center" justify="space-between" mb="0.938rem">
+                  <HStack w="100%" justify="space-between" pb="15px">
                       <FormLabel
                         pt="2"
                         fontSize="1rem"
                         fontFamily="avenir"
-                        lineHeight="1.5rem"
                         fontWeight="700"
                         htmlFor="mobileNo"
                       >
@@ -423,20 +426,19 @@ const ChannelForm = () => {
                         }}
                         fontSize="1rem"
                         fontFamily="avenir"
-                        w="21.25rem"
+                        w="13.75rem"
                         h="3.125rem"
                         bgColor="#E5E5E5"
                         borderRadius="none"
                         isRequired
                       />
-                    </Flex>
+                    </HStack>
                   </FormControl>
                   <Flex align="center" justify="space-between" mb="0.938rem">
                     <FormLabel
                       pt="2"
                       fontSize="1rem"
                       fontFamily="avenir"
-                      lineHeight="1.5rem"
                       fontWeight="700"
                       htmlFor="website"
                     >
@@ -450,7 +452,7 @@ const ChannelForm = () => {
                       type="url"
                       fontSize="1rem"
                       fontFamily="avenir"
-                      w="21.25rem"
+                      w="13.75rem"
                       h="3.125rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
@@ -462,7 +464,6 @@ const ChannelForm = () => {
                         pt="2"
                         fontSize="1rem"
                         fontFamily="avenir"
-                        lineHeight="1.5rem"
                         fontWeight="700"
                         htmlFor="email"
                       >
@@ -476,7 +477,7 @@ const ChannelForm = () => {
                         type="email"
                         fontSize="1rem"
                         fontFamily="avenir"
-                        w="21.25rem"
+                        w="13.75rem"
                         h="3.125rem"
                         bgColor="#E5E5E5"
                         borderRadius="none"
@@ -486,13 +487,14 @@ const ChannelForm = () => {
                   </FormControl>
                 </Flex>
               </Flex>
-              {/* top-right */}
-              <Flex w="100%" direction="column">
+              
+            </MtnFlx>
+            {/* top-right */}
+            <Flex w="100%" direction="column">
                 <Flex justify="space-between" mb="0.938rem">
                   <FormLabel
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     fontWeight="700"
                     htmlFor="yourFocusLocationArea"
                   >
@@ -508,7 +510,7 @@ const ChannelForm = () => {
                     size="lg"
                     fontSize="1rem"
                     fontFamily="avenir"
-                    w="21.25rem"
+                    w="13.75rem"
                     h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
@@ -519,7 +521,6 @@ const ChannelForm = () => {
                     fontSize="1rem"
                     fontWeight="bold"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     textAlign="left"
                   >
                     EXPERTISE
@@ -626,7 +627,6 @@ const ChannelForm = () => {
                     <FormLabel
                       fontSize="1rem"
                       fontFamily="avenir"
-                      lineHeight="1.5rem"
                       fontWeight="700"
                       htmlFor="gstNo"
                     >
@@ -640,7 +640,7 @@ const ChannelForm = () => {
                       type="text"
                       fontSize="1rem"
                       fontFamily="avenir"
-                      w="21.25rem"
+                      w="13.75rem"
                       h="3.125rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
@@ -651,7 +651,6 @@ const ChannelForm = () => {
                       pt="2"
                       fontSize="1rem"
                       fontFamily="avenir"
-                      lineHeight="1.5rem"
                       fontWeight="700"
                       htmlFor="reraNo"
                     >
@@ -665,7 +664,7 @@ const ChannelForm = () => {
                       type="text"
                       fontSize="1rem"
                       fontFamily="avenir"
-                      w="21.25rem"
+                      w="13.75rem"
                       h="3.125rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
@@ -699,7 +698,6 @@ const ChannelForm = () => {
                   </RadioGroup>
                 </Flex>
               </Flex>
-            </MtnFlx>
             {/* left-bottom */}
             <Flex
               w="100%"
@@ -712,7 +710,6 @@ const ChannelForm = () => {
                 pl="0.625rem"
                 fontSize="1rem"
                 fontFamily="avenir"
-                lineHeight="1.5rem"
                 fontWeight="700"
                 htmlFor="identityDoc"
               >
@@ -730,7 +727,7 @@ const ChannelForm = () => {
                     });
                   }}
                   type="file"
-                  w="22.063rem"
+                  w="13.75rem"
                   h="3.125rem"
                   p="2"
                   bgColor="#E5E5E5"
@@ -748,27 +745,21 @@ const ChannelForm = () => {
               </Flex>
             </Flex>
 
-            <Flex direction="column" w="100%" align="center" px="12.625rem">
+            <Flex direction="column" w="100%" align="center">
               <Heading
                 fontSize="1rem"
                 fontFamily="avenir"
-                lineHeight="1.5rem"
                 pb="0.938rem"
               >
                 AUTHORISED SIGNATORIES
               </Heading>
-              <Flex>
-                <Flex
-                  mr="3.125rem"
-                  mb="0.938rem"
-                  justify="space-between"
-                  align="center"
-                >
+              <Flex direction="column">
+              <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     pl="0.625rem"
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
+                    
                     fontWeight="700"
                     htmlFor="name1"
                   >
@@ -787,13 +778,13 @@ const ChannelForm = () => {
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
-                </Flex>
+                </HStack>
                 <Flex mb="0.938rem" justify="space-between" align="center">
                   <FormLabel
                     pl="0.625rem"
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
+                    
                     fontWeight="700"
                     htmlFor="designation1"
                   >
@@ -814,13 +805,13 @@ const ChannelForm = () => {
                   />
                 </Flex>
               </Flex>
-              <Flex>
-                <Flex mr="3.125rem" justify="space-between" align="center">
+              <Flex direction="column" align="center"
+              justify="center">
+                <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     pl="0.625rem"
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     fontWeight="700"
                     htmlFor="name2"
                   >
@@ -839,13 +830,13 @@ const ChannelForm = () => {
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
-                </Flex>
+                </HStack>
                 <Flex justify="space-between" align="center">
                   <FormLabel
                     pl="0.625rem"
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
+                    
                     fontWeight="700"
                     htmlFor="designation2"
                   >
@@ -899,22 +890,41 @@ const ChannelForm = () => {
         fontFamily="avenir"
       >
         <Flex
-          w="100%"
+          w="full"
           pos="relative"
           align="center"
-          justify="flex-end"
-          pr="3.125rem"
+          justify="flex-start"
           fontFamily="avenir"
           fontSize="1rem"
         >
-          <DropMenu />
+          {" "}
+          <Select
+
+            w="12.75rem"
+            placeholder="SELECT PROJECT"
+            fontSize="1.125rem"
+            fontFamily="veralaRound"
+            bgColor="transparent"
+            borderRadius="none"
+            borderTop="0"
+            borderLeft="0"
+            borderRight="0"
+            borderBottom="3px solid"
+            icon={<TriangleDownIcon width="18px" height="18px" />}
+          >
+            <option style={{ color: "black" }}>ARETE HOMES</option>
+            <option style={{ color: "black" }}>SKY HIGH TOWER</option>
+            <option style={{ color: "black" }}>PGC</option>
+            <option style={{ color: "black" }}>ARETE PLAZA</option>
+            <option style={{ color: "black" }}>ARETE MALL</option>
+          </Select>
+          {/*<DropMenu />*/}
         </Flex>
         {/* {validForm ? ( */}
         <Flex
           w="100%"
           align="center"
           justify="flex-start"
-          pl="3.125rem"
           cursor="pointer"
           fontFamily="avenir"
           fontWeight="bold"
@@ -924,7 +934,6 @@ const ChannelForm = () => {
             as={AiOutlineDownload}
             h="1.875rem"
             w="1.875rem"
-            mr="0.625rem"
           />
           DOWNLOAD CP-BROCHURE
         </Flex>

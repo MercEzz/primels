@@ -113,7 +113,7 @@ const PLSGreen = () => {
           />{" "}
           
         </Flex>
-        <Flex w="100%" h="100%" pos="absolute" right="0rem"  justify="flex-end" pt="1.875rem">
+        <Flex w="100%" h="100%" pos="absolute" left="68%"  justify="flex-start" pt="1.875rem">
             <MtnFlx
               className="discobal-slidein-top reveal"
               h="100%"

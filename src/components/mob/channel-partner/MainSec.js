@@ -50,9 +50,8 @@ const MainSec = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 2, type: "just" }}
         pos={dis ? "static" : "fixed"}
-        fontSize="2.5rem"
+        fontSize="2rem"
         fontFamily="avenir"
-        lineHeight="3.563rem"
         textTransform="uppercase"
         textAlign="center"
         zIndex="10"
