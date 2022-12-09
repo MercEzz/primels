@@ -63,7 +63,7 @@ const OneStop = () => {
             w="100%"
             direction="column"
             align="flex-start"
-            pb="1.562rem"
+            
             pt="1.562rem"
           >
             <Flex w="100%" pb="0.937rem" align="center" justify="center">
@@ -124,7 +124,7 @@ const OneStop = () => {
               transition={{ delay: 2.5, duration: 2, type: "just" }}
               display="flex"
               orientation="vertical"
-              h="12.6rem"
+              h="9.475rem"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
