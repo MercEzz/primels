@@ -72,6 +72,7 @@ const FifthSec = () => {
       h="32.937rem"
       px="1.562rem"
       mt="5rem"
+      mb="1.563rem"
       direction="column"
       align="center"
       justify="center"
@@ -117,7 +118,7 @@ const FifthSec = () => {
           // left={side}
           // top={top}
           left="0"
-          top="50%"
+          top="40%"
           // transform={"translate(0%, -50%)"}
           zIndex={2}
           h="3.125rem"
@@ -137,7 +138,7 @@ const FifthSec = () => {
           // right={side}
           // top={top}
           right="0"
-          top="50%"
+          top="40%"
           // transform={"translate(0%, -50%)"}
           zIndex={2}
           h="3.125rem"
@@ -202,6 +203,7 @@ export default FifthSec;
 
 const primeReport = [
   {
+
     img: hindu,
     text: "INVESTING IN NORTH CHENNAI : WHAT YOU DIDN’T KNOW",
   },
@@ -219,7 +221,7 @@ const primeReport = [
   },
   {
     img: businessStd,
-    text: "Tata Projects wins Rs 2,100 cr Chennai Peripheral Ring Road Project phase-1",
+    text: "TATA PROJECTS WINS RS 2,100 CR CHENNAI PERIPHERAL RING ROAD PROJECT PHASE-1",
   },
   {
     img: hindu,

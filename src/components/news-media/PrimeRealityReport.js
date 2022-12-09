@@ -42,7 +42,7 @@ const LastSec = () => {
       w="100%"
       h="100%"
       direction="column"
-      pt="3.125rem"
+      pt="1.875rem"
       px="6.25rem"
       pb="6.25rem"
       align="center"
@@ -60,7 +60,7 @@ const LastSec = () => {
         fontFamily="goudy"
         fontSize="2.5rem"
         lineHeight="3rem"
-        pb="3.125rem"
+        pb="1.875rem"
       >
         PRIME REALTY REPORT
       </Text>
@@ -91,6 +91,7 @@ const LastSec = () => {
               <Flex w="50%" h="100%">
                 <Flex w="100%">
                   <Image
+                    boxShadow="2px 4px 6px rgba(0,0,0, .2)"
                     key={prime.id}
                     w="100%"
                     height="25rem"

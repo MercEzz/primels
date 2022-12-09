@@ -40,7 +40,7 @@ const FourthSec = () => {
       w="100%"
       h="100%"
       px="6.25rem"
-      pt="5rem"
+      pt="3.125rem"
       direction="column"
       align="center"
       justify="center"
@@ -57,13 +57,13 @@ const FourthSec = () => {
       </Text>
       <Flex w="100%" h="100%" align="flex-start" justify="flex-start" pt="1.875rem">
         <Flex
-          boxShadow="Dark-lg"
+          boxShadow="2px 4px 6px rgba(0,0,0, .2)"
           opacity={isInView ? "1" : "0"}
           transition="all 2s 2s"
           w="100%"
           h="100%"
           flex="3"
-          pr="1.562rem"
+          mr="1.562rem"
         ><div style={{height:"29.5rem",width:"41.75rem"}}>
           <embed
             height="100%"
@@ -86,6 +86,7 @@ const FourthSec = () => {
           align="center"
         >
           <Divider
+            
             h={`${((2 * vid.id) * 1.570) + 1.570}rem`}
             orientation="vertical"
             border="3px solid"

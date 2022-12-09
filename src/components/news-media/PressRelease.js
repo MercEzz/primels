@@ -150,7 +150,7 @@ const SecondSec = () => {
                 src={prime.img}
                 
               />
-              <Flex py="1.562rem" w="100%" align="center" justify="space-between">
+              <Flex pt="1.562rem" pb="3.125rem" w="100%" align="center" justify="space-between">
                 <Text fontFamily="avenir" fontWeight="bold" fontSize="1.5rem">
                   {prime.title}
                 </Text>
