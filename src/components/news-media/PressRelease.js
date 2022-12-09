@@ -11,6 +11,12 @@ import press4 from "../news-and-media/PRESS-RELEASE4.PNG";
 import press5 from "../news-and-media/PRESS-RELEASE5.PNG";
 import press6 from "../news-and-media/PRESS-RELEASE6.png";
 import ModalImage from "../modalImage";
+import release1 from "../news-and-media/press/PRESS RELEASE1.pdf"
+import release2 from "../news-and-media/press/PRESS RELEASE 2.pdf"
+import release3 from "../news-and-media/press/PRESS RELEASE3.pdf"
+import release4 from "../news-and-media/press/PRESS RELEASE4.pdf"
+import release5 from "../news-and-media/press/PRESS RELEASE 5.pdf"
+import release6 from "../news-and-media/press/PRESS RELEASE6.pdf";
 
 const SecondSec = () => {
   const ref = useRef(null);
@@ -37,8 +43,8 @@ const SecondSec = () => {
   const openImage =() =>{
     setIsOpen(true);
   }
-  const redirect =(loc) =>{
-    window.open(`${loc}`);
+  const redirect =(release) =>{
+    window.open(`${release.target.id}`);
   }
   return (
     <>
@@ -131,7 +137,8 @@ const SecondSec = () => {
             <Flex px="0.625rem">
               <Image
                 _hover={{cursor:"pointer"}}
-                onClick={prime.title===""?()=>openImage():(prime)=>redirect(prime.location)}
+                id={prime.location}
+                onClick={prime.title===""?()=>openImage():(prime)=>redirect(prime)}
                 boxShadow="dark-lg"
                 key={prime}
                 w="100%"
@@ -197,30 +204,36 @@ const pressRelease = [
     title: "DECCAN CHRONICLE",
     date: "29 AUG 2022",
     img: press1,
+    location: release1
   },
   {
     title: "DECCAN CHRONICLE",
     date: "18 SEPT 2022",
     img: press2,
+    location: release2
   },
   {
     title: "THE ECONOMIC TIMES",
     date: "26 JULY 2021",
     img: press3,
+    location: release3
   },
   {
     title: "THE ECONOMIC TIMES",
     date: "26 MARCH 2021",
     img: press4,
+    location: release4
   },
   {
     title: "NARDECO",
     date: "JULY 2021",
     img: press5,
+    location: release5
   },
   {
     title: "",
     date: "",
     img: press6,
+    location: release6
   },
 ];

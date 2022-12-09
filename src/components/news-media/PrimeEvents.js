@@ -39,10 +39,13 @@ const ThirdSec = () => {
       h="100%"
       pl="1.563rem"
       pr="1.563rem"
-      pt="1rem"
+      pt="3.438rem"
       direction="column"
       align="center"
       justify="center"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgSize="cover"
     >
       <Text
         transform={isInView ? "translateY(0)" : "translateY(-50px)"}
@@ -178,6 +181,7 @@ const ImgBar = ({ slide }) => {
       borderRadius="0.9rem"
       align="center"
       justify="flex-start"
+      
     >
       <Flex
         color="black"
