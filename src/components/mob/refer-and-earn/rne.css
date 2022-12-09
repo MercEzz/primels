@@ -5,6 +5,20 @@
     animation:slidein-top 1 2s linear;
     transform: translateY(0px);
 }
+.fadein1s.reveal{
+    opacity: 0;
+}
+.fadein1s.reveal.active{
+    animation:fadein 1 1s linear;
+    opacity: 1;
+}
+.fadein1nh.reveal{
+    opacity: 0;
+}
+.fadein1nh.reveal.active{
+    animation:fadein 1 1.5s linear;
+    opacity: 1;
+}
 .fadein.reveal{
     opacity: 0;
 }

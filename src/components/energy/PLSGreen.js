@@ -30,7 +30,7 @@ const PLSGreen = () => {
       <Flex
         ref={ref}
         w="100%"
-        h="100%"
+        h="60%"
         direction="column"
         px="100px"
         pt="5rem"
@@ -83,41 +83,43 @@ const PLSGreen = () => {
       <Flex
         ref={ref}
         w="100%"
-        h="100vh"
+        h="80vh"
         bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
         pos="relative"
         align="center"
         justify="center"
+        bgRepeat="no-repeat"
+        bgSize="cover"
       >
-        <Flex w="100%" h="100%" pos="absolute" direction="column" left="0rem" ml="6.25rem" pt="1.875rem">
+        <Flex w="100%" h="100%" pos="absolute" direction="column" left="0rem" ml="6.25rem">
           <Image
-            className="image-sliedleft reveal"
+            className="fadein1s reveal"
             boxShadow="dark-lg"
             src="/images/energy/ourPro1.jpeg"
             objectSize="cover"
-            h="50%"
-            w="60%"
+            h="55%"
+            w="55%"
           />
           <Image
-            className="fadein reveal"
+            className="fadein1nh reveal"
             boxShadow="dark-lg"
             initial={{ opacity: 0 }}
             animate={animateImg}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             src="/images/energy/ourPro2.jpeg"
-            h="50%"
-            w="60%"
+            h="55%"
+            w="55%"
             pos="absolute"
             left="18%"
-            bottom="15%"
+            bottom="0%"
           />{" "}
           
         </Flex>
-        <Flex w="100%" h="100%" pos="absolute" left="68%"  justify="flex-start" pt="1.875rem">
+        <Flex w="100%" h="100%" pos="absolute" left="60%"  justify="flex-start" pr="100px">
             <MtnFlx
               className="discobal-slidein-top reveal"
               h="100%"
-              px="1.256rem"
+              px="1.875rem"
               initial={{ opacity: 0, y: -100 }}
               animate={animateFlx}
               transition={{ duration: 2, type: "just" }}
@@ -148,6 +150,8 @@ const PLSGreen = () => {
             </MtnFlx>
             <MtnFlx
               h="100%"
+              w="100%"
+              
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 2, type: "just" }}
