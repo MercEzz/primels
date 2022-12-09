@@ -139,6 +139,7 @@ const ThirdSec = () => {
               <Flex 
                 direction="row" >
             <Image
+            boxShadow="2px 4px 6px rgba(0,0,0, .2)"
               w="50%"
               height="26.875rem"
               px="0.625rem"
@@ -149,6 +150,7 @@ const ThirdSec = () => {
               src={prime.img1}
             />
             <Image
+            boxShadow="2px 4px 6px rgba(0,0,0, .2)"
               w="50%"
               height="26.875rem"
               px="0.625rem"

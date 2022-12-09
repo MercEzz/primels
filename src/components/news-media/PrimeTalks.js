@@ -57,6 +57,7 @@ const FourthSec = () => {
       </Text>
       <Flex w="100%" h="100%" align="flex-start" justify="flex-start" pt="1.875rem">
         <Flex
+          boxShadow="Dark-lg"
           opacity={isInView ? "1" : "0"}
           transition="all 2s 2s"
           w="100%"

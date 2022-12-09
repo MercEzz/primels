@@ -48,7 +48,7 @@ const SecondSec = () => {
   }
   return (
     <>
-      {isOpen?<ModalImage modalImage={press6} isOpen={isOpen} onClose={()=>closeImage()} />:<></>}
+      {isOpen?<ModalImage size="xl" modalImage={press6} isOpen={isOpen} onClose={()=>closeImage()} />:<></>}
     <Flex
       ref={ref}
       w="100%"
@@ -139,7 +139,7 @@ const SecondSec = () => {
                 _hover={{cursor:"pointer"}}
                 id={prime.location}
                 onClick={prime.title===""?()=>openImage():(prime)=>redirect(prime)}
-                boxShadow="dark-lg"
+                boxShadow="2px 4px 6px rgba(0,0,0, .2)"
                 key={prime}
                 w="100%"
                 h="18.75rem"
