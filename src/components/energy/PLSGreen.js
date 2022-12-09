@@ -97,7 +97,7 @@ const PLSGreen = () => {
             boxShadow="dark-lg"
             src="/images/energy/ourPro1.jpeg"
             objectSize="cover"
-            h="55%"
+            h="60%"
             w="55%"
           />
           <Image
@@ -107,7 +107,7 @@ const PLSGreen = () => {
             animate={animateImg}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             src="/images/energy/ourPro2.jpeg"
-            h="55%"
+            h="60%"
             w="55%"
             pos="absolute"
             left="18%"
