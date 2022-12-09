@@ -30,7 +30,7 @@ const PLSGreen = () => {
       <Flex
         ref={ref}
         w="100%"
-        h="100%"
+        h="60%"
         direction="column"
         px="1rem"
         py="100px"
@@ -84,26 +84,30 @@ const PLSGreen = () => {
       <Flex
         ref={ref}
         w="100%"
-        h="100vh"
+        h="50vh"
         bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
         pos="relative"
         align="center"
         justify="center"
         direction="column"
       >
-        <Flex w="100%" h="100%" justify="flex-end">
+        <Flex w="100%" h="100%" justify="flex-end" overflow="hidden" pos="relative">
             <MtnFlx
-              w="10%"
-              px="12"
+            pos="absolute"
+            left="1rem"
+            top="3rem"
+            className="discobal-slidein-top reveal"
+              w="12%"
               initial={{ opacity: 0, y: -100 }}
               animate={animateFlx}
               transition={{ duration: 2, type: "just" }}
-              direction="column"
+              direction="row"
               align="center"
+              justify="flex-start"
             >
               <Divider
-                orientation="horizontal"
-                w="10%"
+                orientation="vertical"
+                w="1rem"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
@@ -135,7 +139,6 @@ const PLSGreen = () => {
               <Heading
                 fontFamily="goudy"
                 fontSize="2.5rem"
-                lineHeight="3.625rem"
                 fontWeight="400"
                 pb="0.937rem"
               >
@@ -144,7 +147,6 @@ const PLSGreen = () => {
               <Text
                 fontFamily="veralaRound"
                 fontSize="1rem"
-                lineHeight="1.5rem"
                 mr="6"
               >
                 Execution of a solar power plant of 5 <br />
@@ -153,8 +155,9 @@ const PLSGreen = () => {
               </Text>
             </MtnFlx>
           </Flex>
-        <Flex w="100%" h="100%" pos="relative" direction="column" left="0">
+        <Flex w="100%" h="100%" pos="relative" direction="column" left="0" align="flex-start">
           <MtnImg
+            className="image-sliedleft reveal"
             boxShadow="dark-lg"
             initial={{ opacity: 0, x: 100 }}
             animate={animateImg}
@@ -162,16 +165,17 @@ const PLSGreen = () => {
             src="/images/energy/ourPro1.jpeg"
             objectSize="cover"
             
-            h="60%"
+            h="80%"
             w="80%"
           />
           <MtnImg
+            className="fadein reveal"
             boxShadow="dark-lg"
             initial={{ opacity: 0 }}
             animate={animateImg}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             src="/images/energy/ourPro2.jpeg"
-            h="60%"
+            h="80%"
             w="80%"
             pos="absolute"
             left="18%"
