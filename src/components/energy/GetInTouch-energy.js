@@ -44,7 +44,6 @@ const GetInTouch = () => {
 
   const [borderClr, setbordorClr] = useState(false);
   useEffect(() => {
-    console.log(borderClr);
   }, [borderClr]);
   const { name, email, phoneNo, message } = formData;
 
