@@ -246,7 +246,7 @@ const OneStop = () => {
               transition={{ delay: 6.5, duration: 2, type: "just" }}
               display="flex"
               orientation="vertical"
-              h="21.575rem"
+              h="22.575rem"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"

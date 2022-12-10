@@ -61,7 +61,7 @@ const OneStop = () => {
             initial={{ opacity: 0 }}
             animate={animateHd}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
-            w="100%"
+            w="45%"
             direction="column"
             align="flex-start"
             pb="1.562rem"
@@ -99,7 +99,7 @@ const OneStop = () => {
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             direction="column"
             align="center"
-            w="100%"
+            w="10%"
             h="100%"
           >
             <MtnDvdr
@@ -107,7 +107,7 @@ const OneStop = () => {
               animate={animateHd}
               transition={{ duration: 2, type: "just" }}
               orientation="vertical"
-              h="2.5rem"
+              h="5vh"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
@@ -127,7 +127,7 @@ const OneStop = () => {
               transition={{ delay: 2.5, duration: 2, type: "just" }}
               display="flex"
               orientation="vertical"
-              h="12.6rem"
+              h="28vh"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
@@ -137,7 +137,7 @@ const OneStop = () => {
             initial={{ opacity: 0 }}
             animate={animateHd}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
-            w="100%"
+            w="45%"
             direction="column"
             align="flex-start"
             pb="1.562rem"
@@ -177,7 +177,7 @@ const OneStop = () => {
             initial={{ opacity: 0 }}
             animate={animateHd}
             transition={{ delay: 3.5, duration: 2, type: "just" }}
-            w="100%"
+            w="45%"
             direction="column"
             align="flex-start"
             pb="1.562rem"
@@ -225,7 +225,7 @@ const OneStop = () => {
             transition={{ delay: 3.5, duration: 2, type: "just" }}
             direction="column"
             align="center"
-            w="100%"
+            w="10%"
             h="100%"
           >
             <MtnDvdr
@@ -253,7 +253,7 @@ const OneStop = () => {
               transition={{ delay: 6.5, duration: 2, type: "just" }}
               display="flex"
               orientation="vertical"
-              h="26.6rem"
+              h="73vh"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
@@ -263,7 +263,7 @@ const OneStop = () => {
             initial={{ opacity: 0 }}
             animate={animateHd}
             transition={{ delay: 3, duration: 2, type: "just" }}
-            w="100%"
+            w="45%"
             direction="column"
             align="flex-start"
             pb="1.562rem"
@@ -309,7 +309,7 @@ const OneStop = () => {
             initial={{ opacity: 0 }}
             animate={animateHd}
             transition={{ delay: 6.5, duration: 2, type: "just" }}
-            w="100%"
+            w="45%"
             direction="column"
             align="flex-start"
             pb="1.562rem"
@@ -349,7 +349,7 @@ const OneStop = () => {
             transition={{ delay: 6.5, duration: 2, type: "just" }}
             direction="column"
             align="center"
-            w="100%"
+            w="10%"
             h="100%"
           >
             <MtnDvdr
@@ -376,7 +376,7 @@ const OneStop = () => {
             initial={{ opacity: 0 }}
             animate={animateHd}
             transition={{ delay: 6.5, duration: 2, type: "just" }}
-            w="100%"
+            w="45%"
             direction="column"
             align="flex-start"
             pb="1.562rem"
