@@ -6,12 +6,32 @@ import "./nm.css"
 const FourthSec = () => {
   const videos=[{source:"https://www.youtube.com/embed/Psmw1t_S6-c"},{source:"https://www.youtube.com/embed/Psmw1t_S6-c"},{source:"https://www.youtube.com/embed/Psmw1t_S6-c"},{source:"https://www.youtube.com/embed/Psmw1t_S6-c"},{source:"https://www.youtube.com/embed/Psmw1t_S6-c"}]
   const [vid,setVid] = useState({id:"0",src:videos[0].source});
+  const [discoHeight,setDiscoHeight] = useState("1.8");
   const changeVid=(e)=>{
     //console.log(e.ta);
     document.getElementById(`${vid.id}`).classList.remove("bold");
     const id = e.target.id;
     document.getElementById(`${id}`).classList.add("bold");
     setVid({id:String(id),src:videos[id].source});
+    switch(e.target.id){
+    case "0":
+      setDiscoHeight("1.8")
+      break;
+    case "1":
+      setDiscoHeight("4.5")
+      break;
+    case "2":
+      setDiscoHeight("8.5")
+      break;
+    case "3":
+      setDiscoHeight("12")
+      break;
+    case "4":
+      setDiscoHeight("15.5")
+      break;
+    default:
+      break;
+    }
   }
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -32,6 +52,9 @@ const FourthSec = () => {
       setTimeout(() => {
         document.getElementById("4").click();
       }, 10000);
+    }
+    return()=>{
+      clearTimeout();
     }
 },[isInView]);
   return (
@@ -86,8 +109,9 @@ const FourthSec = () => {
           align="center"
         >
           <Divider
-            
-            h={`${((2 * vid.id) * 1.570) + 1.570}rem`}
+            transitionTimingFunction={"ease-in-out"}
+            transitionProperty={"height"}
+            h={`${discoHeight}rem`}
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"

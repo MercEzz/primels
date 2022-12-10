@@ -157,7 +157,7 @@ const LastSec = () => {
                   </Flex>
                   <Flex direction="column" textAlign="right" w="100%" h="100%">
                     <Heading fontFamily="avenir" fontSize="1.25rem" mt="0.9rem">
-                    {prime.month==="DECEMBER 2019"?<>NEXT</>:<>PREVIOUS</>} NEWSLETTER
+                    {prime.month==="JANUARY 2020"?<>NEXT</>:<>PREVIOUS</>} NEWSLETTER
                     </Heading>
                     <Heading fontFamily="avenir" fontSize="1.5rem">
                       {prime.prevmonth}
@@ -221,15 +221,11 @@ const LastSec = () => {
 
 export default LastSec;
 const primeReport = [
-  {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/JANUARY NEWSLETTER 2020.PNG",
-    month: "JANUARY 2019",
-    prevmonth: "DECEMBER 2019"
-  },
+  
   {
     img: feb2019,
     month: "FEBRUARY 2019",
-    prevmonth: "JANUARY 2019",
+    prevmonth: "JANUARY 2020",
   },
   {
     img: april2019,
@@ -243,12 +239,12 @@ const primeReport = [
   },
   {
     img: june2019,
-    month: "JUNE 2022",
+    month: "JUNE 2019",
     prevmonth: "MAY 2019",
   },
   {
     img: july2019,
-    month: "JULY 2022",
+    month: "JULY 2019",
     prevmonth: "JUNE 2019",
   },
   {
@@ -274,6 +270,11 @@ const primeReport = [
   {
     img: dec2019,
     month: "DECEMBER 2019",
-    prevmonth: "JANUARY 2019",
+    prevmonth: "NOVEMBER 2019",
+  },
+  {
+    img: "/images/news-and-media/PRIME-REALTY-REPORT/JANUARY NEWSLETTER 2020.PNG",
+    month: "JANUARY 2020",
+    prevmonth: "FEBRUARY 2019",
   },
 ];

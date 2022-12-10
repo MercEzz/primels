@@ -157,7 +157,7 @@ const PLSGreen = () => {
           </Flex>
         <Flex w="100%" h="100%" pos="relative" direction="column" left="0" align="flex-start">
           <MtnImg
-            className="image-sliedleft reveal"
+            className="fadein1s reveal"
             boxShadow="dark-lg"
             initial={{ opacity: 0, x: 100 }}
             animate={animateImg}
@@ -169,7 +169,7 @@ const PLSGreen = () => {
             w="80%"
           />
           <MtnImg
-            className="fadein reveal"
+            className="fadein1nh reveal"
             boxShadow="dark-lg"
             initial={{ opacity: 0 }}
             animate={animateImg}
