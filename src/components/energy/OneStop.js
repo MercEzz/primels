@@ -246,7 +246,7 @@ const OneStop = () => {
               transition={{ delay: 6.5, duration: 2, type: "just" }}
               display="flex"
               orientation="vertical"
-              h="22.575rem"
+              h="22.075rem"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
@@ -310,7 +310,7 @@ const OneStop = () => {
               <Image
                 w="5rem"
                 h="5rem"
-                src="/images/energy-page/financial-and-ppa.svg"
+                src="/images/energy-page/o-m-consultancy.svg"
               />
             </Flex>
             <Heading

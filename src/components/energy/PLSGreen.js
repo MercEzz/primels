@@ -30,7 +30,7 @@ const PLSGreen = () => {
       <Flex
         ref={ref}
         w="100%"
-        h="70%"
+        h="90%"
         direction="column"
         px="100px"
         pt="5rem"

@@ -72,7 +72,7 @@ function App() {
           <Route path="/arete-homes-invest" element={<AretehomesInvestSc />} />
         </Routes>
       </Flex>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );}
   else{
@@ -109,8 +109,9 @@ function App() {
             <Route path="/sky-high-invest" element={<SkyhighInvestSc />} />
             <Route path="/arete-homes-invest" element={<AretehomesInvestSc />} />
           </Routes>
-          <BottomMenu/>
+          
         </Flex>
+        <BottomMenu/>
         {/* <Footer /> */}
       </BrowserRouter>
     );}
