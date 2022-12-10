@@ -21,7 +21,57 @@ import news8 from "../news-and-media/NEWS8.jpg";
 import news9 from "../news-and-media/NEWS9.jpg";
 import news10 from "../news-and-media/NEWS10.jpg";
 import ModalImage from "../modalImage";
-
+const primeReport = [
+  {
+    type:'link',
+    img: hindu,
+    text: "INVESTING IN NORTH CHENNAI : WHAT YOU DIDN’T KNOW",
+  },
+  {
+    img: news2,
+    text: "NORTH CHENNAI : YOUR BEST BET",
+    location: "news2"
+  },
+  {
+    type:'link',
+    img: hindu,
+    text: "CHENNAI PERIPHERAL RING ROAD WORK GETS A BOOST",
+  },
+  {
+    img: news4,
+    text: "NORTH CHENNAI - TURNING TO WORLD CLASS ECONOMIC ZONE",
+    location: "news4"
+  },
+  {
+    type:'link',
+    img: businessStd,
+    text: "TATA PROJECTS WINS RS 2,100 CR CHENNAI PERIPHERAL RING ROAD PROJECT PHASE-1",
+  },
+  {
+    img: hindu,
+    text: "RS. 13,314 CRORE INFRASTRUCTURE UPGRADE FOR PONNERI",
+  },
+  {
+    type:'link',
+    img: news7,
+    text: "PONNERI TO DEVELOP AS A MEGA ENGINEERING HUB",
+    location: "news7"
+  },
+  {
+    img: news8,
+    text: "PONNERI - THE ULTIMATE REAL ESTATE DESTINATION OF NORTH CHENNAI",
+  },
+  {
+    img: news9,
+    text: "INDUSTRIAL PARKS ON AN UPSWING",
+    location: "news9"
+  },
+  {
+    img: news10,
+    text: "POURING INVESTMENTS IN NORTH CHENNAI",
+    location: "news10"
+  },
+];
 const FifthSec = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -56,16 +106,17 @@ const FifthSec = () => {
   const closeImage =() =>{
     setIsOpen(false);
   }
-  const openImage =(image) =>{
-    setModalImage(image)
+  const openImage =(data) =>{
+    let image=primeReport.filter(report=>report.location===data.target.id);
+    setModalImage(image[0].img)
     setIsOpen(true);
   }
   const redirect =(loc) =>{
-    window.open(`${loc}`);
+    window.open(`${loc.target.id}`);
   }
   return (
     <>
-      {isOpen?<ModalImage modalImage={modalImage} isOpen={isOpen} onClose={()=>closeImage()} />:<></>}
+      {isOpen?<ModalImage size="xl" modalImage={modalImage} isOpen={isOpen} onClose={()=>closeImage()} />:<></>}
     <Flex
       ref={ref}
       w="100%"
@@ -160,8 +211,9 @@ const FifthSec = () => {
               position="relative"
             >
               <Image
+                id={prime.location}
                 _hover={{cursor:"pointer"}}
-                onClick={prime.title===""?()=>openImage():(prime)=>redirect(prime.location)}
+                onClick={prime.type==="link"?(prime)=>redirect(prime):(data)=>openImage(data)}
                 w="100%"
                 h="25rem"
                 src={prime.img}
@@ -201,46 +253,4 @@ const FifthSec = () => {
 };
 export default FifthSec;
 
-const primeReport = [
-  {
 
-    img: hindu,
-    text: "INVESTING IN NORTH CHENNAI : WHAT YOU DIDN’T KNOW",
-  },
-  {
-    img: news2,
-    text: "NORTH CHENNAI : YOUR BEST BET",
-  },
-  {
-    img: hindu,
-    text: "CHENNAI PERIPHERAL RING ROAD WORK GETS A BOOST",
-  },
-  {
-    img: news4,
-    text: "NORTH CHENNAI - TURNING TO WORLD CLASS ECONOMIC ZONE",
-  },
-  {
-    img: businessStd,
-    text: "TATA PROJECTS WINS RS 2,100 CR CHENNAI PERIPHERAL RING ROAD PROJECT PHASE-1",
-  },
-  {
-    img: hindu,
-    text: "RS. 13,314 CRORE INFRASTRUCTURE UPGRADE FOR PONNERI",
-  },
-  {
-    img: news7,
-    text: "PONNERI TO DEVELOP AS A MEGA ENGINEERING HUB",
-  },
-  {
-    img: news8,
-    text: "PONNERI - THE ULTIMATE REAL ESTATE DESTINATION OF NORTH CHENNAI",
-  },
-  {
-    img: news9,
-    text: "INDUSTRIAL PARKS ON AN UPSWING",
-  },
-  {
-    img: news10,
-    text: "POURING INVESTMENTS IN NORTH CHENNAI",
-  },
-];

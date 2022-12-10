@@ -18,16 +18,16 @@ const FourthSec = () => {
       setDiscoHeight("1.8")
       break;
     case "1":
-      setDiscoHeight("4.5")
+      setDiscoHeight("5")
       break;
     case "2":
       setDiscoHeight("8.5")
       break;
     case "3":
-      setDiscoHeight("12")
+      setDiscoHeight("13.5")
       break;
     case "4":
-      setDiscoHeight("15.5")
+      setDiscoHeight("18.5")
       break;
     default:
       break;
