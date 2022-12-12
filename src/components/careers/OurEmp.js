@@ -37,7 +37,6 @@ const OurEmp = () => {
       overflow="hidden"
       ref={ref}
       direction="column"
-      pb="5rem"
       w="100%"
       h="100%"
       px="6.25rem"

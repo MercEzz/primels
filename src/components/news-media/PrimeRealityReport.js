@@ -31,7 +31,7 @@ const LastSec = () => {
   const [slider, setSlider] = useState(null);
   const settings = {
     draggable: false,
-    infinite: true,
+    infinite: false,
     autoplay: true,
     speed: 3000,
     fade: true,
@@ -161,7 +161,7 @@ const LastSec = () => {
                   </Flex>
                   <Flex direction="column" textAlign="right" w="100%" h="100%">
                     <Heading fontFamily="avenir" fontSize="1.25rem" mt="0.9rem" pb="0.625rem">
-                    {prime.month==="APRIL 2020"?<>NEXT</>:<>PREVIOUS</>} NEWSLETTER
+                    {prime.month==="APRIL 2019"?<>NEXT</>:<>PREVIOUS</>} NEWSLETTER
                     </Heading>
                     <Heading fontFamily="avenir" fontSize="1.5rem">
                       {prime.prevmonth}
@@ -200,7 +200,7 @@ const LastSec = () => {
                 aria-label="right-arrow"
                 borderRadius="full"
                 variant="outline"
-                borderColor="#B88746"
+                borderColor={prime.month==="APRIL 2019"?"grey":"#B88746"}
                 // position="absolute"
                 // right={side}
                 // top={top}
@@ -209,11 +209,11 @@ const LastSec = () => {
                 // transform={"translate(0%, -50%)"}
                 mx="0.312rem"
                 zIndex={2}
-                onClick={() => {
+                onClick={prime.month==="APRIL 2019"?() => {
                   slider?.slickNext();
-                }}
+                }:()=>{}}
               >
-                <AiOutlineRight color="#B88746" size="1.875rem" />
+                <AiOutlineRight color={prime.month==="APRIL 2019"?"grey":"#B88746"} size="1.875rem" />
               </IconButton>
             </Flex>
           ))}
