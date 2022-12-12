@@ -81,6 +81,7 @@ const Footer = () => {
       color="white"
       justify="center"
       px="12"
+      pb="1.563rem"
     >
       <Flex py="10">
         <Flex direction="column" px="10" w="30%">
@@ -118,7 +119,7 @@ const Footer = () => {
           </VStack>
         </Flex>
         <Flex direction="column" px="10" w="25%">
-          <Heading fontSize="20px" fontFamily="avenir" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
+          <Heading fontSize="20px" fontFamily="veralaRound" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
             Who we are
           </Heading>
           <VStack
@@ -161,7 +162,7 @@ const Footer = () => {
           </VStack>
           </Flex>
           <Flex direction="column" px="10" w="100%" ml="auto">
-          <Heading fontSize="20px" fontFamily="avenir" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
+          <Heading fontSize="20px" fontFamily="veralaRound" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
             Invest
           </Heading>
           <VStack
@@ -205,7 +206,7 @@ const Footer = () => {
         </Flex>
       </Flex>
       <hr style={{color:"white"}}/>
-      <Flex direction="row" align="center" py="10">
+      <Flex direction="row" align="center" py="1.563rem">
         <Text fontSize="1rem" fontWeight="600">
         &#169; 2022. PRIMELIFESPACE PVT. LTD.
         </Text>

@@ -68,11 +68,11 @@
   animation: discobal-slidein-top 1 2s linear;
   transform: translateY(0px);
 }
-.discobal-slidein-top1s.reveal {
+.discobal-slidein-top1nh.reveal {
   transform: translateY(-25rem);
 }
-.discobal-slidein-top1s.reveal.active {
-  animation: discobal-slidein-top 1 1s linear;
+.discobal-slidein-top1nh.reveal.active {
+  animation: discobal-slidein-top 1 1.5s linear;
   transform: translateY(0px);
 }
 

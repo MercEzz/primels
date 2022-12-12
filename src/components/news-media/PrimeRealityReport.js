@@ -12,7 +12,11 @@ import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import feb2019 from "../news-and-media/PRIME-REALTY-REPORT/FEBRUARY 2019.PNG";
+
+//import oct2022 from "../news-and-media/PRIME-REALTY-REPORT/OCTOBER 2022.PNG";
+import aug2022 from "../news-and-media/PRIME-REALTY-REPORT/AUGUST 2022.PNG";
+//import feb2020 from "../news-and-media/PRIME-REALTY-REPORT/February 2020.PNG";
+import jan2020 from "../news-and-media/PRIME-REALTY-REPORT/JANUARY NEWSLETTER 2020.PNG";
 import april2019 from "../news-and-media/PRIME-REALTY-REPORT/APRIL 2019.PNG";
 import may2019 from "../news-and-media/PRIME-REALTY-REPORT/MAY 2019.PNG";
 import june2019 from "../news-and-media/PRIME-REALTY-REPORT/JUNE 2019.PNG";
@@ -29,7 +33,7 @@ const LastSec = () => {
     draggable: false,
     infinite: true,
     autoplay: true,
-    speed: 500,
+    speed: 3000,
     fade: true,
     autoplaySpeed: 5000,
     slidesToShow: 1,
@@ -156,8 +160,8 @@ const LastSec = () => {
                     </Text>
                   </Flex>
                   <Flex direction="column" textAlign="right" w="100%" h="100%">
-                    <Heading fontFamily="avenir" fontSize="1.25rem" mt="0.9rem">
-                    {prime.month==="JANUARY 2020"?<>NEXT</>:<>PREVIOUS</>} NEWSLETTER
+                    <Heading fontFamily="avenir" fontSize="1.25rem" mt="0.9rem" pb="0.625rem">
+                    {prime.month==="APRIL 2020"?<>NEXT</>:<>PREVIOUS</>} NEWSLETTER
                     </Heading>
                     <Heading fontFamily="avenir" fontSize="1.5rem">
                       {prime.prevmonth}
@@ -221,51 +225,25 @@ const LastSec = () => {
 
 export default LastSec;
 const primeReport = [
-  
   {
-    img: feb2019,
-    month: "FEBRUARY 2019",
+    img: "/images/news-and-media/PRIME-REALTY-REPORT/OCTOBER  2022.PNG",
+    month: "OCTOBER 2022",
+    prevmonth: "AUGUST 2022",
+  },
+  {
+    img: aug2022,
+    month: "AUGUST 2022",
+    prevmonth: "FEBRUARY 2020",
+  },
+  {
+    img: "/images/news-and-media/PRIME-REALTY-REPORT/FEBRUARY 2020.PNG",
+    month: "FEBRUARY 2020",
     prevmonth: "JANUARY 2020",
   },
   {
-    img: april2019,
-    month: "APRIL 2019",
-    prevmonth: "FEBRUARY 2019",
-  },
-  {
-    img: may2019,
-    month: "MAY 2019",
-    prevmonth: "APRIL 2019",
-  },
-  {
-    img: june2019,
-    month: "JUNE 2019",
-    prevmonth: "MAY 2019",
-  },
-  {
-    img: july2019,
-    month: "JULY 2019",
-    prevmonth: "JUNE 2019",
-  },
-  {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/AUGUST 2022.PNG",
-    month: "AUGUST 2019",
-    prevmonth: "JULY 2019",
-  },
-  {
-    img: spet2019,
-    month: "SEPTEMBER 2019",
-    prevmonth: "AUGUST 2019",
-  },
-  {
-    img: oct2019,
-    month: "OCTOBER 2019",
-    prevmonth: "SEPTEMBER 2019",
-  },
-  {
-    img: nov2019,
-    month: "NOVEMBER 2019",
-    prevmonth: "OCTOBER 2019",
+    img: jan2020,
+    month: "JANUARY 2020",
+    prevmonth: "DECEMBER 2019",
   },
   {
     img: dec2019,
@@ -273,8 +251,38 @@ const primeReport = [
     prevmonth: "NOVEMBER 2019",
   },
   {
-    img: "/images/news-and-media/PRIME-REALTY-REPORT/JANUARY NEWSLETTER 2020.PNG",
-    month: "JANUARY 2020",
-    prevmonth: "FEBRUARY 2019",
+    img: nov2019,
+    month: "NOVEMBER 2019",
+    prevmonth: "OCTOBER 2019",
+  },
+  {
+    img: oct2019,
+    month: "OCTOBER 2019",
+    prevmonth: "SEPTEMBER 2019",
+  },  
+  {
+    img: spet2019,
+    month: "SEPTEMBER 2019",
+    prevmonth: "JULY 2019",
+  },
+  {
+    img: july2019,
+    month: "JULY 2019",
+    prevmonth: "JUNE 2019",
+  },
+  {
+    img: june2019,
+    month: "JUNE 2019",
+    prevmonth: "MAY 2019",
+  },
+  {
+    img: may2019,
+    month: "MAY 2019",
+    prevmonth: "APRIL 2019",
+  },
+  {
+    img: april2019,
+    month: "APRIL 2019",
+    prevmonth: "MAY 2019",
   },
 ];
