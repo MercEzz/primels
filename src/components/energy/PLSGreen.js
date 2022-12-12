@@ -128,7 +128,7 @@ const PLSGreen = () => {
             >
               <Divider
                 orientation="vertical"
-                h="10%"
+                h="7%"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
@@ -156,7 +156,7 @@ const PLSGreen = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 2, type: "just" }}
               direction="column"
-              pt="5%"
+              pt="3%"
               zIndex="10"
             >
               <Heading
