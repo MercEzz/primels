@@ -74,7 +74,7 @@ const Footer = () => {
     <button className="collapsible-button" onClick={()=>toggleCollapsible()}><div className="collapsible-button-text">MORE INFORMATION</div><div className="collapsible-button-icon">&#8964;</div></button>
     <div ref={collapseRef}
       className="collapsible-content">
-      <li></li>
+        <button className="collapsible-button" onClick={()=>toggleCollapsible()}><div className="collapsible-button-text">MORE INFORMATION</div><div className="collapsible-button-icon">+</div></button>
     </div>
     <Flex
       pos="relative"

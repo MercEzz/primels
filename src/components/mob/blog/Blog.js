@@ -71,7 +71,7 @@ const Blog = () => {
       {/* banner sec */}
       <Flex w="100%" h="100vh" pos="relative" direction="column" overflow="hidden">
         <Image
-          animation="blog-banner-down 1 2s linear"
+          animation="blog-banner-left 1 2s linear"
           w="100%"
           h="100%"
           objectFit="cover"
@@ -79,7 +79,7 @@ const Blog = () => {
           src={banner1}
         />
         <Image
-          animation="blog-banner-up 1 2s linear"
+          animation="blog-banner-right 1 2s linear"
           w="100%"
           h="100%"
           objectFit="cover"
@@ -87,7 +87,7 @@ const Blog = () => {
           src={banner2}
         />
         <Image
-          animation="blog-banner-down 1 2s linear"
+          animation="blog-banner-left 1 2s linear"
           w="100%"
           h="100%"
           objectFit="cover"
@@ -191,7 +191,7 @@ const Blog = () => {
                     bgColor="#DFBD69"
                     p="0.8rem"
                     boxShadow="xl"
-                    bottom="0rem"
+                    bottom="0.563rem"
                     right="0"
                   >
                     <Text fontFamily="veralaRound" fontSize="1rem">
