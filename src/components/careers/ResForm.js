@@ -103,7 +103,7 @@ const ResForm = () => {
                   w="100%"
                   align="center"
                   justifyContent="space-between"
-                  pb="0.938rem"
+                  pb="0.438rem"
                 >
                   <FormLabel
                     fontFamily="avenir"

@@ -49,6 +49,7 @@ const StyledFooter = styled.div`
     }
     .collapsible-content{
       display: none;
+      list-style-type: none;
     }
   `
 const Footer = () => {
@@ -71,9 +72,11 @@ const Footer = () => {
   return (
     <StyledFooter>
     <button className="collapsible-button" onClick={()=>toggleCollapsible()}><div className="collapsible-button-text">MORE INFORMATION</div><div className="collapsible-button-icon">&#8964;</div></button>
+    <div ref={collapseRef}
+      className="collapsible-content">
+      <li></li>
+    </div>
     <Flex
-      ref={collapseRef}
-      className="collapsible-content"
       pos="relative"
       direction="column"
       align="center"
