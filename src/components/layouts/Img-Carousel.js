@@ -39,7 +39,7 @@ const ImgCarousel = (props) => {
             justifyContent="flex-end"
             flexDirection="column"
             w="100%"
-            h="100%"
+            h="26.68rem"
             pr="1.563rem"
             py="0.313rem"
             mt="3.125rem"
@@ -49,8 +49,10 @@ const ImgCarousel = (props) => {
               {tes.text}
             </Text>
             <Flex
+              pos="absolute"
+              bottom="0"
               w="100%"
-              h="100%"
+              h="12rem"
               pt="1.563rem"
               align="center"
               justify="flex-start"

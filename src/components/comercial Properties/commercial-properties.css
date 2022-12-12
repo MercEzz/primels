@@ -68,6 +68,13 @@
   animation: discobal-slidein-top 1 2s linear;
   transform: translateY(0px);
 }
+.discobal-slidein-top1s.reveal {
+  transform: translateY(-25rem);
+}
+.discobal-slidein-top1s.reveal.active {
+  animation: discobal-slidein-top 1 1s linear;
+  transform: translateY(0px);
+}
 
 /* */
 .expand.reveal {

@@ -37,7 +37,7 @@ const OurEmp = () => {
       overflow="hidden"
       ref={ref}
       direction="column"
-      pt="5rem"
+      pb="5rem"
       w="100%"
       h="100%"
       px="6.25rem"
@@ -95,7 +95,7 @@ const testimonial = [
   {
     name: "Suresh",
     title: "Sales Team",
-    text: "I have associated with Arete Homes for more than a year. I handle sales and marketing for the project and it has been a great journey till date. I love working here since I am given complete freedom to work as per my comfort, and the management gives me complete flexibility to explore avenues . This in turn helps me to evolve in my career and it is a great experience.",
+    text: "I have associated with Arete Homes for more than a year. I handle sales and marketing for the project and it has been a great journey till date. I love working here since I am given complete freedom to work as per my comfort, and the management gives me complete flexibility to explore avenues . This in turn helps me to evolve in my career.",
   },
   {
     name: "Shailaja",

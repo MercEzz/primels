@@ -98,6 +98,7 @@ const Buildchng = () => {
         justify="center"
         overflow="hidden"
         pt="3.125rem"
+        mb="4.375rem"
       >
         <MtnHead
           initial={{ opacity: 0, y: -50 }}
@@ -138,7 +139,7 @@ const Buildchng = () => {
           <Flex
             direction="column"
             w="40%"
-            h="100%"
+            h="80%"
             align="flex-start"
             pr="100px"
           >
@@ -167,7 +168,7 @@ const Buildchng = () => {
               />
             </MtnFlx>
 
-            <Flex direction="row" align="center" justify="center" py="25px">
+            <Flex direction="row" align="center" justify="center" >
               <MtnHead
                 ref={pRef}
                 initial={{ opacity: 0, x: -50 }}
@@ -176,7 +177,6 @@ const Buildchng = () => {
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="12rem"
                 color="#D9D9D9"
                 pr="2.812rem"
               >
@@ -200,7 +200,7 @@ const Buildchng = () => {
                 </Text>
               </MtnFlx>
             </Flex>
-            <Flex direction="row" align="center" justify="center" pb="25px">
+            <Flex direction="row" align="center" justify="center">
               <MtnHead
                 ref={rRef}
                 initial={{ opacity: 0, x: -50 }}
@@ -209,7 +209,6 @@ const Buildchng = () => {
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="12rem"
                 color="#D9D9D9"
                 pr="2rem"
               >
@@ -229,7 +228,7 @@ const Buildchng = () => {
                 </Text>
               </MtnFlx>
             </Flex>
-            <Flex direction="row" align="center" justify="center" pb="25px">
+            <Flex direction="row" align="center" justify="center">
               <MtnHead
                 ref={iRef}
                 initial={{ opacity: 0, x: -50 }}
@@ -238,7 +237,6 @@ const Buildchng = () => {
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="12rem"
                 color="#D9D9D9"
                 pr="3.437rem"
                 pl="0.937rem"
@@ -259,7 +257,7 @@ const Buildchng = () => {
                 </Text>
               </MtnFlx>
             </Flex>
-            <Flex direction="row" align="center" justify="center" pb="25px">
+            <Flex direction="row" align="center" justify="center" >
               <MtnHead
                 ref={mRef}
                 initial={{ opacity: 0, x: -50 }}
@@ -268,7 +266,6 @@ const Buildchng = () => {
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="12rem"
                 color="#D9D9D9"
                 pr="1.375rem"
                 ml="-0.75rem"
@@ -298,7 +295,6 @@ const Buildchng = () => {
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="12rem"
                 color="#D9D9D9"
                 pr="42px"
               >

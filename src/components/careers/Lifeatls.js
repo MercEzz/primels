@@ -71,7 +71,6 @@ const Lifeatls = () => {
       direction="column"
       textAlign="center"
       px="1.562rem"
-      pt="5rem"
       pb="1.875rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"

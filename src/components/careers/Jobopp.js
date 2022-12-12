@@ -48,7 +48,6 @@ const Jobopp = () => {
         w="100%"
         h="100%"
         align="center"
-        pt="5rem"
         px="6.25rem"
         pb="3.125rem"
       >
