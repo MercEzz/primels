@@ -77,7 +77,7 @@ const OurEmp = () => {
           color="#DFBD69"
           pos="absolute"
           right="0"
-          bottom="25%"
+          bottom="35%"
           zIndex="10"
           w="4.375rem"
           h="3.125rem"

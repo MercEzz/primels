@@ -29,7 +29,6 @@ const FirstSec = () => {
       bgRepeat="no-repeat"
       bgPos="center"
       bgSize="cover"
-      mb="5rem"
     >
       <Flex w="100%" h="100%" align="center" justify="center">
         <MotnImg
