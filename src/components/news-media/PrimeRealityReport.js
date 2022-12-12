@@ -33,7 +33,7 @@ const LastSec = () => {
     draggable: false,
     infinite: false,
     autoplay: true,
-    speed: 3000,
+    speed: 5000,
     fade: true,
     autoplaySpeed: 5000,
     slidesToShow: 1,
@@ -59,7 +59,6 @@ const LastSec = () => {
     >
       <Text
         transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-        opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
         fontSize="2.5rem"
@@ -69,7 +68,6 @@ const LastSec = () => {
         PRIME REALTY REPORT
       </Text>
       <Box
-        opacity={isInView ? "1" : "0"}
         transition="all 2s 2s"
         position={"relative"}
         height={"100%"}
@@ -106,7 +104,6 @@ const LastSec = () => {
                 </Flex>
                 <Flex
                   transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-                  opacity={isInView ? "1" : "0"}
                   transition="all 2s 2s"
                   h="100%"
                   direction="column"
@@ -142,7 +139,6 @@ const LastSec = () => {
                 justify="flex-end"
               >
                 <Flex
-                  opacity={isInView ? "1" : "0"}
                   transition="all 2s 2s"
                   w="100%"
                   h="100%"
@@ -166,14 +162,11 @@ const LastSec = () => {
                     <Heading fontFamily="avenir" fontSize="1.5rem">
                       {prime.prevmonth}
                     </Heading>
-                    <Text fontFamily="veralaRound" fontSize="1rem">
-                      READ NOW
-                    </Text>
+                    
                   </Flex>
                 </Flex>
               </Flex>
               <IconButton
-                opacity={isInView ? "1" : "0"}
                 transition="all 2s 2s"
                 pos="absolute"
                 aria-label="left-arrow"
@@ -194,7 +187,6 @@ const LastSec = () => {
               </IconButton>
               {/* Right Icon */}
               <IconButton
-                opacity={isInView ? "1" : "0"}
                 transition="all 2s 2s"
                 pos="absolute"
                 aria-label="right-arrow"
