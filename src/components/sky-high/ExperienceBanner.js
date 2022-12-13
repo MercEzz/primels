@@ -22,7 +22,6 @@ const ThirdSec = () => {
     >
       <Image
         transform={inView ? "scale(1)" : "scale(0.6)"}
-        opacity={inView ? "1" : "0"}
         transition="all 2s"
         w="100%"
         h="100%"

@@ -8,9 +8,9 @@ import {
   HStack,
   Image,
 } from "@chakra-ui/react";
-// import { useInView } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import React, { useState } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+//import { useInView } from "react-intersection-observer";
+import React, { useEffect,useState } from "react";
 
 import { useRef } from "react";
 import Slider from "react-slick";
@@ -24,11 +24,35 @@ import second from "../sky-high imgs/2ND.svg";
 import third from "../sky-high imgs/3RD.svg";
 import fourth from "../sky-high imgs/4TH.svg";
 
+const MtnFlx = motion(Flex);
+const MtnHead = motion(Heading);
+const MtnTxt = motion(Text);
+
 const SecondSec = () => {
-  const { ref, inView } = useInView({
-    threshold: 0,
-    rootMargin: "50px",
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
   });
+  const animateX = useAnimation();
+  const animateY = useAnimation();
+  const animateFade = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animateX.start({
+        opacity: 1,
+        x: 0,
+      });
+      animateY.start({
+        opacity: 1,
+        y: 0,
+      });
+      animateFade.start({
+        opacity: 1,
+      });
+    }
+  }, [isInView, animateX, animateY, animateFade]);
 
   const [slider, setSlider] = useState(null);
   const settings = {
@@ -58,10 +82,10 @@ const SecondSec = () => {
       bgPos="center"
       bgSize="cover"
     >
-      <Heading
-        transform={inView ? "translateY(0)" : "translateY(-50px)"}
-        opacity={inView ? "1" : "0"}
-        transition="all 2s"
+      <MtnHead
+        initial={{ y: -100, opacity: 0 }}
+        animate={animateY}
+        transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontSize="2.5rem"
         fontWeight="400"
@@ -71,11 +95,11 @@ const SecondSec = () => {
       >
         An iconic dwell of <br />
         sky high residences and retail spaces
-      </Heading>
+      </MtnHead>
       <Flex w="100%" h="100%" align="center" justify="center">
         <Flex
-          transform={inView ? "translateX(0)" : "translateX(-100px)"}
-          opacity={inView ? "1" : "0"}
+          transform={isInView ? "translateX(0)" : "translateX(-100px)"}
+          opacity={isInView ? "1" : "0"}
           transition="all 2s 2s"
           w="47.5%"
           h="100%"
@@ -162,8 +186,8 @@ const SecondSec = () => {
         </Flex>
 
         <Flex
-          transform={inView ? "translateY(0)" : "translateY(-50px)"}
-          opacity={inView ? "1" : "0"}
+          transform={isInView ? "translateY(0)" : "translateY(-50px)"}
+          opacity={isInView ? "1" : "0"}
           transition="all 2s 2s"
           direction="column"
           align="center"
@@ -188,9 +212,10 @@ const SecondSec = () => {
         </Flex>
 
         <Flex w="100%" h="100%" direction="column" alignSelf="center">
-          <Text
-            opacity={inView ? "1" : "0"}
-            transition="all 2s 2s"
+        <MtnTxt
+            initial={{ opacity: 0 }}
+            animate={animateFade}
+            transition={{ delay: 1.5, duration: 2, type: "just" }}
             mb="0.9rem"
             fontFamily="veralaRound"
             fontSize="1rem"
@@ -198,9 +223,9 @@ const SecondSec = () => {
             THE ULTIMATE ADDRESS: Experience the breathtaking views of Chennai's
             stunning skyline from Arete Homes SKY HIGH Tower the top 20th floor.
             A new world of luxury has taken shape in North Chennai, Ponneri.{" "}
-          </Text>
+          </MtnTxt>
           <Flex
-            opacity={inView ? "1" : "0"}
+            opacity={isInView ? "1" : "0"}
             transition="all 2s 4s"
             w="16.937rem"
             borderRadius="0.625rem"
@@ -218,7 +243,7 @@ const SecondSec = () => {
             </HStack>
           </Flex>
           <Flex
-            opacity={inView ? "1" : "0"}
+            opacity={isInView ? "1" : "0"}
             transition="all 2s 6s"
             w="16.937rem"
             borderRadius="0.625rem"
@@ -236,7 +261,7 @@ const SecondSec = () => {
             </HStack>
           </Flex>
           <Flex
-            opacity={inView ? "1" : "0"}
+            opacity={isInView ? "1" : "0"}
             transition="all 1s 8s"
             w="16.937rem"
             borderRadius="0.625rem"
@@ -252,7 +277,7 @@ const SecondSec = () => {
             </HStack>
           </Flex>
           <Flex
-            opacity={inView ? "1" : "0"}
+            opacity={isInView ? "1" : "0"}
             transition="all 1s 10s"
             w="16.937rem"
             borderRadius="0.625rem"

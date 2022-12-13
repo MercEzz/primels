@@ -1,20 +1,40 @@
 import { Flex, Image, Text, Box, Divider, Heading } from "@chakra-ui/react";
-//import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import React from "react";
-import { useEffect } from "react";
-//import { useRef } from "react";
-import { useInView } from "react-intersection-observer";
+import { useEffect,useRef } from "react";
+//import { useInView } from "react-intersection-observer";
+
+const MtnTxt = motion(Text);
+const MtnImg = motion(Image);
+const MtnFlx = motion(Flex);
+const MtnHd = motion(Heading);
+const MtnDvd = motion(Divider);
 
 const FourthSec = () => {
-  const { ref, inView } = useInView({
+  /*const { ref, inView } = useInView({
     threshold: 0,
     rootMargin: "50px",
-  });
-  //const ref = useRef(null);
-  /*const isInView = useInView(ref, {
+  });*/
+  const ref = useRef(null);
+  const inView = useInView(ref, {
     once: true,
     margin: "0px 100px -50px 0px",
-  });*/
+  });
+  
+  const animateFade = useAnimation();
+  const animateY = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animateFade.start({
+        opacity: 1,
+      });
+      animateY.start({
+        opacity: 1,
+        y: 0,
+      });
+    }
+  }, [inView, animateFade, animateY]);
 
   return (
     <Flex
@@ -80,50 +100,55 @@ const FourthSec = () => {
             />{" "}
           </Flex>
           <Flex h="100%" direction="column" justify="center" alignSelf="center">
-            <Heading
-              opacity={inView ? "1" : "0"}
-              transition="all 2s 2s"
+          <MtnHd
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 1.5, duration: 2, type: "just" }}
               fontFamily="avenir"
               fontSize="2.125rem"
               mb="0.9rem"
             >
               3 SKY DECKS
-            </Heading>
-            <Text
-              opacity={inView ? "1" : "0"}
-              transition="all 2s 2s"
+            </MtnHd>
+            <MtnTxt
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 1.5, duration: 2, type: "just" }}
               fontFamily="veralaRound"
               fontSize="1rem"
               mb="1.5rem"
             >
               Enjoy the panoramic sky views from different levels of the tower.
-            </Text>
-            <Heading
-              opacity={inView ? "1" : "0"}
-              transition="all 2s 4s"
+            </MtnTxt>
+            <MtnHd
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 3, duration: 2, type: "just" }}
               fontFamily="avenir"
               fontSize="1.25rem"
               mb="0.9rem"
             >
               CAFE DECK
-            </Heading>
-            <Heading
-              opacity={inView ? "1" : "0"}
-              transition="all 2s 6s"
+            </MtnHd>
+            <MtnHd
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 4.5, duration: 2, type: "just" }}
               fontFamily="avenir"
               fontSize="1.25rem"
               mb="0.9rem"
             >
               KIDS AREA DECK
-            </Heading>
-            <Heading
-              opacity={inView ? "1" : "0"}
-              transition="all 2s 8s"
+            </MtnHd>
+            <MtnHd
+                initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 6, duration: 2, type: "just" }}
               fontFamily="avenir"
               fontSize="1.25rem"
             >
               LOUNGE DECK
-            </Heading>
+            </MtnHd>
           </Flex>{" "}
         </Flex>
         {/* first-right-sec */}

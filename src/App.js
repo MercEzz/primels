@@ -40,7 +40,7 @@ function App() {
   if(!isMobile){
   return (
     <BrowserRouter>
-      {/* <Header /> */}
+      <Header />
       <Flex
         as="main"
         direction="column"

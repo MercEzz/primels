@@ -29,7 +29,7 @@ const SkyHighSc = () => {
       <NinethSec />
       <TenthSec />
       <LastSec />
-      <DropDown />
+      {/*<DropDown />*/}
     </>
   );
 };

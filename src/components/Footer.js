@@ -18,148 +18,12 @@ import { BsFacebook, BsWhatsapp, BsFillTelephoneFill } from "react-icons/bs";
 import { ImLocation } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
 import styled from 'styled-components';
-const StyledFooter = styled.div`
-    .collapsible-button{
-      background-color: #B88746;
-      display:flex;
-      color: white;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 2rem;
-      height:5rem;
-    }
-    .collapsible-list-button{
-      background-color: #DFBD69;
-      border-top: 1px solid #B88746;
-      border-bottom: 1px solid #B88746;
-      display:flex;
-      color: black;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      text-align: left;
-      outline: none;
-      font-size: 2rem;
-      height:5rem;
-    }
-    .collapsible-list-button:hover{
-      background-color: #B88746;
-    }
-    .collapsible-button-text{
-      align:flex-start;
-    }
-    .collapsible-button-icon{
-      width:50px;
-      height:50px;
-      text-align: center;
-      margin-left:auto;
-      margin-right:100px;
-      border: 3px solid;
-      border-color:white;
-      border-radius:50%;
-      font-size: 2rem;
-      padding-bottom: 1rem;
-    }
-    .collapsible-list-button-icon{
-      width:50px;
-      height:50px;
-      text-align: center;
-      margin-left:auto;
-      margin-right:100px;
-      border: 3px solid;
-      border-color:black;
-      border-radius:50%;
-      font-size: 2rem;
-      padding-bottom: 1rem;
-    }
-    .collapsible-content{
-      display: none;
-      list-style-type: none;
-    }
-    .collapsible-content1{
-      display: none;
-      list-style-type: none;
-    }
-    .collapsible-content2{
-      display: none;
-      list-style-type: none;
-    }
-    .collapsible-content3{
-      display: none;
-      list-style-type: none;
-    }
-    .collapsible-content4{
-      display: none;
-      list-style-type: none;
-    }
-    .collapsible-content5{
-      display: none;
-      list-style-type: none;
-    }
-  `
+import DropDown from "./sky-high/DropDown";
+
 const Footer = () => {
-  const collapseRef= useRef(null);
-  const scrollTo=(ref)=>ref.current.scrollIntoView();
-  
-  const toggleMainCollapsible=(data)=>{
-    var collapse=document.getElementsByClassName("collapsible-content");
-    let i=0;
-    for (i; i < collapse.length; i++) {
-      if(collapse[i].style.display === "block"){
-        collapse[i].style.display = "none";
-        data.target.lastChild.innerHTML="&#8964;"
-      }
-      else{
-        collapse[i].style.display = "block";
-        data.target.lastChild.innerHTML="&#x2303;"
-        scrollTo(collapseRef);
-      }
-    }
-  }
-  const toggleCollapsible=(data)=>{
-    const collapse=document.getElementsByClassName(`collapsible-content${data.target.getAttribute("collapseid")}`);
-    let i=0;
-    for (i; i < collapse.length; i++) {
-      if(collapse[i].style.display === "block"){
-        collapse[i].style.display = "none";
-        data.target.lastChild.innerHTML="+"
-      }
-      else{
-        collapse[i].style.display = "block";
-        data.target.lastChild.innerHTML="-"
-      }
-    }
-  }
   return (
-    <StyledFooter>
-    <button className="collapsible-button" onClick={(data)=>toggleMainCollapsible(data)}><div className="collapsible-button-text">MORE INFORMATION</div><div className="collapsible-button-icon">&#8964;</div></button>
-    <div ref={collapseRef}
-      className="collapsible-content">
-        <button collapseid={1} className="collapsible-list-button" onClick={(data)=>toggleCollapsible(data)}><div className="collapsible-button-text">PRIME LIFESPACE</div><div className="collapsible-list-button-icon">+</div></button>
-        <div className="collapsible-content1">
-          Prime Lifespace content
-        </div>
-        <button collapseid={2} className="collapsible-list-button" onClick={(data)=>toggleCollapsible(data)}><div className="collapsible-button-text">INVEST WITH US</div><div className="collapsible-list-button-icon">+</div></button>
-        <div className="collapsible-content2">
-          Invest with us content
-        </div>
-        <button collapseid={3} className="collapsible-list-button" onClick={(data)=>toggleCollapsible(data)}><div className="collapsible-button-text">ARETE HOMES PROJECT</div><div className="collapsible-list-button-icon">+</div></button>
-        <div className="collapsible-content3">
-          ARETE HOMES PROJECT content
-        </div>
-        <button collapseid={4} className="collapsible-list-button" onClick={(data)=>toggleCollapsible(data)}><div className="collapsible-button-text">ARETE HOMES SKY HIGH TOWER</div><div className="collapsible-list-button-icon">+</div></button>
-        <div className="collapsible-content4">
-          ARETE HOMES SKY HIGH TOWER content
-        </div>
-        <button collapseid={5} className="collapsible-list-button" onClick={(data)=>toggleCollapsible(data)}><div className="collapsible-button-text">ARETE HOMES SERVICED APARTMENTS</div><div className="collapsible-list-button-icon">+</div></button>
-        <div className="collapsible-content5">
-          ARETE HOMES SERVICED APARTMENTS content
-        </div>
-    </div>
+    <>
+    <DropDown />
     <Flex
       pos="relative"
       direction="column"
@@ -305,7 +169,7 @@ const Footer = () => {
         </HStack>
       </Flex>
     </Flex>
-    </StyledFooter>
+    </>
   );
 };
 

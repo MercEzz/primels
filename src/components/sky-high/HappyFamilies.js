@@ -2,16 +2,16 @@ import { Flex, Box, Text, Icon } from "@chakra-ui/react";
 import React, { useState, useRef, useEffect } from "react";
 import Slider from "react-slick";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-//import { useInView } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useInView } from "framer-motion";
+//import { useisInView } from "react-intersection-observer";
 const LastSec = () => {
   const [slider, setSlider] = useState(null);
-  const { ref, inView } = useInView({
+  /*const { ref, isInView } = useisInView({
     threshold: 0,
     rootMargin: "50px",
-  });
-  //const ref = useRef(null);
-  //const isInView = useInView(ref, { once: true });
+  });*/
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const settings = {
     infinite: true,
@@ -37,8 +37,8 @@ const LastSec = () => {
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
     >
       <Text
-        transform={inView ? "none" : "translateY(-50px)"}
-        opacity={inView ? "1" : "0"}
+        transform={isInView ? "none" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
         fontSize="2.5rem"
@@ -48,8 +48,8 @@ const LastSec = () => {
         200+ HAPPY FAMILIES & COUNTING...
       </Text>
       <Box
-        transform={inView ? "none" : "translateX(100px)"}
-        opacity={inView ? "1" : "0"}
+        transform={isInView ? "none" : "translateX(100px)"}
+        opacity={isInView ? "1" : "0"}
         transition="all 2s 2s"
         position={"relative"}
         height={"100%"}
