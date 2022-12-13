@@ -43,7 +43,7 @@ const AddresSec = () => {
   }, [isInView, animateFlx, animateFade]);
 
   return (
-    <Flex ref={ref} w="100%" h="110vh" direction="column">
+    <Flex ref={ref} w="100%" h="100vh" direction="column">
       <Flex w="100%" h="100%" direction="column" align="center" justify="center">
         <MtnFlx
           as={Link}
@@ -70,10 +70,10 @@ const AddresSec = () => {
             transition={{ delay: 1, duration: 2, type: "just" }}
             w="100%"
             fontFamily="avenir"
-            fontSize="2.125rem"
+            fontSize="1.875rem"
             pb="1.563rem"
             lineHeight="2.563rem"
-            textAlign="left"
+            textAlign="center"
           >
             CORPORATE OFFICE
           </MtnHead>
@@ -130,10 +130,10 @@ const AddresSec = () => {
             transition={{ delay: 2, duration: 2, type: "just" }}
             w="100%"
             fontFamily="avenir"
-            fontSize="2.125rem"
+            fontSize="1.875rem"
             pb="1.563rem"
             lineHeight="2.563rem"
-            textAlign="left"
+            textAlign="center"
           >
             CHENNAI OFFICE
           </MtnHead>

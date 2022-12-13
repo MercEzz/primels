@@ -101,7 +101,7 @@ const Blog = () => {
           pos="absolute"
           textAlign="center"
           fontFamily="avenir"
-          fontSize="3rem"
+          fontSize="2.5rem"
           animation="fadein 1 1s linear"
         >
           BLOG

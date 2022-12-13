@@ -25,6 +25,18 @@ import spet2019 from "../news-and-media/PRIME-REALTY-REPORT/SEPTEMBER 2019.PNG";
 import oct2019 from "../news-and-media/PRIME-REALTY-REPORT/OCTOBER 2019.PNG";
 import nov2019 from "../news-and-media/PRIME-REALTY-REPORT/NOVEMBER 2019.PNG";
 import dec2019 from "../news-and-media/PRIME-REALTY-REPORT/DECEMBER 2019.PNG";
+import pdfOct2022 from "../news-and-media/PRIME-REALTY-REPORT/OCTOBER 2022.pdf";
+import pdfAug2022 from "../news-and-media/PRIME-REALTY-REPORT/august 2022.pdf";
+//import pdfFeb2022 from "../news-and-media/press/"
+import pdfJan2020 from "../news-and-media/PRIME-REALTY-REPORT/january 2020.pdf";
+import pdfApr2019 from "../news-and-media/PRIME-REALTY-REPORT/april 2019.pdf";
+import pdfMay2019 from "../news-and-media/PRIME-REALTY-REPORT/may 2019.pdf";
+import pdfJun2019 from "../news-and-media/PRIME-REALTY-REPORT/june 2019.pdf";
+import pdfJul2019 from "../news-and-media/PRIME-REALTY-REPORT/july 2019.pdf";
+import pdfSep2019 from "../news-and-media/PRIME-REALTY-REPORT/september 2019.pdf";
+import pdfOct2019 from "../news-and-media/PRIME-REALTY-REPORT/october 2019.pdf";
+import pdfNov2019 from "../news-and-media/PRIME-REALTY-REPORT/november 2019.pdf";
+import pdfDec2019 from "../news-and-media/PRIME-REALTY-REPORT/december 2019.pdf";
 const LastSec = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -40,6 +52,10 @@ const LastSec = () => {
     slidesToScroll: 1,
     pauseOnHover: false,
   };
+  const redirect =(loc) =>{
+    console.log(loc.target.id)
+    window.open(`${loc.target.id}`);
+  }
   return (
     <Flex
       ref={ref}
@@ -88,11 +104,12 @@ const LastSec = () => {
         />
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
-          {primeReport.map((prime) => (
+          {primeReport.map((prime,index) => (
             <Flex w="100%" h="100%" align="center" pos="relative">
               <Flex w="50%" h="100%">
                 <Flex w="100%">
                   <Image
+                    _hover={{cursor:"pointer"}} id={prime.location?prime.location:"no ID"} onClick={prime.location?(prime)=>redirect(prime):()=>console.log("no content")}
                     boxShadow="2px 4px 6px rgba(0,0,0, .2)"
                     key={prime.id}
                     w="100%"
@@ -151,7 +168,7 @@ const LastSec = () => {
                     <Text fontFamily="veralaRound" fontSize="1.25rem">
                       Company Newsletter
                     </Text>
-                    <Text fontFamily="veralaRound" fontSize="1.25rem">
+                    <Text _hover={{cursor:"pointer"}} id={prime.location?prime.location:"no ID"} onClick={prime.location?(prime)=>redirect(prime):()=>console.log("no content")} fontFamily="veralaRound" fontSize="1.25rem">
                       READ NOW
                     </Text>
                   </Flex>
@@ -221,60 +238,72 @@ const primeReport = [
     img: "/images/news-and-media/PRIME-REALTY-REPORT/OCTOBER  2022.PNG",
     month: "OCTOBER 2022",
     prevmonth: "AUGUST 2022",
+    location:pdfOct2022,
   },
   {
     img: aug2022,
     month: "AUGUST 2022",
     prevmonth: "FEBRUARY 2020",
+    location:pdfAug2022,
   },
   {
     img: "/images/news-and-media/PRIME-REALTY-REPORT/FEBRUARY 2020.PNG",
     month: "FEBRUARY 2020",
     prevmonth: "JANUARY 2020",
+    location:null,
   },
   {
     img: jan2020,
     month: "JANUARY 2020",
     prevmonth: "DECEMBER 2019",
+    location:pdfJan2020,
   },
   {
     img: dec2019,
     month: "DECEMBER 2019",
     prevmonth: "NOVEMBER 2019",
+    location:pdfDec2019,
   },
   {
     img: nov2019,
     month: "NOVEMBER 2019",
     prevmonth: "OCTOBER 2019",
+    location:pdfNov2019,
   },
   {
     img: oct2019,
     month: "OCTOBER 2019",
     prevmonth: "SEPTEMBER 2019",
+    location:pdfOct2019,
   },  
   {
     img: spet2019,
     month: "SEPTEMBER 2019",
     prevmonth: "JULY 2019",
+    location:pdfSep2019,
   },
   {
     img: july2019,
     month: "JULY 2019",
     prevmonth: "JUNE 2019",
+    location:pdfJul2019,
   },
   {
     img: june2019,
     month: "JUNE 2019",
     prevmonth: "MAY 2019",
+    location:pdfJun2019,
   },
   {
     img: may2019,
     month: "MAY 2019",
     prevmonth: "APRIL 2019",
+    location:pdfMay2019,
   },
   {
     img: april2019,
     month: "APRIL 2019",
     prevmonth: "MAY 2019",
+    location:pdfApr2019,
   },
 ];

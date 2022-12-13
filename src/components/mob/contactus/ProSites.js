@@ -37,7 +37,7 @@ const ProSites = () => {
       direction="column"
       w="100%"
       h="100%"
-      pt="6.25rem"
+      pt="3.125rem"
       pb="3.125rem"
       px="1rem"
       align="center"
@@ -50,10 +50,10 @@ const ProSites = () => {
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
-        fontSize="2rem"
-        lineHeight="3.625rem"
+        textAlign="center"
+        fontSize="2.125rem"
       >
-        OUR PROJECT SITES
+        OUR <br/>PROJECT SITES
       </MtnHd>
       <MtnFlx
         direction="column"
@@ -61,7 +61,7 @@ const ProSites = () => {
         animate={animateFade}
         transition={{ delay: 2, duration: 2, type: "just" }}
         w="100%"
-        mt="3.125rem"
+        mt="1.875rem"
         mb="3.125rem"
         // px="6.25rem"
         justify="center"
@@ -80,7 +80,7 @@ const ProSites = () => {
             w="18.75rem"
             src="/images/contactus/Asset-1.png"
           />
-          <Text fontFamily="veralaRound" fontSize="1rem">
+          <Text fontFamily="veralaRound" fontSize="1rem" mb="0.938rem">
             V no.76, Peruncheri, Ponneri <br /> Opposite Velammal International{" "}
             <br />
             School,
@@ -102,7 +102,7 @@ const ProSites = () => {
             w="18.75rem"
             src="/images/contactus/Asset-2.png"
           />
-          <Text fontFamily="veralaRound" fontSize="1rem">
+          <Text fontFamily="veralaRound" fontSize="1rem" mb="0.938rem">
             V. No. 76 , Thatchoor 1,
             <br /> Perucheri, Ponneri,
             <br /> Taluk, Thiruvallur District, <br />
@@ -135,10 +135,10 @@ const ProSites = () => {
         transition={{ delay: 2, duration: 2, type: "just" }}
         mb="3.125rem"
       >
-        <Text fontFamily="veralaRound" fontSize="1.25rem" lineHeight="1.5rem">
-          For consultancy related queries, email us at
+        <Text fontFamily="veralaRound" fontSize="1.25rem"  textAlign="center">
+          For consultancy related queries,<br/>email us at
         </Text>
-        <Heading fontFamily="avenir" fontSize="1.5rem" lineHeight="41px">
+        <Heading fontFamily="avenir" fontSize="1.5rem">
           info@primelifespace.com
         </Heading>
       </MtnStk>
@@ -147,10 +147,10 @@ const ProSites = () => {
         animate={animateFade}
         transition={{ delay: 2, duration: 2, type: "just" }}
       >
-        <Text fontFamily="veralaRound" fontSize="1.25rem" lineHeight="1.5rem">
-          For procurement related queries, email us at
+        <Text fontFamily="veralaRound" fontSize="1.25rem" textAlign="center">
+          For procurement related queries,<br/>email us at
         </Text>
-        <Heading fontFamily="avenir" fontSize="1.5rem" lineHeight="2.563rem">
+        <Heading fontFamily="avenir" fontSize="1.5rem">
           purchase@primelifespace.com
         </Heading>
       </MtnStk>
