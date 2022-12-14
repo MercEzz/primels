@@ -50,12 +50,13 @@ const MainSec = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 2, type: "just" }}
         pos={dis ? "static" : "fixed"}
-        fontSize="1.875rem"
+        fontSize="1.25rem"
         fontFamily="avenir"
         textTransform="uppercase"
         textAlign="center"
         zIndex="10"
         color={dis ? "black" : "white"}
+        px="1rem"
       >
         where opportunities pave the way for <br />
         incredible rewards

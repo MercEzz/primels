@@ -158,7 +158,7 @@ const ChannelForm = () => {
         {" "}
         <Heading
           pos={dis ? "static" : "fixed"}
-          fontSize="1.8rem"
+          fontSize="1.25rem"
           fontFamily="avenir"
           textTransform="uppercase"
           textAlign="center"
