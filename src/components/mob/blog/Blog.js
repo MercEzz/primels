@@ -29,6 +29,8 @@ import key from "../../blog imgs/maria-ziegler-jJnZg7vBfMs-unsplash.jpg";
 import kidbed from "../../blog imgs/toa-heftiba-bcLE7reXFLM-unsplash.jpg";
 import sunlight from "../../blog imgs/jared-rice-NTyBbu66_SI-unsplash.jpg";
 import spacejoy from "../../blog imgs/boxes.jpg";
+import bgBox from "../../careers imgs/bg-box.jpg"
+//"../careers imgs/bg-box.jpg";
 // icons
 import {
   AiOutlineYoutube,
@@ -533,17 +535,22 @@ const BlogForm = () => {
         w="100%"
         h="100%"
         px="0.938rem"
-        pt="1.563rem"
+        pt="1.875rem"
         pb="1.875rem"
         align="center"
         justify="center"
+        bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
+        bgRepeat="no-repeat"
+        bgPos="center"
+        bgSize="cover"
       >
         {" "}
         <Heading
           fontFamily="goudy"
           fontWeight="400"
-          fontSize="1.5rem"
+          fontSize="2.125rem"
           pb="1.563rem"
+          
         >
           GET IN TOUCH
         </Heading>
@@ -551,12 +558,12 @@ const BlogForm = () => {
           <FormControl isRequired>
             {" "}
             <HStack w="100%" justify="space-between" pb="0.938rem">
-              <FormLabel fontFamily="avenir" fontSize="1rem" fontWeight="bold">
+              <FormLabel fontFamily="avenir" fontSize="0.875rem" fontWeight="bold">
                 NAME
               </FormLabel>
               <Input
                 fontSize="1rem"
-                fontFamily="avenir"
+                fontFamily="veralaRound"
                 lineHeight="1.5rem"
                 w="13.125rem"
                 h="2.188rem"
@@ -568,12 +575,12 @@ const BlogForm = () => {
           <FormControl isRequired>
             {" "}
             <HStack w="100%" justify="space-between" pb="0.938rem">
-              <FormLabel fontFamily="avenir" fontSize="1rem" fontWeight="bold">
+              <FormLabel fontFamily="avenir" fontSize="0.875rem" fontWeight="bold">
                 PHONE
               </FormLabel>
               <Input
                 fontSize="1rem"
-                fontFamily="avenir"
+                fontFamily="veralaRound"
                 lineHeight="1.5rem"
                 w="13.125rem"
                 h="2.188rem"
@@ -584,12 +591,12 @@ const BlogForm = () => {
           </FormControl>
           <FormControl>
             <HStack w="100%" justify="space-between" pb="0.938rem">
-              <FormLabel fontFamily="avenir" fontSize="1rem" fontWeight="bold">
+              <FormLabel fontFamily="avenir" fontSize="0.875rem" fontWeight="bold">
                 EMAIL
               </FormLabel>
               <Input
                 fontSize="1rem"
-                fontFamily="avenir"
+                fontFamily="veralaRound"
                 lineHeight="1.5rem"
                 w="13.125rem"
                 h="2.188rem"
@@ -600,12 +607,12 @@ const BlogForm = () => {
           </FormControl>
           <FormControl>
             <HStack w="100%" align="flex-start" justify="space-between">
-              <FormLabel fontFamily="avenir" fontSize="1rem" fontWeight="bold">
+              <FormLabel fontFamily="avenir" fontSize="0.875rem" fontWeight="bold">
                 MESSAGE
               </FormLabel>
               <Textarea
                 fontSize="1rem"
-                fontFamily="avenir"
+                fontFamily="veralaRound"
                 lineHeight="1.5rem"
                 w="13.125rem"
                 h="4.375rem"
