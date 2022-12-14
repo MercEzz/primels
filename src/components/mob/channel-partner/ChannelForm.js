@@ -174,7 +174,7 @@ const ChannelForm = () => {
           initial={{ opacity: 0 }}
           animate={animateFlx}
           transition={{ duration: 2, type: "just" }}
-          // px="3.125rem"
+          // px="2.5rem"
           pt={dis ? "1.563rem" : "9.375rem"}
           fontFamily="veralaRound"
           fontSize="1rem"
@@ -213,7 +213,7 @@ const ChannelForm = () => {
               <Flex w="100%" direction="column">
                 <Flex justify="space-between" mb="0.938rem">
                   <FormLabel
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontFamily="avenir"
                     
                     fontWeight="700"
@@ -230,10 +230,10 @@ const ChannelForm = () => {
                     value={companyName}
                     type="text"
                     fontSize="1rem"
-                    fontFamily="avenir"
+                    fontFamily="veralaRound"
                     
-                    w="13.75rem"
-                    h="3.125rem"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -241,10 +241,9 @@ const ChannelForm = () => {
                 <FormControl isRequired>
                   <Flex justify="space-between" mb="0.938rem">
                     <FormLabel
-                      pt="4"
-                      fontSize="1rem"
+                      fontSize="0.875rem"
                       fontFamily="avenir"
-                      
+                      pt="2"
                       fontWeight="700"
                       htmlFor="nameOfOwner"
                     >
@@ -257,9 +256,9 @@ const ChannelForm = () => {
                       value={nameOfOwner}
                       type="text"
                       fontSize="1rem"
-                      fontFamily="avenir"
-                      w="13.75rem"
-                      h="3.125rem"
+                      fontFamily="veralaRound"
+                      w="11.75rem"
+                      h="2.5rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
                       isRequired
@@ -269,7 +268,7 @@ const ChannelForm = () => {
                 {/* left-bottom */}
                 <FormControl isRequired>
                   <FormLabel
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontFamily="avenir"
                     fontWeight="700"
                   >
@@ -282,7 +281,7 @@ const ChannelForm = () => {
                   >
                     <VStack align="flex-start">
                       <Checkbox
-                        size="lg"
+                        size="md"
                         name="individual"
                         value={individual}
                         checked={individual}
@@ -296,7 +295,7 @@ const ChannelForm = () => {
                         Individual
                       </Checkbox>
                       <Checkbox
-                        size="lg"
+                        size="md"
                         name="Proprietorship"
                         value={proprietoship}
                         checked={proprietoship}
@@ -310,7 +309,7 @@ const ChannelForm = () => {
                         Proprietorship
                       </Checkbox>
                       <Checkbox
-                        size="lg"
+                        size="md"
                         name="Partnership"
                         value={partnership}
                         checked={partnership}
@@ -326,7 +325,7 @@ const ChannelForm = () => {
                     </VStack>
                     <VStack align="flex-start" pr="10">
                       <Checkbox
-                        size="lg"
+                        size="md"
                         name="Private Ltd. Co."
                         value={privateLtdCo}
                         checked={privateLtdCo}
@@ -340,7 +339,7 @@ const ChannelForm = () => {
                         Private Ltd. Co.
                       </Checkbox>
                       <Checkbox
-                        size="lg"
+                        size="md"
                         name="Public Ltd. Co."
                         value={publicLtdCo}
                         checked={publicLtdCo}
@@ -354,7 +353,7 @@ const ChannelForm = () => {
                         Public Ltd. Co.
                       </Checkbox>
                       <Checkbox
-                        size="lg"
+                        size="md"
                         name="LLP"
                         value={llp}
                         checked={llp}
@@ -375,7 +374,7 @@ const ChannelForm = () => {
                   <Flex align="center" justify="space-between" mb="0.938rem">
                       <FormLabel
                         pt="2"
-                        fontSize="1rem"
+                        fontSize="0.875rem"
                         fontFamily="avenir"
                         fontWeight="700"
                         htmlFor="officeAdd"
@@ -390,8 +389,8 @@ const ChannelForm = () => {
                         type="text"
                         fontSize="1rem"
                         fontFamily="avenir"
-                        w="13.75rem"
-                        h="3.125rem"
+                        w="11.75rem"
+                        h="2.5rem"
                         bgColor="#E5E5E5"
                         borderRadius="none"
                         isRequired
@@ -402,7 +401,7 @@ const ChannelForm = () => {
                   <HStack w="100%" justify="space-between" pb="15px">
                       <FormLabel
                         pt="2"
-                        fontSize="1rem"
+                        fontSize="0.875rem"
                         fontFamily="avenir"
                         fontWeight="700"
                         htmlFor="mobileNo"
@@ -426,8 +425,8 @@ const ChannelForm = () => {
                         }}
                         fontSize="1rem"
                         fontFamily="avenir"
-                        w="13.75rem"
-                        h="3.125rem"
+                        w="11.75rem"
+                        h="2.5rem"
                         bgColor="#E5E5E5"
                         borderRadius="none"
                         isRequired
@@ -437,7 +436,7 @@ const ChannelForm = () => {
                   <Flex align="center" justify="space-between" mb="0.938rem">
                     <FormLabel
                       pt="2"
-                      fontSize="1rem"
+                      fontSize="0.875rem"
                       fontFamily="avenir"
                       fontWeight="700"
                       htmlFor="website"
@@ -452,8 +451,8 @@ const ChannelForm = () => {
                       type="url"
                       fontSize="1rem"
                       fontFamily="avenir"
-                      w="13.75rem"
-                      h="3.125rem"
+                      w="11.75rem"
+                      h="2.5rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
                     />
@@ -462,7 +461,7 @@ const ChannelForm = () => {
                     <Flex align="center" justify="space-between" mb="0.938rem">
                       <FormLabel
                         pt="2"
-                        fontSize="1rem"
+                        fontSize="0.875rem"
                         fontFamily="avenir"
                         fontWeight="700"
                         htmlFor="email"
@@ -477,8 +476,8 @@ const ChannelForm = () => {
                         type="email"
                         fontSize="1rem"
                         fontFamily="avenir"
-                        w="13.75rem"
-                        h="3.125rem"
+                        w="11.75rem"
+                        h="2.5rem"
                         bgColor="#E5E5E5"
                         borderRadius="none"
                         isRequired
@@ -493,7 +492,7 @@ const ChannelForm = () => {
             <Flex w="100%" direction="column">
                 <Flex justify="space-between" mb="0.938rem">
                   <FormLabel
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontFamily="avenir"
                     fontWeight="700"
                     htmlFor="yourFocusLocationArea"
@@ -510,15 +509,15 @@ const ChannelForm = () => {
                     size="lg"
                     fontSize="1rem"
                     fontFamily="avenir"
-                    w="13.75rem"
-                    h="3.125rem"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </Flex>
                 <FormControl isRequired>
                   <FormLabel
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                     fontFamily="avenir"
                     textAlign="left"
@@ -536,7 +535,7 @@ const ChannelForm = () => {
                   >
                     <VStack align="flex-start">
                       <Checkbox
-                        size="lg"
+                        size="md"
                         name="Residential"
                         value={residential}
                         checked={residential}
@@ -550,7 +549,7 @@ const ChannelForm = () => {
                         Residential
                       </Checkbox>
                       <Checkbox
-                        size="lg"
+                        size="md"
                         name="Retail"
                         value={retail}
                         checked={retail}
@@ -564,7 +563,7 @@ const ChannelForm = () => {
                         Retail
                       </Checkbox>
                       <Checkbox
-                        size="lg"
+                        size="md"
                         name="Others"
                         value={others}
                         checked={others}
@@ -580,7 +579,7 @@ const ChannelForm = () => {
                     </VStack>
                     <VStack align="flex-start" pr="10">
                       <Checkbox
-                        size="lg"
+                        size="md"
                         name="Commercial"
                         value={commercial}
                         checked={commercial}
@@ -594,7 +593,7 @@ const ChannelForm = () => {
                         Commercial
                       </Checkbox>
                       <Checkbox
-                        size="lg"
+                        size="md"
                         name="Industrial Land"
                         value={industrialLand}
                         checked={industrialLand}
@@ -618,14 +617,14 @@ const ChannelForm = () => {
                   fontSize="1rem"
                   fontFamily="avenir"
                   w="100%"
-                  h="3.125rem"
+                  h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
                 <Flex w="100%" direction="column" mt="1.563rem">
                   <Flex align="center" justify="space-between" pb="0.938rem">
                     <FormLabel
-                      fontSize="1rem"
+                      fontSize="0.875rem"
                       fontFamily="avenir"
                       fontWeight="700"
                       htmlFor="gstNo"
@@ -640,8 +639,8 @@ const ChannelForm = () => {
                       type="text"
                       fontSize="1rem"
                       fontFamily="avenir"
-                      w="13.75rem"
-                      h="3.125rem"
+                      w="11.75rem"
+                      h="2.5rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
                     />
@@ -649,7 +648,7 @@ const ChannelForm = () => {
                   <Flex align="center" justify="space-between" pb="0.938rem">
                     <FormLabel
                       pt="2"
-                      fontSize="1rem"
+                      fontSize="0.875rem"
                       fontFamily="avenir"
                       fontWeight="700"
                       htmlFor="reraNo"
@@ -664,8 +663,8 @@ const ChannelForm = () => {
                       type="text"
                       fontSize="1rem"
                       fontFamily="avenir"
-                      w="13.75rem"
-                      h="3.125rem"
+                      w="11.75rem"
+                      h="2.5rem"
                       bgColor="#E5E5E5"
                       borderRadius="none"
                     />
@@ -674,10 +673,10 @@ const ChannelForm = () => {
                     <FormLabel
                       fontWeight="bold"
                       htmlFor="brokerAssoc"
-                      fontSize="1rem"
+                      fontSize="0.875rem"
                       fontFamily="avenir"
                       mt="0.625rem"
-                      textAlign="left"
+                      textAlign="center"
                       pb="0.938rem"
                     >
                       AFFILIATION TO ANY BROKER ASSOCIATION
@@ -688,10 +687,10 @@ const ChannelForm = () => {
                       fontSize="1.25rem"
                       pr="8rem"
                     >
-                      <Radio value="yes" size="lg">
+                      <Radio value="yes" size="md">
                         Yes
                       </Radio>
-                      <Radio value="no" size="lg">
+                      <Radio value="no" size="md">
                         No
                       </Radio>
                     </Flex>
@@ -708,7 +707,7 @@ const ChannelForm = () => {
             >
               <FormLabel
                 pl="0.625rem"
-                fontSize="1rem"
+                fontSize="0.875rem"
                 fontFamily="avenir"
                 fontWeight="700"
                 htmlFor="identityDoc"
@@ -727,8 +726,8 @@ const ChannelForm = () => {
                     });
                   }}
                   type="file"
-                  w="13.75rem"
-                  h="3.125rem"
+                  w="11.75rem"
+                  h="2.5rem"
                   p="2"
                   bgColor="#E5E5E5"
                   borderRadius="none"
@@ -754,10 +753,10 @@ const ChannelForm = () => {
                 AUTHORISED SIGNATORIES
               </Heading>
               <Flex direction="column">
-              <HStack w="100%" justify="space-between" pb="15px">
+              <HStack w="100%" justify="space-between" pb="15px" pr="1rem">
                   <FormLabel
                     pl="0.625rem"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontFamily="avenir"
                     
                     fontWeight="700"
@@ -774,15 +773,15 @@ const ChannelForm = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     w="15rem"
-                    h="3.125rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </HStack>
-                <Flex mb="0.938rem" justify="space-between" align="center">
+                <Flex mb="0.938rem" justify="space-between" align="center" pr="1rem">
                   <FormLabel
                     pl="0.625rem"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontFamily="avenir"
                     
                     fontWeight="700"
@@ -799,7 +798,7 @@ const ChannelForm = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     w="15rem"
-                    h="3.125rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -807,10 +806,10 @@ const ChannelForm = () => {
               </Flex>
               <Flex direction="column" align="center"
               justify="center">
-                <HStack w="100%" justify="space-between" pb="15px">
+                <HStack w="100%" justify="space-between" pb="15px" pr="1rem">
                   <FormLabel
                     pl="0.625rem"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontFamily="avenir"
                     fontWeight="700"
                     htmlFor="name2"
@@ -826,15 +825,15 @@ const ChannelForm = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     w="15rem"
-                    h="3.125rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </HStack>
-                <Flex justify="space-between" align="center">
+                <Flex justify="space-between" align="center" pr="1rem">
                   <FormLabel
                     pl="0.625rem"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontFamily="avenir"
                     
                     fontWeight="700"
@@ -851,7 +850,7 @@ const ChannelForm = () => {
                     fontSize="1rem"
                     fontFamily="avenir"
                     w="15rem"
-                    h="3.125rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
