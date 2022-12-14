@@ -67,7 +67,8 @@ const GetInTouch = () => {
       w="100%"
       h="100%"
       // pt="3.125rem"
-      py="3.125rem"
+      pb="3.125rem"
+      pt="1.875rem"
       px="1rem"
       align="center"
       justify="center"
@@ -80,7 +81,7 @@ const GetInTouch = () => {
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
-        fontSize="2.5rem"
+        fontSize="2.125rem"
       >
         GET IN TOUCH
       </MtnHd>
@@ -129,7 +130,7 @@ const GetInTouch = () => {
                   value={name}
                   onChange={onChange}
                   type="text"
-                  w="13.75rem"
+                  w="11.75rem"
                   h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
@@ -156,7 +157,7 @@ const GetInTouch = () => {
                   value={email}
                   onChange={onChange}
                   type="email"
-                  w="13.75rem"
+                  w="11.75rem"
                   h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
@@ -184,7 +185,7 @@ const GetInTouch = () => {
                   value={phoneNo}
                   onChange={onChange}
                   type="number"
-                  w="13.75rem"
+                  w="11.75rem"
                   h="2.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
@@ -209,7 +210,7 @@ const GetInTouch = () => {
                   value={message}
                   onChange={onChange}
                   maxLength="200"
-                  w="13.75rem"
+                  w="11.75rem"
                   h="7.5rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"

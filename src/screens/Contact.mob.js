@@ -15,7 +15,7 @@ const MobContact = () => {
   });
   return (
     <>
-      <SideVector />
+      {/*<SideVector />*/}
       <ContactMain />
       <AddresSec />
       <ProSites />
