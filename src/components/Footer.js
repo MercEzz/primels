@@ -1,5 +1,6 @@
 import {
   Button,
+  Divider,
   Flex,
   FormControl,
   Heading,
@@ -8,6 +9,7 @@ import {
   Input,
   Link,
   Radio,
+  Spacer,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -31,10 +33,10 @@ const Footer = () => {
       bgColor="black"
       color="white"
       justify="center"
-      px="12"
+      
       pb="1.563rem"
     >
-      <Flex py="10">
+      <Flex py="10" pos="relative">
         <Flex direction="column" px="10" w="30%">
           Logo
           <Flex align="flex-start" py="6">
@@ -69,7 +71,7 @@ const Footer = () => {
             </Flex>
           </VStack>
         </Flex>
-        <Flex direction="column" px="10" w="25%">
+        <Flex direction="column" px="10" w="20%">
           <Heading fontSize="20px" fontFamily="veralaRound" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
             Who we are
           </Heading>
@@ -95,8 +97,8 @@ const Footer = () => {
             </Link>
           </VStack>
         </Flex>
-        <Flex direction="column" px="10" w="45%">
-          <Flex align={"flex-start"}>
+        <Flex direction="column" px="10" w="50%"  >
+          <Flex align={"flex-start"} pos="relative">
           <Flex direction="column" px="10" w="100%">
           <Heading fontSize="20px" fontFamily="avenir" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
             Projects
@@ -112,16 +114,19 @@ const Footer = () => {
             <Link fontSize="1rem">COMMERCIAL PROPERTIES</Link>
           </VStack>
           </Flex>
-          <Flex direction="column" px="10" w="100%" ml="auto">
-          <Heading fontSize="20px" fontFamily="veralaRound" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
-            Invest
-          </Heading>
+          <Flex direction="column" px="10" w="100%" pos="relative">
+          
           <VStack
             align="flex-start"
             fontFamily="veralaRound"
             fontWeight="400"
             pt="4px"
+            pos="absolute"
+            right="0"
             >
+              <Heading fontSize="20px" fontFamily="veralaRound" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
+            Invest
+          </Heading>
             <Link fontSize="1rem">WHY INVEST</Link>
             <Link fontSize="1rem">8% ROI ON HOMES</Link>
             <Link fontSize="1rem">7% ROI ON HOMES</Link>
@@ -129,7 +134,7 @@ const Footer = () => {
           </Flex>
           </Flex>
           <Flex direction="column" px="10" w="100%">
-          <Heading fontSize="20px" fontFamily="avenir" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
+          <Heading fontSize="20px" fontFamily="avenir" fontWeight="600" borderBottom="2px solid #DFBD69" textColor={"#DFBD69"}>
             Helpful Links
           </Heading>
           <Flex pt="4px" align={"flex-start"}>
@@ -156,12 +161,13 @@ const Footer = () => {
           </Flex>
         </Flex>
       </Flex>
-      <hr style={{color:"white"}}/>
-      <Flex direction="row" align="center" py="1.563rem">
+      <Divider/>
+      <Flex align="center" py="1.563rem" px="100px" w="100%">
         <Text fontSize="1rem" fontWeight="600">
         &#169; 2022. PRIMELIFESPACE PVT. LTD.
         </Text>
-        <HStack ml="auto" mr="100px">
+        <Spacer/>
+        <HStack>
           <Icon w="14" h="14" px="1" as={AiFillInstagram} />
           <Icon w="14" h="14" px="1" as={AiFillLinkedin} />
           <Icon w="12" h="12" px="1" as={BsFacebook} />
