@@ -388,7 +388,7 @@ const ChannelForm = () => {
                         value={officeAdd}
                         type="text"
                         fontSize="1rem"
-                        fontFamily="avenir"
+                        fontFamily="veralaRound"
                         w="11.75rem"
                         h="2.5rem"
                         bgColor="#E5E5E5"
@@ -450,7 +450,7 @@ const ChannelForm = () => {
                       onChange={(e) => onChange(e)}
                       type="url"
                       fontSize="1rem"
-                      fontFamily="avenir"
+                      fontFamily="veralaRound"
                       w="11.75rem"
                       h="2.5rem"
                       bgColor="#E5E5E5"
@@ -475,7 +475,7 @@ const ChannelForm = () => {
                         onChange={(e) => onChange(e)}
                         type="email"
                         fontSize="1rem"
-                        fontFamily="avenir"
+                        fontFamily="veralaRound"
                         w="11.75rem"
                         h="2.5rem"
                         bgColor="#E5E5E5"
@@ -508,7 +508,7 @@ const ChannelForm = () => {
                     type="text"
                     size="lg"
                     fontSize="1rem"
-                    fontFamily="avenir"
+                    fontFamily="veralaRound"
                     w="11.75rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
@@ -615,7 +615,7 @@ const ChannelForm = () => {
                   value={othersTxt}
                   onChange={(e) => onChange(e)}
                   fontSize="1rem"
-                  fontFamily="avenir"
+                  fontFamily="veralaRound"
                   w="100%"
                   h="2.5rem"
                   bgColor="#E5E5E5"
@@ -638,7 +638,7 @@ const ChannelForm = () => {
                       onChange={(e) => onChange(e)}
                       type="text"
                       fontSize="1rem"
-                      fontFamily="avenir"
+                      fontFamily="veralaRound"
                       w="11.75rem"
                       h="2.5rem"
                       bgColor="#E5E5E5"
@@ -662,7 +662,7 @@ const ChannelForm = () => {
                       onChange={(e) => onChange(e)}
                       type="text"
                       fontSize="1rem"
-                      fontFamily="avenir"
+                      fontFamily="veralaRound"
                       w="11.75rem"
                       h="2.5rem"
                       bgColor="#E5E5E5"
@@ -771,7 +771,7 @@ const ChannelForm = () => {
                     onChange={(e) => onChange(e)}
                     type="text"
                     fontSize="1rem"
-                    fontFamily="avenir"
+                    fontFamily="veralaRound"
                     w="15rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
@@ -796,7 +796,7 @@ const ChannelForm = () => {
                     onChange={(e) => onChange(e)}
                     type="text"
                     fontSize="1rem"
-                    fontFamily="avenir"
+                    fontFamily="veralaRound"
                     w="15rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
@@ -823,7 +823,7 @@ const ChannelForm = () => {
                     onChange={(e) => onChange(e)}
                     type="text"
                     fontSize="1rem"
-                    fontFamily="avenir"
+                    fontFamily="veralaRound"
                     w="15rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
@@ -848,7 +848,7 @@ const ChannelForm = () => {
                     onChange={(e) => onChange(e)}
                     type="text"
                     fontSize="1rem"
-                    fontFamily="avenir"
+                    fontFamily="veralaRound"
                     w="15rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
