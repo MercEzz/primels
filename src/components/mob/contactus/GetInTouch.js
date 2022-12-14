@@ -117,7 +117,7 @@ const GetInTouch = () => {
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="1rem"
+                  fontSize="0.875rem"
                   htmlFor="name"
                 >
                   NAME
@@ -146,7 +146,7 @@ const GetInTouch = () => {
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="1rem"
+                  fontSize="0.875rem"
                   htmlFor="email"
                 >
                   EMAIL
@@ -172,7 +172,7 @@ const GetInTouch = () => {
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="1rem"
+                  fontSize="0.875rem"
                   htmlFor="phoneNo"
                 >
                   PHONE NO.
@@ -199,7 +199,7 @@ const GetInTouch = () => {
                 <FormLabel
                   fontFamily="avenir"
                   fontWeight="700"
-                  fontSize="1rem"
+                  fontSize="0.875rem"
                   htmlFor="message"
                 >
                   MESSAGE
