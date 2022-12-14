@@ -111,7 +111,7 @@ function App() {
           </Routes>
           
         </Flex>
-        <BottomMenu/>
+        {/*<BottomMenu/>*/}
         {/* <Footer /> */}
       </BrowserRouter>
     );}

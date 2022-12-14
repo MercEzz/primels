@@ -14,6 +14,7 @@ import {
   Radio,
   Select,
   HStack,
+  Spacer,
 } from "@chakra-ui/react";
 import "./drop.css";
 import React, { useRef, useState, useEffect } from "react";
@@ -178,7 +179,7 @@ const ChannelForm = () => {
           pt={dis ? "1.563rem" : "9.375rem"}
           fontFamily="veralaRound"
           fontSize="1rem"
-                mb="3.125rem"
+                mb="1.875rem"
         >
           Your association with us is extremely valuable to us. We support our
           Channel Partners to catalyst their growth with ours. Join our network
@@ -211,11 +212,12 @@ const ChannelForm = () => {
             >
               {/* top - left */}
               <Flex w="100%" direction="column">
-                <Flex justify="space-between" mb="0.938rem">
+                <Flex justify="space-between" mb="0.463rem" >
                   <FormLabel
+                    overflow="hidden"
                     fontSize="0.875rem"
                     fontFamily="avenir"
-                    
+                    h="2.5rem"
                     fontWeight="700"
                     htmlFor="companyName"
                   >
@@ -606,6 +608,7 @@ const ChannelForm = () => {
                       >
                         Industrial Land
                       </Checkbox>
+                      <Spacer/>
                     </VStack>
                   </Flex>
                 </FormControl>
@@ -621,7 +624,7 @@ const ChannelForm = () => {
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
-                <Flex w="100%" direction="column" mt="1.563rem">
+                <Flex w="100%" direction="column" mt="0.938rem">
                   <Flex align="center" justify="space-between" pb="0.938rem">
                     <FormLabel
                       fontSize="0.875rem"
@@ -719,6 +722,7 @@ const ChannelForm = () => {
                 <Input
                   id="identityDoc"
                   name="identityDoc"
+                  fontSize="0.875rem"
                   value={identityDoc}
                   onChange={(e) => {
                     setValues(...initialValues, {
@@ -726,13 +730,13 @@ const ChannelForm = () => {
                     });
                   }}
                   type="file"
-                  w="11.75rem"
+                  w="13.75rem"
                   h="2.5rem"
-                  p="2"
+                  p="0.3rem"
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
-                <Text
+                {/*<Text
                   fontSize="1rem"
                   fontFamily="veralaRound"
                   pt="0.938rem"
@@ -740,7 +744,7 @@ const ChannelForm = () => {
                 >
                   <Icon as={BsUpload} mr="0.875rem" />
                   Upload File
-                </Text>
+                </Text>*/}
               </Flex>
             </Flex>
 
@@ -752,13 +756,11 @@ const ChannelForm = () => {
               >
                 AUTHORISED SIGNATORIES
               </Heading>
-              <Flex direction="column">
-              <HStack w="100%" justify="space-between" pb="15px" pr="1rem">
+              <Flex w="100%" direction="column" mt="0.938rem">
+                  <Flex align="center" justify="space-between" pb="0.938rem">
                   <FormLabel
-                    pl="0.625rem"
                     fontSize="0.875rem"
                     fontFamily="avenir"
-                    
                     fontWeight="700"
                     htmlFor="name1"
                   >
@@ -772,18 +774,17 @@ const ChannelForm = () => {
                     type="text"
                     fontSize="1rem"
                     fontFamily="veralaRound"
-                    w="15rem"
+                    w="11.75rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
-                </HStack>
-                <Flex mb="0.938rem" justify="space-between" align="center" pr="1rem">
+                </Flex>
+                <Flex mb="0.938rem" justify="space-between" align="left">
                   <FormLabel
-                    pl="0.625rem"
                     fontSize="0.875rem"
                     fontFamily="avenir"
-                    
+                    pt="2"
                     fontWeight="700"
                     htmlFor="designation1"
                   >
@@ -797,18 +798,16 @@ const ChannelForm = () => {
                     type="text"
                     fontSize="1rem"
                     fontFamily="veralaRound"
-                    w="15rem"
+                    w="11.75rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </Flex>
               </Flex>
-              <Flex direction="column" align="center"
-              justify="center">
-                <HStack w="100%" justify="space-between" pb="15px" pr="1rem">
+              <Flex w="100%" direction="column">
+                  <Flex align="center" justify="space-between" pb="0.938rem">
                   <FormLabel
-                    pl="0.625rem"
                     fontSize="0.875rem"
                     fontFamily="avenir"
                     fontWeight="700"
@@ -824,18 +823,17 @@ const ChannelForm = () => {
                     type="text"
                     fontSize="1rem"
                     fontFamily="veralaRound"
-                    w="15rem"
+                    w="11.75rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
-                </HStack>
-                <Flex justify="space-between" align="center" pr="1rem">
+                </Flex>
+                <Flex align="center" justify="space-between">
                   <FormLabel
-                    pl="0.625rem"
                     fontSize="0.875rem"
                     fontFamily="avenir"
-                    
+                    pt="2"
                     fontWeight="700"
                     htmlFor="designation2"
                   >
@@ -849,18 +847,18 @@ const ChannelForm = () => {
                     type="text"
                     fontSize="1rem"
                     fontFamily="veralaRound"
-                    w="15rem"
+                    w="11.75rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
                 </Flex>
-              </Flex>
+                </Flex>
             </Flex>
             <Button
               type="submit"
               mt="1.563rem"
-              mb="4.688rem"
+              mb="3.125rem"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
               color="white"
               fontSize="1rem"
@@ -898,17 +896,17 @@ const ChannelForm = () => {
         >
           {" "}
           <Select
-
             w="12.75rem"
             placeholder="SELECT PROJECT"
-            fontSize="1.125rem"
-            fontFamily="veralaRound"
+            fontSize="0.875rem"
+            fontFamily="avenir"
             bgColor="transparent"
             borderRadius="none"
             borderTop="0"
             borderLeft="0"
             borderRight="0"
-            borderBottom="3px solid"
+            
+            borderBottom="3px  solid"
             icon={<TriangleDownIcon width="18px" height="18px" />}
           >
             <option style={{ color: "black" }}>ARETE HOMES</option>
@@ -927,7 +925,7 @@ const ChannelForm = () => {
           cursor="pointer"
           fontFamily="avenir"
           fontWeight="bold"
-          fontSize="1.25rem"
+          fontSize="0.875rem"
         >
           <Icon
             as={AiOutlineDownload}
