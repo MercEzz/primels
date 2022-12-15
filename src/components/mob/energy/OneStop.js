@@ -63,7 +63,6 @@ const OneStop = () => {
             w="45%"
             direction="column"
             align="flex-start"
-            pb="1.562rem"
             pt="1.562rem"
           >
             <Flex w="100%" pb="0.937rem" align="center" justify="center">
@@ -104,7 +103,7 @@ const OneStop = () => {
               animate={animateHd}
               transition={{ duration: 2, type: "just" }}
               orientation="vertical"
-              h="5vh"
+              h="3.5vh"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
@@ -124,7 +123,7 @@ const OneStop = () => {
               transition={{ delay: 2.5, duration: 2, type: "just" }}
               display="flex"
               orientation="vertical"
-              h="28vh"
+              h="21vh"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
@@ -137,7 +136,7 @@ const OneStop = () => {
             w="45%"
             direction="column"
             align="flex-start"
-            pb="1.562rem"
+            
             pt="1.562rem"
           >
             <Flex w="100%" pb="0.937rem" align="center" justify="center">
@@ -177,7 +176,6 @@ const OneStop = () => {
             w="45%"
             direction="column"
             align="flex-start"
-            pb="1.562rem"
             pt="1.562rem"
           >
             <Flex w="100%" pb="0.937rem" align="center" justify="center">
@@ -229,7 +227,7 @@ const OneStop = () => {
               animate={animateHd}
               transition={{ delay: 1, duration: 2, type: "just" }}
               orientation="vertical"
-              h="2.5rem"
+              h="1.7rem"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
@@ -249,7 +247,7 @@ const OneStop = () => {
               transition={{ delay: 6.5, duration: 2, type: "just" }}
               display="flex"
               orientation="vertical"
-              h="73vh"
+              h="59vh"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
@@ -352,7 +350,7 @@ const OneStop = () => {
               animate={animateHd}
               transition={{ delay: 1.5, duration: 2, type: "just" }}
               orientation="vertical"
-              h="2.5rem"
+              h="1.7rem"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
@@ -374,7 +372,6 @@ const OneStop = () => {
             w="45%"
             direction="column"
             align="flex-start"
-            pb="1.562rem"
             pt="1.562rem"
           >
             <Flex w="100%" pb="0.937rem" align="center" justify="center">
