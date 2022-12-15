@@ -15,6 +15,7 @@ import {
   Select,
   HStack,
   Spacer,
+  Stack,
 } from "@chakra-ui/react";
 import "./drop.css";
 import React, { useRef, useState, useEffect } from "react";
@@ -281,7 +282,7 @@ const ChannelForm = () => {
                     fontFamily="veralaRound"
                     justify="space-between"
                   >
-                    <VStack align="flex-start">
+                    <Stack direction="column">
                       <Checkbox
                         size="md"
                         name="individual"
@@ -324,8 +325,8 @@ const ChannelForm = () => {
                       >
                         Partnership
                       </Checkbox>
-                    </VStack>
-                    <VStack align="flex-start" pr="10">
+                    </Stack>
+                    <Stack direction="column">
                       <Checkbox
                         size="md"
                         name="Private Ltd. Co."
@@ -368,7 +369,7 @@ const ChannelForm = () => {
                       >
                         LLP
                       </Checkbox>
-                    </VStack>
+                    </Stack>
                   </Flex>
                 </FormControl>
                 <Flex w="100%" direction="column" mr="2.813rem" mt="1.563rem">
@@ -535,7 +536,7 @@ const ChannelForm = () => {
                     mt="0.938rem"
                     mb="0.938rem"
                   >
-                    <VStack align="flex-start">
+                    <Stack direction="column">
                       <Checkbox
                         size="md"
                         name="Residential"
@@ -578,8 +579,8 @@ const ChannelForm = () => {
                       >
                         Others
                       </Checkbox>
-                    </VStack>
-                    <VStack align="flex-start" pr="10">
+                    </Stack>
+                    <Stack direction="column">
                       <Checkbox
                         size="md"
                         name="Commercial"
@@ -609,7 +610,10 @@ const ChannelForm = () => {
                         Industrial Land
                       </Checkbox>
                       <Spacer/>
-                    </VStack>
+                      <Spacer/>
+                      <Spacer/>
+                      <Spacer/>
+                    </Stack>
                   </Flex>
                 </FormControl>
                 <Input
