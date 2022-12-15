@@ -162,9 +162,6 @@ const PLSGreen = () => {
             pos="absolute"
             className="fadein1s reveal"
             boxShadow="dark-lg"
-            initial={{ opacity: 0, x: 100 }}
-            animate={animateImg}
-            transition={{ duration: 2, type: "just" }}
             src="/images/energy/ourPro1.jpeg"
             objectSize="cover"
             bottom="50%"
@@ -174,9 +171,6 @@ const PLSGreen = () => {
           <MtnImg
             className="fadein1nh reveal"
             boxShadow="dark-lg"
-            initial={{ opacity: 0 }}
-            animate={animateImg}
-            transition={{ delay: 1.5, duration: 2, type: "just" }}
             src="/images/energy/ourPro2.jpeg"
             h="80%"
             w="80%"
