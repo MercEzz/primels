@@ -33,7 +33,7 @@ const OneStop = () => {
       minH="100%"
       align="center"
       justify="center"
-      pt="6.25rem"
+      pt="3.125rem"
       pb="3.125rem"
       px="1rem"
       direction="column"
@@ -46,8 +46,7 @@ const OneStop = () => {
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         w="100%"
-        fontSize="1.5rem"
-        lineHeight="1.625rem"
+        fontSize="2.125rem"
         fontWeight="400"
         pb="1.562rem"
         textAlign="center"
@@ -69,27 +68,25 @@ const OneStop = () => {
           >
             <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="5rem"
-                h="5rem"
+                w="3.125rem"
+                h="3.125rem"
                 src="/images/energy-page/financial-and-ppa.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="1.5rem"
-              lineHeight="2.562rem"
+              fontSize="1rem"
               textTransform="uppercase"
-              mb="0.937rem"
+              mb="0.625rem"
             >
               FINANCIAL & PPA SUPPORT
             </Heading>
             <UnorderedList
               fontFamily="veralaRound"
               fontSize="1rem"
-              lineHeight="1.5rem"
               fontWeight="400"
             >
-              <ListItem pb="0.625rem">Project Financing</ListItem>
+              <ListItem>Project Financing</ListItem>
               <ListItem>Power Purchase Agreements</ListItem>
             </UnorderedList>
           </MtnFlx>{" "}
@@ -145,17 +142,17 @@ const OneStop = () => {
           >
             <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="5rem"
-                h="5rem"
+                w="3.125rem"
+                h="3.125rem"
                 src="/images/energy-page/liaisoning.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="1.5rem"
-              lineHeight="2.562rem"
+              fontSize="1rem"
               textTransform="uppercase"
               mb="0.937rem"
+              ml="0.313rem"
             >
               LIAISONING & APPROVALS
             </Heading>
@@ -165,7 +162,7 @@ const OneStop = () => {
               lineHeight="1.5rem"
               fontWeight="400"
             >
-              <ListItem>
+              <ListItem ml="0.313rem">
                 Liaisoning for all Govt. Approvals for Project Sanctions
               </ListItem>
             </UnorderedList>
@@ -185,15 +182,14 @@ const OneStop = () => {
           >
             <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="5rem"
-                h="5rem"
+                w="3.125rem"
+                h="3.125rem"
                 src="/images/energy-page/engineering-design.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="1.5rem"
-              lineHeight="2.562rem"
+              fontSize="1rem"
               textTransform="uppercase"
               mb="0.937rem"
             >
@@ -205,15 +201,15 @@ const OneStop = () => {
               lineHeight="1.5rem"
               fontWeight="400"
             >
-              <ListItem pb="0.625rem">
+              <ListItem>
                 Material Procurement and Negotiation on behalf of client
               </ListItem>
-              <ListItem pb="0.625rem">Project & Site Management</ListItem>
-              <ListItem pb="0.625rem">
+              <ListItem>Project & Site Management</ListItem>
+              <ListItem>
                 Plant Commissioning & Synchronisation
               </ListItem>
-              <ListItem pb="0.625rem">Performance Test</ListItem>
-              <ListItem pb="0.625rem">Technology Assessment</ListItem>
+              <ListItem>Performance Test</ListItem>
+              <ListItem>Technology Assessment</ListItem>
               <ListItem>
                 Independent Technical & Commercial Due diligence
               </ListItem>
@@ -271,17 +267,17 @@ const OneStop = () => {
           >
             <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="5rem"
-                h="5rem"
+                w="3.125rem"
+                h="3.125rem"
                 src="/images/energy-page/feasibility.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="1.5rem"
-              lineHeight="2.562rem"
+              fontSize="1rem"
               textTransform="uppercase"
               mb="0.937rem"
+              ml="0.313rem"
             >
               FEASIBILITY STUDY
             </Heading>
@@ -291,15 +287,15 @@ const OneStop = () => {
               lineHeight="1.5rem"
               fontWeight="400"
             >
-              <ListItem pb="0.625rem">Site Selection</ListItem>
-              <ListItem pb="0.625rem">Resource Analysis</ListItem>
-              <ListItem pb="0.625rem">Technical Review</ListItem>
-              <ListItem pb="0.625rem">Environment Impact Analysis</ListItem>
-              <ListItem pb="0.625rem">
+              <ListItem ml="0.313rem">Site Selection</ListItem>
+              <ListItem ml="0.313rem">Resource Analysis</ListItem>
+              <ListItem ml="0.313rem">Technical Review</ListItem>
+              <ListItem ml="0.313rem">Environment Impact Analysis</ListItem>
+              <ListItem ml="0.313rem">
                 Identification & Selection of Technology
               </ListItem>
-              <ListItem pb="0.625rem">Site Visits</ListItem>
-              <ListItem>Detail Project Reports</ListItem>
+              <ListItem ml="0.313rem">Site Visits</ListItem>
+              <ListItem ml="0.313rem">Detail Project Reports</ListItem>
             </UnorderedList>
           </MtnFlx>
         </Flex>
@@ -317,15 +313,14 @@ const OneStop = () => {
           >
             <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="5rem"
-                h="5rem"
+                w="3.125rem"
+                h="3.125rem"
                 src="/images/energy-page/financial-and-ppa.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="1.5rem"
-              lineHeight="2.562rem"
+              fontSize="1rem"
               textTransform="uppercase"
               mb="0.937rem"
             >
@@ -337,7 +332,7 @@ const OneStop = () => {
               lineHeight="1.5rem"
               fontWeight="400"
             >
-              <ListItem pb="0.625rem">
+              <ListItem>
                 Plant AMC for Operation & Maintenance
               </ListItem>
               <ListItem>Specification and Tender Assessment</ListItem>
@@ -384,17 +379,17 @@ const OneStop = () => {
           >
             <Flex w="100%" pb="0.937rem" align="center" justify="center">
               <Image
-                w="5rem"
-                h="5rem"
+                w="3.125rem"
+                h="3.125rem"
                 src="/images/energy-page/procurement.svg"
               />
             </Flex>
             <Heading
               fontFamily="avenir"
-              fontSize="1.5rem"
-              lineHeight="2.562rem"
+              fontSize="1rem"
               textTransform="uppercase"
               mb="0.937rem"
+              ml="0.313rem"
             >
               PROCUREMENT & CONSTRUCTION
             </Heading>
@@ -404,12 +399,12 @@ const OneStop = () => {
               lineHeight="1.5rem"
               fontWeight="400"
             >
-              <ListItem pb="0.625rem">Project Design and Optimization</ListItem>
-              <ListItem pb="0.625rem">
+              <ListItem ml="0.313rem">Project Design and Optimization</ListItem>
+              <ListItem ml="0.313rem">
                 Detail Technology Assessment, Selection and Specification
                 Preparation
               </ListItem>
-              <ListItem>
+              <ListItem ml="0.313rem">
                 Preparation of Layout Drawings, Erection Documents etc
               </ListItem>
             </UnorderedList>

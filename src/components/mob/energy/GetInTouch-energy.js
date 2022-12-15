@@ -65,8 +65,8 @@ const GetInTouch = () => {
         direction="column"
         w="100%"
         h="100%"
-        // pt="3.125rem"
-        py="3.125rem"
+        pt="1.875rem"
+        pb="3.125rem"
         px="1rem"
         align="center"
         justify="center"
@@ -79,7 +79,8 @@ const GetInTouch = () => {
           transition={{ duration: 2, type: "just" }}
           fontFamily="goudy"
           fontWeight="400"
-          fontSize="2.5rem"
+          fontSize="2.125rem"
+          pb="1.875rem"
         >
           GET IN TOUCH
         </MtnHd>

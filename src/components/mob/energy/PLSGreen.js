@@ -33,7 +33,8 @@ const PLSGreen = () => {
         h="60%"
         direction="column"
         px="1rem"
-        py="100px"
+        pt="1.875rem"
+        pb="3.125rem"
         pos="relative"
         bgColor="white"
         zIndex="10"
@@ -45,8 +46,7 @@ const PLSGreen = () => {
           pb="1.562rem"
           fontFamily="goudy"
           fontWeight="400"
-          fontSize="1.5rem"
-          lineHeight="3.625rem"
+          fontSize="2.125rem"
           textAlign="center"
         >
           PLS GREEN POWER PVT LTD
@@ -58,7 +58,6 @@ const PLSGreen = () => {
           pb="0.937rem"
           fontFamily="veralaRound"
           fontSize="1rem"
-          lineHeight="1.5rem"
         >
           We provide solutions in the power sector including conventional and
           non conventional energy sector. We are committed for more than 2
@@ -84,17 +83,18 @@ const PLSGreen = () => {
       <Flex
         ref={ref}
         w="100%"
-        h="50vh"
+        h="65vh"
         bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
         pos="relative"
         align="center"
         justify="center"
         direction="column"
       >
-        <Flex w="100%" h="100%" justify="flex-end" overflow="hidden" pos="relative">
+        <Flex w="100%" h="100%" justify="flex-end" pos="relative">
             <MtnFlx
+            
             pos="absolute"
-            left="1rem"
+            left="0"
             top="3rem"
             className="discobal-slidein-top reveal"
               w="12%"
@@ -104,7 +104,7 @@ const PLSGreen = () => {
               direction="row"
               align="center"
               justify="flex-start"
-            >
+            >{/*
               <Divider
                 orientation="vertical"
                 w="1rem"
@@ -125,29 +125,31 @@ const PLSGreen = () => {
                 //   height: "1.562rem",
                 // }}
                 // transition="all .5s"
-              />
+  />*/}
             </MtnFlx>
             <MtnFlx
+              w="100%"
               h="100%"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 2, type: "just" }}
               direction="column"
-              pt="5%"
+              pt="1.875rem"
               zIndex="10"
             >
               <Heading
                 fontFamily="goudy"
-                fontSize="2.5rem"
+                fontSize="2.125rem"
                 fontWeight="400"
+                textAlign="center"
                 pb="0.937rem"
               >
                 OUR PROJECT
               </Heading>
               <Text
+                textAlign="center"
                 fontFamily="veralaRound"
                 fontSize="1rem"
-                mr="6"
               >
                 Execution of a solar power plant of 5 <br />
                 MegaWatt at Telangana, Mothkur <br />
@@ -157,6 +159,7 @@ const PLSGreen = () => {
           </Flex>
         <Flex w="100%" h="100%" pos="relative" direction="column" left="0" align="flex-start">
           <MtnImg
+            pos="absolute"
             className="fadein1s reveal"
             boxShadow="dark-lg"
             initial={{ opacity: 0, x: 100 }}
@@ -164,7 +167,7 @@ const PLSGreen = () => {
             transition={{ duration: 2, type: "just" }}
             src="/images/energy/ourPro1.jpeg"
             objectSize="cover"
-            
+            bottom="50%"
             h="80%"
             w="80%"
           />
@@ -178,7 +181,7 @@ const PLSGreen = () => {
             h="80%"
             w="80%"
             pos="absolute"
-            left="18%"
+            right="0"
             bottom="0"
           />
           

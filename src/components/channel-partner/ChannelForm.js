@@ -739,7 +739,7 @@ const ChannelForm = () => {
                   bgColor="#E5E5E5"
                   borderRadius="none"
                 />
-                <Text
+                {/*<Text
                   fontSize="1rem"
                   fontFamily="veralaRound"
                   pt="0.938rem"
@@ -747,7 +747,7 @@ const ChannelForm = () => {
                 >
                   <Icon as={BsUpload} mr="0.875rem" />
                   Upload File
-                </Text>
+                </Text>*/}
               </Flex>
             </Flex>
 
