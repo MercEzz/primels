@@ -26,6 +26,7 @@ import img2 from "../../refer and earn imgs/2ND STEP.png";
 import img3 from "../../refer and earn imgs/3RD STEP.png";
 import bookIll from "../../refer and earn imgs/book a visit illustration.png";
 import carIll from "../../refer and earn imgs/CAR ICON.svg";
+import calender from "../../refer and earn imgs/calender.svg";
 import { useState } from "react";
 import "./animations.css";
 import "./rne.css";
@@ -124,15 +125,15 @@ const ReferAFriend = () => {
           className="serv-text-up reveal"
           textAlign="center"
           fontWeight="400"
-          fontSize="2.5rem"
+          fontSize="2.125rem"
           fontFamily="goudy"
-          pt="3.125rem"
+          pt="1.875rem"
           pb="1.875rem"
         >
           HOW IT WORKS?
         </Heading>
       </Flex>
-      <Flex w="100%" columnGap="1.25rem" pb="1.875rem" direction={{base:"column",lg:"row"}}>
+      <Flex w="100%" direction={{base:"column",lg:"row"}} pb="3.125rem">
         <Flex
           w="100%"
           h="100%"
@@ -141,13 +142,13 @@ const ReferAFriend = () => {
           overflow="hidden"
         >
           <Flex direction="column">
-          <Heading fontFamily="avenir" fontSize="1.5rem">
+          <Heading fontFamily="avenir" fontSize="1rem">
             STEP 1
           </Heading>{" "}
           <Flex
             w="100%"
             align="center"
-            py="0.625rem"
+            pb="0.313rem"
             className="sliderightdisco reveal"
           >
             <Divider
@@ -158,8 +159,8 @@ const ReferAFriend = () => {
               bgColor="#DFBD69"
             />{" "}
             <Box
-              height="1.875rem"
-              width="2.1rem"
+              height="1.25rem"
+              width="1.25rem"
               mr="0.15rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
@@ -168,28 +169,28 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1rem">
+          <Text pb="1.875rem" fontFamily="veralaRound" fontSize="1rem">
             Fill up the form on website & submit the details of as many friends
             & family members you would like to refer.
           </Text>
           </Flex>
-          <Image w="60%" h="16rem" src={img1} />
+          <Image w="40%" h="10rem" src={img1} />
         </Flex>
         <Flex w="100%" direction="row" overflow="hidden">
-        <Image w="60%" h="16rem" src={img2} className="fadein reveal"/>
+        <Image w="40%" h="10rem" src={img2} className="fadein reveal"/>
         <Flex direction="column">
-          <Heading fontFamily="avenir" fontSize="1.5rem" className="fadein reveal">
+          <Heading fontFamily="avenir" fontSize="1rem" className="fadein reveal" textAlign="right">
             STEP 2
           </Heading>
           <Flex
             w="100%"
             align="center"
-            py="0.625rem"
+            pb="0.313rem"
             className="slideleftdisco reveal"
           >
             <Box
-              height="1.875rem"
-              width="2.1rem"
+              height="1.25rem"
+              width="1.25rem"
               mr="0.3rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
@@ -205,7 +206,7 @@ const ReferAFriend = () => {
               bgColor="#DFBD69"
             />{" "}
           </Flex>{" "}
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1rem"  className="fadein-2sdelay reveal">
+          <Text pb="1.875rem" fontFamily="veralaRound" fontSize="1rem"  className="fadein-2sdelay reveal" textAlign="right">
             Your provided referral will be contacted by our team and complete
             assistance will be provided in the booking process.
           </Text>
@@ -213,13 +214,13 @@ const ReferAFriend = () => {
         </Flex>
         <Flex w="100%" direction="row" overflow="hidden">
         <Flex direction="column">
-          <Heading fontFamily="avenir" fontSize="1.5rem" className="fadein reveal">
+          <Heading fontFamily="avenir" fontSize="1rem" className="fadein reveal">
             STEP 3
           </Heading>
           <Flex
             w="100%"
             align="center"
-            py="0.625rem"
+            pb="0.313rem"
             className="sliderightdisco reveal"
           >
             <Divider
@@ -230,8 +231,8 @@ const ReferAFriend = () => {
               bgColor="#DFBD69"
             />{" "}
             <Box
-              height="1.875rem"
-              width="2.1rem"
+              height="1.25rem"
+              width="1.25rem"
               mr="0.16rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
@@ -240,21 +241,23 @@ const ReferAFriend = () => {
               my="1"
             />
           </Flex>{" "}
-          <Text pb="1.25rem" fontFamily="veralaRound" fontSize="1rem" className="fadein reveal">
+          <Text pr="0.2rem" fontFamily="veralaRound" fontSize="1rem" className="fadein reveal">
             Every time your referral becomes a successful booking, you’ll earn
             rewards upto Rs 1 Lakh.
           </Text>
           </Flex>
-          <Image w="60%" h="16rem" src={img3} className="fadein reveal"/>
+          <Image w="40%" h="10rem" src={img3} className="fadein reveal"/>
         </Flex>
       </Flex>
       <Flex
         w="100%"
         h="100%"
-        pt="3.125rem"
+        pt="1.875rem"
         direction="column"
         pb="5rem"
         overflow="hidden"
+        bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+        
       >
         <form
           style={{
@@ -269,12 +272,11 @@ const ReferAFriend = () => {
             className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
-            fontSize="2.5rem"
-            pb="3.125rem"
+            fontSize="2.125rem"
           >
             REFER & EARN
           </Text>
-          <Flex w="100%" h="100%" direction="column" gap="6.25rem" pb="1.563rem" className="fadein reveal">
+          <Flex w="100%" h="100%" direction="column" gap="1.875rem" pb="1.563rem" className="fadein reveal">
             <Flex
               w="100%"
               h="100%"
@@ -282,7 +284,7 @@ const ReferAFriend = () => {
               align="center"
               justify="center"
             >
-              <Text pb="1.563rem" fontFamily="veralaRound" fontSize="1.25rem">
+              <Text pt="1.563rem" pb="0.938rem" fontFamily="veralaRound" fontSize="1.25rem">
                 YOUR DETAILS
               </Text>{" "}
               <FormControl isRequired>
@@ -291,7 +293,6 @@ const ReferAFriend = () => {
                   h="100%"
                   justify="space-between"
                   align="center"
-                  pb="1.563rem"
                 >
                   <FormLabel
                     fontFamily="avenir"
@@ -307,7 +308,6 @@ const ReferAFriend = () => {
                       justify="space-between"
                       align="center"
                       fontFamily="veralaRound"
-                      fontSize="18px"
                     >
                       <Radio
                         borderRadius="none"
@@ -393,6 +393,8 @@ const ReferAFriend = () => {
                     PROJECT REFERRED
                   </FormLabel>
                   <Select
+                    textAlign="center"
+                    style={{paddingTop:"0.3rem"}}
                     fontFamily="veralaRound"
                     fontSize="0.875rem"
                     w="11.75rem"
@@ -407,8 +409,8 @@ const ReferAFriend = () => {
                     }
                     borderRadius="none"
                   >
-                    <option style={{ color: "black" }}>
-                      <Text>Select Project</Text>
+                    <option style={{ color: "black"}}>
+                      <Text pt="0.2rem">Select Project</Text>
                     </option>
                     <option style={{ color: "black" }}>
                       <Text>Arete Homes</Text>
@@ -430,7 +432,7 @@ const ReferAFriend = () => {
               align="center"
               justify="center"
             >
-              <Text pb="1.563rem" fontFamily="veralaRound" fontSize="1.25rem">
+              <Text pb="0.938rem" fontFamily="veralaRound" fontSize="1.25rem">
                 REFERRAL DETAILS
               </Text>{" "}
               <FormControl isRequired>
@@ -566,7 +568,7 @@ const BookAVisit = () => {
             className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
-            fontSize={{base:"2rem",lg:"2.5rem"}}
+            fontSize="1.5rem"
             pb="1.875rem"
           >
             YOU ARE ONLY ONE RIDE AWAY FROM YOUR DREAM HOME
@@ -613,10 +615,12 @@ const BookAVisit = () => {
       <Flex
         w="100%"
         h="100%"
-        pt="5rem"
+        pt="1.875rem"
         direction="column"
         pb="5rem"
         overflow="hidden"
+        bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+        
       >
         <form
           style={{
@@ -631,8 +635,8 @@ const BookAVisit = () => {
             className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
-            fontSize="2.5rem"
-            pb="3.125rem"
+            fontSize="2.125rem"
+            pb="1.875rem"
           >
             BOOK YOUR FREE SITE VISIT
           </Text>
@@ -718,9 +722,19 @@ const BookAVisit = () => {
                     fontFamily="avenir"
                     fontSize="0.875rem"
                     fontWeight="bold"
+                    
                   >
                     DATE
                   </FormLabel>
+                  <Image
+                    h="2.5rem"
+                    bgColor="#C1C1C1"
+                    src={calender}
+                    right="0%"
+                    zIndex="2"
+                    p="0.625rem"
+                    pos="absolute"
+                  />
                   <Input
                     type="date"
                     fontSize="1rem"
@@ -729,6 +743,7 @@ const BookAVisit = () => {
                     h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
+                    textTransform="uppercase"
                   />
                 </HStack>{" "}
               </FormControl>
@@ -742,6 +757,21 @@ const BookAVisit = () => {
                   >
                     TIME
                   </FormLabel>
+                  <select
+                    style={{
+                      position: "absolute",
+                      right: "0px",
+                      zIndex: "2",
+                      height:"2.5rem",
+                      padding: "0.625rem",
+                      backgroundColor: "#C1C1C1",
+                      fontWeight: "bold",
+                    }}
+                    fontFamily="veralaRound"
+                  >
+                    <option>AM</option>
+                    <option>PM</option>
+                  </select>
                   <Input
                     type="time"
                     fontSize="1rem"
