@@ -185,7 +185,7 @@ const ReferAFriend = () => {
             w="100%"
             align="center"
             py="0.625rem"
-            className="sliderightdisco reveal"
+            className="slideleftdisco reveal"
           >
             <Box
               height="1.875rem"
@@ -295,7 +295,7 @@ const ReferAFriend = () => {
                 >
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     ARE YOU A RESIDENT WITH US?
@@ -312,12 +312,12 @@ const ReferAFriend = () => {
                       <Radio
                         borderRadius="none"
                         value="yes"
-                        size="lg"
+                        size="md"
                         mr="3.125rem"
                       >
                         YES
                       </Radio>
-                      <Radio borderRadius="none" value="no" size="lg">
+                      <Radio borderRadius="none" value="no" size="md">
                         NO
                       </Radio>
                     </HStack>
@@ -329,17 +329,16 @@ const ReferAFriend = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     NAME
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -350,17 +349,16 @@ const ReferAFriend = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     PHONE
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -370,17 +368,16 @@ const ReferAFriend = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     EMAIL
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
+                    fontFamily="veralaRound"
+                    h="2.5rem"
+                    w="11.75rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -390,15 +387,16 @@ const ReferAFriend = () => {
                 <HStack w="100%" justify="space-between">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     PROJECT REFERRED
                   </FormLabel>
                   <Select
-                    fontFamily="avenir"
-                    fontSize="1rem"
-                    w="13.75rem"
+                    fontFamily="veralaRound"
+                    fontSize="0.875rem"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#D9D9D9"
                     // placeholder="SELECT PROJECT"
                     textTransform="uppercase"
@@ -440,17 +438,16 @@ const ReferAFriend = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     NAME
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -461,17 +458,16 @@ const ReferAFriend = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     PHONE
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -481,17 +477,16 @@ const ReferAFriend = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     EMAIL
                   </FormLabel>
                   <Input
-                    fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
+                    fontSize="0.875rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -501,17 +496,16 @@ const ReferAFriend = () => {
                 <HStack w="100%" align="flex-start" justify="space-between">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     REQUIREMENTS
                   </FormLabel>
                   <Textarea
-                    fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="6.25rem"
+                    fontSize="0.875rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="3.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -642,7 +636,7 @@ const BookAVisit = () => {
           >
             BOOK YOUR FREE SITE VISIT
           </Text>
-          <Flex w="100%" h="100%" direction="row" gap="6.25rem" pb="1.563rem" className="fadein reveal">
+          <Flex w="100%" h="100%" direction="column" pb="1.563rem" className="fadein reveal">
             <Flex
               w="100%"
               h="100%"
@@ -655,17 +649,16 @@ const BookAVisit = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     NAME
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -676,19 +669,18 @@ const BookAVisit = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     PHONE
                   </FormLabel>
                   <Input
-                    fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
-                    bgColor="#E5E5E5"
-                    borderRadius="none"
+                   fontSize="1rem"
+                   fontFamily="veralaRound"
+                   w="11.75rem"
+                   h="2.5rem"
+                   bgColor="#E5E5E5"
+                   borderRadius="none"
                   />
                 </HStack>{" "}
               </FormControl>
@@ -696,19 +688,18 @@ const BookAVisit = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     EMAIL
                   </FormLabel>
                   <Input
-                    fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
-                    bgColor="#E5E5E5"
-                    borderRadius="none"
+                   fontSize="1rem"
+                   fontFamily="veralaRound"
+                   w="11.75rem"
+                   h="2.5rem"
+                   bgColor="#E5E5E5"
+                   borderRadius="none"
                   />
                 </HStack>{" "}
               </FormControl>
@@ -725,7 +716,7 @@ const BookAVisit = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     DATE
@@ -733,10 +724,9 @@ const BookAVisit = () => {
                   <Input
                     type="date"
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -747,7 +737,7 @@ const BookAVisit = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     TIME
@@ -755,10 +745,9 @@ const BookAVisit = () => {
                   <Input
                     type="time"
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -768,17 +757,16 @@ const BookAVisit = () => {
                 <HStack w="100%" justify="space-between" pb="15px">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     PICKUP LOCATION
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
@@ -788,17 +776,16 @@ const BookAVisit = () => {
                 <HStack w="100%" align="flex-start" justify="space-between">
                   <FormLabel
                     fontFamily="avenir"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     fontWeight="bold"
                   >
                     NO. OF PERSONS
                   </FormLabel>
                   <Input
                     fontSize="1rem"
-                    fontFamily="avenir"
-                    lineHeight="1.5rem"
-                    w="13.75rem"
-                    h="3.125rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />

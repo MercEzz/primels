@@ -49,6 +49,15 @@
     animation:sliderightdisco 1 2s linear;
     transform: translateY(0px);
 }
+.slideleftdisco.reveal{
+    opacity: 0;
+    transform: translateX(31.25rem);
+}
+.slideleftdisco.reveal.active{
+    opacity: 1;
+    animation:slideleftdisco 1 2s linear;
+    transform: translateX(0px);
+}
 .sliderightdisco-2sdelay.reveal{
     opacity: 0;
     transform: translateY(-31.25rem);
@@ -67,6 +76,7 @@
     animation:sliderightdisco-4sdelay 1 6s linear;
     transform: translateY(0px);
 }
+
 
 .expandcar.reveal{
     opacity: 0;

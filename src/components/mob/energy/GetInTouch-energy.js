@@ -104,7 +104,7 @@ const GetInTouch = () => {
                   <FormLabel
                     fontFamily="avenir"
                     fontWeight="700"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     htmlFor="name"
                   >
                     NAME
@@ -117,12 +117,12 @@ const GetInTouch = () => {
                     value={name}
                     onChange={onChange}
                     type="text"
-                    w="13.75rem"
+                    fontSize="0.875rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
-                    fontFamily="veralaRound"
-                    fontSize="1rem"
                     isRequired
                     borderWidth="2px"
                     isInvalid={borderClr}
@@ -133,7 +133,7 @@ const GetInTouch = () => {
                   <FormLabel
                     fontFamily="avenir"
                     fontWeight="700"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     htmlFor="email"
                   >
                     EMAIL
@@ -144,12 +144,12 @@ const GetInTouch = () => {
                     value={email}
                     onChange={onChange}
                     type="email"
-                    w="13.75rem"
+                    fontSize="0.875rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
-                    fontFamily="veralaRound"
-                    fontSize="1rem"
                     isRequired
                   />
                 </Flex>
@@ -159,7 +159,7 @@ const GetInTouch = () => {
                   <FormLabel
                     fontFamily="avenir"
                     fontWeight="700"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     htmlFor="phoneNo"
                   >
                     PHONE NO.
@@ -172,12 +172,12 @@ const GetInTouch = () => {
                     value={phoneNo}
                     onChange={onChange}
                     type="number"
-                    w="13.75rem"
+                    fontSize="1rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
-                    fontFamily="veralaRound"
-                    fontSize="1rem"
                     isRequired
                   />
                   
@@ -186,7 +186,7 @@ const GetInTouch = () => {
                   <FormLabel
                     fontFamily="avenir"
                     fontWeight="700"
-                    fontSize="1rem"
+                    fontSize="0.875rem"
                     htmlFor="message"
                   >
                     MESSAGE
@@ -197,12 +197,12 @@ const GetInTouch = () => {
                     value={message}
                     onChange={onChange}
                     maxLength="200"
-                    w="13.75rem"
-                    h="7.5rem"
+                    fontSize="0.875rem"
+                    fontFamily="veralaRound"
+                    w="11.75rem"
+                    h="3.125rem"
                     bgColor="#E5E5E5"
                     borderRadius="none"
-                    fontFamily="veralaRound"
-                    fontSize="1rem"
                   />
                 </Flex>
               </VStack>

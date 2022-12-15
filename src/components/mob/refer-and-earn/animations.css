@@ -52,6 +52,14 @@
       transform: translateX(0px);
     }
 }
+@keyframes slideleftdisco{
+  from {
+      transform: translateX(31.25rem);
+    }
+    to {
+      transform: translateX(0px);
+    }
+}
 @keyframes sliderightdisco-2sdelay{
   0% {
     transform: translateX(-31.25rem);
