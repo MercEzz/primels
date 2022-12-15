@@ -12,8 +12,7 @@ const EightSec = () => {
   return (
     <Flex
       ref={ref}
-      transform={isInView ? "scale(1)" : "scale(0.6)"}
-      transition="all 2s"
+      className="expandcar reveal"
       w="100%"
       h="35.5rem"
       pos="relative"

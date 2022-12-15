@@ -213,3 +213,10 @@
   animation: image-sliedleft 1 2s linear;
   transform: translateX(0vw);
 }
+.image-sliedright.reveal {
+  transform: translateX(100vw);
+}
+.image-sliedright.reveal.active {
+  animation: image-sliedright 1 2s linear;
+  transform: translateX(0vw);
+}

@@ -45,17 +45,17 @@ const TenthSec = () => {
       >
         RETURNS HIGHER THAN YOUR IMAGINATION
       </Heading>
-      <Flex w="100%" h="100%">
+      <Flex w="100%" h="100%" overflow="hidden">
         <Flex
           w="50%"
-          transform={isInView ? "translateX(0)" : "translateX(100px)"}
-          opacity={isInView ? "1" : "0"}
-          transition="all 2s 4s"
+          overflow="hidden"
           pos="relative"
           justify="center"
         >
           <Image
+             className="image-sliedright reveal"
             // pos="absolute"
+            
             h="31.25rem"
             w="100%"
             objectPosition="center top"

@@ -57,8 +57,7 @@ const SixthSec = () => {
       <Flex w="100%" h="100%">
         <Flex w="100%" h="100%">
           <Image
-            opacity={isInView ? "1" : "0"}
-            transition="all 2s 1s"
+            className="fadein reveal"
             fontFamily="veralaRound"
             w="100%"
             h="30rem"
@@ -98,8 +97,7 @@ const SixthSec = () => {
             >
               <Box pos="relative">
                 <Image
-                  opacity={isInView ? "1" : "0"}
-                  transition="all 2s 1s"
+                  className="fadein-2sdelay reveal"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -141,8 +139,7 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  opacity={isInView ? "1" : "0"}
-                  transition="all 2s 1s"
+                  className="fadein-2sdelay reveal"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -184,8 +181,7 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  opacity={isInView ? "1" : "0"}
-                  transition="all 2s 2s"
+                  className="fadein-4sdelay reveal"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -227,8 +223,7 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  opacity={isInView ? "1" : "0"}
-                  transition="all 2s 2s"
+                  className="fadein-4sdelay reveal"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -273,8 +268,7 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  opacity={isInView ? "1" : "0"}
-                  transition="all 2s 3s"
+                  className="fadein-6sdelay reveal"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -319,8 +313,7 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  opacity={isInView ? "1" : "0"}
-                  transition="all 2s 3s"
+                  className="fadein-6sdelay reveal"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"

@@ -97,6 +97,16 @@
       transform: translateX(0vw);
     }
 }
+@keyframes image-sliedright{
+  from {
+      opacity: 0;
+      transform: translateX(100vw);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0vw);
+    }
+}
 @keyframes slidein-bottom{
   from {
 

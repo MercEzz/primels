@@ -56,10 +56,8 @@ const SecondSec = () => {
       >
         A place of purity and excellence
       </Heading>
-      <Flex px="6.25rem" w="100%" h="100%" align="center" justify="center">
+      <Flex px="6.25rem" w="100%" h="100%" align="center" justify="center" overflow="hidden">
         <Flex
-          opacity={isInView ? "1" : "0"}
-          transition="all 2s 2s"
           w="47.5%"
           h="100%"
         >
@@ -85,6 +83,7 @@ const SecondSec = () => {
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
               {introImgs.map((prime) => (
                 <Image
+                className="image-sliedleft reveal"
                   key={prime.id}
                   w="100%"
                   height="29.25rem"
@@ -145,9 +144,8 @@ const SecondSec = () => {
 
         <Flex
           h="100%"
-          transform={isInView ? "none" : "translateY(-50xp)"}
-          opacity={isInView ? "1" : "0"}
-          transition="all 2s 2s"
+          
+          className="discobal-slidein-top reveal"
           direction="column"
           align="center"
           px="1.562rem"

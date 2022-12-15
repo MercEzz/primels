@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import FifthSec from "../components/arete-homes/TownshipSec";
 import FirstSec from "../components/arete-homes/HeroBanner";
 import FourthSec from "../components/arete-homes/AreteHomesBanner";
@@ -14,8 +14,15 @@ import TwelvethSec from "../components/arete-homes/SmartInvest";
 import LastSec from "../components/arete-homes/HappyFamilies";
 import DropDown from "../components/arete-homes/DropDown";
 import DownloadBtn from "../components/sky-high/DownloadBtn";
+import { revealAgain } from "../hooks/util";
 
 const AreteHomes = () => {
+  useLayoutEffect(()=>{
+    window.addEventListener("scroll", revealAgain);
+    return()=>{
+      window.removeEventListener("scroll", revealAgain);
+    }
+  });
   return (
     <>
       <DownloadBtn />

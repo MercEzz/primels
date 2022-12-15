@@ -28,6 +28,7 @@ const FourthSec = () => {
   return (
     <Flex
       ref={ref}
+      className="expandcar reveal"
       w="100%"
       h="35.5rem"
       align="center"

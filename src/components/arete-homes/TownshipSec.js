@@ -33,8 +33,7 @@ const FifthSec = () => {
         <Flex w="100%" h="100%" direction="column" mr="1.562rem">
           <Flex direction="column" align="center" mb="1.875rem">
             <Image
-              transform={isInView ? "scale(1)" : "scale(0.6)"}
-              transition="all 2s"
+              className="expandcar reveal"
               src="/images/arete-homes/arete meditation retreat 1.jpg"
               h="21.25rem"
               w="100%"
@@ -46,8 +45,7 @@ const FifthSec = () => {
           </Flex>
           <Flex direction="column" align="center">
             <Image
-              transform={isInView ? "scale(1)" : "scale(0.6)"}
-              transition="all 2s"
+              className="expandcar reveal"
               src="/images/arete-homes/kids play area.jpeg"
               h="21.25rem"
               w="100%"
@@ -61,8 +59,7 @@ const FifthSec = () => {
         <Flex w="100%" h="100%" direction="column">
           <Flex direction="column" align="center" mb="1.875rem">
             <Image
-              transform={isInView ? "scale(1)" : "scale(0.6)"}
-              transition="all 2s"
+              className="expandcar reveal"
               src="/images/arete-homes/garden and jogging track.jpg"
               h="21.25rem"
               w="100%"
@@ -74,8 +71,7 @@ const FifthSec = () => {
           </Flex>
           <Flex direction="column" align="center">
             <Image
-              transform={isInView ? "scale(1)" : "scale(0.6)"}
-              transition="all 2s"
+              className="expandcar reveal"
               src="/images/arete-homes/open exercise area.jpg"
               h="21.25rem"
               w="100%"
