@@ -98,9 +98,6 @@ const SecondSec = () => {
       </MtnHead>
       <Flex w="100%" h="100%" align="center" justify="center">
         <Flex
-          transform={isInView ? "translateX(0)" : "translateX(-100px)"}
-          opacity={isInView ? "1" : "0"}
-          transition="all 2s 2s"
           w="47.5%"
           h="100%"
         >
@@ -110,6 +107,7 @@ const SecondSec = () => {
             width={"100%"}
             overflow={"hidden"}
             boxShadow="dark-lg"
+            className="image-sliedleft reveal"
           >
             {/* CSS files for react-slick */}
             <link
@@ -127,6 +125,7 @@ const SecondSec = () => {
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
               {introImgs.map((prime) => (
                 <Box
+                  
                   key={prime.id}
                   w="100%"
                   height="29.25rem"

@@ -49,16 +49,16 @@ const TenthSec = () => {
         AN EXCELLENT INVESTMENT OPPORTUNITY IN A <br />
         LIFETIME GROWING ASSET
       </Heading>
-      <Flex w="100%" h="100%">
+      <Flex w="100%" h="100%" overflow="hidden">
         <Flex
           w="50%"
-          transform={isInView ? "none" : "translateX(50px)"}
-          opacity={isInView ? "1" : "0"}
-          transition="all 2s 2s"
+          className="image-sliedleft reveal"
+          
           h="100%"
           pos="relative"
         >
           <Image
+            
             h="31.25rem"
             w="100%"
             objectPosition="center top"

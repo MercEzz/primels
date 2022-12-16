@@ -32,28 +32,24 @@ import "./animations.css";
 import "./rne.css";
 
 const ReferTabs = () => {
-
   const [active, setActive] = useState(true);
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
     try{
-
     for (var i = 0; i <= reveals.length; i++) {
-      
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i]
         ? reveals[i].getBoundingClientRect().top
         : null;
       var elementVisible = 200;
-
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
       } else {
         reveals[i].classList.remove("active");
       }
     }
-  }catch(e){
-    
+  }catch(e)
+  {
   }
   }
   useLayoutEffect(()=>{
@@ -113,9 +109,7 @@ const ReferTabs = () => {
     </Flex>
   );
 };
-
 export default ReferTabs;
-
 const ReferAFriend = () => {
   return (
     <>
@@ -249,6 +243,7 @@ const ReferAFriend = () => {
           <Image w="40%" h="10rem" src={img3} className="fadein reveal"/>
         </Flex>
       </Flex>
+      <Flex bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'>
       <Flex
         w="100%"
         h="100%"
@@ -256,8 +251,6 @@ const ReferAFriend = () => {
         direction="column"
         pb="5rem"
         overflow="hidden"
-        bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
-        
       >
         <form
           style={{
@@ -530,6 +523,7 @@ const ReferAFriend = () => {
           </Button>
         </form>
       </Flex>
+      </Flex>
     </>
   );
 };
@@ -592,7 +586,6 @@ const BookAVisit = () => {
               fontSize="1.5rem"
               pb="0.938rem"
             >
-              
               GET IN TOUCH WITH US
             </Heading>
             <Flex w="100%" direction="column" align="center" justify="center" gap="3.125rem">
@@ -619,8 +612,7 @@ const BookAVisit = () => {
         direction="column"
         pb="5rem"
         overflow="hidden"
-        bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
-        
+        bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")' 
       >
         <form
           style={{

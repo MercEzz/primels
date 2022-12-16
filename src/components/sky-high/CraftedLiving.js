@@ -64,10 +64,10 @@ const FourthSec = () => {
           <Flex
             w="48.3%"
             h="100%"
-            opacity={inView ? "1" : "0"}
-            transition="all 2s 4s"
+            transition="all 2s 2s"
           >
             <Image
+              className="fadein-2sdelay reveal"
               w="100%"
               h="23rem"
               src="/images/sky-high/DECK1.jpg"
@@ -133,7 +133,7 @@ const FourthSec = () => {
             <MtnHd
                 initial={{ opacity: 0 }}
                 animate={animateFade}
-                transition={{ delay: 4.5, duration: 2, type: "just" }}
+                transition={{ delay: 5, duration: 2, type: "just" }}
               fontFamily="avenir"
               fontSize="1.25rem"
               mb="0.9rem"
@@ -143,7 +143,7 @@ const FourthSec = () => {
             <MtnHd
                 initial={{ opacity: 0 }}
                 animate={animateFade}
-                transition={{ delay: 6, duration: 2, type: "just" }}
+                transition={{ delay: 7, duration: 2, type: "just" }}
               fontFamily="avenir"
               fontSize="1.25rem"
             >
@@ -154,13 +154,12 @@ const FourthSec = () => {
         {/* first-right-sec */}
         <Flex w="100%" h="100%" align="center" justify="center" pb="1.563rem">
           <Flex
-            opacity={inView ? "1" : "0"}
-            transition="all 2s 6s"
             w="100%"
             h="100%"
             pr="1.563rem"
           >
             <Image
+              className="fadein-2sdelay reveal"
               w="100%"
               h="23rem"
               src="/images/sky-high/DECK2.jpg"
@@ -168,12 +167,11 @@ const FourthSec = () => {
             />
           </Flex>
           <Flex
-            opacity={inView ? "1" : "0"}
-            transition="all 2s 8s"
             w="100%"
             h="100%"
           >
             <Image
+              className="fadein-4sdelay reveal"
               w="100%"
               h="23rem"
               src="/images/sky-high/DECK3.jpg"
