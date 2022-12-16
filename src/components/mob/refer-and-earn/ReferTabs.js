@@ -531,6 +531,7 @@ const ReferAFriend = () => {
 const BookAVisit = () => {
   return (
     <>
+    
       <Flex
         w="100%"
         h="100vh"
@@ -539,14 +540,7 @@ const BookAVisit = () => {
         overflow="hidden"
         pb="3.125rem"
       >
-        <Image
-          className="expandcar reveal"
-          src={bookIll}
-          pos="absolute"
-          objectFit="cover"
-          left="0"
-          bottom={{base:"22rem",lg:"0"}}
-        />
+        
         <Flex
           overflow="hidden"
           pos="absolute"
@@ -563,13 +557,17 @@ const BookAVisit = () => {
             textAlign="center"
             fontFamily="goudy"
             fontSize="1.5rem"
-            pb="1.875rem"
           >
             YOU ARE ONLY ONE RIDE AWAY FROM YOUR DREAM HOME
           </Text>
+          <Image
+          className="expandcar reveal"
+          src={bookIll}
+          objectFit="cover"
+        />
           <div className="fadein reveal">
-          <HStack w="80%" align="center" justify="center" pb="3.125rem" mt="17.25rem">
-            <Image src={carIll} />
+          <HStack w="80%" align="center" justify="center" pb="3.125rem">
+            <Image alignSelf="center" src={carIll} />
             <Heading
               textAlign="center"
               fontFamily="avenir"
