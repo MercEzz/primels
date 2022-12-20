@@ -200,7 +200,7 @@ const ReferAFriend = () => {
               bgColor="#DFBD69"
             />{" "}
           </Flex>{" "}
-          <Text pb="1.875rem" fontFamily="veralaRound" fontSize="1rem"  className="fadein-2sdelay reveal" textAlign="right">
+          <Text pb="1.875rem" fontFamily="veralaRound" fontSize="1rem"  className="fadein reveal" textAlign="right">
             Your provided referral will be contacted by our team and complete
             assistance will be provided in the booking process.
           </Text>

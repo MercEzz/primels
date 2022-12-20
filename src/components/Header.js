@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Button, Flex, Heading, Image, Link, Select } from "@chakra-ui/react";
+import { Button, Flex, Heading, Image, Link, Select, Spacer } from "@chakra-ui/react";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import styled from 'styled-components';
+import { useModalController } from "../hooks/util";
 const StyledHeader = styled.div`
     .collapsible-list-button{
       display:flex;
@@ -44,6 +45,7 @@ const StyledHeader = styled.div`
     }
   `
 const Header = () => {
+  const {isModalOpen,close,open} = useModalController();
   const [navbar, setNavbar] = useState(false);
 
   const changeBg = () => {
@@ -121,9 +123,44 @@ const Header = () => {
             ENQUIRE
           </Button>
         </Heading>
-        <Link fontSize="60px" px="4">
-          <HiOutlineMenuAlt1 w="100%" h="100%" />
-        </Link>
+        <button onClick={()=>open()} >
+          <HiOutlineMenuAlt1 fontSize="60px" px="4" w="100%" h="100%" />
+        </button>
+        {isModalOpen?
+        <Flex style={{position:"absolute",top:"0",left:"0",zIndex:"999"}}>
+          <div style={{width:"80vw",height:"100vh",backgroundColor: "rgba(0,0,0,0.7)",}} onClick={()=>close()}>
+          </div>
+          <div style={{width:"20vw",color:"black",backgroundColor:"white",paddingLeft:"2rem",paddingRight:"2rem"}}>
+              <button style={{alignSefl:"left"}} onClick={()=>close()}>x</button>
+              <br/>
+              <Link>ABOUT US</Link>
+              <hr/>
+              <Link>EXPERTISE</Link>
+              <hr/>
+              <Link>PROJECTS</Link>
+              <hr/>
+              <Link>INVEST</Link>
+              <hr/>
+              <Link>PGC MEMBERSHIP</Link>
+              <hr/>
+              <Link>SERVICED HOUSING</Link>
+              <br/>
+              <br/>
+              <br/>
+              <Link>CHANNEL PARTNER LOGIN</Link>
+              <hr/>
+              <Link>NEWS & MEDIA</Link>
+              <hr/>
+              <Link>REFER & EARN</Link>
+              <hr/>
+              <Link>CONTACT US</Link>
+              <hr/>
+              <Link>CAREERS</Link>
+              <hr/>
+              <Link>BLOG</Link>
+          </div>
+        </Flex>
+        :<></>}
       </Flex>
     </Flex>
     </StyledHeader>
