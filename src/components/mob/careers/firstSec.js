@@ -46,20 +46,21 @@ const FirstSec = () => {
         direction="column"
         textAlign="center"
         m="0 1.875rem"
+        
       >
         <MotnHead
           variants={variants}
           initial="hidden"
           animate="enter"
           transition={{ duration: 2, type: "just" }}
-          fontSize="40px"
+          fontSize="2.5rem"
           fontFamily="avenir"
           px="1.562rem"
-          pb="0.937rem"
         >
           JOIN OUR TRIBE
         </MotnHead>
         <MotnTxt
+        px="0.625rem"
           variants={txtvariants}
           initial="hidden"
           animate="enter"

@@ -63,7 +63,7 @@ const ResForm = () => {
       direction="column"
       w="100%"
       h="100%"
-      pt="50px"
+      pt="1.875rem"
       mb="25px"
       align="center"
       justify="center"
@@ -75,7 +75,7 @@ const ResForm = () => {
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
-        fontSize="2rem"
+        fontSize="2.125rem"
       >
         SEND YOUR RESUME
       </MtnHead>
@@ -86,6 +86,7 @@ const ResForm = () => {
         fontSize="1rem"
         fontFamily="veralaRound"
         py="1rem"
+        px="1rem"
         textAlign="center"
       >
         Work with us, send your resume and our team will get back to you.

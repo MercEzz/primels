@@ -47,10 +47,10 @@ const ImgCarousel = (props) => {
               height={"100%"}
               position="relative"
             >
-              <Text fontSize="16px" fontFamily="veralaRound">
+              <Text textAlign="center" fontSize="16px" fontFamily="veralaRound">
                 {tes.text}
               </Text>
-              <Flex w="100%" pt="25px" align="center" justify="flex-start">
+              <Flex w="100%" pt="25px" align="center" justify="center">
                 <Avatar
                   h="80px"
                   w="80px"

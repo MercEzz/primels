@@ -71,7 +71,7 @@ const Lifeatls = () => {
       direction="column"
       textAlign="center"
       px="1rem"
-      pt="6.25rem"
+      pt="3.125rem"
       pb="3.125rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
@@ -82,10 +82,10 @@ const Lifeatls = () => {
         initial={{ opacity: 0, y: -100 }}
         animate={animationHead}
         transition={{ duration: 2, type: "just" }}
-        fontSize="2.5rem"
+        fontSize="2.125rem"
         fontFamily="goudy"
         fontWeight="400"
-        pb="1.562rem"
+        pb="0.928rem"
       >
         LIFE AT PRIME LIFESPACE
       </MtnHead>
@@ -123,11 +123,11 @@ const Lifeatls = () => {
           {/* Slider */}
           <Slider {...settings} ref={(slider) => setSlider(slider)}>
             {images.map((prime) => (
-              <Flex pr="20px">
+              <Flex pr="0.625rem">
                 <Image
                   key={prime}
                   w="100%"
-                  h="25rem"
+                  h="15.625rem"
                   position="relative"
                   objectPosition="center top"
                   backgroundRepeat="no-repeat"
@@ -141,6 +141,7 @@ const Lifeatls = () => {
           
         </Box>
         <Flex mt="2rem" w="100%" h="100%">
+        {/*
         <IconButton
             aria-label="left-arrow"
             variant="outline"
@@ -174,6 +175,7 @@ const Lifeatls = () => {
           >
             <AiOutlineRight color="#B88746" size="2.5rem" />
           </IconButton>
+        */}
       </Flex>
     </Flex>
   );

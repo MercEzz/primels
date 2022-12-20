@@ -48,7 +48,7 @@ const Jobopp = () => {
         w="100%"
         h="100%"
         align="center"
-        mt="100px"
+        mt="3.125rem"
         px="1rem"
         pb="50px"
       >
@@ -57,9 +57,9 @@ const Jobopp = () => {
           animate={animationHead}
           transition={{ duration: 2, type: "just" }}
           fontFamily="goudy"
-          fontSize="2rem"
+          fontSize="2.125rem"
           fontWeight="400"
-          mb="50px"
+          mb="1.875rem"
         >
           JOB OPPORTUNITIES
         </MtnHead>
@@ -260,10 +260,11 @@ const Jobopp = () => {
             </Grid>
           </Flex>
           <Flex
+            mt="0.938rem"
             direction="column"
             w="100%"
             h="100%"
-            py="75px"
+            py="3.125rem"
             mr="15px"
             align="center"
             justify="center"
@@ -302,8 +303,8 @@ const Jobopp = () => {
               align="center"
               justify="center"
             >
-              <Icon h="80px" w="80px" color="#0A66C2" as={AiFillLinkedin} />
-              <Image w="50%" h="50%" pt="15px" src="/images/logo.png" />
+              <Icon h="80px" w="80px" color="#0A66C2" as={AiFillLinkedin}/>
+              <Image w="70%" h="100%" pt="15px" src="/images/logo.png" />
             </MtnFlx>
           </Flex>
           

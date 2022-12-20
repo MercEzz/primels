@@ -97,12 +97,13 @@ const Buildchng = () => {
         align="center"
         justify="center"
         overflow="hidden"
+        pt="3.125rem"
       >
         <MtnHead
           initial={{ opacity: 0, y: -50 }}
           animate={animationHead}
           transition={{ duration: 2, type: "just" }}
-          fontSize="1.5rem"
+          fontSize="2.125rem"
           fontWeight="400"
           fontFamily="goudy"
         >
@@ -111,13 +112,13 @@ const Buildchng = () => {
         <Flex
           direction="column"
           align="center"
-          mt="3.125rem"
+          mt="1.875rem"
           justify="center"
           w="100%"
           h="100%"
           pos="relative"
         >
-          <Flex w="100%" h="100%" direction="column" align="center">
+          {/*<Flex w="100%" h="100%" direction="column" align="center">
             {currImg ? (
               <MtnImg
                 px="1rem"
@@ -135,15 +136,15 @@ const Buildchng = () => {
             ) : (
               <img />
             )}
-          </Flex>
+            </Flex>*/}
           <Flex
-            direction="column"
+            direction="row"
             w="100%"
             h="100%"
             align="flex-start"
             px="1rem"
           >
-            <MtnFlx
+            {/*<MtnFlx
               initial={{ opacity: 0, y: -100 }}
               animate={animationDvd}
               transition={{ delay: 1, duration: 2, type: "just" }}
@@ -166,9 +167,9 @@ const Buildchng = () => {
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
               />
-            </MtnFlx>
-
-            <Flex direction="row" align="center" justify="center" py="25px">
+          </MtnFlx>*/}
+            <Flex direction="column" mx="1.563rem">
+            <Flex direction="row" align="center" justify="center" py="">
               <MtnHead
                 ref={pRef}
                 initial={{ opacity: 0, x: -50 }}
@@ -177,7 +178,6 @@ const Buildchng = () => {
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="12rem"
                 color="#D9D9D9"
                 pr="2.812rem"
               >
@@ -201,7 +201,7 @@ const Buildchng = () => {
                 </Text>
               </MtnFlx>
             </Flex>
-            <Flex direction="row" align="center" justify="center" pb="25px">
+            <Flex direction="row" align="center" justify="center" pb="">
               <MtnHead
                 ref={rRef}
                 initial={{ opacity: 0, x: -50 }}
@@ -210,7 +210,6 @@ const Buildchng = () => {
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="12rem"
                 color="#D9D9D9"
                 pr="2rem"
               >
@@ -230,7 +229,7 @@ const Buildchng = () => {
                 </Text>
               </MtnFlx>
             </Flex>
-            <Flex direction="row" align="center" justify="center" pb="25px">
+            <Flex direction="row" align="center" justify="center" pb="">
               <MtnHead
                 ref={iRef}
                 initial={{ opacity: 0, x: -50 }}
@@ -239,7 +238,6 @@ const Buildchng = () => {
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="12rem"
                 color="#D9D9D9"
                 pr="3.437rem"
                 pl="0.937rem"
@@ -260,7 +258,7 @@ const Buildchng = () => {
                 </Text>
               </MtnFlx>
             </Flex>
-            <Flex direction="row" align="center" justify="center" pb="25px">
+            <Flex direction="row" align="center" justify="center" pb="">
               <MtnHead
                 ref={mRef}
                 initial={{ opacity: 0, x: -50 }}
@@ -269,7 +267,6 @@ const Buildchng = () => {
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="12rem"
                 color="#D9D9D9"
                 pr="1.375rem"
                 ml="-0.75rem"
@@ -299,7 +296,6 @@ const Buildchng = () => {
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
-                lineHeight="12rem"
                 color="#D9D9D9"
                 pr="42px"
               >
@@ -318,6 +314,7 @@ const Buildchng = () => {
                   Team work is the secret to achieve uncommon results.
                 </Text>
               </MtnFlx>
+            </Flex>
             </Flex>
           </Flex>
         </Flex>

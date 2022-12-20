@@ -35,7 +35,7 @@ const OurEmp = () => {
     <Flex
       ref={ref}
       direction="column"
-      mt="90px"
+      mt="3.125rem"
       w="100%"
       h="100%"
       px="1rem"
@@ -48,7 +48,7 @@ const OurEmp = () => {
         transition={{ duration: 2, type: "just" }}
         w="100%"
         textAlign="center"
-        fontSize="40px"
+        fontSize="2.125rem"
         fontFamily="goudy"
         fontWeight="400"
         // pb="25px"
