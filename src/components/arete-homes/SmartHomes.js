@@ -31,7 +31,7 @@ const NinethSec = () => {
   const settings = {
     draggable: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     speed: 500,
     autoplaySpeed: 5000,
     slidesToShow: 2,

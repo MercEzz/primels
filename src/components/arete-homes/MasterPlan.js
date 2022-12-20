@@ -55,7 +55,7 @@ const ThirdSec = () => {
           w="100%"
           h="100%"
         >
-          <Image h="31.25rem" src="/images/arete-homes/MASTER PLAN.jpg" />
+          <Image w="100%" h="31.25rem" src="/images/arete-homes/MASTER PLAN.jpg" />
         </MtnFlx>
         <MtnFlx
           initial={{ scale: 0.6 }}

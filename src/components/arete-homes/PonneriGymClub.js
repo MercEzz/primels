@@ -26,6 +26,7 @@ const SeventhSec = () => {
   const settings = {
     // className: "center",
     centerMode: true,
+    autoplay:true,
     infinite: true,
     draggable: true,
     speed: 500,
@@ -42,7 +43,7 @@ const SeventhSec = () => {
       align="center"
       justify="center"
       pt="5rem"
-      pb="3.125rem"
+      pb="5rem"
       px="1.562rem"
     >
       <Flex w="100%" align="center" justify="center" pb="1.875rem">
@@ -60,7 +61,7 @@ const SeventhSec = () => {
         width={"full"}
         overflow={"hidden"}
         pl="4.687rem"
-        pr="3.75rem"
+        pr="4.687rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -107,7 +108,7 @@ const SeventhSec = () => {
           borderColor="#B88746"
           borderRadius="full"
           position="absolute"
-          top="50%"
+          top="45%"
           left="0"
           h="3.125rem"
           w="3.125rem"
@@ -129,7 +130,7 @@ const SeventhSec = () => {
           transform={"translate(0%, -50%)"}
           zIndex={2}
           right="0"
-          top="50%"
+          top="45%"
           h="3.125rem"
           w="3.125rem"
           onClick={() => {
