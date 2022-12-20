@@ -104,7 +104,7 @@ const EightSec = () => {
         h="100%"
         align="center"
         justify="space-between"
-        mt="0.937rem"
+        mt="2rem"
       >
         {" "}
         <Flex w="100%" direction="column" pr="1.875rem">
