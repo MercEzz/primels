@@ -25,7 +25,7 @@ import DropDown from "./sky-high/DropDown";
 const Footer = () => {
   return (
     <>
-    <DropDown />
+    {/*<DropDown />*/}
     <Flex
       pos="relative"
       direction="column"
