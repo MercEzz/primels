@@ -111,6 +111,9 @@ const Blog = () => {
       </Flex>
       {/* banner sec */}
       <Flex
+        
+        pos="absolute"
+        top="90%"
         direction="column"
         w="100%"
         h="100%"
@@ -119,14 +122,14 @@ const Blog = () => {
         pb="3.125rem"
         gap="1.875rem"
       >
-        <Flex w="100%" h="100%" direction="column" align="center">
+        <Flex w="100%" h="100%" direction="column" align="center" background="white">
         <Flex h="100%" justify="flex-end" pb="0.938rem">
         <Icon as={AiOutlineYoutube}  w="2.563rem" h="2.1rem" />
         <Icon as={AiOutlineInstagram} w="1.875rem" h="1.875rem" />
         <Icon as={RiFacebookCircleLine} w="1.875rem" h="1.875rem" />
         <Icon as={AiOutlineLinkedin} w="1.875rem" h="1.875rem" />
       </Flex>
-      <Flex w="100%" direction="column" pb="0.938rem">
+      <Flex w="100%" direction="column" mb="0.938rem" pb="0.938rem" boxShadow="xl" background="white">
         <Text fontFamily="veralaRound" fontSize="1rem" pb="0.625rem">
           Category
         </Text>
@@ -516,7 +519,10 @@ const Blog = () => {
             LOAD MORE
           </Button>
         </Flex>
-        <Flex w="100%" h="100%" direction="column">
+        <Flex w="90%" h="50%" direction="column" pos="absolute" top="445%" bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
+        bgRepeat="no-repeat"
+        bgPos="center"
+        bgSize="cover">
           <BlogForm />
         </Flex>
       </Flex>
@@ -534,15 +540,11 @@ const BlogForm = () => {
         direction="column"
         w="100%"
         h="100%"
-        px="0.938rem"
-        pt="1.875rem"
         pb="1.875rem"
         align="center"
         justify="center"
-        bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
-        bgRepeat="no-repeat"
-        bgPos="center"
-        bgSize="cover"
+        
+        px="1rem"
       >
         {" "}
         <Heading
