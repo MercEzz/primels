@@ -41,7 +41,7 @@ const PLSGreen = () => {
         <MtnHd
           initial={{ opacity: 0 }}
           animate={animateHd}
-          transition={{ duration: 2, type: "just" }}
+          transition={{ duration: 1, type: "just" }}
           pb="1.875rem"
           fontFamily="goudy"
           fontWeight="400"
@@ -53,7 +53,7 @@ const PLSGreen = () => {
         <MtnTxt
           initial={{ opacity: 0 }}
           animate={animateHd}
-          transition={{ duration: 2, type: "just" }}
+          transition={{ duration: 1, type: "just" }}
           pb="0.625rem"
           fontFamily="veralaRound"
           fontSize="1rem"
@@ -68,7 +68,7 @@ const PLSGreen = () => {
         <MtnTxt
           initial={{ opacity: 0 }}
           animate={animateHd}
-          transition={{ duration: 2, type: "just" }}
+          transition={{ duration: 1, type: "just" }}
           fontFamily="veralaRound"
           fontSize="1rem"
           mb="5rem"
