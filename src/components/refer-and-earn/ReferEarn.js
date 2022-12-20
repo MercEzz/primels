@@ -35,7 +35,9 @@ const ReferEarn = () => {
         >
           MORE REFERRALS=MORE EARNINGS
         </Heading>
+        <Flex direction="column" pos="absolute" top="25%" left="50%">
         <Heading
+          alignContent="flex-end"
           style={{ opactiy: 0, animation: "fadein-2sdelay 1 4s linear" }}
           fontfamilty="avenir"
           fontSize={{base:"1.5rem",lg:"2.125rem"}}
@@ -57,7 +59,8 @@ const ReferEarn = () => {
         >
           Unlimited Times
         </Heading>
-        <Button
+        </Flex>
+        {/*<Button
           style={{ opactiy: 0, animation: "fadein-2sdelay 1 4s linear" }}
           w="fit-content"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
@@ -71,7 +74,7 @@ const ReferEarn = () => {
           _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
         >
           BOOK A SITE VISIT
-        </Button>
+        </Button>*/}
       </Flex>
     </Flex>
   );
