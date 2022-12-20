@@ -1839,7 +1839,8 @@ const LocationAndFormPlaza = () => {
                 justifySelf="flex-end"
               >
                 <ListItem pb="0.625rem">Sri City</ListItem>
-                <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
+                <ListItem pb="0.625rem">Kattupalli Adani Port</ListItem>
+                <ListItem>Chennai Port</ListItem>
               </UnorderedList>
             </Flex>
           </Flex>
@@ -2492,7 +2493,8 @@ const LocationAndFormMall = () => {const [isOpen, setIsOpen]= useState(false);
                 justifySelf="flex-end"
               >
                 <ListItem pb="0.625rem">Sri City</ListItem>
-                <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
+                <ListItem pb="0.625rem">Kattupalli Adani Port</ListItem>
+                <ListItem>Chennai Port</ListItem>
               </UnorderedList>
             </Flex>
           </Flex>
