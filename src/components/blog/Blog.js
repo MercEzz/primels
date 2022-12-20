@@ -95,7 +95,7 @@ const Blog = () => {
           src={banner3}
         />
         <Heading
-          top="50%"
+          top="45%"
           left="50%"
           transform="translate(-50%,-50%)"
           pos="absolute"
