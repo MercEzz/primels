@@ -411,7 +411,7 @@ const TowerA4 = () => {
               TYPE OF UNITS
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
-              2 BHK(C), 2 BHK(L), 2.5 BHK
+              2 BHK(C), 2 BHK(L), 3 BHK
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
@@ -530,7 +530,7 @@ const TowerA5 = () => {
               TYPE OF UNITS
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
-              2 BHK(C), 2 BHK(L), 2.5 BHK
+              2 BHK(C), 2 BHK(L), 3 BHK
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
@@ -649,7 +649,7 @@ const TowerA6 = () => {
               TYPE OF UNITS
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
-              2 BHK(C), 2 BHK(L), 2.5 BHK
+              2 BHK(C), 2 BHK(L), 3 BHK
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">

@@ -30,7 +30,7 @@ const SeventhSec = () => {
     infinite: true,
     draggable: true,
     speed: 500,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     pauseOnHover: false,
     slidesToShow: 3,
     slidesToScroll: 1,

@@ -39,7 +39,7 @@ const AreteHomes = () => {
       <EleventhSec />
       <TwelvethSec />
       <LastSec />
-      {/*<DropDown />*/}
+      <DropDown />
     </>
   );
 };

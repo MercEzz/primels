@@ -28,7 +28,7 @@ const SecondSec = () => {
     autoplay: true,
     speed: 500,
     fade: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
@@ -110,6 +110,7 @@ const SecondSec = () => {
               zIndex={2}
               onClick={() => {
                 slider?.slickPrev();
+      
               }}
               color="white"
               _hover={{ bgColor: "none" }}
