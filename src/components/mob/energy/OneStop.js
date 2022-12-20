@@ -202,7 +202,7 @@ const OneStop = () => {
                 Material Procurement and Negotiation on behalf of client
               </ListItem>
               <ListItem>Project & Site Management</ListItem>
-              <ListItem wordBreak="break-all">
+              <ListItem>
                 Plant Commissioning & Synchronisation
               </ListItem>
               <ListItem>Performance Test</ListItem>
@@ -246,7 +246,7 @@ const OneStop = () => {
               transition={{ delay: 6.5, duration: 2, type: "just" }}
               display="flex"
               orientation="vertical"
-              h="67ex"
+              h="66.8ex"
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"

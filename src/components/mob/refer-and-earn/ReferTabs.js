@@ -56,8 +56,9 @@ const ReferTabs = () => {
     window.addEventListener("scroll", reveal);
   });
   return (
-    <Flex w="100%" h="100%" direction="column" align="center">
-      <Flex w="100%" px="1rem">
+    <Flex w="100%" h="100%" direction="column" align="center" pos="relative" boxShadow="0 0 10px rgba(0, 0, 0, 0.5) inset" filter="drop-shadow(5px 5px 5px rgba(0,0,0,0.3)) inset" >
+      <Flex w="100%" px="1rem" pos="absolute" top="-2%">
+        <Flex w="100%" background="white">
         <Button
           w="100%"
           bgColor="white"
@@ -104,6 +105,7 @@ const ReferTabs = () => {
         >
           BOOK A VISIT
         </Button>
+        </Flex>
       </Flex>
       {active ? <ReferAFriend /> : <BookAVisit />}
     </Flex>
@@ -113,7 +115,7 @@ export default ReferTabs;
 const ReferAFriend = () => {
   return (
     <>
-      <Flex overflow="hidden" px="1rem">
+      <Flex overflow="hidden" px="1rem" mt="2.5rem">
         <Heading
           w="100%"
           className="serv-text-up reveal"
