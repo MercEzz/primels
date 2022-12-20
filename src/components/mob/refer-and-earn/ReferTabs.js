@@ -56,8 +56,8 @@ const ReferTabs = () => {
     window.addEventListener("scroll", reveal);
   });
   return (
-    <Flex w="100%" h="100%" px={{base:"1rem",lg:"6.25rem"}} direction="column" align="center">
-      <Flex w="100%">
+    <Flex w="100%" h="100%" direction="column" align="center">
+      <Flex w="100%" px="1rem">
         <Button
           w="100%"
           bgColor="white"
@@ -113,7 +113,7 @@ export default ReferTabs;
 const ReferAFriend = () => {
   return (
     <>
-      <Flex overflow="hidden">
+      <Flex overflow="hidden" px="1rem">
         <Heading
           w="100%"
           className="serv-text-up reveal"
@@ -127,7 +127,7 @@ const ReferAFriend = () => {
           HOW IT WORKS?
         </Heading>
       </Flex>
-      <Flex w="100%" direction={{base:"column",lg:"row"}} pb="3.125rem">
+      <Flex w="100%" px="1rem" direction={{base:"column",lg:"row"}} pb="3.125rem">
         <Flex
           w="100%"
           h="100%"
@@ -245,6 +245,7 @@ const ReferAFriend = () => {
       </Flex>
       <Flex bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'>
       <Flex
+        px="1rem"
         w="100%"
         h="100%"
         pt="1.875rem"
@@ -551,6 +552,7 @@ const BookAVisit = () => {
           top={{base:"5%",lg:"20%"}}
           right="0"
           bottom="0"
+          px="1rem"
         >
           <Text
             className="serv-text-up reveal"
@@ -619,6 +621,8 @@ const BookAVisit = () => {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
+            paddingLeft:"1rem",
+            paddingRight:"1rem"
           }}
         >
           <Text
