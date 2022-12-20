@@ -68,13 +68,14 @@ const GetInTouch = () => {
       h="100%"
       // pt="3.125rem"
       pt="1.875rem"
-      pb="1.875rem"
+      pb="5rem"
       px="6.25rem"
       align="center"
       justify="center"
       pos="relative"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
+      objectFit="cover"
       bgSize="cover"
     >
       <MtnHd

@@ -100,7 +100,7 @@ const GetInTouch = () => {
       <MtnFlex
         initial={{ opacity: 0 }}
         animate={animateFade}
-        transition={{ delay: 3, duration: 2, type: "just" }} w="full" align="center" justify="center">
+        transition={{ delay: 1, duration: 2, type: "just" }} w="full" align="center" justify="center">
         {" "}
         <form onSubmit={submitHandler}>
           <FormControl align="center" justify="center">

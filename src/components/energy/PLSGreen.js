@@ -89,6 +89,7 @@ const PLSGreen = () => {
         align="center"
         justify="center"
         bgRepeat="no-repeat"
+        objectFit="cover"
         bgSize="cover"
       >
         <Flex w="100%" h="100%" pos="absolute" direction="column" left="0rem" ml="6.25rem">
