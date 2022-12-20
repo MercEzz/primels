@@ -67,7 +67,7 @@ const FourthSec = () => {
             transition="all 2s 2s"
           >
             <Image
-              className="fadein-2sdelay reveal"
+              className="fadein-4sdelay reveal"
               w="100%"
               h="23rem"
               src="/images/sky-high/DECK1.jpg"
@@ -159,7 +159,7 @@ const FourthSec = () => {
             pr="1.563rem"
           >
             <Image
-              className="fadein-2sdelay reveal"
+              className="fadein-6sdelay reveal"
               w="100%"
               h="23rem"
               src="/images/sky-high/DECK2.jpg"
@@ -171,7 +171,7 @@ const FourthSec = () => {
             h="100%"
           >
             <Image
-              className="fadein-4sdelay reveal"
+              className="fadein-8sdelay reveal"
               w="100%"
               h="23rem"
               src="/images/sky-high/DECK3.jpg"
@@ -182,19 +182,19 @@ const FourthSec = () => {
       </Flex>
       <Flex ref={ref} w="100%" h="100%" align="center">
         <Flex h="100%" direction="column" alignSelf="center">
-          <Heading fontFamily="avenir" fontSize="2.125rem" mb="0.9rem">
+          <Heading className="fadein reveal" fontFamily="avenir" fontSize="2.125rem" mb="0.9rem">
             SKY TERRACE AVENUE
           </Heading>
-          <Text fontFamily="veralaRound" fontSize="1rem">
+          <MtnTxt initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 4.5, duration: 2, type: "just" }} fontFamily="veralaRound" fontSize="1rem">
             The perfect spot to rediscover a <br />
             forgotten time of the day: Golden <br />
             Sunrises.
-          </Text>
+          </MtnTxt>
         </Flex>
         <Flex
-          transform={inView ? "none" : "translateY(-50px)"}
-          opacity={inView ? "1" : "0"}
-          transition="all 2s 2s"
+          className="fadein reveal"
           direction="column"
           align="center"
           px="1.563rem"
@@ -218,6 +218,7 @@ const FourthSec = () => {
         </Flex>
         <Flex w="100%" h="100%">
           <Image
+            className="fadein reveal"
             w="100%"
             h="23rem"
             src="/images/sky-high/TERRACE.jpg"

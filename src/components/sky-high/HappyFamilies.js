@@ -29,12 +29,14 @@ const LastSec = () => {
       w="100%"
       h="100%"
       px="6.25rem"
-      pt="5rem"
+      pt="1.875rem"
       pb="3.125rem"
       direction="column"
       align="center"
       justify="center"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      objectFit="cover"
+      backgroundRepeat="no-repeat"
     >
       <Text
         transform={isInView ? "none" : "translateY(-50px)"}

@@ -24,6 +24,7 @@ const TenthSec = () => {
       w="100%"
       h="100%"
       pt="1.875rem"
+      pb="3.125rem"
       align="center"
       justify="center"
       direction="column"
@@ -44,7 +45,7 @@ const TenthSec = () => {
         fontFamily="avenir"
         fontSize="2.125rem"
         textAlign="center"
-        mb="0.937rem"
+        mb="1.563rem"
       >
         AN EXCELLENT INVESTMENT OPPORTUNITY IN A <br />
         LIFETIME GROWING ASSET
@@ -135,13 +136,13 @@ const TenthSec = () => {
               borderLeft="none"
               borderBottom="none"
               fontFamiily="veralaRound"
-              fontSize="1.125rem"
+              fontSize="1.25rem"
               px="0.625rem"
               py="0.938rem"
               bgGradient="linear(to-b,#B88746, #DFBD69)"
               color="white"
             >
-              Smart 2 BHK - 690 sqft.
+              SMART 2 BHK - 690 SQFT.
             </Text>{" "}
             <Flex w="100%" borderTop="none" border="1px solid #B88746">
               <VStack

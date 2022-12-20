@@ -184,7 +184,13 @@
   animation: fadein-6sdelay 1 8s linear;
   opacity: 1;
 }
-
+.fadein-8sdelay.reveal {
+  opacity: 0;
+}
+.fadein-8sdelay.reveal.active {
+  animation: fadein-6sdelay 1 10s linear;
+  opacity: 1;
+}
 .slidein-top.reveal {
   transform: translateY(-18.75rem);
 }

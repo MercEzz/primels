@@ -111,7 +111,7 @@ const FifthSec = () => {
               transition="all 2s 2s"
               direction="column"
               align="center"
-              px="3.125rem"
+              px="1.563rem"
             >
               <Divider
                 orientation="vertical"

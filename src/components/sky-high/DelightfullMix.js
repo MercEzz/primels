@@ -30,7 +30,7 @@ const EightSec = () => {
       h="100%"
       px="6.25rem"
       pt="5rem"
-      pb="3.125rem"
+      pb="1.875rem"
       direction="column"
       align="center"
       justify="center"

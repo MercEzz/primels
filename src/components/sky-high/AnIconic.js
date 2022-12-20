@@ -75,7 +75,7 @@ const SecondSec = () => {
       align="center"
       justify="center"
       pt="5rem"
-      pb="3.125rem"
+      pb="5rem"
       px="6.25rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"

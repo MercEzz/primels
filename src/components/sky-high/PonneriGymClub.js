@@ -37,6 +37,7 @@ const SixthSec = () => {
 
   const settings = {
     // className: "center",
+    autoplay: true,
     centerMode: true,
     infinite: true,
     // centerPadding: "60px",
@@ -56,7 +57,7 @@ const SixthSec = () => {
       align="center"
       justify="center"
       pt="5rem"
-      pb="3.125rem"
+      pb="5rem"
       px="1.562rem"
     >
       {" "}
@@ -86,7 +87,7 @@ const SixthSec = () => {
         width={"full"}
         overflow={"hidden"}
         pl="4.687rem"
-        pr="3.75rem"
+        pr="4.687rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -133,7 +134,7 @@ const SixthSec = () => {
           borderColor="#B88746"
           borderRadius="full"
           position="absolute"
-          top="50%"
+          top="45%"
           left="0"
           h="3.125rem"
           w="3.125rem"
@@ -155,7 +156,7 @@ const SixthSec = () => {
           transform={"translate(0%, -50%)"}
           zIndex={2}
           right="0"
-          top="50%"
+          top="45%"
           h="3.125rem"
           w="3.125rem"
           onClick={() => {

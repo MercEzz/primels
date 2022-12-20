@@ -24,7 +24,7 @@ const NinethSec = () => {
       w="100%"
       h="100%"
       px="6.25rem"
-      pt="5rem"
+      pt="3.125rem"
       pb="3.125rem"
       direction="column"
       align="center"
