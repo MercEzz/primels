@@ -46,6 +46,23 @@ const ReferTabs = () => {
         if (elementTop < windowHeight - elementVisible) {
           reveals[i].classList.add("active");
         } else {
+        }
+      }
+    } catch (e) {}
+  };
+  const revealAgain = () => {
+    var reveals = document.querySelectorAll(".revealAgain");
+    try {
+      for (var i = 0; i <= reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i]
+          ? reveals[i].getBoundingClientRect().top
+          : null;
+        var elementVisible = 200;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
           reveals[i].classList.remove("active");
         }
       }
@@ -53,6 +70,11 @@ const ReferTabs = () => {
   };
   useLayoutEffect(() => {
     window.addEventListener("scroll", reveal);
+    window.addEventListener("scroll",revealAgain);
+    return()=>{
+      window.removeEventListener("scroll", reveal);
+      window.removeEventListener("scroll",revealAgain);
+    }
   });
   return (
     <Flex w="100%" h="100%" direction="column" align="center">
@@ -575,7 +597,7 @@ const BookAVisit = () => {
       >
         <Image
           w="45%"
-          className="expandcar reveal"
+          className="expandcar revealAgain"
           src={bookIll}
           pos="absolute"
           objectFit="cover"
@@ -774,7 +796,6 @@ const BookAVisit = () => {
                     bgColor="#E5E5E5"
                     borderRadius="none"
                   />
-
                   <Image
                     bgColor="#C1C1C1"
                     src={calender}

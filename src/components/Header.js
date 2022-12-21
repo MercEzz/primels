@@ -131,7 +131,7 @@ const Header = () => {
           <div style={{width:"80vw",height:"100vh",backgroundColor: "rgba(0,0,0,0.7)",}} onClick={()=>close()}>
           </div>
           <div style={{width:"20vw",color:"black",backgroundColor:"white",paddingLeft:"2rem",paddingRight:"2rem"}}>
-              <button style={{alignSefl:"left"}} onClick={()=>close()}>x</button>
+              <button style={{height:"1rem",width:"1rem",align:"right",backgroundColor:"grey",borderRadius:"50%"}} onClick={()=>close()}><sup>X</sup></button>
               <br/>
               <Link>ABOUT US</Link>
               <hr/>
@@ -147,7 +147,7 @@ const Header = () => {
               <br/>
               <br/>
               <br/>
-              <Link>CHANNEL PARTNER LOGIN</Link>
+              <Link href="/channel-partner">CHANNEL PARTNER LOGIN</Link>
               <hr/>
               <Link>NEWS & MEDIA</Link>
               <hr/>

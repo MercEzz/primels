@@ -144,9 +144,9 @@ const Footer = () => {
             fontFamily="veralaRound"
             fontWeight="400"
             >
-            <Link fontSize="1rem">CHANNEL<br/>PARTNER LOGIN</Link>
-            <Link fontSize="1rem">CONTACT US</Link>
-            <Link fontSize="1rem">CAREERS</Link>
+            <Link href="/channel-partner" fontSize="1rem">CHANNEL<br/>PARTNER LOGIN</Link>
+            <Link href="/contact-us" fontSize="1rem">CONTACT US</Link>
+            <Link href="/careers" fontSize="1rem">CAREERS</Link>
           </VStack>
           <VStack
             align="flex-start"
@@ -156,9 +156,9 @@ const Footer = () => {
             pos="absolute"
             right="20"
             >
-            <Link fontSize="1rem">NEWS & MEDIA</Link>
-            <Link fontSize="1rem">REFER & EARN</Link>
-            <Link fontSize="1rem">BLOG</Link>
+            <Link href="/news-and-media" fontSize="1rem">NEWS & MEDIA</Link>
+            <Link href="/refer-and-earn" fontSize="1rem">REFER & EARN</Link>
+            <Link href="/blog" fontSize="1rem">BLOG</Link>
           </VStack>
           </Flex>
           </Flex>

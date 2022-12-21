@@ -27,6 +27,7 @@ const ReferEarn = () => {
         top="20%"
       >
         <Heading
+          mt="10rem"
           style={{ opactiy: 0, animation: "fadein 1 2s linear" }}
           pb={{base:"1rem",lg:"1.875rem"}}
           fontfamilty="goudy"
@@ -35,7 +36,7 @@ const ReferEarn = () => {
         >
           MORE REFERRALS=MORE EARNINGS
         </Heading>
-        <Flex direction="column" pos="absolute" top="25%" left="50%">
+        <Flex direction="column" pos="absolute" top="25%" left="6.25rem">
         <Heading
           alignContent="flex-end"
           style={{ opactiy: 0, animation: "fadein-2sdelay 1 4s linear" }}
@@ -46,6 +47,7 @@ const ReferEarn = () => {
           Gauranteed Rewards
         </Heading>
         <BiInfinite
+          ml="5rem"
           size="3.125rem"
           color="#1F4973"
           style={{ opactiy: 0, animation: "fadein-2sdelay 1 4s linear" }}

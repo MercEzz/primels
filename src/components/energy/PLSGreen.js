@@ -155,7 +155,7 @@ const PLSGreen = () => {
               
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2, type: "just" }}
+              transition={{  duration: 2, type: "just" }}
               direction="column"
               pt="3%"
               zIndex="10"
