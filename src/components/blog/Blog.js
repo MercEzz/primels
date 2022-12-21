@@ -113,7 +113,7 @@ const Blog = () => {
         h="100%"
         px="6.25rem"
         pt="1.563rem"
-        pb="3.125rem"
+        pb="5rem"
         gap="1.875rem"
       >
         <Flex w="66%" h="100%" direction="column" align="center">
