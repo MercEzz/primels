@@ -33,20 +33,20 @@ const Footer = () => {
       bgColor="black"
       color="white"
       justify="center"
-      
+      px="100px"
       pb="1.563rem"
     >
       <Flex py="10" pos="relative">
-        <Flex direction="column" px="10" w="30%">
+        <Flex direction="column" w="30%">
           Logo
-          <Flex align="flex-start" py="6">
+          <Flex align="left" py="6">
             <Icon mt="1" w="8" h="6" color="#DFBD69" as={ImLocation} />
             <Text fontSize="1rem" fontFamily="veralaRound">
               Prime Expat Infra No. 33, Mandapam Road, Kilpauk, Chennai -
               600010.
             </Text>
           </Flex>
-          <VStack align="flex-start">
+          <VStack align="left">
             <Heading fontSize="20px" fontFamily="avenir" fontWeight="600">
               GET IN TOUCH:
             </Heading>
@@ -78,7 +78,6 @@ const Footer = () => {
           <VStack
             align="flex-start"
             fontFamily="veralaRound"
-            fontWeight="400"
             pt="4px"
           >
             <Link fontSize="1rem">ABOUT US</Link>
