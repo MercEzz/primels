@@ -136,7 +136,7 @@ export default ReferTabs;
 const ReferAFriend = () => {
   return (
     <>
-      <Flex overflow="hidden" mt="5rem">
+      <Flex overflow="hidden" mt="3.125rem">
         <Heading
           w="100%"
           className="serv-text-up reveal"
@@ -453,7 +453,7 @@ const ReferAFriend = () => {
                     PROJECT REFERRED
                   </FormLabel>
                   <Select
-                    fontFamily="avenir"
+                    fontFamily="veralaRound"
                     fontSize="1rem"
                     w="18.75rem"
                     h="3.125rem"
