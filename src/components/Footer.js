@@ -85,7 +85,7 @@ const Footer = () => {
             <Link fontSize="1rem">EXPERTISE</Link>
             <Link fontSize="1rem">GREEN POWER</Link>
           </VStack>
-          <VStack align="flex-start" pt="10">
+          <VStack mt="0.325rem" align="flex-start" pt="10">
             <Heading fontSize="20px" fontFamily="avenir" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
               Services
             </Heading>
@@ -108,10 +108,11 @@ const Footer = () => {
             fontFamily="veralaRound"
             fontWeight="400"
             pt="4px"
+           
             >
-            <Link fontSize="1rem">ARETE HOMES</Link>
-            <Link fontSize="1rem">SKY HIGH TOWER</Link>
-            <Link fontSize="1rem">COMMERCIAL PROPERTIES</Link>
+            <Link href="/arete-homes" fontSize="1rem">ARETE HOMES</Link>
+            <Link href="/sky-high" fontSize="1rem">SKY HIGH TOWER</Link>
+            <Link href="/commercial-properties"  fontSize="1rem">COMMERCIAL PROPERTIES</Link>
           </VStack>
           </Flex>
           <Flex direction="column" px="10" w="100%" pos="relative">
@@ -122,7 +123,7 @@ const Footer = () => {
             fontWeight="400"
             pt="4px"
             pos="absolute"
-            right="0"
+            right="3"
             >
               <Heading fontSize="20px" fontFamily="veralaRound" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
             Invest
@@ -133,7 +134,7 @@ const Footer = () => {
           </VStack>
           </Flex>
           </Flex>
-          <Flex direction="column" px="10" w="100%">
+          <Flex  mt="1rem" direction="column" px="10" w="100%">
           <Heading fontSize="20px" fontFamily="avenir" fontWeight="600" borderBottom="2px solid #DFBD69" textColor={"#DFBD69"}>
             Helpful Links
           </Heading>
@@ -143,7 +144,7 @@ const Footer = () => {
             fontFamily="veralaRound"
             fontWeight="400"
             >
-            <Link fontSize="1rem">CHANNEL PARTNER LOGIN</Link>
+            <Link fontSize="1rem">CHANNEL<br/>PARTNER LOGIN</Link>
             <Link fontSize="1rem">CONTACT US</Link>
             <Link fontSize="1rem">CAREERS</Link>
           </VStack>
@@ -151,7 +152,9 @@ const Footer = () => {
             align="flex-start"
             fontFamily="veralaRound"
             fontWeight="400"
-            ml="auto"
+            ml={""/*"auto"*/}
+            pos="absolute"
+            right="20"
             >
             <Link fontSize="1rem">NEWS & MEDIA</Link>
             <Link fontSize="1rem">REFER & EARN</Link>

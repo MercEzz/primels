@@ -42,16 +42,17 @@ const Lifeatls = () => {
   const animationImg = useAnimation();
 
   const settings = {
+    
     draggable: true,
     infinite: true,
-    autoplay: false,
-    speed: 500,
-    autoplaySpeed: 5000,
+    autoplay: true,
+    /*speed: 500,*/
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
     afterChange: () => {
-      setCurrentSlide(currentSlide++);
+      currentSlide===6?setCurrentSlide(0):setCurrentSlide(currentSlide++);
     },
   };
 
@@ -122,7 +123,7 @@ const Lifeatls = () => {
           />
           {/* Slider */}
           <Slider {...settings} ref={(slider) => setSlider(slider)}>
-            {images.map((prime) => (
+            {images.map((prime,index) => (
               <Flex pr="0.625rem">
                 <Image
                   key={prime}
@@ -140,7 +141,14 @@ const Lifeatls = () => {
           </Slider>
           
         </Box>
-        <Flex mt="2rem" w="100%" h="100%">
+        <Flex ml="18%" mt="1rem" align="center" gap="1rem" w="100%" h="100%">
+        <button onClick={()=>{slider.slickGoTo(0);setCurrentSlide(0)}} style={{height:"1rem",width:"1rem",backgroundColor:currentSlide===0?"green":"#bbb",borderRadius:"50%",display:"inline-block"}}/>
+        <button onClick={()=>{slider.slickGoTo(1);setCurrentSlide(1)}} style={{height:"1rem",width:"1rem",backgroundColor:currentSlide===1?"green":"#bbb",borderRadius:"50%",display:"inline-block"}}/>
+        <button onClick={()=>{slider.slickGoTo(2);setCurrentSlide(2)}} style={{height:"1rem",width:"1rem",backgroundColor:currentSlide===2?"green":"#bbb",borderRadius:"50%",display:"inline-block"}}/>
+        <button onClick={()=>{slider.slickGoTo(3);setCurrentSlide(3)}} style={{height:"1rem",width:"1rem",backgroundColor:currentSlide===3?"green":"#bbb",borderRadius:"50%",display:"inline-block"}}/>
+        <button onClick={()=>{slider.slickGoTo(4);setCurrentSlide(4)}} style={{height:"1rem",width:"1rem",backgroundColor:currentSlide===4?"green":"#bbb",borderRadius:"50%",display:"inline-block"}}/>
+        <button onClick={()=>{slider.slickGoTo(5);setCurrentSlide(5)}} style={{height:"1rem",width:"1rem",backgroundColor:currentSlide===5?"green":"#bbb",borderRadius:"50%",display:"inline-block"}}/>
+        <button onClick={()=>{slider.slickGoTo(6);setCurrentSlide(6)}} style={{height:"1rem",width:"1rem",backgroundColor:currentSlide===6?"green":"#bbb",borderRadius:"50%",display:"inline-block"}}/>
         {/*
         <IconButton
             aria-label="left-arrow"
