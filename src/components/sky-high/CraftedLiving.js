@@ -123,7 +123,7 @@ const FourthSec = () => {
             <MtnHd
                 initial={{ opacity: 0 }}
                 animate={animateFade}
-                transition={{ delay: 3, duration: 2, type: "just" }}
+                transition={{ delay: 2, duration: 2, type: "just" }}
               fontFamily="avenir"
               fontSize="1.25rem"
               mb="0.9rem"
@@ -133,7 +133,7 @@ const FourthSec = () => {
             <MtnHd
                 initial={{ opacity: 0 }}
                 animate={animateFade}
-                transition={{ delay: 5, duration: 2, type: "just" }}
+                transition={{ delay: 3, duration: 2, type: "just" }}
               fontFamily="avenir"
               fontSize="1.25rem"
               mb="0.9rem"
@@ -143,7 +143,7 @@ const FourthSec = () => {
             <MtnHd
                 initial={{ opacity: 0 }}
                 animate={animateFade}
-                transition={{ delay: 7, duration: 2, type: "just" }}
+                transition={{ delay: 4, duration: 2, type: "just" }}
               fontFamily="avenir"
               fontSize="1.25rem"
             >
@@ -159,7 +159,7 @@ const FourthSec = () => {
             pr="1.563rem"
           >
             <Image
-              className="fadein-6sdelay reveal"
+              className="fadein-2sdelay reveal"
               w="100%"
               h="23rem"
               src="/images/sky-high/DECK2.jpg"
@@ -171,7 +171,7 @@ const FourthSec = () => {
             h="100%"
           >
             <Image
-              className="fadein-8sdelay reveal"
+              className="fadein-4sdelay reveal"
               w="100%"
               h="23rem"
               src="/images/sky-high/DECK3.jpg"

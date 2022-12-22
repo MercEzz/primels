@@ -81,7 +81,7 @@ const SixthSec = () => {
       <Box
         transform={isInView ? "scale(1)" : "scale(0.6)"}
         opacity={isInView ? "1" : "0"}
-        transition="all 2s 2s"
+        transition="all 2s 1s"
         position={"relative"}
         height={"100%"}
         width={"full"}
@@ -168,7 +168,7 @@ const SixthSec = () => {
       </Box>
       <Button
         opacity={isInView ? "1" : "0"}
-        transition="all 2s 4s"
+        transition="all 2s 2s"
         w="10.875rem"
         h="3.187rem"
         mt="1.562rem"

@@ -6,7 +6,6 @@ import {
   useInView,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-
 const MtnFlx = motion(Flex);
 const MtnImg = motion(Image);
 const MtnHead = motion(Heading);
@@ -28,7 +27,7 @@ const Buildchng = () => {
   const eIsInView = useInView(eRef, { once: true });
   const animationImg = useAnimation();
   const imgData = [
-    { src: "/images/careers/problem solving.jpg" },
+    { src: "/images/careers/problem solving_15_11zon.jpg" },
     { src: "/images/careers/reliability.jpg" },
     { src: "/images/careers/innovation.jpg" },
     { src: "/images/careers/management.jpg" },
@@ -45,8 +44,32 @@ const Buildchng = () => {
       animationDvd.start({ opacity: 1, y: 0 });
       animationLtr.start({ opacity: 1, x: 0 });
       animationRightTxt.start({ opacity: 1, x: 0 });
+      setTimeout(() => {
+        setCurrImg(0);
+        setCurrSrc(imgData[0].src);
+      }, 2000);
+      setTimeout(() => {
+        setCurrImg(1);
+        setCurrSrc(imgData[1].src);
+      }, 4000);
+      setTimeout(() => {
+        setCurrImg(2);
+        setCurrSrc(imgData[2].src);
+      }, 6000);
+      setTimeout(() => {
+        setCurrImg(3);
+        setCurrSrc(imgData[3].src);
+      }, 8000);
+      setTimeout(() => {
+        setCurrImg(4);
+        setCurrSrc(imgData[4].src);
+      }, 10000);
+    }
+    return()=>{
+      clearTimeout();
     }
   }, [isInView]);
+  /*
   useEffect(() => {
     animationImg.start({ scale: 1, opacity: 1 });
   }, [currImg]);
@@ -86,7 +109,7 @@ const Buildchng = () => {
       setCurrSrc(imgData[4].src);
     }
   }, [eIsInView]);
-
+  */
   return (
     <AnimatePresence>
       <Flex
@@ -120,10 +143,7 @@ const Buildchng = () => {
         >
           <Flex w="60%" h="100%" direction="column" align="center">
             {currImg ? (
-              <MtnImg
-                initial={{ scale: 0.5, opacity: 0 }}
-                animate={animationImg}
-                transition={{ duration: 2, type: "just" }}
+              <Image
                 w="100%"
                 h="41.25rem"
                 top="30rem"

@@ -255,7 +255,7 @@ const SecondSec = () => {
               {" "}
               <Image src={second} />
               <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
-                2 TOWER LOBBIES
+                &nbsp;2 TOWER LOBBIES
               </Text>
             </HStack>
           </Flex>
@@ -271,7 +271,7 @@ const SecondSec = () => {
             <HStack>
               <Image src={third} />
               <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
-                4 ELEVATORS
+              &nbsp;4 ELEVATORS
               </Text>
             </HStack>
           </Flex>
