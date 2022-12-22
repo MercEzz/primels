@@ -103,11 +103,11 @@ const SecondSec = () => {
         >
           <Box
             position={"relative"}
-            height={"100%"}
+            height={"29.25rem"}
             width={"100%"}
             overflow={"hidden"}
             boxShadow="dark-lg"
-            className="image-sliedleft reveal"
+            className="expandcar reveal"
           >
             {/* CSS files for react-slick */}
             <link
@@ -125,7 +125,6 @@ const SecondSec = () => {
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
               {introImgs.map((prime) => (
                 <Box
-                  
                   key={prime.id}
                   w="100%"
                   height="29.25rem"
@@ -137,6 +136,7 @@ const SecondSec = () => {
                 />
               ))}
             </Slider>
+            
             <IconButton
               pos="absolute"
               aria-label="left-arrow"

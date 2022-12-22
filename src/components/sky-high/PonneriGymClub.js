@@ -56,7 +56,7 @@ const SixthSec = () => {
       direction="column"
       align="center"
       justify="center"
-      pt="5rem"
+      pt="1.875rem"
       pb="5rem"
       px="1.562rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'

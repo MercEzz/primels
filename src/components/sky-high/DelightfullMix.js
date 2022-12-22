@@ -38,10 +38,10 @@ const EightSec = () => {
       bgRepeat="no-repeat"
       bgPos="center"
       bgSize="cover"
+      overflow="hidden"
     >
       <Text
-        transform={inView ? "none" : "translateY(-50px)"}
-        opacity={inView ? "1" : "0"}
+        className="slidein-top revealOnce"
         transition="all 2s"
         fontFamily="goudy"
         fontSize="2.5rem"
@@ -74,22 +74,18 @@ const EightSec = () => {
         Making it possible to fit up to 5 beds in every apartment.
       </Text>
       <Flex w="100%" h="100%" align="center" justify="center" gap="0.937rem">
-        <Flex boxShadow="dark-lg">
+        <Flex boxShadow="dark-lg" overflow="hidden">
           <Image
-            transform={inView ? "none" : "translateX(-100px)"}
-            opacity={inView ? "1" : "0"}
-            transition="all 2s 2s"
+            className="image-sliedleft reveal"
             w="100%"
             src="/images/sky-high/FLOOR PLAN1.jpg"
             filter="auto"
             blur="5px"
           />
         </Flex>
-        <Flex boxShadow="dark-lg">
+        <Flex boxShadow="dark-lg" overflow="hidden" >
           <Image
-            transform={inView ? "none" : "translateX(100px)"}
-            opacity={inView ? "1" : "0"}
-            transition="all 2s 2s"
+            className="image-sliedright reveal"
             w="100%"
             src="/images/sky-high/FLOOR PLAN2.jpg"
             filter="auto"

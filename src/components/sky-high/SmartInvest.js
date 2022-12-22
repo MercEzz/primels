@@ -53,8 +53,7 @@ const TenthSec = () => {
       <Flex w="100%" h="100%" overflow="hidden">
         <Flex
           w="50%"
-          className="image-sliedleft reveal"
-          
+          className="expandcar reveal"
           h="100%"
           pos="relative"
         >
@@ -85,7 +84,7 @@ const TenthSec = () => {
           px="1.562rem"
         >
           <Divider
-            h="5.5rem"
+            h="3.5rem"
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"

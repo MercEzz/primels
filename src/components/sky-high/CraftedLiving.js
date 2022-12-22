@@ -180,21 +180,19 @@ const FourthSec = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex ref={ref} w="100%" h="100%" align="center">
+      <Flex ref={ref} w="100%" h="100%" align="center" overflow="hidden">
         <Flex h="100%" direction="column" alignSelf="center">
-          <Heading className="fadein reveal" fontFamily="avenir" fontSize="2.125rem" mb="0.9rem">
+          <Heading className="fadein revealOnce" fontFamily="avenir" fontSize="2.125rem" mb="0.9rem">
             SKY TERRACE AVENUE
           </Heading>
-          <MtnTxt initial={{ opacity: 0 }}
-                animate={animateFade}
-                transition={{ delay: 4.5, duration: 2, type: "just" }} fontFamily="veralaRound" fontSize="1rem">
+          <MtnTxt className="fadein-2sdelay revealOnce" fontFamily="veralaRound" fontSize="1rem">
             The perfect spot to rediscover a <br />
             forgotten time of the day: Golden <br />
             Sunrises.
           </MtnTxt>
         </Flex>
         <Flex
-          className="fadein reveal"
+          className="slidein-top revealOnce"
           direction="column"
           align="center"
           px="1.563rem"

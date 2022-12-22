@@ -12,13 +12,15 @@ import SeventhSec from "../components/sky-high/AwakenBanner";
 import SixthSec from "../components/sky-high/PonneriGymClub";
 import TenthSec from "../components/sky-high/SmartInvest";
 import ThirdSec from "../components/sky-high/ExperienceBanner";
-import { revealAgain } from "../hooks/util";
+import { revealAgain, revealOnce } from "../hooks/util";
 
 const SkyHighSc = () => {
   useLayoutEffect(()=>{
     window.addEventListener("scroll", revealAgain);
+    window.addEventListener("scroll", revealOnce);
     return()=>{
       window.removeEventListener("scroll", revealAgain);
+      window.removeEventListener("scroll", revealOnce);
     }
   });
   return (

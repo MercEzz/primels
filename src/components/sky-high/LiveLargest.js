@@ -36,6 +36,7 @@ const FifthSec = () => {
       ref={ref}
       w="100%"
       h="100%"
+      pb="3.125rem"
       align="center"
       justify="center"
       direction="column"
