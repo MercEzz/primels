@@ -42,6 +42,7 @@ import "./commercial-properties.css";
 import TenthSec from "../sky-high/SmartInvest";
 import ModalWindwow from "../modalWindow";
 import ModalImage from "../modalImage";
+import { revealOnce } from "../../hooks/util";
 
 const AreteSec = () => {
   const [active, setActive] = useState(true);
@@ -73,8 +74,10 @@ const AreteSec = () => {
   };
   useLayoutEffect(() => {
     window.addEventListener("scroll", reveal);
+    window.addEventListener("scroll", revealOnce);
     return () => {
       window.removeEventListener("scroll", reveal);
+      window.removeEventListener("scroll", revealOnce);
     };
   });
   return (

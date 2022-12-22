@@ -31,7 +31,7 @@ const ReferEarn = () => {
           style={{ opactiy: 0, animation: "fadein 1 2s linear" }}
           pb={{base:"1rem",lg:"1.875rem"}}
           fontfamilty="goudy"
-          fontSize={{base:"1.1rem",lg:"2.5rem"}}
+          fontSize="2.375rem"
           color="#13314F"
         >
           MORE REFERRALS=MORE EARNINGS
