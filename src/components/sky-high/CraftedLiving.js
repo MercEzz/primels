@@ -67,7 +67,7 @@ const FourthSec = () => {
             transition="all 2s 2s"
           >
             <Image
-              className="fadein-4sdelay reveal"
+              className="fadein-2sdelay reveal"
               w="100%"
               h="23rem"
               src="/images/sky-high/DECK1.jpg"
@@ -159,7 +159,7 @@ const FourthSec = () => {
             pr="1.563rem"
           >
             <Image
-              className="fadein-2sdelay reveal"
+              className="fadein reveal"
               w="100%"
               h="23rem"
               src="/images/sky-high/DECK2.jpg"
@@ -171,7 +171,7 @@ const FourthSec = () => {
             h="100%"
           >
             <Image
-              className="fadein-4sdelay reveal"
+              className="fadein reveal"
               w="100%"
               h="23rem"
               src="/images/sky-high/DECK3.jpg"
