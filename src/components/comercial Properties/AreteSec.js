@@ -35,7 +35,6 @@ import gamingArena from "../commercial-properties imgs/yara-2lS63pP77EQ-unsplash
 import foodCourt from "../commercial-properties imgs/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg";
 import retailShop from "../commercial-properties imgs/carl-raw-s9rsYu-BYNo-unsplash.jpg";
 import bgBox from "../careers imgs/bg-box.jpg";
-
 import DropDown from "./DropDown";
 import "./animations.css";
 import "./commercial-properties.css";
@@ -431,9 +430,9 @@ return (
             CHECK PRICE
           </Button>
         </Flex>{" "}
-        <Flex w="100%" px="0.938rem" overflow="hidden">
+        <Flex w="100%" px="0.938rem" overflow="hidden" className="expandcar reveal">
           <Image
-            className="Arete-Plaza-FloorPlan-Image reveal"
+            
             w="100%"
             boxShadow="dark-lg"
             h="14.375rem"
@@ -451,11 +450,11 @@ return (
         px="6.25rem"
         pb="5rem"
       >
-        <Flex w="65%" alignSelf="flex-start" overflow="hidden" boxShadow="2xl">
+        <Flex w="65%" alignSelf="flex-start" overflow="hidden" boxShadow="2xl" className="expandcar reveal">
           <Image
             onClick={()=>openImage()}
             _hover={{cursor:"pointer"}}
-            className="Arete-Plaza-FloorPlan-Image reveal"
+            boxShadow="dark-lg"
             w="100%"
             h="29.25rem"
             src={aretefloor}
@@ -593,13 +592,14 @@ const AreteMall = () => {
             gap="1.8rem"
             overflow="hidden"
           >
-            <Flex w={{ base: "100%", lg: "50%" }} overflow="hidden">
+            <Flex w={{ base: "100%", lg: "50%" }} overflow="hidden" className="expandcar reveal">
               <Image
+                boxShadow="dark-lg"
                 onClick={()=>open()}
                 src={mall}
                 h={{ base: "18.125rem", lg: "29.25rem" }}
                 w="100%"
-                className="Arete-Plaza-FloorPlan-Image reveal"
+                
               />
             </Flex>{" "}
             <Button
