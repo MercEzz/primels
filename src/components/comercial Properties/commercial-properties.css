@@ -177,6 +177,27 @@
     animation:fadein-4sdelay 1 6s linear;
     opacity: 1;
 }
+.fadein1.reveal {
+  opacity: 0;
+}
+.fadein1.reveal.active {
+  animation: fadein-6sdelay 1 4s linear;
+  opacity: 1;
+}
+.fadein3s.reveal {
+  opacity: 0;
+}
+.fadein3s.reveal.active {
+  animation: fadein-6sdelay 1 5s linear;
+  opacity: 1;
+}
+.fadein-6sdelay.reveal {
+  opacity: 0;
+}
+.fadein-6sdelay.reveal.active {
+  animation: fadein-6sdelay 1 8s linear;
+  opacity: 1;
+}
 .fadein-6sdelay.reveal {
   opacity: 0;
 }

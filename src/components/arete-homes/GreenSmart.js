@@ -181,7 +181,7 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  className="fadein-4sdelay reveal"
+                  className="fadein1 reveal"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -223,7 +223,7 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  className="fadein-4sdelay reveal"
+                  className="fadein1 reveal"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -268,7 +268,7 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  className="fadein-6sdelay reveal"
+                  className="fadein3s reveal"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -313,7 +313,7 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  className="fadein-6sdelay reveal"
+                  className="fadein3s reveal"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
