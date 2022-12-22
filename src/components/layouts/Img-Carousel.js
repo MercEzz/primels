@@ -52,7 +52,7 @@ const ImgCarousel = (props) => {
               pos="absolute"
               bottom="0"
               w="100%"
-              h="20rem"
+              h="15rem"
               pt="1.563rem"
               align="center"
               justify="flex-start"
