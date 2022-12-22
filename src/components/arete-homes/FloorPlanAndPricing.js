@@ -91,7 +91,7 @@ const TenthSec = () => {
       <Heading fontFamily="avenir" fontSize="2.125rem" mb="1.563rem">
         SMART HOMES THAT ARE VASTU COMPLIANT
       </Heading>
-      <Flex w="100%" h="100%" pb="0.938rem">
+      <Flex w="100%" h="100%" pb="0.938rem" justify="center">
         {" "}
         <Button
           onClick={(e)=>handleClick(e)}
