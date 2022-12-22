@@ -198,7 +198,7 @@ const SecondSec = () => {
             border="3px solid"
             borderColor="#DFBD69"
             bgColor="#DFBD69"
-            h="2.75rem"
+            h="2.90rem"
           />
           <Box
             height="1.875rem"
@@ -223,74 +223,27 @@ const SecondSec = () => {
             stunning skyline from Arete Homes SKY HIGH Tower the top 20th floor.
             A new world of luxury has taken shape in North Chennai, Ponneri.{" "}
           </MtnTxt>
-          <Flex
-            opacity={isInView ? "1" : "0"}
-            transition="all 2s 4s"
-            w="16.937rem"
-            borderRadius="0.625rem"
-            bgColor="#DFBD69"
-            px="0.938rem"
-            py="0.625rem"
-            mb="1.2rem"
-          >
-            <HStack>
-              {" "}
+            <HStack opacity={isInView ? "1" : "0"}
+            transition="all 2s 4s" h="3.188rem" w="16.938rem" mb="1.25rem">
               <Image src={first} />
-              <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
-                18 STOREY’S TALL
-              </Text>
             </HStack>
-          </Flex>
-          <Flex
-            opacity={isInView ? "1" : "0"}
-            transition="all 2s 6s"
-            w="16.937rem"
-            borderRadius="0.625rem"
-            bgColor="#DFBD69"
-            p="0.938rem"
-            py="0. 625rem"
-            mb="1.2rem"
-          >
-            <HStack>
-              {" "}
+
+            <HStack opacity={isInView ? "1" : "0"}
+            transition="all 2s 6s" h="3.188rem" w="16.938rem" mb="1.25rem">
               <Image src={second} />
-              <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
-                &nbsp;2 TOWER LOBBIES
-              </Text>
             </HStack>
-          </Flex>
-          <Flex
-            opacity={isInView ? "1" : "0"}
-            transition="all 1s 8s"
-            w="16.937rem"
-            borderRadius="0.625rem"
-            bgColor="#DFBD69"
-            p="0.938rem"
-            mb="1.2rem"
-          >
-            <HStack>
+
+            <HStack opacity={isInView ? "1" : "0"}
+            transition="all 1s 8s" h="3.188rem" w="16.938rem" mb="1.25rem">
               <Image src={third} />
-              <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
-              &nbsp;4 ELEVATORS
-              </Text>
             </HStack>
-          </Flex>
-          <Flex
-            opacity={isInView ? "1" : "0"}
-            transition="all 1s 10s"
-            w="16.937rem"
-            borderRadius="0.625rem"
-            bgColor="#DFBD69"
-            px="0.938rem"
-            py="0.625rem"
-          >
-            <HStack>
+
+
+            <HStack opacity={isInView ? "1" : "0"}
+            transition="all 1s 10s" h="3.188rem" w="16.938rem">
               <Image src={fourth} />
-              <Text fontFamily="avenir" fontSize="1.2rem" fontWeight="bold">
-                20 RETAIL SHOPS
-              </Text>
             </HStack>
-          </Flex>
+
         </Flex>
       </Flex>
     </Flex>
