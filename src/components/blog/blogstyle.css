@@ -19,3 +19,45 @@
 .blog-image-down.reveal {
   transform: translateY(-6.25rem);
 }
+.slideTop.reveal {
+  transform: translateY(-100vh);
+}
+.slideTop.reveal.active {
+  animation: slideTop 1 2s linear;
+  transform: translateY(0vh);
+}
+.slideTop2.reveal {
+  transform: translateY(-100vh);
+}
+.slideTop2.reveal.active {
+  animation: slideTop2 1 4s linear;
+  transform: translateY(0vh);
+}
+.slideTop3.reveal {
+  transform: translateY(-100vh);
+}
+.slideTop3.reveal.active {
+  animation: slideTop2 1 6s linear;
+  transform: translateY(0vh);
+}
+.slideTop4.reveal {
+  transform: translateY(-100vh);
+}
+.slideTop4.reveal.active {
+  animation: slideTop2 1 8s linear;
+  transform: translateY(0vh);
+}
+.slideTop4.reveal {
+  transform: translateY(-100vh);
+}
+.slideTop4.reveal.active {
+  animation: slideTop2 1 10s linear;
+  transform: translateY(0vh);
+}
+.slideTop5.reveal {
+  transform: translateY(-100vh);
+}
+.slideTop5.reveal.active {
+  animation: slideTop2 1 12s linear;
+  transform: translateY(0vh);
+}

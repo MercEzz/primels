@@ -6,6 +6,8 @@ import {
   useInView,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import problemSolving from "../careers imgs/problem solving_15_11zon.jpg"
+
 const MtnFlx = motion(Flex);
 const MtnImg = motion(Image);
 const MtnHead = motion(Heading);
@@ -27,7 +29,8 @@ const Buildchng = () => {
   const eIsInView = useInView(eRef, { once: true });
   const animationImg = useAnimation();
   const imgData = [
-    { src: "/images/careers/problem solving_15_11zon.jpg" },
+    { src: "" },
+    { src: "/images/careers/problem solving.jpg" },
     { src: "/images/careers/reliability.jpg" },
     { src: "/images/careers/innovation.jpg" },
     { src: "/images/careers/management.jpg" },
@@ -45,30 +48,34 @@ const Buildchng = () => {
       animationLtr.start({ opacity: 1, x: 0 });
       animationRightTxt.start({ opacity: 1, x: 0 });
       setTimeout(() => {
-        setCurrImg(0);
-        setCurrSrc(imgData[0].src);
-      }, 2000);
-      setTimeout(() => {
         setCurrImg(1);
         setCurrSrc(imgData[1].src);
-      }, 4000);
+      }, 2000);
       setTimeout(() => {
         setCurrImg(2);
         setCurrSrc(imgData[2].src);
-      }, 6000);
+      }, 4000);
       setTimeout(() => {
         setCurrImg(3);
         setCurrSrc(imgData[3].src);
-      }, 8000);
+      }, 6000);
       setTimeout(() => {
         setCurrImg(4);
         setCurrSrc(imgData[4].src);
+      }, 8000);
+      setTimeout(() => {
+        setCurrImg(5);
+        setCurrSrc(imgData[5].src);
       }, 10000);
     }
     return()=>{
       clearTimeout();
     }
   }, [isInView]);
+  useEffect(() => {
+    console.log("curr img changed: "+currImg);
+    console.log("curr src changed:"+currSrc);
+  }, [currSrc]);
   /*
   useEffect(() => {
     animationImg.start({ scale: 1, opacity: 1 });
@@ -161,8 +168,11 @@ const Buildchng = () => {
               align="center"
               pl="1.3rem"
               pr="1.3rem"
+              overflow="hidden"
             >
+              <Flex direction="column" align="center" >
               <Divider
+                className="slideTop reveal"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -170,6 +180,7 @@ const Buildchng = () => {
                 h="1.5rem"
               />
               <Box
+                className="slideTop reveal"
                 height="1.875rem"
                 width="1.875rem"
                 backgroundColor="#DFBD69"
@@ -178,13 +189,17 @@ const Buildchng = () => {
                 borderRadius="50%"
               />
               <Divider
+                className="slideTop reveal"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
                 h="3.5rem"
               />
+              </Flex>
+              <Flex direction="column" align="center" >
               <Divider
+                className="slideTop2 reveal"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -192,6 +207,7 @@ const Buildchng = () => {
                 h="1.5rem"
               />
               <Box
+                className="slideTop2 reveal"
                 height="1.875rem"
                 width="1.875rem"
                 backgroundColor="#DFBD69"
@@ -200,13 +216,17 @@ const Buildchng = () => {
                 borderRadius="50%"
               />
               <Divider
+                className="slideTop2 reveal"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
                 h="3.5rem"
               />
+              </Flex>
+              <Flex direction="column" align="center" >
               <Divider
+                className="slideTop3 reveal"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -214,6 +234,7 @@ const Buildchng = () => {
                 h="2.5rem"
               />
               <Box
+                className="slideTop3 reveal"
                 height="1.875rem"
                 width="1.875rem"
                 backgroundColor="#DFBD69"
@@ -222,13 +243,17 @@ const Buildchng = () => {
                 borderRadius="50%"
               />
               <Divider
+                className="slideTop3 reveal"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
                 h="2.5rem"
               />
+              </Flex>
+              <Flex direction="column" align="center" >
               <Divider
+                className="slideTop4 reveal"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -236,6 +261,7 @@ const Buildchng = () => {
                 h="3.5rem"
               />
               <Box
+                className="slideTop4 reveal"
                 height="1.875rem"
                 width="1.875rem"
                 backgroundColor="#DFBD69"
@@ -244,13 +270,17 @@ const Buildchng = () => {
                 borderRadius="50%"
               />
               <Divider
+                className="slideTop4 reveal"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
                 h="1.5rem"
               />
+              </Flex>
+              <Flex direction="column" align="center" >
               <Divider
+                className="slideTop5 reveal"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -258,6 +288,7 @@ const Buildchng = () => {
                 h="3.5rem"
               />
               <Box
+                className="slideTop5 reveal"
                 height="1.875rem"
                 width="1.875rem"
                 backgroundColor="#DFBD69"
@@ -266,12 +297,14 @@ const Buildchng = () => {
                 borderRadius="50%"
               />
               <Divider
+                className="slideTop5 reveal"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
                 h="1.5rem"
               />
+              </Flex>
             </Flex>
           <Flex
             direction="column"
