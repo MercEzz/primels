@@ -4,6 +4,7 @@ import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import styled from 'styled-components';
 import { useModalController } from "../hooks/util";
 const StyledHeader = styled.div`
+    background-color: rgba(0,0,0,0.2);
     .collapsible-list-button{
       display:flex;
       color: black;
@@ -32,7 +33,7 @@ const StyledHeader = styled.div`
       position: absolute;
       background-color: #f1f1f1;
       min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
       z-index: 1;
     }
     .collapsible-content4{
@@ -78,11 +79,11 @@ const Header = () => {
       top="0"
       w="100%"
       h="100px"
-      bgColor={navbar ? "#fff" : "transparent"}
+      bgColor={navbar ? "#fff" : "rgba(0,0,0,0.2)"}
       transition="all 2s"
       align="center"
       justify="center"
-      zIndex="11"
+      zIndex="999"
       color="black"
     >
       {" "}

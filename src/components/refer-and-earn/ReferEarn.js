@@ -27,7 +27,7 @@ const ReferEarn = () => {
         top="20%"
       >
         <Heading
-          mt="10rem"
+          mt="5rem"
           style={{ opactiy: 0, animation: "fadein 1 2s linear" }}
           pb={{base:"1rem",lg:"1.875rem"}}
           fontfamilty="goudy"

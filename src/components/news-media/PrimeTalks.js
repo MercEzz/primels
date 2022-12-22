@@ -87,7 +87,7 @@ const FourthSec = () => {
           h="100%"
           flex="3"
           mr="1.562rem"
-        ><div style={{height:"29.5rem",width:"41.75rem"}}>
+        ><div style={{height:"29.5rem",width:"51.75rem"}}>
           <embed
             height="100%"
             width="100%"
@@ -139,20 +139,20 @@ const FourthSec = () => {
             justify="center"
           >
             <Text _hover={{cursor:"pointer"}} id={0} onClick={(e)=>changeVid(e)} pb="1.562rem" mt="2rem" pl="1.562rem" verticalAlign="middle">
-              Best Realty Brand 2021 The Economic Times
+              Best Realty Brand 2021<br/>The Economic Times
             </Text>
             <Text _hover={{cursor:"pointer"}} id={1} onClick={(e)=>changeVid(e)} pb="1.562rem" pl="1.562rem">
               The Future Of Real Estate
             </Text>
             <Text _hover={{cursor:"pointer"}} id={2} onClick={(e)=>changeVid(e)} pb="1.562rem" pl="1.562rem" verticalAlign="middle">
-              Best Real Estate Investment 8% Guaranteed Rental Return At Arete
+              Best Real Estate Investment<br/>8% Guaranteed Rental Return At<br/>Arete
               Homes
             </Text>
             <Text _hover={{cursor:"pointer"}} id={3} onClick={(e)=>changeVid(e)} pb="1.562rem" pl="1.562rem" verticalAlign="middle">
               Sky High Tower Launch Event
             </Text>
             <Text _hover={{cursor:"pointer"}} id={4} onClick={(e)=>changeVid(e)} pl="1.562rem" verticalAlign="middle">
-              Dr. Janani Rex Talks About Arete Homes Sky High Towers
+              Dr. Janani Rex Talks About<br/>Arete Homes Sky High Towers
             </Text>
           </Flex>
         </Flex>

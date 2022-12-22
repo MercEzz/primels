@@ -28,7 +28,7 @@ const SecondSec = () => {
     infinite: true,
     autoplay: true,
     speed: 500,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     slidesToShow: 2,
     slidesToScroll: 1,
     pauseOnHover: false,

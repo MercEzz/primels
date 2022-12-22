@@ -103,7 +103,7 @@ const Buildchng = () => {
         <MtnHead
           initial={{ opacity: 0, y: -50 }}
           animate={animationHead}
-          transition={{ duration: 2, type: "just" }}
+          transition={{ duration: 1, type: "just" }}
           fontSize="2.5rem"
           fontWeight="400"
           fontFamily="goudy"
@@ -124,8 +124,8 @@ const Buildchng = () => {
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={animationImg}
                 transition={{ duration: 2, type: "just" }}
-                w="31.25rem"
-                h="31.25rem"
+                w="100%"
+                h="41.25rem"
                 top="30rem"
                 left="1rem"
                 right="1rem"
@@ -137,27 +137,18 @@ const Buildchng = () => {
             )}
           </Flex>
           <Flex
-            direction="column"
-            w="40%"
-            h="80%"
-            align="flex-start"
-            pr="100px"
-          >
-            <MtnFlx
-              initial={{ opacity: 0, y: -100 }}
-              animate={animationDvd}
-              transition={{ delay: 1, duration: 2, type: "just" }}
               direction="column"
               align="center"
               pl="1.3rem"
+              pr="1.3rem"
             >
               <Divider
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
-                h="5.25rem"
-              />{" "}
+                h="1.5rem"
+              />
               <Box
                 height="1.875rem"
                 width="1.875rem"
@@ -166,8 +157,110 @@ const Buildchng = () => {
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
               />
-            </MtnFlx>
-
+              <Divider
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+                h="3.5rem"
+              />
+              <Divider
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+                h="1.5rem"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+              />
+              <Divider
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+                h="3.5rem"
+              />
+              <Divider
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+                h="2.5rem"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+              />
+              <Divider
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+                h="2.5rem"
+              />
+              <Divider
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+                h="3.5rem"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+              />
+              <Divider
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+                h="1.5rem"
+              />
+              <Divider
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+                h="3.5rem"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+              />
+              <Divider
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+                h="1.5rem"
+              />
+            </Flex>
+          <Flex
+            direction="column"
+            w="40%"
+            h="80%"
+            align="flex-start"
+            pr="100px"
+            overflow="hidden"
+          >
             <Flex direction="row" align="center" justify="center" >
               <MtnHead
                 ref={pRef}
@@ -268,7 +361,7 @@ const Buildchng = () => {
                 fontFamily="goudy"
                 color="#D9D9D9"
                 pr="1.375rem"
-                ml="-0.75rem"
+                ml={""/*"-0.75rem"*/}
               >
                 M
               </MtnHead>

@@ -64,11 +64,10 @@ const LastSec = () => {
       direction="column"
       pt="1.875rem"
       px="6.25rem"
-      pb="6.25rem"
+      pb="5rem"
       align="center"
       justify="center"
       pos="relative"
-      mb="5rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgSize="cover"

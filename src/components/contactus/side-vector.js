@@ -35,7 +35,7 @@ const SideVector = () => {
           h="100%"
           w="100%"
           // bgColor="blackAlpha.300"
-          zIndex="99"
+          zIndex="20"
         >
           <MtnFlx
             initial={{ opacity: 0, y: -50 }}
@@ -51,6 +51,7 @@ const SideVector = () => {
             px="3.125rem"
           >
             <Divider
+              
               h="25vh"
               orientation="vertical"
               border="3px solid"
