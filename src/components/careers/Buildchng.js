@@ -169,6 +169,8 @@ const Buildchng = () => {
               pl="1.3rem"
               pr="1.3rem"
               overflow="hidden"
+              h="41.25rem"
+              alignItems="flex-start"
             >
               <Flex direction="column" align="center" >
               <Divider
@@ -177,7 +179,7 @@ const Buildchng = () => {
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
-                h="1.5rem"
+                h="2.5rem"
               />
               <Box
                 className="slideTop reveal"
@@ -204,7 +206,7 @@ const Buildchng = () => {
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
-                h="1.5rem"
+                h="2.5rem"
               />
               <Box
                 className="slideTop2 reveal"
@@ -258,7 +260,7 @@ const Buildchng = () => {
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
-                h="3.5rem"
+                h="2.5rem"
               />
               <Box
                 className="slideTop4 reveal"
@@ -285,7 +287,7 @@ const Buildchng = () => {
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
-                h="3.5rem"
+                h="4.5rem"
               />
               <Box
                 className="slideTop5 reveal"
@@ -295,14 +297,6 @@ const Buildchng = () => {
                 border="3px solid white"
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
-              />
-              <Divider
-                className="slideTop5 reveal"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-                h="1.5rem"
               />
               </Flex>
             </Flex>
