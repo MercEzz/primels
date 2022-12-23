@@ -57,7 +57,7 @@ const ReferTabs = () => {
   });
   return (
     <Flex w="100%" h="100%" direction="column" align="center" pos="relative" boxShadow="0 0 10px rgba(0, 0, 0, 0.5) inset" filter="drop-shadow(5px 5px 5px rgba(0,0,0,0.3)) inset" >
-      <Flex w="100%" px="1rem" pos="absolute" top="-2%">
+      <Flex w="100%" px="1rem" pos="absolute" top="-2%" zIndex="20">
         <Flex w="100%" background="white">
         <Button
           w="100%"
@@ -536,6 +536,7 @@ const BookAVisit = () => {
     <>
     
       <Flex
+        zIndex="1"
         w="100%"
         h="100vh"
         bgColor="white"
