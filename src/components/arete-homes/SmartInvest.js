@@ -37,7 +37,7 @@ const TenthSec = () => {
       </Text>
       <Heading
         opacity={isInView ? "1" : "0"}
-        transition="all 2s 2s"
+        transition="all 2s"
         fontFamily="avenir"
         fontSize="2.125rem"
         textAlign="center"
@@ -53,7 +53,7 @@ const TenthSec = () => {
           justify="center"
         >
           <Image
-             className="image-sliedright reveal"
+             className="expandcar reveal"
             // pos="absolute"
             
             h="31.25rem"
@@ -64,6 +64,8 @@ const TenthSec = () => {
           />
           <Flex w="100%" pos="absolute" justify="center">
             <Heading
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
               textAlign="center"
               fontSize="1.25rem"
               p="1.25rem"
@@ -74,6 +76,7 @@ const TenthSec = () => {
           </Flex>
         </Flex>
         <Flex
+          overflow="hidden"
           h="100%"
           direction="column"
           justify="flex-start"
@@ -81,8 +84,13 @@ const TenthSec = () => {
           px="1.562rem"
           transform={isInView ? "translateY(0)" : "translateY(-50px)"}
           opacity={isInView ? "1" : "0"}
-          transition="all 2s 4s"
+          transition="all 2s"
         >
+          <Flex
+          className="slidein-top reveal"
+          direction="column"
+          justify="flex-start"
+          align="center">
           <Divider
             h="3.7rem"
             orientation="vertical"
@@ -99,6 +107,7 @@ const TenthSec = () => {
             borderRadius="50%"
             my="1"
           />
+          </Flex>
         </Flex>
         <Flex
           w="50%"
@@ -110,7 +119,7 @@ const TenthSec = () => {
           <Heading
             transform={isInView ? "translateX(0)" : "translateX(-100px)"}
             opacity={isInView ? "1" : "0"}
-            transition="all 2s 4s"
+            transition="all 2s"
             w="100%"
             fontSize="1.5rem"
             textAlign="left"
@@ -124,7 +133,7 @@ const TenthSec = () => {
             mb="0.938rem"
             alignSelf="flex-start"
             opacity={isInView ? "1" : "0"}
-            transition="all 2s 4s"
+            transition="all 2s"
             direction="column"
           >
             <Flex w="100%" border="1px solid #B88746">
@@ -177,7 +186,7 @@ const TenthSec = () => {
               </Text>
             </Flex>
 
-            <Flex w="100%" borderTop="none" border="1px solid #B88746">
+            <Flex w="100%" borderLeft="1px solid #B88746" borderRight="1px solid #B88746">
               <VStack
                 w="30%"
                 align="flex-start"
@@ -256,7 +265,7 @@ const TenthSec = () => {
           </Flex>
           <Heading
             opacity={isInView ? "1" : "0"}
-            transition="all 2s 6s"
+            transition="all 2s"
             fontFamily="avenir"
             fontSize="1.25rem"
             mb="0.938rem"
@@ -265,7 +274,7 @@ const TenthSec = () => {
           </Heading>
           <Button
             opacity={isInView ? "1" : "0"}
-            transition="all 2s 6s"
+            transition="all 2s"
             w="9.125"
             h="3.187rem"
             fontSize="1rem"

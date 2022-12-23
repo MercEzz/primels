@@ -75,7 +75,7 @@ const NinethSec = () => {
       >
         BUY . RENT . INVEST .
       </Heading>
-      <Text fontFamily="veralaRound" fontSize="1.125rem" pb="1.563rem">
+      <Text opacity={isInView ? "1" : "0"} transition="all 2s" fontFamily="veralaRound" fontSize="1.125rem" pb="1.563rem">
         Premium 2 BHK & 3 BHK serviced apartments in North Chennai, with
         customized experience, your way.
       </Text>

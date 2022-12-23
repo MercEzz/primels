@@ -104,7 +104,7 @@ const TenthSec = () => {
           bgColor={tower==="TOWER A3"?"#DFBD69":"white"}
           color="black"
           _hover={{
-            bgColor: "#B88746",
+            bgColor: "#DFBD69",
           }}
           _active={{ bgColor: "#DFBD69" }}
         >
@@ -121,7 +121,7 @@ const TenthSec = () => {
           mr="0.625rem"
           color="black"
           _hover={{
-            bgColor: "#B88746",
+            bgColor: "#DFBD69",
           }}
           _active={{ bgColor: "#DFBD69" }}
         >
@@ -138,7 +138,7 @@ const TenthSec = () => {
           mr="0.625rem"
           color="black"
           _hover={{
-            bgColor: "#B88746",
+            bgColor: "#DFBD69",
           }}
           _active={{ bgColor: "#DFBD69" }}
         >
@@ -154,7 +154,7 @@ const TenthSec = () => {
           fontFamily="avenir"
           color="black"
           _hover={{
-            bgColor: "#B88746",
+            bgColor: "#DFBD69",
           }}
           _active={{ bgColor: "#DFBD69" }}
         >
@@ -273,14 +273,15 @@ const TowerA3 = () => {
         </Text>
         <Flex
           w="100%"
-          h="100%"
+          h="20.963rem"
           direction="column"
-          p="0.938rem"
+          pt="1.563rem"
+          px="0.938rem"
           gap="1.25rem"
           align="center"
         >
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               TYPE OF UNITS
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -288,7 +289,7 @@ const TowerA3 = () => {
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               SALEABLE AREA
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -296,7 +297,7 @@ const TowerA3 = () => {
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               FLOORS
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -304,7 +305,7 @@ const TowerA3 = () => {
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               NO. OF FLATS ON EACH FLOOR
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -399,15 +400,16 @@ const TowerA4 = () => {
           TOWER DETAILS
         </Text>
         <Flex
-          w="100%"
-          h="100%"
-          direction="column"
-          p="0.938rem"
-          gap="1.25rem"
-          align="center"
+         w="100%"
+         h="20.963rem"
+         direction="column"
+         pt="1.563rem"
+         px="0.938rem"
+         gap="1.25rem"
+         align="center"
         >
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               TYPE OF UNITS
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -415,15 +417,15 @@ const TowerA4 = () => {
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               SALEABLE AREA
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
-              1025-1421 SQFT.
+              1025-1787 SQFT.
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               FLOORS
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -431,7 +433,7 @@ const TowerA4 = () => {
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               NO. OF FLATS ON EACH FLOOR
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -519,14 +521,15 @@ const TowerA5 = () => {
         </Text>
         <Flex
           w="100%"
-          h="100%"
+          h="20.963rem"
           direction="column"
-          p="0.938rem"
+          pt="1.563rem"
+          px="0.938rem"
           gap="1.25rem"
           align="center"
         >
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               TYPE OF UNITS
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -534,15 +537,15 @@ const TowerA5 = () => {
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               SALEABLE AREA
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
-              1025-1421 SQFT.
+              1017-1748 SQFT.
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               FLOORS
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -550,7 +553,7 @@ const TowerA5 = () => {
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               NO. OF FLATS ON EACH FLOOR
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -638,14 +641,15 @@ const TowerA6 = () => {
         </Text>
         <Flex
           w="100%"
-          h="100%"
+          h="20.963rem"
           direction="column"
-          p="0.938rem"
+          pt="1.563rem"
+          px="0.938rem"
           gap="1.25rem"
           align="center"
         >
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               TYPE OF UNITS
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -653,15 +657,15 @@ const TowerA6 = () => {
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               SALEABLE AREA
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
-              1025-1421 SQFT.
+              1008-1748 SQFT.
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               FLOORS
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
@@ -669,7 +673,7 @@ const TowerA6 = () => {
             </Heading>
           </HStack>
           <HStack w="100%" gap="3.125rem">
-            <Text w="40%" fontFamily="veralaRound" fontSize="1.25rem">
+            <Text w="40%" fontFamily="veralaRound" fontSize="1rem">
               NO. OF FLATS ON EACH FLOOR
             </Text>
             <Heading w="60%" fontFamily="avenir" fontSize="1.25rem">
