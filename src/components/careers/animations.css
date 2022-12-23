@@ -26,6 +26,17 @@
   0% {
     transform: translateY(-100vh);
   }
+  50% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+@keyframes slideTop3{
+  0% {
+    transform: translateY(-100vh);
+  }
   75% {
     transform: translateY(-100vh);
   }

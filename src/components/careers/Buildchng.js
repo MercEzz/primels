@@ -313,7 +313,7 @@ const Buildchng = () => {
                 ref={pRef}
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
-                transition={{ delay: 1, duration: 2, type: "just" }}
+                transition={{ duration: 2, type: "just" }}
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
@@ -325,7 +325,7 @@ const Buildchng = () => {
               <MtnFlx
                 initial={{ opacity: 0, x: 50 }}
                 animate={animationRightTxt}
-                transition={{ delay: 1, duration: 2, type: "just" }}
+                transition={{ duration: 2, type: "just" }}
                 direction="column"
               >
                 <Heading fontSize="1.25rem" pb="0.625rem" fontFamily="avenir">
@@ -345,7 +345,7 @@ const Buildchng = () => {
                 ref={rRef}
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
-                transition={{ delay: 3.5, duration: 2, type: "just" }}
+                transition={{ delay: 2, duration: 2, type: "just" }}
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
@@ -357,7 +357,7 @@ const Buildchng = () => {
               <MtnFlx
                 initial={{ opacity: 0, x: 50 }}
                 animate={animationRightTxt}
-                transition={{ delay: 3.5, duration: 2, type: "just" }}
+                transition={{ delay: 2, duration: 2, type: "just" }}
                 direction="column"
               >
                 <Heading fontSize="1.25rem" pb="0.625rem" fontFamily="avenir">
@@ -373,7 +373,7 @@ const Buildchng = () => {
                 ref={iRef}
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
-                transition={{ delay: 5, duration: 2, type: "just" }}
+                transition={{ delay: 4, duration: 2, type: "just" }}
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
@@ -386,7 +386,7 @@ const Buildchng = () => {
               <MtnFlx
                 initial={{ opacity: 0, x: 50 }}
                 animate={animationRightTxt}
-                transition={{ delay: 5, duration: 2, type: "just" }}
+                transition={{ delay: 4, duration: 2, type: "just" }}
                 direction="column"
               >
                 <Heading fontSize="1.25rem" pb="0.625rem" fontFamily="avenir">
@@ -402,7 +402,7 @@ const Buildchng = () => {
                 ref={mRef}
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
-                transition={{ delay: 7.5, duration: 2, type: "just" }}
+                transition={{ delay: 6, duration: 2, type: "just" }}
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
@@ -415,7 +415,7 @@ const Buildchng = () => {
               <MtnFlx
                 initial={{ opacity: 0, x: 50 }}
                 animate={animationRightTxt}
-                transition={{ delay: 7.5, duration: 2, type: "just" }}
+                transition={{ delay: 6, duration: 2, type: "just" }}
                 direction="column"
               >
                 <Heading fontSize="1.25rem" pb="0.625rem" fontFamily="avenir">
@@ -431,7 +431,7 @@ const Buildchng = () => {
                 ref={eRef}
                 initial={{ opacity: 0, x: -50 }}
                 animate={animationLtr}
-                transition={{ delay: 10, duration: 2, type: "just" }}
+                transition={{ delay: 8, duration: 2, type: "just" }}
                 fontSize="6.875rem"
                 fontWeight="400"
                 fontFamily="goudy"
@@ -443,7 +443,7 @@ const Buildchng = () => {
               <MtnFlx
                 initial={{ opacity: 0, x: 50 }}
                 animate={animationRightTxt}
-                transition={{ delay: 10, duration: 2, type: "just" }}
+                transition={{ delay: 8, duration: 2, type: "just" }}
                 direction="column"
               >
                 <Heading fontSize="1.25rem" pb="0.625rem" fontFamily="avenir">

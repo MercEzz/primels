@@ -37,27 +37,20 @@
   transform: translateY(-100vh);
 }
 .slideTop3.reveal.active {
-  animation: slideTop2 1 6s ease;
+  animation: slideTop3 1 6s ease;
   transform: translateY(0vh);
 }
 .slideTop4.reveal {
   transform: translateY(-100vh);
 }
 .slideTop4.reveal.active {
-  animation: slideTop2 1 8s linear;
-  transform: translateY(0vh);
-}
-.slideTop4.reveal {
-  transform: translateY(-100vh);
-}
-.slideTop4.reveal.active {
-  animation: slideTop2 1 10s linear;
+  animation: slideTop3 1 8s ease;
   transform: translateY(0vh);
 }
 .slideTop5.reveal {
   transform: translateY(-100vh);
 }
 .slideTop5.reveal.active {
-  animation: slideTop2 1 12s linear;
+  animation: slideTop3 1 10s ease;
   transform: translateY(0vh);
 }
