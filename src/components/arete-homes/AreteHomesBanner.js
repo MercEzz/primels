@@ -36,9 +36,6 @@ const FourthSec = () => {
       pos="relative"
     >
       <MtnImg
-        initial={{ scale: 0.6 }}
-        animate={animateScale}
-        transition={{ duration: 2, type: "just" }}
         w="100%"
         h="100%"
         src="/images/arete-homes/3RD SECTION.jpg"
@@ -47,9 +44,7 @@ const FourthSec = () => {
         objectFit="cover"
       />
       <MtnImg
-        initial={{ x: 100, opacity: 0 }}
-        animate={animateX}
-        transition={{ duration: 2, type: "just" }}
+        initial={{ x: 100}}
         h="6.25rem"
         src="/images/arete-homes/Asset.png"
         pos="absolute"

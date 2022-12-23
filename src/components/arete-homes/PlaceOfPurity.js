@@ -24,11 +24,11 @@ const SecondSec = () => {
   const [slider, setSlider] = useState(null);
   const settings = {
     draggable: false,
-    infinite: false,
+    infinite: true,
     autoplay: true,
     speed: 500,
     fade: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
@@ -41,7 +41,8 @@ const SecondSec = () => {
       direction="column"
       align="center"
       justify="center"
-      py="5rem"
+      pt="5rem"
+      pb="1.875rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgPos="center"
@@ -66,6 +67,7 @@ const SecondSec = () => {
           h="100%"
         >
           <Box
+            className="expandcar reveal"
             position={"relative"}
             height={"100%"}
             width={"100%"}
@@ -87,7 +89,6 @@ const SecondSec = () => {
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
               {introImgs.map((prime) => (
                 <Image
-                className="image-sliedleft reveal"
                   key={prime.id}
                   w="100%"
                   height="29.25rem"
@@ -95,7 +96,6 @@ const SecondSec = () => {
                   objectPosition="center"
                   objectFit="cover"
                   src={prime}
-                  boxShadow="dark-lg"
                 />
               ))}
             </Slider>

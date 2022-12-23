@@ -16,7 +16,8 @@ const FifthSec = () => {
       direction="column"
       align="center"
       justify="center"
-      py="5rem"
+      pt="5rem"
+      pb="1.875rem"
       px="6.25rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"

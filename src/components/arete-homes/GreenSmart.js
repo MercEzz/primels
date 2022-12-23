@@ -23,6 +23,8 @@ const SixthSec = () => {
       ref={ref}
       w="100%"
       h="100%"
+      pt="3.125rem"
+      pb="3.125rem"
       direction="column"
       align="center"
       justify="center"
@@ -64,8 +66,9 @@ const SixthSec = () => {
             src={igbCert}
           />
         </Flex>
-        <Flex w="100%" h="100%">
+        <Flex w="100%" h="100%" overflow="hidden">
           <Flex
+            className="slidein-top reveal"
             transform={isInView ? "none" : "translateY(-50px)"}
             opacity={isInView ? "1" : "0"}
             transition="all 2s 1s"
@@ -78,7 +81,7 @@ const SixthSec = () => {
               border="3px solid"
               borderColor="#DFBD69"
               bgColor="#DFBD69"
-              h="5.25rem"
+              h="13.50rem"
             />{" "}
             <Box
               height="1.875rem"

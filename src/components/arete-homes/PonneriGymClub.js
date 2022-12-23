@@ -21,9 +21,15 @@ import gym from "../arete-homes imgs/PGC-GYM.JPG";
 import multiSports from "../arete-homes imgs/PGC-multi sports arena.jpg";
 import squashCourt from "../arete-homes imgs/PGC-SQUASH COURT.jpg";
 //import swimmingPool from "../arete-homes imgs/PGC-SWIMMING POOL.jpg";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const SeventhSec = () => {
   const [slider, setSlider] = useState(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+  });
 
   const settings = {
     // className: "center",
@@ -39,12 +45,13 @@ const SeventhSec = () => {
   };
   return (
     <Flex
+      ref={ref}
       w="100%"
       h="100%"
       direction="column"
       align="center"
       justify="center"
-      pt="5rem"
+      pt="1.875rem"
       pb="5rem"
       px="1.562rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
@@ -52,7 +59,15 @@ const SeventhSec = () => {
       bgPos="center"
       bgSize="cover"
     >
-      <Flex w="100%" align="center" justify="center" pb="1.875rem">
+      <Flex
+        transform={isInView ? "none" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s "
+        w="100%"
+        align="center"
+        justify="center"
+        pb="1.875rem"
+      >
         <Image src={pgclogo} h="2.5rem" w="2.5rem" mr="0.625rem" />
         <Text fontFamily="goudy" fontSize="2.5rem">
           <Text as="span" fontSize="1.5rem">
@@ -62,6 +77,9 @@ const SeventhSec = () => {
         </Text>
       </Flex>
       <Box
+        transform={isInView ? "scale(1)" : "scale(0.6)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 1s"
         position={"relative"}
         height={"100%"}
         width={"full"}
@@ -147,6 +165,8 @@ const SeventhSec = () => {
         </IconButton>
       </Box>
       <Button
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 2s"
         w="10.875rem"
         h="3.187rem"
         mt="1.562rem"
