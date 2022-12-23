@@ -74,6 +74,7 @@ const TenthSec = () => {
           />
         </Flex>
         <Flex
+          overflow="hidden"
           transform={isInView ? "none" : "translateY(-50px)"}
           opacity={isInView ? "1" : "0"}
           transition="all 2s 2s"
@@ -84,6 +85,7 @@ const TenthSec = () => {
           px="1.562rem"
         >
           <Divider
+            className="slidein-top reveal"
             h="3.5rem"
             orientation="vertical"
             border="3px solid"
@@ -91,6 +93,7 @@ const TenthSec = () => {
             bgColor="#DFBD69"
           />
           <Box
+            className="slidein-top reveal"
             height="1.875rem"
             width="1.875rem"
             backgroundColor="#DFBD69"

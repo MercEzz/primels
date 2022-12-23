@@ -107,14 +107,17 @@ const FifthSec = () => {
             pr="3.125rem"
           >
             <Flex
-              transform={isInView ? "none" : "translateY(-50px)"}
-              opacity={isInView ? "1" : "0"}
+              overflow="hidden"
               transition="all 2s 2s"
               direction="column"
               align="center"
+              h="10rem"
+              w="5rem"
               px="1.563rem"
             >
+              <Flex  className="slidein-top reveal"direction="column" align="center" w="100%" h="100%">
               <Divider
+                
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -129,6 +132,7 @@ const FifthSec = () => {
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
               />
+              </Flex>
             </Flex>
             <Flex
               transform={isInView ? "none" : "translateX(-100px)"}

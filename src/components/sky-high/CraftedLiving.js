@@ -60,7 +60,7 @@ const FourthSec = () => {
       </Text>
       <Flex w="100%" h="100%" direction="column">
         {/* first-left-sec */}
-        <Flex w="100%" h="100%" align="center" mb="1.562rem">
+        <Flex w="100%" h="100%" align="center" mb="1.562rem" >
           <Flex
             w="48.3%"
             h="100%"
@@ -75,7 +75,8 @@ const FourthSec = () => {
             />
           </Flex>
           <Flex
-            transform={inView ? "none" : "translateY(-50px)"}
+            overflow="hidden"
+            h="8rem"
             opacity={inView ? "1" : "0"}
             transition="all 2s 2s"
             direction="column"
@@ -84,6 +85,7 @@ const FourthSec = () => {
             alignSelf="flex-start"
           >
             <Divider
+            className="slidein-top reveal"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -91,6 +93,7 @@ const FourthSec = () => {
               h="5.25rem"
             />{" "}
             <Box
+            className="slidein-top reveal"
               height="1.875rem"
               width="1.875rem"
               backgroundColor="#DFBD69"
@@ -185,14 +188,14 @@ const FourthSec = () => {
           <Heading className="fadein revealOnce" fontFamily="avenir" fontSize="2.125rem" mb="0.9rem">
             SKY TERRACE AVENUE
           </Heading>
-          <MtnTxt className="fadein-2sdelay revealOnce" fontFamily="veralaRound" fontSize="1rem">
+          <MtnTxt className="fadein revealOnce" fontFamily="veralaRound" fontSize="1rem">
             The perfect spot to rediscover a <br />
             forgotten time of the day: Golden <br />
             Sunrises.
           </MtnTxt>
         </Flex>
         <Flex
-          className="slidein-top revealOnce"
+          className="slidein-top reveal"
           direction="column"
           align="center"
           px="1.563rem"

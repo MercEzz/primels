@@ -185,15 +185,16 @@ const SecondSec = () => {
         </Flex>
 
         <Flex
-          transform={isInView ? "translateY(0)" : "translateY(-50px)"}
-          opacity={isInView ? "1" : "0"}
+          overflow="hidden"
           transition="all 2s 2s"
           direction="column"
           align="center"
+          h="7rem"
           px="1.5rem"
           alignSelf="flex-start"
         >
-          <Divider
+          <Divider 
+            className="slidein-top reveal"
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
@@ -201,6 +202,7 @@ const SecondSec = () => {
             h="2.90rem"
           />
           <Box
+            className="slidein-top reveal"
             height="1.875rem"
             width="1.875rem"
             backgroundColor="#DFBD69"
