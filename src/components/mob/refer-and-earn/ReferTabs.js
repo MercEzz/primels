@@ -538,7 +538,7 @@ const BookAVisit = () => {
       <Flex
         zIndex="1"
         w="100%"
-        h="100vh"
+        h="110vh"
         bgColor="white"
         pos="relative"
         overflow="hidden"
