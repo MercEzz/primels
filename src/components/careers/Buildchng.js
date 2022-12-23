@@ -172,7 +172,7 @@ const Buildchng = () => {
               h="41.25rem"
               alignItems="flex-start"
             >
-              <Flex direction="column" align="center" >
+              <Flex direction="column" w="5rem" px="2.1rem" align="center" overflow="hidden">
               <Divider
                 className="slideTop reveal"
                 orientation="vertical"
@@ -199,7 +199,7 @@ const Buildchng = () => {
                 h="3.5rem"
               />
               </Flex>
-              <Flex direction="column" align="center" >
+              <Flex direction="column" w="5rem" px="2.1rem" align="center" overflow="hidden">
               <Divider
                 className="slideTop2 reveal"
                 orientation="vertical"
@@ -226,7 +226,7 @@ const Buildchng = () => {
                 h="3.5rem"
               />
               </Flex>
-              <Flex direction="column" align="center" >
+              <Flex direction="column" w="5rem" px="2.1rem" align="center" overflow="hidden">
               <Divider
                 className="slideTop3 reveal"
                 orientation="vertical"
@@ -253,7 +253,7 @@ const Buildchng = () => {
                 h="2.5rem"
               />
               </Flex>
-              <Flex direction="column" align="center" >
+              <Flex direction="column" w="5rem" px="2.1rem" align="center" overflow="hidden">
               <Divider
                 className="slideTop4 reveal"
                 orientation="vertical"
@@ -280,7 +280,7 @@ const Buildchng = () => {
                 h="1.5rem"
               />
               </Flex>
-              <Flex direction="column" align="center" >
+              <Flex direction="column" h="7.875rem"  w="5rem" px="2.1rem" align="center" overflow="hidden">
               <Divider
                 className="slideTop5 reveal"
                 orientation="vertical"

@@ -23,21 +23,21 @@
   transform: translateY(-100vh);
 }
 .slideTop.reveal.active {
-  animation: slideTop 1 2s linear;
+  animation: slideTop 1 2s ease;
   transform: translateY(0vh);
 }
 .slideTop2.reveal {
   transform: translateY(-100vh);
 }
 .slideTop2.reveal.active {
-  animation: slideTop2 1 4s linear;
+  animation: slideTop2 1 4s ease;
   transform: translateY(0vh);
 }
 .slideTop3.reveal {
   transform: translateY(-100vh);
 }
 .slideTop3.reveal.active {
-  animation: slideTop2 1 6s linear;
+  animation: slideTop2 1 6s ease;
   transform: translateY(0vh);
 }
 .slideTop4.reveal {
