@@ -34,7 +34,6 @@ function App() {
     const isMobileDevice = regexp.test(details);
     if(isMobileDevice){
       setIsMobile(true);
-      console.log("Mobile device detected")
     }
   });
   if(!isMobile){

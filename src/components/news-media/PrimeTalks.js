@@ -87,7 +87,7 @@ const FourthSec = () => {
           h="100%"
           flex="3"
           mr="1.562rem"
-        ><div style={{height:"29.5rem",width:"51.75rem"}}>
+        ><div style={{height:"29.5rem",width:"41.75rem"}}>
           <embed
             height="100%"
             width="100%"
