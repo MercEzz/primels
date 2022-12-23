@@ -45,13 +45,17 @@ const SeventhSec = () => {
       pt="5rem"
       pb="5rem"
       px="1.562rem"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
     >
       <Flex w="100%" align="center" justify="center" pb="1.875rem">
         <Image src={pgclogo} h="2.5rem" w="2.5rem" mr="0.625rem" />
         <Text fontFamily="goudy" fontSize="2.5rem">
           <Text as="span" fontSize="1.5rem">
             PVT.
-          </Text>{" "}
+          </Text>
           PONNERI GYMKHANA CLUB
         </Text>
       </Flex>

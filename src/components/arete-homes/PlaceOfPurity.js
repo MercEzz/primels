@@ -42,6 +42,10 @@ const SecondSec = () => {
       align="center"
       justify="center"
       py="5rem"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
     >
       <Heading
         transform={isInView ? "none" : "translateY(-50xp)"}

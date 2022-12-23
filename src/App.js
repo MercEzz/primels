@@ -62,10 +62,7 @@ function App() {
           <Route path="/arete-homes" element={<AreteHomes />} />
           <Route path="/news-and-media" element={<NewsMediaSc />} />
           <Route path="/refer-and-earn" element={<ReferAndEarn />} />
-          <Route
-            path="/commercial-properties"
-            element={<CommercialProperties />}
-          />
+          <Route path="/commercial-properties" element={<CommercialProperties />} />
           <Route path="/serviced-apartments" element={<ServicedApartSc />} />
           <Route path="/blog" element={<BlogSc />} />
           <Route path="/sky-high-invest" element={<SkyhighInvestSc />} />
@@ -100,16 +97,12 @@ function App() {
             <Route path="/arete-homes" element={<AreteHomes />} />
             <Route path="/news-and-media" element={<NewsMediaSc />} />
             <Route path="/refer-and-earn" element={<MobReferAndEarn />} />
-            <Route
-              path="/commercial-properties"
-              element={<CommercialProperties />}
-            />
+            <Route path="/commercial-properties" element={<CommercialProperties />} />
             <Route path="/serviced-apartments" element={<ServicedApartSc />} />
             <Route path="/blog" element={<MobBlogSc />} />
             <Route path="/sky-high-invest" element={<SkyhighInvestSc />} />
             <Route path="/arete-homes-invest" element={<AretehomesInvestSc />} />
           </Routes>
-          
         </Flex>
         <BottomMenu/>
         {/* <Footer /> */}

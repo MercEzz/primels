@@ -50,6 +50,9 @@ const NinethSec = () => {
       align="center"
       justify="center"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
     >
       <Text
         transform={isInView ? "translateY(0)" : "translateY(-50px)"}
