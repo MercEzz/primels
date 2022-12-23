@@ -236,10 +236,10 @@ const ResForm = () => {
                 </Flex>
               </FormControl>
             </VStack>
-            <Text ml="-10" fontSize="1rem" fontFamily="veralaRound">
+            {/*<Text ml="-10" fontSize="1rem" fontFamily="veralaRound">
               <Icon as={BsUpload} mr="10px" />
               Upload File
-            </Text>
+            </Text>*/}
             <Button
               type="submit"
               mt="1.563rem"

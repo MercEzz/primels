@@ -60,7 +60,12 @@ const Jobopp = () => {
         >
           JOB OPPORTUNITIES
         </Heading>
+        
         <Flex w="100%" h="100%">
+        <Link style={{textDecoration:"none"}}
+                href="https://www.linkedin.com/company/prime-lifespace-consultancy-pvt-ltd/"
+                isExternal
+              >
           <Flex
             direction="column"
             w="100%"
@@ -98,10 +103,6 @@ const Jobopp = () => {
               align="center"
               justify="center"
             >
-              <Link
-                href="https://www.linkedin.com/company/prime-lifespace-consultancy-pvt-ltd/"
-                isExternal
-              >
                 <Icon
                   h="5rem"
                   w="5rem"
@@ -111,10 +112,10 @@ const Jobopp = () => {
                   p="0.313rem"
                   as={GrLinkedinOption}
                 />
-              </Link>
               <Image w="50%" h="50%" pt="0.938rem" src="/images/logo.png" />
             </Flex>
           </Flex>
+          </Link>
           <Flex w="100%">
             <Grid
               w="100%"

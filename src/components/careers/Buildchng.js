@@ -148,7 +148,7 @@ const Buildchng = () => {
           h="100%"
           pos="relative"
         >
-          <Flex w="60%" h="100%" direction="column" align="center"pl="100px">
+          <Flex w="50%" h="100%" direction="column" align="center"pl="100px">
             {currImg ? (
               <Image
                 w="100%"
