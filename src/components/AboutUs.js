@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, Text, Divider, Box } from "@chakra-ui/react";
+import { Button, Flex, Heading, Text, Divider, Box, Link } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
@@ -85,7 +85,7 @@ const AboutUs = () => {
           <MtnTxt
             initial={{ opacity: 0 }}
             animate={animateHead}
-            transition={{ delay: 3, duration: 2, type: "just" }}
+            transition={{ delay: 1.5, duration: 2, type: "just" }}
             pt="0.938rem"
             fontSize="1rem"
             fontFamily="veralaRound"
@@ -100,7 +100,7 @@ const AboutUs = () => {
           <MtnTxt
             initial={{ opacity: 0 }}
             animate={animateHead}
-            transition={{ delay: 4.5, duration: 2, type: "just" }}
+            transition={{ delay: 1.5, duration: 2, type: "just" }}
             pt="0.938rem"
             fontSize="1rem"
             fontFamily="veralaRound"
@@ -118,7 +118,7 @@ const AboutUs = () => {
             <MtnFlx
               initial={{ opacity: 0, x: -100 }}
               animate={animateLeft}
-              transition={{ delay: 6, duration: 2, type: "just" }}
+              transition={{ delay: 2, duration: 2, type: "just" }}
               align="center"
             >
               <Divider
@@ -167,7 +167,7 @@ const AboutUs = () => {
             <MtnFlx
               initial={{ opacity: 0, x: -100 }}
               animate={animateLeft}
-              transition={{ delay: 6, duration: 2, type: "just" }}
+              transition={{ delay: 2, duration: 2, type: "just" }}
               direction="column"
               pt="0.938rem"
             >
@@ -181,7 +181,7 @@ const AboutUs = () => {
               <MtnFlx
                 initial={{ opacity: 0, x: -100 }}
                 animate={animateLeft}
-                transition={{ delay: 7.5, duration: 2, type: "just" }}
+                transition={{ delay: 2, duration: 2, type: "just" }}
                 fontSize="1.125rem"
                 fontFamily="veralaRound"
               >
@@ -193,7 +193,7 @@ const AboutUs = () => {
             <MtnFlx
               initial={{ opacity: 0, x: -100 }}
               animate={animateLeft}
-              transition={{ delay: 9, duration: 2, type: "just" }}
+              transition={{ delay: 4, duration: 2, type: "just" }}
               align="center"
             >
               <Divider
@@ -238,7 +238,7 @@ const AboutUs = () => {
                 <MtnHead
                   initial={{ opacity: 0, x: -100 }}
                   animate={animateLeft}
-                  transition={{ delay: 9, duration: 2, type: "just" }}
+                  transition={{ delay: 4, duration: 2, type: "just" }}
                   fontSize="1.5rem"
                   fontFamily="avenir"
                   textAlign="left"
@@ -257,7 +257,7 @@ const AboutUs = () => {
                 <MtnTxt
                   initial={{ opacity: 0, x: -100 }}
                   animate={animateLeft}
-                  transition={{ delay: 10.5, duration: 2, type: "just" }}
+                  transition={{ delay: 4, duration: 2, type: "just" }}
                   fontSize="1.125rem"
                   textAlign="left"
                   fontFamily="veralaRound"
@@ -271,7 +271,7 @@ const AboutUs = () => {
             <MtnFlx
               initial={{ opacity: 0, x: -100 }}
               animate={animateLeft}
-              transition={{ delay: 12, duration: 2, type: "just" }}
+              transition={{ delay: 6, duration: 2, type: "just" }}
               align="center"
             >
               <Divider
@@ -315,7 +315,7 @@ const AboutUs = () => {
               <MtnHead
                 initial={{ opacity: 0, x: -100 }}
                 animate={animateLeft}
-                transition={{ delay: 12, duration: 2, type: "just" }}
+                transition={{ delay: 6, duration: 2, type: "just" }}
                 fontSize="1.5rem"
                 fontFamily="avenir"
               >
@@ -324,7 +324,7 @@ const AboutUs = () => {
               <MtnTxt
                 initial={{ opacity: 0, x: -100 }}
                 animate={animateLeft}
-                transition={{ delay: 13.5, duration: 2, type: "just" }}
+                transition={{ delay: 6, duration: 2, type: "just" }}
                 fontSize="1.125rem"
                 fontFamily="veralaRound"
               >
@@ -334,9 +334,10 @@ const AboutUs = () => {
           </Flex>
         </Flex>
         <MtnBtn
-          initial={{ opacity: 0, y: 50 }}
+          
+          initial={{ opacity: 0}}
           animate={animateHead}
-          transition={{ delay: 14, duration: 2, type: "just" }}
+          transition={{ delay:6, duration: 2, type: "just" }}
           mt="1.562rem"
           // mb="3.125rem"
           w="9.125rem"
@@ -352,7 +353,9 @@ const AboutUs = () => {
           }}
           _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
         >
+          <Link textDecoration="none" href="/about-us">
           Know More
+          </Link>
         </MtnBtn>
       </Flex>
     </Flex>

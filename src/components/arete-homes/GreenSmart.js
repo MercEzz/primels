@@ -100,7 +100,8 @@ const SixthSec = () => {
             >
               <Box pos="relative">
                 <Image
-                  className="fadein-2sdelay reveal"
+                  opacity={isInView ? "1" : "0"}
+                  transition="all 2s"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -142,7 +143,8 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  className="fadein-2sdelay reveal"
+                  opacity={isInView ? "1" : "0"}
+                  transition="all 2s"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -184,7 +186,8 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  className="fadein1 reveal"
+                  opacity={isInView ? "1" : "0"}
+                  transition="all 2s"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -226,7 +229,8 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  className="fadein1 reveal"
+                  opacity={isInView ? "1" : "0"}
+                  transition="all 2s"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -271,7 +275,8 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  className="fadein3s reveal"
+                  opacity={isInView ? "1" : "0"}
+                  transition="all 2s"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"
@@ -316,7 +321,8 @@ const SixthSec = () => {
               </Box>
               <Box pos="relative">
                 <Image
-                  className="fadein3s reveal"
+                  opacity={isInView ? "1" : "0"}
+                  transition="all 2s"
                   h="9.375rem"
                   w="100%"
                   objectFit="cover"

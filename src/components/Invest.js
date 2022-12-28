@@ -59,7 +59,7 @@ const Invest = () => {
       direction="column"
       align="center"
       justify="center"
-      pt="3.125rem"
+      pt="5rem"
       pb="3.125rem"
       px="100px"
     >
@@ -84,7 +84,7 @@ const Invest = () => {
       >
         INVEST IN RENT GENERATING ASSETS
       </MtnHead>
-      <Flex w="100%" pt="1.875rem">
+      <Flex w="100%" pt="1.875rem" overflow="hidden">
         <MtnFlx
           initial={{ opacity: 0, x: 150 }}
           animate={animateX}
@@ -93,12 +93,10 @@ const Invest = () => {
           align="center"
           justify="center"
         >
-          <Image w="608px" h="500px" src="/images/invest.png" />
+          <Image className="expandcar reveal" w="608px" h="500px" src="/images/invest.png" />
         </MtnFlx>
         <MtnFlx
-          initial={{ opacity: 0, y: -150 }}
-          animate={animateY}
-          transition={{ delay: 1.5, duration: 2, type: "just" }}
+          className="slidein-top reveal"
           h="145px"
           w="5%"
           direction="column"

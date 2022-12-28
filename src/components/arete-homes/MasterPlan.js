@@ -1,18 +1,25 @@
 import { Flex, Text, Image } from "@chakra-ui/react";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useLayoutEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 const MtnTxt = motion(Text);
 const MtnFlx = motion(Flex);
 
 const ThirdSec = () => {
   const ref = useRef(null);
+  const videoRef= useRef(null);
   const isInView = useInView(ref, {
     once: true,
     margin: "0px 100px -50px 0px",
   });
   const animateY = useAnimation();
   const animateScale = useAnimation();
-
+  const stopAllYouTubeVideos = () => { 
+    const iframes = document.querySelectorAll('iframe');
+    Array.prototype.forEach.call(iframes, iframe => { 
+      iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', 
+    func: 'stopVideo',"args":"" }), '*');
+   });
+  }
   useEffect(() => {
     if (useInView) {
       animateY.start({
@@ -24,7 +31,13 @@ const ThirdSec = () => {
       });
     }
   }, [isInView, animateY, animateScale]);
-
+  useLayoutEffect(()=>{
+    if(!isInView){
+    stopAllYouTubeVideos();
+    }
+    return()=>{
+    }
+  },[isInView]);
   return (
     <Flex
       ref={ref}
@@ -65,7 +78,7 @@ const ThirdSec = () => {
           w="100%"
           h="29.25rem"
         >
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qpTPxUiQqbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe ref={videoRef}  width="100%" height="100%" src="https://www.youtube.com/embed/qpTPxUiQqbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </MtnFlx>
       </Flex>
     </Flex>

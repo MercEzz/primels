@@ -92,7 +92,7 @@ const TenthSec = () => {
           justify="flex-start"
           align="center">
           <Divider
-            h="3.7rem"
+            h="4.2rem"
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
@@ -145,7 +145,7 @@ const TenthSec = () => {
                 borderBottom="none"
                 w="30%"
                 fontFamiily="veralaRound"
-                fontSize="1.125rem"
+                fontSize="1rem"
                 px="0.625rem"
                 py="0.938rem"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
@@ -160,7 +160,7 @@ const TenthSec = () => {
                 borderBottom="none"
                 w="40%"
                 fontFamiily="veralaRound"
-                fontSize="1.125rem"
+                fontSize="1rem"
                 px="0.625rem"
                 py="0.938rem"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
@@ -176,7 +176,7 @@ const TenthSec = () => {
                 borderRight="none"
                 w="30%"
                 fontFamiily="veralaRound"
-                fontSize="1.125rem"
+                fontSize="1rem"
                 px="0.625rem"
                 py="0.938rem"
                 bgGradient="linear(to-b,#B88746, #DFBD69)"
@@ -194,10 +194,10 @@ const TenthSec = () => {
                 py="1.25rem"
                 borderRight="1px solid #B88746"
               >
-                <Heading fontFamily="avenir" fontSize="1.5rem">
+                <Heading fontFamily="avenir" fontSize="1.25rem">
                   2 BHK
                 </Heading>
-                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   1085 SQFT.
                 </Text>
               </VStack>
@@ -208,18 +208,18 @@ const TenthSec = () => {
                 py="1.25rem"
                 borderRight="1px solid #B88746"
               >
-                <Heading fontFamily="avenir" fontSize="1.5rem">
+                <Heading fontFamily="avenir" fontSize="1.25rem">
                   Rs. 52 LAKHS
                 </Heading>
-                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   Fully Furnished With White Goods
                 </Text>
               </VStack>
               <VStack w="30%" align="flex-start" px="1.25rem" py="1.25rem">
-                <Heading fontFamily="avenir" fontSize="1.5rem">
+                <Heading fontFamily="avenir" fontSize="1.25rem">
                   Rs. 32,000
                 </Heading>
-                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   Per Month
                 </Text>
               </VStack>
@@ -232,10 +232,10 @@ const TenthSec = () => {
                 py="1.25rem"
                 borderRight="1px solid #B88746"
               >
-                <Heading fontFamily="avenir" fontSize="1.5rem">
+                <Heading fontFamily="avenir" fontSize="1.25rem">
                   3 BHK
                 </Heading>
-                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   1787 SQFT.
                 </Text>
               </VStack>
@@ -246,18 +246,18 @@ const TenthSec = () => {
                 py="1.25rem"
                 borderRight="1px solid #B88746"
               >
-                <Heading fontFamily="avenir" fontSize="1.5rem">
+                <Heading fontFamily="avenir" fontSize="1.25rem">
                   Rs. 85 LAKHS
                 </Heading>
-                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   Fully Furnished With White Goods
                 </Text>
               </VStack>
               <VStack w="30%" align="flex-start" px="1.25rem" py="1.25rem">
-                <Heading fontFamily="avenir" fontSize="1.5rem">
+                <Heading fontFamily="avenir" fontSize="1.25rem">
                   Rs. 48,000
                 </Heading>
-                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   Per Month
                 </Text>
               </VStack>

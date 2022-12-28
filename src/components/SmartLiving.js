@@ -122,8 +122,8 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 1.5, duration: 2, type: "just" }}
-              height="30px"
-              width="30px"
+              height="50px"
+              width="25px"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
