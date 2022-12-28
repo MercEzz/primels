@@ -3,7 +3,7 @@ import React from "react";
 const Passionatwork =()=>{
       return (<>
         <Flex direction="column" h="150vh" overflow="hidden">
-        <Heading fontFamily="goudy" fontSize="2.5rem" textAlign="center">PASSION AT WORK</Heading>
+        <Heading className="serv-text-up revealOnce" fontFamily="goudy" fontSize="2.5rem" textAlign="center">PASSION AT WORK</Heading>
         <Flex>
             <Image w="600px" h="468px" alt="IMAGE"/>
             <Flex
@@ -49,17 +49,28 @@ const Passionatwork =()=>{
                 <Flex gap="2%">
                     <Flex direction="column" w="49%">
                         <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">CONSULTING</Heading></Flex>
+                        <Text fontFamily="varela round"><li>Art & Architecture</li></Text>
+                        <Text fontFamily="varela round"><li>Structured Transaction</li></Text>
+                        <Text fontFamily="varela round"><li>Joint Ventures</li></Text>
+                        <Text fontFamily="varela round"><li>Contracts</li></Text>
+                        <Text fontFamily="varela round"><li>Broking</li></Text>
                     </Flex>
                     <Flex direction="column" w="49%">
                         <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">REAL ESTATE<br/>DEVELOPMENTS</Heading></Flex>
+                        <Text fontFamily="varela round"><li>Mumbai</li></Text>
+                        <Text fontFamily="varela round"><li>Chennai</li></Text>
+                        <Text fontFamily="varela round"><li>Pune</li></Text>
+                        <Text fontFamily="varela round"><li>Indore</li></Text>
                     </Flex>
                 </Flex>
                 <Flex  gap="2%">
                     <Flex direction="column" w="49%">
                         <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">FINANCE</Heading></Flex>
+                        <Text fontFamily="varela round"><li>AIF II Fund</li></Text>
                     </Flex>
                     <Flex direction="column" w="49%">
                         <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">RENEWABLE ENERGY<br/>DEVELOPMENTS</Heading></Flex>
+                        <Text fontFamily="varela round"><li>Solar Power</li></Text>
                     </Flex>
                 </Flex>
            </Flex>

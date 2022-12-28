@@ -219,6 +219,13 @@
   animation: slidein-top 1 2s linear;
   transform: translateY(0px);
 }
+.slidein-top.revealOnce {
+  transform: translateY(-18.75rem);
+}
+.slidein-top.revealOnce.active {
+  animation: slidein-top 1 2s linear;
+  transform: translateY(0px);
+}
 .slidein-top-2sdelay.reveal {
   transform: translateY(-21.875rem);
 }

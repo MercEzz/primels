@@ -1,6 +1,10 @@
 import React, { useLayoutEffect } from "react";
+import AboutBanner from "../components/AboutUs/aboutBanner";
+import Award from "../components/AboutUs/award";
+import BoardofDirectors from "../components/AboutUs/BoardofDirectors";
 import Passionatwork from "../components/AboutUs/Passionatwork";
 import Whoweare from "../components/AboutUs/Whoweare";
+import DropDown from "../components/sky-high/DropDown";
 import { revealAgain, revealOnce } from "../hooks/util";
 const AboutUsSc =()=>{
     useLayoutEffect(()=>{
@@ -11,9 +15,13 @@ const AboutUsSc =()=>{
           window.removeEventListener("scroll", revealOnce);
         }
       });
-      return (<div style={{overflow:"hidden"}}>
+      return (<>
+        <AboutBanner/>
         <Whoweare/>
         <Passionatwork/>
-      </div>)
+        <BoardofDirectors/>
+        <Award/>
+        <DropDown/>
+      </>)
 }
 export default AboutUsSc;
