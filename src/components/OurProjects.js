@@ -8,9 +8,12 @@ import {
   Box,
   UnorderedList,
   ListItem,
+  IconButton,
 } from "@chakra-ui/react";
+import Slider from "react-slick";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { motion, useAnimation, useInView } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const MtnDvdr = motion(Divider);
 const MtnFlx = motion(Flex);
@@ -41,7 +44,19 @@ const OurProjects = () => {
       });
     }
   }, [isInView, animateX, animateY, animateFade]);
-
+  const [slider, setSlider] = useState(null);
+  const settings = {
+    // className: "center",
+    centerMode: true,
+    autoplay:true,
+    infinite: true,
+    draggable: true,
+    speed: 500,
+    autoplaySpeed: 2000,
+    pauseOnHover: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <Flex
       ref={ref}
@@ -79,8 +94,21 @@ const OurProjects = () => {
         </Flex>
         <Flex w="10%"></Flex>
       </Flex>
+      <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
       <Flex w="100%" h="full" align="flex-start" justify="space-between">
+        
         <Flex w="35%" pt="4.125rem" direction="column" justify="center" h="29.25rem">
+
           <MtnHd
             initial={{ x: -500 }}
             animate={animateX}

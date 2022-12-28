@@ -138,7 +138,7 @@ const TenthSec = () => {
               borderLeft="none"
               borderBottom="none"
               fontFamiily="veralaRound"
-              fontSize="1.25rem"
+              fontSize="1rem"
               px="0.625rem"
               py="0.938rem"
               bgGradient="linear(to-b,#B88746, #DFBD69)"
@@ -154,10 +154,10 @@ const TenthSec = () => {
                 py="1.25rem"
                 borderRight="1px solid #B88746"
               >
-                <Heading fontFamily="avenir" fontSize="1.5rem">
+                <Heading fontFamily="avenir" fontSize="1.25rem">
                   Rs. 34 LAKHS
                 </Heading>
-                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   Fully Furnished With White Goods
                 </Text>
               </VStack>
@@ -168,13 +168,13 @@ const TenthSec = () => {
                 py="1.25rem"
                 borderRight="1px solid #B88746"
               >
-                <Heading fontFamily="avenir" fontSize="1.5rem">
+                <Heading fontFamily="avenir" fontSize="1.25rem">
                   Rs. 20,000{" "}
-                  <Text as="span" fontWeight="400" fontSize="1.25rem">
+                  <Text as="span" fontWeight="400" fontSize="1rem">
                     p.m.
                   </Text>
                 </Heading>
-                <Text fontSize="1.125rem" fontFamily="veralaRound">
+                <Text fontSize="1rem" fontFamily="veralaRound">
                   For 3 Years
                 </Text>
               </VStack>
@@ -187,7 +187,7 @@ const TenthSec = () => {
             align="center"
             direction="column"
           >
-            <Heading fontFamily="avenir" fontSize="1.5rem" mb="0.937rem">
+            <Heading fontFamily="avenir" fontSize="1.25rem" mb="0.937rem">
               2 YEAR DOWNPAYMENT PLAN
             </Heading>
             <Text

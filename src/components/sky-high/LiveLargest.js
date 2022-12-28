@@ -44,7 +44,7 @@ const FifthSec = () => {
       <Text
         transform={isInView ? "none" : "translateY(-50px)"}
         opacity={isInView ? "1" : "0"}
-        transition="all 2s"
+        transition="all 1s"
         fontFamily="goudy"
         fontSize="2.5rem"
         mb="1.875rem"
@@ -52,9 +52,6 @@ const FifthSec = () => {
         LIVE LARGEST, SHOP LARGEST
       </Text>
       <Box
-        transform={isInView ? "none" : "translateX(100px)"}
-        opacity={isInView ? "1" : "0"}
-        transition="all 2s 2s"
         position={"relative"}
         height={"100%"}
         width={"full"}
@@ -76,6 +73,8 @@ const FifthSec = () => {
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {plazaImgs.map((prime) => (
             <Image
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s"
               key={prime}
               w="100%"
               height="29.25rem"
@@ -108,16 +107,14 @@ const FifthSec = () => {
           >
             <Flex
               overflow="hidden"
-              transition="all 2s 2s"
               direction="column"
               align="center"
               h="10rem"
               w="5rem"
-              px="1.563rem"
+              px="2.5rem"
             >
               <Flex  className="slidein-top reveal"direction="column" align="center" w="100%" h="100%">
               <Divider
-                
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -135,7 +132,6 @@ const FifthSec = () => {
               </Flex>
             </Flex>
             <Flex
-              transform={isInView ? "none" : "translateX(-100px)"}
               opacity={isInView ? "1" : "0"}
               transition="all 2s 2s"
               direction="column"
