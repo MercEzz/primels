@@ -108,7 +108,7 @@ const SmartLiving = () => {
           </MtnFlx>
         </Flex>
         <Flex px="4" direction="column" align="center">
-          <Flex h="100%" direction="column" align="center">
+          <Flex w="1.875rem" h="20.310rem" direction="column" align="center">
             <MtnDvdr
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
@@ -122,8 +122,8 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 1.5, duration: 2, type: "just" }}
-              height="50px"
-              width="25px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -134,16 +134,18 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 3.5, duration: 2, type: "just" }}
+              h="10rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
             />
           </Flex>
-          <Flex h="100%" direction="column" align="center">
+          <Flex w="1.875rem" h="20.310rem" direction="column" align="center">
             <MtnDvdr
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 3.5, duration: 2, type: "just" }}
+              h="10rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -152,8 +154,8 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 3.5, duration: 2, type: "just" }}
-              height="50px"
-              width="25px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -164,17 +166,18 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 6.5, duration: 2, type: "just" }}
+              h="10rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
             />
           </Flex>
-          <Flex h="100%" direction="column" align="center">
+          <Flex w="1.875rem" h="21.310rem" direction="column" align="center">
             <MtnDvdr
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 6.5, duration: 2, type: "just" }}
-              h="14rem"
+              h="10rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -183,8 +186,8 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 6.5, duration: 2, type: "just" }}
-              height="50px"
-              width="25px"
+              height="1.875rem"
+              width="1.875rem"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -195,7 +198,7 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 9.5, duration: 2, type: "just" }}
-              
+              h="10rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -227,7 +230,6 @@ const SmartLiving = () => {
           </MtnFlx>
           <MtnFlx
             transition={{ delay: 3.5, duration: 2, type: "just" }}
-            pt="15%"
           >
             <Image className="expandcar reveal"  w="570px" h="20.310rem" src="/images/smartliving2.png" />
           </MtnFlx>
@@ -268,7 +270,7 @@ const SmartLiving = () => {
           borderColor="#DFBD69"
         />
         <MtnBtn
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0}}
           animate={animateY}
           transition={{ delay: 9.5, duration: 2, type: "just" }}
           w="162px"

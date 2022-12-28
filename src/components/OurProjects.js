@@ -73,7 +73,7 @@ const OurProjects = () => {
       bgSize="cover"
     >
       <Flex w="100%" h="100%" align="center" justify="center">
-        <Flex w="10%">
+        <Flex w="10%" overflow="hidden">
           <MtnDvdr
             left="10%"
             initial={{ opacity: 0, x: 100 }}
@@ -125,7 +125,7 @@ const OurProjects = () => {
             <MtnLI
               initial={{ opacity: 0 }}
               animate={animateX}
-              transition={{ delay: 2, duration: 2, type: "just" }}
+              transition={{ delay: 2.5, duration: 2, type: "just" }}
             >
               <Text pb="10px" fontFamily="veralaRound" fontSize="18px">
                 6 Towers
@@ -134,7 +134,7 @@ const OurProjects = () => {
             <MtnLI
               initial={{ opacity: 0 }}
               animate={animateX}
-              transition={{ delay: 4, duration: 2, type: "just" }}
+              transition={{ delay: 2.5, duration: 2, type: "just" }}
             >
               <Text pb="10px" fontFamily="veralaRound" fontSize="18px">
                 2, 2.5, 3 BHK Smart Residencies
@@ -143,7 +143,7 @@ const OurProjects = () => {
             <MtnLI
               initial={{ opacity: 0 }}
               animate={animateX}
-              transition={{ delay: 6, duration: 2, type: "just" }}
+              transition={{ delay: 2.5, duration: 2, type: "just" }}
             >
               <Text fontFamily="veralaRound" fontSize="18px">
                 70% Open Space
@@ -153,7 +153,7 @@ const OurProjects = () => {
           <MtnBtn
             initial={{ opacity: 0 }}
             animate={animateX}
-            transition={{ delay: 8, duration: 2, type: "just" }}
+            transition={{ delay: 2.5, duration: 2, type: "just" }}
             mt="25px"
             w="160px"
             h="51px"

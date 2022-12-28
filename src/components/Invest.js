@@ -86,8 +86,6 @@ const Invest = () => {
       </MtnHead>
       <Flex w="100%" pt="1.875rem" overflow="hidden">
         <MtnFlx
-          initial={{ opacity: 0, x: 150 }}
-          animate={animateX}
           transition={{ delay: 1.5, duration: 2, type: "just" }}
           w="47.5%"
           align="center"
@@ -122,16 +120,16 @@ const Invest = () => {
         <MtnFlx
           initial={{ opacity: 0 }}
           animate={animateFade}
-          transition={{ delay: 3, duration: 2, type: "just" }}
+          transition={{duration: 2, type: "just" }}
           w="47.5%"
           direction="column"
           justify="center"
           align="flex-start"
         >
           <MtnHead
-            initial={{ opacity: 0, x: -150 }}
+            initial={{ opacity: 0}}
             animate={animateX}
-            transition={{ delay: 1.5, duration: 2, type: "just" }}
+            transition={{ duration: 2, type: "just" }}
             w="100%"
             fontFamily="avenir"
             fontSize="34px"
@@ -142,7 +140,6 @@ const Invest = () => {
           <Flex
             mt="1.563rem"
             w="100%"
-            mb="0.938rem"
             alignSelf="flex-start"
             opacity={isInView ? "1" : "0"}
             transition="all 2s"
@@ -304,7 +301,7 @@ const Invest = () => {
             </Flex>
           </Flex>*/}
           <Button
-            mt="1.563rem"
+            mt="1rem"
             w="152px"
             h="51px"
             fontSize="1rem"

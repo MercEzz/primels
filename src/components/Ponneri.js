@@ -1,8 +1,10 @@
-import { Flex, Heading, Image, Divider, Box, Button } from "@chakra-ui/react";
+import { Flex, Heading, Image, Divider, Box, Button,Text, Spacer } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
+import pgclogo from "./arete-homes imgs/Asset 1.png"
+//import pgclogo from "/arete-homes imgs/Asset 1.png";
 
 const Ponneri = () => {
   const ref = useRef(null);
@@ -33,9 +35,13 @@ const Ponneri = () => {
   }, [isInView, animateX, animateY, animateFade]);
 
   return (
-    <Flex ref={ref} w="100%" h="100vh" py="50px" my="50px">
+    <Flex ref={ref} w="100%" h="100%" py="1.875rem" mt="3.125rem"pl="100px"
+    bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover">
       <Flex w="100%" h="100%" direction="column">
-        <Flex w="100%" align="center" justify="flex-start" pb="50px">
+        <Flex w="100%" align="center" justify="flex-start" pb="1.875rem">
           {/* <Image src="/images/logo.png" /> */}
           <MtnHd
             initial={{ opacity: 0, x: -50 }}
@@ -46,28 +52,26 @@ const Ponneri = () => {
             fontFamily="goudy"
             pr="10px"
           >
+          <Flex>
+          <Image src={pgclogo} h="2.5rem" w="2.5rem" mr="1rem" />
+          <Spacer w="3.5rem" pos="relative">
+          <Text pos="absolute" bottom="0.3rem" as="span" fontSize="1.5rem">
+            PVT.
+          </Text>
+          </Spacer>
             PONNERI GYMKHANA CLUB
+            </Flex>
           </MtnHd>
-          <MtnDvdr
-            initial={{ opacity: 0, x: -50 }}
-            animate={animateX}
-            transition={{ delay: 1.5, duration: 2, type: "just" }}
-            w="28%"
-            orientation="horizontal"
-            border="3px solid"
-            bgColor="#DFBD69"
-            borderColor="#DFBD69"
-          />
         </Flex>
         <Flex w="100%" h="100%">
           <MtnFlx
             initial={{ opacity: 0, x: 50 }}
             animate={animateX}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
-            w="100%"
+            w="60%"
             h="100%"
           >
-            <Image w="100%" h="100%" src="/images/gymkhana.png" />{" "}
+            <Image w="100%" h="25rem" src="/images/gymkhana.png" />{" "}
           </MtnFlx>
           <Flex align="flex-start" pr="100px">
             <MtnFlx
@@ -77,10 +81,10 @@ const Ponneri = () => {
               h="100%"
               direction="column"
               align="center"
-              px="40px"
+              px="1.563rem"
             >
               <Divider
-                h="170px"
+                h="8.375rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -101,12 +105,12 @@ const Ponneri = () => {
               animate={animateX}
               transition={{ delay: 1.5, duration: 2, type: "just" }}
               w="100%"
-              h="100%"
+              h="25rem"
               direction="column"
               align="flex-start"
               justify="center"
             >
-              <Heading fontSize="34px" fontFamily="avenir" mb="25px">
+              <Heading fontSize="1.5rem" fontFamily="avenir" mb="25px">
                 ONE CLUB -<br />
                 MANY FACETS
               </Heading>

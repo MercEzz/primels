@@ -32,12 +32,10 @@ const ThirdSec = () => {
     }
   }, [isInView, animateY, animateScale]);
   useLayoutEffect(()=>{
-    if(!isInView){
-    stopAllYouTubeVideos();
-    }
+    console.log(videoRef.current)
     return()=>{
     }
-  },[isInView]);
+  },[videoRef]);
   return (
     <Flex
       ref={ref}

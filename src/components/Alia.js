@@ -36,7 +36,7 @@ const Allia = () => {
   }, [isInView, animateX, animateY]);
 
   return (
-    <Flex ref={ref} direction="column" align="center" pt="100px">
+    <Flex ref={ref} direction="column" align="center" pt="3.125rem">
       <Flex w="100%" px="100px">
         <MtnFlx
           initial={{ opacity: 0, x: -50 }}
@@ -75,13 +75,13 @@ const Allia = () => {
           w="100%"
           h="100%"
           align="center"
-          pb="100px"
+          pb="3.125rem"
         >
           <Flex h="100%" direction="column" align="center">
             <Image
               w="100%"
               h="200px"
-              pl="15px"
+              pl="1.563rem"
               pb="15px"
               src="/images/award1.png"
             />
@@ -119,7 +119,7 @@ const Allia = () => {
           </Flex>
         </MtnFlx>
       </Flex>
-      <Flex w="100%" direction="column" align="center" justify="center">
+      <Flex w="100%" direction="column" align="center" justify="center" pb="3.125rem">
         <Heading fontSize="40px" fontFamily="goudy" fontWeight="400">
           OUR ALLIANCES
         </Heading>
@@ -128,7 +128,7 @@ const Allia = () => {
           animate={animateX}
           transition={{ delay: 3, duration: 2, type: "just" }}
           w="100%"
-          pt="75px"
+          pt="1.875rem"
           px="100px"
         >
           <LogoSlider logos={logos} />
@@ -152,7 +152,7 @@ const LogoSlider = ({ logos }) => {
     infinite: true,
     autoplay: true,
     speed: 500,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     slidesToShow: 4,
     slidesToScroll: 1,
     pauseOnHover: false,

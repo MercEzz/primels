@@ -30,8 +30,13 @@ const LastSection = () => {
       direction="column"
       align="center"
       justify="center"
+      pt="1.875rem"
       px="100px"
-      py="100px"
+      pb="100px"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
     >
       <Flex w="100%" pos="relative" pb="270px">
         <Flex
@@ -99,7 +104,7 @@ const LastSection = () => {
             color="#DFBD69"
             pos="absolute"
             right="0"
-            bottom="25%"
+            bottom="45%"
             zIndex="10"
             w="70px"
             h="50px"
