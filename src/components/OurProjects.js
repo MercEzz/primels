@@ -80,7 +80,7 @@ const OurProjects = () => {
         <Flex w="10%"></Flex>
       </Flex>
       <Flex w="100%" h="full" align="flex-start" justify="space-between">
-        <Flex pt="4.125rem" direction="column" justify="center" h="29.25rem" w="25rem">
+        <Flex w="35%" pt="4.125rem" direction="column" justify="center" h="29.25rem">
           <MtnHd
             initial={{ x: -500 }}
             animate={animateX}
@@ -200,19 +200,20 @@ const OurProjects = () => {
             pos="relative"
             w="100%"
             h="100%"
+            pr="100px" 
           >
             <Image
               zIndex="3"
               // pos="absolute"
               w="100%"
-              h="29.25rem"
+              h="25.25rem"
               src="/images/pro1.png"
             />
             <Image
               pos="absolute"
-
               w="100%"
-              h="26.125rem"
+              h="21.875rem"
+              pr="150px"
               left="100px"
               top="25px"
               opacity=".5"

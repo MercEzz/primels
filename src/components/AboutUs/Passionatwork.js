@@ -2,10 +2,10 @@ import { Center, Flex, Text, Icon, Image, SimpleGrid, HStack, Heading, GridItem,
 import React from "react";
 const Passionatwork =()=>{
       return (<>
-        <Flex direction="column" h="150vh" overflow="hidden">
-        <Heading className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem" textAlign="center">PASSION AT WORK</Heading>
+        <Flex direction="column" h="110vh" overflow="hidden">
+        <Center className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem" textAlign="center">PASSION AT WORK</Center>
         <Flex>
-            <Image w="600px" h="468px" alt="IMAGE"/>
+            <Image className="fadein-2sdelay reveal" bgColor="red" w="600px" h="468px" alt="IMAGE"/>
             <Flex
             className="slidein-top reveal"
             transition="all 2s 2s"
@@ -74,15 +74,16 @@ const Passionatwork =()=>{
                     </Flex>
                 </Flex>
            </Flex>
-           <Flex direction="column" w="50%">
+           <Flex direction="column" h="100%" w="50%" overflow="hidden">
                 <Center><Heading className="slidein-top revealOnce" fontFamily="avenir" fontSize="2.5rem">OUR CORE STRENGTHS</Heading></Center>
                 <SimpleGrid
                         columns={3}
                         w="660px"
-                        h="350px"
+                        overflow="hidden"
                         spacing="0.938rem">
-                            <GridItem pos="relative" w="200px" h="248px" bgColor="red" rowSpan={2} overflow="hidden">
+                            <GridItem pos="relative" w="200px" h="248px" bgColor="red" rowSpan={2} className="image-slieddown reveal">
                             <Box
+                                
                                 w="100%"
                                 h="100%"
                                 pos="absolute"
@@ -115,8 +116,9 @@ const Passionatwork =()=>{
                                 </Heading>
                                 </Box>
                             </GridItem>
-                            <GridItem pos="relative" w="426px" h="119px" bgColor="red" colSpan={2}>
+                            <GridItem pos="relative" w="426px" h="119px" bgColor="red" colSpan={2} className="image-sliedright reveal">
                             <Box
+                                
                                 w="100%"
                                 h="100%"
                                 pos="absolute"
@@ -149,8 +151,9 @@ const Passionatwork =()=>{
                                 </Heading>
                                 </Box>
                             </GridItem>
-                            <GridItem pos="relative" w="200px" h="119px" bgColor="red">
+                            <GridItem pos="relative" w="200px" h="119px" bgColor="red" className="fadein reveal">
                             <Box
+                                
                                 w="100%"
                                 h="100%"
                                 pos="absolute"
@@ -183,8 +186,9 @@ const Passionatwork =()=>{
                                 </Heading>
                                 </Box>
                             </GridItem>
-                            <GridItem pos="relative" w="200px" h="248px" bgColor="red"  rowSpan={2}>
+                            <GridItem pos="relative" w="200px" h="248px" bgColor="red"  rowSpan={2} className="image-sliedup reveal">
                             <Box
+                                
                                 w="100%"
                                 h="100%"
                                 pos="absolute"
@@ -217,8 +221,9 @@ const Passionatwork =()=>{
                                 </Heading>
                                 </Box>
                             </GridItem>
-                            <GridItem pos="relative" w="426px" h="119px" bgColor="red" colSpan={2}>
+                            <GridItem pos="relative" w="426px" h="119px" bgColor="red" colSpan={2} className="image-sliedleft reveal">
                             <Box
+                                
                                 w="100%"
                                 h="100%"
                                 pos="absolute"

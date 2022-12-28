@@ -107,6 +107,26 @@
       transform: translateX(0vw);
     }
 }
+@keyframes image-slieddown{
+  from {
+      opacity: 0;
+      transform: translateY(-100vw);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0vw);
+    }
+}
+@keyframes image-sliedup{
+  from {
+      opacity: 0;
+      transform: translateY(30vw);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0vw);
+    }
+}
 @keyframes slidein-bottom{
   from {
 

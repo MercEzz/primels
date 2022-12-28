@@ -46,8 +46,8 @@ const Award=()=>{
   return(<>
     <Flex
     direction="column"
-    h="50vh">
-        <Text textAlign="center" fontFamily="goudy" fontSize="2.5rem">
+    h="44vh" overflow="hidden">
+        <Text className="slidein-top revealOnce" textAlign="center" fontFamily="goudy" fontSize="2.5rem">
           PONNERI GYMKHANA CLUB
         </Text>
         <link
@@ -61,7 +61,7 @@ const Award=()=>{
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-        <Flex>
+        <Flex className="fadein-2sdelay revealOnce">
         <Slider  {...settings} ref={(slider) => setSlider(slider)}>
           {gymclubimgs.map((prime,index) => (
             <Flex align="center">

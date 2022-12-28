@@ -254,3 +254,17 @@
   animation: image-sliedright 1 2s linear;
   transform: translateX(0vw);
 }
+.image-slieddown.reveal {
+  transform: translateY(-100vw);
+}
+.image-slieddown.reveal.active {
+  animation: image-slieddown 1 2s linear;
+  transform: translateY(0vw);
+}
+.image-sliedup.reveal {
+  transform: translateY(30vw);
+}
+.image-sliedup.reveal.active {
+  animation: image-sliedup 1 2s linear;
+  transform: translateY(0vw);
+}
