@@ -60,7 +60,7 @@ const Whoweare =()=>{
             </Flex>
         </Flex>
         <Flex>
-            <Flex direction="column">
+            <Flex direction="column" className="fadein-2sdelay revealOnce">
             <Heading  pt="5rem" fontFamily="goudy" fontSize="1.5rem" textAlign="center">MR. RAJEEV AJMERA</Heading>
             <Heading fontFamily="avenir" fontSize="1.125rem" textAlign="center">CHAIRMAN & MANAGING DIRECTOR</Heading>
                     
@@ -83,7 +83,7 @@ const Whoweare =()=>{
                         as={ImQuotesRight} />
                     </Text>
             </Flex>
-            <Image bgColor="red" w="448px" h="404px" alt="IMAGE"/>
+            <Image className="image-sliedright reveal" bgColor="red" w="448px" h="404px" alt="IMAGE"/>
         </Flex>
         </Flex>
       </>)

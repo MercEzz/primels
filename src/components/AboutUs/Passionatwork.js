@@ -3,7 +3,7 @@ import React from "react";
 const Passionatwork =()=>{
       return (<>
         <Flex direction="column" h="150vh" overflow="hidden">
-        <Heading className="serv-text-up revealOnce" fontFamily="goudy" fontSize="2.5rem" textAlign="center">PASSION AT WORK</Heading>
+        <Heading className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem" textAlign="center">PASSION AT WORK</Heading>
         <Flex>
             <Image w="600px" h="468px" alt="IMAGE"/>
             <Flex
@@ -29,7 +29,7 @@ const Passionatwork =()=>{
               borderRadius="50%"
             />
           </Flex>
-            <Text pt="5.50rem" fontSize="1rem" textAlign="left">
+            <Text className="fadein-2sdelay revealOnce" pt="5.50rem" fontSize="1rem" textAlign="left">
                 Prime LifeSpace group luxuriates the highest brand esteem 
                 in Mumbai & chennai for its fusion of luxuries & affordability 
                 in the projects of exceptional quality with a passion for 
@@ -44,10 +44,10 @@ const Passionatwork =()=>{
             </Text>
         </Flex>
         <Flex>
-           <Flex direction="column"  w="50%">
-                <Center><Heading fontFamily="avenir" fontSize="2.5rem">KEY SERVICES</Heading></Center>
+           <Flex direction="column"  w="50%" overflow="hidden">
+                <Center><Heading className="slidein-top revealOnce" fontFamily="avenir" fontSize="2.5rem">KEY SERVICES</Heading></Center>
                 <Flex gap="2%">
-                    <Flex direction="column" w="49%">
+                    <Flex direction="column" w="49%" className="fadein-2sdelay revealOnce">
                         <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">CONSULTING</Heading></Flex>
                         <Text fontFamily="varela round"><li>Art & Architecture</li></Text>
                         <Text fontFamily="varela round"><li>Structured Transaction</li></Text>
@@ -55,7 +55,7 @@ const Passionatwork =()=>{
                         <Text fontFamily="varela round"><li>Contracts</li></Text>
                         <Text fontFamily="varela round"><li>Broking</li></Text>
                     </Flex>
-                    <Flex direction="column" w="49%">
+                    <Flex direction="column" w="49%" className="fadein-2sdelay revealOnce">
                         <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">REAL ESTATE<br/>DEVELOPMENTS</Heading></Flex>
                         <Text fontFamily="varela round"><li>Mumbai</li></Text>
                         <Text fontFamily="varela round"><li>Chennai</li></Text>
@@ -64,24 +64,24 @@ const Passionatwork =()=>{
                     </Flex>
                 </Flex>
                 <Flex  gap="2%">
-                    <Flex direction="column" w="49%">
+                    <Flex direction="column" w="49%" className="fadein-2sdelay revealOnce">
                         <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">FINANCE</Heading></Flex>
                         <Text fontFamily="varela round"><li>AIF II Fund</li></Text>
                     </Flex>
-                    <Flex direction="column" w="49%">
+                    <Flex direction="column" w="49%" className="fadein-2sdelay revealOnce">
                         <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">RENEWABLE ENERGY<br/>DEVELOPMENTS</Heading></Flex>
                         <Text fontFamily="varela round"><li>Solar Power</li></Text>
                     </Flex>
                 </Flex>
            </Flex>
            <Flex direction="column" w="50%">
-                <Center><Heading fontFamily="avenir" fontSize="2.5rem">OUR CORE STRENGTHS</Heading></Center>
+                <Center><Heading className="slidein-top revealOnce" fontFamily="avenir" fontSize="2.5rem">OUR CORE STRENGTHS</Heading></Center>
                 <SimpleGrid
                         columns={3}
                         w="660px"
                         h="350px"
                         spacing="0.938rem">
-                            <GridItem pos="relative" w="200px" h="248px" bgColor="red" rowSpan={2}>
+                            <GridItem pos="relative" w="200px" h="248px" bgColor="red" rowSpan={2} overflow="hidden">
                             <Box
                                 w="100%"
                                 h="100%"
