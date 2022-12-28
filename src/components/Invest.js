@@ -6,14 +6,28 @@ import {
   Text,
   Divider,
   Box,
+  VStack,
+  IconButton,
 } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
+import Slider from "react-slick";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 // import { ImLocation } from "react-icons/im";
 
 const MtnHead = motion(Heading);
 const MtnFlx = motion(Flex);
-
+const settings = {
+  draggable: false,
+  infinite: false,
+  autoplay: true,
+  speed: 5000,
+  fade: true,
+  autoplaySpeed: 3000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  pauseOnHover: false,
+};
 const Invest = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -45,9 +59,21 @@ const Invest = () => {
       direction="column"
       align="center"
       justify="center"
-      py="100px"
+      pt="3.125rem"
+      pb="3.125rem"
       px="100px"
     >
+      <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
       <MtnHead
         initial={{ opacity: 0, y: -50 }}
         animate={animateY}
@@ -58,7 +84,7 @@ const Invest = () => {
       >
         INVEST IN RENT GENERATING ASSETS
       </MtnHead>
-      <Flex w="100%" pt="50px">
+      <Flex w="100%" pt="1.875rem">
         <MtnFlx
           initial={{ opacity: 0, x: 150 }}
           animate={animateX}
@@ -77,16 +103,17 @@ const Invest = () => {
           w="5%"
           direction="column"
           align="center"
-          px="40px"
+          px="2.5rem"
         >
           <Divider
+             h="5rem"
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
           />
           <Box
-            height="30px"
-            width="25px"
+            height="1.875rem"
+            width="1.875rem"
             backgroundColor="#DFBD69"
             border="3px solid #fff"
             boxShadow="0px 0px 0px 3px #B88746"
@@ -114,8 +141,105 @@ const Invest = () => {
           >
             8% ROI ON HOMES
           </MtnHead>
+          <Flex
+            mt="1.563rem"
+            w="100%"
+            mb="0.938rem"
+            alignSelf="flex-start"
+            opacity={isInView ? "1" : "0"}
+            transition="all 2s"
+            direction="column"
+          >
+            <Flex w="100%" border="1px solid #B88746">
+              {" "}
+              <Text
+                textAlign="center"
+                border="1px solid #B88746"
+                borderLeft="none"
+                borderBottom="none"
+                w="30%"
+                fontFamiily="veralaRound"
+                fontSize="1rem"
+                px="0.625rem"
+                py="0.938rem"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                color="white"
+              >
+                SMART HOME
+              </Text>{" "}
+              <Text
+                textAlign="center"
+                border="1px solid #B88746"
+                borderLeft="none"
+                borderBottom="none"
+                w="40%"
+                fontFamiily="veralaRound"
+                fontSize="1rem"
+                px="0.625rem"
+                py="0.938rem"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                color="white"
+              >
+                PRICE
+              </Text>{" "}
+              <Text
+                textAlign="center"
+                border="1px solid #B88746"
+                borderLeft="none"
+                borderBottom="none"
+                borderRight="none"
+                w="30%"
+                fontFamiily="veralaRound"
+                fontSize="1rem"
+                px="0.625rem"
+                py="0.938rem"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                color="white"
+              >
+                RENTAL INCOME
+              </Text>
+            </Flex>
 
-          <Flex my="25px" w="100%" justify="space-between">
+            <Flex w="100%" borderBottom="1px solid #B88746" borderLeft="1px solid #B88746" borderRight="1px solid #B88746">
+              <VStack
+                w="30%"
+                align="flex-start"
+                px="1.25rem"
+                py="1.25rem"
+                borderRight="1px solid #B88746"
+              >
+                <Heading fontFamily="avenir" fontSize="1.25rem">
+                  2 BHK
+                </Heading>
+                <Text fontSize="1rem" fontFamily="veralaRound">
+                  1085 SQFT.
+                </Text>
+              </VStack>
+              <VStack
+                w="40%"
+                align="flex-start"
+                px="1.25rem"
+                py="1.25rem"
+                borderRight="1px solid #B88746"
+              >
+                <Heading fontFamily="avenir" fontSize="1.25rem">
+                  Rs. 52 LAKHS
+                </Heading>
+                <Text fontSize="1rem" fontFamily="veralaRound">
+                  Fully Furnished With White Goods
+                </Text>
+              </VStack>
+              <VStack w="30%" align="flex-start" px="1.25rem" py="1.25rem">
+                <Heading fontFamily="avenir" fontSize="1.25rem">
+                  Rs. 32,000
+                </Heading>
+                <Text fontSize="1rem" fontFamily="veralaRound">
+                  Per Month
+                </Text>
+              </VStack>
+            </Flex>
+          </Flex>
+          {/*<Flex my="1.562rem" w="100%" justify="space-between">
             <Flex direction="column">
               <Text
                 pb="15px"
@@ -131,13 +255,13 @@ const Invest = () => {
               <Text
                 pt="10px"
                 fontFamily="veralaRound"
-                fontSize="16px"
+                fontSize="1rem"
                 fontWeight="400"
               >
                 1085 sqft.
               </Text>
             </Flex>
-            <Flex direction="column" px="25px">
+            <Flex direction="column" px="1.562rem">
               <Text
                 pb="15px"
                 fontFamily="veralaRound"
@@ -152,7 +276,7 @@ const Invest = () => {
               <Text
                 pt="10px"
                 fontFamily="veralaRound"
-                fontSize="16px"
+                fontSize="1rem"
                 fontWeight="400"
               >
                 Fully Furnished With <br />
@@ -174,17 +298,18 @@ const Invest = () => {
               <Text
                 pt="10px"
                 fontFamily="veralaRound"
-                fontSize="16px"
+                fontSize="1rem"
                 fontWeight="400"
               >
                 Per Month
               </Text>
             </Flex>
-          </Flex>
+          </Flex>*/}
           <Button
+            mt="1.563rem"
             w="152px"
             h="51px"
-            fontSize="16px"
+            fontSize="1rem"
             fontFamily="avenir"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             color="white"
@@ -195,6 +320,43 @@ const Invest = () => {
           >
             VIEW DETAILS
           </Button>
+          <IconButton
+                transition="all 2s 2s"
+                pos="absolute"
+                aria-label="left-arrow"
+                variant="outline"
+                borderColor="#B88746"
+                borderRadius="full"
+                // position="absolute"
+                bottom="0"
+                right="5%"
+                transform={"translateX(-50%)"}
+                mx="0.312rem"
+                zIndex={2}
+                
+              >
+                <AiOutlineLeft color="#B88746" size="1.875rem" />
+              </IconButton>
+              {/* Right Icon */}
+              <IconButton
+                transition="all 2s 2s"
+                pos="absolute"
+                aria-label="right-arrow"
+                borderRadius="full"
+                variant="outline"
+                borderColor={"#B88746"}
+                // position="absolute"
+                // right={side}
+                // top={top}
+                bottom="0"
+                right="0"
+                // transform={"translate(0%, -50%)"}
+                mx="0.312rem"
+                zIndex={2}
+                
+              >
+                <AiOutlineRight color={"#B88746"} size="1.875rem" />
+              </IconButton>
         </MtnFlx>
       </Flex>
     </Flex>

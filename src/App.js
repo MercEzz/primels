@@ -25,6 +25,7 @@ import MobBlogSc from "./screens/BlogSc.mob";
 import MobCareersSc from "./screens/CareersSc.mob";
 import MobEnergySc from "./screens/EnergySc.mob";
 import BottomMenu from "./components/comercial Properties/BottomMenu";
+import AboutUsSc from "./screens/AboutUsSc";
 
 function App() {
   const [isMobile,setIsMobile]=useState(false);
@@ -53,6 +54,7 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<HomeSc />} />
+          <Route path="/about-us" element={<AboutUsSc />} />
           <Route path="/careers" element={<CareersSc />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/energy-get-in-touch-with-us" element={<EnergySc />} />

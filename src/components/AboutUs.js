@@ -39,9 +39,9 @@ const AboutUs = () => {
       justify="center"
       bgColor="gray.900"
       color="white"
-      pt="100px"
-      pb="50px"
-      px="100px"
+      pt="5rem"
+      pb="1.875rem"
+      px="6.2rem"
       direction="column"
     >
       <Flex w="100%" h="100%" direction="column" align="center">
@@ -51,7 +51,7 @@ const AboutUs = () => {
           transition={{ duration: 2, type: "just" }}
           fontFamily="goudy"
           fontWeight="400"
-          fontSize="40px"
+          fontSize="2.5rem"
         >
           ABOUT US
         </MtnHead>
@@ -60,8 +60,8 @@ const AboutUs = () => {
             initial={{ opacity: 0 }}
             animate={animateHead}
             transition={{ duration: 2, type: "just" }}
-            pt="25px"
-            fontSize="34px"
+            pt="1.562rem"
+            fontSize="2.125rem"
             fontFamily="avenir"
           >
             BRIGHT IDEAS-SMART SOLUTIONS
@@ -70,8 +70,8 @@ const AboutUs = () => {
             initial={{ opacity: 0 }}
             animate={animateHead}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
-            pt="15px"
-            fontSize="16px"
+            pt="2.125rem"
+            fontSize="1rem"
             fontFamily="veralaRound"
           >
             Prime LifeSpace is a brand built on trust, transparency & quality in
@@ -86,8 +86,8 @@ const AboutUs = () => {
             initial={{ opacity: 0 }}
             animate={animateHead}
             transition={{ delay: 3, duration: 2, type: "just" }}
-            pt="15px"
-            fontSize="16px"
+            pt="0.938rem"
+            fontSize="1rem"
             fontFamily="veralaRound"
           >
             Prime LifeSpace consultancy firm offers an end-to-end solution in
@@ -101,8 +101,8 @@ const AboutUs = () => {
             initial={{ opacity: 0 }}
             animate={animateHead}
             transition={{ delay: 4.5, duration: 2, type: "just" }}
-            pt="15px"
-            fontSize="16px"
+            pt="0.938rem"
+            fontSize="1rem"
             fontFamily="veralaRound"
           >
             Prime LifeSpace developers are renowned creators of smart integrated
@@ -113,7 +113,7 @@ const AboutUs = () => {
             choice for right value of money for the investors.
           </MtnTxt>
         </Flex>
-        <Flex w="100%" pt="15px">
+        <Flex w="100%" pt="0.938rem">
           <Flex direction="column" w="25%">
             <MtnFlx
               initial={{ opacity: 0, x: -100 }}
@@ -128,7 +128,7 @@ const AboutUs = () => {
                 bgColor="#DFBD69"
               />
               <Flex
-                h="30px"
+                h="1.875rem"
                 pos="relative"
                 align="center"
                 justify="center"
@@ -136,16 +136,16 @@ const AboutUs = () => {
               >
                 <Box
                   pos="absolute"
-                  height="30px"
-                  width="30px"
+                  height="1.875rem"
+                  width="1.875rem"
                   boxShadow="0px 0px 0px 3px #B88746"
                   borderRadius="50%"
                   my="0.5"
                 />
                 <Box
                   pos="absolute"
-                  height="22px"
-                  width="22px"
+                  height="1.375rem"
+                  width="1.375rem"
                   backgroundColor="#DFBD69"
                   borderRadius="50%"
                   my="0.5"
@@ -169,10 +169,10 @@ const AboutUs = () => {
               animate={animateLeft}
               transition={{ delay: 6, duration: 2, type: "just" }}
               direction="column"
-              pt="15px"
+              pt="0.938rem"
             >
               <Heading
-                fontSize="34px"
+                fontSize="1.5rem"
                 fontFamily="avenir"
                 textTransform="uppercase"
               >
@@ -182,7 +182,7 @@ const AboutUs = () => {
                 initial={{ opacity: 0, x: -100 }}
                 animate={animateLeft}
                 transition={{ delay: 7.5, duration: 2, type: "just" }}
-                fontSize="18px"
+                fontSize="1.125rem"
                 fontFamily="veralaRound"
               >
                 Of Building Trust
@@ -203,7 +203,7 @@ const AboutUs = () => {
                 bgColor="#DFBD69"
               />
               <Flex
-                h="30px"
+                h="1.875rem"
                 pos="relative"
                 align="center"
                 justify="center"
@@ -211,16 +211,16 @@ const AboutUs = () => {
               >
                 <Box
                   pos="absolute"
-                  height="30px"
-                  width="30px"
+                  height="1.875rem"
+                  width="1.875rem"
                   boxShadow="0px 0px 0px 3px #B88746"
                   borderRadius="50%"
                   my="0.5"
                 />
                 <Box
                   pos="absolute"
-                  height="22px"
-                  width="22px"
+                  height="1.375rem"
+                  width="1.375rem"
                   backgroundColor="#DFBD69"
                   borderRadius="50%"
                   my="0.5"
@@ -233,13 +233,13 @@ const AboutUs = () => {
                 bgColor="#DFBD69"
               />
             </MtnFlx>
-            <Flex direction="column" pt="15px" w="100%" align="center">
+            <Flex direction="column" pt="0.938rem" w="100%" align="center">
               <Flex direction="column" align="flex-start">
                 <MtnHead
                   initial={{ opacity: 0, x: -100 }}
                   animate={animateLeft}
                   transition={{ delay: 9, duration: 2, type: "just" }}
-                  fontSize="34px"
+                  fontSize="1.5rem"
                   fontFamily="avenir"
                   textAlign="left"
                   textTransform="uppercase"
@@ -247,7 +247,7 @@ const AboutUs = () => {
                   1 Million sqft.{" "}
                   <Text
                     as="span"
-                    fontSize="24px"
+                    fontSize="1.25rem"
                     textTransform="lowercase"
                     fontFamily="avenir"
                   >
@@ -258,7 +258,7 @@ const AboutUs = () => {
                   initial={{ opacity: 0, x: -100 }}
                   animate={animateLeft}
                   transition={{ delay: 10.5, duration: 2, type: "just" }}
-                  fontSize="18px"
+                  fontSize="1.125rem"
                   textAlign="left"
                   fontFamily="veralaRound"
                 >
@@ -281,7 +281,7 @@ const AboutUs = () => {
                 bgColor="#DFBD69"
               />
               <Flex
-                h="30px"
+                h="1.875rem"
                 pos="relative"
                 align="center"
                 justify="center"
@@ -289,16 +289,16 @@ const AboutUs = () => {
               >
                 <Box
                   pos="absolute"
-                  height="30px"
-                  width="30px"
+                  height="1.875rem"
+                  width="1.875rem"
                   boxShadow="0px 0px 0px 3px #B88746"
                   borderRadius="50%"
                   my="0.5"
                 />
                 <Box
                   pos="absolute"
-                  height="22px"
-                  width="22px"
+                  height="1.375rem"
+                  width="1.375rem"
                   backgroundColor="#DFBD69"
                   borderRadius="50%"
                   my="0.5"
@@ -311,12 +311,12 @@ const AboutUs = () => {
                 bgColor="#DFBD69"
               />
             </MtnFlx>
-            <Flex direction="column" pt="15px">
+            <Flex direction="column" pt="0.938rem">
               <MtnHead
                 initial={{ opacity: 0, x: -100 }}
                 animate={animateLeft}
                 transition={{ delay: 12, duration: 2, type: "just" }}
-                fontSize="34px"
+                fontSize="1.5rem"
                 fontFamily="avenir"
               >
                 100+
@@ -325,7 +325,7 @@ const AboutUs = () => {
                 initial={{ opacity: 0, x: -100 }}
                 animate={animateLeft}
                 transition={{ delay: 13.5, duration: 2, type: "just" }}
-                fontSize="18px"
+                fontSize="1.125rem"
                 fontFamily="veralaRound"
               >
                 Happy Consultancy Clients
@@ -337,15 +337,15 @@ const AboutUs = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={animateHead}
           transition={{ delay: 14, duration: 2, type: "just" }}
-          mt="25px"
-          // mb="50px"
-          w="146px"
-          p="16px"
-          h="51px"
+          mt="1.562rem"
+          // mb="3.125rem"
+          w="9.125rem"
+          p="1rem"
+          h="3.187rem"
           fontFamily="avenir"
           bgGradient="linear(to-b, #B88746 ,#DFBD69)"
           color="white"
-          fontSize="16px"
+          fontSize="1rem"
           textTransform="uppercase"
           _hover={{
             bgGradient: "linear(to-b, #DFBD69, #B88746)",

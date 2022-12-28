@@ -49,8 +49,13 @@ const OurProjects = () => {
       minh="100%"
       direction="column"
       align="center"
-      pb="50px"
+      pt="1.875rem"
+      pb="1.875rem"
       pl="100px"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
     >
       <Flex w="100%" h="100%" align="center" justify="center">
         <Flex w="10%">
@@ -75,18 +80,18 @@ const OurProjects = () => {
         <Flex w="10%"></Flex>
       </Flex>
       <Flex w="100%" h="full" align="flex-start" justify="space-between">
-        <Flex pt="25px" direction="column" justify="center" h="100%">
+        <Flex pt="4.125rem" direction="column" justify="center" h="29.25rem" w="25rem">
           <MtnHd
             initial={{ x: -500 }}
             animate={animateX}
             transition={{ duration: 2, type: "just" }}
             pb="15px"
             fontFamily="avenir"
-            fontSize="34px"
+            fontSize="1.5rem"
             w="100%"
             textAlign="left"
           >
-            ARETE <br /> HOMES
+            ARETE HOMES
           </MtnHd>
           <UnorderedList>
             <MtnLI
@@ -145,10 +150,11 @@ const OurProjects = () => {
           align="center"
           justify="flex-end"
           pt="25px"
-          px="40px"
+          px="1.563rem"
+          pos="relative"
         >
           <Divider
-            h="150px"
+            h="6.5rem"
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
@@ -199,13 +205,14 @@ const OurProjects = () => {
               zIndex="3"
               // pos="absolute"
               w="100%"
-              h="100%"
+              h="29.25rem"
               src="/images/pro1.png"
             />
             <Image
               pos="absolute"
+
               w="100%"
-              h="90%"
+              h="26.125rem"
               left="100px"
               top="25px"
               opacity=".5"

@@ -18,6 +18,7 @@ const MtnTxt = motion(Text);
 const MtnBtn = motion(Button);
 
 const SmartLiving = () => {
+  
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const animateX = useAnimation();
@@ -46,7 +47,7 @@ const SmartLiving = () => {
       direction="column"
       w="100%"
       h="100%"
-      pt="50px"
+      pt="3.125rem"
       px="100px"
       align="center"
     >
@@ -60,14 +61,13 @@ const SmartLiving = () => {
       >
         SMART LIVING
       </MtnHd>
-      <Flex pt="50px">
+      <Flex pt="1.875rem">
         <Flex direction="column" w="100%" h="100%" px="2" justify="flex-start">
           <MtnFlx
-            initial={{ opacity: 0, x: 100 }}
-            animate={animateX}
+            
             transition={{ delay: 1.5, duration: 2, type: "just" }}
           >
-            <Image w="570px" h="325px" src="/images/smartliving.png" />
+            <Image className="expandcar reveal" w="570px" h="20.310rem" src="/images/smartliving.png" />
           </MtnFlx>
           <MtnFlx
             initial={{ opacity: 0, x: 100 }}
@@ -76,7 +76,7 @@ const SmartLiving = () => {
             py="25%"
             align="center"
           >
-            <Image h="80px" w="80px" mr="2" src="/images/managed.svg" />
+            <Image className="expandcar reveal" h="80px" w="80px" mr="2" src="/images/managed.svg" />
             <Flex direction="column">
               <Heading fontSize="24px" fontFamily="avenir">
                 MANAGED LIVING
@@ -85,6 +85,7 @@ const SmartLiving = () => {
                 initial={{ opacity: 0 }}
                 animate={animateFade}
                 transition={{ delay: 5, duration: 2, type: "just" }}
+                pt="0.625rem"
                 fontSize="18px"
                 fontFamily="veralaRound"
               >
@@ -93,14 +94,14 @@ const SmartLiving = () => {
             </Flex>
           </MtnFlx>
           <MtnFlx
-            initial={{ opacity: 0, x: 100 }}
-            animate={animateX}
+            
             transition={{ delay: 6.5, duration: 2, type: "just" }}
           >
             {" "}
             <Image
+              className="expandcar reveal"
               w="570px"
-              h="325px"
+              h="20.310rem"
               // mt="100px"
               src="/images/smartliving3.png"
             />
@@ -112,6 +113,7 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 1.5, duration: 2, type: "just" }}
+              h="10rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -120,8 +122,8 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 1.5, duration: 2, type: "just" }}
-              height="50px"
-              width="25px"
+              height="30px"
+              width="30px"
               backgroundColor="#DFBD69"
               border="3px solid white"
               boxShadow="0px 0px 0px 3px #B88746"
@@ -172,6 +174,7 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 6.5, duration: 2, type: "just" }}
+              h="14rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -192,6 +195,7 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 9.5, duration: 2, type: "just" }}
+              
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -199,14 +203,12 @@ const SmartLiving = () => {
           </Flex>
         </Flex>
 
-        <Flex direction="column" w="100%" px="2" pt="8%">
+        <Flex direction="column" w="100%" px="2">
           <MtnFlx
-            initial={{ x: -50, opacity: 0 }}
-            animate={animateX}
             transition={{ delay: 1.5, duration: 2, type: "just" }}
             align="center"
           >
-            <Image w="80px" h="80px" mr="2" src="/images/co-living.svg" />
+            <Image className="expandcar reveal" w="80px" h="20.310rem" mr="2" src="/images/co-living.svg" />
             <Flex direction="column" py="10">
               <Heading fontSize="24px" fontFamily="avenir">
                 CO-LIVING FOR PROFESSIONALS
@@ -215,6 +217,7 @@ const SmartLiving = () => {
                 initial={{ opacity: 0 }}
                 animate={animateFade}
                 transition={{ delay: 3, duration: 2, type: "just" }}
+                pt="0.625rem"
                 fontSize="18px"
                 fontFamily="veralaRound"
               >
@@ -223,21 +226,18 @@ const SmartLiving = () => {
             </Flex>
           </MtnFlx>
           <MtnFlx
-            initial={{ opacity: 0, x: -50 }}
-            animate={animateX}
             transition={{ delay: 3.5, duration: 2, type: "just" }}
             pt="15%"
           >
-            <Image w="570px" h="325px" src="/images/smartliving2.png" />
+            <Image className="expandcar reveal"  w="570px" h="20.310rem" src="/images/smartliving2.png" />
           </MtnFlx>
           <MtnFlx
             initial={{ opacity: 0, x: -50 }}
             animate={animateX}
             transition={{ delay: 6.5, duration: 2, type: "just" }}
             align="center"
-            pt="27%"
           >
-            <Image w="80px" h="80px" mr="2" src="/images/student.svg" />
+            <Image  className="expandcar reveal" w="80px" h="20.310rem" mr="2" src="/images/student.svg" />
             <Flex direction="column">
               <Heading fontSize="24px" fontFamily="avenir">
                 STUDENT HOUSING
@@ -246,6 +246,7 @@ const SmartLiving = () => {
                 initial={{ opacity: 0 }}
                 animate={animateFade}
                 transition={{ delay: 8, duration: 2, type: "just" }}
+                pt="0.625rem"
                 fontSize="18px"
                 fontFamily="veralaRound"
               >
