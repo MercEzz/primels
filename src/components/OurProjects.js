@@ -15,6 +15,11 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
+import areteHomes from "./arete-homes imgs/BANNER2.jpg";
+import skyHigh from "./sky-high imgs/BANNER2.jpg";
+//import nakshatra from "";
+import areteMall from "./commercial-properties imgs/Arete Mall.jpg";
+
 const MtnDvdr = motion(Divider);
 const MtnFlx = motion(Flex);
 const MtnHd = motion(Heading);
@@ -24,11 +29,40 @@ const MtnBtn = motion(Button);
 const OurProjects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
+  const [projIndex,setProjIndex] = useState(0);
+  const projects=[
+    {title:"ARETE HOMES",imgF:areteHomes,imgB:skyHigh,p1:"6 Towers",p2:"2, 2.5, 3 BHK Smart Residencies",p3:"70% Open Space"},
+    {title:"NAKSHATRA",imgF:areteHomes,imgB:skyHigh,p1:"Pune"},
+    {title:"I - LAND",imgF:areteHomes,imgB:skyHigh,p1:"Pune"},
+    {title:"ARETE MALL",imgF:areteMall,imgB:skyHigh,},
+    {title:"SKY HIGH",imgF:skyHigh,imgB:areteHomes,p1:"18 Storey Tall",p2:"Sky Residencies 2 BHK",p3:"G+1 Retail Plaza"}
+  ];
+  const [imgBack,setImgBack]=useState(skyHigh);
+  
   const animateX = useAnimation();
   const animateY = useAnimation();
   const animateFade = useAnimation();
-
+  const nextHandle=()=>{
+    if(projIndex===4){
+      setProjIndex(0);
+    }
+    else{
+      setProjIndex(projIndex+1);
+    }
+  }
+  const prevHandle=()=>{
+    if(projIndex===0){
+      setProjIndex(4);
+    }
+    else{
+      setProjIndex(projIndex-1);
+    }
+  }
+  useEffect(() => {
+    return()=>{
+      
+    }
+  }, [projIndex]);
   useEffect(() => {
     if (isInView) {
       animateX.start({
@@ -47,7 +81,7 @@ const OurProjects = () => {
   const [slider, setSlider] = useState(null);
   const settings = {
     // className: "center",
-    centerMode: true,
+    centerMode: false,
     autoplay:true,
     infinite: true,
     draggable: true,
@@ -92,8 +126,14 @@ const OurProjects = () => {
             OUR PROJECTS
           </Text>
         </Flex>
-        <Flex w="10%"></Flex>
       </Flex>
+      <Box
+        transition="all 2s 2s"
+        position={"relative"}
+        height={"100%"}
+        width={"100%"}
+        overflow={"hidden"}
+      >
       <link
           rel="stylesheet"
           type="text/css"
@@ -105,10 +145,9 @@ const OurProjects = () => {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-      <Flex w="100%" h="full" align="flex-start" justify="space-between">
-        
-        <Flex w="35%" pt="4.125rem" direction="column" justify="center" h="29.25rem">
-
+      <Slider {...settings} ref={(slider) => setSlider(slider)}>
+      <Flex pos="relative" align="flex-start" justify="space-between" px="100px">
+        <Flex pos="relative" m="0" w="20%" pt="4.125rem" direction="column" justify="center" h="30rem">
           <MtnHd
             initial={{ x: -500 }}
             animate={animateX}
@@ -119,7 +158,7 @@ const OurProjects = () => {
             w="100%"
             textAlign="left"
           >
-            ARETE HOMES
+            {projects[projIndex].title}
           </MtnHd>
           <UnorderedList>
             <MtnLI
@@ -128,7 +167,7 @@ const OurProjects = () => {
               transition={{ delay: 2.5, duration: 2, type: "just" }}
             >
               <Text pb="10px" fontFamily="veralaRound" fontSize="18px">
-                6 Towers
+                {projects[projIndex].p1}
               </Text>
             </MtnLI>
             <MtnLI
@@ -137,7 +176,7 @@ const OurProjects = () => {
               transition={{ delay: 2.5, duration: 2, type: "just" }}
             >
               <Text pb="10px" fontFamily="veralaRound" fontSize="18px">
-                2, 2.5, 3 BHK Smart Residencies
+              {projects[projIndex].p2}
               </Text>
             </MtnLI>
             <MtnLI
@@ -146,7 +185,7 @@ const OurProjects = () => {
               transition={{ delay: 2.5, duration: 2, type: "just" }}
             >
               <Text fontFamily="veralaRound" fontSize="18px">
-                70% Open Space
+              {projects[projIndex].p3}
               </Text>
             </MtnLI>
           </UnorderedList>
@@ -168,18 +207,58 @@ const OurProjects = () => {
           >
             VIEW PROJECT
           </MtnBtn>
+          <IconButton
+          aria-label="left-arrow"
+          variant="outline"
+          borderColor="#B88746"
+          borderRadius="full"
+          position="absolute"
+          bottom="0"
+          left="0"
+          h="3.125rem"
+          w="3.125rem"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          onClick={() => {
+            prevHandle();
+          }}
+        >
+          <AiOutlineLeft color="#B88746" size="2.5rem" />
+        </IconButton>
+
+        <IconButton
+          aria-label="right-arrow"
+          borderRadius="full"
+          variant="outline"
+          borderColor="#B88746"
+          position="absolute"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          right="0"
+          bottom="0"
+          h="3.125rem"
+          w="3.125rem"
+          onClick={() => {
+            nextHandle();
+          }}
+        >
+          <AiOutlineRight color="#B88746" size="2.5rem" />
+        </IconButton>
         </Flex>
         <MtnFlx
+          w="5rem"
           initial={{ opacity: 0, y: -100 }}
           animate={animateY}
           transition={{ duration: 2, type: "just" }}
           h="100%"
           direction="column"
           align="center"
-          justify="flex-end"
+          justify="flex-start"
           pt="25px"
           px="1.563rem"
-          pos="relative"
+          pos="absolute"
+          top="0"
+          right="50%"
         >
           <Divider
             h="6.5rem"
@@ -199,7 +278,11 @@ const OurProjects = () => {
           />
         </MtnFlx>
         <Flex
-          w="100%"
+          pos="absolute"
+          zIndex={90}
+          right="0"
+          top="0"
+          w="50%"
           direction="column"
           align="flex-start"
           pt="25px"
@@ -231,13 +314,15 @@ const OurProjects = () => {
             pr="100px" 
           >
             <Image
+              animation="fadein 1 2s"
               zIndex="3"
               // pos="absolute"
               w="100%"
               h="25.25rem"
-              src="/images/pro1.png"
+              src={projects[projIndex].imgF}
             />
             <Image
+              animation="fadein 1 2s"
               pos="absolute"
               w="100%"
               h="21.875rem"
@@ -245,11 +330,13 @@ const OurProjects = () => {
               left="100px"
               top="25px"
               opacity=".5"
-              src="/images/pro1.png"
+              src={projects[projIndex].imgB}
             />
           </MtnFlx>
         </Flex>
       </Flex>
+      </Slider>
+      </Box>
     </Flex>
   );
 };
