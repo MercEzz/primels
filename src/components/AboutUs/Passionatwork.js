@@ -2,7 +2,7 @@ import { Center, Flex, Text, Icon, Image, SimpleGrid, HStack, Heading, GridItem,
 import React from "react";
 const Passionatwork =()=>{
       return (<>
-        <Flex direction="column" h="110vh" overflow="hidden">
+        <Flex direction="column" h="110vh" overflow="hidden"  px="100px">
         <Center className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem" textAlign="center">PASSION AT WORK</Center>
         <Flex>
             <Image className="fadein-2sdelay reveal" bgColor="red" w="600px" h="468px" alt="IMAGE"/>

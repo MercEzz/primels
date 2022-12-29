@@ -14,13 +14,10 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-import activityArea from "../arete-homes imgs/PGC-ACTIVITY AREA.jpeg";
+import award from "./24.jpg";
 
 const gymclubimgs = [
-    {img:null},
-    {img:null},
-    {img:null},
-    {img:null},
+    {img:award},
     {img:null},
     {img:null},
   ];
@@ -47,8 +44,8 @@ const Award=()=>{
     <Flex
     direction="column"
     h="44vh" overflow="hidden">
-        <Text className="slidein-top revealOnce" textAlign="center" fontFamily="goudy" fontSize="2.5rem">
-          PONNERI GYMKHANA CLUB
+        <Text w="100%" className="slidein-top revealOnce" textAlign="center" fontFamily="goudy" fontSize="2.5rem">
+          Awards
         </Text>
         <link
           rel="stylesheet"
@@ -61,14 +58,13 @@ const Award=()=>{
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-        <Flex className="fadein-2sdelay revealOnce">
+        <Flex className="fadein-2sdelay revealOnce" w="100%">
         <Slider  {...settings} ref={(slider) => setSlider(slider)}>
           {gymclubimgs.map((prime,index) => (
-            <Flex align="center">
+            <Flex >
               <Image
+                w="100%"
                 key={"carousel "+index}
-                height="15.437rem"
-                pr="0.937rem"
                 src={prime.img}
               />
             </Flex>
