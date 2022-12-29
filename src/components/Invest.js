@@ -10,7 +10,7 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 // import { ImLocation } from "react-icons/im";
@@ -34,7 +34,29 @@ const Invest = () => {
   const animateY = useAnimation();
   const animateX = useAnimation();
   const animateFade = useAnimation();
+  const [assetIndex,setAssetIndex] = useState(0);
+  const assets = [
+    {title:"8% ROI ON HOMES",room:"2 BHK",price:"Rs. 52 Lakhs",rent:"Rs. 32,000*",sqrft:"1085 sqft."},
+    {title:"7% RENTAL INCOME",room:"2 BHK",price:"Rs. 34 Lakhs",rent:"Rs. 20,000*",sqrft:"690 sqft."},
+    {title:"HIGHEST ROI ON HOMES",room:"3 BHK",price:"Rs. 85 Lakhs",rent:"Rs. 48,000*",sqrft:"1787 sqft."},
+  ]
+  const nextHandle=()=>{
+    if(assetIndex===2){
+      setAssetIndex(0);
+    }
+    else{
+      setAssetIndex(assetIndex+1);
+    }
+  }
+  const prevHandle=()=>{
+    if(assetIndex===0){
+      setAssetIndex(2);
+    }
+    else{
+      setAssetIndex(assetIndex-1);
+    }
 
+  }
   useEffect(() => {
     if (isInView) {
       animateY.start({
@@ -118,6 +140,7 @@ const Invest = () => {
           />
         </MtnFlx>
         <MtnFlx
+          pos="relative"
           initial={{ opacity: 0 }}
           animate={animateFade}
           transition={{duration: 2, type: "just" }}
@@ -135,7 +158,7 @@ const Invest = () => {
             fontSize="34px"
             textAlign="left"
           >
-            8% ROI ON HOMES
+            {assets[assetIndex].title}
           </MtnHead>
           <Flex
             mt="1.563rem"
@@ -204,7 +227,7 @@ const Invest = () => {
                 borderRight="1px solid #B88746"
               >
                 <Heading fontFamily="avenir" fontSize="1.25rem">
-                  2 BHK
+                {assets[assetIndex].room}
                 </Heading>
                 <Text fontSize="1rem" fontFamily="veralaRound">
                   1085 SQFT.
@@ -218,7 +241,7 @@ const Invest = () => {
                 borderRight="1px solid #B88746"
               >
                 <Heading fontFamily="avenir" fontSize="1.25rem">
-                  Rs. 52 LAKHS
+                {assets[assetIndex].price}
                 </Heading>
                 <Text fontSize="1rem" fontFamily="veralaRound">
                   Fully Furnished With White Goods
@@ -226,7 +249,7 @@ const Invest = () => {
               </VStack>
               <VStack w="30%" align="flex-start" px="1.25rem" py="1.25rem">
                 <Heading fontFamily="avenir" fontSize="1.25rem">
-                  Rs. 32,000
+                {assets[assetIndex].rent}
                 </Heading>
                 <Text fontSize="1rem" fontFamily="veralaRound">
                   Per Month
@@ -316,42 +339,42 @@ const Invest = () => {
             VIEW DETAILS
           </Button>
           <IconButton
-                transition="all 2s 2s"
-                pos="absolute"
-                aria-label="left-arrow"
-                variant="outline"
-                borderColor="#B88746"
-                borderRadius="full"
-                // position="absolute"
-                bottom="0"
-                right="5%"
-                transform={"translateX(-50%)"}
-                mx="0.312rem"
-                zIndex={2}
-                
-              >
-                <AiOutlineLeft color="#B88746" size="1.875rem" />
-              </IconButton>
-              {/* Right Icon */}
-              <IconButton
-                transition="all 2s 2s"
-                pos="absolute"
-                aria-label="right-arrow"
-                borderRadius="full"
-                variant="outline"
-                borderColor={"#B88746"}
-                // position="absolute"
-                // right={side}
-                // top={top}
-                bottom="0"
-                right="0"
-                // transform={"translate(0%, -50%)"}
-                mx="0.312rem"
-                zIndex={2}
-                
-              >
-                <AiOutlineRight color={"#B88746"} size="1.875rem" />
-              </IconButton>
+          aria-label="left-arrow"
+          variant="outline"
+          borderColor="#B88746"
+          borderRadius="full"
+          position="absolute"
+          bottom="0"
+          left="0"
+          h="3.125rem"
+          w="3.125rem"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          onClick={() => {
+            prevHandle();
+          }}
+        >
+          <AiOutlineLeft color="#B88746" size="2.5rem" />
+        </IconButton>
+
+        <IconButton
+          aria-label="right-arrow"
+          borderRadius="full"
+          variant="outline"
+          borderColor="#B88746"
+          position="absolute"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          right="0"
+          bottom="0"
+          h="3.125rem"
+          w="3.125rem"
+          onClick={() => {
+            nextHandle();
+          }}
+        >
+          <AiOutlineRight color="#B88746" size="2.5rem" />
+        </IconButton>
         </MtnFlx>
       </Flex>
     </Flex>

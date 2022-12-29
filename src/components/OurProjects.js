@@ -19,6 +19,8 @@ import areteHomes from "./arete-homes imgs/BANNER2.jpg";
 import skyHigh from "./sky-high imgs/BANNER2.jpg";
 //import nakshatra from "";
 import areteMall from "./commercial-properties imgs/Arete Mall.jpg";
+import aretePlaza from "./commercial-properties imgs/ARETE PLAZA1_11zon.jpg";
+import ponneri from "./commercial-properties imgs/gymkhana.png";
 
 const MtnDvdr = motion(Divider);
 const MtnFlx = motion(Flex);
@@ -31,38 +33,50 @@ const OurProjects = () => {
   const isInView = useInView(ref, { once: true });
   const [projIndex,setProjIndex] = useState(0);
   const projects=[
-    {title:"ARETE HOMES",imgF:areteHomes,imgB:skyHigh,p1:"6 Towers",p2:"2, 2.5, 3 BHK Smart Residencies",p3:"70% Open Space"},
-    {title:"NAKSHATRA",imgF:areteHomes,imgB:skyHigh,p1:"Pune"},
-    {title:"I - LAND",imgF:areteHomes,imgB:skyHigh,p1:"Pune"},
-    {title:"ARETE MALL",imgF:areteMall,imgB:skyHigh,},
-    {title:"SKY HIGH",imgF:skyHigh,imgB:areteHomes,p1:"18 Storey Tall",p2:"Sky Residencies 2 BHK",p3:"G+1 Retail Plaza"}
+    {title:"ARETE HOMES",list:true,status:"READY TO MOVE IN",imgF:areteHomes,imgB:skyHigh,p1:"6 Towers",p2:"2, 2.5, 3 BHK Smart Residencies",p3:"70% Open Space"},
+    {title:"NAKSHATRA",list:false,status:"COMPLETED",imgF:areteHomes,imgB:skyHigh,text:"Pune"},
+    {title:"I - LAND",list:false,status:"COMPLETED",imgF:areteHomes,imgB:skyHigh,text:"Pune"},
+    {title:"ARETE MALL",list:false,status:"COMING SOON",imgF:areteMall,imgB:skyHigh,text:""},
+    {title:"ARETE PLAZA",list:false,status:"NEWLY LAUNCHED",imgF:aretePlaza,imgB:areteMall,text:"20 Retail Spcaes in the Tallest Tower of North Chennai."},
+    {title:"PONNERI GYMKHANA CLUB",list:false,status:"NEWLY LAUNCHED",imgF:ponneri,imgB:aretePlaza,text:"PGC is 60,000 sqft. World Class Private Club for Sports, Business and Celebration."},
+    {title:"SKY HIGH",list:true,status:"READY TO MOVE IN",imgF:skyHigh,imgB:areteHomes,p1:"18 Storey Tall",p2:"Sky Residencies 2 BHK",p3:"G+1 Retail Plaza"}
   ];
-  const [imgBack,setImgBack]=useState(skyHigh);
-  
+  const [isList,setIsList]= useState(true);
   const animateX = useAnimation();
   const animateY = useAnimation();
   const animateFade = useAnimation();
   const nextHandle=()=>{
-    if(projIndex===4){
+    if(projIndex===6){
+      setIsList(true);
       setProjIndex(0);
     }
+    else if(projIndex===5){
+      setIsList(true);
+      setProjIndex(projIndex+1);
+    }
     else{
+      setIsList(false);
       setProjIndex(projIndex+1);
     }
   }
   const prevHandle=()=>{
     if(projIndex===0){
-      setProjIndex(4);
+      setIsList(true);
+      setProjIndex(6);
+    }
+    else if(projIndex===1){
+      setIsList(true);
+      setProjIndex(projIndex-1);
     }
     else{
+      setIsList(false);
       setProjIndex(projIndex-1);
     }
   }
-  useEffect(() => {
-    return()=>{
-      
-    }
-  }, [projIndex]);
+  useEffect(()=>{
+    console.log(isList);
+    console.log(projects[projIndex].p1)
+  },[isList]);
   useEffect(() => {
     if (isInView) {
       animateX.start({
@@ -160,7 +174,7 @@ const OurProjects = () => {
           >
             {projects[projIndex].title}
           </MtnHd>
-          <UnorderedList>
+          {isList?(<UnorderedList>
             <MtnLI
               initial={{ opacity: 0 }}
               animate={animateX}
@@ -188,7 +202,8 @@ const OurProjects = () => {
               {projects[projIndex].p3}
               </Text>
             </MtnLI>
-          </UnorderedList>
+          </UnorderedList>):(<Text fontFamily="varela round" fontSize="18px">{projects[projIndex].text}</Text>)
+          }
           <MtnBtn
             initial={{ opacity: 0 }}
             animate={animateX}
@@ -301,7 +316,7 @@ const OurProjects = () => {
               bgGradient="linear(to-r, #B88746 ,#DFBD69)"
               textTransform="uppercase"
             >
-              Ready to move in
+              {projects[projIndex].status}
             </Text>
           </MtnFlx>
           <MtnFlx

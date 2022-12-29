@@ -172,7 +172,7 @@ const SmartLiving = () => {
               borderColor="#DFBD69"
             />
           </Flex>
-          <Flex w="1.875rem" h="21.310rem" direction="column" align="center">
+          <Flex w="1.875rem" h="26rem" direction="column" align="center">
             <MtnDvdr
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
@@ -198,7 +198,7 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 9.5, duration: 2, type: "just" }}
-              h="10rem"
+              h="16rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
