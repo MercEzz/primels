@@ -40,6 +40,20 @@
     animation:fadein-2sdelay 1 4s linear;
     opacity: 1;
 }
+.fadein-4sdelay.revealOnce{
+    opacity: 0;
+}
+.fadein-4sdelay.revealOnce.active{
+    animation:fadein-4sdelay 1 6s linear;
+    opacity: 1;
+}
+.fadein-6sdelay.revealOnce{
+    opacity: 0;
+}
+.fadein-6sdelay.revealOnce.active{
+    animation:fadein-6sdelay 1 8s linear;
+    opacity: 1;
+}
 .fadein-4sdelay.reveal{
     opacity: 0;
 }

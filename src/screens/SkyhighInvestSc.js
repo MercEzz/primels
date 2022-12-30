@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import Banner from "../components/invest/Banner";
 import SkyhighInvest from "../components/invest/SkyhighInvest";
+import { revealAgain, revealOnce } from "../hooks/util";
 
 const SkyhighInvestSc = () => {
   const reveal = () => {
@@ -26,9 +27,11 @@ const SkyhighInvestSc = () => {
   }
   }
   useLayoutEffect(()=>{
-    window.addEventListener("scroll", reveal);
+    window.addEventListener("scroll", revealAgain);
+    window.addEventListener("scroll", revealOnce);
     return()=>{
-      window.removeEventListener("scroll", reveal);
+      window.removeEventListener("scroll", revealAgain);
+      window.removeEventListener("scroll", revealOnce);
     }
   });
   return (
