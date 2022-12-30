@@ -112,6 +112,19 @@ const SkyhighInvest = () => {
 };
 
 const Twobhk = () => {
+  const [slider, setSlider] = useState(null);
+
+  const settings = {
+    // className: "center",
+    centerMode: true,
+    infinite: true,
+    draggable: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   const [isOpen, setIsOpen]= useState(false);
   const close =() =>{
     setIsOpen(false);
@@ -124,7 +137,7 @@ const Twobhk = () => {
       {isOpen?<ModalWindwow modalTitle={"ARETE HOMES"} modalImage={areteInto1} isOpen={isOpen} onClose={()=>close()} />:<></>}
       {/* Smart invest */}
       <Flex w="100%" h="100%" direction="column" align="center" py="3.125rem" overflow="hidden">
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           SMART INVESTMENT
         </Text>
         <Flex w="100%" h="100%">
@@ -159,6 +172,7 @@ const Twobhk = () => {
               />
             </Flex>
             <Flex
+              mt="8rem"
               w="100%"
               h="100%"
               direction="column"
@@ -166,7 +180,7 @@ const Twobhk = () => {
               fontFamily="avenir"
             >
               <Flex align="center" justify="space-between" overflow="hidden">
-                <Flex direction="column" className="sliderightdisco reveal">
+                <Flex direction="column" className="fadein-2sdelay revealOnce">
                   <Heading fontSize="1.5rem" pb="0.938rem">
                     ARETE HOMES
                   </Heading>
@@ -185,23 +199,8 @@ const Twobhk = () => {
                     Fully Furnished With White Goods
                   </Text>
                 </Flex>
-                <Button
-                  className="fadein2 reveal"
-                  w="fit-content"
-                  bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-                  color="white"
-                  fontSize="1rem"
-                  fontFamily="avenir"
-                  p="1rem"
-                  _hover={{
-                    bgGradient: "linear(to-b, #DFBD69, #B88746)",
-                  }}
-                  _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
-                >
-                  I AM INTERESTED
-                </Button>
               </Flex>
-              <Flex w="100%" gap="2.938rem" pb="1.875rem" className="fadein2 reveal">
+              <Flex w="100%" gap="2.938rem" pb="1.875rem" className="fadein-2sdelay revealOnce">
                 <Flex w="100%" direction="column" align="center">
                   <Image
                     w="3.125rem"
@@ -247,7 +246,7 @@ const Twobhk = () => {
                 </Flex>
               </Flex>
               <Heading
-                className="fadein2 reveal"
+                className="fadein-2sdelay revealOnce"
                 w="100%"
                 textAlign="center"
                 fontFamily="avenir"
@@ -255,6 +254,21 @@ const Twobhk = () => {
               >
                 ASSURED RENT > EMI
               </Heading>
+              <Button
+                  className="fadein-2sdelay revealOnce"
+                  w="fit-content"
+                  bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+                  color="white"
+                  fontSize="1rem"
+                  fontFamily="avenir"
+                  p="1rem"
+                  _hover={{
+                    bgGradient: "linear(to-b, #DFBD69, #B88746)",
+                  }}
+                  _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+                >
+                  I AM INTERESTED
+                </Button>
             </Flex>
           </Flex>
         </Flex>
@@ -1292,7 +1306,7 @@ const Twobhk = () => {
         py="3.125rem"
         align="center"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           WHY INVEST?
         </Text>
         <Flex w="100%" h="100%" gap="0.938rem">
@@ -1303,12 +1317,16 @@ const Twobhk = () => {
             pt="1.875rem"
             px="1.875rem"
             align="center"
-            _hover={{            }}
+            bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
+            _hover={{boxShadow:"2xl"}}
           >
-            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein reveal">
+            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               CONNECTIVITY
             </Heading>{" "}
-            <Flex w="100%" h="100%" direction="column" justify="space-between" className="fadein2 reveal">
+            <Flex w="100%" h="100%" direction="column" justify="space-between" className="fadein-2sdelay revealOnce">
               <UnorderedList
                 fontFamily="veralaRound"
                 fontSize="1rem"
@@ -1336,12 +1354,16 @@ const Twobhk = () => {
             pt="1.875rem"
             px="1.875rem"
             align="center"
-            _hover={{            }}
+            bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
+            _hover={{boxShadow:"2xl"}}
           >
-            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein reveal">
+            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               FOREIGN INVESTMENTS
             </Heading>
-            <Flex w="100%" h="100%" direction="column" justify="space-between" className="fadein2 reveal">
+            <Flex w="100%" h="100%" direction="column" justify="space-between" className="fadein-2sdelay revealOnce">
               <UnorderedList
                 fontFamily="veralaRound"
                 fontSize="1rem"
@@ -1362,7 +1384,6 @@ const Twobhk = () => {
             </Flex>
           </Flex>
           <Flex
-            _hover={{            }}
             w="100%"
             h="25rem"
             direction="column"
@@ -1370,11 +1391,16 @@ const Twobhk = () => {
             px="1.875rem"
             align="center"
             justify="space-between"
+            bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
+            _hover={{boxShadow:"2xl"}}
           >
-            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein reveal">
+            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               SOCIAL FABRIC
             </Heading>
-            <Flex className="fadein2 reveal">
+            <Flex w="100%" h="100%" direction="column" justify="space-between" className="fadein-2sdelay revealOnce">
             <UnorderedList
               fontFamily="veralaRound"
               fontSize="1rem"
@@ -1390,9 +1416,10 @@ const Twobhk = () => {
             <Image
               w="100%"
               h="11.25rem"
+              justifySelf="flex-end"
               src={socialFabric}
               objectFit="contain"
-              objectPosition="150%"
+              objectPosition="50% 80%"
             />
             </Flex>
           </Flex>
@@ -1401,14 +1428,90 @@ const Twobhk = () => {
       {/*more amenities*/}
       <MoreAmenities />
       {/* our investors */}
-      <Flex w="100%" h="100%" py="3.125rem" direction="column" align="center" overflow="hidden">
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
+      <Flex
+        overflow="hidden"
+        w="100%"
+        h="100%"
+        py="3.125rem"
+        px="6.25rem"
+        direction="column"
+        align="center"
+      >
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           OUR INVESTORS
         </Text>
         {/* carousel */}
+        <Box
+        transition="all 2s 2s"
+        position={"relative"}
+        height={"100%"}
+        width={"100%"}
+        overflow={"hidden"}
+      >
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+        <IconButton
+          aria-label="left-arrow"
+          variant="outline"
+          borderColor="#B88746"
+          borderRadius="full"
+          position="absolute"
+          bottom="35%"
+          left="0"
+          h="3.125rem"
+          w="3.125rem"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          onClick={() => {
+            
+          }}
+        >
+          <AiOutlineLeft color="#B88746" size="2.5rem" />
+        </IconButton>
+
+        <IconButton
+          aria-label="right-arrow"
+          borderRadius="full"
+          variant="outline"
+          borderColor="#B88746"
+          position="absolute"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          right="0"
+          bottom="35%"
+          h="3.125rem"
+          w="3.125rem"
+          onClick={() => {
+            
+          }}
+        >
+          <AiOutlineRight color="#B88746" size="2.5rem" />
+        </IconButton>
+        <Slider {...settings} ref={(slider) => setSlider(slider)}>
+          <Flex key={""} px="6.25rem" align="center" justify="center" pos="relative" h="25rem" w="100%">
+          <embed
+            style={{height:"25rem",width:"80%",alignSelf:"center",position:"absolute",left:"15%"}}
+            src={"https://www.youtube.com/embed/Psmw1t_S6-c"}
+            title="The Economic Times | Best Realty Brands 2021 - Prime LifeSpace Developers"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></embed>
+          </Flex>
+          </Slider>
+          </Box>
       </Flex>
       <Flex w="100%" h="100%" gap="3.125rem" pb="5rem" overflow="hidden">
-        <Flex w="60%" h="100%" direction="column" align="center" className="fadein reveal">
+        <Flex w="60%" h="100%" direction="column" align="center" className="fadein revealOnce">
           <Text fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
             7% ROI ON ARETE HOMES
           </Text>
@@ -1457,7 +1560,7 @@ const Twobhk = () => {
           </Button>
         </Flex>
         <Flex
-          className="fadein reveal"
+          className="fadein revealOnce"
           w="40%"
           h="100%"
           align="center"
@@ -3050,14 +3153,14 @@ const tenantsImg = [roiImg, roiImg, roiImg];
 export default SkyhighInvest;
 
 const gymclubimgs = [
-  "/images/arete-homes/PGC-ACTIVITY AREA.jpeg",
-  "/images/arete-homes/PGC-BANQUET HALL.jpg",
-  "/images/arete-homes/PGC-CAFETERIA.jpg",
-  "/images/arete-homes/PGC-GRAND ENTRANCE.jpg",
-  "/images/arete-homes/PGC-GYM.jpg",
-  "/images/arete-homes/PGC-multi sports arena.jpg",
-  "/images/arete-homes/PGC-SQUASH COURT.jpg",
-  "/images/arete-homes/PGC-SWIMMING POOL.jpg",
+  {img:"/images/arete-homes/PGC-ACTIVITY AREA.jpeg",title:"ACTIVITY AREA"},
+  {img:"/images/arete-homes/PGC-BANQUET HALL.jpg",title:"BANQUET HALL"},
+  {img:"/images/arete-homes/PGC-CAFETERIA.jpg",title:"CAFETERIA"},
+  {img:"/images/arete-homes/PGC-GRAND ENTRANCE.jpg",title:"GRAND ENTRANCE"},
+  {img:"/images/arete-homes/PGC-GYM.jpg",title:"GYM"},
+  {img:"/images/arete-homes/PGC-multi sports arena.jpg",title:"MULTI SPORTS ARENA"},
+  {img:"/images/arete-homes/PGC-SQUASH COURT.jpg",title:"SQUASH COURT"},
+  {img:"/images/arete-homes/PGC-SWIMMING POOL.jpg",title:"SWIMMING POOL"},
 ];
 
 const MoreAmenities = () => {
@@ -3085,7 +3188,7 @@ const MoreAmenities = () => {
       py="1.875rem"
       px="1.562rem"
     >
-      <Text fontFamily="goudy" fontSize="2.5rem" pb="1.562rem" className="serv-text-up reveal">
+      <Text fontFamily="goudy" fontSize="2.5rem" pb="1.562rem" className="slidein-top revealOnce">
         MORE AMENITIES
       </Text>
       <Box
@@ -3094,7 +3197,7 @@ const MoreAmenities = () => {
         width={"full"}
         overflow={"hidden"}
         pl="4.687rem"
-        pr="3.75rem"
+        pr="4.687rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -3122,10 +3225,10 @@ const MoreAmenities = () => {
                 objectPosition="center"
                 backgroundRepeat="no-repeat"
                 objectFit="fill"
-                src={prime}
+                src={prime.img}
               />
               <Heading textAlign="center" fontSize="1.5rem" fontFamily="avenir">
-                MULTI SPORTS ARENA
+                {prime.title}
               </Heading>
             </Flex>
           ))}
@@ -3136,7 +3239,7 @@ const MoreAmenities = () => {
           borderColor="#B88746"
           borderRadius="full"
           position="absolute"
-          top="50%"
+          top="45%"
           left="0"
           h="3.125rem"
           w="3.125rem"
@@ -3158,7 +3261,7 @@ const MoreAmenities = () => {
           transform={"translate(0%, -50%)"}
           zIndex={2}
           right="0"
-          top="50%"
+          top="45%"
           h="3.125rem"
           w="3.125rem"
           onClick={() => {

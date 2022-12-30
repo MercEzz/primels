@@ -1568,7 +1568,7 @@ const MoreAmenities = () => {
       py="1.875rem"
       px="1.562rem"
     >
-      <Text fontFamily="goudy" fontSize="2.5rem" pb="1.562rem" className="serv-text-up reveal">
+      <Text fontFamily="goudy" fontSize="2.5rem" pb="1.562rem" className="slidein-top revealOnce">
         MORE AMENITIES
       </Text>
       <Box
