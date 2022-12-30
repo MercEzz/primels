@@ -45,6 +45,19 @@ import ModalWindwow from "../modalWindow";
 import ModalImage from "../modalImage";
 
 const SkyhighInvest = () => {
+  const [slider, setSlider] = useState(null);
+
+  const settings = {
+    // className: "center",
+    centerMode: true,
+    infinite: true,
+    draggable: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   const [isOpen, setIsOpen]= useState(false);
   const close =() =>{
     setIsOpen(false);
@@ -1274,6 +1287,74 @@ const SkyhighInvest = () => {
           OUR INVESTORS
         </Text>
         {/* carousel */}
+        <Box
+        transition="all 2s 2s"
+        position={"relative"}
+        height={"100%"}
+        width={"100%"}
+        overflow={"hidden"}
+      >
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+        <IconButton
+          aria-label="left-arrow"
+          variant="outline"
+          borderColor="#B88746"
+          borderRadius="full"
+          position="absolute"
+          bottom="35%"
+          left="0"
+          h="3.125rem"
+          w="3.125rem"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          onClick={() => {
+            
+          }}
+        >
+          <AiOutlineLeft color="#B88746" size="2.5rem" />
+        </IconButton>
+
+        <IconButton
+          aria-label="right-arrow"
+          borderRadius="full"
+          variant="outline"
+          borderColor="#B88746"
+          position="absolute"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          right="0"
+          bottom="35%"
+          h="3.125rem"
+          w="3.125rem"
+          onClick={() => {
+            
+          }}
+        >
+          <AiOutlineRight color="#B88746" size="2.5rem" />
+        </IconButton>
+        <Slider {...settings} ref={(slider) => setSlider(slider)}>
+          <Flex key={""} px="6.25rem" align="center" justify="center" pos="relative" h="25rem" w="100%">
+          <embed
+            style={{height:"25rem",width:"80%",alignSelf:"center",position:"absolute",left:"15%"}}
+            src={"https://www.youtube.com/embed/Psmw1t_S6-c"}
+            title="The Economic Times | Best Realty Brands 2021 - Prime LifeSpace Developers"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></embed>
+          </Flex>
+          </Slider>
+          </Box>
       </Flex>
       <Flex w="100%" h="100%" px="6.25rem" gap="3.125rem" pb="5rem" overflow="hidden">
         <Flex w="60%" h="100%" direction="column" align="center" className="fadein revealOnce">
@@ -1437,6 +1518,7 @@ const SkyhighInvest = () => {
             </Flex>
           </form>
         </Flex>
+        
       </Flex>
       <Text fontSize="0.625rem" pb="1.25rem">
         Terms & Conditions* : Assured Rent for 3 years from possession • Tax
