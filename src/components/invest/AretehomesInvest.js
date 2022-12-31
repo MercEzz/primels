@@ -15,10 +15,11 @@ import {
   FormLabel,
   Input,
   Checkbox,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import smartInvest from "../Invest imgs/INTRO1.jpg";
 import floorPlan from "../Invest imgs/FLOOR PLAN-sky high.jpg";
 import locationImg from "../Invest imgs/connectivity-removebg-preview.png";
@@ -43,10 +44,17 @@ import areteInto1 from "../Invest imgs/arete homes - intro1.jpeg";
 import twoBhkFloor from "../Invest imgs/arete homes Tower A6-1.jpg";
 import snarttwobhk from "../Invest imgs/INTRO1.jpg";
 import ModalWindwow from "../modalWindow";
+import ModalImage from "../modalImage";
 
 const SkyhighInvest = () => {
-  const [active, setActive] = useState(true);
-  
+  const [active, setActive] = useState(window.localStorage.getItem('areteInvest')?JSON.parse(window.localStorage.getItem('areteInvest')):false);
+  useEffect(() => {
+    window.localStorage.setItem('areteInvest', JSON.stringify(active));
+  }, [active]);
+  useEffect(() => {
+    const data = window.localStorage.getItem('areteInvest');
+    if ( data !== null ) setActive(JSON.parse(data));
+  }, []);
   return (
     <>
       {" "}
@@ -99,7 +107,7 @@ const SkyhighInvest = () => {
             3 BHK - 1787 SQFT.
           </Button>
         </Flex>
-        {active ? <Twobhk /> : <Threebhk />}
+        {active===true ? <Twobhk /> : <Threebhk />}
       </Flex>
       <Text fontSize="0.625rem" pb="1.25rem" textTransform="uppercase">
         Terms & Conditions* : Assured Rent for 3 years from possession • Tax
@@ -131,6 +139,13 @@ const Twobhk = () => {
   }
   const open =() =>{
     setIsOpen(true);
+  }
+  const [isImageOpen, setIsImageOpen]= useState(false);
+  const closeImage =() =>{
+    setIsImageOpen(false);
+  }
+  const openImage =() =>{
+    setIsImageOpen(true);
   }
   return (
     <>
@@ -280,19 +295,22 @@ const Twobhk = () => {
         </Text>
         <Flex w="100%" h="100%" gap="1.25rem">
           <Flex
-            className="fadein reveal"
             w="100%"
             h="100%"
             direction="column"
             align="center"
             fontFamily="avenir"
-            boxShadow="2xl"
             p="1.875rem"
+            _hover={{boxShadow:"2xl"}}
+            bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
           >
-            <Heading align="center" fontSize="1.5rem" pb="1.563rem">
+            <Heading align="center" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               PRINCIPAL INSTALLMENT
             </Heading>
-            <Flex w="100%" gap="0.625rem" align="flex-end" className="fadein2 reveal">
+            <Flex w="100%" gap="0.625rem" align="flex-end" className="fadein revealOnce">
               <Text w="60%" fontSize="1rem" fontFamily="veralaRound">
                 PRINCIPAL
                 <br /> AMOUNT
@@ -301,7 +319,7 @@ const Twobhk = () => {
                 HOME LOAN AMOUNT
               </Text>
             </Flex>
-            <Flex w="100%" h="0.938rem" my="1.25rem" className="fadein2 reveal">
+            <Flex w="100%" h="0.938rem" my="1.25rem" className="fadein revealOnce">
               <Flex bgColor="#B88746" w="50%" />
               <Divider
                 mt="-0.4rem"
@@ -311,11 +329,11 @@ const Twobhk = () => {
                 borderColor="#B88746"
                 bgColor="#B88746"
               />
-              <Flex w="100%" h="100%" className="fadein2 reveal">
+              <Flex w="100%" h="100%" className="fadein revealOnce">
                 <Box w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
               </Flex>
             </Flex>
-            <Flex w="100%" gap="0.625rem" pb="1.875rem" className="fadein2 reveal">
+            <Flex w="100%" gap="0.625rem" pb="1.875rem" className="fadein-2sdelay revealOnce">
               <Heading w="60%" fontSize="1rem" fontFamily="veralaRound">
                 ₹ 10 LAKHS
               </Heading>
@@ -324,27 +342,27 @@ const Twobhk = () => {
               </Heading>
             </Flex>
             <Divider
-              className="fadein3 reveal"
+              className="fadein-4sdelay revealOnce"
               orientation="horizontal"
               border="1px solid"
               borderColor="#B88746"
               bgColor="#B88746"
               mb="0.938rem"
             />
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein3 reveal">
+            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
               <Text fontSize="1rem" fontFamily="veralaRound">
                 TOTAL INVESTMENT
               </Text>
               <Heading fontSize="1.5rem">₹ 52,00,000</Heading>
             </Flex>
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein3 reveal">
+            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
               <Text fontSize="1rem" fontFamily="veralaRound">
                 ASSURED RENT PER MONTH
               </Text>
               <Heading fontSize="1.5rem">₹ 32,000</Heading>
             </Flex>{" "}
             <Heading
-              className="fadein3 reveal"
+              className="fadein-4sdelay revealOnce"
               w="100%"
               textAlign="center"
               fontFamily="avenir"
@@ -354,18 +372,22 @@ const Twobhk = () => {
             </Heading>
           </Flex>
           <Flex
-            className="fadein reveal"
             w="100%"
             h="100%"
             direction="column"
             p="1.875rem"
             align="center"
             fontFamily="avenir"
+            _hover={{boxShadow:"2xl"}}
+            bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
           >
-            <Heading fontSize="1.5rem" pb="1.875rem">
+            <Heading fontSize="1.5rem" pb="1.875rem" className="fadein revealOnce">
               HOME LOAN
             </Heading>
-            <Flex w="100%" gap="2.938rem" pb="1.875rem" className="fadein2 reveal">
+            <Flex w="100%" gap="2.938rem" pb="1.875rem" className="fadein revealOnce">
               <Flex w="100%" direction="column" align="center">
                 <Image
                   w="3.125rem"
@@ -411,14 +433,14 @@ const Twobhk = () => {
               </Flex>
             </Flex>
             <Divider
-              className="fadein3 reveal"
+              className="fadein-4sdelay revealOnce"
               orientation="horizontal"
               border="1px solid"
               borderColor="#B88746"
               bgColor="#B88746"
               mb="0.938rem"
             />{" "}
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein3 reveal">
+            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
               <Text fontSize="1rem" fontFamily="veralaRound">
                 EMI PER MONTH
               </Text>
@@ -684,21 +706,29 @@ const Twobhk = () => {
         </Flex>
       </Flex>
       {/* location */}
+      {isImageOpen?<ModalImage modalImage={locationadv} isOpen={isImageOpen} onClose={()=>closeImage()} />:<></>}
       <Flex
         overflow="hidden"
         w="100%"
         h="100%"
         direction="column"
-        pt="3.125rem"
         align="center"
         justify="center"
+        pt="5rem"
         pb="3.125rem"
-        px="6.25rem"
+        px={{ base: "0.938rem", lg: "6.25rem" }}
       >
-        <Text fontFamily="goudy" pb="1.875rem" fontSize="2.5rem" className="serv-text-up reveal">
-          LOCATION
+        <Text
+          px={{ base: "10rem", lg: "0" }}
+          textAlign="center"
+          fontFamily="goudy"
+          pb="1.563rem"
+          fontSize={{ base: "1.5rem", lg: "2.5rem" }}
+          className="slidein-top revealOnce"
+        >
+          LOCATION ADVANTAGE
         </Text>
-        <Heading align="center" fontSize="1.5rem" pb="1.563rem" className="fadein reveal">
+        <Heading align="center" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
         Arete Homes Is The Largest Smart Township Of Premium Housing & Modern Lifestyle Within 30KM Radius Catering To 12 LAKH+ Individuals, Students, Immigrants.
         </Heading>
         <Flex
@@ -709,130 +739,151 @@ const Twobhk = () => {
           pb="3.125rem"
         >
           <Flex
-            w={{ base: "100%", lg: "28%" }}
+            display={{ base: "grid", lg: "flex" }}
+            w={{ base: "100%", lg: "40%" }}
             h="100%"
             wrap="wrap"
             alignSelf={{ base: "none", lg: "center" }}
             justify={{ base: "flex-start", lg: "flex-start" }}
             gap={{ base: "1.125rem", lg: "0" }}
           >
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Box
-                borderRadius="50%"
-                p={{ base: "0.625rem", lg: "1rem" }}
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                align="center"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
+            <SimpleGrid columns={{ base: "2", lg: "1" }}>
+              <Flex pb="1.5rem" className="fadein revealOnce">
+                <Box
+                  borderRadius="50%"
+                  p={{ base: "0.625rem", lg: "1rem" }}
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  direction="column"
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  align="center"
+                  mr="1rem"
+                  _hover={{ cursor: "pointer" }}
+                >
+                  <Image
+                    w={{ base: "1.875rem", lg: "3.125rem" }}
+                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    src={institute}
+                  />
+                </Box>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    100+
+                  </Heading>
+                  <Text
+                    display={{ base: "none", lg: "flex" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    EDUCATIONAL <br /> INSTITUTES
+                  </Text>
+                  <Text
+                    display={{ base: "flex", lg: "none" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    EDUCATIONAL <br /> INSTITUTES
+                  </Text>
+                </VStack>
+              </Flex>
+              <Flex pb="1.5rem" className="fadein revealOnce">
                 <Image
-                  w={{ base: "1.875rem", lg: "3.125rem" }}
-                  h={{ base: "1.875rem", lg: "3.125rem" }}
-                  src={institute}
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  src={company}
+                  mr="1rem"
                 />
-              </Box>
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    2000+
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    COMPANIES NEARBY
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+              <Flex pb="1.5rem" className="fadein revealOnce">
+                <Box
+                  borderRadius="50%"
+                  p={{ base: "0.625rem", lg: "1rem" }}
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  direction="column"
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  align="center"
+                  mr="1rem"
+                  _hover={{ cursor: "pointer" }}
                 >
-                  100+
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  EDUCATIONAL INSTITUTES
-                </Text>
-              </VStack>
-            </Flex>
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Image
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                src={company}
-                mr="1rem"
-              />
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  2000+
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  COMPANIES NEARBY
-                </Text>
-              </VStack>
-            </Flex>{" "}
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Box
-                borderRadius="50%"
-                p={{ base: "0.625rem", lg: "1rem" }}
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                align="center"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
+                  <Image
+                    w={{ base: "1.875rem", lg: "3.125rem" }}
+                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    src={industry}
+                  />
+                </Box>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    2
+                  </Heading>
+                  <Text
+                    display={{ base: "none", lg: "flex" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    LARGE INDUSTRIAL PARKS
+                  </Text>
+                  <Text
+                    display={{ base: "flex", lg: "none" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    LARGE <br />
+                    INDUSTRIAL <br />
+                    PARKS
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+              <Flex pb="1.5rem" className="fadein revealOnce">
                 <Image
-                  w={{ base: "1.875rem", lg: "3.125rem" }}
-                  h={{ base: "1.875rem", lg: "3.125rem" }}
-                  src={industry}
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  src={port}
+                  mr="1rem"
                 />
-              </Box>
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  2
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  LARGE INDUSTRIAL PARKS
-                </Text>
-              </VStack>
-            </Flex>{" "}
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Image
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                src={port}
-                mr="1rem"
-              />
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  3
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  MAJOR PORTS, SEZ
-                </Text>
-              </VStack>
-            </Flex>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    3
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    MAJOR PORTS, SEZ
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+            </SimpleGrid>
           </Flex>
           <Flex
             display={{ base: "none", lg: "flex" }}
             overflow="hidden"
-            w="10%"
+            // w="10%"
             h="100%"
-            px="1.563rem"
+            px="1.875rem"
           >
             <Flex
               className="discobal-slidein-top reveal"
@@ -862,8 +913,10 @@ const Twobhk = () => {
           </Flex>
           <Flex w="100%">
             <Image
+              onClick={()=>{openImage()}}
+              _hover={{ cursor: "pointer" }}
               className="Arete-Plaza-LocationAdv-Image reveal"
-              boxShadow="lg"
+              boxShadow="2xl"
               w="100%"
               h={{ base: "20.625rem", lg: "29.25rem" }}
               objectFit="cover"
@@ -888,7 +941,7 @@ const Twobhk = () => {
               className="discoball-slidein-left1 reveal"
             >
               <Divider
-                h={{ base: "1.225rem", lg: "0" }}
+                h={{ base: "1.6rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -932,7 +985,7 @@ const Twobhk = () => {
                 5 MINS
               </Heading>{" "}
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -958,7 +1011,7 @@ const Twobhk = () => {
               className="discoball-slidein-left2 reveal"
             >
               <Divider
-                h={{ base: "1.75rem", lg: "0" }}
+                h={{ base: "3.5rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -975,7 +1028,7 @@ const Twobhk = () => {
                 my="1"
               />{" "}
               <Divider
-                h={{ base: "3.7rem", lg: "0" }}
+                h={{ base: "5.3rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -1002,7 +1055,7 @@ const Twobhk = () => {
                 10 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -1029,7 +1082,7 @@ const Twobhk = () => {
               className="discoball-slidein-left3 reveal"
             >
               <Divider
-                h={{ base: "1.7rem", lg: "0" }}
+                h={{ base: "1.8rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -1046,7 +1099,7 @@ const Twobhk = () => {
                 my="1"
               />{" "}
               <Divider
-                h={{ base: "3.8rem", lg: "0" }}
+                h={{ base: "3.7rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -1073,7 +1126,7 @@ const Twobhk = () => {
                 20 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -1100,7 +1153,7 @@ const Twobhk = () => {
               direction={{ base: "column", lg: "row" }}
             >
               <Divider
-                h={{ base: "0.15rem", lg: "0" }}
+                h={{ base: "0.55rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -1144,13 +1197,14 @@ const Twobhk = () => {
                 30 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
               >
                 <ListItem pb="0.625rem">Sri City</ListItem>
-                <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
+                <ListItem pb="0.625rem">Kattupalli Adani Port</ListItem>
+                <ListItem>Chennai Port</ListItem>
               </UnorderedList>
             </Flex>
           </Flex>
@@ -1678,12 +1732,31 @@ const Twobhk = () => {
 };
 
 const Threebhk = () => {
+  const [slider, setSlider] = useState(null);
+  const settings = {
+    // className: "center",
+    centerMode: true,
+    infinite: true,
+    draggable: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   const [isOpen, setIsOpen]= useState(false);
   const close =() =>{
     setIsOpen(false);
   }
   const open =() =>{
     setIsOpen(true);
+  }
+  const [isImageOpen, setIsImageOpen]= useState(false);
+  const closeImage =() =>{
+    setIsImageOpen(false);
+  }
+  const openImage =() =>{
+    setIsImageOpen(true);
   }
   return (
     <>
@@ -1836,24 +1909,27 @@ const Threebhk = () => {
       </Flex>
       {/* easy payment plan sec */}
       <Flex w="100%" h="100%" direction="column" align="center" pb="5rem" overflow="hidden">
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           EASY PAYMENT PLAN
         </Text>
         <Flex w="100%" h="100%" gap="1.25rem">
           <Flex
-            className="fadein reveal"
             w="100%"
             h="100%"
             direction="column"
             align="center"
             fontFamily="avenir"
-            boxShadow="2xl"
             p="1.875rem"
+            _hover={{boxShadow:"2xl"}}
+            bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
           >
             <Heading align="center" fontSize="1.5rem" pb="1.563rem">
               PRINCIPAL INSTALLMENT
             </Heading>
-            <Flex w="100%" gap="0.625rem" align="flex-end" className="fadein2 reveal">
+            <Flex w="100%" gap="0.625rem" align="flex-end" className="fadein revealOnce">
               <Text w="60%" fontSize="1rem" fontFamily="veralaRound">
                 PRINCIPAL
                 <br /> AMOUNT
@@ -1862,7 +1938,7 @@ const Threebhk = () => {
                 HOME LOAN AMOUNT
               </Text>
             </Flex>
-            <Flex w="100%" h="0.938rem" my="1.25rem" className="fadein2 reveal">
+            <Flex w="100%" h="0.938rem" my="1.25rem" className="fadein revealOnce">
               <Flex bgColor="#B88746" w="50%" />
               <Divider
                 mt="-0.4rem"
@@ -1876,7 +1952,7 @@ const Threebhk = () => {
                 <Box w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
               </Flex>
             </Flex>
-            <Flex w="100%" gap="0.625rem" pb="1.875rem" className="fadein2 reveal">
+            <Flex w="100%" gap="0.625rem" pb="1.875rem" className="fadein-2sdelay revealOnce">
               <Heading w="60%" fontSize="1rem" fontFamily="veralaRound">
                 ₹ 25 LAKHS
               </Heading>
@@ -1885,27 +1961,27 @@ const Threebhk = () => {
               </Heading>
             </Flex>
             <Divider
-              className="fadein3 reveal"
+              className="fadein-4sdelay revealOnce"
               orientation="horizontal"
               border="1px solid"
               borderColor="#B88746"
               bgColor="#B88746"
               mb="0.938rem"
             />
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein3 reveal">
+            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
               <Text fontSize="1rem" fontFamily="veralaRound">
                 TOTAL INVESTMENT
               </Text>
               <Heading fontSize="1.5rem">₹ 85,00,000</Heading>
             </Flex>
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein3 reveal">
+            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
               <Text fontSize="1rem" fontFamily="veralaRound">
                 ASSURED RENT PER MONTH
               </Text>
               <Heading fontSize="1.5rem">₹ 48,000</Heading>
             </Flex>{" "}
             <Heading
-              className="fadein3 reveal"
+              className="fadein-4sdelay revealOnce"
               w="100%"
               textAlign="center"
               fontFamily="avenir"
@@ -1915,18 +1991,22 @@ const Threebhk = () => {
             </Heading>
           </Flex>
           <Flex
-            className="fadein reveal"
             w="100%"
             h="100%"
             direction="column"
             p="1.875rem"
             align="center"
             fontFamily="avenir"
+            _hover={{boxShadow:"2xl"}}
+            bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
           >
             <Heading fontSize="1.5rem" pb="1.875rem">
               HOME LOAN
             </Heading>
-            <Flex w="100%" gap="2.938rem" pb="1.875rem" className="fadein2 reveal">
+            <Flex w="100%" gap="2.938rem" pb="1.875rem" className="fadein revealOnce">
               <Flex w="100%" direction="column" align="center">
                 <Image
                   w="3.125rem"
@@ -1972,21 +2052,21 @@ const Threebhk = () => {
               </Flex>
             </Flex>
             <Divider
-              className="fadein3 reveal"
+              className="fadein-4sdelay revealOnce"
               orientation="horizontal"
               border="1px solid"
               borderColor="#B88746"
               bgColor="#B88746"
               mb="0.938rem"
             />{" "}
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein3 reveal">
+            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
               <Text fontSize="1rem" fontFamily="veralaRound">
                 EMI PER MONTH
               </Text>
               <Heading fontSize="1.5rem">₹41,265</Heading>
             </Flex>
             <Button
-              className="fadein3 reveal"
+              className="fadein-4sdelay revealOnce"
               alignSelf="center"
               w="fit-content"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
@@ -2016,7 +2096,7 @@ const Threebhk = () => {
         pb="1.875rem"
         px="6.25rem"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           FINANCIAL MODEL
         </Text>
         <Flex w="100%" h="100%">
@@ -2083,11 +2163,10 @@ const Threebhk = () => {
             className="discoballmultistep reveal"
             w="10%"
             h="100%"
-            direction="column"
-            justify="flex-start"
-            align="center"
-            px="1.563rem"
+            overflow="hidden"
           >
+            <Flex h="100%" w="10%" direction="column" px="1.563rem"justify="flex-start"
+            align="center">
             <Divider
               h="29.25rem"
               orientation="vertical"
@@ -2104,6 +2183,7 @@ const Threebhk = () => {
               borderRadius="50%"
               my="1"
             />
+            </Flex>
           </Flex>
           <Flex
             w="52%"
@@ -2245,21 +2325,29 @@ const Threebhk = () => {
         </Flex>
       </Flex>
       {/* location */}
-       <Flex
+      {isImageOpen?<ModalImage modalImage={locationadv} isOpen={isImageOpen} onClose={()=>closeImage()} />:<></>}
+      <Flex
         overflow="hidden"
         w="100%"
         h="100%"
         direction="column"
-        pt="3.125rem"
         align="center"
         justify="center"
+        pt="5rem"
         pb="3.125rem"
-        px="6.25rem"
+        px={{ base: "0.938rem", lg: "6.25rem" }}
       >
-        <Text fontFamily="goudy" pb="1.875rem" fontSize="2.5rem" className="serv-text-up reveal">
-          LOCATION
+        <Text
+          px={{ base: "10rem", lg: "0" }}
+          textAlign="center"
+          fontFamily="goudy"
+          pb="1.563rem"
+          fontSize={{ base: "1.5rem", lg: "2.5rem" }}
+          className="slidein-top revealOnce"
+        >
+          LOCATION ADVANTAGE
         </Text>
-        <Heading align="center" fontSize="1.5rem" pb="1.563rem" className="fadein reveal">
+        <Heading align="center" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
         Arete Homes Is The Largest Smart Township Of Premium Housing & Modern Lifestyle Within 30KM Radius Catering To 12 LAKH+ Individuals, Students, Immigrants.
         </Heading>
         <Flex
@@ -2270,130 +2358,151 @@ const Threebhk = () => {
           pb="3.125rem"
         >
           <Flex
-            w={{ base: "100%", lg: "28%" }}
+            display={{ base: "grid", lg: "flex" }}
+            w={{ base: "100%", lg: "40%" }}
             h="100%"
             wrap="wrap"
             alignSelf={{ base: "none", lg: "center" }}
             justify={{ base: "flex-start", lg: "flex-start" }}
             gap={{ base: "1.125rem", lg: "0" }}
           >
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Box
-                borderRadius="50%"
-                p={{ base: "0.625rem", lg: "1rem" }}
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                align="center"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
+            <SimpleGrid columns={{ base: "2", lg: "1" }}>
+              <Flex pb="1.5rem" className="fadein revealOnce">
+                <Box
+                  borderRadius="50%"
+                  p={{ base: "0.625rem", lg: "1rem" }}
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  direction="column"
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  align="center"
+                  mr="1rem"
+                  _hover={{ cursor: "pointer" }}
+                >
+                  <Image
+                    w={{ base: "1.875rem", lg: "3.125rem" }}
+                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    src={institute}
+                  />
+                </Box>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    100+
+                  </Heading>
+                  <Text
+                    display={{ base: "none", lg: "flex" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    EDUCATIONAL <br /> INSTITUTES
+                  </Text>
+                  <Text
+                    display={{ base: "flex", lg: "none" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    EDUCATIONAL <br /> INSTITUTES
+                  </Text>
+                </VStack>
+              </Flex>
+              <Flex pb="1.5rem" className="fadein revealOnce">
                 <Image
-                  w={{ base: "1.875rem", lg: "3.125rem" }}
-                  h={{ base: "1.875rem", lg: "3.125rem" }}
-                  src={institute}
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  src={company}
+                  mr="1rem"
                 />
-              </Box>
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    2000+
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    COMPANIES NEARBY
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+              <Flex pb="1.5rem" className="fadein revealOnce">
+                <Box
+                  borderRadius="50%"
+                  p={{ base: "0.625rem", lg: "1rem" }}
+                  bgGradient="linear(to-b,#B88746, #DFBD69)"
+                  direction="column"
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  align="center"
+                  mr="1rem"
+                  _hover={{ cursor: "pointer" }}
                 >
-                  100+
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  EDUCATIONAL INSTITUTES
-                </Text>
-              </VStack>
-            </Flex>
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Image
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                src={company}
-                mr="1rem"
-              />
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  2000+
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  COMPANIES NEARBY
-                </Text>
-              </VStack>
-            </Flex>{" "}
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Box
-                borderRadius="50%"
-                p={{ base: "0.625rem", lg: "1rem" }}
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                align="center"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
+                  <Image
+                    w={{ base: "1.875rem", lg: "3.125rem" }}
+                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    src={industry}
+                  />
+                </Box>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    2
+                  </Heading>
+                  <Text
+                    display={{ base: "none", lg: "flex" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    LARGE INDUSTRIAL PARKS
+                  </Text>
+                  <Text
+                    display={{ base: "flex", lg: "none" }}
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    LARGE <br />
+                    INDUSTRIAL <br />
+                    PARKS
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+              <Flex pb="1.5rem" className="fadein revealOnce">
                 <Image
-                  w={{ base: "1.875rem", lg: "3.125rem" }}
-                  h={{ base: "1.875rem", lg: "3.125rem" }}
-                  src={industry}
+                  w={{ base: "3.125rem", lg: "5rem" }}
+                  h={{ base: "3.125rem", lg: "5rem" }}
+                  src={port}
+                  mr="1rem"
                 />
-              </Box>
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  2
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  LARGE INDUSTRIAL PARKS
-                </Text>
-              </VStack>
-            </Flex>{" "}
-            <Flex pb="1.5rem" className="Icon-fadein reveal">
-              <Image
-                w={{ base: "3.125rem", lg: "5rem" }}
-                h={{ base: "3.125rem", lg: "5rem" }}
-                src={port}
-                mr="1rem"
-              />
-              <VStack align="flex-start">
-                <Heading
-                  fontFamily="avenir"
-                  fontSize={{ base: "1.125rem", lg: "2.125rem" }}
-                >
-                  3
-                </Heading>
-                <Text
-                  fontFamily="veralaRound"
-                  fontSize={{ base: "0.75rem", lg: "1rem" }}
-                >
-                  MAJOR PORTS, SEZ
-                </Text>
-              </VStack>
-            </Flex>
+                <VStack align="flex-start">
+                  <Heading
+                    fontFamily="avenir"
+                    fontSize={{ base: "1.125rem", lg: "2.125rem" }}
+                  >
+                    3
+                  </Heading>
+                  <Text
+                    fontFamily="veralaRound"
+                    fontSize={{ base: "0.75rem", lg: "1rem" }}
+                  >
+                    MAJOR PORTS, SEZ
+                  </Text>
+                </VStack>
+              </Flex>{" "}
+            </SimpleGrid>
           </Flex>
           <Flex
             display={{ base: "none", lg: "flex" }}
             overflow="hidden"
-            w="10%"
+            // w="10%"
             h="100%"
-            px="1.563rem"
+            px="1.875rem"
           >
             <Flex
               className="discobal-slidein-top reveal"
@@ -2423,8 +2532,10 @@ const Threebhk = () => {
           </Flex>
           <Flex w="100%">
             <Image
+              onClick={()=>{openImage()}}
+              _hover={{ cursor: "pointer" }}
               className="Arete-Plaza-LocationAdv-Image reveal"
-              boxShadow="lg"
+              boxShadow="2xl"
               w="100%"
               h={{ base: "20.625rem", lg: "29.25rem" }}
               objectFit="cover"
@@ -2449,7 +2560,7 @@ const Threebhk = () => {
               className="discoball-slidein-left1 reveal"
             >
               <Divider
-                h={{ base: "1.225rem", lg: "0" }}
+                h={{ base: "1.6rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2493,7 +2604,7 @@ const Threebhk = () => {
                 5 MINS
               </Heading>{" "}
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -2519,7 +2630,7 @@ const Threebhk = () => {
               className="discoball-slidein-left2 reveal"
             >
               <Divider
-                h={{ base: "1.75rem", lg: "0" }}
+                h={{ base: "3.5rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2536,7 +2647,7 @@ const Threebhk = () => {
                 my="1"
               />{" "}
               <Divider
-                h={{ base: "3.7rem", lg: "0" }}
+                h={{ base: "5.3rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2563,7 +2674,7 @@ const Threebhk = () => {
                 10 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -2590,7 +2701,7 @@ const Threebhk = () => {
               className="discoball-slidein-left3 reveal"
             >
               <Divider
-                h={{ base: "1.7rem", lg: "0" }}
+                h={{ base: "1.8rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2607,7 +2718,7 @@ const Threebhk = () => {
                 my="1"
               />{" "}
               <Divider
-                h={{ base: "3.8rem", lg: "0" }}
+                h={{ base: "3.7rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2634,7 +2745,7 @@ const Threebhk = () => {
                 20 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
@@ -2661,7 +2772,7 @@ const Threebhk = () => {
               direction={{ base: "column", lg: "row" }}
             >
               <Divider
-                h={{ base: "0.15rem", lg: "0" }}
+                h={{ base: "0.55rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
                 orientation={{ base: "vertical", lg: "horizontal" }}
                 border="3px solid"
@@ -2705,13 +2816,14 @@ const Threebhk = () => {
                 30 MINS
               </Heading>
               <UnorderedList
-                w={{ base: "55%", lg: "100%" }}
+                w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"
                 fontSize={{ base: "0.75rem", lg: "1rem" }}
                 justifySelf="flex-end"
               >
                 <ListItem pb="0.625rem">Sri City</ListItem>
-                <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
+                <ListItem pb="0.625rem">Kattupalli Adani Port</ListItem>
+                <ListItem>Chennai Port</ListItem>
               </UnorderedList>
             </Flex>
           </Flex>
@@ -2817,7 +2929,7 @@ const Threebhk = () => {
         py="3.125rem"
         align="center"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           WHY INVEST?
         </Text>
         <Flex w="100%" h="100%" gap="0.938rem">
@@ -2828,12 +2940,16 @@ const Threebhk = () => {
             pt="1.875rem"
             px="1.875rem"
             align="center"
-            _hover={{            }}
+            bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
+            _hover={{boxShadow:"2xl"}}
           >
-            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein reveal">
+            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               CONNECTIVITY
             </Heading>{" "}
-            <Flex w="100%" h="100%" direction="column" justify="space-between" className="fadein2 reveal">
+            <Flex w="100%" h="100%" direction="column" justify="space-between" className="fadein-2sdelay revealOnce">
               <UnorderedList
                 fontFamily="veralaRound"
                 fontSize="1rem"
@@ -2861,12 +2977,16 @@ const Threebhk = () => {
             pt="1.875rem"
             px="1.875rem"
             align="center"
-            _hover={{            }}
+            bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
+            _hover={{boxShadow:"2xl"}}
           >
-            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein reveal">
+            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               FOREIGN INVESTMENTS
             </Heading>
-            <Flex w="100%" h="100%" direction="column" justify="space-between" className="fadein2 reveal">
+            <Flex w="100%" h="100%" direction="column" justify="space-between" className="fadein-2sdelay revealOnce">
               <UnorderedList
                 fontFamily="veralaRound"
                 fontSize="1rem"
@@ -2887,7 +3007,6 @@ const Threebhk = () => {
             </Flex>
           </Flex>
           <Flex
-            _hover={{            }}
             w="100%"
             h="25rem"
             direction="column"
@@ -2895,11 +3014,16 @@ const Threebhk = () => {
             px="1.875rem"
             align="center"
             justify="space-between"
+            bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
+            _hover={{boxShadow:"2xl"}}
           >
-            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein reveal">
+            <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               SOCIAL FABRIC
             </Heading>
-            <Flex className="fadein2 reveal">
+            <Flex w="100%" h="100%" direction="column" justify="space-between" className="fadein-2sdelay revealOnce">
             <UnorderedList
               fontFamily="veralaRound"
               fontSize="1rem"
@@ -2915,9 +3039,10 @@ const Threebhk = () => {
             <Image
               w="100%"
               h="11.25rem"
+              justifySelf="flex-end"
               src={socialFabric}
               objectFit="contain"
-              objectPosition="150%"
+              objectPosition="50% 80%"
             />
             </Flex>
           </Flex>
@@ -2927,13 +3052,81 @@ const Threebhk = () => {
       <MoreAmenities />
       {/* our investors */}
       <Flex w="100%" h="100%" py="3.125rem" direction="column" align="center" overflow="hidden">
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           OUR INVESTORS
         </Text>
         {/* carousel */}
+        <Box
+        transition="all 2s 2s"
+        position={"relative"}
+        height={"100%"}
+        width={"100%"}
+        overflow={"hidden"}
+      >
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+        <IconButton
+          aria-label="left-arrow"
+          variant="outline"
+          borderColor="#B88746"
+          borderRadius="full"
+          position="absolute"
+          bottom="35%"
+          left="0"
+          h="3.125rem"
+          w="3.125rem"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          onClick={() => {
+            
+          }}
+        >
+          <AiOutlineLeft color="#B88746" size="2.5rem" />
+        </IconButton>
+
+        <IconButton
+          aria-label="right-arrow"
+          borderRadius="full"
+          variant="outline"
+          borderColor="#B88746"
+          position="absolute"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          right="0"
+          bottom="35%"
+          h="3.125rem"
+          w="3.125rem"
+          onClick={() => {
+            
+          }}
+        >
+          <AiOutlineRight color="#B88746" size="2.5rem" />
+        </IconButton>
+        <Slider {...settings} ref={(slider) => setSlider(slider)}>
+          <Flex key={""} px="6.25rem" align="center" justify="center" pos="relative" h="25rem" w="100%">
+          <embed
+            style={{height:"25rem",width:"80%",alignSelf:"center",position:"absolute",left:"15%"}}
+            src={"https://www.youtube.com/embed/Psmw1t_S6-c"}
+            title="The Economic Times | Best Realty Brands 2021 - Prime LifeSpace Developers"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></embed>
+          </Flex>
+          </Slider>
+          </Box>
       </Flex>
       <Flex w="100%" h="100%" gap="3.125rem" pb="5rem" overflow="hidden">
-        <Flex w="60%" h="100%" direction="column" align="center" className="fadein reveal">
+        <Flex w="60%" h="100%" direction="column" align="center" className="fadein revealOnce">
           <Text fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
             7% ROI ON ARETE HOMES
           </Text>
@@ -2982,7 +3175,7 @@ const Threebhk = () => {
           </Button>
         </Flex>
         <Flex
-          className="fadein reveal"
+          className="fadein revealOnce"
           w="40%"
           h="100%"
           align="center"
