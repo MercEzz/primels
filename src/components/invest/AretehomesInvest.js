@@ -157,7 +157,7 @@ const Twobhk = () => {
         </Text>
         <Flex w="100%" h="100%">
           <Flex w="100%" h="100%" overflow="hidden">
-            <Image onMouseEnter={()=>open()} src={areteInto1} className="Arete-Plaza-FloorPlan-Image reveal"/>
+            <Image _hover={{cursor:"pointer"}} onClick={()=>open()} src={areteInto1} className="Arete-Plaza-FloorPlan-Image reveal"/>
           </Flex>
           <Flex w="100%" h="100%" overflow="hidden">
             {" "}
@@ -290,7 +290,7 @@ const Twobhk = () => {
       </Flex>
       {/* easy payment plan sec */}
       <Flex w="100%" h="100%" direction="column" align="center" pb="5rem" overflow="hidden">
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           EASY PAYMENT PLAN
         </Text>
         <Flex w="100%" h="100%" gap="1.25rem">
@@ -477,10 +477,10 @@ const Twobhk = () => {
         pb="1.875rem"
         px="6.25rem"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           FINANCIAL MODEL
         </Text>
-        <Flex w="100%" h="100%">
+        <Flex w="100%" h="100%" overflow="hidden">
           <Flex
           overflow="hidden"
             w="38%"
@@ -489,11 +489,11 @@ const Twobhk = () => {
             fontFamily="avenir"
             align="center"
           >
-            <Heading textAlign="center" pb="3.125rem" fontSize="1.5rem" className="fadein reveal">
+            <Heading textAlign="center" pb="3.125rem" fontSize="1.5rem" className="fadein revealOnce">
               INCOME ON THE INVESTMENT
             </Heading>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein reveal">
-              {" "}
+            <Flex w="100%" align="center" justify="flex-start" className="fadein revealOnce">
+            {" "}
               <Image
                 w="3.125rem"
                 h="3.125rem"
@@ -504,20 +504,20 @@ const Twobhk = () => {
                 RENTAL INCOME ₹4 LAKHS
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein2 reveal">
+            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein revealOnce">
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein2 reveal">
+            <Flex w="100%" align="center" justify="flex-start" className="fadein-2delay revealOnce">
               {" "}
               <Image w="3.125rem" h="3.125rem" src={tax} mr="0.625rem" />
               <Heading color="#B78C23" fontSize="1.25rem">
                 TAX SAVINGS UPTO ₹2 LAKH
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein3 reveal">
+            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-4sdelay revealOnce">
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein3 reveal">
+            <Flex w="100%" align="center" justify="flex-start" className="fadein-4sdelay revealOnce">
               {" "}
               <Image
                 w="3.125rem"
@@ -529,10 +529,10 @@ const Twobhk = () => {
                 APPRECIATION EXPECTED 5% PER YEAR
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein4 reveal">
+            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-6sdelay revealOnce">
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein4 reveal">
+            <Flex w="100%" align="center" justify="flex-start" className="fadein-6sdelay revealOnce">
               {" "}
               <Image w="3.125rem" h="3.125rem" src={pmay} mr="0.625rem" />
               <Heading color="#8D6229" fontSize="1.25rem">
@@ -575,7 +575,7 @@ const Twobhk = () => {
             direction="column"
           >
             <Heading
-              className="fadein reveal"
+              className="fadein revealOnce"
               w="100%"
               textAlign="center"
               fontSize="1.5rem"
@@ -590,13 +590,13 @@ const Twobhk = () => {
                 gap="0.313rem"
                 justify="flex-end"
               >
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹11 L
                 </Heading>
-                <Flex h="6.875rem" bgColor="#8D6229" className="fadein4 reveal"/>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="6.875rem" bgColor="#8D6229" className="fadein-6sdelay revealOnce"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
               </Flex>
               <Flex
                 w="100%"
@@ -605,12 +605,12 @@ const Twobhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹8 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
               </Flex>
               <Flex
                 w="100%"
@@ -619,12 +619,12 @@ const Twobhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹8 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
               </Flex>
               <Flex
                 w="100%"
@@ -633,12 +633,12 @@ const Twobhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹8.5 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
               </Flex>
               <Flex
                 w="100%"
@@ -647,12 +647,12 @@ const Twobhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹8.5 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
               </Flex>
               <Flex
                 w="100%"
@@ -661,17 +661,17 @@ const Twobhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹8.5 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
               </Flex>
             </Flex>
-            <Divider border="1px solid" borderColor="#B88746" className="fadein reveal"/>
+            <Divider border="1px solid" borderColor="#B88746" className="fadein revealOnce"/>
             <Flex
-              className="fadein reveal"
+              className="fadein revealOnce"
               w="100%"
               fontFamily="veralaRound"
               fontSize="1rem"
@@ -688,8 +688,8 @@ const Twobhk = () => {
             </Flex>
           </Flex>
         </Flex>
-        <Flex h="100%" align="center" p="1rem" pt="1.875rem" boxShadow="2xl" className="fadein4 reveal">
-          <Heading
+        <Flex h="100%" align="center" p="1rem" pt="1.875rem" boxShadow="2xl" className="fadein-6sdelay revealOnce">
+        <Heading
             w="100%"
             fontFamily="avenir"
             textAlign="center"
@@ -1768,7 +1768,7 @@ const Threebhk = () => {
         </Text>
         <Flex w="100%" h="100%" overflow="hidden">
           <Flex w="49%" h="100%" overflow="hidden">
-            <Image onMouseEnter={()=>open()} src={smartInvest} className="Arete-Plaza-FloorPlan-Image reveal"/>
+            <Image _hover={{cursor:"pointer"}} onClick={()=>open()} src={smartInvest} className="Arete-Plaza-FloorPlan-Image reveal"/>
           </Flex>
           <Flex
             className="discobal-slidein-top reveal"
@@ -2099,7 +2099,7 @@ const Threebhk = () => {
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           FINANCIAL MODEL
         </Text>
-        <Flex w="100%" h="100%">
+        <Flex w="100%" h="100%" overflow="hidden">
           <Flex
           overflow="hidden"
             w="38%"
@@ -2108,10 +2108,10 @@ const Threebhk = () => {
             fontFamily="avenir"
             align="center"
           >
-            <Heading textAlign="center" pb="3.125rem" fontSize="1.5rem" className="fadein reveal">
+            <Heading textAlign="center" pb="3.125rem" fontSize="1.5rem" className="fadein revealOnce">
               INCOME ON THE INVESTMENT
             </Heading>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein reveal">
+            <Flex w="100%" align="center" justify="flex-start" className="fadein reveaOnce">
               {" "}
               <Image
                 w="3.125rem"
@@ -2123,20 +2123,20 @@ const Threebhk = () => {
                 RENTAL INCOME ₹5.7 LAKHS
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein2 reveal">
+            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-2sdelay revealOnce">
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein2 reveal">
+            <Flex w="100%" align="center" justify="flex-start" className="fadein-2sdelay revealOnce">
               {" "}
               <Image w="3.125rem" h="3.125rem" src={tax} mr="0.625rem" />
               <Heading color="#B78C23" fontSize="1.25rem">
                 TAX SAVINGS UPTO ₹2 LAKH
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein3 reveal">
+            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-4sdelay revealOnce">
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein3 reveal">
+            <Flex w="100%" align="center" justify="flex-start" className="fadein-4sdelay revealOnce">
               {" "}
               <Image
                 w="3.125rem"
@@ -2148,10 +2148,10 @@ const Threebhk = () => {
                 APPRECIATION EXPECTED 5% PER YEAR
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein4 reveal">
+            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-6sdelay revealOnce">
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein4 reveal">
+            <Flex w="100%" align="center" justify="flex-start" className="fadein-6sdelay revealOnce">
               {" "}
               <Image w="3.125rem" h="3.125rem" src={pmay} mr="0.625rem" />
               <Heading color="#8D6229" fontSize="1.25rem">
@@ -2163,10 +2163,11 @@ const Threebhk = () => {
             className="discoballmultistep reveal"
             w="10%"
             h="100%"
-            overflow="hidden"
+            direction="column"
+            justify="flex-start"
+            align="center"
+            px="1.563rem"
           >
-            <Flex h="100%" w="10%" direction="column" px="1.563rem"justify="flex-start"
-            align="center">
             <Divider
               h="29.25rem"
               orientation="vertical"
@@ -2183,7 +2184,6 @@ const Threebhk = () => {
               borderRadius="50%"
               my="1"
             />
-            </Flex>
           </Flex>
           <Flex
             w="52%"
@@ -2194,7 +2194,7 @@ const Threebhk = () => {
             direction="column"
           >
             <Heading
-              className="fadein reveal"
+              className="fadein revealOnce"
               w="100%"
               textAlign="center"
               fontSize="1.5rem"
@@ -2209,13 +2209,13 @@ const Threebhk = () => {
                 gap="0.313rem"
                 justify="flex-end"
               >
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹14 L
                 </Heading>
-                <Flex h="6.875rem" bgColor="#8D6229" className="fadein4 reveal"/>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="6.875rem" bgColor="#8D6229" className="fadein-6sdelay revealOnce"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
               </Flex>
               <Flex
                 w="100%"
@@ -2224,12 +2224,12 @@ const Threebhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹12 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
               </Flex>
               <Flex
                 w="100%"
@@ -2238,12 +2238,12 @@ const Threebhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹12 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
               </Flex>
               <Flex
                 w="100%"
@@ -2252,12 +2252,12 @@ const Threebhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹12.4 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
               </Flex>
               <Flex
                 w="100%"
@@ -2266,12 +2266,12 @@ const Threebhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹12.4 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
               </Flex>
               <Flex
                 w="100%"
@@ -2280,17 +2280,17 @@ const Threebhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein4 reveal">
+                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
                   ₹12.4 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein3 reveal"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein2 reveal"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein reveal"/>
+                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
+                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
               </Flex>
             </Flex>
-            <Divider border="1px solid" borderColor="#B88746" className="fadein reveal"/>
+            <Divider border="1px solid" borderColor="#B88746" className="fadein reveaOnce"/>
             <Flex
-              className="fadein reveal"
+              className="fadein reveaOnce"
               w="100%"
               fontFamily="veralaRound"
               fontSize="1rem"
@@ -2307,8 +2307,8 @@ const Threebhk = () => {
             </Flex>
           </Flex>
         </Flex>
-        <Flex h="100%" align="center" p="1rem" pt="1.875rem" boxShadow="2xl" className="fadein4 reveal">
-          <Heading
+        <Flex h="100%" align="center" p="1rem" pt="1.875rem" boxShadow="2xl" className="fadein-6sdelay revealOnce">
+        <Heading
             w="100%"
             fontFamily="avenir"
             textAlign="center"

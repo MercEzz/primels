@@ -1142,6 +1142,85 @@ const SkyhighInvest = () => {
           </Flex>
         </Flex>
       </Flex>
+      {/* floorplan */}
+      <Flex
+      w="100%"
+      h="100%"
+      px="6.25rem"
+      pt="5rem"
+      pb="1.875rem"
+      direction="column"
+      align="center"
+      justify="center"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
+      overflow="hidden"
+    >
+      <Text
+        className="slidein-top revealOnce"
+        transition="all 2s"
+        fontFamily="goudy"
+        fontSize="2.5rem"
+        lineHeight="3rem"
+        textTransform="uppercase"
+      >
+        A delightful mix of sky residences
+      </Text>
+      <Flex overflow="hidden">
+          <Image
+            className="expandcar reveal"
+            w="50%"
+            src="/images/sky-high/FLOOR PLAN1.jpg"
+            filter="auto"
+          />
+          <Flex
+              className="discobal-slidein-top reveal"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="1.563rem"
+            >
+              <Divider
+                h="8rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
+            <Flex
+              mt="8rem"
+              overflow="hidden"
+              w="100%"
+              h="100%"
+              direction="column"
+              justify="center"
+              fontFamily="avenir"
+            >
+              <Heading fontSize="1.5rem" pb="0.938rem" className="fadein revealOnce">
+                convertible flexi-design  FOR CO-LIVING, STUDENT HOUSING & SERVICED APARTMENTS
+              </Heading>
+              <Text fontFamily="varela round" fontSize="1.25rem" className="fadein-2sdelay revealOnce">An unique collection of flexi-design 2 BHK sky residences,
+                well-planned with convertible option, for you to customize your
+                home & needs. The 5 different design innovations allow variations
+                in private or shared rooms, more bedrooms or spacious living, one
+                or more bathrooms etc. Making it possible to fit up to 5 beds in 
+                every apartment.</Text>
+            </Flex>
+        </Flex>
+    </Flex>
       {/* why invest */}
       <Flex
         overflow="hidden"
