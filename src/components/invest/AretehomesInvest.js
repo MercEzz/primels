@@ -1804,7 +1804,7 @@ const Threebhk = () => {
             fontFamily="avenir"
           >
             <Flex align="center" justify="space-between" justifySelf="center" overflow="hidden">
-              <Flex direction="column" className="sliderightdisco reveal">
+              <Flex direction="column" className="fadein revealOnce">
                 <Heading fontSize="1.5rem" pb="0.938rem">
                   ARETE HOMES
                 </Heading>
@@ -1824,7 +1824,7 @@ const Threebhk = () => {
                 </Text>
               </Flex>
               <Button
-                className="fadein2 reveal"
+                className="fadein revealOnce"
                 w="fit-content"
                 bgGradient="linear(to-b, #B88746 ,#DFBD69)"
                 color="white"
@@ -1840,7 +1840,7 @@ const Threebhk = () => {
               </Button>
             </Flex>
             <Flex
-              className="fadein2 reveal"
+              className="fadein revealOnce"
               w="100%"
               gap="2.938rem"
               pb="1.875rem"
@@ -1896,7 +1896,7 @@ const Threebhk = () => {
               </Flex>
             </Flex>
             <Heading
-              className="fadein2 reveal"
+              className="fadein revealOnce"
               w="100%"
               textAlign="center"
               fontFamily="avenir"

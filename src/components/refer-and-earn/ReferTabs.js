@@ -18,7 +18,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { TriangleDownIcon, PhoneIcon } from "@chakra-ui/icons";
 // images
 import img1 from "../refer and earn imgs/1ST STEP.png";
@@ -32,7 +32,14 @@ import "./animations.css";
 import "./rne.css";
 
 const ReferTabs = () => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(window.localStorage.getItem('referEarnPage')?JSON.parse(window.localStorage.getItem('referEarnPage')):false);
+  useEffect(() => {
+    window.localStorage.setItem('referEarnPage', JSON.stringify(active));
+  }, [active]);
+  useEffect(() => {
+    const data = window.localStorage.getItem('referEarnPage');
+    if ( data !== null ) setActive(JSON.parse(data));
+  }, []);
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
     try {
