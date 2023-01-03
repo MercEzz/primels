@@ -28,6 +28,7 @@ import BottomMenu from "./components/comercial Properties/BottomMenu";
 import AboutUsSc from "./screens/AboutUsSc";
 import NewsMediaScMob from "./screens/NewsMediaSc.mob";
 import ServicedApartMobSc from "./screens/ServicedApartSc.mob";
+import SkyhighInvestMobSc from "./screens/SkyhighInvestSc.mob";
 
 function App() {
   const [isMobile,setIsMobile]=useState(false);
@@ -103,7 +104,7 @@ function App() {
             <Route path="/commercial-properties" element={<CommercialProperties />} />
             <Route path="/serviced-apartments" element={<ServicedApartMobSc />} />
             <Route path="/blog" element={<MobBlogSc />} />
-            <Route path="/sky-high-invest" element={<SkyhighInvestSc />} />
+            <Route path="/sky-high-invest" element={<SkyhighInvestMobSc />} />
             <Route path="/arete-homes-invest" element={<AretehomesInvestSc />} />
           </Routes>
         </Flex>

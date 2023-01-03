@@ -116,7 +116,7 @@ const AboutUs = () => {
         <Flex w="100%" pt="0.938rem">
           <Flex direction="column" w="25%">
             <MtnFlx
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={animateLeft}
               transition={{ delay: 2, duration: 2, type: "just" }}
               align="center"
@@ -165,7 +165,7 @@ const AboutUs = () => {
               />
             </MtnFlx>
             <MtnFlx
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0}}
               animate={animateLeft}
               transition={{ delay: 2, duration: 2, type: "just" }}
               direction="column"
@@ -179,7 +179,7 @@ const AboutUs = () => {
                 30+ years
               </Heading>
               <MtnFlx
-                initial={{ opacity: 0, x: -100 }}
+                initial={{ opacity: 0}}
                 animate={animateLeft}
                 transition={{ delay: 2, duration: 2, type: "just" }}
                 fontSize="1.125rem"
@@ -236,7 +236,7 @@ const AboutUs = () => {
             <Flex direction="column" pt="0.938rem" w="100%" align="center">
               <Flex direction="column" align="flex-start">
                 <MtnHead
-                  initial={{ opacity: 0, x: -100 }}
+                  initial={{ opacity: 0}}
                   animate={animateLeft}
                   transition={{ delay: 4, duration: 2, type: "just" }}
                   fontSize="1.5rem"
@@ -255,7 +255,7 @@ const AboutUs = () => {
                   </Text>
                 </MtnHead>
                 <MtnTxt
-                  initial={{ opacity: 0, x: -100 }}
+                  initial={{ opacity: 0}}
                   animate={animateLeft}
                   transition={{ delay: 4, duration: 2, type: "just" }}
                   fontSize="1.125rem"
@@ -313,7 +313,7 @@ const AboutUs = () => {
             </MtnFlx>
             <Flex direction="column" pt="0.938rem">
               <MtnHead
-                initial={{ opacity: 0, x: -100 }}
+                initial={{ opacity: 0}}
                 animate={animateLeft}
                 transition={{ delay: 6, duration: 2, type: "just" }}
                 fontSize="1.5rem"
@@ -322,7 +322,7 @@ const AboutUs = () => {
                 100+
               </MtnHead>
               <MtnTxt
-                initial={{ opacity: 0, x: -100 }}
+                initial={{ opacity: 0}}
                 animate={animateLeft}
                 transition={{ delay: 6, duration: 2, type: "just" }}
                 fontSize="1.125rem"

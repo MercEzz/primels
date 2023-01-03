@@ -95,15 +95,15 @@ const Allia = () => {
           <Flex h="100%" direction="column" align="center">
             <Image
               w="100%"
-              h="300px"
-              px="15px"
+              h="200px"
+              px="1.563rem"
               pb="15px"
               src="/images/award2.png"
             />
-            <Text fontFamily="veralaRound" fontSize="18px" textAlign="center">
+            <Text fontFamily="veralaRound" fontSize="16px" textAlign="center">
               The Economic Times
-              <Text fontSize="20px" pt="10px">
-                "Best Realty Brand 2020-21"
+              <Text fontSize="18px" pt="10px">
+                "Best Realty<br/>Brand 2020-21"
               </Text>
             </Text>
           </Flex>

@@ -198,7 +198,7 @@ const SmartLiving = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={animateY}
               transition={{ delay: 9.5, duration: 2, type: "just" }}
-              h="16rem"
+              h="13rem"
               orientation="vertical"
               border="3px solid"
               borderColor="#DFBD69"
@@ -212,21 +212,20 @@ const SmartLiving = () => {
             align="center"
           >
             <Image className="expandcar reveal" w="80px" h="20.310rem" mr="2" src="/images/co-living.svg" />
-            <Flex direction="column" py="10">
-              <Heading fontSize="24px" fontFamily="avenir">
+            <MtnFlx initial={{ opacity: 0 }}
+                animate={animateFade}
+                transition={{ delay: 3, duration: 2, type: "just" }} direction="column" py="10">
+              <Heading  fontSize="24px" fontFamily="avenir">
                 CO-LIVING FOR PROFESSIONALS
               </Heading>
               <MtnTxt
-                initial={{ opacity: 0 }}
-                animate={animateFade}
-                transition={{ delay: 3, duration: 2, type: "just" }}
                 pt="0.625rem"
                 fontSize="18px"
                 fontFamily="veralaRound"
               >
                 Your home away from home.
               </MtnTxt>
-            </Flex>
+            </MtnFlx>
           </MtnFlx>
           <MtnFlx
             transition={{ delay: 3.5, duration: 2, type: "just" }}
@@ -234,7 +233,8 @@ const SmartLiving = () => {
             <Image className="expandcar reveal"  w="570px" h="20.310rem" src="/images/smartliving2.png" />
           </MtnFlx>
           <MtnFlx
-            initial={{ opacity: 0, x: -50 }}
+             mt="1rem"
+            initial={{ opacity: 0}}
             animate={animateX}
             transition={{ delay: 6.5, duration: 2, type: "just" }}
             align="center"
@@ -259,16 +259,7 @@ const SmartLiving = () => {
           </MtnFlx>
         </Flex>
       </Flex>
-      <Flex direction="column" align="center">
-        <MtnDvdr
-          initial={{ opacity: 0, y: -50 }}
-          animate={animateY}
-          transition={{ delay: 9.5, duration: 2, type: "just" }}
-          h="25px"
-          orientation="vertical"
-          border="3px solid"
-          borderColor="#DFBD69"
-        />
+      <Flex mt="-2rem" direction="column" align="center">
         <MtnBtn
           initial={{ opacity: 0}}
           animate={animateY}

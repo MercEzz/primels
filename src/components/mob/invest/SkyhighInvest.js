@@ -20,30 +20,29 @@ import {
 } from "@chakra-ui/react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import React, { useRef, useState } from "react";
-import smartInvest from "../Invest imgs/INTRO1.jpg";
-import floorPlan from "../Invest imgs/FLOOR PLAN-sky high.jpg";
-import locationImg from "../Invest imgs/connectivity-removebg-preview.png";
-import foreignInvest from "../Invest imgs/invest-removebg-preview.png";
-import socialFabric from "../Invest imgs/social1-removebg-preview.png";
-import roiImg from "../Invest imgs/roi.jpg";
+import React, { useState } from "react";
+import smartInvest from "../../Invest imgs/INTRO1.jpg";
+import floorPlan from "../../Invest imgs/FLOOR PLAN-sky high.jpg";
+import locationImg from "../../Invest imgs/connectivity-removebg-preview.png";
+import foreignInvest from "../../Invest imgs/invest-removebg-preview.png";
+import socialFabric from "../../Invest imgs/social1-removebg-preview.png";
+import roiImg from "../../Invest imgs/roi.jpg";
 // icons
-import rentalYield from "../Invest imgs/renta;l yield.svg";
-import rentalIncome from "../Invest imgs/rental income.svg";
-import rentalyears from "../Invest imgs/rental income years.svg";
-import interestRate from "../Invest imgs/interest rate.svg";
-import pmay from "../Invest imgs/pmay.svg";
-import tax from "../Invest imgs/tax saving.svg";
-import institute from "../Invest imgs/institutes.svg";
-import company from "../Invest imgs/companies.svg";
-import industry from "../Invest imgs/industrial park.svg";
-import port from "../Invest imgs/port.svg";
-import locationadv from "../commercial-properties imgs/Asset 1-100.jpg";
+import rentalYield from "../../Invest imgs/renta;l yield.svg";
+import rentalIncome from "../../Invest imgs/rental income.svg";
+import rentalyears from "../../Invest imgs/rental income years.svg";
+import interestRate from "../../Invest imgs/interest rate.svg";
+import pmay from "../../Invest imgs/pmay.svg";
+import tax from "../../Invest imgs/tax saving.svg";
+import institute from "../../Invest imgs/institutes.svg";
+import company from "../../Invest imgs/companies.svg";
+import industry from "../../Invest imgs/industrial park.svg";
+import port from "../../Invest imgs/port.svg";
+import locationadv from "../../commercial-properties imgs/Asset 1-100.jpg";
 import DropDown from "./DropDown";
 import './invest.css'
-import ModalWindwow from "../modalWindow";
-import ModalImage from "../modalImage";
-import { useInView } from "framer-motion";
+import ModalWindwow from "../../modalWindow";
+import ModalImage from "../../modalImage";
 
 const SkyhighInvest = () => {
   const [slider, setSlider] = useState(null);
@@ -52,6 +51,15 @@ const SkyhighInvest = () => {
     infinite: true,
     autoplay: true,
     centerMode:true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+  };
+  const settings2 = {
+    infinite: true,
+    autoplay: true,
     speed: 500,
     autoplaySpeed: 3000,
     slidesToShow: 1,
@@ -85,42 +93,14 @@ const SkyhighInvest = () => {
         mt="2.5rem"
         pt="2.5rem"
         pb="5rem"
-        px="6.25rem"
+        px="1rem"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
+        <Text textAlign="center" fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           SMART INVESTMENT
         </Text>
-        <Flex w="100%" h="100%">
+        <Flex direction="column" w="100%" h="100%">
+          
           <Flex w="100%" h="100%" overflow="hidden">
-            <Image onClick={()=>open()} src={smartInvest} className="expandcar reveal"/>
-          </Flex>
-          <Flex w="100%" h="100%" overflow="hidden">
-            {" "}
-            <Flex
-              className="discobal-slidein-top reveal"
-              h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="1.563rem"
-            >
-              <Divider
-                h="7.5rem"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="1.875rem"
-                width="1.875rem"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
-            </Flex>
             <Flex
               overflow="hidden"
               w="100%"
@@ -192,7 +172,13 @@ const SkyhighInvest = () => {
                   </Text>
                 </Flex>
               </Flex>
-              <Button
+            </Flex>
+          </Flex>
+          <Flex w="100%" h="100%" overflow="hidden">
+            <Image onClick={()=>open()} src={smartInvest} className="expandcar reveal"/> 
+          </Flex>
+          <Button
+              mt="1rem"
                 className="fadein revealOnce"
                 alignSelf="center"
                 w="fit-content"
@@ -210,8 +196,6 @@ const SkyhighInvest = () => {
               >
                 I AM INTERESTED
               </Button>
-            </Flex>
-          </Flex>
         </Flex>
       </Flex>
       {/* easy payment plan sec */}
@@ -221,13 +205,13 @@ const SkyhighInvest = () => {
         h="100%"
         direction="column"
         align="center"
-        px="6.25rem"
+        px="1rem"
         pb="5rem"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
+        <Text textAlign="center" fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           EASY PAYMENT PLAN
         </Text>
-        <Flex w="100%" h="100%" gap="1.25rem">
+        <Flex direction="column" w="100%" h="100%" gap="1.25rem">
           <Flex
             w="100%"
             h="23.25rem"
@@ -246,7 +230,7 @@ const SkyhighInvest = () => {
               <br /> IN 2 YEARS{" "}
             </Heading>
             <Flex w="100%" gap="0.625rem" className="fadein-2sdelay revealOnce">
-              <Text w="20%" fontSize="1rem" fontFamily="veralaRound">
+              <Text w="30%" fontSize="1rem" fontFamily="veralaRound">
                 Booking <br />
                 Amount
               </Text>
@@ -257,7 +241,7 @@ const SkyhighInvest = () => {
               </Text>
             </Flex>
             <Flex w="100%" h="0.938rem" my="1.25rem">
-              <Flex bgColor="#B88746" w="20%" className="fadein-2sdelay revealOnce" transition="all 2s 0.25s"/>
+              <Flex bgColor="#B88746" w="30%" className="fadein-2sdelay revealOnce" transition="all 2s 0.25s"/>
               <Divider
                 className="fadein-2sdelay revealOnce" transition="all 2s 0.25s"
                 mt="-0.4rem"
@@ -1147,7 +1131,7 @@ const SkyhighInvest = () => {
       <Flex
       w="100%"
       h="100%"
-      px="6.25rem"
+      px="1rem"
       pt="1.875rem"
       pb="1.875rem"
       direction="column"
@@ -1160,6 +1144,7 @@ const SkyhighInvest = () => {
       overflow="hidden"
     >
       <Text
+        textAlign="center"
         pb="1.875rem"
         className="slidein-top revealOnce"
         transition="all 2s"
@@ -1169,42 +1154,9 @@ const SkyhighInvest = () => {
       >
         A delightful mix of sky residences
       </Text>
-      <Flex overflow="hidden">
-          <Image
-            boxShadow="xl"
-            className="expandcar reveal"
-            h="30rem"
-            w="60%"
-            src="/images/sky-high/FLOOR PLAN1.jpg"
-            filter="auto"
-          />
-          <Flex
-              className="discobal-slidein-top reveal"
-              h="30rem"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="1.563rem"
-            >
-              <Divider
-                h="8rem"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="1.875rem"
-                width="1.875rem"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
-            </Flex>
+      <Flex direction="column" overflow="hidden">
             <Flex
-              mt="8rem"
+              textAlign="center"
               overflow="hidden"
               w="100%"
               h="100%"
@@ -1212,7 +1164,7 @@ const SkyhighInvest = () => {
               justify="center"
               fontFamily="avenir"
             >
-              <Heading fontSize="1.25rem" pb="0.938rem" className="fadein revealOnce">
+              <Heading textAlign="center" fontSize="1.25rem" pb="0.938rem" className="fadein revealOnce">
                 CONVERTIBLE FLEXI-DESIGN  FOR CO-LIVING, STUDENT HOUSING & SERVICED APARTMENTS
               </Heading>
               <Text fontFamily="varela round" fontSize="1rem" className="fadein-2sdelay revealOnce">An unique collection of flexi-design 2 BHK sky residences,
@@ -1223,6 +1175,14 @@ const SkyhighInvest = () => {
                 every apartment.</Text>
             </Flex>
         </Flex>
+        <Image
+            boxShadow="xl"
+            className="expandcar reveal"
+            h="15rem"
+            w="100%"
+            src="/images/sky-high/FLOOR PLAN1.jpg"
+            filter="auto"
+          />
     </Flex>
       {/* why invest */}
       <Flex
@@ -1230,26 +1190,48 @@ const SkyhighInvest = () => {
         w="100%"
         h="100%"
         direction="column"
-        px="6.25rem"
+        px="1rem"
         py="3.125rem"
         align="center"
       >
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           WHY INVEST?
         </Text>
+
         <Flex w="100%" h="100%" gap="0.938rem">
+        <Box
+        position={"relative"}
+        height={"100%"}
+        width={"full"}
+        overflow={"hidden"}
+        boxShadow="2xl"
+      >
+        {/* CSS files for react-slick */}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+        {/* Slider */}
+        <Slider {...settings2} ref={(slider) => setSlider(slider)}>
           <Flex
             w="100%"
             h="25rem"
             direction="column"
             pt="1.875rem"
-            px="1.875rem"
+            px="1rem"
             align="center"
             bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
             bgRepeat="no-repeat"
             bgPos="center"
             bgSize="cover"
-            _hover={{boxShadow:"2xl"}}
+            
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               CONNECTIVITY
@@ -1267,7 +1249,7 @@ const SkyhighInvest = () => {
                 <ListItem>Railway Network - Large Ponneri Station</ListItem>
               </UnorderedList>
               <Image
-                justifySelf="flex-end"
+                justifySelf="flex-start"
                 h="9.375rem"
                 src={locationImg}
                 objectFit="contain"
@@ -1280,13 +1262,12 @@ const SkyhighInvest = () => {
             h="25rem"
             direction="column"
             pt="1.875rem"
-            px="1.875rem"
+            px="1rem"
             align="center"
             bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
             bgRepeat="no-repeat"
             bgPos="center"
             bgSize="cover"
-            _hover={{boxShadow:"2xl"}}
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               FOREIGN INVESTMENTS
@@ -1303,7 +1284,7 @@ const SkyhighInvest = () => {
                 </ListItem>
               </UnorderedList>
               <Image
-                justifySelf="flex-end"
+                justifySelf="flex-start"
                 h="9.375rem"
                 src={foreignInvest}
                 objectFit="contain"
@@ -1316,14 +1297,12 @@ const SkyhighInvest = () => {
             h="25rem"
             direction="column"
             pt="1.875rem"
-            px="1.875rem"
+            px="1rem"
             align="center"
-            justify="space-between"
             bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
             bgRepeat="no-repeat"
             bgPos="center"
             bgSize="cover"
-            _hover={{boxShadow:"2xl"}}
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               SOCIAL FABRIC
@@ -1344,13 +1323,15 @@ const SkyhighInvest = () => {
             <Image
               w="100%"
               h="11.25rem"
-              justifySelf="flex-end"
+              justifySelf="flex-start"
               src={socialFabric}
               objectFit="contain"
               objectPosition="50% 80%"
             />
             </Flex>
           </Flex>
+          </Slider>
+          </Box>
         </Flex>
       </Flex>
       {/*more amenities*/}
@@ -1360,8 +1341,9 @@ const SkyhighInvest = () => {
         overflow="hidden"
         w="100%"
         h="100%"
-        py="3.125rem"
-        px="6.25rem"
+        pt="3.125rem"
+        pb="5rem"
+        px="1rem"
         direction="column"
         align="center"
       >
@@ -1387,47 +1369,10 @@ const SkyhighInvest = () => {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-        <IconButton
-          aria-label="left-arrow"
-          variant="outline"
-          borderColor="#B88746"
-          borderRadius="full"
-          position="absolute"
-          bottom="35%"
-          left="5rem"
-          h="3.125rem"
-          w="3.125rem"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => {
-            
-          }}
-        >
-          <AiOutlineLeft color="#B88746" size="2.5rem" />
-        </IconButton>
-
-        <IconButton
-          aria-label="right-arrow"
-          borderRadius="full"
-          variant="outline"
-          borderColor="#B88746"
-          position="absolute"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          right="5rem"
-          bottom="35%"
-          h="3.125rem"
-          w="3.125rem"
-          onClick={() => {
-            
-          }}
-        >
-          <AiOutlineRight color="#B88746" size="2.5rem" />
-        </IconButton>
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
-          <Flex key={""} px="6.25rem" align="center" justify="center" pos="relative" h="25rem" w="100%">
+          <Flex key={""} px="1rem" align="center" justify="center" pos="relative" h="25rem" w="100%">
           <embed
-            style={{height:"25rem",width:"80%",alignSelf:"center",position:"absolute",left:"15%"}}
+            style={{height:"25rem",width:"25rem",alignSelf:"center"}}
             src={"https://www.youtube.com/embed/Psmw1t_S6-c"}
             title="The Economic Times | Best Realty Brands 2021 - Prime LifeSpace Developers"
             frameborder="0"
@@ -1438,34 +1383,40 @@ const SkyhighInvest = () => {
           </Slider>
           </Box>
       </Flex>
-      <Flex w="100%" h="100%" px="6.25rem" gap="3.125rem" pb="3.125rem" overflow="hidden">
-        <Flex pt="1.875rem" w="60%" h="100%" direction="column" align="center" className="fadein revealOnce">
-          <Text fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
+      <Flex direction="column" w="100%" h="100%" px="1rem" gap="3.125rem"pt="" pb="5rem" overflow="hidden">
+        <Flex w="100%" h="100%" direction="column" align="center" className="fadein revealOnce">
+          <Text w="100%" fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
             8% ROI ON ARETE HOMES
           </Text>
-          <Flex w h="100%" gap="1.875rem" justify="center" align="center">
-            <Image className="expandcar revealOnce" w="20.75rem" h="15.313rem" src={roiImg} />
+          <Flex h="100%" gap="1.875rem" justify="center" align="center" direction="column">
+            <Image className="fadein revealOnce" w="20.75rem" h="15.313rem" src={roiImg} />
             <Flex
               h="100%"
               direction="column"
               justify="center"
               fontFamily="avenir"
             >
-              <Heading fontSize="1.25rem" pb="0.938rem">
+              <Heading textAlign="center" fontSize="1.25rem" pb="0.938rem">
                 2 BHK - 1025 SQFT.
               </Heading>
-              <Heading fontSize="1.5rem">₹52 LAKHS</Heading>
-              <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem">
-                Fully Furnished With White Goods
-              </Text>
-              <Heading fontSize="1.5rem">₹32,000</Heading>
-              <Text
-                textTransform="uppercase"
-                fontFamily="veralaRound"
-                fontSize="1rem"
-              >
-                Rental Income per month
-              </Text>
+              <Flex>
+                <Flex direction="column">
+                  <Heading fontSize="1.5rem">₹52 LAKHS</Heading>
+                  <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem">
+                    Fully Furnished With White Goods
+                  </Text>
+                </Flex>
+                <Flex direction="column">
+                  <Heading fontSize="1.5rem">₹32,000</Heading>
+                  <Text
+                    textTransform="uppercase"
+                    fontFamily="veralaRound"
+                    fontSize="1rem"
+                  >
+                    Rental Income per month
+                  </Text>
+                </Flex>
+              </Flex>
             </Flex>
           </Flex>
           <Button
@@ -1488,9 +1439,8 @@ const SkyhighInvest = () => {
           </Button>
         </Flex>
         <Flex
-          pt="1.875rem"
           className="fadein revealOnce"
-          w="40%"
+          w="100%"
           h="100%"
           align="center"
           justify="center"
@@ -1501,6 +1451,8 @@ const SkyhighInvest = () => {
       bgSize="cover"
         >
           <Text
+            w="100%"
+            textAlign="center"
             fontSize="2.125rem"
             fontFamily="goudy"
             textTransform="uppercase"
@@ -1508,11 +1460,11 @@ const SkyhighInvest = () => {
           >
             SCHEDULE A VISIT
           </Text>
-          <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
+          <Heading w="100%" textAlign="center" fontFamily="avenir" fontSize="1.5rem" pb="1.563rem">
             GET AN EXPERT OPINION
           </Heading>{" "}
           <form>
-            <Flex pb="1.875rem" w="100%" align="center" justify="center" direction="column">
+            <Flex w="100%" align="center" justify="center" direction="column">
               <FormControl isRequired>
                 {" "}
                 <HStack w="100%" justify="space-between" pb="0.938rem">
@@ -1609,7 +1561,7 @@ const SkyhighInvest = () => {
       <Text fontSize="0.625rem" pb="1.25rem">
         Terms & Conditions* : Assured Rent for 3 years from possession • Tax
         saving subject to yearly income • Appreciation - 5% is considered
-        (considering Inusation) • PMAY subject to eligibility
+        (considering Ination) • PMAY subject to eligibility
       </Text>
       <DropDown />
     </>
@@ -1630,10 +1582,6 @@ const gymclubimgs = [
 ];
 
 const MoreAmenities = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
-    once: true,
-  });
   const [slider, setSlider] = useState(null);
 
   const settings = {
@@ -1645,12 +1593,11 @@ const MoreAmenities = () => {
     speed: 500,
     autoplaySpeed: 3000,
     pauseOnHover: false,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
   };
   return (
     <Flex
-      ref={ref}
       overflow="hidden"
       w="100%"
       h="100%"
@@ -1664,15 +1611,10 @@ const MoreAmenities = () => {
         MORE AMENITIES
       </Text>
       <Box
-        transform={isInView ? "scale(1)" : "scale(0.6)"}
-        opacity={isInView ? "1" : "0"}
-        transition="all 2s 1s"
         position={"relative"}
         height={"100%"}
         width={"full"}
         overflow={"hidden"}
-        pl="4.687rem"
-        pr="4.687rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -1689,7 +1631,7 @@ const MoreAmenities = () => {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {gymclubimgs.map((prime) => (
-            <Flex  w="100%" align="center" direction="column">
+            <Flex w="100%" align="center" direction="column">
               <Image
                 key={prime}
                 w="100%"
@@ -1708,43 +1650,6 @@ const MoreAmenities = () => {
             </Flex>
           ))}
         </Slider>
-        <IconButton
-          aria-label="left-arrow"
-          variant="outline"
-          borderColor="#B88746"
-          borderRadius="full"
-          position="absolute"
-          top="45%"
-          left="0"
-          h="3.125rem"
-          w="3.125rem"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => {
-            slider?.slickPrev();
-          }}
-        >
-          <AiOutlineLeft color="#B88746" size="2.5rem" />
-        </IconButton>
-
-        <IconButton
-          aria-label="right-arrow"
-          borderRadius="full"
-          variant="outline"
-          borderColor="#B88746"
-          position="absolute"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          right="0"
-          top="45%"
-          h="3.125rem"
-          w="3.125rem"
-          onClick={() => {
-            slider?.slickNext();
-          }}
-        >
-          <AiOutlineRight color="#B88746" size="2.5rem" />
-        </IconButton>
       </Box>
     </Flex>
   );

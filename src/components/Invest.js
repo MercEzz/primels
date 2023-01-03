@@ -11,6 +11,9 @@ import {
 } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import areteHomes from "./arete-homes imgs/BANNER2.jpg";
+import investImg from "./invest.png";
+import skyHigh from "./sky-high imgs/BANNER2.jpg";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 // import { ImLocation } from "react-icons/im";
@@ -19,7 +22,7 @@ const MtnHead = motion(Heading);
 const MtnFlx = motion(Flex);
 const settings = {
   draggable: false,
-  infinite: false,
+  infinite: true,
   autoplay: true,
   speed: 5000,
   fade: true,
@@ -36,9 +39,9 @@ const Invest = () => {
   const animateFade = useAnimation();
   const [assetIndex,setAssetIndex] = useState(0);
   const assets = [
-    {title:"8% ROI ON HOMES",room:"2 BHK",price:"Rs. 52 Lakhs",rent:"Rs. 32,000*",sqrft:"1085 sqft."},
-    {title:"7% RENTAL INCOME",room:"2 BHK",price:"Rs. 34 Lakhs",rent:"Rs. 20,000*",sqrft:"690 sqft."},
-    {title:"HIGHEST ROI ON HOMES",room:"3 BHK",price:"Rs. 85 Lakhs",rent:"Rs. 48,000*",sqrft:"1787 sqft."},
+    {title:"8% ROI ON HOMES",room:"2 BHK",price:"Rs. 52 Lakhs",rent:"Rs. 32,000*",sqrft:"1085 sqft.",img:investImg},
+    {title:"7% RENTAL INCOME",room:"2 BHK",price:"Rs. 34 Lakhs",rent:"Rs. 20,000*",sqrft:"690 sqft.",img:areteHomes},
+    {title:"HIGHEST ROI ON HOMES",room:"3 BHK",price:"Rs. 85 Lakhs",rent:"Rs. 48,000*",sqrft:"1787 sqft.",img:skyHigh},
   ]
   const nextHandle=()=>{
     if(assetIndex===2){
@@ -57,6 +60,17 @@ const Invest = () => {
     }
 
   }
+  const addAutoClicker=()=>{
+    setTimeout(()=>{
+      nextHandle();
+    },3000);
+  }
+  useEffect(() => {
+    addAutoClicker();
+    return()=>{
+      clearTimeout();
+    }
+  });
   useEffect(() => {
     if (isInView) {
       animateY.start({
@@ -113,7 +127,7 @@ const Invest = () => {
           align="center"
           justify="center"
         >
-          <Image className="expandcar reveal" w="608px" h="500px" src="/images/invest.png" />
+          <Image className="expandcar reveal" w="608px" h="500px" src={assets[assetIndex].img} />
         </MtnFlx>
         <MtnFlx
           className="slidein-top reveal"
@@ -344,14 +358,16 @@ const Invest = () => {
           borderColor="#B88746"
           borderRadius="full"
           position="absolute"
-          bottom="0"
+          bottom="-1.5rem"
           left="0"
           h="3.125rem"
           w="3.125rem"
           transform={"translate(0%, -50%)"}
           zIndex={2}
           onClick={() => {
+            clearTimeout();
             prevHandle();
+            addAutoClicker();
           }}
         >
           <AiOutlineLeft color="#B88746" size="2.5rem" />
@@ -365,12 +381,14 @@ const Invest = () => {
           position="absolute"
           transform={"translate(0%, -50%)"}
           zIndex={2}
-          right="0"
-          bottom="0"
+          left="4rem"
+          bottom="-1.5rem"
           h="3.125rem"
           w="3.125rem"
           onClick={() => {
+            clearTimeout();
             nextHandle();
+            addAutoClicker();
           }}
         >
           <AiOutlineRight color="#B88746" size="2.5rem" />
