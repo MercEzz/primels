@@ -126,6 +126,7 @@ const Twobhk = () => {
     // className: "center",
     centerMode: true,
     infinite: true,
+    autoplay: true,
     draggable: true,
     speed: 500,
     autoplaySpeed: 3000,
@@ -1620,6 +1621,10 @@ const Twobhk = () => {
           align="center"
           justify="center"
           direction="column"
+          bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+          bgRepeat="no-repeat"
+          bgPos="center"
+          bgSize="cover"
         >
           <Text
             fontSize="2.125rem"
@@ -3181,6 +3186,10 @@ const Threebhk = () => {
           align="center"
           justify="center"
           direction="column"
+          bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+          bgRepeat="no-repeat"
+          bgPos="center"
+          bgSize="cover"
         >
           <Text
             fontSize="2.125rem"
@@ -3364,6 +3373,7 @@ const MoreAmenities = () => {
     centerMode: true,
     infinite: true,
     draggable: true,
+    autoplay: true,
     speed: 500,
     autoplaySpeed: 3000,
     pauseOnHover: false,

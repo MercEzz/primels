@@ -48,15 +48,14 @@ const SkyhighInvest = () => {
   const [slider, setSlider] = useState(null);
 
   const settings = {
-    // className: "center",
-    centerMode: true,
     infinite: true,
-    draggable: true,
+    autoplay: true,
+    centerMode:true,
     speed: 500,
     autoplaySpeed: 3000,
-    pauseOnHover: false,
     slidesToShow: 1,
     slidesToScroll: 1,
+    pauseOnHover: false,
   };
   const [isOpen, setIsOpen]= useState(false);
   const close =() =>{
@@ -105,7 +104,7 @@ const SkyhighInvest = () => {
               px="1.563rem"
             >
               <Divider
-                h="13rem"
+                h="7.5rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -122,15 +121,14 @@ const SkyhighInvest = () => {
               />
             </Flex>
             <Flex
-              mt="8rem"
               overflow="hidden"
               w="100%"
-              h="100%"
+              h="30rem"
               direction="column"
               justify="center"
               fontFamily="avenir"
             >
-              <Heading fontSize="1.5rem" pb="0.938rem" className="fadein revealOnce">
+              <Heading fontSize="1.5rem" pb="0.625rem" className="fadein revealOnce">
                 ARETE HOMES SKY HIGH TOWER
               </Heading>
               <Heading fontSize="1.25rem" pb="0.938rem" className="fadein revealOnce">
@@ -145,10 +143,10 @@ const SkyhighInvest = () => {
               >
                 ₹ 34 LAKHS
               </Heading>
-              <Text fontFamily="veralaRound" fontSize="1rem" pb="2.188rem" className="fadein revealOnce">
+              <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem" className="fadein revealOnce">
                 Fully Furnished With White Goods
               </Text>
-              <Flex w="100%" gap="2.938rem" pb="1.875rem" className="fadein revealOnce">
+              <Flex w="100%" gap="2.938rem" pb="1.563rem" className="fadein revealOnce">
                 <Flex w="100%" direction="column" align="center">
                   <Image
                     w="3.125rem"
@@ -231,7 +229,7 @@ const SkyhighInvest = () => {
         <Flex w="100%" h="100%" gap="1.25rem">
           <Flex
             w="100%"
-            h="100%"
+            h="23.25rem"
             direction="column"
             align="center"
             fontFamily="avenir"
@@ -302,9 +300,8 @@ const SkyhighInvest = () => {
             </Flex>
           </Flex>
           <Flex
-            className="fadein revealOnce"
             w="100%"
-            h="100%"
+            h="23.25rem"
             direction="column"
             p="1.875rem"
             align="center"
@@ -315,7 +312,7 @@ const SkyhighInvest = () => {
             bgPos="center"
             bgSize="cover"
           >
-            <Heading fontSize="1.5rem" pb="1.875rem">
+            <Heading fontSize="1.5rem" pb="1.875rem" className="fadein revealOnce">
               90% HOME LOAN
             </Heading>
             <Flex w="100%" gap="2.938rem" pb="1.875rem" className="fadein revealOnce">
@@ -330,7 +327,7 @@ const SkyhighInvest = () => {
                   ₹ 29.5 LAKHS
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                  LOAN AMOUNT
+                  Loan amount
                 </Text>
               </Flex>
               <Flex w="100%" direction="column" align="center">
@@ -345,7 +342,7 @@ const SkyhighInvest = () => {
                   25 YEARS
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                  TENURE
+                  Tenure
                 </Text>
               </Flex>
               <Flex w="100%" direction="column" align="center">
@@ -359,7 +356,7 @@ const SkyhighInvest = () => {
                   6.5% p.a.
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                  INTEREST RATE
+                  Interest rate
                 </Text>
               </Flex>
             </Flex>
@@ -373,7 +370,7 @@ const SkyhighInvest = () => {
             />{" "}
             <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
               <Text fontSize="1rem" fontFamily="veralaRound">
-                EMI PER MONTH
+                Emi Per Month
               </Text>
               <Heading fontSize="1.5rem">₹ 20,000</Heading>
             </Flex>
@@ -405,7 +402,7 @@ const SkyhighInvest = () => {
         h="100%"
         direction="column"
         align="center"
-        pb="1.875rem"
+        pb="3.125rem"
         px="6.25rem"
       >
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
@@ -435,7 +432,7 @@ const SkyhighInvest = () => {
                 RENTAL INCOME ₹2.4 LAKHS
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein revealOnce">
+            <Text color="#B88746"  w="5rem" fontSize="1.563rem" className="fadein revealOnce">
               +
             </Text>
             <Flex w="100%" align="center" justify="flex-start" className="fadein-2sdelay revealOnce">
@@ -445,7 +442,7 @@ const SkyhighInvest = () => {
                 TAX SAVINGS UPTO ₹1 LAKH
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-2sdelay revealOnce">
+            <Text color="#B88746" w="5rem" fontSize="1.563rem" className="fadein-2sdelay revealOnce">
               +
             </Text>
             <Flex w="100%" align="center" justify="flex-start" className="fadein-4sdelay revealOnce">
@@ -460,7 +457,7 @@ const SkyhighInvest = () => {
                 APPRECIATION EXPECTED 5% PER YEAR
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-4sdelay revealOnce">
+            <Text  w="5rem" color="#B88746" fontSize="1.563rem" className="fadein-4sdelay revealOnce">
               +
             </Text>
             <Flex w="100%" align="center" justify="flex-start" className="fadein-6sdelay revealOnce">
@@ -619,17 +616,20 @@ const SkyhighInvest = () => {
             </Flex>
           </Flex>
         </Flex>
-        <Flex h="100%" align="center" p="1rem" pt="1.875rem" boxShadow="2xl" className="fadein-6sdelay revealOnce">
+        <Flex h="100%" align="center"my="1rem" p="1rem" boxShadow="2xl" bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover" className="fadein-6sdelay revealOnce">
           <Heading
             w="100%"
             fontFamily="avenir"
             textAlign="center"
-            fontSize="2.125rem"
+            fontSize="1.5rem"
             bgGradient="linear(to-b, #B88746,#DFBD69)"
             bgClip="text"
           >
             TOTAL INCOME IN 6 YEARS{" "}
-            <Text as={"span"} fontSize="1.25rem">
+            <Text as={"span"} fontSize="1rem">
               APPROX.
             </Text>{" "}
             ₹34 LAKHS
@@ -645,7 +645,7 @@ const SkyhighInvest = () => {
         direction="column"
         align="center"
         justify="center"
-        pt="5rem"
+        pt="1.875rem"
         pb="3.125rem"
         px={{ base: "0.938rem", lg: "6.25rem" }}
       >
@@ -1147,7 +1147,7 @@ const SkyhighInvest = () => {
       w="100%"
       h="100%"
       px="6.25rem"
-      pt="5rem"
+      pt="1.875rem"
       pb="1.875rem"
       direction="column"
       align="center"
@@ -1159,25 +1159,27 @@ const SkyhighInvest = () => {
       overflow="hidden"
     >
       <Text
+        pb="1.875rem"
         className="slidein-top revealOnce"
         transition="all 2s"
         fontFamily="goudy"
         fontSize="2.5rem"
-        lineHeight="3rem"
         textTransform="uppercase"
       >
         A delightful mix of sky residences
       </Text>
       <Flex overflow="hidden">
           <Image
+            boxShadow="xl"
             className="expandcar reveal"
-            w="50%"
+            h="30rem"
+            w="60%"
             src="/images/sky-high/FLOOR PLAN1.jpg"
             filter="auto"
           />
           <Flex
               className="discobal-slidein-top reveal"
-              h="100%"
+              h="30rem"
               direction="column"
               justify="flex-start"
               align="center"
@@ -1209,10 +1211,10 @@ const SkyhighInvest = () => {
               justify="center"
               fontFamily="avenir"
             >
-              <Heading fontSize="1.5rem" pb="0.938rem" className="fadein revealOnce">
-                convertible flexi-design  FOR CO-LIVING, STUDENT HOUSING & SERVICED APARTMENTS
+              <Heading fontSize="1.25rem" pb="0.938rem" className="fadein revealOnce">
+                CONVERTIBLE FLEXI-DESIGN  FOR CO-LIVING, STUDENT HOUSING & SERVICED APARTMENTS
               </Heading>
-              <Text fontFamily="varela round" fontSize="1.25rem" className="fadein-2sdelay revealOnce">An unique collection of flexi-design 2 BHK sky residences,
+              <Text fontFamily="varela round" fontSize="1rem" className="fadein-2sdelay revealOnce">An unique collection of flexi-design 2 BHK sky residences,
                 well-planned with convertible option, for you to customize your
                 home & needs. The 5 different design innovations allow variations
                 in private or shared rooms, more bedrooms or spacious living, one
@@ -1357,7 +1359,8 @@ const SkyhighInvest = () => {
         overflow="hidden"
         w="100%"
         h="100%"
-        py="3.125rem"
+        pt="3.125rem"
+        pb="5rem"
         px="6.25rem"
         direction="column"
         align="center"
@@ -1391,7 +1394,7 @@ const SkyhighInvest = () => {
           borderRadius="full"
           position="absolute"
           bottom="35%"
-          left="0"
+          left="5rem"
           h="3.125rem"
           w="3.125rem"
           transform={"translate(0%, -50%)"}
@@ -1411,7 +1414,7 @@ const SkyhighInvest = () => {
           position="absolute"
           transform={"translate(0%, -50%)"}
           zIndex={2}
-          right="0"
+          right="5rem"
           bottom="35%"
           h="3.125rem"
           w="3.125rem"
@@ -1435,7 +1438,7 @@ const SkyhighInvest = () => {
           </Slider>
           </Box>
       </Flex>
-      <Flex w="100%" h="100%" px="6.25rem" gap="3.125rem" pb="5rem" overflow="hidden">
+      <Flex w="100%" h="100%" px="6.25rem" gap="3.125rem"pt="" pb="5rem" overflow="hidden">
         <Flex w="60%" h="100%" direction="column" align="center" className="fadein revealOnce">
           <Text fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
             8% ROI ON ARETE HOMES
@@ -1491,6 +1494,10 @@ const SkyhighInvest = () => {
           align="center"
           justify="center"
           direction="column"
+          bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
         >
           <Text
             fontSize="2.125rem"
@@ -1539,7 +1546,6 @@ const SkyhighInvest = () => {
                   <Input
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
@@ -1629,6 +1635,7 @@ const MoreAmenities = () => {
     // className: "center",
     centerMode: true,
     infinite: true,
+    autoplay:true,
     draggable: true,
     speed: 500,
     autoplaySpeed: 3000,

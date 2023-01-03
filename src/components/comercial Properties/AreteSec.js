@@ -16,7 +16,7 @@ import {
   Textarea,
   SimpleGrid,
 } from "@chakra-ui/react";
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 // images
 import arete1 from "../commercial-properties imgs/ARETE PLAZA2_11zon.jpg";
 import arete2 from "../commercial-properties imgs/ARETE PLAZA4_11zon.jpg";
@@ -44,7 +44,14 @@ import ModalImage from "../modalImage";
 import { revealOnce } from "../../hooks/util";
 
 const AreteSec = () => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(window.localStorage.getItem('commercialPage')?JSON.parse(window.localStorage.getItem('commercialPage')):false);
+  useEffect(() => {
+    window.localStorage.setItem('commercialPage', JSON.stringify(active));
+  }, [active]);
+  useEffect(() => {
+    const data = window.localStorage.getItem('commercialPage');
+    if ( data !== null ) setActive(JSON.parse(data));
+  }, []);
   const [animate, setAnimate] = useState(false);
  
   const reveal = () => {
