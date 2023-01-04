@@ -46,6 +46,11 @@ import ModalImage from "../modalImage";
 import { useInView } from "framer-motion";
 
 const SkyhighInvest = () => {
+  const easyPayRef = useRef(null);
+  const easyPayInView = useInView(easyPayRef, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
   const [slider, setSlider] = useState(null);
 
   const settings = {
@@ -216,6 +221,7 @@ const SkyhighInvest = () => {
       </Flex>
       {/* easy payment plan sec */}
       <Flex
+        ref={easyPayRef}
         overflow="hidden"
         w="100%"
         h="100%"
@@ -268,13 +274,13 @@ const SkyhighInvest = () => {
                 bgColor="#B88746"
               />
               <Flex w="100%" h="100%">
-                <Box className="fadein-2sdelay revealOnce" style={{animationDelay:"0.50s"}} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box className="fadein-2sdelay revealOnce" style={{animationDelay:"0.75s"}} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box className="fadein-2sdelay revealOnce" style={{animationDelay:"1s"}} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box className="fadein-2sdelay revealOnce" style={{animationDelay:"1.25s"}} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box className="fadein-2sdelay revealOnce" style={{animationDelay:"1.50s"}} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box className="fadein-2sdelay revealOnce" style={{animationDelay:"1.75s"}} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
-                <Box className="fadein-2sdelay revealOnce" style={{animationDelay:"2s"}} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
+                <Box opacity={easyPayInView?1:0} transitionDelay={"2.50s"} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
+                <Box opacity={easyPayInView?1:0} transitionDelay={"2.75s"} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
+                <Box opacity={easyPayInView?1:0} transitionDelay={"3s"} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
+                <Box opacity={easyPayInView?1:0} transitionDelay={"3.25s"} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
+                <Box opacity={easyPayInView?1:0} transitionDelay={"3.50s"} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
+                <Box opacity={easyPayInView?1:0} transitionDelay={"3.75s"} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
+                <Box opacity={easyPayInView?1:0} transitionDelay={"4s"} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
               </Flex>
             </Flex>
             <Flex w="100%" gap="0.625rem" pb="1.875rem" className="fadein-2sdelay revealOnce">
