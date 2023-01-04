@@ -20,31 +20,31 @@ import {
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import React, { useEffect, useState } from "react";
-import smartInvest from "../Invest imgs/INTRO1.jpg";
-import floorPlan from "../Invest imgs/FLOOR PLAN-sky high.jpg";
-import locationImg from "../Invest imgs/connectivity-removebg-preview.png";
-import foreignInvest from "../Invest imgs/invest-removebg-preview.png";
-import socialFabric from "../Invest imgs/social1-removebg-preview.png";
-import roiImg from "../Invest imgs/roi.jpg";
+import smartInvest from "../../Invest imgs/INTRO1.jpg";
+import floorPlan from "../../Invest imgs/FLOOR PLAN-sky high.jpg";
+import locationImg from "../../Invest imgs/connectivity-removebg-preview.png";
+import foreignInvest from "../../Invest imgs/invest-removebg-preview.png";
+import socialFabric from "../../Invest imgs/social1-removebg-preview.png";
+import roiImg from "../../Invest imgs/roi.jpg";
 // icons
-import rentalYield from "../Invest imgs/renta;l yield.svg";
-import rentalIncome from "../Invest imgs/rental income.svg";
-import rentalyears from "../Invest imgs/rental income years.svg";
-import interestRate from "../Invest imgs/interest rate.svg";
-import pmay from "../Invest imgs/pmay.svg";
-import tax from "../Invest imgs/tax saving.svg";
-import institute from "../Invest imgs/institutes.svg";
-import company from "../Invest imgs/companies.svg";
-import industry from "../Invest imgs/industrial park.svg";
-import port from "../Invest imgs/port.svg";
-import locationadv from "../commercial-properties imgs/Asset 1-100.jpg";
+import rentalYield from "../../Invest imgs/renta;l yield.svg";
+import rentalIncome from "../../Invest imgs/rental income.svg";
+import rentalyears from "../../Invest imgs/rental income years.svg";
+import interestRate from "../../Invest imgs/interest rate.svg";
+import pmay from "../../Invest imgs/pmay.svg";
+import tax from "../../Invest imgs/tax saving.svg";
+import institute from "../../Invest imgs/institutes.svg";
+import company from "../../Invest imgs/companies.svg";
+import industry from "../../Invest imgs/industrial park.svg";
+import port from "../../Invest imgs/port.svg";
+import locationadv from "../../commercial-properties imgs/Asset 1-100.jpg";
 import DropDown from "./DropDown";
 
-import areteInto1 from "../Invest imgs/arete homes - intro1.jpeg";
-import twoBhkFloor from "../Invest imgs/arete homes Tower A6-1.jpg";
-import snarttwobhk from "../Invest imgs/INTRO1.jpg";
-import ModalWindwow from "../modalWindow";
-import ModalImage from "../modalImage";
+import areteInto1 from "../../Invest imgs/arete homes - intro1.jpeg";
+import twoBhkFloor from "../../Invest imgs/arete homes Tower A6-1.jpg";
+import snarttwobhk from "../../Invest imgs/INTRO1.jpg";
+import ModalWindwow from "../../modalWindow";
+import ModalImage from "../../modalImage";
 
 const SkyhighInvest = () => {
   const [active, setActive] = useState(window.localStorage.getItem('areteInvest')?JSON.parse(window.localStorage.getItem('areteInvest')):false);
@@ -58,7 +58,7 @@ const SkyhighInvest = () => {
   return (
     <>
       {" "}
-      <Flex w="100%" h="100%" px="6.25rem" direction="column" align="center">
+      <Flex w="100%" h="100%" px="1rem" direction="column" align="center">
         <Flex w="100%">
           <Button
             w="100%"
@@ -134,6 +134,15 @@ const Twobhk = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  const settings2 = {
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+  };
   const [isOpen, setIsOpen]= useState(false);
   const close =() =>{
     setIsOpen(false);
@@ -153,42 +162,12 @@ const Twobhk = () => {
       {isOpen?<ModalWindwow modalTitle={"ARETE HOMES"} modalImage={areteInto1} isOpen={isOpen} onClose={()=>close()} />:<></>}
       {/* Smart invest */}
       <Flex w="100%" h="100%" direction="column" align="center" py="3.125rem" overflow="hidden">
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
+        <Text textAlign="center" fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           SMART INVESTMENT
         </Text>
-        <Flex w="100%" h="100%">
+        <Flex w="100%" h="100%" direction="column">
           <Flex w="100%" h="100%" overflow="hidden">
-            <Image _hover={{cursor:"pointer"}} onClick={()=>open()} src={areteInto1} className="Arete-Plaza-FloorPlan-Image reveal"/>
-          </Flex>
-          <Flex w="100%" h="100%" overflow="hidden">
-            {" "}
             <Flex
-              className="discobal-slidein-top reveal"
-              h="100%"
-              direction="column"
-              justify="flex-start"
-              align="center"
-              px="1.563rem"
-            >
-              <Divider
-                h="9.375rem"
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="1.875rem"
-                width="1.875rem"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />
-            </Flex>
-            <Flex
-              mt="8rem"
               w="100%"
               h="100%"
               direction="column"
@@ -224,7 +203,7 @@ const Twobhk = () => {
                     src={rentalYield}
                     mb="0.625rem"
                   />
-                  <Heading fontSize="1.5rem" mb="0.625rem">
+                  <Heading fontSize="1.25rem" mb="0.625rem">
                     8 %
                   </Heading>
                   <Text align="center" fontFamily="veralaRound" fontSize="1rem">
@@ -239,7 +218,7 @@ const Twobhk = () => {
                     src={rentalIncome}
                     mb="0.625rem"
                   />
-                  <Heading fontSize="1.5rem" mb="0.625rem">
+                  <Heading fontSize="1.25rem" mb="0.625rem">
                     ₹32,000
                   </Heading>
                   <Text align="center" fontFamily="veralaRound" fontSize="1rem">
@@ -253,7 +232,7 @@ const Twobhk = () => {
                     src={rentalyears}
                     mb="0.625rem"
                   />
-                  <Heading fontSize="1.5rem" mb="0.625rem">
+                  <Heading fontSize="1.25rem" mb="0.625rem">
                     3 YEARS
                   </Heading>
                   <Text align="center" fontFamily="veralaRound" fontSize="1rem">
@@ -270,7 +249,14 @@ const Twobhk = () => {
               >
                 ASSURED RENT > EMI
               </Heading>
-              <Button
+              
+            </Flex>
+          </Flex>
+          <Flex direction="column" w="100%" h="100%" overflow="hidden">
+            <Image _hover={{cursor:"pointer"}} onClick={()=>open()} src={areteInto1} className="Arete-Plaza-FloorPlan-Image reveal"/>
+            <Button
+                  alignSelf="center"
+                  mt="1rem"
                   className="fadein-2sdelay revealOnce"
                   w="fit-content"
                   bgGradient="linear(to-b, #B88746 ,#DFBD69)"
@@ -285,16 +271,15 @@ const Twobhk = () => {
                 >
                   I AM INTERESTED
                 </Button>
-            </Flex>
           </Flex>
         </Flex>
       </Flex>
       {/* easy payment plan sec */}
       <Flex w="100%" h="100%" direction="column" align="center" pb="5rem" overflow="hidden">
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
+        <Text textAlign="center" fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           EASY PAYMENT PLAN
         </Text>
-        <Flex w="100%" h="100%" gap="1.25rem">
+        <Flex w="100%" h="100%" gap="1.25rem" direction="column">
           <Flex
             w="100%"
             h="100%"
@@ -1223,35 +1208,9 @@ const Twobhk = () => {
         <Text fontFamily="goudy" fontSize="2.5rem" className="serv-text-up reveal">
           TENANTS
         </Text>
-        <Flex w="100%" justify="center" overflow="hidden">
-          <Flex w="60%">carousel</Flex>
-          <Flex
-            className="discobal-slidein-top reveal"
-            w="10%"
-            h="100%"
-            direction="column"
-            justify="flex-start"
-            align="center"
-            px="1.562rem"
-          >
-            <Divider
-              h="9.375rem"
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />
-          </Flex>
-          <Flex w="30%" direction="column" justify="center" overflow="hidden">
+        <Flex w="100%" justify="center" overflow="hidden" direction="column">
+          <Flex w="100%">carousel</Flex>
+          <Flex w="100%" direction="column" justify="center" overflow="hidden">
             <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem" className="sliderightdisco reveal">
               Arete Serviced Apartments company providing safe, hygienic and
               premium co-living spaces to students, working professionals and
@@ -1273,13 +1232,11 @@ const Twobhk = () => {
         >
           FLOOR PLAN
         </Text>
-        <Flex w="100%" h="100%" gap="1.563rem">
-          <Flex w="58%">
-            <Image boxShadow="2xl" w="100%" h="100%" src={twoBhkFloor} />
-          </Flex>
-          <Flex w="42%" h="100%" alignSelf="center" direction="column">
+        <Flex w="100%" h="100%" gap="1.563rem" direction="column">
+          <Flex w="100%" h="100%" alignSelf="center" direction="column">
             {" "}
             <Heading
+              textAlign="center"
               fontSize="1.5rem"
               textTransform="uppercase"
               fontFamily="avenir"
@@ -1310,7 +1267,7 @@ const Twobhk = () => {
                 w="100%"
                 pt="0.938rem"
                 pb="1.875rem"
-                px="1.875rem"
+                px="1rem"
                 direction="column"
                 gap="1.875rem"
               >
@@ -1349,6 +1306,9 @@ const Twobhk = () => {
               </Flex>
             </Flex>
           </Flex>
+          <Flex w="100%">
+            <Image boxShadow="2xl" w="100%" h="100%" src={twoBhkFloor} />
+          </Flex>
         </Flex>
       </Flex>
       {/* why invest */}
@@ -1357,26 +1317,48 @@ const Twobhk = () => {
         w="100%"
         h="100%"
         direction="column"
-        px="6.25rem"
+        px="1rem"
         py="3.125rem"
         align="center"
       >
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           WHY INVEST?
         </Text>
+
         <Flex w="100%" h="100%" gap="0.938rem">
+        <Box
+        position={"relative"}
+        height={"100%"}
+        width={"full"}
+        overflow={"hidden"}
+        boxShadow="2xl"
+      >
+        {/* CSS files for react-slick */}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+        {/* Slider */}
+        <Slider {...settings2} ref={(slider) => setSlider(slider)}>
           <Flex
             w="100%"
             h="25rem"
             direction="column"
             pt="1.875rem"
-            px="1.875rem"
+            px="1rem"
             align="center"
             bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
             bgRepeat="no-repeat"
             bgPos="center"
             bgSize="cover"
-            _hover={{boxShadow:"2xl"}}
+            
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               CONNECTIVITY
@@ -1394,7 +1376,7 @@ const Twobhk = () => {
                 <ListItem>Railway Network - Large Ponneri Station</ListItem>
               </UnorderedList>
               <Image
-                justifySelf="flex-end"
+                justifySelf="flex-start"
                 h="9.375rem"
                 src={locationImg}
                 objectFit="contain"
@@ -1407,13 +1389,12 @@ const Twobhk = () => {
             h="25rem"
             direction="column"
             pt="1.875rem"
-            px="1.875rem"
+            px="1rem"
             align="center"
             bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
             bgRepeat="no-repeat"
             bgPos="center"
             bgSize="cover"
-            _hover={{boxShadow:"2xl"}}
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               FOREIGN INVESTMENTS
@@ -1430,7 +1411,7 @@ const Twobhk = () => {
                 </ListItem>
               </UnorderedList>
               <Image
-                justifySelf="flex-end"
+                justifySelf="flex-start"
                 h="9.375rem"
                 src={foreignInvest}
                 objectFit="contain"
@@ -1443,14 +1424,12 @@ const Twobhk = () => {
             h="25rem"
             direction="column"
             pt="1.875rem"
-            px="1.875rem"
+            px="1rem"
             align="center"
-            justify="space-between"
             bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
             bgRepeat="no-repeat"
             bgPos="center"
             bgSize="cover"
-            _hover={{boxShadow:"2xl"}}
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               SOCIAL FABRIC
@@ -1471,13 +1450,15 @@ const Twobhk = () => {
             <Image
               w="100%"
               h="11.25rem"
-              justifySelf="flex-end"
+              justifySelf="flex-start"
               src={socialFabric}
               objectFit="contain"
               objectPosition="50% 80%"
             />
             </Flex>
           </Flex>
+          </Slider>
+          </Box>
         </Flex>
       </Flex>
       {/*more amenities*/}
@@ -1488,7 +1469,7 @@ const Twobhk = () => {
         w="100%"
         h="100%"
         py="3.125rem"
-        px="6.25rem"
+        px="1rem"
         direction="column"
         align="center"
       >
@@ -1514,47 +1495,10 @@ const Twobhk = () => {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-        <IconButton
-          aria-label="left-arrow"
-          variant="outline"
-          borderColor="#B88746"
-          borderRadius="full"
-          position="absolute"
-          bottom="35%"
-          left="0"
-          h="3.125rem"
-          w="3.125rem"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => {
-            
-          }}
-        >
-          <AiOutlineLeft color="#B88746" size="2.5rem" />
-        </IconButton>
-
-        <IconButton
-          aria-label="right-arrow"
-          borderRadius="full"
-          variant="outline"
-          borderColor="#B88746"
-          position="absolute"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          right="0"
-          bottom="35%"
-          h="3.125rem"
-          w="3.125rem"
-          onClick={() => {
-            
-          }}
-        >
-          <AiOutlineRight color="#B88746" size="2.5rem" />
-        </IconButton>
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
-          <Flex key={""} px="6.25rem" align="center" justify="center" pos="relative" h="25rem" w="100%">
+          <Flex key={""} px="1rem" align="center" justify="center" pos="relative" h="25rem" w="100%">
           <embed
-            style={{height:"25rem",width:"80%",alignSelf:"center",position:"absolute",left:"15%"}}
+            style={{height:"25rem",width:"25rem",alignSelf:"center"}}
             src={"https://www.youtube.com/embed/Psmw1t_S6-c"}
             title="The Economic Times | Best Realty Brands 2021 - Prime LifeSpace Developers"
             frameborder="0"
@@ -1565,35 +1509,41 @@ const Twobhk = () => {
           </Slider>
           </Box>
       </Flex>
-      <Flex w="100%" h="100%" gap="3.125rem" pb="5rem" overflow="hidden">
-        <Flex w="60%" h="100%" direction="column" align="center" className="fadein revealOnce">
-          <Text fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
+      <Flex direction="column" w="100%" h="100%" gap="3.125rem" pb="5rem" overflow="hidden">
+        <Flex w="100%" h="100%" direction="column" align="center" className="fadein revealOnce">
+          <Text textAlign="center" fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
             7% ROI ON ARETE HOMES
           </Text>
-          <Flex w h="100%" gap="1.875rem" justify="center" align="center">
-            <Image w="20.75rem" h="15.313rem" src={snarttwobhk} />
+          <Flex direction="column" h="100%" gap="1.875rem" justify="center" align="center">
             <Flex
               h="100%"
               direction="column"
               justify="center"
               fontFamily="avenir"
             >
-              <Heading fontSize="1.25rem" pb="0.938rem">
+              <Heading textAlign="center" fontSize="1.25rem" pb="0.938rem">
                 SMART 2 BHK - 690 SQFT.
               </Heading>
-              <Heading fontSize="1.5rem">₹34 LAKHS</Heading>
-              <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem">
-                Fully Furnished With White Goods
-              </Text>
-              <Heading fontSize="1.5rem">₹20,000</Heading>
-              <Text
-                textTransform="uppercase"
-                fontFamily="veralaRound"
-                fontSize="1rem"
-              >
-                Rental Income per month
-              </Text>
+              <Flex>
+                <Flex direction="column">
+                <Heading fontSize="1.5rem">₹34 LAKHS</Heading>
+                <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem">
+                  Fully Furnished With White Goods
+                </Text>
+                </Flex>
+                <Flex direction="column">
+                <Heading fontSize="1.5rem">₹20,000</Heading>
+                  <Text
+                    textTransform="uppercase"
+                    fontFamily="veralaRound"
+                    fontSize="1rem"
+                  >
+                    Rental Income per month
+                  </Text>
+                </Flex>
+              </Flex>
             </Flex>
+            <Image w="20.75rem" h="15.313rem" src={snarttwobhk} />
           </Flex>
           <Button
             mt="1.25rem"
@@ -1616,7 +1566,7 @@ const Twobhk = () => {
         </Flex>
         <Flex
           className="fadein revealOnce"
-          w="40%"
+          w="100%"
           h="100%"
           align="center"
           justify="center"
@@ -1749,6 +1699,15 @@ const Threebhk = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  const settings2 = {
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+  };
   const [isOpen, setIsOpen]= useState(false);
   const close =() =>{
     setIsOpen(false);
@@ -1768,41 +1727,13 @@ const Threebhk = () => {
       {isOpen?<ModalWindwow modalTitle={"ARETE HOMES"} modalImage={smartInvest} isOpen={isOpen} onClose={()=>close()} />:<></>}
       {/* Smart invest */}
       <Flex w="100%" h="100%" direction="column" align="center" py="3.125rem">
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem">
+        <Text textAlign="center" fontFamily="goudy" fontSize="2.5rem" pb="1.875rem">
           SMART INVESTMENT
         </Text>
-        <Flex w="100%" h="100%" overflow="hidden">
-          <Flex w="49%" h="100%" overflow="hidden">
-            <Image _hover={{cursor:"pointer"}} onClick={()=>open()} src={smartInvest} className="Arete-Plaza-FloorPlan-Image reveal"/>
-          </Flex>
+        <Flex w="100%" h="100%" overflow="hidden" direction="column">
+          
           <Flex
-            className="discobal-slidein-top reveal"
-            w="7.5%"
-            h="100%"
-            direction="column"
-            justify="flex-start"
-            align="center"
-            px="1.563rem"
-          >
-            <Divider
-              h="9.375rem"
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />
-          </Flex>
-          <Flex
-            w="43.5%"
+            w="100%"
             h="100%"
             direction="column"
             justify="center"
@@ -1828,21 +1759,7 @@ const Threebhk = () => {
                   Fully Furnished With White Goods
                 </Text>
               </Flex>
-              <Button
-                className="fadein revealOnce"
-                w="fit-content"
-                bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-                color="white"
-                fontSize="1rem"
-                fontFamily="avenir"
-                p="1rem"
-                _hover={{
-                  bgGradient: "linear(to-b, #DFBD69, #B88746)",
-                }}
-                _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
-              >
-                I AM INTERESTED
-              </Button>
+              
             </Flex>
             <Flex
               className="fadein revealOnce"
@@ -1858,7 +1775,7 @@ const Threebhk = () => {
                   src={rentalYield}
                   mb="0.625rem"
                 />
-                <Heading fontSize="1.5rem" mb="0.625rem">
+                <Heading fontSize="1.25rem" mb="0.625rem">
                   HIGH
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
@@ -1873,7 +1790,7 @@ const Threebhk = () => {
                   src={rentalIncome}
                   mb="0.625rem"
                 />
-                <Heading fontSize="1.5rem" mb="0.625rem">
+                <Heading fontSize="1.25rem" mb="0.625rem">
                   ₹48,000
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
@@ -1887,7 +1804,7 @@ const Threebhk = () => {
                   src={rentalyears}
                   mb="0.625rem"
                 />
-                <Heading fontSize="1.5rem" mb="0.625rem">
+                <Heading fontSize="1.25rem" mb="0.625rem">
                   3 YEARS
                 </Heading>
                 <Text
@@ -1910,14 +1827,34 @@ const Threebhk = () => {
               ASSURED RENT > EMI
             </Heading>
           </Flex>
+          <Flex direction="column" w="100%" h="100%" overflow="hidden">
+            <Image _hover={{cursor:"pointer"}} onClick={()=>open()} src={smartInvest} className="Arete-Plaza-FloorPlan-Image reveal"/>
+            <Button
+                mt="1rem"
+                alignSelf="center"
+                className="fadein revealOnce"
+                w="fit-content"
+                bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+                color="white"
+                fontSize="1rem"
+                fontFamily="avenir"
+                p="1rem"
+                _hover={{
+                  bgGradient: "linear(to-b, #DFBD69, #B88746)",
+                }}
+                _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+              >
+                I AM INTERESTED
+              </Button>
+          </Flex>
         </Flex>
       </Flex>
       {/* easy payment plan sec */}
       <Flex w="100%" h="100%" direction="column" align="center" pb="5rem" overflow="hidden">
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
+        <Text textAlign="center" fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           EASY PAYMENT PLAN
         </Text>
-        <Flex w="100%" h="100%" gap="1.25rem">
+        <Flex w="100%" h="100%" gap="1.25rem" direction="column">
           <Flex
             w="100%"
             h="100%"
@@ -1977,13 +1914,13 @@ const Threebhk = () => {
               <Text fontSize="1rem" fontFamily="veralaRound">
                 TOTAL INVESTMENT
               </Text>
-              <Heading fontSize="1.5rem">₹ 85,00,000</Heading>
+              <Heading fontSize="1.25rem">₹85,00,000</Heading>
             </Flex>
             <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
               <Text fontSize="1rem" fontFamily="veralaRound">
                 ASSURED RENT PER MONTH
               </Text>
-              <Heading fontSize="1.5rem">₹ 48,000</Heading>
+              <Heading fontSize="1.25rem">₹48,000</Heading>
             </Flex>{" "}
             <Heading
               className="fadein-4sdelay revealOnce"
@@ -2846,13 +2783,11 @@ const Threebhk = () => {
         >
           FLOOR PLAN
         </Text>
-        <Flex w="100%" h="100%" gap="1.563rem">
-          <Flex w="58%">
-            <Image boxShadow="2xl" w="100%" h="100%" src={twoBhkFloor} />
-          </Flex>
-          <Flex w="42%" h="100%" alignSelf="center" direction="column">
+        <Flex direction="column" w="100%" h="100%" gap="1.563rem">
+          <Flex w="100%" h="100%" alignSelf="center" direction="column">
             {" "}
             <Heading
+              textAlign="center"
               fontSize="1.5rem"
               textTransform="uppercase"
               fontFamily="avenir"
@@ -2883,7 +2818,7 @@ const Threebhk = () => {
                 w="100%"
                 pt="0.938rem"
                 pb="1.875rem"
-                px="1.875rem"
+                px="1rem"
                 direction="column"
                 gap="1.875rem"
               >
@@ -2922,6 +2857,9 @@ const Threebhk = () => {
               </Flex>
             </Flex>
           </Flex>
+          <Flex w="100%">
+            <Image boxShadow="2xl" w="100%" h="100%" src={twoBhkFloor} />
+          </Flex>
         </Flex>
       </Flex>
       {/* why invest */}
@@ -2930,26 +2868,48 @@ const Threebhk = () => {
         w="100%"
         h="100%"
         direction="column"
-        px="6.25rem"
+        px="1rem"
         py="3.125rem"
         align="center"
       >
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           WHY INVEST?
         </Text>
+
         <Flex w="100%" h="100%" gap="0.938rem">
+        <Box
+        position={"relative"}
+        height={"100%"}
+        width={"full"}
+        overflow={"hidden"}
+        boxShadow="2xl"
+      >
+        {/* CSS files for react-slick */}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+        {/* Slider */}
+        <Slider {...settings2} ref={(slider) => setSlider(slider)}>
           <Flex
             w="100%"
             h="25rem"
             direction="column"
             pt="1.875rem"
-            px="1.875rem"
+            px="1rem"
             align="center"
             bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
             bgRepeat="no-repeat"
             bgPos="center"
             bgSize="cover"
-            _hover={{boxShadow:"2xl"}}
+            
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               CONNECTIVITY
@@ -2967,7 +2927,7 @@ const Threebhk = () => {
                 <ListItem>Railway Network - Large Ponneri Station</ListItem>
               </UnorderedList>
               <Image
-                justifySelf="flex-end"
+                justifySelf="flex-start"
                 h="9.375rem"
                 src={locationImg}
                 objectFit="contain"
@@ -2980,13 +2940,12 @@ const Threebhk = () => {
             h="25rem"
             direction="column"
             pt="1.875rem"
-            px="1.875rem"
+            px="1rem"
             align="center"
             bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
             bgRepeat="no-repeat"
             bgPos="center"
             bgSize="cover"
-            _hover={{boxShadow:"2xl"}}
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               FOREIGN INVESTMENTS
@@ -3003,7 +2962,7 @@ const Threebhk = () => {
                 </ListItem>
               </UnorderedList>
               <Image
-                justifySelf="flex-end"
+                justifySelf="flex-start"
                 h="9.375rem"
                 src={foreignInvest}
                 objectFit="contain"
@@ -3016,14 +2975,12 @@ const Threebhk = () => {
             h="25rem"
             direction="column"
             pt="1.875rem"
-            px="1.875rem"
+            px="1rem"
             align="center"
-            justify="space-between"
             bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
             bgRepeat="no-repeat"
             bgPos="center"
             bgSize="cover"
-            _hover={{boxShadow:"2xl"}}
           >
             <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               SOCIAL FABRIC
@@ -3044,13 +3001,15 @@ const Threebhk = () => {
             <Image
               w="100%"
               h="11.25rem"
-              justifySelf="flex-end"
+              justifySelf="flex-start"
               src={socialFabric}
               objectFit="contain"
               objectPosition="50% 80%"
             />
             </Flex>
           </Flex>
+          </Slider>
+          </Box>
         </Flex>
       </Flex>
       {/*more amenities*/}
@@ -3079,47 +3038,10 @@ const Threebhk = () => {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-        <IconButton
-          aria-label="left-arrow"
-          variant="outline"
-          borderColor="#B88746"
-          borderRadius="full"
-          position="absolute"
-          bottom="35%"
-          left="0"
-          h="3.125rem"
-          w="3.125rem"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => {
-            
-          }}
-        >
-          <AiOutlineLeft color="#B88746" size="2.5rem" />
-        </IconButton>
-
-        <IconButton
-          aria-label="right-arrow"
-          borderRadius="full"
-          variant="outline"
-          borderColor="#B88746"
-          position="absolute"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          right="0"
-          bottom="35%"
-          h="3.125rem"
-          w="3.125rem"
-          onClick={() => {
-            
-          }}
-        >
-          <AiOutlineRight color="#B88746" size="2.5rem" />
-        </IconButton>
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
-          <Flex key={""} px="6.25rem" align="center" justify="center" pos="relative" h="25rem" w="100%">
+          <Flex key={""} px="1rem" align="center" justify="center" pos="relative" h="25rem" w="100%">
           <embed
-            style={{height:"25rem",width:"80%",alignSelf:"center",position:"absolute",left:"15%"}}
+            style={{height:"25rem",width:"25rem",alignSelf:"center"}}
             src={"https://www.youtube.com/embed/Psmw1t_S6-c"}
             title="The Economic Times | Best Realty Brands 2021 - Prime LifeSpace Developers"
             frameborder="0"
@@ -3130,27 +3052,31 @@ const Threebhk = () => {
           </Slider>
           </Box>
       </Flex>
-      <Flex w="100%" h="100%" gap="3.125rem" pb="5rem" overflow="hidden">
-        <Flex w="60%" h="100%" direction="column" align="center" className="fadein revealOnce">
-          <Text fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
+      <Flex direction="column" w="100%" h="100%" gap="3.125rem" pb="5rem" overflow="hidden">
+        <Flex w="100%" h="100%" direction="column" align="center" className="fadein revealOnce">
+          <Text textAlign="center" fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
             7% ROI ON ARETE HOMES
           </Text>
-          <Flex w h="100%" gap="1.875rem" justify="center" align="center">
-            <Image w="20.75rem" h="15.313rem" src={snarttwobhk} />
+          <Flex direction="column" w h="100%" gap="1.875rem" justify="center" align="center">
+            
             <Flex
               h="100%"
               direction="column"
               justify="center"
               fontFamily="avenir"
             >
-              <Heading fontSize="1.25rem" pb="0.938rem">
+              <Heading textAlign="center" fontSize="1.25rem" pb="0.938rem">
                 SMART 2 BHK - 690 SQFT.
               </Heading>
-              <Heading fontSize="1.5rem">₹34 LAKHS</Heading>
-              <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem">
-                Fully Furnished With White Goods
-              </Text>
-              <Heading fontSize="1.5rem">₹20,000</Heading>
+              <Flex>
+                <Flex direction="column">
+                  <Heading fontSize="1.5rem">₹34 LAKHS</Heading>
+                  <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem">
+                    Fully Furnished With White Goods
+                  </Text>
+                </Flex>
+                <Flex direction="column">
+                  <Heading fontSize="1.5rem">₹20,000</Heading>
               <Text
                 textTransform="uppercase"
                 fontFamily="veralaRound"
@@ -3158,10 +3084,13 @@ const Threebhk = () => {
               >
                 Rental Income per month
               </Text>
+                </Flex>
+              </Flex>
             </Flex>
           </Flex>
+          <Image mt="1rem" w="20.75rem" h="15.313rem" src={snarttwobhk} />
           <Button
-            mt="1.25rem"
+            mt="1rem"
             alignSelf="center"
             w="fit-content"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
@@ -3179,9 +3108,10 @@ const Threebhk = () => {
             VIEW DETAILS
           </Button>
         </Flex>
+        
         <Flex
           className="fadein revealOnce"
-          w="40%"
+          w="100%"
           h="100%"
           align="center"
           justify="center"
@@ -3372,12 +3302,12 @@ const MoreAmenities = () => {
     // className: "center",
     centerMode: true,
     infinite: true,
+    autoplay:true,
     draggable: true,
-    autoplay: true,
     speed: 500,
     autoplaySpeed: 3000,
     pauseOnHover: false,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
   };
   return (
@@ -3391,7 +3321,7 @@ const MoreAmenities = () => {
       py="1.875rem"
       px="1.562rem"
     >
-      <Text fontFamily="goudy" fontSize="2.5rem" pb="1.562rem" className="slidein-top revealOnce">
+      <Text textAlign="center" fontFamily="goudy" fontSize="2.5rem" pb="1.562rem" className="slidein-top revealOnce">
         MORE AMENITIES
       </Text>
       <Box
@@ -3399,8 +3329,6 @@ const MoreAmenities = () => {
         height={"100%"}
         width={"full"}
         overflow={"hidden"}
-        pl="4.687rem"
-        pr="4.687rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -3436,43 +3364,6 @@ const MoreAmenities = () => {
             </Flex>
           ))}
         </Slider>
-        <IconButton
-          aria-label="left-arrow"
-          variant="outline"
-          borderColor="#B88746"
-          borderRadius="full"
-          position="absolute"
-          top="45%"
-          left="0"
-          h="3.125rem"
-          w="3.125rem"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => {
-            slider?.slickPrev();
-          }}
-        >
-          <AiOutlineLeft color="#B88746" size="2.5rem" />
-        </IconButton>
-
-        <IconButton
-          aria-label="right-arrow"
-          borderRadius="full"
-          variant="outline"
-          borderColor="#B88746"
-          position="absolute"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          right="0"
-          top="45%"
-          h="3.125rem"
-          w="3.125rem"
-          onClick={() => {
-            slider?.slickNext();
-          }}
-        >
-          <AiOutlineRight color="#B88746" size="2.5rem" />
-        </IconButton>
       </Box>
     </Flex>
   );
