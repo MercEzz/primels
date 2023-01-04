@@ -34,12 +34,12 @@ const OurProjects = () => {
   const [projIndex,setProjIndex] = useState(0);
   const projects=[
     {title:"ARETE HOMES",list:true,status:"READY TO MOVE IN",imgF:areteHomes,imgB:skyHigh,p1:"6 Towers",p2:"2, 2.5, 3 BHK Smart Residencies",p3:"70% Open Space"},
+    {title:"SKY HIGH",list:true,status:"READY TO MOVE IN",imgF:skyHigh,imgB:areteHomes,p1:"18 Storey Tall",p2:"Sky Residencies 2 BHK",p3:"G+1 Retail Plaza"},
     {title:"NAKSHATRA",list:false,status:"COMPLETED",imgF:areteHomes,imgB:skyHigh,text:"Pune"},
     {title:"I - LAND",list:false,status:"COMPLETED",imgF:areteHomes,imgB:skyHigh,text:"Pune"},
     {title:"ARETE MALL",list:false,status:"COMING SOON",imgF:areteMall,imgB:skyHigh,text:""},
     {title:"ARETE PLAZA",list:false,status:"NEWLY LAUNCHED",imgF:aretePlaza,imgB:areteMall,text:"20 Retail Spcaes in the Tallest Tower of North Chennai."},
     {title:"PONNERI GYMKHANA CLUB",list:false,status:"NEWLY LAUNCHED",imgF:ponneri,imgB:aretePlaza,text:"PGC is 60,000 sqft. World Class Private Club for Sports, Business and Celebration."},
-    {title:"SKY HIGH",list:true,status:"READY TO MOVE IN",imgF:skyHigh,imgB:areteHomes,p1:"18 Storey Tall",p2:"Sky Residencies 2 BHK",p3:"G+1 Retail Plaza"}
   ];
   const [isList,setIsList]= useState(true);
   const animateX = useAnimation();
@@ -121,20 +121,6 @@ const OurProjects = () => {
       bgSize="cover"
     >
       <Flex w="100%" h="100%" align="center" justify="center">
-        <Flex w="10%" overflow="hidden">
-          <MtnDvdr
-            left="10%"
-            initial={{ opacity: 0, x: 100 }}
-            animate={animateX}
-            transition={{ duration: 2, type: "just" }}
-            w="100%"
-            orientation="horizontal"
-            border="3px solid"
-            bgColor="#DFBD69"
-            borderColor="#DFBD69"
-            mr="10px"
-          />
-        </Flex>
         <Flex h="100%" align="center" justify="center">
           <Text fontFamily="goudy" fontSize="40px" textAlign="center">
             OUR PROJECTS
@@ -160,7 +146,7 @@ const OurProjects = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
-      <Flex pos="relative" align="flex-start" justify="space-between" px="100px">
+      <Flex pos="relative" align="flex-start" justify="space-between" pr="100px">
         <Flex pos="relative" m="0" w="20%" pt="4.125rem" direction="column" justify="center" h="30rem">
           <MtnHd
             initial={{ x: -500 }}
@@ -228,7 +214,7 @@ const OurProjects = () => {
           borderColor="#B88746"
           borderRadius="full"
           position="absolute"
-          bottom="0"
+          bottom="-1rem"
           left="0"
           h="3.125rem"
           w="3.125rem"
@@ -249,8 +235,8 @@ const OurProjects = () => {
           position="absolute"
           transform={"translate(0%, -50%)"}
           zIndex={2}
-          right="0"
-          bottom="0"
+          left="4rem"
+          bottom="-1rem"
           h="3.125rem"
           w="3.125rem"
           onClick={() => {
@@ -273,7 +259,7 @@ const OurProjects = () => {
           px="1.563rem"
           pos="absolute"
           top="0"
-          right="50%"
+          left="28%"
         >
           <Divider
             h="6.5rem"
@@ -297,7 +283,7 @@ const OurProjects = () => {
           zIndex={90}
           right="0"
           top="0"
-          w="50%"
+          w="65%"
           direction="column"
           align="flex-start"
           pt="25px"

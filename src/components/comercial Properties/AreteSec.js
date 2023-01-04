@@ -1602,7 +1602,7 @@ const LocationAndFormPlaza = () => {
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
                 my="1"
-              />{" "}
+              />
               <Divider
                 h={{ base: "3.5rem", lg: "0" }}
                 w={{ base: "0", lg: "100%" }}
@@ -1629,7 +1629,7 @@ const LocationAndFormPlaza = () => {
                 pb={{ base: "0", lg: "1rem" }}
               >
                 5 MINS
-              </Heading>{" "}
+              </Heading>
               <UnorderedList
                 w={{ base: "55%", lg: "fit-content" }}
                 fontFamily="veralaRound"

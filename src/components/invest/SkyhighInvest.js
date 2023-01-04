@@ -35,7 +35,7 @@ import interestRate from "../Invest imgs/interest rate.svg";
 import pmay from "../Invest imgs/pmay.svg";
 import tax from "../Invest imgs/tax saving.svg";
 import institute from "../Invest imgs/institutes.svg";
-import company from "../Invest imgs/companies.svg";
+import company from "../commercial-properties imgs/company.svg";
 import industry from "../Invest imgs/industrial park.svg";
 import port from "../Invest imgs/port.svg";
 import locationadv from "../commercial-properties imgs/Asset 1-100.jpg";
@@ -48,6 +48,11 @@ import { useInView } from "framer-motion";
 const SkyhighInvest = () => {
   const easyPayRef = useRef(null);
   const easyPayInView = useInView(easyPayRef, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
+  const fModelRef = useRef(null);
+  const fModelInView = useInView(fModelRef, {
     once: true,
     margin: "0px 100px -50px 0px",
   });
@@ -251,21 +256,21 @@ const SkyhighInvest = () => {
               10% PRINCIPAL INSTALLMENT
               <br /> IN 2 YEARS{" "}
             </Heading>
-            <Flex w="100%" gap="0.625rem" className="fadein-2sdelay revealOnce">
-              <Text w="20%" fontSize="1rem" fontFamily="veralaRound">
+            <Flex w="100%" gap="0.625rem">
+              <Text w="20%" fontSize="1rem" fontFamily="veralaRound" opacity={easyPayInView?1:0} transitionDelay={"2s"}>
                 Booking <br />
                 Amount
               </Text>
-              <Text w="100%" fontSize="1rem" fontFamily="veralaRound">
+              <Text w="100%" fontSize="1rem" fontFamily="veralaRound" opacity={easyPayInView?1:0} transitionDelay={"2.75s"}>
                 7 Installments
                 <br />
                 ₹ 50,000 every quater
               </Text>
             </Flex>
             <Flex w="100%" h="0.938rem" my="1.25rem">
-              <Flex bgColor="#B88746" w="20%" className="fadein-2sdelay revealOnce" transition="all 2s 0.25s"/>
+              <Flex bgColor="#B88746" w="20%" opacity={easyPayInView?1:0} transitionDelay={"2s"}/>
               <Divider
-                className="fadein-2sdelay revealOnce" transition="all 2s 0.25s"
+                opacity={easyPayInView?1:0} transitionDelay={"2s"}
                 mt="-0.4rem"
                 h="1.563rem"
                 orientation="vertical"
@@ -283,23 +288,23 @@ const SkyhighInvest = () => {
                 <Box opacity={easyPayInView?1:0} transitionDelay={"4s"} w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
               </Flex>
             </Flex>
-            <Flex w="100%" gap="0.625rem" pb="1.875rem" className="fadein-2sdelay revealOnce">
-              <Heading w="20%" fontSize="1rem" fontFamily="veralaRound">
+            <Flex w="100%" gap="0.625rem" pb="1.875rem">
+              <Heading w="20%" fontSize="1rem" fontFamily="veralaRound" opacity={easyPayInView?1:0} transitionDelay={"2s"}>
                 ₹ 1 LAKH
               </Heading>
-              <Heading w="100%" fontSize="1rem" fontFamily="veralaRound">
+              <Heading w="100%" fontSize="1rem" fontFamily="veralaRound" opacity={easyPayInView?1:0} transitionDelay={"2.75s"}>
                 ₹ 3.5 LAKHS
               </Heading>
             </Flex>
             <Divider
-              className="fadein-4sdelay revealOnce"
+              opacity={easyPayInView?1:0} transitionDelay={"4s"}
               orientation="horizontal"
               border="1px solid"
               borderColor="#B88746"
               bgColor="#B88746"
               mb="0.938rem"
             />
-            <Flex w="100%" justify="space-between" className="fadein-4sdelay revealOnce">
+            <Flex w="100%" justify="space-between" opacity={easyPayInView?1:0} transitionDelay={"4s"}>
               <Text fontSize="1rem" fontFamily="veralaRound">
                 Total Principal Amount{" "}
               </Text>
@@ -368,21 +373,21 @@ const SkyhighInvest = () => {
               </Flex>
             </Flex>
             <Divider
-              className="fadein-4sdelay revealOnce"
+              opacity={easyPayInView?1:0} transitionDelay={"4s"}
               orientation="horizontal"
               border="1px solid"
               borderColor="#B88746"
               bgColor="#B88746"
               mb="0.938rem"
             />{" "}
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
+            <Flex w="100%" justify="space-between" pb="1.25rem" opacity={easyPayInView?1:0} transitionDelay={"4s"}>
               <Text fontSize="1rem" fontFamily="veralaRound">
-                Emi Per Month
+                EMI Per Month
               </Text>
               <Heading fontSize="1.5rem">₹ 20,000</Heading>
             </Flex>
             <Button
-              className="fadein-4sdelay revealOnce"
+              opacity={easyPayInView?1:0} transitionDelay={"4s"}
               alignSelf="center"
               w="fit-content"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
@@ -404,6 +409,7 @@ const SkyhighInvest = () => {
       </Flex>
       {/* FINANCIAL MODEL sec */}
       <Flex
+        ref={fModelRef}
         overflow="hidden"
         w="100%"
         h="100%"
@@ -439,20 +445,20 @@ const SkyhighInvest = () => {
                 RENTAL INCOME ₹2.4 LAKHS
               </Heading>
             </Flex>
-            <Text color="#B88746"  w="5rem" fontSize="1.563rem" className="fadein revealOnce">
+            <Text color="#B88746"  w="5rem" fontSize="1.563rem" opacity={fModelInView?1:0}>
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein-2sdelay revealOnce">
+            <Flex w="100%" align="center" justify="flex-start" opacity={fModelInView?1:0} transitionDelay={"2s"}>
               {" "}
               <Image w="3.125rem" h="3.125rem" src={tax} mr="0.625rem" />
               <Heading color="#B78C23" fontSize="1.25rem">
                 TAX SAVINGS UPTO ₹1 LAKH
               </Heading>
             </Flex>
-            <Text color="#B88746" w="5rem" fontSize="1.563rem" className="fadein-2sdelay revealOnce">
+            <Text color="#B88746" w="5rem" fontSize="1.563rem" opacity={fModelInView?1:0} transitionDelay={"2s"}>
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein-4sdelay revealOnce">
+            <Flex w="100%" align="center" justify="flex-start" opacity={fModelInView?1:0} transitionDelay={"4s"}>
               {" "}
               <Image
                 w="3.125rem"
@@ -464,10 +470,10 @@ const SkyhighInvest = () => {
                 APPRECIATION EXPECTED 5% PER YEAR
               </Heading>
             </Flex>
-            <Text  w="5rem" color="#B88746" fontSize="1.563rem" className="fadein-4sdelay revealOnce">
+            <Text  w="5rem" color="#B88746" fontSize="1.563rem" opacity={fModelInView?1:0} transitionDelay={"4s"}>
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein-6sdelay revealOnce">
+            <Flex w="100%" align="center" justify="flex-start" opacity={fModelInView?1:0} transitionDelay={"6s"}>
               {" "}
               <Image w="3.125rem" h="3.125rem" src={pmay} mr="0.625rem" />
               <Heading color="#8D6229" fontSize="1.25rem">
@@ -510,7 +516,7 @@ const SkyhighInvest = () => {
             direction="column"
           >
             <Heading
-              className="fadein revealOnce"
+              opacity={fModelInView?1:0}
               w="100%"
               textAlign="center"
               fontSize="1.5rem"
@@ -525,13 +531,13 @@ const SkyhighInvest = () => {
                 gap="0.313rem"
                 justify="flex-end"
               >
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
                   ₹7.77 L
                 </Heading>
-                <Flex h="6.875rem" bgColor="#8D6229" className="fadein-6sdelay revealOnce"/>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
+                <Flex h="6.875rem" bgColor="#8D6229" opacity={fModelInView?1:0} transitionDelay={"6s"}/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -540,12 +546,12 @@ const SkyhighInvest = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
                   ₹5.1 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -554,12 +560,12 @@ const SkyhighInvest = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
                   ₹5.1 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -568,12 +574,12 @@ const SkyhighInvest = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
                   ₹5.1 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -582,12 +588,12 @@ const SkyhighInvest = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
                   ₹5.5 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -596,17 +602,17 @@ const SkyhighInvest = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
                   ₹5.5 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
             </Flex>
-            <Divider border="1px solid" borderColor="#B88746" className="fadein revealOnce"/>
+            <Divider border="1px solid" borderColor="#B88746" opacity={fModelInView?1:0}/>
             <Flex
-              className="fadein revealOnce"
+              opacity={fModelInView?1:0}
               w="100%"
               fontFamily="veralaRound"
               fontSize="1rem"
@@ -626,7 +632,7 @@ const SkyhighInvest = () => {
         <Flex h="100%" align="center"my="1rem" p="1rem" boxShadow="2xl" bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgPos="center"
-      bgSize="cover" className="fadein-6sdelay revealOnce">
+      bgSize="cover" opacity={fModelInView?1:0} transitionDelay={"6s"}>
           <Heading
             w="100%"
             fontFamily="avenir"
@@ -689,19 +695,15 @@ const SkyhighInvest = () => {
             <SimpleGrid columns={{ base: "2", lg: "1" }}>
               <Flex pb="1.5rem" className="fadein revealOnce">
                 <Box
-                  borderRadius="50%"
-                  p={{ base: "0.625rem", lg: "1rem" }}
-                  bgGradient="linear(to-b,#B88746, #DFBD69)"
-                  direction="column"
-                  w={{ base: "3.125rem", lg: "5rem" }}
-                  h={{ base: "3.125rem", lg: "5rem" }}
+                  w={"5rem"}
+                  h={"5rem"}
                   align="center"
                   mr="1rem"
                   _hover={{ cursor: "pointer" }}
                 >
                   <Image
-                    w={{ base: "1.875rem", lg: "3.125rem" }}
-                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    w={"5rem"}
+                    h={"5rem"}
                     src={institute}
                   />
                 </Box>
@@ -752,19 +754,16 @@ const SkyhighInvest = () => {
               </Flex>{" "}
               <Flex pb="1.5rem" className="fadein revealOnce">
                 <Box
-                  borderRadius="50%"
-                  p={{ base: "0.625rem", lg: "1rem" }}
-                  bgGradient="linear(to-b,#B88746, #DFBD69)"
                   direction="column"
-                  w={{ base: "3.125rem", lg: "5rem" }}
-                  h={{ base: "3.125rem", lg: "5rem" }}
+                  w={"5rem"}
+                  h={"5rem"}
                   align="center"
                   mr="1rem"
                   _hover={{ cursor: "pointer" }}
                 >
                   <Image
-                    w={{ base: "1.875rem", lg: "3.125rem" }}
-                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    w={"5rem"}
+                    h={"5rem"}
                     src={industry}
                   />
                 </Box>

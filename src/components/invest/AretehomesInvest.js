@@ -19,7 +19,7 @@ import {
 } from "@chakra-ui/react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import smartInvest from "../Invest imgs/INTRO1.jpg";
 import floorPlan from "../Invest imgs/FLOOR PLAN-sky high.jpg";
 import locationImg from "../Invest imgs/connectivity-removebg-preview.png";
@@ -45,6 +45,7 @@ import twoBhkFloor from "../Invest imgs/arete homes Tower A6-1.jpg";
 import snarttwobhk from "../Invest imgs/INTRO1.jpg";
 import ModalWindwow from "../modalWindow";
 import ModalImage from "../modalImage";
+import { useInView } from "framer-motion";
 
 const SkyhighInvest = () => {
   const [active, setActive] = useState(window.localStorage.getItem('areteInvest')?JSON.parse(window.localStorage.getItem('areteInvest')):false);
@@ -58,9 +59,10 @@ const SkyhighInvest = () => {
   return (
     <>
       {" "}
-      <Flex w="100%" h="100%" px="6.25rem" direction="column" align="center">
+      <Flex w="100%" h="100%" direction="column" align="center">
         <Flex w="100%">
           <Button
+             ml="6.25rem"
             w="100%"
             bgColor="white"
             bgGradient={active ? "linear(to-b, #B88746 ,#DFBD69)" : "white"}
@@ -84,6 +86,7 @@ const SkyhighInvest = () => {
             2 BHK - 1025 SQFT.
           </Button>
           <Button
+             mr="6.25rem"
             ml="0.625rem"
             w="100%"
             bgColor="white"
@@ -120,6 +123,16 @@ const SkyhighInvest = () => {
 };
 
 const Twobhk = () => {
+  const easyPayRef = useRef(null);
+  const easyPayInView = useInView(easyPayRef, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
+  const fModelRef = useRef(null);
+  const fModelInView = useInView(fModelRef, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
   const [slider, setSlider] = useState(null);
 
   const settings = {
@@ -152,13 +165,22 @@ const Twobhk = () => {
     <>
       {isOpen?<ModalWindwow modalTitle={"ARETE HOMES"} modalImage={areteInto1} isOpen={isOpen} onClose={()=>close()} />:<></>}
       {/* Smart invest */}
-      <Flex w="100%" h="100%" direction="column" align="center" py="3.125rem" overflow="hidden">
+      <Flex
+         px="6.25rem"
+        overflow="hidden"
+        w="100%"
+        h="100%"
+        direction="column"
+        align="center"
+        pt="2.5rem"
+        pb="5rem"
+      >
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           SMART INVESTMENT
         </Text>
         <Flex w="100%" h="100%">
           <Flex w="100%" h="100%" overflow="hidden">
-            <Image _hover={{cursor:"pointer"}} onClick={()=>open()} src={areteInto1} className="Arete-Plaza-FloorPlan-Image reveal"/>
+            <Image onClick={()=>open()} src={areteInto1} className="expandcar reveal"/>
           </Flex>
           <Flex w="100%" h="100%" overflow="hidden">
             {" "}
@@ -171,7 +193,7 @@ const Twobhk = () => {
               px="1.563rem"
             >
               <Divider
-                h="9.375rem"
+                h="5.5rem"
                 orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
@@ -188,16 +210,14 @@ const Twobhk = () => {
               />
             </Flex>
             <Flex
-              mt="8rem"
+              overflow="x-hidden"
               w="100%"
-              h="100%"
+              h="27rem"
               direction="column"
               justify="center"
               fontFamily="avenir"
             >
-              <Flex align="center" justify="space-between" overflow="hidden">
-                <Flex direction="column" className="fadein-2sdelay revealOnce">
-                  <Heading fontSize="1.5rem" pb="0.938rem">
+              <Heading fontSize="1.5rem" pb="0.938rem">
                     ARETE HOMES
                   </Heading>
                   <Heading fontSize="1.25rem" pb="0.938rem">
@@ -211,12 +231,10 @@ const Twobhk = () => {
                   >
                     ₹52 LAKHS
                   </Heading>
-                  <Text fontFamily="veralaRound" fontSize="1rem" pb="2.188rem">
+                  <Text fontFamily="veralaRound" fontSize="1rem" pb="1.563rem">
                     Fully Furnished With White Goods
                   </Text>
-                </Flex>
-              </Flex>
-              <Flex w="100%" gap="2.938rem" pb="1.875rem" className="fadein-2sdelay revealOnce">
+              <Flex w="100%" gap="2.938rem" pb="1rem" className="fadein revealOnce">
                 <Flex w="100%" direction="column" align="center">
                   <Image
                     w="3.125rem"
@@ -240,7 +258,7 @@ const Twobhk = () => {
                     mb="0.625rem"
                   />
                   <Heading fontSize="1.5rem" mb="0.625rem">
-                    ₹32,000
+                    ₹ 32,000
                   </Heading>
                   <Text align="center" fontFamily="veralaRound" fontSize="1rem">
                     Rental Income per month
@@ -262,35 +280,39 @@ const Twobhk = () => {
                 </Flex>
               </Flex>
               <Heading
+                pb="1rem"
                 className="fadein-2sdelay revealOnce"
                 w="100%"
                 textAlign="center"
                 fontFamily="avenir"
-                fontSize="2.125rem"
+                fontSize="1.125rem"
               >
                 ASSURED RENT > EMI
               </Heading>
               <Button
-                  className="fadein-2sdelay revealOnce"
-                  w="fit-content"
-                  bgGradient="linear(to-b, #B88746 ,#DFBD69)"
-                  color="white"
-                  fontSize="1rem"
-                  fontFamily="avenir"
-                  p="1rem"
-                  _hover={{
-                    bgGradient: "linear(to-b, #DFBD69, #B88746)",
-                  }}
-                  _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
-                >
-                  I AM INTERESTED
-                </Button>
+                className="fadein revealOnce"
+                alignSelf="center"
+                w="fit-content"
+                bgGradient="linear(to-b, #B88746 ,#DFBD69)"
+                color="white"
+                mr="0.625rem"
+                p="1rem"
+                fontSize="1rem"
+                fontFamily="avenir"
+                fontWeight="bold"
+                _hover={{
+                  bgGradient: "linear(to-b, #DFBD69, #B88746)",
+                }}
+                _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
+              >
+                I AM INTERESTED
+              </Button>
             </Flex>
           </Flex>
         </Flex>
       </Flex>
       {/* easy payment plan sec */}
-      <Flex w="100%" h="100%" direction="column" align="center" pb="5rem" overflow="hidden">
+      <Flex ref={easyPayRef}  px="6.25rem" w="100%" h="100%" direction="column" align="center" pb="5rem" overflow="hidden">
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           EASY PAYMENT PLAN
         </Text>
@@ -311,18 +333,19 @@ const Twobhk = () => {
             <Heading align="center" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               PRINCIPAL INSTALLMENT
             </Heading>
-            <Flex w="100%" gap="0.625rem" align="flex-end" className="fadein revealOnce">
-              <Text w="60%" fontSize="1rem" fontFamily="veralaRound">
-                PRINCIPAL
-                <br /> AMOUNT
+            <Flex w="100%" gap="0.625rem" align="flex-end">
+              <Text w="60%" fontSize="1rem" fontFamily="veralaRound"  opacity={easyPayInView?1:0} transitionDelay={"1.50s"}>
+                Principal
+                <br /> Amount
               </Text>
-              <Text w="100%" fontSize="1rem" fontFamily="veralaRound">
-                HOME LOAN AMOUNT
+              <Text w="100%" fontSize="1rem" fontFamily="veralaRound" opacity={easyPayInView?1:0} transitionDelay={"2s"}>
+                Home Loan Amount
               </Text>
             </Flex>
-            <Flex w="100%" h="0.938rem" my="1.25rem" className="fadein revealOnce">
-              <Flex bgColor="#B88746" w="50%" />
+            <Flex w="100%" h="0.938rem" my="1rem">
+              <Flex bgColor="#B88746" w="50%" opacity={easyPayInView?1:0} transitionDelay={"1.50s"}/>
               <Divider
+                opacity={easyPayInView?1:0} transitionDelay={"2s"}
                 mt="-0.4rem"
                 h="1.563rem"
                 orientation="vertical"
@@ -330,51 +353,51 @@ const Twobhk = () => {
                 borderColor="#B88746"
                 bgColor="#B88746"
               />
-              <Flex w="100%" h="100%" className="fadein revealOnce">
+              <Flex w="100%" h="100%" opacity={easyPayInView?1:0} transitionDelay={"2s"}>
                 <Box w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
               </Flex>
             </Flex>
-            <Flex w="100%" gap="0.625rem" pb="1.875rem" className="fadein-2sdelay revealOnce">
-              <Heading w="60%" fontSize="1rem" fontFamily="veralaRound">
+            <Flex w="100%" gap="0.625rem" pb="1.875rem">
+              <Heading  opacity={easyPayInView?1:0} transitionDelay={"1.50s"} w="60%" fontSize="1rem" fontFamily="veralaRound">
                 ₹ 10 LAKHS
               </Heading>
-              <Heading w="100%" fontSize="1rem" fontFamily="veralaRound">
+              <Heading  className="fadein-2sdelay revealOnce" w="100%" fontSize="1rem" fontFamily="veralaRound">
                 ₹ 42 LAKHS
               </Heading>
             </Flex>
             <Divider
-              className="fadein-4sdelay revealOnce"
+              opacity={easyPayInView?1:0} transitionDelay={"3s"}
               orientation="horizontal"
               border="1px solid"
               borderColor="#B88746"
               bgColor="#B88746"
               mb="0.938rem"
             />
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
+            <Flex w="100%" justify="space-between" pb="1rem" opacity={easyPayInView?1:0} transitionDelay={"3s"}>
               <Text fontSize="1rem" fontFamily="veralaRound">
-                TOTAL INVESTMENT
+                Total Investment
               </Text>
               <Heading fontSize="1.5rem">₹ 52,00,000</Heading>
             </Flex>
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
+            <Flex w="100%" justify="space-between" pb="1.25rem" opacity={easyPayInView?1:0} transitionDelay={"3s"}>
               <Text fontSize="1rem" fontFamily="veralaRound">
-                ASSURED RENT PER MONTH
+                Assured Rent Per Month
               </Text>
               <Heading fontSize="1.5rem">₹ 32,000</Heading>
             </Flex>{" "}
             <Heading
-              className="fadein-4sdelay revealOnce"
+              opacity={easyPayInView?1:0} transitionDelay={"3s"}
               w="100%"
               textAlign="center"
               fontFamily="avenir"
-              fontSize="1.5rem"
+              fontSize="1.125rem"
             >
               ASSURED RENT > EMI
             </Heading>
           </Flex>
           <Flex
             w="100%"
-            h="100%"
+            h="24.375rem"
             direction="column"
             p="1.875rem"
             align="center"
@@ -400,7 +423,7 @@ const Twobhk = () => {
                   ₹ 42 LAKHS
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                  LOAN AMOUNT
+                  Loan Amount
                 </Text>
               </Flex>
               <Flex w="100%" direction="column" align="center">
@@ -415,7 +438,7 @@ const Twobhk = () => {
                   25 YEARS
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                  TENURE
+                  Tenure
                 </Text>
               </Flex>
               <Flex w="100%" direction="column" align="center">
@@ -429,26 +452,26 @@ const Twobhk = () => {
                   6.7% p.a.
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                  INTEREST RATE
+                  Interest Rate
                 </Text>
               </Flex>
             </Flex>
             <Divider
-              className="fadein-4sdelay revealOnce"
+              opacity={easyPayInView?1:0} transitionDelay={"3s"}
               orientation="horizontal"
               border="1px solid"
               borderColor="#B88746"
               bgColor="#B88746"
               mb="0.938rem"
             />{" "}
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
+            <Flex w="100%" justify="space-between" pb="1.25rem" opacity={easyPayInView?1:0} transitionDelay={"3s"}>
               <Text fontSize="1rem" fontFamily="veralaRound">
-                EMI PER MONTH
+                EMI Per Month
               </Text>
               <Heading fontSize="1.5rem">₹ 27,510</Heading>
             </Flex>
             <Button
-              className="fadein3 reveal"
+              opacity={easyPayInView?1:0} transitionDelay={"3s"}
               alignSelf="center"
               w="fit-content"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
@@ -470,12 +493,13 @@ const Twobhk = () => {
       </Flex>
       {/* FINANCIAL MODEL sec */}
       <Flex
+        ref={fModelRef}
         overflow="hidden"
         w="100%"
         h="100%"
         direction="column"
         align="center"
-        pb="1.875rem"
+        pb="3.125rem"
         px="6.25rem"
       >
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
@@ -494,7 +518,7 @@ const Twobhk = () => {
               INCOME ON THE INVESTMENT
             </Heading>
             <Flex w="100%" align="center" justify="flex-start" className="fadein revealOnce">
-            {" "}
+              {" "}
               <Image
                 w="3.125rem"
                 h="3.125rem"
@@ -502,23 +526,23 @@ const Twobhk = () => {
                 mr="0.625rem"
               />
               <Heading color="#D4AD4B" fontSize="1.25rem">
-                RENTAL INCOME ₹4 LAKHS
+              RENTAL INCOME ₹4 LAKHS
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein revealOnce">
+            <Text color="#B88746"  w="5rem" fontSize="1.563rem" opacity={fModelInView?1:0}>
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein-2delay revealOnce">
+            <Flex w="100%" align="center" justify="flex-start" opacity={fModelInView?1:0} transitionDelay={"2s"}>
               {" "}
               <Image w="3.125rem" h="3.125rem" src={tax} mr="0.625rem" />
               <Heading color="#B78C23" fontSize="1.25rem">
-                TAX SAVINGS UPTO ₹2 LAKH
+              TAX SAVINGS UPTO ₹2 LAKH
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-4sdelay revealOnce">
+            <Text color="#B88746" w="5rem" fontSize="1.563rem" opacity={fModelInView?1:0} transitionDelay={"2s"}>
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein-4sdelay revealOnce">
+            <Flex w="100%" align="center" justify="flex-start" opacity={fModelInView?1:0} transitionDelay={"4s"}>
               {" "}
               <Image
                 w="3.125rem"
@@ -530,14 +554,14 @@ const Twobhk = () => {
                 APPRECIATION EXPECTED 5% PER YEAR
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-6sdelay revealOnce">
+            <Text  w="5rem" color="#B88746" fontSize="1.563rem" opacity={fModelInView?1:0} transitionDelay={"4s"}>
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein-6sdelay revealOnce">
+            <Flex w="100%" align="center" justify="flex-start" opacity={fModelInView?1:0} transitionDelay={"6s"}>
               {" "}
               <Image w="3.125rem" h="3.125rem" src={pmay} mr="0.625rem" />
               <Heading color="#8D6229" fontSize="1.25rem">
-                PMAY BENIFIT ₹2.67 LAKHS
+              PMAY BENIFIT ₹2.67 LAKHS
               </Heading>
             </Flex>
           </Flex>
@@ -576,7 +600,7 @@ const Twobhk = () => {
             direction="column"
           >
             <Heading
-              className="fadein revealOnce"
+              opacity={fModelInView?1:0}
               w="100%"
               textAlign="center"
               fontSize="1.5rem"
@@ -591,13 +615,13 @@ const Twobhk = () => {
                 gap="0.313rem"
                 justify="flex-end"
               >
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
-                  ₹11 L
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+                ₹11 L
                 </Heading>
-                <Flex h="6.875rem" bgColor="#8D6229" className="fadein-6sdelay revealOnce"/>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
+                <Flex h="6.875rem" bgColor="#8D6229" opacity={fModelInView?1:0} transitionDelay={"6s"}/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -606,12 +630,26 @@ const Twobhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+                ₹8 L
+                </Heading>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
+              </Flex>
+              <Flex
+                w="100%"
+                direction="column"
+                gap="0.313rem"
+                justify="flex-end"
+              >
+                {" "}
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
                   ₹8 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -620,12 +658,12 @@ const Twobhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
-                  ₹8 L
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+                ₹8 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -634,12 +672,12 @@ const Twobhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
-                  ₹8.5 L
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+                ₹8.5 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -648,31 +686,17 @@ const Twobhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
-                  ₹8.5 L
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+                ₹8.5 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
-              </Flex>
-              <Flex
-                w="100%"
-                direction="column"
-                gap="0.313rem"
-                justify="flex-end"
-              >
-                {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
-                  ₹8.5 L
-                </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2delay revealOnce"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein revealOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
             </Flex>
-            <Divider border="1px solid" borderColor="#B88746" className="fadein revealOnce"/>
+            <Divider border="1px solid" borderColor="#B88746" opacity={fModelInView?1:0}/>
             <Flex
-              className="fadein revealOnce"
+              opacity={fModelInView?1:0}
               w="100%"
               fontFamily="veralaRound"
               fontSize="1rem"
@@ -689,17 +713,20 @@ const Twobhk = () => {
             </Flex>
           </Flex>
         </Flex>
-        <Flex h="100%" align="center" p="1rem" pt="1.875rem" boxShadow="2xl" className="fadein-6sdelay revealOnce">
-        <Heading
+        <Flex h="100%" align="center"my="1rem" p="1rem" boxShadow="2xl" bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+          <Heading
             w="100%"
             fontFamily="avenir"
             textAlign="center"
-            fontSize="2.125rem"
+            fontSize="1.5rem"
             bgGradient="linear(to-b, #B88746,#DFBD69)"
             bgClip="text"
           >
             TOTAL INCOME IN 6 YEARS{" "}
-            <Text as={"span"} fontSize="1.25rem">
+            <Text as={"span"} fontSize="1rem">
               APPROX.
             </Text>{" "}
             ₹52.5 LAKHS
@@ -715,7 +742,7 @@ const Twobhk = () => {
         direction="column"
         align="center"
         justify="center"
-        pt="5rem"
+        pt="1.875rem"
         pb="3.125rem"
         px={{ base: "0.938rem", lg: "6.25rem" }}
       >
@@ -751,19 +778,15 @@ const Twobhk = () => {
             <SimpleGrid columns={{ base: "2", lg: "1" }}>
               <Flex pb="1.5rem" className="fadein revealOnce">
                 <Box
-                  borderRadius="50%"
-                  p={{ base: "0.625rem", lg: "1rem" }}
-                  bgGradient="linear(to-b,#B88746, #DFBD69)"
-                  direction="column"
-                  w={{ base: "3.125rem", lg: "5rem" }}
-                  h={{ base: "3.125rem", lg: "5rem" }}
+                  w={"5rem"}
+                  h={"5rem"}
                   align="center"
                   mr="1rem"
                   _hover={{ cursor: "pointer" }}
                 >
                   <Image
-                    w={{ base: "1.875rem", lg: "3.125rem" }}
-                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    w={"5rem"}
+                    h={"5rem"}
                     src={institute}
                   />
                 </Box>
@@ -814,19 +837,16 @@ const Twobhk = () => {
               </Flex>{" "}
               <Flex pb="1.5rem" className="fadein revealOnce">
                 <Box
-                  borderRadius="50%"
-                  p={{ base: "0.625rem", lg: "1rem" }}
-                  bgGradient="linear(to-b,#B88746, #DFBD69)"
                   direction="column"
-                  w={{ base: "3.125rem", lg: "5rem" }}
-                  h={{ base: "3.125rem", lg: "5rem" }}
+                  w={"5rem"}
+                  h={"5rem"}
                   align="center"
                   mr="1rem"
                   _hover={{ cursor: "pointer" }}
                 >
                   <Image
-                    w={{ base: "1.875rem", lg: "3.125rem" }}
-                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    w={"5rem"}
+                    h={"5rem"}
                     src={industry}
                   />
                 </Box>
@@ -1212,7 +1232,7 @@ const Twobhk = () => {
         </Flex>
       </Flex>
       {/* TENANTS */}
-      <Flex
+      <Flex  px="6.25rem"
         overflow="hidden"
         w="100%"
         pt="1.875rem"
@@ -1262,8 +1282,9 @@ const Twobhk = () => {
         </Flex>
       </Flex>
       {/* Floor plan */}
-      <Flex w="100%" h="100%" align="center" py="1.875rem" direction="column">
+      <Flex px="6.25rem" w="100%" h="100%" align="center" py="1.875rem" direction="column" overflow="hidden">
         <Text
+          className="slidein-top revealOnce"
           w="100%"
           align="center"
           fontFamily="goudy"
@@ -1275,9 +1296,9 @@ const Twobhk = () => {
         </Text>
         <Flex w="100%" h="100%" gap="1.563rem">
           <Flex w="58%">
-            <Image boxShadow="2xl" w="100%" h="100%" src={twoBhkFloor} />
+            <Image className="expandcar reveal" boxShadow="2xl" w="100%" h="100%" src={twoBhkFloor} />
           </Flex>
-          <Flex w="42%" h="100%" alignSelf="center" direction="column">
+          <Flex w="42%" h="100%" alignSelf="center" direction="column" className="fadein revealOnce">
             {" "}
             <Heading
               fontSize="1.5rem"
@@ -1521,7 +1542,7 @@ const Twobhk = () => {
           borderRadius="full"
           position="absolute"
           bottom="35%"
-          left="0"
+          left="5rem"
           h="3.125rem"
           w="3.125rem"
           transform={"translate(0%, -50%)"}
@@ -1541,7 +1562,7 @@ const Twobhk = () => {
           position="absolute"
           transform={"translate(0%, -50%)"}
           zIndex={2}
-          right="0"
+          right="5rem"
           bottom="35%"
           h="3.125rem"
           w="3.125rem"
@@ -1565,13 +1586,13 @@ const Twobhk = () => {
           </Slider>
           </Box>
       </Flex>
-      <Flex w="100%" h="100%" gap="3.125rem" pb="5rem" overflow="hidden">
-        <Flex w="60%" h="100%" direction="column" align="center" className="fadein revealOnce">
+      <Flex w="100%" h="100%" px="6.25rem" gap="3.125rem" pb="3.125rem" overflow="hidden">
+        <Flex pt="1.875rem" w="60%" h="100%" direction="column" align="center" className="fadein revealOnce">
           <Text fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
             7% ROI ON ARETE HOMES
           </Text>
           <Flex w h="100%" gap="1.875rem" justify="center" align="center">
-            <Image w="20.75rem" h="15.313rem" src={snarttwobhk} />
+            <Image className="expandcar revealOnce" w="20.75rem" h="15.313rem" src={snarttwobhk} />
             <Flex
               h="100%"
               direction="column"
@@ -1579,7 +1600,7 @@ const Twobhk = () => {
               fontFamily="avenir"
             >
               <Heading fontSize="1.25rem" pb="0.938rem">
-                SMART 2 BHK - 690 SQFT.
+                2 BHK - 690 SQFT.
               </Heading>
               <Heading fontSize="1.5rem">₹34 LAKHS</Heading>
               <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem">
@@ -1615,6 +1636,7 @@ const Twobhk = () => {
           </Button>
         </Flex>
         <Flex
+          pt="1.875rem"
           className="fadein revealOnce"
           w="40%"
           h="100%"
@@ -1622,9 +1644,9 @@ const Twobhk = () => {
           justify="center"
           direction="column"
           bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
-          bgRepeat="no-repeat"
-          bgPos="center"
-          bgSize="cover"
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
         >
           <Text
             fontSize="2.125rem"
@@ -1638,7 +1660,7 @@ const Twobhk = () => {
             GET AN EXPERT OPINION
           </Heading>{" "}
           <form>
-            <Flex w="100%" align="center" justify="center" direction="column">
+            <Flex pb="1.875rem" w="100%" align="center" justify="center" direction="column">
               <FormControl isRequired>
                 {" "}
                 <HStack w="100%" justify="space-between" pb="0.938rem">
@@ -1673,7 +1695,6 @@ const Twobhk = () => {
                   <Input
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
@@ -1731,12 +1752,23 @@ const Twobhk = () => {
             </Flex>
           </form>
         </Flex>
+        
       </Flex>
     </>
   );
 };
 
 const Threebhk = () => {
+  const easyPayRef = useRef(null);
+  const easyPayInView = useInView(easyPayRef, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
+  const fModelRef = useRef(null);
+  const fModelInView = useInView(fModelRef, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
   const [slider, setSlider] = useState(null);
   const settings = {
     // className: "center",
@@ -1767,75 +1799,141 @@ const Threebhk = () => {
     <>
       {isOpen?<ModalWindwow modalTitle={"ARETE HOMES"} modalImage={smartInvest} isOpen={isOpen} onClose={()=>close()} />:<></>}
       {/* Smart invest */}
-      <Flex w="100%" h="100%" direction="column" align="center" py="3.125rem">
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem">
+      <Flex
+         px="6.25rem"
+        overflow="hidden"
+        w="100%"
+        h="100%"
+        direction="column"
+        align="center"
+        pt="2.5rem"
+        pb="5rem"
+      >
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           SMART INVESTMENT
         </Text>
-        <Flex w="100%" h="100%" overflow="hidden">
-          <Flex w="49%" h="100%" overflow="hidden">
-            <Image _hover={{cursor:"pointer"}} onClick={()=>open()} src={smartInvest} className="Arete-Plaza-FloorPlan-Image reveal"/>
+        <Flex w="100%" h="100%">
+          <Flex w="100%" h="100%" overflow="hidden">
+            <Image onClick={()=>open()} src={areteInto1} className="expandcar reveal"/>
           </Flex>
-          <Flex
-            className="discobal-slidein-top reveal"
-            w="7.5%"
-            h="100%"
-            direction="column"
-            justify="flex-start"
-            align="center"
-            px="1.563rem"
-          >
-            <Divider
-              h="9.375rem"
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />
-          </Flex>
-          <Flex
-            w="43.5%"
-            h="100%"
-            direction="column"
-            justify="center"
-            fontFamily="avenir"
-          >
-            <Flex align="center" justify="space-between" justifySelf="center" overflow="hidden">
-              <Flex direction="column" className="fadein revealOnce">
-                <Heading fontSize="1.5rem" pb="0.938rem">
-                  ARETE HOMES
-                </Heading>
-                <Heading fontSize="1.25rem" pb="0.938rem">
-                  3 BHK - 1787 SQFT.
-                </Heading>
-                <Heading
-                  fontSize="2.125rem"
-                  pb="0.625rem"
-                  bgGradient="linear(to-b, #B88746, #DFBD69)"
-                  bgClip="text"
-                >
-                  ₹85 LAKHS
-                </Heading>
-                <Text fontFamily="veralaRound" fontSize="1rem" pb="2.188rem">
-                  Fully Furnished With White Goods
-                </Text>
+          <Flex w="100%" h="100%" overflow="hidden">
+            {" "}
+            <Flex
+              className="discobal-slidein-top reveal"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+              px="1.563rem"
+            >
+              <Divider
+                h="5.5rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
+            <Flex
+              overflow="x-hidden"
+              w="100%"
+              h="27rem"
+              direction="column"
+              justify="center"
+              fontFamily="avenir"
+            >
+              <Heading fontSize="1.5rem" pb="0.938rem">
+                    ARETE HOMES
+                  </Heading>
+                  <Heading fontSize="1.25rem" pb="0.938rem">
+                    3 BHK - 1787 SQFT.
+                  </Heading>
+                  <Heading
+                    fontSize="2.125rem"
+                    pb="0.625rem"
+                    bgGradient="linear(to-b, #B88746, #DFBD69)"
+                    bgClip="text"
+                  >
+                    ₹85 LAKHS
+                  </Heading>
+                  <Text fontFamily="veralaRound" fontSize="1rem" pb="1.563rem">
+                    Fully Furnished With White Goods
+                  </Text>
+              <Flex w="100%" gap="2.938rem" pb="1rem" className="fadein revealOnce">
+                <Flex w="100%" direction="column" align="center">
+                  <Image
+                    w="3.125rem"
+                    h="3.125rem"
+                    src={rentalYield}
+                    mb="0.625rem"
+                  />
+                  <Heading fontSize="1.5rem" mb="0.625rem">
+                    HIGH
+                  </Heading>
+                  <Text align="center" fontFamily="veralaRound" fontSize="1rem">
+                    Rental Yield
+                  </Text>
+                </Flex>
+                <Flex w="100%" direction="column" align="center">
+                  {" "}
+                  <Image
+                    w="3.125rem"
+                    h="3.125rem"
+                    src={rentalIncome}
+                    mb="0.625rem"
+                  />
+                  <Heading fontSize="1.5rem" mb="0.625rem">
+                    ₹ 48,000
+                  </Heading>
+                  <Text align="center" fontFamily="veralaRound" fontSize="1rem">
+                    Rental Income per month
+                  </Text>
+                </Flex>
+                <Flex w="100%" direction="column" align="center">
+                  <Image
+                    w="3.125rem"
+                    h="3.125rem"
+                    src={rentalyears}
+                    mb="0.625rem"
+                  />
+                  <Heading fontSize="1.5rem" mb="0.625rem">
+                    3 YEARS
+                  </Heading>
+                  <Text align="center" fontFamily="veralaRound" fontSize="1rem">
+                    Assured Rental Income
+                  </Text>
+                </Flex>
               </Flex>
+              <Heading
+                pb="1rem"
+                className="fadein-2sdelay revealOnce"
+                w="100%"
+                textAlign="center"
+                fontFamily="avenir"
+                fontSize="1.125rem"
+              >
+                ASSURED RENT > EMI
+              </Heading>
               <Button
                 className="fadein revealOnce"
+                alignSelf="center"
                 w="fit-content"
                 bgGradient="linear(to-b, #B88746 ,#DFBD69)"
                 color="white"
+                mr="0.625rem"
+                p="1rem"
                 fontSize="1rem"
                 fontFamily="avenir"
-                p="1rem"
+                fontWeight="bold"
                 _hover={{
                   bgGradient: "linear(to-b, #DFBD69, #B88746)",
                 }}
@@ -1844,76 +1942,11 @@ const Threebhk = () => {
                 I AM INTERESTED
               </Button>
             </Flex>
-            <Flex
-              className="fadein revealOnce"
-              w="100%"
-              gap="2.938rem"
-              pb="1.875rem"
-              textTransform="uppercase"
-            >
-              <Flex w="100%" direction="column" align="center">
-                <Image
-                  w="3.125rem"
-                  h="3.125rem"
-                  src={rentalYield}
-                  mb="0.625rem"
-                />
-                <Heading fontSize="1.5rem" mb="0.625rem">
-                  HIGH
-                </Heading>
-                <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                  Rental Yield
-                </Text>
-              </Flex>
-              <Flex w="100%" direction="column" align="center">
-                {" "}
-                <Image
-                  w="3.125rem"
-                  h="3.125rem"
-                  src={rentalIncome}
-                  mb="0.625rem"
-                />
-                <Heading fontSize="1.5rem" mb="0.625rem">
-                  ₹48,000
-                </Heading>
-                <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                  Rental Income per month
-                </Text>
-              </Flex>
-              <Flex w="100%" direction="column" align="center">
-                <Image
-                  w="3.125rem"
-                  h="3.125rem"
-                  src={rentalyears}
-                  mb="0.625rem"
-                />
-                <Heading fontSize="1.5rem" mb="0.625rem">
-                  3 YEARS
-                </Heading>
-                <Text
-                  align="center"
-                  fontFamily="veralaRound"
-                  fontSize="1rem"
-                  textTransform="uppercase"
-                >
-                  Assured Rental Income
-                </Text>
-              </Flex>
-            </Flex>
-            <Heading
-              className="fadein revealOnce"
-              w="100%"
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="2.125rem"
-            >
-              ASSURED RENT > EMI
-            </Heading>
           </Flex>
         </Flex>
       </Flex>
       {/* easy payment plan sec */}
-      <Flex w="100%" h="100%" direction="column" align="center" pb="5rem" overflow="hidden">
+      <Flex ref={easyPayRef}  px="6.25rem" w="100%" h="100%" direction="column" align="center" pb="5rem" overflow="hidden">
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           EASY PAYMENT PLAN
         </Text>
@@ -1931,21 +1964,22 @@ const Threebhk = () => {
             bgPos="center"
             bgSize="cover"
           >
-            <Heading align="center" fontSize="1.5rem" pb="1.563rem">
+            <Heading align="center" fontSize="1.5rem" pb="1.563rem" className="fadein revealOnce">
               PRINCIPAL INSTALLMENT
             </Heading>
-            <Flex w="100%" gap="0.625rem" align="flex-end" className="fadein revealOnce">
-              <Text w="60%" fontSize="1rem" fontFamily="veralaRound">
-                PRINCIPAL
-                <br /> AMOUNT
+            <Flex w="100%" gap="0.625rem" align="flex-end">
+              <Text w="60%" fontSize="1rem" fontFamily="veralaRound"  opacity={easyPayInView?1:0} transitionDelay={"1.50s"}>
+                Principal
+                <br /> Amount
               </Text>
-              <Text w="100%" fontSize="1rem" fontFamily="veralaRound">
-                HOME LOAN AMOUNT
+              <Text w="100%" fontSize="1rem" fontFamily="veralaRound" opacity={easyPayInView?1:0} transitionDelay={"2s"}>
+                Home Loan Amount
               </Text>
             </Flex>
-            <Flex w="100%" h="0.938rem" my="1.25rem" className="fadein revealOnce">
-              <Flex bgColor="#B88746" w="50%" />
+            <Flex w="100%" h="0.938rem" my="1rem">
+              <Flex bgColor="#B88746" w="50%" opacity={easyPayInView?1:0} transitionDelay={"1.50s"}/>
               <Divider
+                opacity={easyPayInView?1:0} transitionDelay={"2s"}
                 mt="-0.4rem"
                 h="1.563rem"
                 orientation="vertical"
@@ -1953,51 +1987,51 @@ const Threebhk = () => {
                 borderColor="#B88746"
                 bgColor="#B88746"
               />
-              <Flex w="100%" h="100%">
+              <Flex w="100%" h="100%" opacity={easyPayInView?1:0} transitionDelay={"2s"}>
                 <Box w="100%" bgGradient="linear(to-r, #DFBD69,#B88746)" />
               </Flex>
             </Flex>
-            <Flex w="100%" gap="0.625rem" pb="1.875rem" className="fadein-2sdelay revealOnce">
-              <Heading w="60%" fontSize="1rem" fontFamily="veralaRound">
-                ₹ 25 LAKHS
+            <Flex w="100%" gap="0.625rem" pb="1.875rem">
+              <Heading  opacity={easyPayInView?1:0} transitionDelay={"1.50s"} w="60%" fontSize="1rem" fontFamily="veralaRound">
+              ₹ 25 LAKHS
               </Heading>
-              <Heading w="100%" fontSize="1rem" fontFamily="veralaRound">
-                ₹ 60 LAKHS
+              <Heading  className="fadein-2sdelay revealOnce" w="100%" fontSize="1rem" fontFamily="veralaRound">
+              ₹ 60 LAKHS
               </Heading>
             </Flex>
             <Divider
-              className="fadein-4sdelay revealOnce"
+              opacity={easyPayInView?1:0} transitionDelay={"3s"}
               orientation="horizontal"
               border="1px solid"
               borderColor="#B88746"
               bgColor="#B88746"
               mb="0.938rem"
             />
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
+            <Flex w="100%" justify="space-between" pb="1rem" opacity={easyPayInView?1:0} transitionDelay={"3s"}>
               <Text fontSize="1rem" fontFamily="veralaRound">
-                TOTAL INVESTMENT
+                Total Investment
               </Text>
               <Heading fontSize="1.5rem">₹ 85,00,000</Heading>
             </Flex>
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
+            <Flex w="100%" justify="space-between" pb="1.25rem" opacity={easyPayInView?1:0} transitionDelay={"3s"}>
               <Text fontSize="1rem" fontFamily="veralaRound">
-                ASSURED RENT PER MONTH
+                Assured Rent Per Month
               </Text>
               <Heading fontSize="1.5rem">₹ 48,000</Heading>
             </Flex>{" "}
             <Heading
-              className="fadein-4sdelay revealOnce"
+              opacity={easyPayInView?1:0} transitionDelay={"3s"}
               w="100%"
               textAlign="center"
               fontFamily="avenir"
-              fontSize="1.5rem"
+              fontSize="1.125rem"
             >
               ASSURED RENT > EMI
             </Heading>
           </Flex>
           <Flex
             w="100%"
-            h="100%"
+            h="24.375rem"
             direction="column"
             p="1.875rem"
             align="center"
@@ -2008,7 +2042,7 @@ const Threebhk = () => {
             bgPos="center"
             bgSize="cover"
           >
-            <Heading fontSize="1.5rem" pb="1.875rem">
+            <Heading fontSize="1.5rem" pb="1.875rem" className="fadein revealOnce">
               HOME LOAN
             </Heading>
             <Flex w="100%" gap="2.938rem" pb="1.875rem" className="fadein revealOnce">
@@ -2020,10 +2054,10 @@ const Threebhk = () => {
                   mb="0.625rem"
                 />
                 <Heading fontSize="1.25rem" mb="0.625rem">
-                  ₹62 LAKHS
+                ₹62 LAKHS
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                  LOAN AMOUNT
+                  Loan Amount
                 </Text>
               </Flex>
               <Flex w="100%" direction="column" align="center">
@@ -2038,7 +2072,7 @@ const Threebhk = () => {
                   25 YEARS
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                  TENURE
+                  Tenure
                 </Text>
               </Flex>
               <Flex w="100%" direction="column" align="center">
@@ -2052,26 +2086,26 @@ const Threebhk = () => {
                   6.7% p.a.
                 </Heading>
                 <Text align="center" fontFamily="veralaRound" fontSize="1rem">
-                  INTEREST RATE
+                  Interest Rate
                 </Text>
               </Flex>
             </Flex>
             <Divider
-              className="fadein-4sdelay revealOnce"
+              opacity={easyPayInView?1:0} transitionDelay={"3s"}
               orientation="horizontal"
               border="1px solid"
               borderColor="#B88746"
               bgColor="#B88746"
               mb="0.938rem"
             />{" "}
-            <Flex w="100%" justify="space-between" pb="1.25rem" className="fadein-4sdelay revealOnce">
+            <Flex w="100%" justify="space-between" pb="1.25rem" opacity={easyPayInView?1:0} transitionDelay={"3s"}>
               <Text fontSize="1rem" fontFamily="veralaRound">
-                EMI PER MONTH
+                EMI Per Month
               </Text>
               <Heading fontSize="1.5rem">₹41,265</Heading>
             </Flex>
             <Button
-              className="fadein-4sdelay revealOnce"
+              opacity={easyPayInView?1:0} transitionDelay={"3s"}
               alignSelf="center"
               w="fit-content"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
@@ -2093,12 +2127,13 @@ const Threebhk = () => {
       </Flex>
       {/* FINANCIAL MODEL sec */}
       <Flex
+        ref={fModelRef}
         overflow="hidden"
         w="100%"
         h="100%"
         direction="column"
         align="center"
-        pb="1.875rem"
+        pb="3.125rem"
         px="6.25rem"
       >
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
@@ -2116,7 +2151,7 @@ const Threebhk = () => {
             <Heading textAlign="center" pb="3.125rem" fontSize="1.5rem" className="fadein revealOnce">
               INCOME ON THE INVESTMENT
             </Heading>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein reveaOnce">
+            <Flex w="100%" align="center" justify="flex-start" className="fadein revealOnce">
               {" "}
               <Image
                 w="3.125rem"
@@ -2125,23 +2160,23 @@ const Threebhk = () => {
                 mr="0.625rem"
               />
               <Heading color="#D4AD4B" fontSize="1.25rem">
-                RENTAL INCOME ₹5.7 LAKHS
+              RENTAL INCOME ₹5.7 LAKHS
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-2sdelay revealOnce">
+            <Text color="#B88746"  w="5rem" fontSize="1.563rem" opacity={fModelInView?1:0}>
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein-2sdelay revealOnce">
+            <Flex w="100%" align="center" justify="flex-start" opacity={fModelInView?1:0} transitionDelay={"2s"}>
               {" "}
               <Image w="3.125rem" h="3.125rem" src={tax} mr="0.625rem" />
               <Heading color="#B78C23" fontSize="1.25rem">
-                TAX SAVINGS UPTO ₹2 LAKH
+              TAX SAVINGS UPTO ₹2 LAKH
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-4sdelay revealOnce">
+            <Text color="#B88746" w="5rem" fontSize="1.563rem" opacity={fModelInView?1:0} transitionDelay={"2s"}>
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein-4sdelay revealOnce">
+            <Flex w="100%" align="center" justify="flex-start" opacity={fModelInView?1:0} transitionDelay={"4s"}>
               {" "}
               <Image
                 w="3.125rem"
@@ -2150,17 +2185,17 @@ const Threebhk = () => {
                 mr="0.625rem"
               />
               <Heading color="#B88746" fontSize="1.25rem">
-                APPRECIATION EXPECTED 5% PER YEAR
+              APPRECIATION EXPECTED 5% PER YEAR
               </Heading>
             </Flex>
-            <Text color="#B88746" fontSize="1.563rem" my="0.938rem" className="fadein-6sdelay revealOnce">
+            <Text  w="5rem" color="#B88746" fontSize="1.563rem" opacity={fModelInView?1:0} transitionDelay={"4s"}>
               +
             </Text>
-            <Flex w="100%" align="center" justify="flex-start" className="fadein-6sdelay revealOnce">
+            <Flex w="100%" align="center" justify="flex-start" opacity={fModelInView?1:0} transitionDelay={"6s"}>
               {" "}
               <Image w="3.125rem" h="3.125rem" src={pmay} mr="0.625rem" />
               <Heading color="#8D6229" fontSize="1.25rem">
-                PMAY BENIFIT ₹2.67 LAKHS
+              PMAY BENIFIT ₹2.67 LAKHS
               </Heading>
             </Flex>
           </Flex>
@@ -2199,7 +2234,7 @@ const Threebhk = () => {
             direction="column"
           >
             <Heading
-              className="fadein revealOnce"
+              opacity={fModelInView?1:0}
               w="100%"
               textAlign="center"
               fontSize="1.5rem"
@@ -2214,13 +2249,13 @@ const Threebhk = () => {
                 gap="0.313rem"
                 justify="flex-end"
               >
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
-                  ₹14 L
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+                ₹14 L
                 </Heading>
-                <Flex h="6.875rem" bgColor="#8D6229" className="fadein-6sdelay revealOnce"/>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
+                <Flex h="6.875rem" bgColor="#8D6229" opacity={fModelInView?1:0} transitionDelay={"6s"}/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -2229,12 +2264,12 @@ const Threebhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
-                  ₹12 L
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+                ₹12 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -2243,12 +2278,12 @@ const Threebhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
-                  ₹12 L
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+                ₹12 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="6.25rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="6.25rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -2257,12 +2292,12 @@ const Threebhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
-                  ₹12.4 L
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+                ₹12.4 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -2271,12 +2306,12 @@ const Threebhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
-                  ₹12.4 L
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+                ₹12.4 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
               <Flex
                 w="100%"
@@ -2285,17 +2320,17 @@ const Threebhk = () => {
                 justify="flex-end"
               >
                 {" "}
-                <Heading textAlign="center" fontSize="1.125rem" className="fadein-6sdelay revealOnce">
-                  ₹12.4 L
+                <Heading textAlign="center" fontSize="1.125rem" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+                ₹12.4 L
                 </Heading>
-                <Flex h="5rem" bgColor="#B88746" className="fadein-4sdelay revealOnce"/>
-                <Flex h="3.125rem" bgColor="#B78C23" className="fadein-2sdelay revealOnce"/>
-                <Flex h="7.5rem" bgColor="#D4AD4B" className="fadein reveaOnce"/>
+                <Flex h="5rem" bgColor="#B88746" opacity={fModelInView?1:0} transitionDelay={"4s"}/>
+                <Flex h="3.125rem" bgColor="#B78C23" opacity={fModelInView?1:0} transitionDelay={"2s"}/>
+                <Flex h="7.5rem" bgColor="#D4AD4B" opacity={fModelInView?1:0}/>
               </Flex>
             </Flex>
-            <Divider border="1px solid" borderColor="#B88746" className="fadein reveaOnce"/>
+            <Divider border="1px solid" borderColor="#B88746" opacity={fModelInView?1:0}/>
             <Flex
-              className="fadein reveaOnce"
+              opacity={fModelInView?1:0}
               w="100%"
               fontFamily="veralaRound"
               fontSize="1rem"
@@ -2312,17 +2347,20 @@ const Threebhk = () => {
             </Flex>
           </Flex>
         </Flex>
-        <Flex h="100%" align="center" p="1rem" pt="1.875rem" boxShadow="2xl" className="fadein-6sdelay revealOnce">
-        <Heading
+        <Flex h="100%" align="center"my="1rem" p="1rem" boxShadow="2xl" bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+          <Heading
             w="100%"
             fontFamily="avenir"
             textAlign="center"
-            fontSize="2.125rem"
+            fontSize="1.5rem"
             bgGradient="linear(to-b, #B88746,#DFBD69)"
             bgClip="text"
           >
             TOTAL INCOME IN 6 YEARS{" "}
-            <Text as={"span"} fontSize="1.25rem">
+            <Text as={"span"} fontSize="1rem">
               APPROX.
             </Text>{" "}
             ₹76 LAKHS
@@ -2338,7 +2376,7 @@ const Threebhk = () => {
         direction="column"
         align="center"
         justify="center"
-        pt="5rem"
+        pt="1.875rem"
         pb="3.125rem"
         px={{ base: "0.938rem", lg: "6.25rem" }}
       >
@@ -2374,19 +2412,15 @@ const Threebhk = () => {
             <SimpleGrid columns={{ base: "2", lg: "1" }}>
               <Flex pb="1.5rem" className="fadein revealOnce">
                 <Box
-                  borderRadius="50%"
-                  p={{ base: "0.625rem", lg: "1rem" }}
-                  bgGradient="linear(to-b,#B88746, #DFBD69)"
-                  direction="column"
-                  w={{ base: "3.125rem", lg: "5rem" }}
-                  h={{ base: "3.125rem", lg: "5rem" }}
+                  w={"5rem"}
+                  h={"5rem"}
                   align="center"
                   mr="1rem"
                   _hover={{ cursor: "pointer" }}
                 >
                   <Image
-                    w={{ base: "1.875rem", lg: "3.125rem" }}
-                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    w={"5rem"}
+                    h={"5rem"}
                     src={institute}
                   />
                 </Box>
@@ -2437,19 +2471,16 @@ const Threebhk = () => {
               </Flex>{" "}
               <Flex pb="1.5rem" className="fadein revealOnce">
                 <Box
-                  borderRadius="50%"
-                  p={{ base: "0.625rem", lg: "1rem" }}
-                  bgGradient="linear(to-b,#B88746, #DFBD69)"
                   direction="column"
-                  w={{ base: "3.125rem", lg: "5rem" }}
-                  h={{ base: "3.125rem", lg: "5rem" }}
+                  w={"5rem"}
+                  h={"5rem"}
                   align="center"
                   mr="1rem"
                   _hover={{ cursor: "pointer" }}
                 >
                   <Image
-                    w={{ base: "1.875rem", lg: "3.125rem" }}
-                    h={{ base: "1.875rem", lg: "3.125rem" }}
+                    w={"5rem"}
+                    h={"5rem"}
                     src={industry}
                   />
                 </Box>
@@ -2835,8 +2866,9 @@ const Threebhk = () => {
         </Flex>
       </Flex>
       {/* Floor plan */}
-      <Flex w="100%" h="100%" align="center" py="1.875rem" direction="column">
+      <Flex px="6.25rem" w="100%" h="100%" align="center" py="1.875rem" direction="column" overflow="hidden">
         <Text
+          className="slidein-top revealOnce"
           w="100%"
           align="center"
           fontFamily="goudy"
@@ -2848,9 +2880,9 @@ const Threebhk = () => {
         </Text>
         <Flex w="100%" h="100%" gap="1.563rem">
           <Flex w="58%">
-            <Image boxShadow="2xl" w="100%" h="100%" src={twoBhkFloor} />
+            <Image className="expandcar reveal" boxShadow="2xl" w="100%" h="100%" src={twoBhkFloor} />
           </Flex>
-          <Flex w="42%" h="100%" alignSelf="center" direction="column">
+          <Flex w="42%" h="100%" alignSelf="center" direction="column" className="fadein revealOnce">
             {" "}
             <Heading
               fontSize="1.5rem"
@@ -3056,7 +3088,15 @@ const Threebhk = () => {
       {/*more amenities*/}
       <MoreAmenities />
       {/* our investors */}
-      <Flex w="100%" h="100%" py="3.125rem" direction="column" align="center" overflow="hidden">
+      <Flex
+        overflow="hidden"
+        w="100%"
+        h="100%"
+        py="3.125rem"
+        px="6.25rem"
+        direction="column"
+        align="center"
+      >
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           OUR INVESTORS
         </Text>
@@ -3086,7 +3126,7 @@ const Threebhk = () => {
           borderRadius="full"
           position="absolute"
           bottom="35%"
-          left="0"
+          left="5rem"
           h="3.125rem"
           w="3.125rem"
           transform={"translate(0%, -50%)"}
@@ -3106,7 +3146,7 @@ const Threebhk = () => {
           position="absolute"
           transform={"translate(0%, -50%)"}
           zIndex={2}
-          right="0"
+          right="5rem"
           bottom="35%"
           h="3.125rem"
           w="3.125rem"
@@ -3130,13 +3170,13 @@ const Threebhk = () => {
           </Slider>
           </Box>
       </Flex>
-      <Flex w="100%" h="100%" gap="3.125rem" pb="5rem" overflow="hidden">
-        <Flex w="60%" h="100%" direction="column" align="center" className="fadein revealOnce">
+      <Flex w="100%" h="100%" px="6.25rem" gap="3.125rem" pb="3.125rem" overflow="hidden">
+        <Flex pt="1.875rem" w="60%" h="100%" direction="column" align="center" className="fadein revealOnce">
           <Text fontFamily="goudy" fontSize="2.125rem" pb="1.875rem">
             7% ROI ON ARETE HOMES
           </Text>
           <Flex w h="100%" gap="1.875rem" justify="center" align="center">
-            <Image w="20.75rem" h="15.313rem" src={snarttwobhk} />
+            <Image className="expandcar revealOnce" w="20.75rem" h="15.313rem" src={snarttwobhk} />
             <Flex
               h="100%"
               direction="column"
@@ -3144,7 +3184,7 @@ const Threebhk = () => {
               fontFamily="avenir"
             >
               <Heading fontSize="1.25rem" pb="0.938rem">
-                SMART 2 BHK - 690 SQFT.
+                2 BHK - 690 SQFT.
               </Heading>
               <Heading fontSize="1.5rem">₹34 LAKHS</Heading>
               <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem">
@@ -3180,6 +3220,7 @@ const Threebhk = () => {
           </Button>
         </Flex>
         <Flex
+          pt="1.875rem"
           className="fadein revealOnce"
           w="40%"
           h="100%"
@@ -3187,9 +3228,9 @@ const Threebhk = () => {
           justify="center"
           direction="column"
           bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
-          bgRepeat="no-repeat"
-          bgPos="center"
-          bgSize="cover"
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
         >
           <Text
             fontSize="2.125rem"
@@ -3203,7 +3244,7 @@ const Threebhk = () => {
             GET AN EXPERT OPINION
           </Heading>{" "}
           <form>
-            <Flex w="100%" align="center" justify="center" direction="column">
+            <Flex pb="1.875rem" w="100%" align="center" justify="center" direction="column">
               <FormControl isRequired>
                 {" "}
                 <HStack w="100%" justify="space-between" pb="0.938rem">
@@ -3238,7 +3279,6 @@ const Threebhk = () => {
                   <Input
                     fontSize="1rem"
                     fontFamily="avenir"
-                    lineHeight="1.5rem"
                     w="18.75rem"
                     h="2.5rem"
                     bgColor="#E5E5E5"
@@ -3296,6 +3336,7 @@ const Threebhk = () => {
             </Flex>
           </form>
         </Flex>
+        
       </Flex>
     </>
   );
