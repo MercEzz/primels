@@ -47,19 +47,32 @@ import snarttwobhk from "../Invest imgs/INTRO1.jpg";
 import ModalWindwow from "../modalWindow";
 import ModalImage from "../modalImage";
 import { useInView } from "framer-motion";
+import adani from "./tenLogo/ADANI.png";
+import bhel from "./tenLogo/BHEL.jpg";
+import godrej from "./tenLogo/godrej.png";
+import hero from "./tenLogo/HERO.jpg";
+import keller from "./tenLogo/Keller.png";
+import kelloggs from "./tenLogo/Kelloggs.png";
+import kobelco from "./tenLogo/KOBELCO.png";
+import linde from "./tenLogo/LINDE.png";
+import lnt from "./tenLogo/LnT.png";
+import siemens from "./tenLogo/SIEMENS.png";
+import velammal from "./tenLogo/VELAMMAL.png";
+import yanmar from "./tenLogo/YANMAR.png";
 
-const tenantsGrid = [{img:null,title:"SIEMENS"},
-    {img:null,title:"KELLER"}
-    ,{img:null,title:"KOBELCO"}
-    ,{img:null,title:"adani"}
-    ,{img:null,title:"Yanmar"}
-    ,{img:null,title:"Hero"}
-    ,{img:null,title:"L & T"}
-    ,{img:null,title:"bhel"}
-    ,{img:null,title:"The Velammal"}
-    ,{img:null,title:"Linde"}
-    ,{img:null,title:"godrej"}
-    ,{img:null,title:"Kellogs"}];
+const tenantsGrid = [
+    {img:siemens,title:"SIEMENS"},
+    {img:keller,title:"KELLER"}
+    ,{img:kobelco,title:"KOBELCO"}
+    ,{img:adani,title:"adani"}
+    ,{img:yanmar,title:"Yanmar"}
+    ,{img:hero,title:"Hero"}
+    ,{img:lnt,title:"L & T"}
+    ,{img:bhel,title:"bhel"}
+    ,{img:velammal,title:"The Velammal"}
+    ,{img:linde,title:"Linde"}
+    ,{img:godrej,title:"godrej"}
+    ,{img:kelloggs,title:"Kelloggs"}];
 
 const SkyhighInvest = () => {
   const [active, setActive] = useState(window.localStorage.getItem('areteInvest')?JSON.parse(window.localStorage.getItem('areteInvest')):false);
@@ -1295,7 +1308,7 @@ const Twobhk = () => {
             <SimpleGrid className="fadein revealOnce" columns={3}>
               {tenantsGrid.map((company)=>(
               <GridItem key={company.title}>
-                <Image border="1px solid #B88746" h="5rem" w="10rem" src={company.img} alt={company.title}/>
+                <Image border="1px solid #B88746" p={company.title==="Kelloggs"||company.title==="The Velammal"?"":"0.9rem"} h="4rem" w="10rem" src={company.img} alt={company.title}/>
               </GridItem>))
               }
             </SimpleGrid>
@@ -2935,7 +2948,7 @@ const Threebhk = () => {
             <SimpleGrid className="fadein revealOnce" columns={3}>
               {tenantsGrid.map((company)=>(
               <GridItem key={company.title}>
-                <Image border="1px solid #B88746" h="5rem" w="10rem" src={company.img} alt={company.title}/>
+                <Image border="1px solid #B88746" p={company.title==="Kelloggs"||company.title==="The Velammal"?"":"0.9rem"} h="4rem" w="10rem" src={company.img} alt={company.title}/>
               </GridItem>))
               }
             </SimpleGrid>
