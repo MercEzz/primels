@@ -16,6 +16,7 @@ import {
   Input,
   Checkbox,
   SimpleGrid,
+  GridItem,
 } from "@chakra-ui/react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
@@ -123,6 +124,7 @@ const SkyhighInvest = () => {
 };
 
 const Twobhk = () => {
+
   const easyPayRef = useRef(null);
   const easyPayInView = useInView(easyPayRef, {
     once: true,
@@ -134,7 +136,18 @@ const Twobhk = () => {
     margin: "0px 100px -50px 0px",
   });
   const [slider, setSlider] = useState(null);
-
+  const tenantsGrid = [{img:null,title:"SIEMENS"},
+    {img:null,title:"KELLER"}
+    ,{img:null,title:"KOBELCO"}
+    ,{img:null,title:"adani"}
+    ,{img:null,title:"Yanmar"}
+    ,{img:null,title:"Hero"}
+    ,{img:null,title:"L & T"}
+    ,{img:null,title:"bhel"}
+    ,{img:null,title:"The Velammal"}
+    ,{img:null,title:"Linde"}
+    ,{img:null,title:"godrej"}
+    ,{img:null,title:"Kellogs"}];
   const settings = {
     // className: "center",
     centerMode: true,
@@ -1240,11 +1253,11 @@ const Twobhk = () => {
         direction="column"
         align="center"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" className="serv-text-up reveal">
+        <Text fontFamily="goudy" fontSize="2.5rem" className="slidein-top revealOnce">
           TENANTS
         </Text>
         <Flex w="100%" justify="center" overflow="hidden">
-          <Flex w="60%">carousel</Flex>
+            <TestimonialCarousel />
           <Flex
             className="discobal-slidein-top reveal"
             w="10%"
@@ -1272,12 +1285,18 @@ const Twobhk = () => {
             />
           </Flex>
           <Flex w="30%" direction="column" justify="center" overflow="hidden">
-            <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem" className="sliderightdisco reveal">
+            <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem" className="fadein revealOnce">
               Arete Serviced Apartments company providing safe, hygienic and
               premium co-living spaces to students, working professionals and
               organizations.
             </Text>
-            logo grid
+            <SimpleGrid className="fadein revealOnce" columns={3}>
+              {tenantsGrid.map((company)=>(
+              <GridItem key={company.title}>
+                <Image border="1px solid #B88746" h="5rem" w="10rem" src={company.img} alt={company.title}/>
+              </GridItem>))
+              }
+            </SimpleGrid>
           </Flex>
         </Flex>
       </Flex>
@@ -3342,8 +3361,8 @@ const Threebhk = () => {
   );
 };
 
-const TestimonialCarousel = (props) => {
-  const { tenantsImg } = props;
+const TestimonialCarousel = () => {
+  const tenantsImg = [{img:roiImg}, {img:areteInto1}, {img:roiImg}];
   const settings = {
     infinite: true,
     autoplay: true,
@@ -3354,6 +3373,7 @@ const TestimonialCarousel = (props) => {
     pauseOnHover: false,
   };
   return (
+    <Flex w="60%">
     <Box
       position={"relative"}
       width={"full"}
@@ -3372,26 +3392,28 @@ const TestimonialCarousel = (props) => {
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       />
 
-      <Slider {...settings} style={{ display: "flex" }}>
+      <Slider {...settings}>
         {tenantsImg.map((tes) => (
+          
           <Flex
             align="center"
             justify="space-between"
             flexDirection="column"
             w="100%"
             mt="1.875rem"
-            key={tes}
+            key={tes.img}
             height={"100%"}
           >
-            <Image w="100%" h="100%" src={tes} />
+            <Image className="expandcar reveal" w="100%" h="26rem" src={tes.img} />
           </Flex>
         ))}
       </Slider>
     </Box>
+    </Flex>
   );
 };
 
-const tenantsImg = [roiImg, roiImg, roiImg];
+
 
 export default SkyhighInvest;
 
