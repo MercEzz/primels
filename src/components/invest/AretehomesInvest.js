@@ -744,7 +744,7 @@ const Twobhk = () => {
         <Flex h="100%" align="center"my="1rem" p="1rem" boxShadow="2xl" bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgPos="center"
-      bgSize="cover" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+      bgSize="cover" opacity={fModelInView?1:0} transitionDelay={"6.5s"}>
           <Heading
             w="100%"
             fontFamily="avenir"
@@ -1260,22 +1260,27 @@ const Twobhk = () => {
         </Flex>
       </Flex>
       {/* TENANTS */}
-      <Flex  px="6.25rem"
+      <Flex
         overflow="hidden"
         w="100%"
         pt="1.875rem"
-        pb="3.125rem"
+        pb="1.875rem"
         direction="column"
         align="center"
+        bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" className="slidein-top revealOnce">
+        <Text fontFamily="goudy" pb="1.875rem" fontSize="2.5rem" className="slidein-top revealOnce">
           TENANTS
         </Text>
         <Flex w="100%" justify="center" overflow="hidden">
             <TestimonialCarousel />
           <Flex
+            pt
             className="discobal-slidein-top reveal"
-            w="10%"
+            w="5rem"
             h="100%"
             direction="column"
             justify="flex-start"
@@ -1306,17 +1311,48 @@ const Twobhk = () => {
               organizations.
             </Text>
             <SimpleGrid className="fadein revealOnce" columns={3}>
-              {tenantsGrid.map((company)=>(
-              <GridItem key={company.title}>
-                <Image border="1px solid #B88746" p={company.title==="Kelloggs"||company.title==="The Velammal"?"":"0.9rem"} h="4rem" w="10rem" src={company.img} alt={company.title}/>
-              </GridItem>))
-              }
+              <GridItem borderLeft="1px solid #B88746" borderTop="1px solid #B88746">
+                <Image p={"0.9rem"} mt="0.5rem" h="3.125rem" w="10rem" src={tenantsGrid[0].img} alt={tenantsGrid[0].title}/>
+              </GridItem>
+              <GridItem borderLeft="1px solid #B88746" borderTop="1px solid #B88746">
+                <Image p={"0.9rem"} h="4rem" w="10rem" src={tenantsGrid[1].img} alt={tenantsGrid[1].title}/>
+              </GridItem>
+              <GridItem borderLeft="1px solid #B88746" borderTop="1px solid #B88746" borderRight="1px solid #B88746">
+                <Image mt="0.5rem" p={"0.9rem"} h="3.125rem" w="10rem" src={tenantsGrid[2].img} alt={tenantsGrid[2].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderLeft="1px solid #B88746" borderTop="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[3].img} alt={tenantsGrid[3].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderLeft="1px solid #B88746" borderTop="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[4].img} alt={tenantsGrid[4].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderLeft="1px solid #B88746" borderTop="1px solid #B88746" borderRight="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[5].img} alt={tenantsGrid[5].title}/>
+              </GridItem>
+              <GridItem  borderLeft="1px solid #B88746" borderTop="1px solid #B88746">
+                <Image p={"0.9rem"} ml="1.3rem" h="5rem" w="5.5rem" src={tenantsGrid[6].img} alt={tenantsGrid[6].title}/>
+              </GridItem>
+              <GridItem borderLeft="1px solid #B88746" borderTop="1px solid #B88746">
+                <Image p={"0.9rem"} ml="1.3rem" h="5rem" w="6rem" src={tenantsGrid[7].img} alt={tenantsGrid[7].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderLeft="1px solid #B88746" borderTop="1px solid #B88746" borderRight="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[8].img} alt={tenantsGrid[8].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderBottom="1px solid #B88746" borderLeft="1px solid #B88746" borderTop="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[9].img} alt={tenantsGrid[9].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderBottom="1px solid #B88746" borderLeft="1px solid #B88746" borderTop="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[10].img} alt={tenantsGrid[10].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderBottom="1px solid #B88746" borderLeft="1px solid #B88746" borderTop="1px solid #B88746" borderRight="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[11].img} alt={tenantsGrid[11].title}/>
+              </GridItem>
             </SimpleGrid>
           </Flex>
         </Flex>
       </Flex>
       {/* Floor plan */}
-      <Flex px="6.25rem" w="100%" h="100%" align="center" py="1.875rem" direction="column" overflow="hidden">
+      <Flex  px="6.25rem" w="100%" h="100%" align="center" pt="3.125rem" pb="3.125rem" direction="column" overflow="hidden">
         <Text
           className="slidein-top revealOnce"
           w="100%"
@@ -1325,6 +1361,7 @@ const Twobhk = () => {
           fontSize="2.5rem"
           textTransform="uppercase"
           pb="1.875rem"
+          
         >
           FLOOR PLAN
         </Text>
@@ -1413,7 +1450,7 @@ const Twobhk = () => {
         h="100%"
         direction="column"
         px="6.25rem"
-        py="3.125rem"
+        py="1.875rem"
         align="center"
       >
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
@@ -2384,7 +2421,7 @@ const Threebhk = () => {
         <Flex h="100%" align="center"my="1rem" p="1rem" boxShadow="2xl" bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgPos="center"
-      bgSize="cover" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+      bgSize="cover" opacity={fModelInView?1:0} transitionDelay={"6.5s"}>
           <Heading
             w="100%"
             fontFamily="avenir"
@@ -2900,22 +2937,27 @@ const Threebhk = () => {
         </Flex>
       </Flex>
       {/* TENANTS */}
-      <Flex  px="6.25rem"
+      <Flex
         overflow="hidden"
         w="100%"
         pt="1.875rem"
-        pb="3.125rem"
+        pb="1.875rem"
         direction="column"
         align="center"
+        bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+            bgRepeat="no-repeat"
+            bgPos="center"
+            bgSize="cover"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" className="slidein-top revealOnce">
+        <Text fontFamily="goudy" pb="1.875rem" fontSize="2.5rem" className="slidein-top revealOnce">
           TENANTS
         </Text>
         <Flex w="100%" justify="center" overflow="hidden">
             <TestimonialCarousel />
           <Flex
+            pt
             className="discobal-slidein-top reveal"
-            w="10%"
+            w="5rem"
             h="100%"
             direction="column"
             justify="flex-start"
@@ -2946,17 +2988,48 @@ const Threebhk = () => {
               organizations.
             </Text>
             <SimpleGrid className="fadein revealOnce" columns={3}>
-              {tenantsGrid.map((company)=>(
-              <GridItem key={company.title}>
-                <Image border="1px solid #B88746" p={company.title==="Kelloggs"||company.title==="The Velammal"?"":"0.9rem"} h="4rem" w="10rem" src={company.img} alt={company.title}/>
-              </GridItem>))
-              }
+              <GridItem borderLeft="1px solid #B88746" borderTop="1px solid #B88746">
+                <Image p={"0.9rem"} mt="0.5rem" h="3.125rem" w="10rem" src={tenantsGrid[0].img} alt={tenantsGrid[0].title}/>
+              </GridItem>
+              <GridItem borderLeft="1px solid #B88746" borderTop="1px solid #B88746">
+                <Image p={"0.9rem"} h="4rem" w="10rem" src={tenantsGrid[1].img} alt={tenantsGrid[1].title}/>
+              </GridItem>
+              <GridItem borderLeft="1px solid #B88746" borderTop="1px solid #B88746" borderRight="1px solid #B88746">
+                <Image mt="0.5rem" p={"0.9rem"} h="3.125rem" w="10rem" src={tenantsGrid[2].img} alt={tenantsGrid[2].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderLeft="1px solid #B88746" borderTop="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[3].img} alt={tenantsGrid[3].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderLeft="1px solid #B88746" borderTop="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[4].img} alt={tenantsGrid[4].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderLeft="1px solid #B88746" borderTop="1px solid #B88746" borderRight="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[5].img} alt={tenantsGrid[5].title}/>
+              </GridItem>
+              <GridItem  borderLeft="1px solid #B88746" borderTop="1px solid #B88746">
+                <Image p={"0.9rem"} ml="1.3rem" h="5rem" w="5.5rem" src={tenantsGrid[6].img} alt={tenantsGrid[6].title}/>
+              </GridItem>
+              <GridItem borderLeft="1px solid #B88746" borderTop="1px solid #B88746">
+                <Image p={"0.9rem"} ml="1.3rem" h="5rem" w="6rem" src={tenantsGrid[7].img} alt={tenantsGrid[7].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderLeft="1px solid #B88746" borderTop="1px solid #B88746" borderRight="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[8].img} alt={tenantsGrid[8].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderBottom="1px solid #B88746" borderLeft="1px solid #B88746" borderTop="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[9].img} alt={tenantsGrid[9].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderBottom="1px solid #B88746" borderLeft="1px solid #B88746" borderTop="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[10].img} alt={tenantsGrid[10].title}/>
+              </GridItem>
+              <GridItem>
+                <Image borderBottom="1px solid #B88746" borderLeft="1px solid #B88746" borderTop="1px solid #B88746" borderRight="1px solid #B88746" p={"0.9rem"} h="5rem" w="10rem" src={tenantsGrid[11].img} alt={tenantsGrid[11].title}/>
+              </GridItem>
             </SimpleGrid>
           </Flex>
         </Flex>
       </Flex>
       {/* Floor plan */}
-      <Flex px="6.25rem" w="100%" h="100%" align="center" py="1.875rem" direction="column" overflow="hidden">
+      <Flex  px="6.25rem" w="100%" h="100%" align="center" pt="3.125rem" pb="3.125rem" direction="column" overflow="hidden">
         <Text
           className="slidein-top revealOnce"
           w="100%"
@@ -2965,6 +3038,7 @@ const Threebhk = () => {
           fontSize="2.5rem"
           textTransform="uppercase"
           pb="1.875rem"
+          
         >
           FLOOR PLAN
         </Text>
@@ -3053,7 +3127,7 @@ const Threebhk = () => {
         h="100%"
         direction="column"
         px="6.25rem"
-        py="3.125rem"
+        py="1.875rem"
         align="center"
       >
         <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
@@ -3444,7 +3518,7 @@ const TestimonialCarousel = () => {
     pauseOnHover: false,
   };
   return (
-    <Flex w="60%">
+    <Flex w="50%">
     <Box
       position={"relative"}
       width={"full"}
@@ -3466,11 +3540,10 @@ const TestimonialCarousel = () => {
       <Slider {...settings}>
         {tenantsImg.map((tes) => (
           <Flex
-            align="center"
+            align="flex-start"
             justify="space-between"
             flexDirection="column"
             w="100%"
-            mt="1.875rem"
             key={tes.img}
             height={"100%"}
           >

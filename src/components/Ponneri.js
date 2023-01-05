@@ -6,28 +6,33 @@ import { useRef } from "react";
 
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import pgclogo from "./arete-homes imgs/Asset 1.png"
-import ponneri from "./commercial-properties imgs/gymkhana.png";
+import ponneri from "./homepage-imgs/1 - PGC entrance art.png";
+import multiSports from "./homepage-imgs/2 - Multi Sports Arena.jpg";
+import swim from "./homepage-imgs/3 - Swimming Pool High Res.tif";
+import hall from "./homepage-imgs/4-PGC Banquet Hall .jpg";
+import golf from "./homepage-imgs/5 - Open Golf Putting Area.png";
+import bar from "./homepage-imgs/6-PGC Sports Bar.jpg";
+import gym from "./homepage-imgs/7 - gym.tif";
 //import pgclogo from "/arete-homes imgs/Asset 1.png";
 
 const Ponneri = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const animateX = useAnimation();
-  const animateY = useAnimation();
-  const animateFade = useAnimation();
-
-  const MtnFlx = motion(Flex);
-  const MtnHd = motion(Heading);
-  const MtnDvdr = motion(Divider);
-  const MtnBtn = motion(Button);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
   const [assetIndex,setAssetIndex] = useState(0);
   const assets = [
     {title:"ONE CLUB MANY FACETS",img:ponneri,},
-    {title:"7% RENTAL INCOME",img:ponneri,},
-    {},
+    {title:"MULTI SPORTS ARENA",img:multiSports,},
+    {title:"SWIMMING POOL",img:swim,},
+    {title:"BANQUET HALL",img:hall,},
+    {title:"OPEN GOLF PUTTING AREA",img:golf,},
+    {title:"SPORTS BAR",img:bar,},
+    {title:"GYM",img:gym,},
   ]
   const nextHandle=()=>{
-    if(assetIndex===2){
+    if(assetIndex===6){
       setAssetIndex(0);
     }
     else{
@@ -36,25 +41,22 @@ const Ponneri = () => {
   }
   const prevHandle=()=>{
     if(assetIndex===0){
-      setAssetIndex(2);
+      setAssetIndex(6);
     }
     else{
       setAssetIndex(assetIndex-1);
     }
 
   }
-  const addAutoClicker=()=>{
+  useEffect(() => {
     setTimeout(()=>{
       nextHandle();
     },3000);
-  }
-  /*useEffect(() => {
-    addAutoClicker();
     return()=>{
       clearTimeout();
     }
-  },[]);*/
-  useEffect(() => {
+  });
+  /*useEffect(() => {
     if (isInView) {
       animateX.start({
         x: 0,
@@ -68,7 +70,7 @@ const Ponneri = () => {
         opacity: 1,
       });
     }
-  }, [isInView, animateX, animateY, animateFade]);
+  }, [isInView, animateX, animateY, animateFade]);*/
   return (
     <Flex ref={ref} w="100%" h="100%" py="1.875rem" mt="3.125rem"pl="100px"
     bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
@@ -76,19 +78,17 @@ const Ponneri = () => {
       bgPos="center"
       bgSize="cover">
       <Flex w="100%" h="100%" direction="column">
-        <Flex w="100%" align="center" justify="flex-start" pb="1.875rem">
+        <Flex ml="20%" w="100%" align="center" justify="flex-start" pb="1.875rem" overflow="hidden">
           {/* <Image src="/images/logo.png" /> */}
-          <MtnHd
-            initial={{ opacity: 0, x: -50 }}
-            animate={animateX}
-            transition={{ duration: 2, type: "just" }}
+          <Heading
+            className="slidein-top revealOnce"
             fontSize="40px"
             fontWeight="400"
             fontFamily="goudy"
             pr="10px"
           >
-          <Flex>
-          <Image src={pgclogo} h="2.5rem" w="2.5rem" mr="1rem" />
+          <Flex >
+          <Image src={pgclogo} h="2.5rem" w="2.5rem" ml="1rem" />
           <Spacer w="3.5rem" pos="relative">
           <Text pos="absolute" bottom="0.3rem" as="span" fontSize="1.5rem">
             PVT.
@@ -96,29 +96,26 @@ const Ponneri = () => {
           </Spacer>
             PONNERI GYMKHANA CLUB
             </Flex>
-          </MtnHd>
+          </Heading>
         </Flex>
         <Flex w="100%" h="100%">
-          <MtnFlx
-            initial={{ opacity: 0}}
-            animate={animateX}
-            transition={{ delay: 1.5, duration: 2, type: "just" }}
+          <Flex
             w="60%"
             h="100%"
           >
-            <Image w="100%" h="25rem" src={assets[assetIndex].img} />{" "}
-          </MtnFlx>
+            <Image className="expandcar reveal" w="100%" h="25rem" src={assets[assetIndex].img} />{" "}
+          </Flex>
           <Flex align="flex-start" pr="100px">
-            <MtnFlx
-              initial={{ opacity: 0}}
-              animate={animateY}
-              transition={{ delay: 1.5, duration: 2, type: "just" }}
+            <Flex
+              className="fadein revealOnce"
+              transition={"all 2s 2s"}
               h="100%"
               direction="column"
               align="center"
               px="1.563rem"
             >
               <Divider
+                
                 h="8.375rem"
                 orientation="vertical"
                 border="3px solid"
@@ -134,12 +131,10 @@ const Ponneri = () => {
                 borderRadius="50%"
                 my="1"
               />
-            </MtnFlx>
-            <MtnFlx
+            </Flex>
+            <Flex
               pos="relative"
-              initial={{ opacity: 0}}
-              animate={animateX}
-              transition={{ delay: 1.5, duration: 2, type: "just" }}
+              className="fadein revealOnce"
               w="100%"
               h="25rem"
               direction="column"
@@ -149,10 +144,8 @@ const Ponneri = () => {
               <Heading fontSize="1.5rem" fontFamily="avenir" mb="25px">
                 {assets[assetIndex].title}
               </Heading>
-              <MtnBtn
-                initial={{ opacity: 0 }}
-                animate={animateFade}
-                transition={{ delay: 3, duration: 2, type: "just" }}
+              <Button
+                className="fadein revealOnce"
                 w="206px"
                 h="51px"
                 p="16px"
@@ -166,7 +159,7 @@ const Ponneri = () => {
                 _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
               >
                 BECOME A MEMBER
-              </MtnBtn>
+              </Button>
               <IconButton
           aria-label="left-arrow"
           variant="outline"
@@ -182,7 +175,7 @@ const Ponneri = () => {
           onClick={() => {
             clearTimeout();
             prevHandle();
-            addAutoClicker();
+           
           }}
         >
           <AiOutlineLeft color="#B88746" size="2.5rem" />
@@ -203,12 +196,11 @@ const Ponneri = () => {
           onClick={() => {
             clearTimeout();
             nextHandle();
-            addAutoClicker();
           }}
         >
           <AiOutlineRight color="#B88746" size="2.5rem" />
         </IconButton>
-            </MtnFlx>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

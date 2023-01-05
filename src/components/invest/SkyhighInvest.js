@@ -632,7 +632,7 @@ const SkyhighInvest = () => {
         <Flex h="100%" align="center"my="1rem" p="1rem" boxShadow="2xl" bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgPos="center"
-      bgSize="cover" opacity={fModelInView?1:0} transitionDelay={"6s"}>
+      bgSize="cover" opacity={fModelInView?1:0} transitionDelay={"6.5s"}>
           <Heading
             w="100%"
             fontFamily="avenir"
