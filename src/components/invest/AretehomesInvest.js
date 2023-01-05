@@ -48,6 +48,19 @@ import ModalWindwow from "../modalWindow";
 import ModalImage from "../modalImage";
 import { useInView } from "framer-motion";
 
+const tenantsGrid = [{img:null,title:"SIEMENS"},
+    {img:null,title:"KELLER"}
+    ,{img:null,title:"KOBELCO"}
+    ,{img:null,title:"adani"}
+    ,{img:null,title:"Yanmar"}
+    ,{img:null,title:"Hero"}
+    ,{img:null,title:"L & T"}
+    ,{img:null,title:"bhel"}
+    ,{img:null,title:"The Velammal"}
+    ,{img:null,title:"Linde"}
+    ,{img:null,title:"godrej"}
+    ,{img:null,title:"Kellogs"}];
+
 const SkyhighInvest = () => {
   const [active, setActive] = useState(window.localStorage.getItem('areteInvest')?JSON.parse(window.localStorage.getItem('areteInvest')):false);
   useEffect(() => {
@@ -136,18 +149,7 @@ const Twobhk = () => {
     margin: "0px 100px -50px 0px",
   });
   const [slider, setSlider] = useState(null);
-  const tenantsGrid = [{img:null,title:"SIEMENS"},
-    {img:null,title:"KELLER"}
-    ,{img:null,title:"KOBELCO"}
-    ,{img:null,title:"adani"}
-    ,{img:null,title:"Yanmar"}
-    ,{img:null,title:"Hero"}
-    ,{img:null,title:"L & T"}
-    ,{img:null,title:"bhel"}
-    ,{img:null,title:"The Velammal"}
-    ,{img:null,title:"Linde"}
-    ,{img:null,title:"godrej"}
-    ,{img:null,title:"Kellogs"}];
+  
   const settings = {
     // className: "center",
     centerMode: true,
@@ -2884,6 +2886,62 @@ const Threebhk = () => {
           </Flex>
         </Flex>
       </Flex>
+      {/* TENANTS */}
+      <Flex  px="6.25rem"
+        overflow="hidden"
+        w="100%"
+        pt="1.875rem"
+        pb="3.125rem"
+        direction="column"
+        align="center"
+      >
+        <Text fontFamily="goudy" fontSize="2.5rem" className="slidein-top revealOnce">
+          TENANTS
+        </Text>
+        <Flex w="100%" justify="center" overflow="hidden">
+            <TestimonialCarousel />
+          <Flex
+            className="discobal-slidein-top reveal"
+            w="10%"
+            h="100%"
+            direction="column"
+            justify="flex-start"
+            align="center"
+            px="1.562rem"
+          >
+            <Divider
+              h="9.375rem"
+              orientation="vertical"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+            />
+            <Box
+              height="1.875rem"
+              width="1.875rem"
+              backgroundColor="#DFBD69"
+              border="3px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+              my="1"
+            />
+          </Flex>
+          <Flex w="30%" direction="column" justify="center" overflow="hidden">
+            <Text fontFamily="veralaRound" fontSize="1rem" pb="1.875rem" className="fadein revealOnce">
+              Arete Serviced Apartments company providing safe, hygienic and
+              premium co-living spaces to students, working professionals and
+              organizations.
+            </Text>
+            <SimpleGrid className="fadein revealOnce" columns={3}>
+              {tenantsGrid.map((company)=>(
+              <GridItem key={company.title}>
+                <Image border="1px solid #B88746" h="5rem" w="10rem" src={company.img} alt={company.title}/>
+              </GridItem>))
+              }
+            </SimpleGrid>
+          </Flex>
+        </Flex>
+      </Flex>
       {/* Floor plan */}
       <Flex px="6.25rem" w="100%" h="100%" align="center" py="1.875rem" direction="column" overflow="hidden">
         <Text
@@ -3394,7 +3452,6 @@ const TestimonialCarousel = () => {
 
       <Slider {...settings}>
         {tenantsImg.map((tes) => (
-          
           <Flex
             align="center"
             justify="space-between"
