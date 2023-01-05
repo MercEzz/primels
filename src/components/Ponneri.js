@@ -105,9 +105,9 @@ const Ponneri = () => {
           >
             <Image className="expandcar reveal" w="100%" h="25rem" src={assets[assetIndex].img} />{" "}
           </Flex>
-          <Flex align="flex-start" pr="100px">
+          <Flex align="flex-start" pr="100px" overflow="hidden">
             <Flex
-              className="fadein revealOnce"
+              className="slidein-top reveal"
               transition={"all 2s 2s"}
               h="100%"
               direction="column"
