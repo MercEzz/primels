@@ -127,6 +127,8 @@ const ServicedApartments = () => {
   const isInView = useInView(smartHomeRef, { once: true });
   const locRef = useRef(null);
   const locIsInView = useInView(locRef, { once: true });
+  const aretGalRef = useRef(null);
+  const aretGalIsInView = useInView(locRef, { once: true });
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
     
@@ -462,6 +464,7 @@ const ServicedApartments = () => {
       <Flex w="100%" h="100%">
         {" "}
         <Box
+          className="fadein revealOnce"
           position={"relative"}
           height={"100%"}
           width={"full"}
@@ -500,6 +503,7 @@ const ServicedApartments = () => {
             ))}
           </Slider>
           <IconButton
+            className="fadein revealOnce"
             aria-label="left-arrow"
             variant="outline"
             borderColor="#B88746"
@@ -520,6 +524,7 @@ const ServicedApartments = () => {
           </IconButton>
 
           <IconButton
+            className="fadein revealOnce"
             aria-label="right-arrow"
             borderRadius="full"
             variant="outline"
@@ -543,7 +548,7 @@ const ServicedApartments = () => {
     </Flex>
       {/** premium smart homes 2nd section **/}
       <Flex w="100%" h="100%" px="6.25rem" pt="1.875rem" pb="3.125rem" overflow="hidden">
-        <Flex w="30%">
+        <Flex w="30%" className="expandcar reveal">
         <embed
             height="100%"
             width="100%"
@@ -580,7 +585,7 @@ const ServicedApartments = () => {
             my="1"
           />
         </Flex>
-        <Flex w="60%" h="100%" align="flex-start" direction="column">
+        <Flex w="60%" h="100%" align="flex-start" direction="column" className="fadein revealOnce">
           {" "}
           <TableContainer pb="1rem">
             <Table>
@@ -1207,10 +1212,11 @@ const ServicedApartments = () => {
         </Flex>
       </Flex>
       {/*Arete Homes Img Galary*/}
-      <Flex w="100%" h="100%" pt="0.938rem">
+      <Flex ref={aretGalRef} w="100%" h="100%" pt="0.938rem" pb="1.563rem">
         <Flex w="100%" h="100%">
           {" "}
           <Flex
+            overflow="hidden"
             w="45%"
             // pos="absolute"
             direction="column"
@@ -1218,11 +1224,12 @@ const ServicedApartments = () => {
             pl="6.25rem"
             
           >
-            <Text w="100%" fontFamily="goudy" fontSize="2.5rem" pb="1.563rem" className="serv-text-up reveal">
+            <Text w="100%" fontFamily="goudy" mt="5rem" fontSize="2.5rem" pb="1rem" className="slidein-top revealOnce">
               A LIFE WHERE YOU DON’T HAVE TO WAIT FOR WEEKENDS TO ENJOY
             </Text>
             <Text
-              w="50%"
+              className="fadein revealOnce"
+              w="100%"
               fontFamily="veralaRound"
               fontSize="1.125rem"
               mb="10rem"
@@ -1241,22 +1248,33 @@ const ServicedApartments = () => {
             pr="0.938rem"
           >
             <Flex w="100%" h="100%" justify="flex-end"pr="100px">
+            <Image
+                mr="0.7rem"
+                mt="4.7rem"
+                w="15.625rem"
+                h="9.375rem"
+                zIndex={5}
+                objectPosition="center"
+                objectFit="cover"
+                left="0"
+                src={meditating}
+                pos="relative"
+              />
             <Flex direction="column" pos="relative"  mr="0.625rem">
                 <Image
-                alignSelf="end"
-                w="12.5rem"
-                h="9.375rem"
+                w="9.375rem"
+                h="6.25rem"
                 // pos="absolute"
                 objectPosition="center"
                 objectFit="contain"
                 src={hall}
               />
-              <Image mt="0.625rem" w="18.75rem" h="13.2rem" src={kidsplaying} />
+              <Image mt="0.625rem" w="9.375rem" h="7.187rem" src={kidsplaying} />
               </Flex>
               <Image
-                mt="4.688rem"
-                w="12.5rem"
-                h="18.75rem"
+                mt="3.125rem"
+                w="6.25rem"
+                h="10.938rem"
                 // pos="absolute"
                 top="5.625rem"
                 objectPosition="70%"
@@ -1277,49 +1295,41 @@ const ServicedApartments = () => {
             >
               {" "}
               {/*invisible mr="35.625rem"  */ }
-              <Box pos="relative">
               <Image
+                opacity="0"
                 mt="5.083rem"
-                ml="-2.625rem"
-                w="15.625rem"
-                h="15.625rem"
+                w="6.625rem"
+                h="12.5rem"
                 src={planting}
-                pos="relative"
-                left="0"
               />
-              </Box>
+              <Image
+                pos="absolute"
+                mt="0.625rem"
+                w="9.375rem"
+                h="12.5rem"
+                src={planting}
+              />
               <Flex direction="column" pos="absolute"
-                  mt="0.5rem"
-                  right="19.375rem"  mr="100px">
+                  mt=".7rem"
+                  right="16rem" mr="100px">
                 <Image
                   alignSelf="end"
-                  w="15.625rem"
-                  h="20.313rem"
+                  w="12.5rem"
+                  h="15.625rem"
                   zIndex="3"
                   objectFit="contain"
                   objectPosition="cover"
                   src={badminton}
                 />
-                <Image
-                mr="0.2rem"
-                mt="0.625rem"
-                w="21.875rem"
-                h="12.5rem"
-                zIndex={5}
-                objectPosition="center"
-                objectFit="cover"
-                left="0"
-                src={meditating}
-                pos="relative"
-              />
+                
               </Flex>
                 <Flex mr="100px"
                   pos="absolute"
                   right="0" 
                   mt="0.625rem"direction="column">
                 <Image
-                  h="14.063rem"
-                  w="18.75rem"
+                  h="9.375rem"
+                  w="15.625rem"
                   zIndex="5"
                   objectFit="cover"
                   objectPosition="80%"
@@ -1330,34 +1340,14 @@ const ServicedApartments = () => {
                 <Image
                 zIndex={5}
                 mt="0.625rem"
-                w="18.75rem"
-                h="12.5rem"
+                w="15.625rem"
+                h="9.375rem"
                 src={yoga}
                 pos="relative"
                 left="0"
                 />
                 </Flex>
                 
-            </Flex>
-            <Flex
-              pos="relative"
-              w="100%"
-              h="100%"
-              gap="0.938rem"
-              align="flex-end"
-              // ml="-19.7rem"
-              // pt="0.938rem"
-            >
-              <Image
-                opacity="0"
-                w="25rem"
-                h="16.125rem"
-                objectPosition="center"
-                objectFit="cover"
-                left="0"
-                src={meditating}
-                pos="relative"
-              />
             </Flex>
           </Flex>
         </Flex>
@@ -1881,7 +1871,7 @@ const ServicedApartments = () => {
         </Flex>
       </Flex>
     </Flex>
-      <Flex w="100%" h="100%" pb="5rem" px="6.25rem">
+      <Flex w="100%" h="100%" pb="5rem" px="6.25rem" className="fadein revealOnce" >
         <Flex w="60%" h="100%" direction="column" mr="5%">
           <Heading
             pt="1.875rem"
