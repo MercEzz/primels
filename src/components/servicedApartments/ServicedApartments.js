@@ -1304,6 +1304,7 @@ const ServicedApartments = () => {
               />
               <Image
                 pos="absolute"
+                right="35.1rem"
                 mt="0.625rem"
                 w="9.375rem"
                 h="12.5rem"
