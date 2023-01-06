@@ -26,9 +26,10 @@ import {
   Container,
   Checkbox,
   Icon,
+  IconButton,
 } from "@chakra-ui/react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import banner from "../serviced apartments imgs/MIVAN TECHNOLOGY TOWER.jpg";
 import apartment from "../serviced apartments imgs/serviced apartments icons/smart way of living - 1st.svg";
 import time from "../serviced apartments imgs/serviced apartments icons/smart way of living-2nd.svg";
@@ -102,9 +103,30 @@ import yanmar from "../serviced apartments imgs/YANMAR.png";
 import DropDown from "./DropDown";
 import "./serviceaptAnimation.css"
 import "./serviceaptStyle.css"
+import { revealOnce } from "../../hooks/util";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { useInView } from "framer-motion";
+import career1 from "../serviced apartments imgs/1.JPG";
+import career2 from "../serviced apartments imgs/2.jpg";
+import career3 from "../serviced apartments imgs/3.JPG";
+import career4 from "../serviced apartments imgs/4.jpg";
+import career5 from "../serviced apartments imgs/5.jpg";
+import career6 from "../serviced apartments imgs/6.JPG";
+import career7 from "../serviced apartments imgs/7.jpg";
+import lamp from "../serviced apartments imgs/lamp.jpg";
+import career9 from "../serviced apartments imgs/9.jpeg";
+
+
 const ServicedApartments = () => {
+  const images = [career1, career2, career3, career4, career5, career6, career7,lamp,career9];
+  const [slider, setSlider] = useState(null);
+  let [currentSlide, setCurrentSlide] = useState(1);
+  
+  const smartHomeRef = useRef(null);
+  const isInView = useInView(smartHomeRef, { once: true });
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
+    
     try{
 
     for (var i = 0; i <= reveals.length; i++) {
@@ -127,10 +149,25 @@ const ServicedApartments = () => {
   }
   useLayoutEffect(()=>{
     window.addEventListener("scroll", reveal);
+    window.addEventListener("scroll", revealOnce);
     return()=>{
       window.removeEventListener("scroll", reveal);
+      window.removeEventListener("scroll", revealOnce);
     }
   });
+  const settings = {
+    draggable: true,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+    afterChange: () => {
+      setCurrentSlide(currentSlide++);
+    },
+  };
   return (
     <>
       {/* Banner section  */}
@@ -252,16 +289,16 @@ const ServicedApartments = () => {
         px="6.25rem"
         align="center"
         direction="column"
-        pt="5rem"
+        pt="3.125rem"
         pb="3.125rem"
       >
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="serv-text-up reveal">
+        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.875rem" className="slidein-top revealOnce">
           A SMART WAY OF LIVING
         </Text>
         <Flex w="100%" h="100%" gap="1.25rem">
           <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
-            <Image mb="1rem" src={apartment} className="fadein reveal"/>
-            <Flex w="100%" align="center" mb="1rem" className="discoleft1 reveal">
+            <Image mb="1rem" src={apartment} className="fadein revealOnce"/>
+            <Flex w="100%" align="center" mb="1rem" className="discoleft1 reveal" pr=".5rem">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -280,7 +317,7 @@ const ServicedApartments = () => {
               />{" "}
             </Flex>
             <Heading
-              className="fadein reveal"
+              className="fadein revealOnce"
               w="100%"
               fontFamily="avenir"
               fontSize="1.25rem"
@@ -290,8 +327,8 @@ const ServicedApartments = () => {
             </Heading>
           </Flex>
           <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
-            <Image mb="1rem" src={time} className="fadein2 reveal"/>
-            <Flex w="100%" align="center" mb="1rem" className="discoleft2 reveal">
+            <Image mb="1rem" src={time} className="fadein-2sdelay revealOnce"/>
+            <Flex w="100%" align="center" mb="1rem" className="discoleft2 reveal" pr=".5rem">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -310,7 +347,7 @@ const ServicedApartments = () => {
               />{" "}
             </Flex>
             <Heading
-              className="fadein2 reveal"
+              className="fadein-2sdelay revealOnce"
               w="100%"
               fontFamily="avenir"
               fontSize="1.25rem"
@@ -320,8 +357,8 @@ const ServicedApartments = () => {
             </Heading>
           </Flex>
           <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
-            <Image mb="1rem" src={ringbell} className="fadein3 reveal"/>
-            <Flex w="100%" align="center" mb="1rem" className="discoleft3 reveal">
+            <Image mb="1rem" src={ringbell} className="fadein-4sdelay revealOnce"/>
+            <Flex w="100%" align="center" mb="1rem" className="discoleft3 reveal" pr=".5rem">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -340,7 +377,7 @@ const ServicedApartments = () => {
               />{" "}
             </Flex>
             <Heading
-              className="fadein3 reveal"
+              className="fadein-4sdelay revealOnce"
               w="100%"
               fontFamily="avenir"
               fontSize="1.25rem"
@@ -350,8 +387,8 @@ const ServicedApartments = () => {
             </Heading>
           </Flex>
           <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
-            <Image mb="1rem" src={edit} className="fadein4 reveal"/>
-            <Flex w="100%" align="center" mb="1rem" className="discoleft4 reveal">
+            <Image mb="1rem" src={edit} className="fadein-6sdelay revealOnce"/>
+            <Flex w="100%" align="center" mb="1rem" className="discoleft4 reveal" pr=".5rem">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -370,7 +407,7 @@ const ServicedApartments = () => {
               />{" "}
             </Flex>
             <Heading
-              className="fadein4 reveal"
+              className="fadein-6sdelay revealOnce"
               w="100%"
               fontFamily="avenir"
               fontSize="1.25rem"
@@ -383,34 +420,126 @@ const ServicedApartments = () => {
       </Flex>
       {/** PREMIUM SMART HOMES section  **/}
       <Flex
-        w="100%"
-        h="100%"
-        align="center"
-        direction="column"
-        py="1.875rem"
+      overflow="hidden"
+      ref={smartHomeRef}
+      w="100%"
+      h="100%"
+      direction="column"
+      textAlign="center"
+      px="1.562rem"
+      pt="1.875rem"
+      pb="1.875rem"
+      bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
+    >
+      <Heading
         px="6.25rem"
-        overflow="hidden"
+        className="serv-text-up reveal"
+        fontSize="2.5rem"
+        fontFamily="goudy"
+        fontWeight="400"
+        pb="1.563rem"
       >
-        {" "}
-        <Text fontFamily="goudy" fontSize="2.5rem" pb="1.563rem" className="serv-text-up reveal">
-          PREMIUM SMART HOMES
-        </Text>
-        <Text
-          className="fadein reveal"
-          textAlign="center"
-          fontFamily="goudy"
-          fontSize="1.125rem"
-          pb="1.563rem"
-        >
-          Arete Homes is a well-planned smart township that offers a taste of
+        PREMIUM SMART HOMES
+      </Heading>
+      <Text
+        px="6.25rem"
+        className="fadein reveal"
+        fontSize="1rem"
+        fontFamily="veralaRound"
+        pb="1.563rem"
+      >
+        Arete Homes is a well-planned smart township that offers a taste of
           luxury in a rental flat at affordable pricing that feels owned. Our
           services cater for all - Bachelors, Students, Working Genre and
           Family.
-        </Text>
-        Carousels
+      </Text>
+      <Flex w="100%" h="100%">
+        {" "}
+        <Box
+          position={"relative"}
+          height={"100%"}
+          width={"full"}
+          overflow={"hidden"}
+          pl="4.687rem"
+          pr="3.437rem"
+        >
+          {/* CSS files for react-slick */}
+          <link
+            rel="stylesheet"
+            type="text/css"
+            charSet="UTF-8"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          />
+          {/* Slider */}
+          <Slider {...settings} ref={(slider) => setSlider(slider)}>
+            {images.map((prime) => (
+              <Flex pr="20px">
+                <Image
+                  key={prime}
+                  w="100%"
+                  h="25rem"
+                  position="relative"
+                  objectPosition="center top"
+                  backgroundRepeat="no-repeat"
+                  objectFit="cover"
+                  src={prime}
+                  boxShadow="2px 4px 6px rgba(0,0,0, .2)"
+                />
+              </Flex>
+            ))}
+          </Slider>
+          <IconButton
+            aria-label="left-arrow"
+            variant="outline"
+            borderColor="#B88746"
+            borderRadius="full"
+            position="absolute"
+            top="50%"
+            left="0"
+            h="3.125rem"
+            w="3.125rem"
+            transform={"translate(0%, -50%)"}
+            zIndex={2}
+            onClick={() => {
+              slider?.slickPrev();
+              setCurrentSlide(currentSlide--);
+            }}
+          >
+            <AiOutlineLeft color="#B88746" size="2.5rem" />
+          </IconButton>
+
+          <IconButton
+            aria-label="right-arrow"
+            borderRadius="full"
+            variant="outline"
+            borderColor="#B88746"
+            position="absolute"
+            transform={"translate(0%, -50%)"}
+            zIndex={2}
+            right="0"
+            top="50%"
+            h="3.125rem"
+            w="3.125rem"
+            onClick={() => {
+              slider?.slickNext();
+              // setCurrentSlide(currentSlide++);
+            }}
+          >
+            <AiOutlineRight color="#B88746" size="2.5rem" />
+          </IconButton>
+        </Box>
       </Flex>
+    </Flex>
       {/** premium smart homes 2nd section **/}
-      <Flex w="100%" h="100%" px="6.25rem" py="3.125rem" overflow="hidden">
+      <Flex w="100%" h="100%" px="6.25rem" pt="1.875rem" pb="3.125rem" overflow="hidden">
         <Flex w="30%">video</Flex>
         <Flex
           className="discoup reveal"
@@ -599,9 +728,12 @@ const ServicedApartments = () => {
           </SimpleGrid>
         </Flex>
       </Flex>
-      <Flex w="100%" h="100%" direction="column" px="6.25rem" py="1.875rem" overflow="hidden">
+      <Flex bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover" w="100%" h="100%" direction="column" px="6.25rem" py="1.875rem" overflow="hidden">
         <Text
-          className="serv-text-up reveal"
+          className="slidein-top revealOnce"
           textAlign="center"
           fontFamily="goudy"
           fontSize="2.5rem"
@@ -610,7 +742,7 @@ const ServicedApartments = () => {
           PREMIUM HOME SERVICES
         </Text>
         <Flex
-          className="fadein reveal"
+          className="fadein revealOnce"
           w="100%"
           h="100%"
           align="center"
@@ -633,7 +765,7 @@ const ServicedApartments = () => {
           ))}
         </Flex>{" "}
         <Flex
-          className="fadein reveal"
+          className="fadein revealOnce"
           w="100%"
           h="100%"
           align="center"
@@ -657,9 +789,9 @@ const ServicedApartments = () => {
         </Flex>
       </Flex>
       {/* amenities sec */}
-      <Flex w="100%" h="100%" pt="3.125rem" pb="0.938rem" direction="column" overflow="hidden">
+      <Flex w="100%" h="100%" pt="3.125rem" pb="0.938rem" px="100px" direction="column" overflow="hidden">
         <Text
-          className="serv-text-up reveal"
+          className="Slidein revealOnce"
           w="100%"
           textAlign="center"
           fontFamily="goudy"
@@ -670,7 +802,7 @@ const ServicedApartments = () => {
         </Text>
         <Flex overflow="hidden">
         <Heading
-          className="serv-text-down reveal"
+          className="fadein revealOnce"
           w="100%"
           textAlign="center"
           fontFamily="avenir"
@@ -986,7 +1118,7 @@ const ServicedApartments = () => {
           >
             <Flex overflow="hidden">
             <Heading
-              className="serv-text-up reveal"
+              className="fadein revealOnce"
               fontFamily="avenir"
               color="black"
               fontSize="2.125rem"
@@ -997,7 +1129,7 @@ const ServicedApartments = () => {
             </Flex>
             <Flex overflow="hidden">
             <Heading
-              className="serv-text-down reveal"
+              className="fadein-2sdelay revealOnce"
               fontFamily="avenir"
               color="white"
               fontSize="2.125rem"
@@ -1019,7 +1151,7 @@ const ServicedApartments = () => {
               SCHEDULE A VISIT
             </Button>
           </Flex>
-          <Flex w="45%" h="100%" pos="relative" align="center" justify="center">
+          <Flex w="45%" h="100%" pos="relative" align="center" justify="center" pr="100px">
             <Flex
               w="100%"
               h="100%"
@@ -1587,6 +1719,10 @@ const ServicedApartments = () => {
           align="center"
           justify="center"
           direction="column"
+          bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
+      bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
         >
           <Text
             fontSize="2.5rem"

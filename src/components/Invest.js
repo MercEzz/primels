@@ -138,7 +138,7 @@ const Invest = () => {
           px="2.5rem"
         >
           <Divider
-             h="5rem"
+             h="5.5rem"
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
