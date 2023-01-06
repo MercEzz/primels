@@ -1249,6 +1249,9 @@ const ServicedApartments = () => {
           >
             <Flex w="100%" h="100%" justify="flex-end"pr="100px">
             <Image
+                opacity={aretGalIsInView?1:0}
+                transitionDuration={"2s"}
+                transitionDelay={"2s"}
                 mr="0.7rem"
                 mt="4.7rem"
                 w="15.625rem"
@@ -1262,6 +1265,9 @@ const ServicedApartments = () => {
               />
             <Flex direction="column" pos="relative"  mr="0.625rem">
                 <Image
+                opacity={aretGalIsInView?1:0}
+                transitionDuration={"2s"}
+                transitionDelay={"0s"}
                 w="9.375rem"
                 h="6.25rem"
                 // pos="absolute"
@@ -1269,9 +1275,16 @@ const ServicedApartments = () => {
                 objectFit="contain"
                 src={hall}
               />
-              <Image mt="0.625rem" w="9.375rem" h="7.187rem" src={kidsplaying} />
+              <Image
+              opacity={aretGalIsInView?1:0}
+              transitionDuration={"2s"}
+              transitionDelay={"3.5s"}
+               mt="0.625rem" w="9.375rem" h="7.187rem" src={kidsplaying} />
               </Flex>
               <Image
+                opacity={aretGalIsInView?1:0}
+                transitionDuration={"2s"}
+                transitionDelay={"0s"}
                 mt="3.125rem"
                 w="6.25rem"
                 h="10.938rem"
@@ -1303,6 +1316,9 @@ const ServicedApartments = () => {
                 src={planting}
               />
               <Image
+                opacity={aretGalIsInView?1:0}
+                transitionDuration={"2s"}
+                transitionDelay={"3.5s"}
                 pos="absolute"
                 right="35.1rem"
                 mt="0.625rem"
@@ -1314,6 +1330,9 @@ const ServicedApartments = () => {
                   mt=".7rem"
                   right="16rem" mr="100px">
                 <Image
+                  opacity={aretGalIsInView?1:0}
+                  transitionDuration={"2s"}
+                  transitionDelay={"0s"}
                   alignSelf="end"
                   w="12.5rem"
                   h="15.625rem"
@@ -1329,6 +1348,9 @@ const ServicedApartments = () => {
                   right="0" 
                   mt="0.625rem"direction="column">
                 <Image
+                  opacity={aretGalIsInView?1:0}
+                  transitionDuration={"2s"}
+                  transitionDelay={"2s"}
                   h="9.375rem"
                   w="15.625rem"
                   zIndex="5"
@@ -1339,6 +1361,9 @@ const ServicedApartments = () => {
                   src={tabletenis}
                 />
                 <Image
+                opacity={aretGalIsInView?1:0}
+                transitionDuration={"2s"}
+                transitionDelay={"3.5s"}
                 zIndex={5}
                 mt="0.625rem"
                 w="15.625rem"
