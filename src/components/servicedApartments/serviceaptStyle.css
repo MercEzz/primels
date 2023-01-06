@@ -47,10 +47,24 @@
     animation: discoleft1 1 2s linear;
     transform: translateX(0rem);
 }
+.discoleft1.revealOnce{
+    transform: translateX(-20rem);
+}
+.discoleft1.revealOnce.active{
+    animation: discoleft1 1 2s linear;
+    transform: translateX(0rem);
+}
 .discoleft2.reveal{
     transform: translateX(-20rem);
 }
 .discoleft2.reveal.active{
+    animation: discoleft2 1 4s linear;
+    transform: translateX(0rem);
+}
+.discoleft2.revealOnce{
+    transform: translateX(-20rem);
+}
+.discoleft2.revealOnce.active{
     animation: discoleft2 1 4s linear;
     transform: translateX(0rem);
 }
@@ -61,10 +75,24 @@
     animation: discoleft3 1 6s linear;
     transform: translateX(0rem);
 }
+.discoleft3.revealOnce{
+    transform: translateX(-20rem);
+}
+.discoleft3.revealOnce.active{
+    animation: discoleft3 1 6s linear;
+    transform: translateX(0rem);
+}
 .discoleft4.reveal{
     transform: translateX(-20rem);
 }
 .discoleft4.reveal.active{
+    animation: discoleft3 1 8s linear;
+    transform: translateX(0rem);
+}
+.discoleft4.revealOnce{
+    transform: translateX(-20rem);
+}
+.discoleft4.revealOnce.active{
     animation: discoleft3 1 8s linear;
     transform: translateX(0rem);
 }

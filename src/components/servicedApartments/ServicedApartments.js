@@ -92,14 +92,15 @@ import { ImLocation } from "react-icons/im";
 import Slider from "react-slick";
 
 // logos
-import herocoop from "../serviced apartments imgs/HERO MOTOR CORP.jpg";
-import velammal from "../serviced apartments imgs/VELAMMAL.png";
-import kobelco from "../serviced apartments imgs/KOBELCO.png";
-import siemens from "../serviced apartments imgs/SIEMENS.png";
-import lAndt from "../serviced apartments imgs/L&T .png";
-import adani from "../serviced apartments imgs/ADANI.png";
-import linde from "../serviced apartments imgs/LINDE.png";
-import yanmar from "../serviced apartments imgs/YANMAR.png";
+import adani from "../invest/tenLogo/ADANI.png";
+import herocoop from "../invest/tenLogo/HERO.jpg";
+import kobelco from "../invest/tenLogo/KOBELCO.png";
+import linde from "../invest/tenLogo/LINDE.png";
+import lAndt from "../invest/tenLogo/LnT.png";
+import siemens from "../invest/tenLogo/SIEMENS.png";
+import velammal from "../invest/tenLogo/VELAMMAL.png";
+import yanmar from "../invest/tenLogo/YANMAR.png";
+
 import DropDown from "./DropDown";
 import "./serviceaptAnimation.css"
 import "./serviceaptStyle.css"
@@ -124,6 +125,8 @@ const ServicedApartments = () => {
   
   const smartHomeRef = useRef(null);
   const isInView = useInView(smartHomeRef, { once: true });
+  const locRef = useRef(null);
+  const locIsInView = useInView(locRef, { once: true });
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
     
@@ -298,7 +301,7 @@ const ServicedApartments = () => {
         <Flex w="100%" h="100%" gap="1.25rem">
           <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
             <Image mb="1rem" src={apartment} className="fadein revealOnce"/>
-            <Flex w="100%" align="center" mb="1rem" className="discoleft1 reveal" pr=".5rem">
+            <Flex w="100%" align="center" mb="1rem" className="discoleft1 revealOnce" pr=".5rem">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -328,7 +331,7 @@ const ServicedApartments = () => {
           </Flex>
           <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
             <Image mb="1rem" src={time} className="fadein-2sdelay revealOnce"/>
-            <Flex w="100%" align="center" mb="1rem" className="discoleft2 reveal" pr=".5rem">
+            <Flex w="100%" align="center" mb="1rem" className="discoleft2 revealOnce" pr=".5rem">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -358,7 +361,7 @@ const ServicedApartments = () => {
           </Flex>
           <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
             <Image mb="1rem" src={ringbell} className="fadein-4sdelay revealOnce"/>
-            <Flex w="100%" align="center" mb="1rem" className="discoleft3 reveal" pr=".5rem">
+            <Flex w="100%" align="center" mb="1rem" className="discoleft3 revealOnce" pr=".5rem">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -388,7 +391,7 @@ const ServicedApartments = () => {
           </Flex>
           <Flex w="100%" align="center" justify="center" direction="column" overflow="hidden">
             <Image mb="1rem" src={edit} className="fadein-6sdelay revealOnce"/>
-            <Flex w="100%" align="center" mb="1rem" className="discoleft4 reveal" pr=".5rem">
+            <Flex w="100%" align="center" mb="1rem" className="discoleft4 revealOnce" pr=".5rem">
               {" "}
               <Divider
                 orientation="horizontal"
@@ -436,7 +439,7 @@ const ServicedApartments = () => {
     >
       <Heading
         px="6.25rem"
-        className="serv-text-up reveal"
+        className="slidein-top revealOnce"
         fontSize="2.5rem"
         fontFamily="goudy"
         fontWeight="400"
@@ -446,7 +449,7 @@ const ServicedApartments = () => {
       </Heading>
       <Text
         px="6.25rem"
-        className="fadein reveal"
+        className="fadein revealOnce"
         fontSize="1rem"
         fontFamily="veralaRound"
         pb="1.563rem"
@@ -540,19 +543,28 @@ const ServicedApartments = () => {
     </Flex>
       {/** premium smart homes 2nd section **/}
       <Flex w="100%" h="100%" px="6.25rem" pt="1.875rem" pb="3.125rem" overflow="hidden">
-        <Flex w="30%">video</Flex>
+        <Flex w="30%">
+        <embed
+            height="100%"
+            width="100%"
+            src={"https://www.youtube.com/embed/Psmw1t_S6-c"}
+            title="The Economic Times | Best Realty Brands 2021 - Prime LifeSpace Developers"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></embed>
+        </Flex>
         <Flex
           className="discoup reveal"
-          w="10%"
+          w="5rem"
           h="100%"
           direction="column"
           justify="center"
           align="center"
-          px="1.563rem"
         >
           {" "}
           <Divider
-            h="21.25rem"
+            h="18rem"
             orientation="vertical"
             border="3px solid"
             borderColor="#DFBD69"
@@ -612,7 +624,7 @@ const ServicedApartments = () => {
                     fontFamily="veralaRound"
                     fontSize="1.125rem"
                     border="1px solid #B88746"
-                    p="1.562rem"
+                    p="1rem"
                   >
                     <Heading
                       textAlign="center"
@@ -628,7 +640,7 @@ const ServicedApartments = () => {
                     fontFamily="veralaRound"
                     fontSize="1.125rem"
                     border="1px solid #B88746"
-                    p="1.562rem"
+                    p="1rem"
                   >
                     <Heading
                       textAlign="center"
@@ -646,7 +658,7 @@ const ServicedApartments = () => {
                     fontFamily="veralaRound"
                     fontSize="1.125rem"
                     border="1px solid #B88746"
-                    p="1.562rem"
+                    p="1rem"
                   >
                     <Heading
                       textAlign="center"
@@ -662,7 +674,7 @@ const ServicedApartments = () => {
                     fontFamily="veralaRound"
                     fontSize="1.125rem"
                     border="1px solid #B88746"
-                    p="1.562rem"
+                    p="1rem"
                   >
                     <Heading
                       textAlign="center"
@@ -680,7 +692,7 @@ const ServicedApartments = () => {
                     fontFamily="veralaRound"
                     fontSize="1.125rem"
                     border="1px solid #B88746"
-                    p="1.562rem"
+                    p="1rem"
                   >
                     <Heading
                       textAlign="center"
@@ -696,7 +708,7 @@ const ServicedApartments = () => {
                     fontFamily="veralaRound"
                     fontSize="1.125rem"
                     border="1px solid #B88746"
-                    p="1.562rem"
+                    p="1rem"
                   >
                     <Heading
                       textAlign="center"
@@ -716,7 +728,7 @@ const ServicedApartments = () => {
           <Heading fontFamily="avenir" fontSize="1.5rem" pb="1.25rem">
             FURNISHED AMENITIES
           </Heading>
-          <SimpleGrid columns={{ base: 1, md: 3 }} spacing="2.5rem">
+          <SimpleGrid columns={{ base: 1, md: 3 }} spacing="1rem">
             {furnishedAmenities.map((items) => (
               <HStack key={items.title}>
                 <Image h="3.125rem" w="3.125rem" src={items.icon} />
@@ -1228,19 +1240,23 @@ const ServicedApartments = () => {
             // align="flex-end"
             pr="0.938rem"
           >
-            <Flex w="100%" h="100%" justify="flex-end">
-              <Image
-                w="20.125rem"
-                h="13.75rem"
+            <Flex w="100%" h="100%" justify="flex-end"pr="100px">
+            <Flex direction="column" pos="relative"  mr="0.625rem">
+                <Image
+                alignSelf="end"
+                w="12.5rem"
+                h="9.375rem"
                 // pos="absolute"
                 objectPosition="center"
                 objectFit="contain"
                 src={hall}
               />
+              <Image mt="0.625rem" w="18.75rem" h="13.2rem" src={kidsplaying} />
+              </Flex>
               <Image
                 mt="4.688rem"
-                w="19.625rem"
-                h="20.313rem"
+                w="12.5rem"
+                h="18.75rem"
                 // pos="absolute"
                 top="5.625rem"
                 objectPosition="70%"
@@ -1249,6 +1265,8 @@ const ServicedApartments = () => {
               />
             </Flex>
             <Flex
+              pos="relative"
+              pr="100px"
               w="100%"
               h="100%"
               gap="0.938rem"
@@ -1257,29 +1275,69 @@ const ServicedApartments = () => {
               wrap="nowrap"
               // top="-4rem"
             >
-              <Box pos="relative" w="15.688rem" h="10.938rem">
-                <Image src={kidsplaying} pos="absolute" />
-              </Box>{" "}
-              <Box pos="relative" w="15.375rem" h="22.125rem">
+              {" "}
+              {/*invisible mr="35.625rem"  */ }
+              <Box pos="relative">
+              <Image
+                mt="5.083rem"
+                ml="-2.625rem"
+                w="15.625rem"
+                h="15.625rem"
+                src={planting}
+                pos="relative"
+                left="0"
+              />
+              </Box>
+              <Flex direction="column" pos="absolute"
+                  mt="0.5rem"
+                  right="19.375rem"  mr="100px">
                 <Image
+                  alignSelf="end"
+                  w="15.625rem"
+                  h="20.313rem"
                   zIndex="3"
                   objectFit="contain"
                   objectPosition="cover"
                   src={badminton}
-                  pos="absolute"
                 />
-              </Box>
-              <Box pos="relative" w="21.125rem" h="19.688rem">
                 <Image
+                mr="0.2rem"
+                mt="0.625rem"
+                w="21.875rem"
+                h="12.5rem"
+                zIndex={5}
+                objectPosition="center"
+                objectFit="cover"
+                left="0"
+                src={meditating}
+                pos="relative"
+              />
+              </Flex>
+                <Flex mr="100px"
+                  pos="absolute"
+                  right="0" 
+                  mt="0.625rem"direction="column">
+                <Image
+                  h="14.063rem"
+                  w="18.75rem"
                   zIndex="5"
                   objectFit="cover"
                   objectPosition="80%"
                   // top="-8.5rem"
                   // right="10rem"
                   src={tabletenis}
-                  pos="absolute"
                 />
-              </Box>
+                <Image
+                zIndex={5}
+                mt="0.625rem"
+                w="18.75rem"
+                h="12.5rem"
+                src={yoga}
+                pos="relative"
+                left="0"
+                />
+                </Flex>
+                
             </Flex>
             <Flex
               pos="relative"
@@ -1287,11 +1345,11 @@ const ServicedApartments = () => {
               h="100%"
               gap="0.938rem"
               align="flex-end"
-              bgColor="red"
               // ml="-19.7rem"
               // pt="0.938rem"
             >
               <Image
+                opacity="0"
                 w="25rem"
                 h="16.125rem"
                 objectPosition="center"
@@ -1300,58 +1358,197 @@ const ServicedApartments = () => {
                 src={meditating}
                 pos="relative"
               />
-              <Image
-                w="20.75rem"
-                h="18.438rem"
-                src={yoga}
-                pos="relative"
-                left="0"
-              />
-              <Image
-                w="17.5rem"
-                h="23.875rem"
-                src={planting}
-                pos="relative"
-                left="0"
-              />
             </Flex>
           </Flex>
         </Flex>
       </Flex>
       {/* location advantage */}
       <Flex
-        w="100%"
-        h="100%"
-        direction="column"
-        pt="5rem"
-        align="center"
-        justify="center"
-        px="6.25rem"
-        pb="3.125rem"
+      ref={locRef}
+      w="100%"
+      h="100%"
+      px="6.25rem"
+      pt="3.125rem"
+      pb="3.125rem"
+      direction="column"
+      align="center"
+      justify="center"
+    >
+      <Text
+        pb="1.875rem"
+        transform={locIsInView ? "translate(0)" : "translateY(-50px)"}
+        opacity={locIsInView ? "1" : "0"}
+        transition="all 2s"
+        fontFamily="goudy"
+        fontSize="2.5rem"
+        textTransform="uppercase"
       >
-        {" "}
-        <Text fontFamily="goudy" pb="1.875rem" fontSize="2.5rem" className="serv-text-up reveal">
-          LOCATION ADVANTAGE
-        </Text>
-        <Flex w="100%" h="100%" justify="space-between" pb="3.125rem">
-          <Flex w="60%" h="100%" direction="column">
-            <Box w="100%" h="29.25rem" className="expand reveal">
-              <embed
-                class="gmap_iframe"
-                width="100%"
-                height="100%"
-                frameborder="0"
-                scrolling="no"
-                marginheight="0"
-                marginwidth="0"
-                src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              />
-            </Box>
+        LOCATION ADVANTAGE
+      </Text>
+      <Flex w="100%" h="100%" align="flex-start" justify="flex-start">
+        <Flex
+          direction="column"
+          w="100%"
+          h="100%"
+          align="center"
+          justify="center"
+        >
+          <Flex
+            transform={locIsInView ? "scale(1)" : "scale(0.6)"}
+            transition="all 2s"
+            w="100%"
+            h="100%"
+            mb="15px"
+          >
+            <iframe
+              class="gmap_iframe"
+              width="100%"
+              height="430"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=918&amp;height=700&amp;hl=en&amp;q=Prime lifespace&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ></iframe>
+          </Flex>
+          <Flex
+            w="100%"
+            h="100%"
+            mb="20px"
+            align="flex-start"
+            justify="space-between"
+          >
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/TEMPLES.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                TEMPLES
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/HOSPITAL.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                HOSPITALS
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/INSTITUTES.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px" textAlign="center">
+                EDUCATIONAL <br />
+                INSTITUTES
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/SOCIAL FABRIC.svg"
+                />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                SOCIAL
+                <br /> FABRIC
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image
+                  w="30px"
+                  h="30px"
+                  src="/images/arete-homes/INDUSTRY.svg"
+                />
+              </Box>
+              <Heading textAlign="center" fontFamily="avenir" fontSize="14px">
+                INDUSTRIAL <br />
+                PARKS
+              </Heading>
+            </VStack>
+            <VStack align="center">
+              <Box
+                borderRadius="50%"
+                p="10px"
+                bgGradient="linear(to-b,#B88746, #DFBD69)"
+                direction="column"
+                w="50px"
+                h="50px"
+                align="center"
+                _hover={{ cursor: "pointer" }}
+              >
+                <Image w="30px" h="30px" src="/images/arete-homes/PORT.svg" />
+              </Box>
+              <Heading fontFamily="avenir" fontSize="14px">
+                PORTS
+              </Heading>
+            </VStack>
+          </Flex>
+          <Flex w="100%" h="100%">
             <Button
               w="100%"
               h="3.187rem"
               fontSize="1rem"
-              mt="0.938rem"
               fontFamily="avenir"
               fontWeight="bold"
               bgGradient="linear(to-b, #B88746 ,#DFBD69)"
@@ -1364,323 +1561,330 @@ const ServicedApartments = () => {
               <ImLocation size="1.875rem" /> SHOW LOCATION ON GOOGLE MAPS
             </Button>
           </Flex>
-          <Flex
-            className="discoup reveal"
-            w="10%"
-            h="100%"
-            direction="column"
-            justify="center"
-            align="center"
-            px="1.563rem"
-          >
-            {" "}
-            <Divider
-              h="3.5rem"
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-            />
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-              my="1"
-            />
-          </Flex>
-          <Flex
-            w="30%"
-            h="100%"
-            direction="column"
-            alignSelf="center"
-            justify="center"
-          >
-            <Flex pb="1.563rem" align="center" className="fadein reveal">
-              <Box
-                borderRadius="50%"
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w="3.125rem"
-                h="3.125rem"
-                align="center"
-                p="0.625rem"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
-                <Image w="1.875rem" h="1.875rem" src={temples} />
-              </Box>
-
-              <Heading fontFamily="avenir" fontSize="1.25rem">
-                TEMPLES
-              </Heading>
-            </Flex>
-            <Flex pb="1.563rem" align="center" className="fadein reveal">
-              <Box
-                borderRadius="50%"
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w="3.125rem"
-                h="3.125rem"
-                align="center"
-                p="0.625rem"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
-                <Image w="1.875rem" h="1.875rem" src={hospitals} />
-              </Box>
-
-              <Heading fontFamily="avenir" fontSize="1.25rem">
-                HOSPITALS
-              </Heading>
-            </Flex>
-            <Flex pb="1.563rem" align="center" className="fadein reveal">
-              <Box
-                borderRadius="50%"
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w="3.125rem"
-                h="3.125rem"
-                align="center"
-                p="0.625rem"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
-                <Image w="1.875rem" h="1.875rem" src={institute} />
-              </Box>
-
-              <Heading fontFamily="avenir" fontSize="1.25rem">
-                EDUCATIONAL INSTITUTES
-              </Heading>
-            </Flex>{" "}
-            <Flex pb="1.563rem" align="center" className="fadein reveal">
-              <Box
-                borderRadius="50%"
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w="3.125rem"
-                h="3.125rem"
-                align="center"
-                p="0.625rem"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
-                <Image w="1.875rem" h="1.875rem" src={social} />
-              </Box>
-
-              <Heading fontFamily="avenir" fontSize="1.25rem">
-                SOCIAL FABRIC
-              </Heading>
-            </Flex>{" "}
-            <Flex pb="1.563rem" align="center" className="fadein reveal">
-              <Box
-                borderRadius="50%"
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w="3.125rem"
-                h="3.125rem"
-                align="center"
-                p="0.625rem"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
-                <Image w="1.875rem" h="1.875rem" src={industry} />
-              </Box>
-
-              <Heading fontFamily="avenir" fontSize="1.25rem">
-                INDUSTRIAL PARKS
-              </Heading>
-            </Flex>
-            <Flex align="center" className="fadein reveal">
-              <Box
-                borderRadius="50%"
-                bgGradient="linear(to-b,#B88746, #DFBD69)"
-                direction="column"
-                w="3.125rem"
-                h="3.125rem"
-                align="center"
-                p="0.625rem"
-                mr="1rem"
-                _hover={{ cursor: "pointer" }}
-              >
-                <Image w="1.875rem" h="1.875rem" src={ports} />
-              </Box>
-
-              <Heading fontFamily="avenir" fontSize="1.25rem">
-                PORTS
-              </Heading>
-            </Flex>
-          </Flex>
         </Flex>
-        <Flex w="100%">
-          <Flex w="100%" direction="column">
-            {" "}
-            <Flex w="100%" align="center" pb="1.563rem" className="discoball-slidein-left1 reveal">
+        <Flex w="100%" h="100%" align="flex-start" justify="space-between">
+          <Flex h="100%" direction="column" px="1.563rem">
+            <Flex
+              transform={locIsInView ? "translateY(0)" : "translateY(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+            >
               <Divider
-                orientation="horizontal"
+                h="3.125rem"
+                orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
               <Box
                 height="1.875rem"
-                width="4rem"
+                width="1.875rem"
                 backgroundColor="#DFBD69"
                 border="3px solid white"
                 boxShadow="0px 0px 0px 3px #B88746"
                 borderRadius="50%"
                 my="1"
-              />{" "}
+              />
+            </Flex>{" "}
+            <Flex
+              transform={locIsInView ? "translateY(0)" : "translateY(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 2s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+            >
               <Divider
-                orientation="horizontal"
+                h="5rem"
+                orientation="vertical"
                 border="3px solid"
                 borderColor="#DFBD69"
                 bgColor="#DFBD69"
               />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
             </Flex>
-            <Heading
-              className="fadein reveal"
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
+            <Flex
+              transform={locIsInView ? "translateY(0)" : "translateY(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 4s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
             >
-              5 MINS
-            </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem" className="fadein reveal">
-              <ListItem pb="0.625rem">Velammal International School</ListItem>
-              <ListItem pb="0.625rem">Origin By Mahindra</ListItem>
-              <ListItem>Ponneri Railway Station</ListItem>
-            </UnorderedList>
+              <Divider
+                h="4.8rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
+            <Flex
+              transform={locIsInView ? "translateY(0)" : "translateY(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 6s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+            >
+              <Divider
+                h="4.9rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
+            <Flex
+              transform={locIsInView ? "translateY(0)" : "translateY(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 8s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+            >
+              <Divider
+                h="2.75rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
+            <Flex
+              transform={locIsInView ? "translateY(0)" : "translateY(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 10s"
+              h="100%"
+              direction="column"
+              justify="flex-start"
+              align="center"
+            >
+              <Divider
+                h="0.5rem"
+                orientation="vertical"
+                border="3px solid"
+                borderColor="#DFBD69"
+                bgColor="#DFBD69"
+              />
+              <Box
+                height="1.875rem"
+                width="1.875rem"
+                backgroundColor="#DFBD69"
+                border="3px solid white"
+                boxShadow="0px 0px 0px 3px #B88746"
+                borderRadius="50%"
+                my="1"
+              />
+            </Flex>
           </Flex>
-          <Flex w="100%" direction="column">
-            {" "}
-            <Flex w="100%" align="center" pb="1.563rem" className="discoball-slidein-left2 reveal">
-              <Divider
-                orientation="horizontal"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="1.875rem"
-                width="4rem"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />{" "}
-              <Divider
-                orientation="horizontal"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>
+          <Flex
+            h="100%"
+            direction="column"
+            align="flex-start"
+            justify="space-between"
+            pr="0.938rem"
+          >
             <Heading
-              className="fadein2 reveal"
-              textAlign="center"
+              pt="3.925rem"
+              transform={locIsInView ? "none" : "translateX(-100px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s"
               fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
+              fontSize="1.25rem"
             >
-              10 MINS
+              5 Mins
             </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem" className="fadein2 reveal">
-              <ListItem pb="0.625rem">Connect To Outer Ring Road</ListItem>
-              <ListItem pb="0.625rem">Siruvapuri Murugan Temple</ListItem>
-              <ListItem pb="0.625rem">VELS Medical Hospital</ListItem>
-              <ListItem>R.M.K. Engineering College</ListItem>
-            </UnorderedList>
+            <Heading
+              pt="6.25rem"
+              transform={locIsInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 2s"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+            >
+              10 Mins
+            </Heading>
+            <Heading
+              pt="6rem"
+              transform={locIsInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 4s"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+            >
+              20 Mins
+            </Heading>
+            <Heading
+              pt="6.25rem"
+              transform={locIsInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 6s"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+            >
+              30 Mins
+            </Heading>
+            <Heading
+              pt="3.9rem"
+              transform={locIsInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 8s"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+            >
+              40 Mins
+            </Heading>
+            <Heading
+              pt="1.8rem"
+              transform={locIsInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 10s"
+              fontFamily="avenir"
+              fontSize="1.25rem"
+            >
+              2 Hours
+            </Heading>
           </Flex>
-          <Flex w="100%" direction="column">
-            {" "}
-            <Flex w="100%" align="center" pb="1.563rem" className="discoball-slidein-left3 reveal">
-              <Divider
-                orientation="horizontal"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="1.875rem"
-                width="4rem"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />{" "}
-              <Divider
-                orientation="horizontal"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>
-            <Heading
-              className="fadein3 reveal"
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
+          <Flex w="70%" h="100%" direction="column" gap="1.875rem">
+            <UnorderedList
+              pt="1.875rem"
+              transform={locIsInView ? "none" : "translateX(-100px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
             >
-              20 MINS
-            </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem" className="fadein3 reveal">
-              <ListItem pb="0.625rem">Gummidipoondi SIPCOT</ListItem>
-              <ListItem pb="0.625rem">Amazon</ListItem>
-              <ListItem pb="0.625rem">Minjur</ListItem>
-              <ListItem>Pulicat Lake</ListItem>
+              <ListItem pb="0.625rem">
+                Walk to Velammal International School{" "}
+              </ListItem>
+              <ListItem pb="0.625rem">DRIVE TO Origin by Mahindra </ListItem>
+              <ListItem>DRIVE TO Ponneri Railway Station</ListItem>
             </UnorderedList>
-          </Flex>
-          <Flex w="100%" direction="column">
-            {" "}
-            <Flex w="100%" align="center" pb="1.563rem" className="discoball-slidein-left4 reveal">
-              <Divider
-                orientation="horizontal"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-              <Box
-                height="1.875rem"
-                width="4rem"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-                my="1"
-              />{" "}
-              <Divider
-                orientation="horizontal"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-              />
-            </Flex>
-            <Heading
-              className="fadein4 reveal"
-              textAlign="center"
-              fontFamily="avenir"
-              fontSize="1.5rem"
-              pb="1rem"
+            <UnorderedList
+              transform={locIsInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 2s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
             >
-              30 MINS
-            </Heading>
-            <UnorderedList fontFamily="veralaRound" fontSize="1rem" className="fadein4 reveal">
-              <ListItem pb="0.625rem">Sri City</ListItem>
-              <ListItem>Kattupalli Adani Port, Chennai Port</ListItem>
+              <ListItem pb="0.625rem">CONNECT TO Outer Ring Road</ListItem>
+              <ListItem pb="0.625rem">
+                DRIVE TO Siruvapuri Murugan Temple{" "}
+              </ListItem>
+              <ListItem>VELS Medical Hospital</ListItem>
+            </UnorderedList>
+            <UnorderedList
+              transform={locIsInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 4s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
+            >
+              <ListItem pb="0.625rem">DRIVE TO REDHILLS</ListItem>
+              <ListItem pb="0.625rem">PULICAT LAKE </ListItem>
+              <ListItem>DRIVE TO GUMMIDIPOONDI SIPCOT</ListItem>
+            </UnorderedList>
+            <UnorderedList
+              transform={locIsInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 6s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
+            >
+              <ListItem pb="0.625rem">DRIVE TO SRI CITY</ListItem>
+              <ListItem pb="0.625rem">DRIVE TO ADANI PORT</ListItem>
+              <ListItem>DRIVE TO Ponneri Railway Station</ListItem>
+            </UnorderedList>
+            <UnorderedList
+              transform={locIsInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 8s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
+            >
+              {" "}
+              <ListItem>DRIVE TO CHENNAI AIRPORT</ListItem>
+            </UnorderedList>
+            <UnorderedList
+              transform={locIsInView ? "translateX(0)" : "translateX(-50px)"}
+              opacity={locIsInView ? "1" : "0"}
+              transition="all 2s 10s"
+              display="flex"
+              flexDir="column"
+              textTransform="uppercase"
+              fontFamily="veralaRound"
+              fontSize="1rem"
+            >
+              {" "}
+              <ListItem>DRIVE TO TIRUPATI</ListItem>
             </UnorderedList>
           </Flex>
         </Flex>
       </Flex>
+    </Flex>
       <Flex w="100%" h="100%" pb="5rem" px="6.25rem">
-        <Flex w="50%" h="100%" direction="column">
+        <Flex w="60%" h="100%" direction="column" mr="5%">
           <Heading
+            pt="1.875rem"
             w="100%"
             textAlign="center"
             fontSize="2.5rem"
@@ -1704,8 +1908,8 @@ const ServicedApartments = () => {
               mr="4"
               color="#DFBD69"
               pos="absolute"
-              right="3.25rem"
-              bottom="10rem"
+              right="2.25rem"
+              bottom="6rem"
               zIndex="10"
               w="4.375rem"
               h="3.125rem"
@@ -1714,7 +1918,7 @@ const ServicedApartments = () => {
           </Flex>
         </Flex>
         <Flex
-          w="50%"
+          w="40%"
           h="100%"
           align="center"
           justify="center"
@@ -1725,6 +1929,7 @@ const ServicedApartments = () => {
       bgSize="cover"
         >
           <Text
+            pt="1.875rem"
             fontSize="2.5rem"
             fontFamily="goudy"
             textTransform="uppercase"
@@ -1732,13 +1937,14 @@ const ServicedApartments = () => {
           >
             SCHEDULE A VISIT
           </Text>
-          <Container w="container.sm" align="center">
+          <Container w="container.sm" align="center" pb="1.875rem">
             {" "}
             <form>
               <FormControl isRequired>
                 {" "}
-                <HStack w="100%" justify="space-between" pb="0.938rem">
+                <HStack w="100%" justify="space-between" pb="0.938rem" pr="2.75rem">
                   <FormLabel
+                    pl="2.75rem"
                     fontFamily="avenir"
                     fontSize="1rem"
                     fontWeight="bold"
@@ -1746,6 +1952,7 @@ const ServicedApartments = () => {
                     NAME
                   </FormLabel>
                   <Input
+                    mr="3.125rem"
                     fontSize="1rem"
                     fontFamily="avenir"
                     lineHeight="1.5rem"
@@ -1758,8 +1965,9 @@ const ServicedApartments = () => {
               </FormControl>
               <FormControl isRequired>
                 {" "}
-                <HStack w="100%" justify="space-between" pb="0.938rem">
+                <HStack w="100%" justify="space-between" pb="0.938rem" pr="2.75rem">
                   <FormLabel
+                    pl="2.75rem"
                     fontFamily="avenir"
                     fontSize="1rem"
                     fontWeight="bold"
@@ -1778,8 +1986,9 @@ const ServicedApartments = () => {
                 </HStack>{" "}
               </FormControl>
               <FormControl>
-                <HStack w="100%" justify="space-between" pb="0.938rem">
+                <HStack w="100%" justify="space-between" pb="0.938rem" pr="2.75rem">
                   <FormLabel
+                    pl="2.75rem"
                     fontFamily="avenir"
                     fontSize="1rem"
                     fontWeight="bold"
@@ -1798,7 +2007,7 @@ const ServicedApartments = () => {
                 </HStack>{" "}
               </FormControl>
               <FormControl>
-                <HStack w="100%" align="center" justify="center">
+                <HStack w="100%" align="center" justify="center" pr="5.5rem">
                   <Checkbox
                     ml="0.85rem"
                     value="yes"
@@ -1811,6 +2020,7 @@ const ServicedApartments = () => {
                 </HStack>
               </FormControl>
               <Button
+                
                 mt="1.563rem"
                 bgGradient="linear(to-b, #B88746 ,#DFBD69)"
                 color="white"
@@ -1897,8 +2107,8 @@ const TestimonialCarousel = (props) => {
                 {tes.name}
               </Text>
               <Image
-                w="17.75rem"
-                h="6.25rem"
+                w="15rem"
+                h="5rem"
                 objectFit="contain"
                 src={tes.logo}
               />
@@ -2031,12 +2241,12 @@ const testimonial = [
   },
   {
     text: "We own a 2 BHK and its worth every penny and the construction quality is very good. The team is very helpful in securing home loan and throughout the home buying till the end.",
-    name: "mr. mageshkumar",
+    name: "MR. MAGESHKUMAR",
     logo: adani,
   },
   {
-    text: "i’m very happy to be living in integrate Smart Township, it’s like a dream! I have also invested in a property here, it gives the highest returns.",
-    name: "mr. DK SINGH",
+    text: "I’m very happy to be living in integrate Smart Township, it’s like a dream! I have also invested in a property here, it gives the highest returns.",
+    name: "MR. DK SINGH",
     logo: linde,
   },
   {
