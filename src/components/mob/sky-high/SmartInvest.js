@@ -50,15 +50,15 @@ const TenthSec = () => {
         AN EXCELLENT INVESTMENT OPPORTUNITY IN A <br />
         LIFETIME GROWING ASSET
       </Heading>
-      <Flex w="100%" h="100%" overflow="hidden">
+      <Flex w="100%" h="100%" overflow="hidden" direction="column">
         <Flex
-          w="50%"
+          w="100%"
           className="expandcar reveal"
           h="100%"
           pos="relative"
         >
           <Image
-            
+            px="1rem"
             h="31.25rem"
             w="100%"
             objectPosition="center top"
@@ -74,49 +74,20 @@ const TenthSec = () => {
           />
         </Flex>
         <Flex
-          overflow="hidden"
-          transform={isInView ? "none" : "translateY(-50px)"}
-          opacity={isInView ? "1" : "0"}
-          transition="all 2s 2s"
-          h="100%"
-          direction="column"
-          justify="flex-start"
-          align="center"
-          px="1.562rem"
-        >
-          <Divider
-            className="slidein-top reveal"
-            h="3.5rem"
-            orientation="vertical"
-            border="3px solid"
-            borderColor="#DFBD69"
-            bgColor="#DFBD69"
-          />
-          <Box
-            className="slidein-top reveal"
-            height="1.875rem"
-            width="1.875rem"
-            backgroundColor="#DFBD69"
-            border="3px solid white"
-            boxShadow="0px 0px 0px 3px #B88746"
-            borderRadius="50%"
-            my="1"
-          />
-        </Flex>
-        <Flex
-          w="50%"
-          pr="6.25rem"
+          px="1rem"
+          w="100%"
           direction="column"
           align="center"
           justify="center"
         >
           <Heading
+            mt="1rem"
             transform={isInView ? "none" : "translateX(-50px)"}
             opacity={isInView ? "1" : "0"}
             transition="all 2s 2s"
             w="100%"
             fontSize="1.5rem"
-            textAlign="left"
+            textAlign="center"
             fontFamily="avenir"
             mb="0.938rem"
           >

@@ -28,7 +28,7 @@ const LastSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      px="6.25rem"
+      px="1rem"
       pt="1.875rem"
       pb="3.125rem"
       direction="column"
@@ -85,7 +85,7 @@ const LastSec = () => {
           color="#DFBD69"
           pos="absolute"
           right="0"
-          bottom="25%"
+          bottom="18%"
           zIndex="10"
           w="4.375rem"
           h="3.125rem"
