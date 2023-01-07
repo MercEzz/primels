@@ -89,34 +89,37 @@ const Header = () => {
       {" "}
       <Flex w="25%"></Flex>
       <Flex alignItems={"center"} w="50%" justifyContent={"center"}>
-        <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
+        <Heading as="span" fontSize="1rem" fontFamily="avenir" px="1rem">
           EXPERTISE
           
         </Heading>
-        <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
+        <Heading as="span" fontSize="1rem" fontFamily="avenir" px="1rem">
           <Link>PROJECTS</Link>
         </Heading>
-        <Flex minW="350px" maxH="78px" px="3" align="center">
-          <Image w="100%" h="100%" src="/images/logo.png" />
+        <Flex minW="18.75rem" minH="3.75rem" px="1rem" align="center">
+          <Image  src="/images/logo.png" />
         </Flex>
-        <Heading collapseid={3} onMouseEnter={(data)=>toggleCollapsibleOn(data)} onMouseLeave={(data)=>toggleCollapsibleOff(data)} className="collapsible-list-button" as="span" fontSize="16px" fontFamily="avenir" px="3">
+        <Flex align="center">
+        <Heading collapseid={3} onMouseEnter={(data)=>toggleCollapsibleOn(data)} onMouseLeave={(data)=>toggleCollapsibleOff(data)} className="collapsible-list-button" as="span" fontSize="1rem" fontFamily="avenir" px="1rem">
           INVEST
           <div className="collapsible-content3" >
             <Link>WHY INVEST</Link>
           </div>
         </Heading>
-        <Heading as="span" fontSize="16px" fontFamily="avenir" px="3">
+        <Heading as="span" fontSize="1rem" fontFamily="avenir" px="1rem">
           <Link>HOUSING</Link>
         </Heading>
+      </Flex>
       </Flex>
       <Flex w="25%" justify="flex-end" align="center">
         <Heading as="span" fontFamily="avenir">
           <Button
-            my="4"
+            my="1rem"
+            mr="1rem"
             p="6"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             color="white"
-            fontSize="16px"
+            fontSize="1rem"
             _hover={{
               bgGradient: "linear(to-b, #DFBD69, #B88746)",
             }}
