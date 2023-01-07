@@ -97,7 +97,7 @@ const Header = () => {
           <Link>PROJECTS</Link>
         </Heading>
         <Flex minW="18.75rem" minH="3.75rem" px="1rem" align="center">
-          <Image  src="/images/logo.png" />
+          <Image src="/images/logo.png" />
         </Flex>
         <Flex align="center">
         <Heading collapseid={3} onMouseEnter={(data)=>toggleCollapsibleOn(data)} onMouseLeave={(data)=>toggleCollapsibleOff(data)} className="collapsible-list-button" as="span" fontSize="1rem" fontFamily="avenir" px="1rem">

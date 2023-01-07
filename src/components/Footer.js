@@ -6,6 +6,7 @@ import {
   Heading,
   HStack,
   Icon,
+  Image,
   Input,
   Link,
   Radio,
@@ -29,20 +30,18 @@ const Footer = () => {
     <Flex
       pos="relative"
       direction="column"
-      align="center"
       bgColor="black"
       color="white"
       justify="center"
       px="100px"
-      pb="1.563rem"
     >
-      <Flex py="10" pos="relative">
+      <Flex pt="10" pb="1.125rem" pos="relative">
         <Flex direction="column" w="30%">
-          Logo
+        <Image  w="12.5rem"  src="/images/logo.png" />
           <Flex align="left" py="6">
             <Icon mt="1" w="8" h="6" color="#DFBD69" as={ImLocation} />
             <Text fontSize="1rem" fontFamily="veralaRound">
-              Prime Expat Infra No. 33, Mandapam Road, Kilpauk, Chennai -
+              Prime Expat Infra No. 33,<br/>Mandapam Road,Kilpauk,<br/>Chennai -
               600010.
             </Text>
           </Flex>
@@ -72,7 +71,7 @@ const Footer = () => {
           </VStack>
         </Flex>
         <Flex direction="column" px="10" w="20%">
-          <Heading fontSize="20px" fontFamily="veralaRound" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
+          <Heading fontSize="1rem" fontFamily="veralaRound" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
             Who we are
           </Heading>
           <VStack
@@ -85,7 +84,7 @@ const Footer = () => {
             <Link fontSize="1rem">GREEN POWER</Link>
           </VStack>
           <VStack mt="0.325rem" align="flex-start" pt="10">
-            <Heading fontSize="20px" fontFamily="avenir" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
+            <Heading fontSize="1rem" fontFamily="avenir" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
               Services
             </Heading>
             <Link fontFamily="veralaRound" fontWeight="400" fontSize="1rem">
@@ -99,7 +98,7 @@ const Footer = () => {
         <Flex direction="column" px="10" w="50%"  >
           <Flex align={"flex-start"} pos="relative">
           <Flex direction="column" px="10" w="100%">
-          <Heading fontSize="20px" fontFamily="avenir" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
+          <Heading fontSize="1rem" fontFamily="avenir" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
             Projects
           </Heading>
           <VStack
@@ -107,14 +106,13 @@ const Footer = () => {
             fontFamily="veralaRound"
             fontWeight="400"
             pt="4px"
-           
             >
             <Link href="/arete-homes" fontSize="1rem">ARETE HOMES</Link>
             <Link href="/sky-high" fontSize="1rem">SKY HIGH TOWER</Link>
             <Link href="/commercial-properties"  fontSize="1rem">COMMERCIAL PROPERTIES</Link>
           </VStack>
           </Flex>
-          <Flex direction="column" px="10" w="100%" pos="relative">
+          <Flex direction="column" pl="10" w="100%" pos="relative">
           
           <VStack
             align="flex-start"
@@ -124,7 +122,7 @@ const Footer = () => {
             pos="absolute"
             right="3"
             >
-              <Heading fontSize="20px" fontFamily="veralaRound" fontWeight="600" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
+              <Heading fontSize="1rem" fontFamily="veralaRound" textUnderlineOffset={"4px"} textDecoration={"underline"} textColor={"#DFBD69"}>
             Invest
           </Heading>
             <Link fontSize="1rem">WHY INVEST</Link>
@@ -134,7 +132,7 @@ const Footer = () => {
           </Flex>
           </Flex>
           <Flex  mt="1rem" direction="column" px="10" w="100%">
-          <Heading fontSize="20px" fontFamily="avenir" fontWeight="600" borderBottom="2px solid #DFBD69" textColor={"#DFBD69"}>
+          <Heading fontSize="1rem" fontFamily="avenir" borderBottom="2px solid #DFBD69" textColor={"#DFBD69"}>
             Helpful Links
           </Heading>
           <Flex pt="4px" align={"flex-start"}>
@@ -164,7 +162,7 @@ const Footer = () => {
         </Flex>
       </Flex>
       <Divider/>
-      <Flex align="center" py="1.563rem" px="100px" w="100%">
+      <Flex align="center" py="1.125rem" w="100%">
         <Text fontSize="1rem" fontWeight="600">
         &#169; 2022. PRIMELIFESPACE PVT. LTD.
         </Text>
