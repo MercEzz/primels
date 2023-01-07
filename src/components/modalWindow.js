@@ -1,15 +1,21 @@
-import { Flex,Text,FormLabel,Checkbox, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Button, HStack, FormControl, Input, VStack } from "@chakra-ui/react";
+import { Flex,Text,FormLabel,Checkbox, Image, Button, HStack, FormControl, Input, VStack } from "@chakra-ui/react";
+import Modal from 'react-bootstrap/Modal';
 import React from "react";
 
 const ModalWindwow = ({modalTitle,modalImage,isOpen,onClose}) => {
   return (
     <>
-      <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent px="1rem">
-          <ModalHeader alignSelf="center">{modalTitle}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+      />
+      <Modal size="lg" blockScrollOnMount={true} show={isOpen} onHide={onClose}>
+          <Modal.Header closeButton>
+            <Modal.Title alignSelf="center">{modalTitle}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
             <Flex direction="column" gap="1rem">
             <Image src={modalImage} alt="IMG" />
             <Flex gap="1rem">
@@ -111,8 +117,7 @@ const ModalWindwow = ({modalTitle,modalImage,isOpen,onClose}) => {
           </form>
             </Flex>
             </Flex>
-          </ModalBody>
-        </ModalContent>
+          </Modal.Body>
       </Modal>
     </>
   );

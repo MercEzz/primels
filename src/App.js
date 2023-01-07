@@ -31,6 +31,7 @@ import ServicedApartMobSc from "./screens/ServicedApartSc.mob";
 import SkyhighInvestMobSc from "./screens/SkyhighInvestSc.mob";
 import AretehomesInvestMobSc from "./screens/AretehomesInvestSc.mob";
 import SkyHighScMob from "./screens/SkyHighSc.mob";
+import AreteHomesMob from "./screens/AreteHomes.mob";
 
 function App() {
   const [isMobile,setIsMobile]=useState(false);
@@ -100,7 +101,7 @@ function App() {
             <Route path="/energy-get-in-touch-with-us" element={<MobEnergySc />} />
             <Route path="/channel-partner" element={<MobChannelPartner />} />
             <Route path="/sky-high" element={<SkyHighScMob />} />
-            <Route path="/arete-homes" element={<AreteHomes />} />
+            <Route path="/arete-homes" element={<AreteHomesMob />} />
             <Route path="/news-and-media" element={<NewsMediaScMob/>} />
             <Route path="/refer-and-earn" element={<MobReferAndEarn />} />
             <Route path="/commercial-properties" element={<CommercialProperties />} />

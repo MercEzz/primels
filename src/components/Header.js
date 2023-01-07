@@ -7,7 +7,6 @@ const StyledHeader = styled.div`
     background-color: rgba(0,0,0,0.2);
     .collapsible-list-button{
       display:flex;
-      color: black;
       cursor: pointer;
       width: 100%;
     }
@@ -78,13 +77,14 @@ const Header = () => {
       pos="fixed"
       top="0"
       w="100%"
-      h="100px"
-      bgColor={navbar ? "#fff" : "rgba(0,0,0,0.2)"}
+      h="5rem"
+      bgColor={navbar ? "#fff" : "rgba(0,0,0,50%)"}
       transition="all 2s"
       align="center"
       justify="center"
       zIndex="999"
-      color="black"
+      color={navbar ? "black" : "white"}
+      boxShadow={navbar ? "2xl" : ""}
     >
       {" "}
       <Flex w="25%"></Flex>
@@ -124,8 +124,8 @@ const Header = () => {
             ENQUIRE
           </Button>
         </Heading>
-        <button onClick={()=>open()} >
-          <HiOutlineMenuAlt1 fontSize="60px" px="4" w="100%" h="100%" />
+        <button style={{marginRight:"100px"}} onClick={()=>open()} >
+          <HiOutlineMenuAlt1 fontSize="60px" px="4" w="100%" h="100%"/>
         </button>
         {isModalOpen?
         <Flex style={{position:"absolute",top:"0",left:"0",zIndex:"999"}}>

@@ -10,26 +10,22 @@ import {
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import pgclogo from "../../arete-homes imgs/Asset 1.png";
+import activityArea from "../../arete-homes imgs/PGC-ACTIVITY AREA.jpeg";
+import banquetHall from "../../arete-homes imgs/PGC-BANQUET HALL.jpg";
+import cafeteria from "../../arete-homes imgs/PGC-CAFETERIA.jpg";
+import grandEntrance from "../../arete-homes imgs/PGC-CAFETERIA.jpg";
+import swimmingPool from "../../arete-homes imgs/PGC-CAFETERIA.jpg";
+//import grandEntrance from "../../arete-homes imgs/PGC-GRAND ENTRANCE.jpg";
+import gym from "../../arete-homes imgs/PGC-GYM.JPG";
+import multiSports from "../../arete-homes imgs/PGC-multi sports arena.jpg";
+import squashCourt from "../../arete-homes imgs/PGC-SQUASH COURT.jpg";
+//import swimmingPool from "../../arete-homes imgs/PGC-SWIMMING POOL.jpg";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import pgclogo from "../../arete-homes imgs/Asset 1.png";
-// images
-import gym from "../../sky-high imgs/7 - gym.jpg";
-import golf from "../../sky-high imgs/5 - Open Golf Putting Area.jpg";
-import sports from "../../sky-high imgs/2 - Multi Sports Arena.jpg";
-import swimming from "../../sky-high imgs/3 - Swimming Pool High Res.jpg";
-import banquet from "../../sky-high imgs/PGC Banquet Hall.jpg";
-import spa from "../../sky-high imgs/22 - sauna_s.jpg";
-import guest from "../../sky-high imgs/20 - guest rooms.jpg";
-import restaurant from "../../sky-high imgs/18 - Restaurant High Res_1.jpg";
-import bar from "../../sky-high imgs/PGC Sports Bar.jpg";
-import cafeteria from "../../sky-high imgs/16 - Cafeteria High Res_1.jpg";
-import terrace from "../../sky-high imgs/TERRACE.jpg";
-import theatre from "../../sky-high imgs/PGC Theatre.jpg";
 
-const SixthSec = () => {
+const SeventhSec = () => {
   const [slider, setSlider] = useState(null);
-
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
@@ -37,11 +33,9 @@ const SixthSec = () => {
 
   const settings = {
     // className: "center",
-    centerMode:true,
-    autoplay: true,
     centerMode: true,
+    autoplay:true,
     infinite: true,
-    // centerPadding: "60px",
     draggable: true,
     speed: 500,
     autoplaySpeed: 2000,
@@ -153,19 +147,21 @@ const SixthSec = () => {
   );
 };
 
-export default SixthSec;
+export default SeventhSec;
 
 const gymclubimgs = [
-  { img: gym, title: "GYM" },
-  { img: golf, title: "GOLF PUTTING AREA" },
-  { img: sports, title: "MULTI SPORTS ARENA" },
-  { img: swimming, title: "SWIMMING POOL" },
-  { img: banquet, title: "BANQUET HALL" },
-  { img: spa, title: "SPA & SAUNA" },
-  { img: guest, title: "GUEST ROOM" },
-  { img: restaurant, title: "RESTAURANT" },
-  { img: bar, title: "BAR" },
+  { img: activityArea, title: "ACTIVITY AREA" },
+  { img: banquetHall, title: "BANQUET HALL" },
   { img: cafeteria, title: "CAFETERIA" },
-  { img: terrace, title: "TERRACE" },
-  { img: theatre, title: "THEATRE" },
+  {
+    img: grandEntrance,
+    title: "GRAND ENTRANCE",
+  },
+  { img: gym, title: "GYM" },
+  {
+    img: multiSports,
+    title: "MULTI SPORTS ARENA",
+  },
+  { img: squashCourt, title: "SQUASH COURT" },
+  { img: swimmingPool, title: "SWIMMING POOL" },
 ];
