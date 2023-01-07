@@ -17,7 +17,7 @@ import { AiOutlineDownCircle } from "react-icons/ai";
 
 const DropDown = () => {
   return (
-    <Flex h="100%" w="100%" bgColor="#B88746">
+    <Flex h="100%" w="100%" bgColor="#B88746" pb="5vh">
       <Accordion
         w="100%"
         border="1px solid #B88746"
@@ -31,7 +31,7 @@ const DropDown = () => {
               fontSize="1.5rem"
               fontFamily="avenir"
               fontWeight="bold"
-              px="6.25rem"
+              px="1rem"
               overflow="hidden"
             >
               <Box flex="1" textAlign="left">

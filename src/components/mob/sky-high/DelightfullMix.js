@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 //import { useInView } from "framer-motion";
 import {
@@ -14,9 +14,22 @@ import {
   Th,
   Tbody,
   Td,
+  Box,
 } from "@chakra-ui/react";
+import Slider from "react-slick";
 
 const EightSec = () => {
+  const [slider, setSlider] = useState(null);
+  const settings = {
+    draggable: true,
+    infinite: true,
+    autoplay: true,
+    /*speed: 500,*/
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+  };
   //const ref = useRef(null);
   //const isInView = useInView(ref, { once: true });
   const { ref, inView } = useInView({
@@ -76,24 +89,44 @@ const EightSec = () => {
         Making it possible to fit up to 5 beds in every apartment.
       </Text>
       <Flex w="100%" h="100%" align="center" justify="center" gap="0.937rem">
-        <Flex boxShadow="dark-lg" overflow="hidden">
+      <Box
+          position={"relative"}
+          height={"100%"}
+          width={"100%"}
+          overflow={"hidden"}
+        >
+          {/* CSS files for react-slick */}
+          <link
+            rel="stylesheet"
+            type="text/css"
+            charSet="UTF-8"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          />
+          {/* Slider */}
+          <Slider {...settings} ref={(slider) => setSlider(slider)}>
+          <Flex overflow="hidden">
           <Image
-            className="image-sliedleft reveal"
             w="100%"
             src="/images/sky-high/FLOOR PLAN1.jpg"
             filter="auto"
-            blur="5px"
+            blur="2px"
           />
         </Flex>
-        <Flex boxShadow="dark-lg" overflow="hidden" >
+        <Flex overflow="hidden" >
           <Image
-            className="image-sliedright reveal"
             w="100%"
             src="/images/sky-high/FLOOR PLAN2.jpg"
             filter="auto"
-            blur="5px"
+            blur="2px"
           />
         </Flex>
+          </Slider>
+        </Box>
       </Flex>
       <Flex
         opacity={inView ? "1" : "0"}
@@ -104,7 +137,7 @@ const EightSec = () => {
         justify="space-between"
         mt="2rem"
       >
-        <Flex w="100%" direction="column" pr="1.875rem">
+        <Flex w="100%" direction="column">
         <Flex
             w="100%"
             bgGradient="linear(to-b,#DFBD69, #B88746)"
