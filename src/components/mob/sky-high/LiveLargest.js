@@ -28,7 +28,7 @@ const FifthSec = () => {
     speed: 500,
     autoplaySpeed: 3000,
     //pauseOnHover: false,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
   };
   return (
@@ -40,6 +40,7 @@ const FifthSec = () => {
       align="center"
       justify="center"
       direction="column"
+      px="1rem"
     >
       <Text
         transform={isInView ? "none" : "translateY(-50px)"}
@@ -51,6 +52,30 @@ const FifthSec = () => {
       >
         LIVE LARGEST, SHOP LARGEST
       </Text>
+      <Flex
+              overflow="hidden"
+              direction="column"
+              align="center"
+              px="2.5rem"
+            >
+            </Flex>
+            <Heading fontFamily="avenir" fontSize="2.125rem" mb="0.937rem">
+                ARETE PLAZA
+              </Heading>
+              <Text fontFamily="veralaRound" fontSize="1rem" mb="0.937rem">
+                An impeccable mix of 20 Retail Spaces such as Shopping,
+                HyperMarket, Pharmacy, Fine Dining & Entertainment. Two
+                enchanting tower lobbies, with a soothing water casacade in the
+                front, positioned for your warm welcome.
+              </Text>
+            <Flex
+              opacity={isInView ? "1" : "0"}
+              transition="all 2s 2s"
+              direction="column"
+              alignSelf="center"
+            >
+        </Flex>
+      
       <Box
         position={"relative"}
         height={"100%"}
@@ -86,67 +111,8 @@ const FifthSec = () => {
             />
           ))}
         </Slider>
-        <Flex
-          pos="absolute"
-          top="0"
-          w="100%"
-          left="50%"
-          bgColor="rgba(255,255,255, 0.5)"
-          h="100%"
-        >
-          <Flex
-            w="40%"
-            h="100%"
-            left="0"
-            top="0"
-            pos="absolute"
-            bgColor="white"
-            align="flex-start"
-            justify="center"
-            pr="3.125rem"
-          >
-            <Flex
-              overflow="hidden"
-              direction="column"
-              align="center"
-              h="10rem"
-              w="5rem"
-              px="2.5rem"
-            >
-              <Flex  className="slidein-top reveal"direction="column" align="center" w="100%" h="100%">
-              <Divider
-                orientation="vertical"
-                border="3px solid"
-                borderColor="#DFBD69"
-                bgColor="#DFBD69"
-                h="7rem"
-              />{" "}
-              <Box
-                height="1.875rem"
-                width="1.875rem"
-                backgroundColor="#DFBD69"
-                border="3px solid white"
-                boxShadow="0px 0px 0px 3px #B88746"
-                borderRadius="50%"
-              />
-              </Flex>
-            </Flex>
-            <Flex
-              opacity={isInView ? "1" : "0"}
-              transition="all 2s 2s"
-              direction="column"
-              alignSelf="center"
-            >
-              <Heading fontFamily="avenir" fontSize="2.125rem" mb="0.937rem">
-                ARETE PLAZA
-              </Heading>
-              <Text fontFamily="veralaRound" fontSize="1rem" mb="0.937rem">
-                An impeccable mix of 20 Retail Spaces such as Shopping,
-                HyperMarket, Pharmacy, Fine Dining & Entertainment. Two
-                enchanting tower lobbies, with a soothing water casacade in the
-                front, positioned for your warm welcome.
-              </Text>
-              <Button
+      </Box>
+      <Button
                 w="10.875rem"
                 h="3.187rem"
                 fontSize="1rem"
@@ -160,10 +126,6 @@ const FifthSec = () => {
               >
                 EXPLORE MORE
               </Button>
-            </Flex>
-          </Flex>
-        </Flex>
-      </Box>
     </Flex>
   );
 };
