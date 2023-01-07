@@ -13,7 +13,7 @@ const ModalWindwow = ({modalTitle,modalImage,isOpen,onClose}) => {
       />
       <Modal size="lg" blockScrollOnMount={true} show={isOpen} onHide={onClose}>
           <Modal.Header closeButton>
-            <Modal.Title alignSelf="center">{modalTitle}</Modal.Title>
+            <Modal.Title align="center">{modalTitle}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Flex direction="column" gap="1rem">

@@ -3,6 +3,7 @@ import { Button, Flex, Heading, Image, Link, Select, Spacer } from "@chakra-ui/r
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import styled from 'styled-components';
 import { useModalController } from "../hooks/util";
+import { HamburgerIcon } from "@chakra-ui/icons";
 const StyledHeader = styled.div`
     background-color: rgba(0,0,0,0.2);
     .collapsible-list-button{
@@ -115,7 +116,6 @@ const Header = () => {
         <Heading as="span" fontFamily="avenir">
           <Button
             my="1rem"
-            mr="1rem"
             p="6"
             bgGradient="linear(to-b, #B88746 ,#DFBD69)"
             color="white"
@@ -128,7 +128,7 @@ const Header = () => {
           </Button>
         </Heading>
         <button style={{marginRight:"100px"}} onClick={()=>open()} >
-          <HiOutlineMenuAlt1 fontSize="60px" px="4" w="100%" h="100%"/>
+          <HamburgerIcon my="1rem" w="5rem" h="3.125rem"/>
         </button>
         {isModalOpen?
         <Flex style={{position:"absolute",top:"0",left:"0",zIndex:"999"}}>
