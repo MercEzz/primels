@@ -1,5 +1,7 @@
-import { Flex,Text,FormLabel,Checkbox, Image, Button, HStack, FormControl, Input, VStack } from "@chakra-ui/react";
+import { Flex,Text,FormLabel,Checkbox, Image, Button, HStack, FormControl, Input, VStack, Icon } from "@chakra-ui/react";
 import Modal from 'react-bootstrap/Modal';
+import { BsFillTelephoneFill,BsCurrencyDollar } from "react-icons/bs";
+import carIll from "./refer and earn imgs/CAR ICON.svg";
 import React from "react";
 
 const ModalWindwow = ({modalTitle,modalImage,isOpen,onClose}) => {
@@ -13,20 +15,31 @@ const ModalWindwow = ({modalTitle,modalImage,isOpen,onClose}) => {
       />
       <Modal size="lg" blockScrollOnMount={true} show={isOpen} onHide={onClose}>
           <Modal.Header closeButton>
-            <Modal.Title align="center">{modalTitle}</Modal.Title>
+            <Modal.Title>{modalTitle}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Flex direction="column" gap="1rem">
-            <Image src={modalImage} alt="IMG" />
-            <Flex gap="1rem">
-            <VStack w="8.75rem" align="flex-start">
-              Icons
-            </VStack>
-            <form>
-            <Flex w="100%" align="center" justify="center" direction="column" >
+            <Flex direction="column">
+            <Image h="18.75rem" src={modalImage} alt="IMG" />
+            <Flex mt="1rem" boxShadow="xl">
+              <Flex w="50%" align="center" direction="column" gap="1rem">
+              <Image px="2rem" src="/images/logo.png" />
+              <Flex direction="column" w="9.375rem" align="flex-start">
+                <Icon  ml="25%" as={BsFillTelephoneFill} w="8" h="6" color="#DFBD69" />
+                <Text textColor="DFBD69" textAlign="center" >INSTANT CALL BACK</Text>
+              </Flex>
+              <Flex direction="column" w="9.375rem" align="flex-start">
+                <Image  ml="25%" src={carIll} />
+                <Text textColor="DFBD69" textAlign="center" >FREE SITE VISIT</Text>
+              </Flex>
+              <Flex direction="column" w="9.375rem" align="flex-start">
+                <Icon  ml="25%" as={BsCurrencyDollar} w="8" h="6" color="#DFBD69" />
+                <Text textColor="DFBD69" textAlign="center" >UNMATCHED PRICE</Text>
+              </Flex>
+            </Flex>
+            <Flex w="50%" align="center" justify="center" direction="column" pb="1rem" >
+              <form>
               <Text fontSize="1rem">Register here & avail best offers!</Text>
               <FormControl isRequired>
-                {" "}
                 <HStack w="100%" justify="space-between" pb="0.938rem">
                   <FormLabel
                     fontFamily="avenir"
@@ -47,7 +60,6 @@ const ModalWindwow = ({modalTitle,modalImage,isOpen,onClose}) => {
                 </HStack>{" "}
               </FormControl>
               <FormControl isRequired>
-                {" "}
                 <HStack w="100%" justify="space-between" pb="0.938rem">
                   <FormLabel
                     fontFamily="avenir"
@@ -113,8 +125,8 @@ const ModalWindwow = ({modalTitle,modalImage,isOpen,onClose}) => {
               >
                 SCHEDULE A CALL
               </Button>{" "}
+            </form>
             </Flex>
-          </form>
             </Flex>
             </Flex>
           </Modal.Body>
