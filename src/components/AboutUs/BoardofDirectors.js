@@ -9,12 +9,12 @@ import rajesh from "./rajesh-manghnani.jpg"
 const BoardofDirectors =()=>{
 
     return (<>
-        <Flex direction="column" h="120vh"overflow="hidden"  px="100px">
-        <Center className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem">BOARD OF DIRECTORS</Center>
+        <Flex direction="column" h="100%"overflow="hidden"  px="100px">
+        <Center pb="3.125rem" className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem">BOARD OF DIRECTORS</Center>
         <Flex >
             <Flex direction="column" w="50%">
-            <Heading fontFamily="goudy" fontSize="1.5rem" className="fadein-2sdelay revealOnce">MR. RAJEEV AJMERA</Heading>
-            <Heading fontFamily="avenir" fontSize="1.125rem" className="fadein-2sdelay revealOnce">CHAIRMAN & MANAGING DIRECTOR</Heading>
+            <Heading fontFamily="goudy" pb="1rem" fontSize="1.5rem" className="fadein-2sdelay revealOnce">MR. RAJEEV AJMERA</Heading>
+            <Heading fontFamily="avenir" pb="1rem" fontSize="1.125rem" className="fadein-2sdelay revealOnce">CHAIRMAN & MANAGING DIRECTOR</Heading>
             <Text fontFamily="varela round" fontSize="1rem" className="fadein-2sdelay revealOnce">A Civil Engineer and MBA with over 30 Years of 
                 Experience in real estate marketing, strategic alliances, 
                 construction, development and advisory Services. He has 
@@ -26,11 +26,11 @@ const BoardofDirectors =()=>{
             </Flex>
             <Image  className="fadein reveal" src={rajeev} w="600px" h="400px" alt="IMAGE"/>
         </Flex>
-        <Flex gap="15px" overflow="hidden">
+        <Flex gap="15px" overflow="hidden" pt="2.125rem">
             <Flex direction="column" w="33%">
                 <Image src={punit} w="400px" h="350px" className="image-slieddown reveal"/>
-                <Heading fontFamily="avenir" fontSize="1.5rem">MR. PUNIT CHOPRA</Heading>
-                <Heading fontFamily="varela round" fontSize="1.125rem">Director</Heading>
+                <Heading fontFamily="avenir" pb="1rem" fontSize="1.5rem">MR. PUNIT CHOPRA</Heading>
+                <Heading fontFamily="varela round" pb="1rem" fontSize="1.125rem">Director</Heading>
                 <Text fontFamily="varela round" fontSize="1rem">
                 A Civil Engineer and MBA with over 30 Years of 
                 BE, MBA (USA) has worked in India & USA in a 
@@ -43,8 +43,8 @@ const BoardofDirectors =()=>{
             </Flex>
             <Flex direction="column" w="33%">
                 <Image src={arvinnd} w="400px" h="350px" className="image-slieddown reveal"/>
-                <Heading fontFamily="avenir" fontSize="1.5rem">MR. ARVINND AGARWAL</Heading>
-                <Heading fontFamily="varela round" fontSize="1.125rem">Director</Heading>
+                <Heading fontFamily="avenir" pb="1rem" fontSize="1.5rem">MR. ARVINND AGARWAL</Heading>
+                <Heading fontFamily="varela round" pb="1rem" fontSize="1.125rem">Director</Heading>
                 <Text fontFamily="varela round" fontSize="1rem">
                 Chartered accountant with expertise in commercial & 
                 Financial practices. He has been associated with 
@@ -54,8 +54,8 @@ const BoardofDirectors =()=>{
             </Flex>
             <Flex direction="column" w="33%">
                 <Image src={rajesh} w="400px" h="350px" className="image-slieddown reveal"/>
-                <Heading className="fadein-2sdelay revealOnce" fontFamily="avenir" fontSize="1.5rem">MR. RAJESH MANGHNANI</Heading>
-                <Heading className="fadein-2sdelay revealOnce" fontFamily="varela round" fontSize="1.125rem">Director</Heading>
+                <Heading className="fadein-2sdelay revealOnce" pb="1rem" fontFamily="avenir" fontSize="1.5rem">MR. RAJESH MANGHNANI</Heading>
+                <Heading className="fadein-2sdelay revealOnce" pb="1rem" fontFamily="varela round" fontSize="1.125rem">Director</Heading>
                 <Text className="fadein-2sdelay revealOnce" fontFamily="varela round" fontSize="1rem">
                 Commerce Graduate with years of experience in real 
                 estate transaction in domestic market and middle 

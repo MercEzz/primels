@@ -8,7 +8,7 @@ const MtnHd = motion(Heading);
 
 const AboutBanner = () => {
   return (
-    <Flex w="100%" h="57.937rem" pos="relative">
+    <Flex w="100%" h="100vh" pos="relative">
       <MtnFlx
         initial={{ scale: 0.6 }}
         animate={{ scale: 1 }}

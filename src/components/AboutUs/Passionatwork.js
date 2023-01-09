@@ -2,9 +2,9 @@ import { Center, Flex, Text, Icon, Image, SimpleGrid, HStack, Heading, GridItem,
 import React from "react";
 const Passionatwork =()=>{
       return (<>
-        <Flex direction="column" h="110vh" overflow="hidden"  px="100px">
-        <Center className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem" textAlign="center">PASSION AT WORK</Center>
-        <Flex>
+        <Flex direction="column" h="100%" overflow="hidden"  px="100px" mt="5rem" mb="5rem">
+        <Center  className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem" textAlign="center">PASSION AT WORK</Center>
+        <Flex pt="3.125rem">
             <Image className="fadein-2sdelay reveal" bgColor="red" w="600px" h="468px" alt="IMAGE"/>
             <Flex
             className="slidein-top reveal"
@@ -43,9 +43,9 @@ const Passionatwork =()=>{
                 quality and safety"
             </Text>
         </Flex>
-        <Flex>
+        <Flex mt="3.125rem">
            <Flex direction="column"  w="50%" overflow="hidden">
-                <Center><Heading className="slidein-top revealOnce" fontFamily="avenir" fontSize="2.5rem">KEY SERVICES</Heading></Center>
+                <Center><Heading  mb="3.125rem" className="slidein-top revealOnce" fontFamily="avenir" fontSize="2.5rem">KEY SERVICES</Heading></Center>
                 <Flex gap="2%">
                     <Flex direction="column" w="49%" className="fadein-2sdelay revealOnce">
                         <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">CONSULTING</Heading></Flex>
@@ -63,7 +63,7 @@ const Passionatwork =()=>{
                         <Text fontFamily="varela round"><li>Indore</li></Text>
                     </Flex>
                 </Flex>
-                <Flex  gap="2%">
+                <Flex  gap="2%" pt="2rem">
                     <Flex direction="column" w="49%" className="fadein-2sdelay revealOnce">
                         <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">FINANCE</Heading></Flex>
                         <Text fontFamily="varela round"><li>AIF II Fund</li></Text>
@@ -75,7 +75,7 @@ const Passionatwork =()=>{
                 </Flex>
            </Flex>
            <Flex direction="column" h="100%" w="50%" overflow="hidden">
-                <Center><Heading className="slidein-top revealOnce" fontFamily="avenir" fontSize="2.5rem">OUR CORE STRENGTHS</Heading></Center>
+                <Center><Heading mb="3.125rem" className="slidein-top revealOnce" fontFamily="avenir" fontSize="2.5rem">OUR CORE STRENGTHS</Heading></Center>
                 <SimpleGrid
                         columns={3}
                         w="660px"
@@ -83,7 +83,6 @@ const Passionatwork =()=>{
                         spacing="0.938rem">
                             <GridItem pos="relative" w="200px" h="248px" bgColor="red" rowSpan={2} className="image-slieddown reveal">
                             <Box
-                                
                                 w="100%"
                                 h="100%"
                                 pos="absolute"

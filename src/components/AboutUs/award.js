@@ -28,25 +28,57 @@ const Award=()=>{
     const isInView = useInView(ref, {
       once: true,
     });
-  const settings = {
-    // className: "center",
-    centerMode: true,
-    autoplay:true,
-    infinite: true,
-    draggable: true,
-    speed: 500,
-    autoplaySpeed: 2000,
-    pauseOnHover: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
+    const settings = {
+      // className: "center",
+      autoplay: true,
+      centerMode: true,
+      infinite: true,
+      // centerPadding: "60px",
+      draggable: true,
+      speed: 500,
+      autoplaySpeed: 2000,
+      pauseOnHover: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    };
   return(<>
     <Flex
-    direction="column"
-    h="44vh" overflow="hidden">
-        <Text w="100%" className="slidein-top revealOnce" textAlign="center" fontFamily="goudy" fontSize="2.5rem">
-          Awards
+      ref={ref}
+      w="100%"
+      h="100%"
+      direction="column"
+      align="center"
+      justify="center"
+      pt="1.875rem"
+      pb="5rem"
+      px="1.562rem"
+    >
+      {" "}
+      <Flex
+        transform={isInView ? "none" : "translateY(-50px)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s "
+        w="100%"
+        align="center"
+        justify="center"
+        pb="1.875rem"
+      >
+          <Text fontFamily="goudy" fontSize="2.5rem">
+          AWARDS
         </Text>
+      </Flex>
+      <Box
+        transform={isInView ? "scale(1)" : "scale(0.6)"}
+        opacity={isInView ? "1" : "0"}
+        transition="all 2s 1s"
+        position={"relative"}
+        height={"100%"}
+        width={"full"}
+        overflow={"hidden"}
+        pl="4.687rem"
+        pr="4.687rem"
+      >
+        {/* CSS files for react-slick */}
         <link
           rel="stylesheet"
           type="text/css"
@@ -58,42 +90,62 @@ const Award=()=>{
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-        <Flex className="fadein-2sdelay revealOnce" w="100%">
-        <Slider  {...settings} ref={(slider) => setSlider(slider)}>
-          {gymclubimgs.map((prime,index) => (
-            <Flex >
+        {/* Slider */}
+        <Slider {...settings} ref={(slider) => setSlider(slider)}>
+          {gymclubimgs.map((prime) => (
+            <Flex w="100%" align="center">
               <Image
+                key={prime}
                 w="100%"
-                key={"carousel "+index}
+                height="15.437rem"
+                pr="0.937rem"
+                position="relative"
+                objectPosition="center"
+                backgroundRepeat="no-repeat"
+                objectFit="fill"
                 src={prime.img}
               />
+              <Heading
+                w="96%"
+                align="center"
+                fontFamily="avenir"
+                fontSize="1.25rem"
+                pt="0.938rem"
+              >
+                {prime.title}
+              </Heading>
             </Flex>
           ))}
         </Slider>
         <IconButton
-            pos="absolute"
-            left="0"
-            mt="10%"
           aria-label="left-arrow"
           variant="outline"
           borderColor="#B88746"
           borderRadius="full"
+          position="absolute"
+          top="45%"
+          left="0"
           h="3.125rem"
           w="3.125rem"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
           onClick={() => {
             slider?.slickPrev();
           }}
         >
           <AiOutlineLeft color="#B88746" size="2.5rem" />
         </IconButton>
+
         <IconButton
-            pos="absolute"
-            right="0"
-            mt="10%"
           aria-label="right-arrow"
           borderRadius="full"
           variant="outline"
           borderColor="#B88746"
+          position="absolute"
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          right="0"
+          top="45%"
           h="3.125rem"
           w="3.125rem"
           onClick={() => {
@@ -102,7 +154,7 @@ const Award=()=>{
         >
           <AiOutlineRight color="#B88746" size="2.5rem" />
         </IconButton>
-        </Flex>
+      </Box>
     </Flex>
   </>);
 }
