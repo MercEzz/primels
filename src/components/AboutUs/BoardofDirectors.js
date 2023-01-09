@@ -9,7 +9,7 @@ import rajesh from "./rajesh-manghnani.jpg"
 const BoardofDirectors =()=>{
 
     return (<>
-        <Flex direction="column" h="100%"overflow="hidden"  px="100px">
+        <Flex direction="column" h="100%"overflow="hidden"  px="100px" mb="5rem">
         <Center pb="3.125rem" className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem">BOARD OF DIRECTORS</Center>
         <Flex >
             <Flex direction="column" w="50%">

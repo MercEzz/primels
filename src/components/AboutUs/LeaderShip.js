@@ -16,7 +16,7 @@ const LeaderShip =()=>{
     ];
     return (<>
         <Flex direction="column" h="100%"overflow="hidden"  px="100px">
-        <Center pb="3.125rem" className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem">BOARD OF DIRECTORS</Center>
+        <Center pb="3.125rem" className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem">LEADERSHIP TEAM</Center>
         <Flex gap="1rem" mb="5rem">
             {leaders.map((leader)=>(
             <Flex direction="column" p="1rem" _hover={{boxShadow:"xl"}}
