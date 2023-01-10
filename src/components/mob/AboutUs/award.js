@@ -30,6 +30,7 @@ const Award=()=>{
     });
     const settings = {
       // className: "center",
+      centerMode: true,
       autoplay: true,
       centerMode: true,
       infinite: true,
@@ -38,7 +39,7 @@ const Award=()=>{
       speed: 500,
       autoplaySpeed: 2000,
       pauseOnHover: false,
-      slidesToShow: 3,
+      slidesToShow: 1,
       slidesToScroll: 1,
     };
   return(<>
@@ -75,8 +76,6 @@ const Award=()=>{
         height={"100%"}
         width={"full"}
         overflow={"hidden"}
-        pl="4.687rem"
-        pr="4.687rem"
       >
         {/* CSS files for react-slick */}
         <link
@@ -117,43 +116,6 @@ const Award=()=>{
             </Flex>
           ))}
         </Slider>
-        <IconButton
-          aria-label="left-arrow"
-          variant="outline"
-          borderColor="#B88746"
-          borderRadius="full"
-          position="absolute"
-          top="45%"
-          left="0"
-          h="3.125rem"
-          w="3.125rem"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => {
-            slider?.slickPrev();
-          }}
-        >
-          <AiOutlineLeft color="#B88746" size="2.5rem" />
-        </IconButton>
-
-        <IconButton
-          aria-label="right-arrow"
-          borderRadius="full"
-          variant="outline"
-          borderColor="#B88746"
-          position="absolute"
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          right="0"
-          top="45%"
-          h="3.125rem"
-          w="3.125rem"
-          onClick={() => {
-            slider?.slickNext();
-          }}
-        >
-          <AiOutlineRight color="#B88746" size="2.5rem" />
-        </IconButton>
       </Box>
     </Flex>
   </>);

@@ -2,86 +2,82 @@ import { Center, Flex, Text, Icon, Image, SimpleGrid, HStack, Heading, GridItem,
 import React from "react";
 const Passionatwork =()=>{
       return (<>
-        <Flex direction="column" h="100%" overflow="hidden"  px="100px" mt="5rem" mb="5rem">
+        <Flex direction="column" h="100%" w="100%" overflow="hidden"  px="1rem" mt="5rem" mb="5rem">
         <Center  className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem" textAlign="center">PASSION AT WORK</Center>
-        <Flex pt="3.125rem">
-            <Image className="fadein-2sdelay reveal" bgColor="red" w="600px" h="468px" alt="IMAGE"/>
-            <Flex
-            className="slidein-top reveal"
-            transition="all 2s 2s"
-            direction="column"
-            align="center"
-            px="1.562rem"
-          >
-            <Divider
-              orientation="vertical"
-              border="3px solid"
-              borderColor="#DFBD69"
-              bgColor="#DFBD69"
-              h="5.50rem"
-            />{" "}
-            <Box
-              height="1.875rem"
-              width="1.875rem"
-              backgroundColor="#DFBD69"
-              border="3px solid white"
-              boxShadow="0px 0px 0px 3px #B88746"
-              borderRadius="50%"
-            />
-          </Flex>
-            <Text className="fadein-2sdelay revealOnce" pt="5.50rem" fontSize="1rem" textAlign="left">
+        <Flex wrap="wrap" direction="column" pt="1.5rem">
+            <Text className="fadein-2sdelay revealOnce" fontSize="1rem" textAlign="center">
                 Prime LifeSpace group luxuriates the highest brand esteem 
                 in Mumbai & chennai for its fusion of luxuries & affordability 
                 in the projects of exceptional quality with a passion for 
-                delivering finest homes.<br/>
+                delivering finest homes.
+            </Text>
+            <Text className="fadein-2sdelay revealOnce" fontSize="1rem" textAlign="center">
                 Our projects are stategized acccording to the market demand &
                 executed with the new requirements of the home buyers providing
-                them with beautiful holistic living.<br/>
+                them with beautiful holistic living.
+            </Text>
+            <Text className="fadein-2sdelay revealOnce" fontSize="1rem" textAlign="center">
                 Our team stands by the motto to deliver timely, as promised &
                 will continue doing so. Being technically capable & equipped with
                 right resources we set gold standards for customer centric design,
                 quality and safety"
             </Text>
+            <Image mt="2rem" className="fadein reveal" bgColor="red" px="1rem" h="300px" alt="IMAGE"/>
         </Flex>
-        <Flex mt="3.125rem">
-           <Flex direction="column"  w="50%" overflow="hidden">
-                <Center><Heading  mb="3.125rem" className="slidein-top revealOnce" fontFamily="avenir" fontSize="2.5rem">KEY SERVICES</Heading></Center>
-                <Flex gap="2%">
-                    <Flex direction="column" w="49%" className="fadein-2sdelay revealOnce">
-                        <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">CONSULTING</Heading></Flex>
-                        <Text fontFamily="varela round"><li>Art & Architecture</li></Text>
-                        <Text fontFamily="varela round"><li>Structured Transaction</li></Text>
-                        <Text fontFamily="varela round"><li>Joint Ventures</li></Text>
-                        <Text fontFamily="varela round"><li>Contracts</li></Text>
-                        <Text fontFamily="varela round"><li>Broking</li></Text>
+        <Flex direction="column" mt="3.125rem">
+           <Flex direction="column"  w="100%" overflow="hidden">
+                <Center><Heading mb="2.125rem" className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem">KEY SERVICES</Heading></Center>
+                <Flex direction="column" gap="2%">
+                    <Flex gap="1rem" mb="2.125rem" align="center" direction="column" w="100%" className="fadein revealOnce">
+                        <Heading fontFamily="avenir" fontSize="1.5rem">CONSULTING</Heading>
+                        <Icon/>
+                        <Flex direction="column" w="100%" align="center">
+                            <Flex gap="1rem">
+                                <Text fontFamily="varela round"><li>Merger & Acquisition</li></Text>
+                                <Text fontFamily="varela round"><li>Contracts</li></Text>
+                            </Flex>
+                            <Flex gap="1rem">
+                                <Text fontFamily="varela round"><li>Art & Architecture</li></Text>
+                                <Text fontFamily="varela round"><li>Joint Ventures</li></Text>
+                            </Flex>
+                            <Flex gap="1rem">
+                                <Text fontFamily="varela round"><li>Broking</li></Text>
+                                <Text fontFamily="varela round"><li>Structured Transaction</li></Text>
+                            </Flex>
+                        </Flex>
                     </Flex>
-                    <Flex direction="column" w="49%" className="fadein-2sdelay revealOnce">
-                        <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">REAL ESTATE<br/>DEVELOPMENTS</Heading></Flex>
-                        <Text fontFamily="varela round"><li>Mumbai</li></Text>
-                        <Text fontFamily="varela round"><li>Chennai</li></Text>
-                        <Text fontFamily="varela round"><li>Pune</li></Text>
+                    <Flex gap="1rem" mb="2.125rem" direction="column" align="center" w="100%" className="fadein revealOnce">
+                        <Heading textAlign="center" fontFamily="avenir" fontSize="1.5rem">REAL ESTATE DEVELOPMENTS</Heading>
+                        <Icon/>
+                        <Flex gap="1rem">
+                            <Text fontFamily="varela round"><li>Mumbai</li></Text>
+                            <Text fontFamily="varela round"><li>Chennai</li></Text>
+                            <Text fontFamily="varela round"><li>Pune</li></Text>
+                        </Flex>
                         <Text fontFamily="varela round"><li>Indore</li></Text>
                     </Flex>
                 </Flex>
-                <Flex  gap="2%" pt="2rem">
-                    <Flex direction="column" w="49%" className="fadein-2sdelay revealOnce">
-                        <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">FINANCE</Heading></Flex>
+                <Flex direction="column" gap="2%" pt="2rem">
+                    <Flex mb="2.125rem" gap="1rem" align="center" direction="column" w="100%" className="fadein revealOnce">
+                        <Heading fontFamily="avenir" fontSize="1.5rem">FINANCE</Heading>
+                        <Icon/>
                         <Text fontFamily="varela round"><li>AIF II Fund</li></Text>
                     </Flex>
-                    <Flex direction="column" w="49%" className="fadein-2sdelay revealOnce">
-                        <Flex gap="0.938rem"><Icon/><Heading fontFamily="avenir" fontSize="1.5rem">RENEWABLE ENERGY<br/>DEVELOPMENTS</Heading></Flex>
+                    <Flex gap="1rem" direction="column" align="center" w="100%" className="fadein revealOnce">
+                        <Heading fontFamily="avenir" fontSize="1.5rem">RENEWABLE ENERGY<br/>DEVELOPMENTS</Heading>
+                        <Icon/>
                         <Text fontFamily="varela round"><li>Solar Power</li></Text>
                     </Flex>
                 </Flex>
            </Flex>
-           <Flex direction="column" h="100%" w="50%" overflow="hidden">
-                <Center><Heading mb="3.125rem" className="slidein-top revealOnce" fontFamily="avenir" fontSize="2.5rem">OUR CORE STRENGTHS</Heading></Center>
+           <Flex mt="3.125rem" direction="column" h="100%" w="100%" overflow="hidden">
+                <Center><Heading textAlign="center" mb="3.125rem" className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem">OUR CORE STRENGTHS</Heading></Center>
                 <SimpleGrid
                         columns={3}
-                        w="660px"
+                        w="100%"
                         overflow="hidden"
                         spacing="0.938rem">
-                            <GridItem pos="relative" w="200px" h="248px" bgColor="red" rowSpan={2} className="image-slieddown reveal">
+                            <GridItem pos="relative" w="106px" h="225px" bgColor="red" rowSpan={2} className="image-slieddown reveal">
                             <Box
                                 w="100%"
                                 h="100%"
@@ -115,7 +111,7 @@ const Passionatwork =()=>{
                                 </Heading>
                                 </Box>
                             </GridItem>
-                            <GridItem pos="relative" w="426px" h="119px" bgColor="red" colSpan={2} className="image-sliedright reveal">
+                            <GridItem pos="relative" w="229px" h="100px" bgColor="red" colSpan={2} className="image-sliedright reveal">
                             <Box
                                 
                                 w="100%"
@@ -150,7 +146,7 @@ const Passionatwork =()=>{
                                 </Heading>
                                 </Box>
                             </GridItem>
-                            <GridItem pos="relative" w="200px" h="119px" bgColor="red" className="fadein reveal">
+                            <GridItem pos="relative" w="105px" h="110px" bgColor="red" className="fadein reveal">
                             <Box
                                 
                                 w="100%"
@@ -185,7 +181,7 @@ const Passionatwork =()=>{
                                 </Heading>
                                 </Box>
                             </GridItem>
-                            <GridItem pos="relative" w="200px" h="248px" bgColor="red"  rowSpan={2} className="image-sliedup reveal">
+                            <GridItem pos="relative" w="106px" h="225px" bgColor="red"  rowSpan={2} className="image-sliedup reveal">
                             <Box
                                 
                                 w="100%"
@@ -220,9 +216,8 @@ const Passionatwork =()=>{
                                 </Heading>
                                 </Box>
                             </GridItem>
-                            <GridItem pos="relative" w="426px" h="119px" bgColor="red" colSpan={2} className="image-sliedleft reveal">
+                            <GridItem pos="relative" w="229px" h="100px" bgColor="red" colSpan={2} className="image-sliedleft reveal">
                             <Box
-                                
                                 w="100%"
                                 h="100%"
                                 pos="absolute"
