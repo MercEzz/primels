@@ -33,6 +33,7 @@ import AretehomesInvestMobSc from "./screens/AretehomesInvestSc.mob";
 import SkyHighScMob from "./screens/SkyHighSc.mob";
 import AreteHomesMob from "./screens/AreteHomes.mob";
 import AboutUsScMob from "./screens/AboutUsSc.mob";
+import ExpertiseSc from "./screens/ExpertiseSc";
 
 function App() {
   const [isMobile,setIsMobile]=useState(false);
@@ -62,6 +63,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeSc />} />
           <Route path="/about-us" element={<AboutUsSc />} />
+          <Route path="/expertise" element={<ExpertiseSc />} />
           <Route path="/careers" element={<CareersSc />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/energy-get-in-touch-with-us" element={<EnergySc />} />

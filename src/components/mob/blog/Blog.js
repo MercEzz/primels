@@ -20,15 +20,15 @@ import {
 } from "@chakra-ui/react";
 import React, { useLayoutEffect } from "react";
 // images
-import banner1 from "../../blog imgs/construction-silhouette.jpg";
-import banner2 from "../../blog imgs/01.jpg";
-import banner3 from "../../blog imgs/gbxKKSknbsLcPco4c7DY0ZuVuLyKknpc2jQxX_2+3nG4ELLS9EqbFkW7dW+4VH9vgrzx8gzr96H8JiJgGW5cStbzqK4aTqzUsloK8ifacDydK0axPFhWiGZAVcLoHdn+XP8CQgud2V9fnNlK46S0632AgHrrCVyFnFSm3qQfx0kcJCh9NZcy0Ka_g.jpg";
-import coinJar from "../../blog imgs/towfiqu-barbhuiya-joqWSI9u_XM-unsplash.jpg";
-import hall from "../../blog imgs/spacejoy-q3Qd86sfaoU-unsplash.jpg";
-import key from "../../blog imgs/maria-ziegler-jJnZg7vBfMs-unsplash.jpg";
-import kidbed from "../../blog imgs/toa-heftiba-bcLE7reXFLM-unsplash.jpg";
-import sunlight from "../../blog imgs/jared-rice-NTyBbu66_SI-unsplash.jpg";
-import spacejoy from "../../blog imgs/boxes.jpg";
+import banner1 from "./construction-silhouette.jpg";
+import banner2 from "./01.jpg";
+import banner3 from "./couple.jpg";
+import coinJar from "./coinjar.jpg";
+import hall from "./orangecouch.jpg";
+import key from "./keys.jpg";
+import kidbed from "./breakfastinbed.jpg";
+import sunlight from "./meditate.jpg";
+import spacejoy from "./boxes.jpg";
 import bgBox from "../../careers imgs/bg-box.jpg"
 //"../careers imgs/bg-box.jpg";
 // icons
@@ -41,6 +41,7 @@ import { RiFacebookCircleLine } from "react-icons/ri";
 //animation
 import "./bloganimation.css"
 import "./blogstyle.css"
+import GetInTouch from "./GetInTouch";
 const Blog = () => {
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
@@ -71,7 +72,7 @@ const Blog = () => {
   return (
     <>
       {/* banner sec */}
-      <Flex w="100%" h="100vh" pos="relative" direction="column" overflow="hidden">
+      <Flex w="100%" h="100%" pos="relative" direction="column" overflow="hidden">
         <Image
           animation="blog-banner-left 1 2s linear"
           w="100%"
@@ -111,9 +112,6 @@ const Blog = () => {
       </Flex>
       {/* banner sec */}
       <Flex
-        
-        pos="absolute"
-        top="90%"
         direction="column"
         w="100%"
         h="100%"
@@ -505,7 +503,7 @@ const Blog = () => {
               </Flex>
             </GridItem>
           </Grid>
-          <Button
+          {/*<Button
             p="1rem"
             fontSize="1rem"
             fontFamily="avenir"
@@ -517,14 +515,15 @@ const Blog = () => {
             _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
           >
             LOAD MORE
-          </Button>
+          </Button>*/}
         </Flex>
-        <Flex w="90%" h="50%" direction="column" pos="absolute" top="445%" bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
+        <GetInTouch />
+        {/*<Flex w="90%" h="50%" direction="column" bgImage={`linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(${bgBox})`}
         bgRepeat="no-repeat"
         bgPos="center"
         bgSize="cover">
           <BlogForm />
-        </Flex>
+        </Flex>*/}
       </Flex>
     </>
   );
@@ -541,9 +540,6 @@ const BlogForm = () => {
         w="100%"
         h="100%"
         pb="1.875rem"
-        align="center"
-        justify="center"
-        
         px="1rem"
       >
         {" "}
