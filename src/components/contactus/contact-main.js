@@ -1,7 +1,8 @@
-import { Flex, Heading, Text, Divider, Box, Icon } from "@chakra-ui/react";
+import { Flex, Heading, Text, Divider, Box, Icon, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 import SideVector from "./side-vector";
+import bgImage from "./contact us1.jpg";
 
 const MtnHd = motion(Heading);
 const MtnTxt = motion(Text);
@@ -11,14 +12,12 @@ const ContactMain = () => {
     <Flex
       w="100%"
       h="100vh"
-      bgImage="/images/contactus/contact-us3.jpg"
-      bgPos="bottom"
-      bgRepeat="no-repeat"
-      bgSize="cover"
       align="center"
       justify="center"
     >
+      <Image w="100%" h="100vh" pos="absolute" src={bgImage} />
       <Flex
+        zIndex={1}
         w="100%"
         h="100%"
         align="center"

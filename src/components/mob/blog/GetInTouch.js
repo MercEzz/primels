@@ -92,7 +92,6 @@ const GetInTouch = () => {
         transition={{ delay: 3, duration: 2, type: "just" }}
         minw="container.sm"
       >
-        {" "}
         <form onSubmit={submitHandler}>
           <FormControl align="center" justify="center">
             <VStack align="flex-start">
