@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import React, { useState } from "react";
 import { useRef } from "react";
 import Slider from "react-slick";
-
+import banner1 from "./banner.jpg"
 const FirstSec = () => {
   const ref = useRef(null);
   const [isInView, setIsinView] = useState(false);
@@ -48,18 +48,15 @@ const FirstSec = () => {
         />
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
-          {bannerImgs.map((prime) => (
             <Image
-              key={prime.id}
               w="100%"
-              height="100%"
+              height="100vh"
               // position="relative"
               backgroundPosition="center"
               backgroundRepeat="no-repeat"
               backgroundSize="cover"
-              src={prime}
+              src={banner1}
             />
-          ))}
         </Slider>
         <IconButton
           pos="absolute"

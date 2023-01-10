@@ -14,6 +14,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import Slider from "react-slick";
+import intro1 from "./INTRO1.jpg"
 
 const SecondSec = () => {
   const ref = useRef(null);
@@ -41,7 +42,7 @@ const SecondSec = () => {
       direction="column"
       align="center"
       justify="center"
-      pt="5rem"
+      pt="3.125rem"
       pb="1.875rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
@@ -53,11 +54,11 @@ const SecondSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="2.5rem"
+        fontSize="1.5rem"
         fontWeight="400"
         textTransform="uppercase"
         textAlign="center"
-        pb="1.875rem"
+        pb="1.563rem"
       >
         A place of purity and excellence
       </Heading>
@@ -77,6 +78,7 @@ const SecondSec = () => {
             mb="1.562rem"
             fontFamily="veralaRound"
             fontSize="1rem"
+            textAlign="center"
           >
             Arete homes, is the first largest smart integrated residential
             township in North Chennai, Ponneri, just Opposite Velammal
@@ -172,6 +174,7 @@ const SecondSec = () => {
           </SimpleGrid>
         </Flex>
         <Flex
+          mt="1rem"
           w="100%"
           h="100%"
         >
@@ -200,7 +203,7 @@ const SecondSec = () => {
                 <Image
                   key={prime.id}
                   w="100%"
-                  height="29.25rem"
+                  height="15.625rem"
                   position="relative"
                   objectPosition="center"
                   objectFit="cover"
@@ -263,7 +266,7 @@ const SecondSec = () => {
 export default SecondSec;
 
 const introImgs = [
-  "/images/arete-homes/INTRO1.jpg",
+  intro1,
   "/images/arete-homes/INTRO2.png",
 ];
 

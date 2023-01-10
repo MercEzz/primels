@@ -159,7 +159,10 @@ const NinethSec = () => {
                 w="50px"
                 h="50px"
                 align="center"
-                _hover={{ cursor: "pointer" }}
+                _hover={{
+                  cursor:"pointer",
+                  bgGradient: "linear(to-b, #DFBD69, #B88746)",
+                }}
               >
                 <Image
                   w="30px"

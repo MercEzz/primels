@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import React, { useState } from "react";
 import { useRef } from "react";
 import Slider from "react-slick";
-
+import banner from "./banner.jpeg"
 const FirstSec = () => {
   const ref = useRef(null);
   const [isInView, setIsinView] = useState(false);
@@ -52,7 +52,7 @@ const FirstSec = () => {
             <Image
               key={prime.id}
               w="100%"
-              height="100%"
+              height="100vh"
               // position="relative"
               backgroundPosition="center"
               backgroundRepeat="no-repeat"
@@ -113,6 +113,6 @@ const FirstSec = () => {
 export default FirstSec;
 
 const bannerImgs = [
-  "/images/arete-homes/BANNER2.jpg",
+  banner,
   "/images/arete-homes/BANNER2.jpg",
 ];

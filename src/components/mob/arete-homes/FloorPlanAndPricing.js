@@ -86,10 +86,10 @@ const TenthSec = () => {
       align="center"
       justify="center"
     >
-      <Text fontFamily="goudy" fontSize="2.5rem" mb="1.563rem">
+      <Text textAlign="center" fontFamily="goudy" fontSize="1.5rem" mb="1.563rem">
         FLOOR PLAN AND PRICING
       </Text>
-      <Heading fontFamily="avenir" fontSize="2.125rem" mb="1.563rem">
+      <Heading textAlign="center" fontFamily="avenir" fontSize="1.125rem" mb="1.563rem">
         SMART HOMES THAT ARE VASTU COMPLIANT
       </Heading>
       <SimpleGrid columns="3" gap="1rem" pb="0.938rem" justify="center">
@@ -250,7 +250,7 @@ const TowerA3 = () => {
                 filter="auto"
                 blur="5px"
                 w="100%"
-                h="24.563rem"
+                h="15.625rem"
                 src={tes}
                 objectFit="cover"
                 objectPosition="center"
@@ -270,8 +270,8 @@ const TowerA3 = () => {
         <Image
           pos="absolute"
           src={soldout}
-          w="7.5rem"
-          h="7.5rem"
+          w="6.25rem"
+          h="6.25rem"
           left="0"
           top="0"
         />
@@ -378,7 +378,7 @@ const TowerA4 = () => {
                 filter="auto"
                 blur="5px"
                 w="100%"
-                h="24.563rem"
+                h="15.625rem"
                 src={tes}
                 objectFit="cover"
                 objectPosition="center"
@@ -398,8 +398,8 @@ const TowerA4 = () => {
         <Image
           pos="absolute"
           src={soldout}
-          w="7.5rem"
-          h="7.5rem"
+          w="6.25rem"
+          h="6.25rem"
           left="0"
           top="0"
         />
@@ -506,7 +506,7 @@ const TowerA5 = () => {
                 filter="auto"
                 blur="5px"
                 w="100%"
-                h="24.563rem"
+                h="15.625rem"
                 src={tes}
                 objectFit="cover"
                 objectPosition="center"
@@ -626,7 +626,7 @@ const TowerA6 = () => {
                 filter="auto"
                 blur="5px"
                 w="100%"
-                h="24.563rem"
+                h="15.625rem"
                 src={tes}
                 objectFit="cover"
                 objectPosition="center"

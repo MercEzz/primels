@@ -2,7 +2,7 @@ import { Flex, Image } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect } from "react";
 import { useRef } from "react";
-
+import banner from "./Asset 10-100.jpg"
 const MtnImg = motion(Image);
 
 const FourthSec = () => {
@@ -38,19 +38,10 @@ const FourthSec = () => {
       <MtnImg
         w="100%"
         h="100%"
-        src="/images/arete-homes/3RD SECTION.jpg"
+        src={banner}
         objectPosition="30% 30%"
         bgRepeat="no-repeat"
         objectFit="cover"
-      />
-      <MtnImg
-        initial={{ x: 100}}
-        h="6.25rem"
-        src="/images/arete-homes/Asset.png"
-        pos="absolute"
-        bottom="3.125rem"
-        right="39%"
-        transform={"translateX(-50%)"}
       />
     </Flex>
   );

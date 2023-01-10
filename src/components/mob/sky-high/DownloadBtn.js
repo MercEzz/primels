@@ -8,10 +8,10 @@ const DownloadBtn = () => {
     <Button
       pos="fixed"
       bottom="3.1rem"
-      left="3.1rem"
+      left="1rem"
       borderRadius="50%"
-      h="5rem"
-      w="5rem"
+      h="3.125rem"
+      w="3.125rem"
       zIndex="99"
       bgGradient="linear(to-b, #B88746 ,#DFBD69)"
       color="black"

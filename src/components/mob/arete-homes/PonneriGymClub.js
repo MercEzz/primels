@@ -14,13 +14,11 @@ import pgclogo from "../../arete-homes imgs/Asset 1.png";
 import activityArea from "../../arete-homes imgs/PGC-ACTIVITY AREA.jpeg";
 import banquetHall from "../../arete-homes imgs/PGC-BANQUET HALL.jpg";
 import cafeteria from "../../arete-homes imgs/PGC-CAFETERIA.jpg";
-import grandEntrance from "../../arete-homes imgs/PGC-CAFETERIA.jpg";
-import swimmingPool from "../../arete-homes imgs/PGC-CAFETERIA.jpg";
-//import grandEntrance from "../../arete-homes imgs/PGC-GRAND ENTRANCE.jpg";
+import grandEntrance from "../../arete-homes imgs/PGC-GRAND ENTRANCE.jpg";
 import gym from "../../arete-homes imgs/PGC-GYM.JPG";
 import multiSports from "../../arete-homes imgs/PGC-multi sports arena.jpg";
 import squashCourt from "../../arete-homes imgs/PGC-SQUASH COURT.jpg";
-//import swimmingPool from "../../arete-homes imgs/PGC-SWIMMING POOL.jpg";
+import swimmingPool from "../../arete-homes imgs/PGC-SWIMMING POOL.jpg";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -52,8 +50,7 @@ const SeventhSec = () => {
       align="center"
       justify="center"
       pt="1.875rem"
-      pb="5rem"
-      px="1rem"
+      pb="3.125rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgPos="center"
@@ -69,13 +66,15 @@ const SeventhSec = () => {
         justify="center"
         pb="1.875rem"
       >
-        <Image src={pgclogo} h="2.125rem" w="2.125rem" mr="0.625rem" />
-        <Text fontFamily="goudy" fontSize="1.125rem">
-          <Text as="span" fontSize="0.7rem">
-            PVT.
-          </Text>{" "}
-          PONNERI GYMKHANA CLUB
-        </Text>
+        <Flex direction="column">
+          <Image src={pgclogo} alignSelf="center" h="2.125rem" w="2.125rem" mr="0.625rem" />
+          <Text textAlign="center" fontFamily="goudy" fontSize="1.5rem">
+            <Text as="span" fontSize="0.7rem">
+              PVT.
+            </Text>{" "}
+            PONNERI<br/>GYMKHANA CLUB
+          </Text>
+        </Flex>
       </Flex>
       <Box
         transform={isInView ? "scale(1)" : "scale(0.6)"}
@@ -104,9 +103,9 @@ const SeventhSec = () => {
             <Flex w="100%" align="center">
               <Image
                 key={prime}
-                w="100%"
-                height="15.437rem"
-                pr="0.937rem"
+                w="20.625rem"
+                height="15.625rem"
+                pr="0.312rem"
                 position="relative"
                 objectPosition="center"
                 backgroundRepeat="no-repeat"
@@ -117,7 +116,7 @@ const SeventhSec = () => {
                 w="96%"
                 align="center"
                 fontFamily="avenir"
-                fontSize="1.25rem"
+                fontSize="1.125rem"
                 pt="0.938rem"
               >
                 {prime.title}

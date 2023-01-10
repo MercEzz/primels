@@ -1,10 +1,20 @@
 import { Flex, Text, Image } from "@chakra-ui/react";
-import React, { useRef, useEffect, useLayoutEffect } from "react";
+import React, { useRef, useEffect, useLayoutEffect, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import masterplan from "./MASTER PLAN.jpg";
+import ModalImage from "../modalImage";
+
 const MtnTxt = motion(Text);
 const MtnFlx = motion(Flex);
 
 const ThirdSec = () => {
+  const [isOpen,setIsOpen]=useState(false);  
+const closeImage =() =>{
+  setIsOpen(false);
+}
+const openImage =() =>{
+  setIsOpen(true);
+}
   const ref = useRef(null);
   const videoRef= useRef(null);
   const isInView = useInView(ref, {
@@ -37,6 +47,8 @@ const ThirdSec = () => {
     }
   },[videoRef]);
   return (
+    <>
+    {isOpen?<ModalImage modalImage={masterplan} isOpen={isOpen} onClose={()=>closeImage()} />:<></>}
     <Flex
       ref={ref}
       w="100%"
@@ -66,7 +78,7 @@ const ThirdSec = () => {
           w="100%"
           h="100%"
         >
-          <Image w="100%" h="31.25rem" src="/images/arete-homes/MASTER PLAN.jpg" />
+          <Image _hover={{cursor:"pointer"}} onClick={()=>openImage()} w="100%" h="31.25rem" src="/images/arete-homes/MASTER PLAN.jpg" />
         </MtnFlx>
         <MtnFlx
           ml="1.75rem"
@@ -80,6 +92,7 @@ const ThirdSec = () => {
         </MtnFlx>
       </Flex>
     </Flex>
+    </>
   );
 };
 

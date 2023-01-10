@@ -14,7 +14,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import Slider from "react-slick";
-
+import intro1 from "./INTRO1.jpg"
 const SecondSec = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -28,7 +28,7 @@ const SecondSec = () => {
     autoplay: true,
     speed: 500,
     fade: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
@@ -289,7 +289,7 @@ const SecondSec = () => {
 export default SecondSec;
 
 const introImgs = [
-  "/images/arete-homes/INTRO1.jpg",
+  intro1,
   "/images/arete-homes/INTRO2.png",
 ];
 

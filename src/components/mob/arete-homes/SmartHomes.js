@@ -44,7 +44,7 @@ const NinethSec = () => {
       w="100%"
       h="100%"
       px="1rem"
-      pt="5rem"
+      pt="3.125rem"
       pb="1.875rem"
       direction="column"
       align="center"
@@ -59,8 +59,7 @@ const NinethSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="2.5rem"
-        lineHeight="3rem"
+        fontSize="1.5rem"
       >
         SMART HOMES
       </Text>
@@ -69,12 +68,12 @@ const NinethSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="avenir"
-        fontSize="1.5rem"
+        fontSize="1.25rem"
         py="1.563rem"
       >
         BUY . RENT . INVEST .
       </Heading>
-      <Text opacity={isInView ? "1" : "0"} transition="all 2s" fontFamily="veralaRound" fontSize="1.125rem" pb="1.563rem">
+      <Text textAlign="center" opacity={isInView ? "1" : "0"} transition="all 2s" fontFamily="veralaRound" fontSize="1.125rem" pb="1.563rem">
         Premium 2 BHK & 3 BHK serviced apartments in North Chennai, with
         customized experience, your way.
       </Text>
@@ -104,7 +103,7 @@ const NinethSec = () => {
               <Image
                 key={prime}
                 w="100%"
-                h="25rem"
+                h="18.75rem"
                 position="relative"
                 objectPosition="center center"
                 backgroundRepeat="no-repeat"

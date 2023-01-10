@@ -28,11 +28,12 @@ const AreteHomesMob = () => {
       <FirstSec />
       <SecondSec />
       <ThirdSec />
-      <FourthSec />
+      <EightSec />
+      
       <FifthSec />
       <SixthSec />
       <SeventhSec />
-      <EightSec />
+      <FourthSec />
       <NinethSec />
       <TenthSec />
       <EleventhSec />

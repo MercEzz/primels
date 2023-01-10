@@ -30,7 +30,7 @@ const TenthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="2.5rem"
+        fontSize="1.5rem"
         mb="1.563rem"
       >
         SMART INVEST
@@ -39,7 +39,7 @@ const TenthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="avenir"
-        fontSize="2.125rem"
+        fontSize="1.125rem"
         textAlign="center"
         mb="1.563rem"
       >

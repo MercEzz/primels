@@ -35,7 +35,7 @@ const SixthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="2.5rem"
+        fontSize="1.5rem"
         mb="1.562rem"
         textAlign="center"
       >
@@ -47,6 +47,7 @@ const SixthSec = () => {
         fontFamily="veralaRound"
         fontSize="1rem"
         mb="1.562rem"
+        textAlign="center"
       >
         A well planned gated community & is pre-certified Platinum Rated by
         IGBC, that ensures better energy management. With 74% open area, huge
@@ -62,7 +63,7 @@ const SixthSec = () => {
             className="fadein reveal"
             fontFamily="veralaRound"
             w="100%"
-            h="30rem"
+            h="18.75rem"
             src={igbCert}
           />
         </Flex>
@@ -70,7 +71,7 @@ const SixthSec = () => {
               mt="1rem"
               w="100%"
               columns={2}
-              spacing="0.938rem"
+              spacing="0.625rem"
             >
               <Box pos="relative">
                 <Image

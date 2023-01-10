@@ -37,7 +37,7 @@ const NinethSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="2.5rem"
+        fontSize="1.5rem"
         textTransform="uppercase"
       >
         LOCATION ADVANTAGE
@@ -48,7 +48,7 @@ const NinethSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="avenir"
-        fontSize="2.125rem"
+        fontSize="1.125rem"
         pt="1.563rem"
         pb="1.563rem"
       >
@@ -67,6 +67,7 @@ const NinethSec = () => {
             h="100%"
             mb="20px"
             columns={3}
+            gap="1rem"
           >
             <VStack align="center">
               <Box
@@ -204,7 +205,7 @@ const NinethSec = () => {
             <iframe
               class="gmap_iframe"
               width="100%"
-              height="430"
+              height="350"
               frameborder="0"
               scrolling="no"
               marginheight="0"
@@ -227,7 +228,7 @@ const NinethSec = () => {
               }}
               _active={{ bgGradient: "linear(to-b, #B88746 ,#DFBD69)" }}
             >
-              <ImLocation size="1.875rem" /> SHOW LOCATION ON GOOGLE MAPS
+              SHOW LOCATION ON GOOGLE MAPS
             </Button>
           </Flex>
         </Flex>

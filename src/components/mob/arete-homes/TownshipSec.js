@@ -29,9 +29,7 @@ const FifthSec = () => {
       direction="column"
       align="center"
       justify="center"
-      pt="5rem"
-      pb="1.875rem"
-      px="1rem"
+      pt="3.125rem"
       bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
       bgRepeat="no-repeat"
       bgPos="center"
@@ -42,8 +40,9 @@ const FifthSec = () => {
         opacity={isInView ? 1 : 0}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="2.5rem"
-        mb="1.875rem"
+        fontSize="1.5rem"
+        mb="1.563rem"
+        textAlign="center"
       >
         A TOWNSHIP THAT DEFINES SMART LIVING
       </Text>
@@ -70,54 +69,56 @@ const FifthSec = () => {
         />
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
-        <Flex px="1rem" direction="column" textAlign="center" mb="1.875rem">
-            <Heading h="6.5rem" fontSize="1.5rem" fontFamily="avenir" pt="0.938rem">
-              ARETE MEDITATION RETREAT
-            </Heading>
+        <Flex px=".312rem" direction="column" textAlign="center" mb="1.875rem">
+            
             <Image
               className="expandcar reveal"
               src="/images/arete-homes/arete meditation retreat 1.jpg"
-              h="20rem"
+              h="15.625rem"
               w="100%"
               boxShadow="lg"
             />
-        </Flex>
-        <Flex px="1rem" textAlign="center" direction="column">
-            <Heading h="6.5rem" fontSize="1.5rem" fontFamily="avenir" pt="0.938rem">
-              KIDS PLAY AREA
+            <Heading fontSize="1.125rem" fontFamily="avenir" pt="0.938rem">
+              ARETE MEDITATION RETREAT
             </Heading>
+        </Flex>
+        <Flex px=".312rem" textAlign="center" direction="column">
             <Image
               className="expandcar reveal"
               src="/images/arete-homes/kids play area.jpeg"
-              h="20rem"
+              h="15.625rem"
               w="100%"
               boxShadow="lg"
             />
-          </Flex>
-          <Flex px="1rem" textAlign="center" direction="column" align="center" mb="1.875rem">
-            <Heading h="6.5rem" fontSize="1.5rem" fontFamily="avenir" pt="0.938rem">
-              GARDEN & JOGGING TRACK
+            <Heading fontSize="1.125rem" fontFamily="avenir" pt="0.938rem">
+              KIDS PLAY AREA
             </Heading>
+          </Flex>
+          <Flex px=".312rem" textAlign="center" direction="column" align="center" mb="1.875rem">
+            
             <Image
               className="expandcar reveal"
               src="/images/arete-homes/garden and jogging track.jpg"
-              h="20rem"
+              h="15.625rem"
               w="100%"
               boxShadow="lg"
             />
-            
-          </Flex>
-          <Flex px="1rem" textAlign="center" direction="column" align="center">
-            <Heading h="6.5rem" fontSize="1.5rem" fontFamily="avenir" pt="0.938rem">
-              OPEN EXERCISE AREA
+            <Heading fontSize="1.125rem" fontFamily="avenir" pt="0.938rem">
+              GARDEN & JOGGING TRACK
             </Heading>
+          </Flex>
+          <Flex px=".312rem" textAlign="center" direction="column" align="center">
+            
             <Image
               className="expandcar reveal"
               src="/images/arete-homes/open exercise area.jpg"
-              h="20rem"
+              h="15.625rem"
               w="100%"
               boxShadow="lg"
             />
+            <Heading fontSize="1.125rem" fontFamily="avenir" pt="0.938rem">
+              OPEN EXERCISE AREA
+            </Heading>
           </Flex>
         </Slider>
       </Box>

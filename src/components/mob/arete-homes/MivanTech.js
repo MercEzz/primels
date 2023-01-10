@@ -25,6 +25,7 @@ const EightSec = () => {
         src="/images/arete-homes/MIVAN TECHNOLOGY TOWER.jpg"
       />
       <Image
+        mt="3.125rem"
         pos="absolute"
         top="1.25rem"
         left="50%"
@@ -33,6 +34,7 @@ const EightSec = () => {
         src="/images/arete-homes/MIVAN TECHNOLOGY 2.png"
       />
       <Image
+      mt="3.125rem"
         top="8.5rem"
         left="50%"
         h="4.375rem"

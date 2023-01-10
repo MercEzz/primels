@@ -14,13 +14,11 @@ import pgclogo from "../arete-homes imgs/Asset 1.png";
 import activityArea from "../arete-homes imgs/PGC-ACTIVITY AREA.jpeg";
 import banquetHall from "../arete-homes imgs/PGC-BANQUET HALL.jpg";
 import cafeteria from "../arete-homes imgs/PGC-CAFETERIA.jpg";
-import grandEntrance from "../arete-homes imgs/PGC-CAFETERIA.jpg";
-import swimmingPool from "../arete-homes imgs/PGC-CAFETERIA.jpg";
-//import grandEntrance from "../arete-homes imgs/PGC-GRAND ENTRANCE.jpg";
+import grandEntrance from "../arete-homes imgs/PGC-GRAND ENTRANCE.jpg";
+import swimmingPool from "../arete-homes imgs/PGC-SWIMMING POOL.jpg";
 import gym from "../arete-homes imgs/PGC-GYM.JPG";
 import multiSports from "../arete-homes imgs/PGC-multi sports arena.jpg";
 import squashCourt from "../arete-homes imgs/PGC-SQUASH COURT.jpg";
-//import swimmingPool from "../arete-homes imgs/PGC-SWIMMING POOL.jpg";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 

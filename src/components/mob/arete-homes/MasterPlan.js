@@ -53,8 +53,8 @@ const ThirdSec = () => {
         animate={animateY}
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
-        fontSize="2.5rem"
-        mb="1.875rem"
+        fontSize="1.5rem"
+        mb="1rem"
       >
         MASTER PLAN
       </MtnTxt>
@@ -66,14 +66,14 @@ const ThirdSec = () => {
           w="100%"
           h="100%"
         >
-          <Image w="100%" h="31.25rem" src="/images/arete-homes/MASTER PLAN.jpg" />
+          <Image w="100%" h="18.75rem" src="/images/arete-homes/MASTER PLAN.jpg" />
         </MtnFlx>
         <MtnFlx
           initial={{ scale: 0.6 }}
           animate={animateScale}
           transition={{ duration: 2, type: "just" }}
           w="100%"
-          h="29.25rem"
+          h="18.75rem"
         >
           <iframe ref={videoRef}  width="100%" height="100%" src="https://www.youtube.com/embed/qpTPxUiQqbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </MtnFlx>
