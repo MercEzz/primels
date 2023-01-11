@@ -543,15 +543,14 @@ const BlogForm = () => {
         px="1rem"
       >
         {" "}
-        <Heading
+        <Text
           fontFamily="goudy"
-          fontWeight="400"
-          fontSize="2.125rem"
+          fontSize="1.5rem"
           pb="1.563rem"
           
         >
           GET IN TOUCH
-        </Heading>
+        </Text>
         <form>
           <FormControl isRequired>
             {" "}
