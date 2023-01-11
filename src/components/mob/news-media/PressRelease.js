@@ -5,7 +5,7 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import press1 from "../../news-and-media/PRESS-RELEASE1.PNG";
-import press2 from "../../news-and-media/PRESS-RELEASE2.PNG";
+import press2 from "../../news-and-media/PRESS RELEASE2.png";
 import press3 from "../../news-and-media/PRESS-RELEASE3.PNG";
 import press4 from "../../news-and-media/PRESS-RELEASE4.PNG";
 import press5 from "../../news-and-media/PRESS-RELEASE5.PNG";
@@ -54,19 +54,18 @@ const SecondSec = () => {
       ref={ref}
       w="100%"
       h="100%"
-      
-      pt="5rem"
+      pt="3.125rem"
       direction="column"
       align="center"
       justify="center"
     >
-      
       <Text
         transform={isInView ? "translateY(0)" : "translateY(-50px)"}
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="2.5rem"
+        fontSize="2.125rem"
+        pb="1.563rem"
       >
         PRESS RELEASE
       </Text>
@@ -95,24 +94,24 @@ const SecondSec = () => {
           {pressRelease.map((prime,indx) => (
             <Flex key={prime}>
               <Image
-                px="0.5rem"
+                px="0.312rem"
                 _hover={{cursor:"pointer"}}
                 id={prime.location}
                 onClick={prime.title===""?()=>openImage():(prime)=>redirect(prime)}
                 boxShadow="2px 4px 6px rgba(0,0,0, .2)"
-                w="40rem"
-                h="18.75rem"
+                w="20.625rem"
+                h="15.625rem"
                 objectPosition="center top"
                 backgroundRepeat="no-repeat"
                 objectFit="cover"
                 src={prime.img}
                 
               />
-              <Flex px="1.563rem" pt="1.562rem" pb="3.125rem" w="100%" align="center" justify="space-between">
-                <Text fontFamily="avenir" fontWeight="bold" fontSize="1.5rem">
+              <Flex direction="column" px="1.563rem" pt="1.562rem" pb="3.125rem" w="100%" align="center" justify="space-between">
+                <Text fontFamily="avenir" fontWeight="bold" fontSize="1.125rem">
                   {prime.title}
                 </Text>
-                <Text fontFamily="veralaRound" fontSize="1.25rem">
+                <Text fontFamily="veralaRound" fontSize="1rem">
                   {prime.date}
                 </Text>
               </Flex>

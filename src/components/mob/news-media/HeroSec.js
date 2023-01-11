@@ -1,4 +1,4 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 import banner from "../../news-and-media/BANNER-IMAGE.jpg";
@@ -8,7 +8,7 @@ const MtnHd = motion(Heading);
 
 const FirstSec = () => {
   return (
-    <Flex w="100%" h="57.937rem" pos="relative">
+    <Flex w="100%" h="100vh" pos="relative">
       <MtnFlx
         initial={{ scale: 0.6 }}
         animate={{ scale: 1 }}
@@ -29,14 +29,14 @@ const FirstSec = () => {
         transition={{ duration: 2, type: "just" }}
         pos="absolute"
         top="35%"
-        left="50%"
-        transform="translateX(-50%)"
+        textAlign="center"
+        w="100%"
         fontFamily="avenir"
-        fontSize="3rem"
+        fontSize="2.125rem"
         lineHeight="3.562rem"
         color="white"
       >
-        NEWS & MEDIA
+      NEWS & MEDIA
       </MtnHd>
     </Flex>
   );

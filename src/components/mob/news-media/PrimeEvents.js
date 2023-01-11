@@ -52,8 +52,7 @@ const ThirdSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="2.5rem"
-        lineHeight="3rem"
+        fontSize="2.125rem"
       >
         PRIME EVENTS
       </Text>
@@ -89,11 +88,11 @@ const ThirdSec = () => {
             align="center"
             justify="center">
                 <Heading
-                  h="8rem"
+                  h="5.5rem"
                   opacity={isInView ? "1" : "0"}
                   transition="all 2s"
                   fontFamily="avenir"
-                  fontSize="1.5rem"
+                  fontSize="1.125rem"
                   py="1.563rem"
                 >
                 {prime.eventName}
@@ -102,8 +101,8 @@ const ThirdSec = () => {
                 direction="row" >
             <Image
               w="100%"
-              height="26.875rem"
-              px="0.625rem"
+              height="15.65rem"
+              px="0.312rem"
               position="relative"
               objectPosition="center"
               backgroundRepeat="no-repeat"

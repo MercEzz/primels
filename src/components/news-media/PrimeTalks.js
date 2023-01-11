@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 import "./nm.css"
 const FourthSec = () => {
-  const videos=[{source:"https://www.youtube.com/embed/Psmw1t_S6-c"},{source:"https://www.youtube.com/embed/Psmw1t_S6-c"},{source:"https://www.youtube.com/embed/Psmw1t_S6-c"},{source:"https://www.youtube.com/embed/Psmw1t_S6-c"},{source:"https://www.youtube.com/embed/Psmw1t_S6-c"}]
+  const videos=[{source:"https://youtube.com/embed/Psmw1t_S6-c"},{source:"https://www.youtube.com/embed/q3mTlDmEPlA"},{source:"https://www.youtube.com/embed/y_cXovtyWlM"},{source:"https://www.youtube.com/embed/fmLJwumDI20"}]
   const [vid,setVid] = useState({id:"0",src:videos[0].source});
   const [discoHeight,setDiscoHeight] = useState("1.8");
   const changeVid=(e)=>{
@@ -15,19 +15,16 @@ const FourthSec = () => {
     setVid({id:String(id),src:videos[id].source});
     switch(e.target.id){
     case "0":
-      setDiscoHeight("1.8")
+      setDiscoHeight("3.675")
       break;
     case "1":
-      setDiscoHeight("6.563")
+      setDiscoHeight("8.438")
       break;
     case "2":
-      setDiscoHeight("10.5")
+      setDiscoHeight("12.375")
       break;
     case "3":
-      setDiscoHeight("17.5")
-      break;
-    case "4":
-      setDiscoHeight("22")
+      setDiscoHeight("19.375")
       break;
     default:
       break;
@@ -49,9 +46,6 @@ const FourthSec = () => {
       setTimeout(() => {
         document.getElementById("3").click();
       }, 8000);
-      setTimeout(() => {
-        document.getElementById("4").click();
-      }, 10000);
     }
     return()=>{
       clearTimeout();
@@ -138,7 +132,7 @@ const FourthSec = () => {
             fontSize="1.25rem"
             justify="center"
           >
-            <Text _hover={{cursor:"pointer"}} id={0} onClick={(e)=>changeVid(e)} pb="1.562rem" mt="2rem" pl="1.562rem" verticalAlign="middle">
+            <Text _hover={{cursor:"pointer"}} id={0} onClick={(e)=>changeVid(e)} pb="1.562rem" mt="2rem" pt="1.875rem" pl="1.562rem" verticalAlign="middle">
               Best Realty Brand 2021<br/>The Economic Times
             </Text>
             <Text _hover={{cursor:"pointer"}} id={1} onClick={(e)=>changeVid(e)} pb="1.562rem" pl="1.562rem">
@@ -148,11 +142,8 @@ const FourthSec = () => {
               Best Real Estate Investment<br/>8% Guaranteed Rental Return At<br/>Arete
               Homes
             </Text>
-            <Text _hover={{cursor:"pointer"}} id={3} onClick={(e)=>changeVid(e)} pb="1.562rem" pl="1.562rem" verticalAlign="middle">
+            <Text _hover={{cursor:"pointer"}} id={3} onClick={(e)=>changeVid(e)} pl="1.562rem" verticalAlign="middle">
               Sky High Tower Launch Event
-            </Text>
-            <Text _hover={{cursor:"pointer"}} id={4} onClick={(e)=>changeVid(e)} pl="1.562rem" verticalAlign="middle">
-              Dr. Janani Rex Talks About<br/>Arete Homes Sky High Towers
             </Text>
           </Flex>
         </Flex>

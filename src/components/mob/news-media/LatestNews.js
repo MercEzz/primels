@@ -26,6 +26,7 @@ const primeReport = [
     type:'link',
     img: hindu,
     text: "INVESTING IN NORTH CHENNAI : WHAT YOU DIDN’T KNOW",
+    location:"https://www.thehindu.com/real-estate/investing-in-north-chennai-what-you-didnt-know/article22021305.ece"
   },
   {
     img: news2,
@@ -36,6 +37,7 @@ const primeReport = [
     type:'link',
     img: hindu,
     text: "CHENNAI PERIPHERAL RING ROAD WORK GETS A BOOST",
+    location:"https://www.thehindu.com/news/cities/chennai/peripheral-ring-road-work-gets-a-boost/article29719879.ece"
   },
   {
     img: news4,
@@ -46,13 +48,15 @@ const primeReport = [
     type:'link',
     img: businessStd,
     text: "TATA PROJECTS WINS RS 2,100 CR CHENNAI PERIPHERAL RING ROAD PROJECT PHASE-1",
-  },
-  {
-    img: hindu,
-    text: "RS. 13,314 CRORE INFRASTRUCTURE UPGRADE FOR PONNERI",
+    location:"https://www.business-standard.com/article/companies/tata-projects-wins-rs-2-100-cr-chennai-peripheral-ring-road-project-phase-1-121092700779_1.html"
   },
   {
     type:'link',
+    img: hindu,
+    text: "RS. 13,314 CRORE INFRASTRUCTURE UPGRADE FOR PONNERI",
+    location:"https://www.thehindubusinessline.com/news/national/13314crore-infrastructure-upgrade-for-ponneri/article7703205.ece"
+  },
+  {
     img: news7,
     text: "PONNERI TO DEVELOP AS A MEGA ENGINEERING HUB",
     location: "news7"
@@ -60,6 +64,7 @@ const primeReport = [
   {
     img: news8,
     text: "PONNERI - THE ULTIMATE REAL ESTATE DESTINATION OF NORTH CHENNAI",
+    location: "news8"
   },
   {
     img: news9,
@@ -76,6 +81,7 @@ const FifthSec = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const settings = {
+    centerMode: true,
     draggable: false,
     infinite: true,
     autoplay: true,
@@ -120,10 +126,9 @@ const FifthSec = () => {
     <Flex
       ref={ref}
       w="100%"
-      h="32.937rem"
-      px="1.562rem"
-      mt="5rem"
-      mb="1.563rem"
+      h="100%"
+      mt="3.125rem"
+      mb="3.125rem"
       direction="column"
       align="center"
       justify="center"
@@ -133,7 +138,7 @@ const FifthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="2.5rem"
+        fontSize="2.125rem"
       >
         LATEST NEWS
       </Text>
@@ -142,7 +147,7 @@ const FifthSec = () => {
         opacity={isInView ? "1" : "0"}
         transition="all 2s"
         position={"relative"}
-        height={"100%"}
+        height={"18.75rem"}
         width={"full"}
         mt="1.875rem"
       >
@@ -164,8 +169,8 @@ const FifthSec = () => {
             <Box
               key={index}
               w="100%"
-              pr="1.562rem"
-              height="25rem"
+              px="0.312rem"
+              height="18.75rem"
               position="relative"
             >
               <Image
@@ -173,7 +178,7 @@ const FifthSec = () => {
                 _hover={{cursor:"pointer"}}
                 onClick={prime.type==="link"?(prime)=>redirect(prime):(data)=>openImage(data)}
                 w="100%"
-                h="25rem"
+                h="18.75rem"
                 src={prime.img}
                 // objectFit="contain"
                 objectFit="cover"

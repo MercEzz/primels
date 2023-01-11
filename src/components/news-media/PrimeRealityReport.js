@@ -47,7 +47,7 @@ const LastSec = () => {
     autoplay: true,
     speed: 5000,
     fade: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,

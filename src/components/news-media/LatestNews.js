@@ -26,6 +26,7 @@ const primeReport = [
     type:'link',
     img: hindu,
     text: "INVESTING IN NORTH CHENNAI : WHAT YOU DIDN’T KNOW",
+    location:"https://www.thehindu.com/real-estate/investing-in-north-chennai-what-you-didnt-know/article22021305.ece"
   },
   {
     img: news2,
@@ -36,6 +37,7 @@ const primeReport = [
     type:'link',
     img: hindu,
     text: "CHENNAI PERIPHERAL RING ROAD WORK GETS A BOOST",
+    location:"https://www.thehindu.com/news/cities/chennai/peripheral-ring-road-work-gets-a-boost/article29719879.ece"
   },
   {
     img: news4,
@@ -46,13 +48,15 @@ const primeReport = [
     type:'link',
     img: businessStd,
     text: "TATA PROJECTS WINS RS 2,100 CR CHENNAI PERIPHERAL RING ROAD PROJECT PHASE-1",
-  },
-  {
-    img: hindu,
-    text: "RS. 13,314 CRORE INFRASTRUCTURE UPGRADE FOR PONNERI",
+    location:"https://www.business-standard.com/article/companies/tata-projects-wins-rs-2-100-cr-chennai-peripheral-ring-road-project-phase-1-121092700779_1.html"
   },
   {
     type:'link',
+    img: hindu,
+    text: "RS. 13,314 CRORE INFRASTRUCTURE UPGRADE FOR PONNERI",
+    location:"https://www.thehindubusinessline.com/news/national/13314crore-infrastructure-upgrade-for-ponneri/article7703205.ece"
+  },
+  {
     img: news7,
     text: "PONNERI TO DEVELOP AS A MEGA ENGINEERING HUB",
     location: "news7"
@@ -60,6 +64,7 @@ const primeReport = [
   {
     img: news8,
     text: "PONNERI - THE ULTIMATE REAL ESTATE DESTINATION OF NORTH CHENNAI",
+    location: "news8"
   },
   {
     img: news9,
@@ -234,7 +239,7 @@ const FifthSec = () => {
                 transform="translate(0, -50%)"
               >
                 <Text
-                  fontSize={{ base: "md", lg: "1.25rem" }}
+                  fontSize="1rem"
                   fontWeight="bold"
                   fontFamily="avenir"
                   color="white"

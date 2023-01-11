@@ -45,9 +45,8 @@ const LastSec = () => {
     draggable: false,
     infinite: false,
     autoplay: true,
-    speed: 5000,
-    fade: true,
-    autoplaySpeed: 5000,
+    speed: 500,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
@@ -62,9 +61,8 @@ const LastSec = () => {
       w="100%"
       h="100%"
       direction="column"
-      pt="1.875rem"
       px="1rem"
-      pb="5rem"
+      pb="3.125rem"
       align="center"
       justify="center"
       pos="relative"
@@ -76,8 +74,9 @@ const LastSec = () => {
         transform={isInView ? "translateY(0)" : "translateY(-50px)"}
         transition="all 2s"
         fontFamily="goudy"
-        fontSize="2.5rem"
+        fontSize="2.125rem"
         pb="1.875rem"
+        textAlign="center"
       >
         PRIME REALTY REPORT
       </Text>
@@ -111,16 +110,16 @@ const LastSec = () => {
                     boxShadow="2px 4px 6px rgba(0,0,0, .2)"
                     key={prime.id}
                     w="100%"
-                    height="25rem"
+                    height="18.75rem"
                     // position="relative"
                     objectFit="cover"
                     src={prime.img}
                   />
-                  <Flex w="100%" pos="relative">
-                  <Heading fontFamily="avenir" fontSize="1.5rem">
+                  <Flex direction="column" pt="1rem" w="100%" pos="relative">
+                  <Heading textAlign="center" fontFamily="avenir" fontSize="1.125rem">
                       {prime.month}
                     </Heading>
-                    <Text pos="absolute" right="0" fontFamily="avenir" fontSize="1rem">Company Newsletter</Text>
+                    <Text textAlign="center" fontFamily="avenir" fontSize="1rem">Company Newsletter</Text>
                     </Flex>
                 </Flex>
                 

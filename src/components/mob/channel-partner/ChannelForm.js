@@ -32,7 +32,9 @@ const MtnFlx = motion(Flex);
 
 const ChannelForm = () => {
   const [dis, setDis] = useState(false);
-
+  const redirect =() =>{
+    window.open(``);
+  }
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const animateFlx = useAnimation();
@@ -89,6 +91,9 @@ const ChannelForm = () => {
     e.preventDefault();
     if (nameOfOwner != "" || officeAdd != "" || mobileNo != "" || email != "") {
       setValidForm(!validForm);
+    }
+    else{
+      redirect();
     }
   };
 
@@ -898,10 +903,11 @@ const ChannelForm = () => {
           justify="flex-start"
           fontFamily="avenir"
           fontSize="1rem"
+          mx="0.625rem"
         >
           {" "}
           <Select
-            w="12.75rem"
+            w="10.75rem"
             placeholder="SELECT PROJECT"
             fontSize="0.875rem"
             fontFamily="avenir"
@@ -910,7 +916,6 @@ const ChannelForm = () => {
             borderTop="0"
             borderLeft="0"
             borderRight="0"
-            
             borderBottom="3px  solid"
             icon={<TriangleDownIcon width="18px" height="18px" />}
           >

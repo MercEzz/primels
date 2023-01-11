@@ -5,7 +5,7 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import press1 from "../news-and-media/PRESS-RELEASE1.PNG";
-import press2 from "../news-and-media/PRESS-RELEASE2.PNG";
+import press2 from "../news-and-media/PRESS RELEASE2.png";
 import press3 from "../news-and-media/PRESS-RELEASE3.PNG";
 import press4 from "../news-and-media/PRESS-RELEASE4.PNG";
 import press5 from "../news-and-media/PRESS-RELEASE5.PNG";
@@ -100,7 +100,7 @@ const SecondSec = () => {
           // left={side}
           // top={top}
           left="0"
-          top="50%"
+          top="40%"
           transform={"translate(0%, -50%)"}
           zIndex={2}
           h="3.125rem"
@@ -120,7 +120,7 @@ const SecondSec = () => {
           // right={side}
           // top={top}
           right="0"
-          top="50%"
+          top="40%"
           transform={"translate(0%, -50%)"}
           zIndex={2}
           h="3.125rem"
