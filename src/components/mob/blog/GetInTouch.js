@@ -81,7 +81,7 @@ const GetInTouch = () => {
         transition={{ duration: 2, type: "just" }}
         fontFamily="goudy"
         fontWeight="400"
-        fontSize="1.5rem"
+        fontSize="2.125rem"
         pb="1.875rem"
       >
         GET IN TOUCH

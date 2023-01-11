@@ -121,7 +121,7 @@ const ReferAFriend = () => {
           className="serv-text-up reveal"
           textAlign="center"
           fontWeight="400"
-          fontSize="1.5rem"
+          fontSize="2.125rem"
           fontFamily="goudy"
           pt="1.875rem"
           pb="1.875rem"
@@ -268,7 +268,7 @@ const ReferAFriend = () => {
             className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
-            fontSize="1.5rem"
+            fontSize="2.125rem"
           >
             REFER & EARN
           </Text>
@@ -630,7 +630,7 @@ const BookAVisit = () => {
             className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
-            fontSize="1.5rem"
+            fontSize="2.125rem"
             pb="1.875rem"
           >
             BOOK YOUR<br/>FREE SITE VISIT
