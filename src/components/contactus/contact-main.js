@@ -35,7 +35,6 @@ const ContactMain = () => {
           justify="center"
           color="black"
           textAlign="center"
-          mt="8rem"
         >
           <MtnHd
             w="100%"

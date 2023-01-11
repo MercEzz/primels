@@ -2,7 +2,7 @@ import { Flex, Heading, Text, Divider, Box, Icon, Image } from "@chakra-ui/react
 import { motion } from "framer-motion";
 import React from "react";
 import SideVector from "./side-vector";
-import bgImage from "./contactus.jpg"
+import bgImage from "./contact us1.jpg"
 
 const MtnHd = motion(Heading);
 const MtnTxt = motion(Text);
@@ -38,7 +38,6 @@ const ContactMain = () => {
           justify="center"
           color="black"
           textAlign="center"
-          mt="8rem"
         >
           <MtnHd
             w="100%"
