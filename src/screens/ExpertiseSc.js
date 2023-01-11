@@ -1,12 +1,11 @@
 import React, { useLayoutEffect } from "react";
 import AboutBanner from "../components/expertise/aboutBanner";
-import Award from "../components/expertise/award";
 import Ourclients from "../components/expertise/Ourclients";
-import LeaderShip from "../components/expertise/LeaderShip";
 import Consultation from "../components/expertise/Consultation";
 import Whoweare from "../components/expertise/Whoweare";
 import DropDown from "../components/sky-high/DropDown";
 import { revealAgain, revealOnce } from "../hooks/util";
+import OurProjects from "../components/expertise/OurProjects";
 const ExpertiseSc =()=>{
     useLayoutEffect(()=>{
         window.addEventListener("scroll", revealAgain);
@@ -21,8 +20,7 @@ const ExpertiseSc =()=>{
         <Whoweare/>
         <Consultation/>
         <Ourclients/>
-        <LeaderShip/>
-        <Award/>
+        <OurProjects/>
         <DropDown/>
       </>)
 }

@@ -69,6 +69,7 @@ const LastSec = () => {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
+        <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
         {/* Slider */}{" "}
         <Icon
           pos="absolute"
@@ -110,16 +111,14 @@ const LastSec = () => {
                 </Flex>
               </Flex>
               <Flex w="100%" h="100%">
-              <iframe
-              Access-Control-Allow-Origin="*"
+              
+              <video
+              controls
+              
+              crossOrigin="use-credentials"
               height="100%"
-              width="100%"
-              src={prime.src}
-              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-              </iframe>
+              width="50%"
+              src={prime.src} />
               </Flex>
             </Flex>
           ))}
@@ -136,25 +135,25 @@ const testimonial = [
     text: "A wonderful project and well-designed especially for sports lovers, Arete homes covers the need of all type of people from Childers to adults also old age people, It fulfilled all requirements of a common man, Fantastically designed & developed sport arena, security, parking facilities, power backup enough space between each blocks, drainage & treatment system, entertainment zones, meditation center, groceries, fitness gym, etc. Excellent club house facilities for great relaxation. Overall Arete homes give us a PEACE OF MIND.",
     title: "MR. SADAGOPAN SATHISH ",
     subTitle: "TOWER a5-808",
-    src:"https://www.youtube.com/shorts/opNngOftbXQ",
+    src:"https://www.youtube.com/shorts/opNngOftbXQ&html5=True",
   },
   {
     text: "We own a 2BHK lifestyle apartment at Arete homes, a luxury project by Prime Lifespace at Ponneri. The apartment worth every penny and the construction quality is very good. The through bred professional marketing team of Arete homes was very helpful in not only securing home loan but also assisting us throughout the home buying till the end. The ethical work of Arete homes that timely delivery has impressed us immensely. I will surely recommend prospective home buyer to buy homes at Arete homes.",
     title: "MR. MOHAMMED ASATHULLAH",
     subTitle: "TOWER a3-608",
-    src:"https://www.youtube.com/shorts/BRXHWPJJP2s",
+    src:"https://www.youtube.com/shorts/BRXHWPJJP2s&html5=True",
   },
   {
     text: "I feel happy to be a part of Arete Homes. The best project in a beautiful environment but still at an affordable rate in north Chennai. I appreciate the team Arete for their wonderful work very professional proficient and easy to approach.",
     title: "MR. BINDU DILIP ",
     subTitle: "TOWER a5-702",
-    src:"https://www.youtube.com/shorts/R-diMecGRHk",
+    src:"https://www.youtube.com/shorts/R-diMecGRHk&html5=True",
   },
   {
     text: "We visited the Arete Township and are very much impressed by the development implemented to make living a great experience. the dren planned on top of parking. Spaces for conducting functions and above all a unique meditation hall.",
     title: "MR. NILAKANTAN  ",
     subTitle: "TOWER a3-407 & 408",
-    src:"https://www.youtube.com/shorts/jSqnyjYXTiM",
+    src:"https://www.youtube.com/shorts/jSqnyjYXTiM&html5=True",
   },
   {
     text: "I have been associated with this locality from my childhood, and I must say that I am really elated to see this area develop. This is the 1st township of Ponneri and the quality of the project beyond excellence, combined this with the upcoming future developments this is the best investment destination of Chennai. The customer service provided by the Arete team is warm and welcoming. Really can’t wait to start living here!",

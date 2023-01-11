@@ -1,18 +1,167 @@
-import { Box, Center, Divider, Flex, Heading, Icon,Image, Text } from "@chakra-ui/react";
-import React from "react";
+import { Box, Center, Divider, Flex, Heading, Icon,IconButton,Image, Text } from "@chakra-ui/react";
+import React, { useRef, useState } from "react";
+import Slider from "react-slick";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import client1 from "./rajeev2.jpeg"
+import client2 from "./punit-chopraa.jpg"
+import { useInView } from "framer-motion";
 
-import rajeev from "./rajeev2.jpeg"
-import punit from "./punit-chopraa.jpg"
-import arvinnd from "./arvinnd-agarwal.jpg"
-import rajesh from "./rajesh-manghnani.jpg"
+const client = [
+    { id: 1, img: client1, clientName:"Board of Directors of Larsen & Tourbo and Infosys", },
+    { id: 2, img: client2, clientName:"Board of Directors of Larsen & Tourbo and Carnival", },
+];
+
+const logos = [
+    "/images/alliances.png",
+    "/images/alliances2.png",
+    "/images/alliances3.png",
+    "/images/alliances4.png",
+    "/images/alliances.png",
+    "/images/alliances2.png",
+    "/images/alliances3.png",
+    "/images/alliances4.png",
+  ];
+  
+const LogoSlider = () => {
+    const settings = {
+      infinite: true,
+      autoplay: true,
+      speed: 500,
+      autoplaySpeed: 3000,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      pauseOnHover: false,
+    };
+  
+    return (
+      <Box
+        position={"relative"}
+        height={"full"}
+        width={"full"}
+        overflow={"hidden"}
+      >
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+  
+        <Slider {...settings}>
+          {logos.map((icon) => (
+            <Flex
+              align="flex-start"
+              justify="space-between"
+              flexDirection="column"
+              w="100%"
+              key={icon}
+              height={"100%"}
+              position="relative"
+            >
+              <Image src={icon} />
+            </Flex>
+          ))}
+        </Slider>
+      </Box>
+    );
+  };
 
 const Ourclients =()=>{
-
+    const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [slider, setSlider] = useState(null);
+  let [currentSlide, setCurrentSlide] = useState(1);
+  const settings = {
+    draggable: false,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    afterChange: () => {
+      setCurrentSlide(currentSlide++);
+    },
+  };
     return (<>
-        <Flex direction="column" h="100%"overflow="hidden"  px="100px" mb="5rem">
+        <Flex w="100%" ref={ref} direction="column" h="100%"overflow="hidden"  px="100px" mb="5rem">
         <Center pb="3.125rem" className="slidein-top revealOnce" fontFamily="avenir" fontSize="2.5rem">OUR CLIENTS</Center>
-        <Flex >
-        <Image  className="fadein reveal" bgColor="red" w="50%" h="400px" alt="IMAGE"/>
+        <Flex w="100%">
+        <Box
+        position={"relative"}
+        overflow={"hidden"}
+        w="50%"
+      >
+        {/* CSS files for react-slick */}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+        <Slider {...settings} ref={(slider) => setSlider(slider)}>
+          {client.map((prime) => (
+            <Flex
+              w="100%"
+             key={prime.id}
+            direction="column"
+            align="center"
+            justify="center">
+            <Image
+              w="100%"
+              height="26.875rem"
+              px="0.625rem"
+              position="relative"
+              objectPosition="center"
+              backgroundRepeat="no-repeat"
+              objectFit="cover"
+              src={prime.img}
+            />
+            <Heading
+                  textAlign="center"
+                  fontFamily="avenir"
+                  fontSize="1.5rem"
+                  py="1.563rem"
+                >
+                {prime.clientName}
+              </Heading>
+            </Flex>
+          ))}
+        </Slider>
+      </Box>
+      <Flex
+            className="slidein-top reveal"
+            transition="all 2s 2s"
+            direction="column"
+            align="center"
+            px="1.562rem"
+          >
+            <Divider
+              orientation="vertical"
+              border="3px solid"
+              borderColor="#DFBD69"
+              bgColor="#DFBD69"
+              h="5.50rem"
+            />{" "}
+            <Box
+              height="1.875rem"
+              width="1.875rem"
+              backgroundColor="#DFBD69"
+              border="3px solid white"
+              boxShadow="0px 0px 0px 3px #B88746"
+              borderRadius="50%"
+            />
+          </Flex>
             <Flex direction="column" w="50%">
             <Heading fontFamily="avenir" pb="1rem" fontSize="1.5rem" className="fadein-2sdelay revealOnce">“With our mantra : Analyze, Identify, Advise, Execute, we thrive on sharing the knowledge to help you make a success story”</Heading>
             <Text fontFamily="varela round" fontSize="1rem" className="fadein-2sdelay revealOnce">A Civil Engineer and MBA with over 30 Years of 
@@ -20,45 +169,9 @@ const Ourclients =()=>{
             </Text>
             </Flex>
         </Flex>
-        <Flex gap="15px" overflow="hidden" pt="2.125rem">
-            <Flex direction="column" w="33%">
-                <Image src={punit} w="400px" h="350px" className="image-slieddown reveal"/>
-                <Heading fontFamily="avenir" pb="1rem" fontSize="1.5rem">MR. PUNIT CHOPRA</Heading>
-                <Heading fontFamily="varela round" pb="1rem" fontSize="1.125rem">Director</Heading>
-                <Text fontFamily="varela round" fontSize="1rem">
-                A Civil Engineer and MBA with over 30 Years of 
-                BE, MBA (USA) has worked in India & USA in a 
-                responsible position for Software & technological 
-                development. He was regional head at multinational 
-                I.T company. Possesses excellent networking skills 
-                & presently engaged in business development for 
-                large corporates & State / Central Governments.
-                </Text>
-            </Flex>
-            <Flex direction="column" w="33%">
-                <Image src={arvinnd} w="400px" h="350px" className="image-slieddown reveal"/>
-                <Heading fontFamily="avenir" pb="1rem" fontSize="1.5rem">MR. ARVINND AGARWAL</Heading>
-                <Heading fontFamily="varela round" pb="1rem" fontSize="1.125rem">Director</Heading>
-                <Text fontFamily="varela round" fontSize="1rem">
-                Chartered accountant with expertise in commercial & 
-                Financial practices. He has been associated with 
-                leading corporate brands such as Welspun, Birla 
-                Group of companies etc at the top management level.
-                </Text>
-            </Flex>
-            <Flex direction="column" w="33%">
-                <Image src={rajesh} w="400px" h="350px" className="image-slieddown reveal"/>
-                <Heading className="fadein-2sdelay revealOnce" pb="1rem" fontFamily="avenir" fontSize="1.5rem">MR. RAJESH MANGHNANI</Heading>
-                <Heading className="fadein-2sdelay revealOnce" pb="1rem" fontFamily="varela round" fontSize="1.125rem">Director</Heading>
-                <Text className="fadein-2sdelay revealOnce" fontFamily="varela round" fontSize="1rem">
-                Commerce Graduate with years of experience in real 
-                estate transaction in domestic market and middle 
-                east. Since 2005 actively associated with Dubai real 
-                estate.
-                </Text>
-            </Flex>
-        </Flex>
+            <LogoSlider />
         </Flex>
     </>); 
 }
 export default Ourclients;
+  

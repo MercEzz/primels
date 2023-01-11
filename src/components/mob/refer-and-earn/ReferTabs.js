@@ -57,7 +57,7 @@ const ReferTabs = () => {
   });
   return (
     <Flex w="100%" h="100%" direction="column" align="center" pos="relative" boxShadow="0 0 10px rgba(0, 0, 0, 0.5) inset" filter="drop-shadow(5px 5px 5px rgba(0,0,0,0.3)) inset" >
-      <Flex w="100%" px="1rem" pos="absolute" top="-2%" zIndex="20">
+      <Flex w="100%" px="1rem" pos="absolute" zIndex="20">
         <Flex w="100%" background="white">
         <Button
           w="100%"
@@ -121,7 +121,7 @@ const ReferAFriend = () => {
           className="serv-text-up reveal"
           textAlign="center"
           fontWeight="400"
-          fontSize="2.125rem"
+          fontSize="1.5rem"
           fontFamily="goudy"
           pt="1.875rem"
           pb="1.875rem"
@@ -268,7 +268,7 @@ const ReferAFriend = () => {
             className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
-            fontSize="2.125rem"
+            fontSize="1.5rem"
           >
             REFER & EARN
           </Text>
@@ -538,7 +538,7 @@ const BookAVisit = () => {
       <Flex
         zIndex="1"
         w="100%"
-        h="110vh"
+        h="100%"
         bgColor="white"
         pos="relative"
         overflow="hidden"
@@ -547,17 +547,15 @@ const BookAVisit = () => {
         
         <Flex
           overflow="hidden"
-          pos="absolute"
           w={{base:"100%",lg:"60%"}}
           h="100%"
           direction="column"
           align="center"
-          top={{base:"5%",lg:"20%"}}
-          right="0"
-          bottom="0"
           px="1rem"
+          mt="4rem"
         >
           <Text
+            pt="1.875rem"
             className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
@@ -571,7 +569,7 @@ const BookAVisit = () => {
           objectFit="cover"
         />
           <div className="fadein reveal">
-          <HStack w="80%" align="center" justify="center" pb="3.125rem">
+          <HStack w="100%" alignSelf="left" justify="center" pb="3.125rem">
             <Image alignSelf="center" src={carIll} />
             <Heading
               textAlign="center"
@@ -583,15 +581,15 @@ const BookAVisit = () => {
               FREE PICK UP - DROP SERVICE AVAILABLE
             </Heading>
             </HStack>
-            <Heading
+            <Text
               textAlign="center"
               fontFamily="goudy"
               fontSize="1.5rem"
               pb="0.938rem"
             >
               GET IN TOUCH WITH US
-            </Heading>
-            <Flex w="100%" direction="column" align="center" justify="center" gap="3.125rem">
+            </Text>
+            <Flex w="100%" direction="column" align="center" justify="center" gap="1.875rem">
               <Flex w="100%" direction="column" align="center">
                 <EmailIcon h="18px" w="28px" mb="0.625rem" />
                 <Heading fontFamily="avenir" fontSize="1.25rem">
@@ -613,7 +611,7 @@ const BookAVisit = () => {
         h="100%"
         pt="1.875rem"
         direction="column"
-        pb="5rem"
+        pb="3.125rem"
         overflow="hidden"
         bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")' 
       >
@@ -632,10 +630,10 @@ const BookAVisit = () => {
             className="serv-text-up reveal"
             textAlign="center"
             fontFamily="goudy"
-            fontSize="2.125rem"
+            fontSize="1.5rem"
             pb="1.875rem"
           >
-            BOOK YOUR FREE SITE VISIT
+            BOOK YOUR<br/>FREE SITE VISIT
           </Text>
           <Flex w="100%" h="100%" direction="column" pb="1.563rem" className="fadein reveal">
             <Flex
@@ -719,7 +717,6 @@ const BookAVisit = () => {
                     fontFamily="avenir"
                     fontSize="0.875rem"
                     fontWeight="bold"
-                    
                   >
                     DATE
                   </FormLabel>
