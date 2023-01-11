@@ -113,6 +113,6 @@ const FirstSec = () => {
 export default FirstSec;
 
 const bannerImgs = [
-  "/images/arete-homes/BANNER2.jpg",
+  banner,
   "/images/arete-homes/BANNER2.jpg",
 ];

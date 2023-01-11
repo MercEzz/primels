@@ -10,21 +10,15 @@ const BoardofDirectors =()=>{
 
     return (<>
         <Flex direction="column" h="100%"overflow="hidden"  px="100px" mb="5rem">
-        <Center pb="3.125rem" className="slidein-top revealOnce" fontFamily="goudy" fontSize="2.5rem">BOARD OF DIRECTORS</Center>
+        <Center pb="3.125rem" className="slidein-top revealOnce" fontFamily="avenir" fontSize="2.5rem">OUR CLIENTS</Center>
         <Flex >
+        <Image  className="fadein reveal" bgColor="red" w="50%" h="400px" alt="IMAGE"/>
             <Flex direction="column" w="50%">
-            <Heading fontFamily="goudy" pb="1rem" fontSize="1.5rem" className="fadein-2sdelay revealOnce">MR. RAJEEV AJMERA</Heading>
-            <Heading fontFamily="avenir" pb="1rem" fontSize="1.125rem" className="fadein-2sdelay revealOnce">CHAIRMAN & MANAGING DIRECTOR</Heading>
+            <Heading fontFamily="avenir" pb="1rem" fontSize="1.5rem" className="fadein-2sdelay revealOnce">“With our mantra : Analyze, Identify, Advise, Execute, we thrive on sharing the knowledge to help you make a success story”</Heading>
             <Text fontFamily="varela round" fontSize="1rem" className="fadein-2sdelay revealOnce">A Civil Engineer and MBA with over 30 Years of 
-                Experience in real estate marketing, strategic alliances, 
-                construction, development and advisory Services. He has 
-                been instrumental in procuring over 400 apartments for the 
-                L&T employees. His leadership ensures maintenance of the 
-                highest level of management and financial integrity, keeping 
-                with international best practices in the property services 
-                business.</Text>
+            The team has excelled in providing deep expertise to biggest corporates like Blackstone for Chandigarh Elante Mall, Larsen & Toubro for Seawood Project, Sunteck for Naigaon Project etc. Also, the group has structured various eminent Joint Ventures, Mergers like L&T Ge Tech with Sharaf Foundation.
+            </Text>
             </Flex>
-            <Image  className="fadein reveal" src={rajeev} w="600px" h="400px" alt="IMAGE"/>
         </Flex>
         <Flex gap="15px" overflow="hidden" pt="2.125rem">
             <Flex direction="column" w="33%">
