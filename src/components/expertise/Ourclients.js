@@ -6,7 +6,7 @@ import punit from "./punit-chopraa.jpg"
 import arvinnd from "./arvinnd-agarwal.jpg"
 import rajesh from "./rajesh-manghnani.jpg"
 
-const BoardofDirectors =()=>{
+const Ourclients =()=>{
 
     return (<>
         <Flex direction="column" h="100%"overflow="hidden"  px="100px" mb="5rem">
@@ -61,4 +61,4 @@ const BoardofDirectors =()=>{
         </Flex>
     </>); 
 }
-export default BoardofDirectors;
+export default Ourclients;
