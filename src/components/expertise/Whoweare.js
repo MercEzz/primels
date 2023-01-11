@@ -1,4 +1,4 @@
-import { Box, Center, Divider, Flex, Heading, Icon,Image, Spacer, Text } from "@chakra-ui/react";
+import { Box, Center, Divider, Flex, GridItem, Heading, Icon,Image, SimpleGrid, Spacer, Text } from "@chakra-ui/react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import React from "react";
 import rajeev from "./rajeev1.jpeg"
@@ -6,16 +6,11 @@ import rajeev from "./rajeev1.jpeg"
 const Whoweare =()=>{
       return (
       <>
-      <Flex direction="column" bgImage='linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/bg-box.jpg")'
-            bgRepeat="no-repeat"
-            bgPos="center"
-            bgSize="cover">
+      <Flex direction="column">
       <Flex><Image opacity="0" h="2.5rem" w="100%"/></Flex>
-      <Flex direction="column" overflow="hidden" px="100px" pt="2.5rem">
-        <Flex h="344px" pos="relative" pb="5rem">
-            <Flex direction="column" className="fadein-2sdelay revealOnce" w="55%">
-            <Heading  pt="5rem" pb="1.125rem" fontFamily="goudy" fontSize="1.5rem" textAlign="center">MR. RAJEEV AJMERA</Heading>
-            <Heading pb="1.125rem" fontFamily="avenir" fontSize="1.125rem" textAlign="center">CHAIRMAN & MANAGING DIRECTOR</Heading>
+      <Flex direction="column" overflow="hidden" px="100px" pt="5rem">
+        <Flex pos="relative" pb="5rem">
+            <Flex direction="column" className="fadein-2sdelay revealOnce" w="50%">
                     <Text pos="relative" fontSize="1rem" textAlign="center" >
                     <Icon
                         pos="absolute"
@@ -29,13 +24,31 @@ const Whoweare =()=>{
                     <Icon
                         pos="absolute"
                         right="0"
-                        bottom="-25%"
+                        bottom="-50%"
                         color="#DFBD69"
                         w="4.375rem"
                         h="3.125rem"
                         as={ImQuotesRight} />
                     </Text>
             </Flex>
+            <SimpleGrid pl="6rem" mt="-2rem" gap="2.5rem" columns={2}>
+                <Flex direction="column" align="center">
+                    <Icon/>
+                    <Text w="130px" textAlign="center" fontFamily="avenir">REAL ESTATE CONSULTATION</Text>
+                </Flex>
+                <Flex direction="column" align="center">
+                    <Icon/>
+                    <Text w="130px" textAlign="center" fontFamily="avenir">PROJECT DEVELOPMENT</Text>
+                </Flex>
+                <Flex direction="column" align="center">
+                    <Icon/>
+                    <Text w="130px" textAlign="center" fontFamily="avenir">PRIME REALTY CAPITAL</Text>
+                </Flex>
+                <Flex direction="column" align="center">
+                    <Icon/>
+                    <Text w="130px" textAlign="center" fontFamily="avenir">PRIME ADVISORS</Text>
+                </Flex>
+            </SimpleGrid>
         </Flex>
         </Flex>
         </Flex>

@@ -294,7 +294,7 @@ const Jobopp = () => {
                 >
                   <Flex align="center" justify="flex-start">
                     <Icon as={MdLocationOn} w="6" h="6" mx="0.438rem" />
-                    <Text>Mumbai</Text>
+                    <Text>Chennai</Text>
                   </Flex>
                   <Flex align="center" justify="flex-start">
                     <Icon as={FaBusinessTime} w="6" h="6" mx="0.438rem" />

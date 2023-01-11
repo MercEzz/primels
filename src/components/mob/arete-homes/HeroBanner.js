@@ -14,7 +14,7 @@ const FirstSec = () => {
     autoplay: true,
     speed: 500,
     fade: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
@@ -113,6 +113,6 @@ const FirstSec = () => {
 export default FirstSec;
 
 const bannerImgs = [
-  banner,
+  "/images/arete-homes/BANNER2.jpg",
   "/images/arete-homes/BANNER2.jpg",
 ];

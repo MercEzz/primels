@@ -3,7 +3,7 @@ import AboutBanner from "../components/expertise/aboutBanner";
 import Award from "../components/expertise/award";
 import BoardofDirectors from "../components/expertise/BoardofDirectors";
 import LeaderShip from "../components/expertise/LeaderShip";
-import Passionatwork from "../components/expertise/Passionatwork";
+import Consultation from "../components/expertise/Consultation";
 import Whoweare from "../components/expertise/Whoweare";
 import DropDown from "../components/sky-high/DropDown";
 import { revealAgain, revealOnce } from "../hooks/util";
@@ -19,7 +19,7 @@ const ExpertiseSc =()=>{
       return (<>
         <AboutBanner/>
         <Whoweare/>
-        <Passionatwork/>
+        <Consultation/>
         <BoardofDirectors/>
         <LeaderShip/>
         <Award/>
